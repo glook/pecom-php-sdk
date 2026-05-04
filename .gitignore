@@ -22,8 +22,7 @@ composer.phar
 
 # phpunit itself is not needed
 phpunit.phar
-# local phpunit config
-/phpunit.xml
+
 node_modules
 dist
 # vagrant runtime

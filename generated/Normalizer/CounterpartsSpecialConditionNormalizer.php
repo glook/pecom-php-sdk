@@ -1,0 +1,54 @@
+<?php
+
+namespace glook\PecomSdk\Generated\Normalizer;
+
+use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
+use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
+use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
+use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
+use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
+use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+class CounterpartsSpecialConditionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    public function supportsDenormalization($data, $type, $format = null)
+    {
+        return $type === 'glook\\PecomSdk\\Generated\\Model\\CounterpartsSpecialCondition';
+    }
+    public function supportsNormalization($data, $format = null)
+    {
+        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CounterpartsSpecialCondition';
+    }
+    public function denormalize($data, $class, $format = null, array $context = array())
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
+        }
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
+        }
+        $object = new \glook\PecomSdk\Generated\Model\CounterpartsSpecialCondition();
+        if (null === $data || false === \is_array($data)) {
+            return $object;
+        }
+        if (\array_key_exists('Title', $data)) {
+            $object->setTitle($data['Title']);
+        }
+        if (\array_key_exists('UID', $data)) {
+            $object->setUID($data['UID']);
+        }
+        return $object;
+    }
+    public function normalize($object, $format = null, array $context = array())
+    {
+        $data = array();
+        $data['Title'] = $object->getTitle();
+        $data['UID'] = $object->getUID();
+        return $data;
+    }
+}
