@@ -1,0 +1,32 @@
+{
+  "name": "glook/pecom-sdk",
+  "description": "PHP SDK для работы с API ПЭК",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrey Polyakov",
+      "email": "andrey@polyakov.im"
+    }
+  ],
+  "require": {
+    "php": "^7.2 || ^8.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "jane-php/open-api-3": "^6.3.9",
+    "php-cs-fixer/shim": "^3.95",
+    "nyholm/psr7": "^1.8"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "glook\\PecomSdk\\": "src/"
+    }
+  }
+}
