@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace glook\PecomSdk\Exception;
 
 use Psr\Http\Message\ResponseInterface;
-use RuntimeException;
 
-class PecomApiException extends RuntimeException
+class PecomApiException extends \RuntimeException
 {
-    /** @var string|null */
+    /** @var null|string */
     private $title;
 
     /** @var array */

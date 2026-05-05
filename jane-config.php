@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'openapi-file' => dirname(__DIR__, 2) . '/dist/pecom.json',
-    'namespace' => 'glook\\PecomSdk\\Generated',
+    'namespace' => 'glook\PecomSdk\Generated',
     'directory' => __DIR__ . '/generated',
     'strict' => true,
     'skip-null-values' => true,
@@ -12,6 +12,7 @@ return [
     'throw-unexpected-status-code' => true,
     'clean-generated' => true,
     'use-fixer' => true,
+    'fixer-config-file' => __DIR__ . '/.php-cs-fixer.dist.php',
     'full-date-format' => 'Y-m-d',
-    'date-format' => 'Y-m-d\\TH:i:s',
+    'date-format' => 'Y-m-d\TH:i:s',
 ];

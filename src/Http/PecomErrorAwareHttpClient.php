@@ -25,7 +25,7 @@ class PecomErrorAwareHttpClient implements ClientInterface
     {
         $response = $this->innerClient->sendRequest($request);
 
-        if ($response->getStatusCode() !== 200) {
+        if (200 !== $response->getStatusCode()) {
             return $response;
         }
 
@@ -34,7 +34,7 @@ class PecomErrorAwareHttpClient implements ClientInterface
         $streamFactory = Psr17FactoryDiscovery::findStreamFactory();
         $response = $response->withBody($streamFactory->createStream($body));
 
-        if ($body === '') {
+        if ('' === $body) {
             return $response;
         }
 
@@ -54,7 +54,7 @@ class PecomErrorAwareHttpClient implements ClientInterface
         $message = isset($error['message']) && is_string($error['message']) ? $error['message'] : 'PECOM API error';
         $fields = isset($error['fields']) && is_array($error['fields']) ? $error['fields'] : [];
 
-        if ($status === 400 || $title === 'Ошибка валидации') {
+        if (400 === $status || 'Ошибка валидации' === $title) {
             throw new PecomValidationException($message, $status, $title, $fields, $payload, $response);
         }
 

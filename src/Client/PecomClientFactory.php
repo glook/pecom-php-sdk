@@ -14,21 +14,24 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Jane\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\UriInterface;
 
 class PecomClientFactory
 {
     public static function create(
         string $login,
         string $password,
-        ?ClientInterface $httpClient = null
+        ?ClientInterface $httpClient = null,
+        ?UriInterface $uri = null,
+        array $additionalPlugins = []
     ): PecomClient {
-        if ($httpClient === null) {
+        if (null === $httpClient) {
             $httpClient = Psr18ClientDiscovery::find();
         }
 
         $errorAwareClient = new PecomErrorAwareHttpClient($httpClient);
 
-        $uri = Psr17FactoryDiscovery::findUrlFactory()->createUri('https://kabinet.pecom.ru/api/v1');
+        $uri = $uri ?? Psr17FactoryDiscovery::findUriFactory()->createUri('https://kabinet.pecom.ru/api/v1');
         $plugins = [
             new AddHostPlugin($uri),
             new AddPathPlugin($uri),
@@ -36,6 +39,10 @@ class PecomClientFactory
                 new BasicAuthAuthentication($login, $password),
             ]),
         ];
+
+        if (count($additionalPlugins) > 0) {
+            $plugins = array_merge($plugins, $additionalPlugins);
+        }
 
         $pluginClient = new PluginClient($errorAwareClient, $plugins);
         $generatedClient = GeneratedClient::create($pluginClient);
