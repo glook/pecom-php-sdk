@@ -9,6 +9,7 @@ use glook\PecomSdk\Generated\Client as GeneratedClient;
 use glook\PecomSdk\Http\PecomErrorAwareHttpClient;
 use Http\Client\Common\Plugin\AddHostPlugin;
 use Http\Client\Common\Plugin\AddPathPlugin;
+use Http\Client\Common\Plugin\HeaderSetPlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
@@ -19,11 +20,11 @@ use Psr\Http\Message\UriInterface;
 class PecomClientFactory
 {
     public static function create(
-        string $login,
-        string $password,
+        string           $login,
+        string           $password,
         ?ClientInterface $httpClient = null,
-        ?UriInterface $uri = null,
-        array $additionalPlugins = []
+        ?UriInterface    $uri = null,
+        array            $additionalPlugins = []
     ): PecomClient {
         if (null === $httpClient) {
             $httpClient = Psr18ClientDiscovery::find();
@@ -37,6 +38,10 @@ class PecomClientFactory
             new AddPathPlugin($uri),
             new AuthenticationRegistry([
                 new BasicAuthAuthentication($login, $password),
+            ]),
+            new HeaderSetPlugin([
+                'Content-Type' => 'application/json;charset=utf-8',
+                'Accept' => 'application/json',
             ]),
         ];
 
