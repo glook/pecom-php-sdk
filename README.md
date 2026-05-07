@@ -131,3 +131,17 @@ vendor/bin/phpunit
 # code style
 composer cs
 ```
+
+## Breaking Changes
+
+### Обработка HTTP-ошибок (текущая версия)
+
+- **`PecomErrorAwareHttpClient`**: HTTP-ответы со статусами `4xx`/`5xx` теперь кидают
+  `PecomApiException` (или `PecomValidationException` для 400).
+  Потребители, ожидавшие возврат `ResponseInterface` при ошибочных HTTP-статусах,
+  должны перейти на `catch (PecomApiException $e)` и использовать `$e->getResponse()`
+  для получения оригинального ответа.
+
+- **`PecomApiException`** теперь реализует `Psr\Http\Client\ClientExceptionInterface`.
+  Стандартные плагины HTTPlug (`ErrorPlugin`, `RetryPlugin`, `HistoryPlugin`)
+  теперь корректно обрабатывают эти исключения как HTTP-ошибки.

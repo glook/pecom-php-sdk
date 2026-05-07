@@ -20,11 +20,11 @@ use Psr\Http\Message\UriInterface;
 class PecomClientFactory
 {
     public static function create(
-        string           $login,
-        string           $password,
+        string $login,
+        string $password,
         ?ClientInterface $httpClient = null,
-        ?UriInterface    $uri = null,
-        array            $additionalPlugins = []
+        ?UriInterface $uri = null,
+        array $additionalPlugins = []
     ): PecomClient {
         if (null === $httpClient) {
             $httpClient = Psr18ClientDiscovery::find();

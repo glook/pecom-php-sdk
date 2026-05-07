@@ -25,39 +25,46 @@ class PecomErrorAwareHttpClient implements ClientInterface
     {
         $response = $this->innerClient->sendRequest($request);
 
-        if (200 !== $response->getStatusCode()) {
-            return $response;
-        }
+        $status = $response->getStatusCode();
 
         $body = (string) $response->getBody();
-
         $streamFactory = Psr17FactoryDiscovery::findStreamFactory();
         $response = $response->withBody($streamFactory->createStream($body));
 
-        if ('' === $body) {
-            return $response;
-        }
-
         $payload = json_decode($body, true);
+        $payload = is_array($payload) ? $payload : [];
 
-        if (!is_array($payload)) {
+        $error = (isset($payload['error']) && is_array($payload['error'])) ? $payload['error'] : [];
+
+        $errTitle = (isset($error['title']) && is_string($error['title'])) ? $error['title'] : null;
+        $errMessage = (isset($error['message']) && is_string($error['message'])) ? $error['message'] : null;
+        $errStatus = (isset($error['status']) && is_int($error['status'])) ? $error['status'] : $status;
+        $fields = (isset($error['fields']) && is_array($error['fields'])) ? $error['fields'] : [];
+
+        $isSuccess = $status >= 200 && $status < 300;
+        $hasInlineError = null !== $errTitle || null !== $errMessage || !empty($fields);
+
+        if ($isSuccess && !$hasInlineError) {
             return $response;
         }
 
-        if (!isset($payload['error']) || !is_array($payload['error'])) {
-            return $response;
+        if (400 === $errStatus || 400 === $status || 'Ошибка валидации' === $errTitle) {
+            throw new PecomValidationException(
+                $errMessage ?? sprintf('PECOM validation error (HTTP %d)', $status),
+                $errStatus,
+                $errTitle,
+                $fields,
+                $payload,
+                $response
+            );
         }
 
-        $error = $payload['error'];
-        $status = isset($error['status']) && is_int($error['status']) ? $error['status'] : 0;
-        $title = isset($error['title']) && is_string($error['title']) ? $error['title'] : null;
-        $message = isset($error['message']) && is_string($error['message']) ? $error['message'] : 'PECOM API error';
-        $fields = isset($error['fields']) && is_array($error['fields']) ? $error['fields'] : [];
-
-        if (400 === $status || 'Ошибка валидации' === $title) {
-            throw new PecomValidationException($message, $status, $title, $fields, $payload, $response);
-        }
-
-        throw new PecomApiException($message, $status, $title, $payload, $response);
+        throw new PecomApiException(
+            $errMessage ?? sprintf('PECOM API error (HTTP %d)', $status),
+            $errStatus,
+            $errTitle,
+            $payload,
+            $response
+        );
     }
 }

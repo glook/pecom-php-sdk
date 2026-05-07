@@ -132,17 +132,6 @@ class PecomErrorAwareHttpClientTest extends TestCase
         $this->assertSame($body, (string) $result->getBody());
     }
 
-    public function testNon200StatusCodePassesThroughWithoutParsing(): void
-    {
-        foreach ([400, 403, 500] as $statusCode) {
-            $response = $this->makeResponse($statusCode, json_encode(['error' => ['status' => 400, 'title' => 'Ошибка валидации', 'message' => 'err', 'fields' => []]]));
-            $client = new PecomErrorAwareHttpClient($this->makeClient($response));
-
-            $result = $client->sendRequest($this->makeRequest());
-            $this->assertSame($statusCode, $result->getStatusCode(), "Status $statusCode should pass through");
-        }
-    }
-
     public function testInvalidJsonBodyReturnsResponse(): void
     {
         $response = $this->makeResponse(200, 'not json at all');
@@ -155,6 +144,16 @@ class PecomErrorAwareHttpClientTest extends TestCase
     public function testErrorAsStringDoesNotThrowValidationException(): void
     {
         $body = json_encode(['error' => 'some string error']);
+        $response = $this->makeResponse(200, $body);
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        $result = $client->sendRequest($this->makeRequest());
+        $this->assertInstanceOf(ResponseInterface::class, $result);
+    }
+
+    public function testErrorObjectWithOnlyStatusFieldReturnsResponseWithoutException(): void
+    {
+        $body = json_encode(['error' => ['status' => 200]]);
         $response = $this->makeResponse(200, $body);
         $client = new PecomErrorAwareHttpClient($this->makeClient($response));
 
@@ -188,5 +187,131 @@ class PecomErrorAwareHttpClientTest extends TestCase
 
         $this->expectException(PecomApiException::class);
         $client->sendRequest($this->makeRequest());
+    }
+
+    public function testValidationExceptionHasGetFieldsAndGetResponse(): void
+    {
+        $fields = [
+            ['Key' => 'plannedDateTime', 'Value' => ['Дата не существует']],
+        ];
+        $body = json_encode([
+            'error' => [
+                'fields' => $fields,
+                'title' => 'Ошибка валидации',
+                'message' => 'Ошибка',
+                'status' => 400,
+            ],
+        ]);
+
+        $response = $this->makeResponse(200, $body);
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomValidationException');
+        } catch (PecomValidationException $e) {
+            $this->assertSame($fields, $e->getFields());
+            $this->assertInstanceOf(ResponseInterface::class, $e->getResponse());
+        }
+    }
+
+    public function testHttp400WithoutBodyThrowsPecomValidationException(): void
+    {
+        $response = $this->makeResponse(400, '');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        $this->expectException(PecomValidationException::class);
+        $client->sendRequest($this->makeRequest());
+    }
+
+    public function testHttp400WithBrokenJsonThrowsPecomValidationException(): void
+    {
+        $response = $this->makeResponse(400, 'not-valid-json{{');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        $this->expectException(PecomValidationException::class);
+        $client->sendRequest($this->makeRequest());
+    }
+
+    public function testHttp400ResponseAccessibleViaGetResponse(): void
+    {
+        $response = $this->makeResponse(400, '');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomValidationException');
+        } catch (PecomValidationException $e) {
+            $this->assertSame(400, $e->getResponse()->getStatusCode());
+        }
+    }
+
+    public function testHttp401ThrowsPecomApiExceptionWithStatusAndResponse(): void
+    {
+        $response = $this->makeResponse(401, '');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomApiException');
+        } catch (PecomApiException $e) {
+            $this->assertSame(401, $e->getCode());
+            $this->assertSame(401, $e->getResponse()->getStatusCode());
+        }
+    }
+
+    public function testHttp403ThrowsPecomApiExceptionWithStatusAndResponse(): void
+    {
+        $response = $this->makeResponse(403, '');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomApiException');
+        } catch (PecomApiException $e) {
+            $this->assertSame(403, $e->getCode());
+            $this->assertSame(403, $e->getResponse()->getStatusCode());
+        }
+    }
+
+    public function testHttp404ThrowsPecomApiExceptionWithStatusAndResponse(): void
+    {
+        $response = $this->makeResponse(404, '');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomApiException');
+        } catch (PecomApiException $e) {
+            $this->assertSame(404, $e->getCode());
+            $this->assertSame(404, $e->getResponse()->getStatusCode());
+        }
+    }
+
+    public function testHttp500WithJsonBodyThrowsPecomApiExceptionWithMessage(): void
+    {
+        $body = json_encode(['error' => ['message' => 'Внутренняя ошибка', 'title' => null, 'status' => 500, 'fields' => []]]);
+        $response = $this->makeResponse(500, $body);
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomApiException');
+        } catch (PecomApiException $e) {
+            $this->assertSame('Внутренняя ошибка', $e->getMessage());
+        }
+    }
+
+    public function testHttp500WithoutBodyThrowsPecomApiExceptionWithGeneratedMessage(): void
+    {
+        $response = $this->makeResponse(500, '');
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomApiException');
+        } catch (PecomApiException $e) {
+            $this->assertSame('PECOM API error (HTTP 500)', $e->getMessage());
+        }
     }
 }
