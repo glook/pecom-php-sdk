@@ -320,9 +320,6 @@ class PecomErrorAwareHttpClientTest extends TestCase
 
     public function testSuccess200NonJsonBodyNotRead(): void
     {
-        $stream = $this->createMock(StreamInterface::class);
-        $stream->expects($this->never())->method('__toString');
-
         $response = $this->createMock(ResponseInterface::class);
         $response->method('getStatusCode')->willReturn(200);
         $response->expects($this->never())->method('getBody');
@@ -337,9 +334,6 @@ class PecomErrorAwareHttpClientTest extends TestCase
 
     public function testSuccess200MissingContentTypeBodyNotRead(): void
     {
-        $stream = $this->createMock(StreamInterface::class);
-        $stream->expects($this->never())->method('__toString');
-
         $response = $this->createMock(ResponseInterface::class);
         $response->method('getStatusCode')->willReturn(200);
         $response->expects($this->never())->method('getBody');
