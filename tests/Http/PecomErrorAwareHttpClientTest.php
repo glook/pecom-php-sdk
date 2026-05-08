@@ -24,6 +24,7 @@ class PecomErrorAwareHttpClientTest extends TestCase
         $response->method('getStatusCode')->willReturn($status);
         $response->method('getBody')->willReturn($stream);
         $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/json');
 
         return $response;
     }
@@ -120,11 +121,13 @@ class PecomErrorAwareHttpClientTest extends TestCase
         $restoredResponse->method('getStatusCode')->willReturn(200);
         $restoredResponse->method('getBody')->willReturn($stream);
         $restoredResponse->method('withBody')->willReturnSelf();
+        $restoredResponse->method('getHeaderLine')->with('Content-Type')->willReturn('application/json');
 
         $response = $this->createMock(ResponseInterface::class);
         $response->method('getStatusCode')->willReturn(200);
         $response->method('getBody')->willReturn($stream);
         $response->method('withBody')->willReturn($restoredResponse);
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/json');
 
         $client = new PecomErrorAwareHttpClient($this->makeClient($response));
         $result = $client->sendRequest($this->makeRequest());
@@ -313,5 +316,117 @@ class PecomErrorAwareHttpClientTest extends TestCase
         } catch (PecomApiException $e) {
             $this->assertSame('PECOM API error (HTTP 500)', $e->getMessage());
         }
+    }
+
+    public function testSuccess200NonJsonBodyNotRead(): void
+    {
+        $stream = $this->createMock(StreamInterface::class);
+        $stream->expects($this->never())->method('__toString');
+
+        $response = $this->createMock(ResponseInterface::class);
+        $response->method('getStatusCode')->willReturn(200);
+        $response->method('getBody')->willReturn($stream);
+        $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/pdf');
+
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+        $result = $client->sendRequest($this->makeRequest());
+
+        $this->assertSame($response, $result);
+    }
+
+    public function testSuccess200MissingContentTypeBodyNotRead(): void
+    {
+        $stream = $this->createMock(StreamInterface::class);
+        $stream->expects($this->never())->method('__toString');
+
+        $response = $this->createMock(ResponseInterface::class);
+        $response->method('getStatusCode')->willReturn(200);
+        $response->method('getBody')->willReturn($stream);
+        $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('');
+
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+        $result = $client->sendRequest($this->makeRequest());
+
+        $this->assertSame($response, $result);
+    }
+
+    public function testSuccess200JsonWithoutErrorReturnsWrappedResponse(): void
+    {
+        $body = json_encode(['data' => 'ok']);
+        $stream = $this->createMock(StreamInterface::class);
+        $stream->method('__toString')->willReturn($body);
+
+        $response = $this->createMock(ResponseInterface::class);
+        $response->method('getStatusCode')->willReturn(200);
+        $response->method('getBody')->willReturn($stream);
+        $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/json');
+
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+        $result = $client->sendRequest($this->makeRequest());
+
+        $this->assertInstanceOf(ResponseInterface::class, $result);
+    }
+
+    public function testSuccess200JsonWithCharsetWithoutErrorReturnsResponse(): void
+    {
+        $body = json_encode(['result' => 'ok']);
+        $stream = $this->createMock(StreamInterface::class);
+        $stream->method('__toString')->willReturn($body);
+
+        $response = $this->createMock(ResponseInterface::class);
+        $response->method('getStatusCode')->willReturn(200);
+        $response->method('getBody')->willReturn($stream);
+        $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/json; charset=utf-8');
+
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+        $result = $client->sendRequest($this->makeRequest());
+
+        $this->assertInstanceOf(ResponseInterface::class, $result);
+    }
+
+    public function testSuccess200JsonWithCharsetAndValidationErrorThrows(): void
+    {
+        $body = json_encode([
+            'error' => [
+                'title' => 'Ошибка валидации',
+                'message' => 'Ошибка',
+                'status' => 400,
+                'fields' => [['Key' => 'foo', 'Value' => ['bar']]],
+            ],
+        ]);
+        $stream = $this->createMock(StreamInterface::class);
+        $stream->method('__toString')->willReturn($body);
+
+        $response = $this->createMock(ResponseInterface::class);
+        $response->method('getStatusCode')->willReturn(200);
+        $response->method('getBody')->willReturn($stream);
+        $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/json; charset=utf-8');
+
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        $this->expectException(PecomValidationException::class);
+        $client->sendRequest($this->makeRequest());
+    }
+
+    public function testHttp4xxWithoutContentTypeStillThrows(): void
+    {
+        $stream = $this->createMock(StreamInterface::class);
+        $stream->method('__toString')->willReturn('');
+
+        $response = $this->createMock(ResponseInterface::class);
+        $response->method('getStatusCode')->willReturn(404);
+        $response->method('getBody')->willReturn($stream);
+        $response->method('withBody')->willReturnSelf();
+        $response->method('getHeaderLine')->with('Content-Type')->willReturn('');
+
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        $this->expectException(PecomApiException::class);
+        $client->sendRequest($this->makeRequest());
     }
 }

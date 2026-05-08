@@ -24,8 +24,12 @@ class PecomErrorAwareHttpClient implements ClientInterface
     public function sendRequest(RequestInterface $request): ResponseInterface
     {
         $response = $this->innerClient->sendRequest($request);
-
         $status = $response->getStatusCode();
+        $isSuccess = $status >= 200 && $status < 300;
+
+        if ($isSuccess && !$this->isJsonResponse($response)) {
+            return $response;
+        }
 
         $body = (string) $response->getBody();
         $streamFactory = Psr17FactoryDiscovery::findStreamFactory();
@@ -41,7 +45,6 @@ class PecomErrorAwareHttpClient implements ClientInterface
         $errStatus = (isset($error['status']) && is_int($error['status'])) ? $error['status'] : $status;
         $fields = (isset($error['fields']) && is_array($error['fields'])) ? $error['fields'] : [];
 
-        $isSuccess = $status >= 200 && $status < 300;
         $hasInlineError = null !== $errTitle || null !== $errMessage || !empty($fields);
 
         if ($isSuccess && !$hasInlineError) {
@@ -66,5 +69,16 @@ class PecomErrorAwareHttpClient implements ClientInterface
             $payload,
             $response
         );
+    }
+
+    private function isJsonResponse(ResponseInterface $response): bool
+    {
+        $contentType = $response->getHeaderLine('Content-Type');
+        if ('' === $contentType) {
+            return false;
+        }
+
+        return false !== stripos($contentType, 'application/json')
+            || false !== stripos($contentType, '+json');
     }
 }
