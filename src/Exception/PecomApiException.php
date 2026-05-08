@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace glook\PecomSdk\Exception;
 
-use Psr\Http\Client\ClientExceptionInterface;
+use Http\Client\Exception as HttpClientException;
 use Psr\Http\Message\ResponseInterface;
 
-class PecomApiException extends \RuntimeException implements ClientExceptionInterface
+class PecomApiException extends \RuntimeException implements HttpClientException
 {
     /** @var null|string */
     private $title;
