@@ -59,6 +59,12 @@ class BranchDivision
      */
     protected $warehouses;
     /**
+     * Доступные операции в отделении. ОБЯЗАТЕЛЬНО ПРОВЕРЯЙТЕ ДОСТУПНОСТЬ ОПЕРАЦИЙ ПРИ ВЫБОРЕ ОТДЕЛЕНИЯ!
+     *
+     * @var KindOfTransportation[]
+     */
+    protected $kindsOfTransportation;
+    /**
      * Идентификатор города, которому принадлежит отделение
      *
      * @return string
@@ -245,6 +251,27 @@ class BranchDivision
     public function setWarehouses(array $warehouses) : self
     {
         $this->warehouses = $warehouses;
+        return $this;
+    }
+    /**
+     * Доступные операции в отделении. ОБЯЗАТЕЛЬНО ПРОВЕРЯЙТЕ ДОСТУПНОСТЬ ОПЕРАЦИЙ ПРИ ВЫБОРЕ ОТДЕЛЕНИЯ!
+     *
+     * @return KindOfTransportation[]
+     */
+    public function getKindsOfTransportation() : array
+    {
+        return $this->kindsOfTransportation;
+    }
+    /**
+     * Доступные операции в отделении. ОБЯЗАТЕЛЬНО ПРОВЕРЯЙТЕ ДОСТУПНОСТЬ ОПЕРАЦИЙ ПРИ ВЫБОРЕ ОТДЕЛЕНИЯ!
+     *
+     * @param KindOfTransportation[] $kindsOfTransportation
+     *
+     * @return self
+     */
+    public function setKindsOfTransportation(array $kindsOfTransportation) : self
+    {
+        $this->kindsOfTransportation = $kindsOfTransportation;
         return $this;
     }
 }

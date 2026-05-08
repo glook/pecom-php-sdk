@@ -36,19 +36,19 @@ class BranchesCoordinatesNormalizer implements DenormalizerInterface, Normalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('latitude', $data)) {
-            $object->setLatitude($data['latitude']);
+        if (\array_key_exists('Latitude', $data)) {
+            $object->setLatitude($data['Latitude']);
         }
-        if (\array_key_exists('longitude', $data)) {
-            $object->setLongitude($data['longitude']);
+        if (\array_key_exists('Longitude', $data)) {
+            $object->setLongitude($data['Longitude']);
         }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['latitude'] = $object->getLatitude();
-        $data['longitude'] = $object->getLongitude();
+        $data['Latitude'] = $object->getLatitude();
+        $data['Longitude'] = $object->getLongitude();
         return $data;
     }
 }

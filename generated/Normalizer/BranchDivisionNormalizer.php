@@ -67,6 +67,13 @@ class BranchDivisionNormalizer implements DenormalizerInterface, NormalizerInter
             }
             $object->setWarehouses($values);
         }
+        if (\array_key_exists('kindsOfTransportation', $data)) {
+            $values_1 = array();
+            foreach ($data['kindsOfTransportation'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\KindOfTransportation', 'json', $context);
+            }
+            $object->setKindsOfTransportation($values_1);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -85,6 +92,11 @@ class BranchDivisionNormalizer implements DenormalizerInterface, NormalizerInter
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['warehouses'] = $values;
+        $values_1 = array();
+        foreach ($object->getKindsOfTransportation() as $value_1) {
+            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+        }
+        $data['kindsOfTransportation'] = $values_1;
         return $data;
     }
 }

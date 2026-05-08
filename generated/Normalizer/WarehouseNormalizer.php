@@ -42,8 +42,17 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('addressDivision', $data)) {
             $object->setAddressDivision($data['addressDivision']);
         }
+        if (\array_key_exists('coordinates', $data)) {
+            $object->setCoordinates($data['coordinates']);
+        }
         if (\array_key_exists('coordinatesobj', $data)) {
             $object->setCoordinatesobj($this->denormalizer->denormalize($data['coordinatesobj'], 'glook\\PecomSdk\\Generated\\Model\\BranchesCoordinates', 'json', $context));
+        }
+        if (\array_key_exists('isRestrictions', $data) && $data['isRestrictions'] !== null) {
+            $object->setIsRestrictions($data['isRestrictions']);
+        }
+        elseif (\array_key_exists('isRestrictions', $data) && $data['isRestrictions'] === null) {
+            $object->setIsRestrictions(null);
         }
         if (\array_key_exists('departmentClosingDate', $data) && $data['departmentClosingDate'] !== null) {
             $object->setDepartmentClosingDate($data['departmentClosingDate']);
@@ -94,13 +103,6 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('isWarehouseGivesFreights', $data)) {
             $object->setIsWarehouseGivesFreights($data['isWarehouseGivesFreights']);
         }
-        if (\array_key_exists('kindsOfTransportation', $data)) {
-            $values_1 = array();
-            foreach ($data['kindsOfTransportation'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\KindOfTransportation', 'json', $context);
-            }
-            $object->setKindsOfTransportation($values_1);
-        }
         if (\array_key_exists('maxDimension', $data)) {
             $object->setMaxDimension($data['maxDimension']);
         }
@@ -120,28 +122,28 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setPointerDescription($data['pointerDescription']);
         }
         if (\array_key_exists('scheduleHolidayDays', $data)) {
-            $values_2 = array();
-            foreach ($data['scheduleHolidayDays'] as $value_2) {
-                $values_2[] = $value_2;
+            $values_1 = array();
+            foreach ($data['scheduleHolidayDays'] as $value_1) {
+                $values_1[] = $value_1;
             }
-            $object->setScheduleHolidayDays($values_2);
+            $object->setScheduleHolidayDays($values_1);
         }
-        if (\array_key_exists('ScheduleShortWorkDays', $data)) {
-            $values_3 = array();
-            foreach ($data['ScheduleShortWorkDays'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'glook\\PecomSdk\\Generated\\Model\\ScheduleShortWorkDay', 'json', $context);
+        if (\array_key_exists('scheduleShortWorkDays', $data)) {
+            $values_2 = array();
+            foreach ($data['scheduleShortWorkDays'] as $value_2) {
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'glook\\PecomSdk\\Generated\\Model\\ScheduleShortWorkDay', 'json', $context);
             }
-            $object->setScheduleShortWorkDays($values_3);
+            $object->setScheduleShortWorkDays($values_2);
         }
         if (\array_key_exists('telephone', $data)) {
             $object->setTelephone($data['telephone']);
         }
         if (\array_key_exists('timeOfWork', $data)) {
-            $values_4 = array();
-            foreach ($data['timeOfWork'] as $value_4) {
-                $values_4[] = $value_4;
+            $values_3 = array();
+            foreach ($data['timeOfWork'] as $value_3) {
+                $values_3[] = $value_3;
             }
-            $object->setTimeOfWork($values_4);
+            $object->setTimeOfWork($values_3);
         }
         if (\array_key_exists('warehouseCode', $data)) {
             $object->setWarehouseCode($data['warehouseCode']);
@@ -153,7 +155,9 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         $data = array();
         $data['address'] = $object->getAddress();
         $data['addressDivision'] = $object->getAddressDivision();
+        $data['coordinates'] = $object->getCoordinates();
         $data['coordinatesobj'] = $this->normalizer->normalize($object->getCoordinatesobj(), 'json', $context);
+        $data['isRestrictions'] = $object->getIsRestrictions();
         if (null !== $object->getDepartmentClosingDate()) {
             $data['departmentClosingDate'] = $object->getDepartmentClosingDate();
         }
@@ -176,33 +180,28 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         $data['isFreightSurcharge'] = $object->getIsFreightSurcharge();
         $data['isWarehouseAcceptsFreights'] = $object->getIsWarehouseAcceptsFreights();
         $data['isWarehouseGivesFreights'] = $object->getIsWarehouseGivesFreights();
-        $values_1 = array();
-        foreach ($object->getKindsOfTransportation() as $value_1) {
-            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-        }
-        $data['kindsOfTransportation'] = $values_1;
         $data['maxDimension'] = $object->getMaxDimension();
         $data['maxVolume'] = $object->getMaxVolume();
         $data['maxWeight'] = $object->getMaxWeight();
         $data['maxWeightPerPlace'] = $object->getMaxWeightPerPlace();
         $data['name'] = $object->getName();
         $data['pointerDescription'] = $object->getPointerDescription();
+        $values_1 = array();
+        foreach ($object->getScheduleHolidayDays() as $value_1) {
+            $values_1[] = $value_1;
+        }
+        $data['scheduleHolidayDays'] = $values_1;
         $values_2 = array();
-        foreach ($object->getScheduleHolidayDays() as $value_2) {
-            $values_2[] = $value_2;
+        foreach ($object->getScheduleShortWorkDays() as $value_2) {
+            $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
         }
-        $data['scheduleHolidayDays'] = $values_2;
-        $values_3 = array();
-        foreach ($object->getScheduleShortWorkDays() as $value_3) {
-            $values_3[] = $this->normalizer->normalize($value_3, 'json', $context);
-        }
-        $data['ScheduleShortWorkDays'] = $values_3;
+        $data['scheduleShortWorkDays'] = $values_2;
         $data['telephone'] = $object->getTelephone();
-        $values_4 = array();
-        foreach ($object->getTimeOfWork() as $value_4) {
-            $values_4[] = $value_4;
+        $values_3 = array();
+        foreach ($object->getTimeOfWork() as $value_3) {
+            $values_3[] = $value_3;
         }
-        $data['timeOfWork'] = $values_4;
+        $data['timeOfWork'] = $values_3;
         $data['warehouseCode'] = $object->getWarehouseCode();
         return $data;
     }

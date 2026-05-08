@@ -17,11 +17,23 @@ class Warehouse
      */
     protected $addressDivision;
     /**
+     * Координаты GPS склада (устаревший формат строки)
+     *
+     * @var string
+     */
+    protected $coordinates;
+    /**
      * 
      *
      * @var BranchesCoordinates
      */
     protected $coordinatesobj;
+    /**
+     * В актуальной версии протокола не используется
+     *
+     * @var string|null
+     */
+    protected $isRestrictions;
     /**
      * Дата прекращения работы отделения Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
      *
@@ -94,12 +106,6 @@ class Warehouse
      * @var bool
      */
     protected $isWarehouseGivesFreights;
-    /**
-     * Доступные операции в отделении. ОБЯЗАТЕЛЬНО ПРОВЕРЯЙТЕ ДОСТУПНОСТЬ ОПЕРАЦИЙ ПРИ ВЫБОРЕ ОТДЕЛЕНИЯ!
-     *
-     * @var KindOfTransportation[]
-     */
-    protected $kindsOfTransportation;
     /**
      * Максимальный габарит грузоместа, м.
      *
@@ -209,6 +215,27 @@ class Warehouse
         return $this;
     }
     /**
+     * Координаты GPS склада (устаревший формат строки)
+     *
+     * @return string
+     */
+    public function getCoordinates() : string
+    {
+        return $this->coordinates;
+    }
+    /**
+     * Координаты GPS склада (устаревший формат строки)
+     *
+     * @param string $coordinates
+     *
+     * @return self
+     */
+    public function setCoordinates(string $coordinates) : self
+    {
+        $this->coordinates = $coordinates;
+        return $this;
+    }
+    /**
      * 
      *
      * @return BranchesCoordinates
@@ -227,6 +254,27 @@ class Warehouse
     public function setCoordinatesobj(BranchesCoordinates $coordinatesobj) : self
     {
         $this->coordinatesobj = $coordinatesobj;
+        return $this;
+    }
+    /**
+     * В актуальной версии протокола не используется
+     *
+     * @return string|null
+     */
+    public function getIsRestrictions() : ?string
+    {
+        return $this->isRestrictions;
+    }
+    /**
+     * В актуальной версии протокола не используется
+     *
+     * @param string|null $isRestrictions
+     *
+     * @return self
+     */
+    public function setIsRestrictions(?string $isRestrictions) : self
+    {
+        $this->isRestrictions = $isRestrictions;
         return $this;
     }
     /**
@@ -479,27 +527,6 @@ class Warehouse
     public function setIsWarehouseGivesFreights(bool $isWarehouseGivesFreights) : self
     {
         $this->isWarehouseGivesFreights = $isWarehouseGivesFreights;
-        return $this;
-    }
-    /**
-     * Доступные операции в отделении. ОБЯЗАТЕЛЬНО ПРОВЕРЯЙТЕ ДОСТУПНОСТЬ ОПЕРАЦИЙ ПРИ ВЫБОРЕ ОТДЕЛЕНИЯ!
-     *
-     * @return KindOfTransportation[]
-     */
-    public function getKindsOfTransportation() : array
-    {
-        return $this->kindsOfTransportation;
-    }
-    /**
-     * Доступные операции в отделении. ОБЯЗАТЕЛЬНО ПРОВЕРЯЙТЕ ДОСТУПНОСТЬ ОПЕРАЦИЙ ПРИ ВЫБОРЕ ОТДЕЛЕНИЯ!
-     *
-     * @param KindOfTransportation[] $kindsOfTransportation
-     *
-     * @return self
-     */
-    public function setKindsOfTransportation(array $kindsOfTransportation) : self
-    {
-        $this->kindsOfTransportation = $kindsOfTransportation;
         return $this;
     }
     /**
