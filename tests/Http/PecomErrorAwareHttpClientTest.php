@@ -325,7 +325,7 @@ class PecomErrorAwareHttpClientTest extends TestCase
 
         $response = $this->createMock(ResponseInterface::class);
         $response->method('getStatusCode')->willReturn(200);
-        $response->method('getBody')->willReturn($stream);
+        $response->expects($this->never())->method('getBody');
         $response->method('withBody')->willReturnSelf();
         $response->method('getHeaderLine')->with('Content-Type')->willReturn('application/pdf');
 
@@ -342,7 +342,7 @@ class PecomErrorAwareHttpClientTest extends TestCase
 
         $response = $this->createMock(ResponseInterface::class);
         $response->method('getStatusCode')->willReturn(200);
-        $response->method('getBody')->willReturn($stream);
+        $response->expects($this->never())->method('getBody');
         $response->method('withBody')->willReturnSelf();
         $response->method('getHeaderLine')->with('Content-Type')->willReturn('');
 
