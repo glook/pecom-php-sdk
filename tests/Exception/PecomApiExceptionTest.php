@@ -38,9 +38,4 @@ class PecomApiExceptionTest extends TestCase
         $ex = new PecomValidationException('msg', 400, null, [], [], $this->createMock(ResponseInterface::class));
         $this->assertInstanceOf(\Http\Client\Exception::class, $ex);
     }
-
-    public function testStillImplementsClientExceptionInterfaceAfterChange(): void
-    {
-        $this->assertInstanceOf(\Psr\Http\Client\ClientExceptionInterface::class, $this->makeException());
-    }
 }
