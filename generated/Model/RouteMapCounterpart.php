@@ -11,9 +11,9 @@ class RouteMapCounterpart
      */
     protected $form;
     /**
-     * 
+     * блок выводится, если контрагент юр.лицо или ИП
      *
-     * @var RouteMapCounterpartLegalPerson
+     * @var RouteMapCounterpartLegalPerson|null
      */
     protected $legalPerson;
     /**
@@ -23,9 +23,9 @@ class RouteMapCounterpart
      */
     protected $name;
     /**
-     * 
+     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится
      *
-     * @var RouteMapCounterpartPrivatePerson
+     * @var RouteMapCounterpartPrivatePerson|null
      */
     protected $privatePerson;
     /**
@@ -50,22 +50,22 @@ class RouteMapCounterpart
         return $this;
     }
     /**
-     * 
+     * блок выводится, если контрагент юр.лицо или ИП
      *
-     * @return RouteMapCounterpartLegalPerson
+     * @return RouteMapCounterpartLegalPerson|null
      */
-    public function getLegalPerson() : RouteMapCounterpartLegalPerson
+    public function getLegalPerson() : ?RouteMapCounterpartLegalPerson
     {
         return $this->legalPerson;
     }
     /**
-     * 
+     * блок выводится, если контрагент юр.лицо или ИП
      *
-     * @param RouteMapCounterpartLegalPerson $legalPerson
+     * @param RouteMapCounterpartLegalPerson|null $legalPerson
      *
      * @return self
      */
-    public function setLegalPerson(RouteMapCounterpartLegalPerson $legalPerson) : self
+    public function setLegalPerson(?RouteMapCounterpartLegalPerson $legalPerson) : self
     {
         $this->legalPerson = $legalPerson;
         return $this;
@@ -92,22 +92,22 @@ class RouteMapCounterpart
         return $this;
     }
     /**
-     * 
+     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится
      *
-     * @return RouteMapCounterpartPrivatePerson
+     * @return RouteMapCounterpartPrivatePerson|null
      */
-    public function getPrivatePerson() : RouteMapCounterpartPrivatePerson
+    public function getPrivatePerson() : ?RouteMapCounterpartPrivatePerson
     {
         return $this->privatePerson;
     }
     /**
-     * 
+     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится
      *
-     * @param RouteMapCounterpartPrivatePerson $privatePerson
+     * @param RouteMapCounterpartPrivatePerson|null $privatePerson
      *
      * @return self
      */
-    public function setPrivatePerson(RouteMapCounterpartPrivatePerson $privatePerson) : self
+    public function setPrivatePerson(?RouteMapCounterpartPrivatePerson $privatePerson) : self
     {
         $this->privatePerson = $privatePerson;
         return $this;

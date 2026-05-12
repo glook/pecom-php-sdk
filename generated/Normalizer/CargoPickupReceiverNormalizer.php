@@ -48,8 +48,11 @@ class CargoPickupReceiverNormalizer implements DenormalizerInterface, Normalizer
         elseif (\array_key_exists('carryingDistance', $data) && $data['carryingDistance'] === null) {
             $object->setCarryingDistance(null);
         }
-        if (\array_key_exists('coordinates', $data)) {
+        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
             $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupCoordinates', 'json', $context));
+        }
+        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+            $object->setCoordinates(null);
         }
         if (\array_key_exists('countryOfRegistrationCode', $data) && $data['countryOfRegistrationCode'] !== null) {
             $object->setCountryOfRegistrationCode($data['countryOfRegistrationCode']);
@@ -87,8 +90,11 @@ class CargoPickupReceiverNormalizer implements DenormalizerInterface, Normalizer
         elseif (\array_key_exists('fs', $data) && $data['fs'] === null) {
             $object->setFs(null);
         }
-        if (\array_key_exists('identityCard', $data)) {
+        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
             $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupIdentityCard', 'json', $context));
+        }
+        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+            $object->setIdentityCard(null);
         }
         if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
             $object->setInn($data['inn']);

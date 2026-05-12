@@ -13,7 +13,7 @@ class NetshopSubmitRequest
     /**
      * 
      *
-     * @var NetshopPickup
+     * @var NetshopPickup|null
      */
     protected $pickup;
     /**
@@ -46,20 +46,20 @@ class NetshopSubmitRequest
     /**
      * 
      *
-     * @return NetshopPickup
+     * @return NetshopPickup|null
      */
-    public function getPickup() : NetshopPickup
+    public function getPickup() : ?NetshopPickup
     {
         return $this->pickup;
     }
     /**
      * 
      *
-     * @param NetshopPickup $pickup
+     * @param NetshopPickup|null $pickup
      *
      * @return self
      */
-    public function setPickup(NetshopPickup $pickup) : self
+    public function setPickup(?NetshopPickup $pickup) : self
     {
         $this->pickup = $pickup;
         return $this;

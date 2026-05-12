@@ -5,15 +5,15 @@ namespace glook\PecomSdk\Generated\Model;
 class RouteMapAddress
 {
     /**
-     * 
+     * Координаты, по которым будут выполняться операции забора/доставки грузов
      *
-     * @var CargosCoordinates
+     * @var CargosCoordinates|null
      */
     protected $coordinates;
     /**
-     * 
+     * Датализация адреса
      *
-     * @var CargosGeoData
+     * @var CargosGeoData|null
      */
     protected $geoData;
     /**
@@ -29,43 +29,43 @@ class RouteMapAddress
      */
     protected $routeMaps;
     /**
-     * 
+     * Координаты, по которым будут выполняться операции забора/доставки грузов
      *
-     * @return CargosCoordinates
+     * @return CargosCoordinates|null
      */
-    public function getCoordinates() : CargosCoordinates
+    public function getCoordinates() : ?CargosCoordinates
     {
         return $this->coordinates;
     }
     /**
-     * 
+     * Координаты, по которым будут выполняться операции забора/доставки грузов
      *
-     * @param CargosCoordinates $coordinates
+     * @param CargosCoordinates|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(CargosCoordinates $coordinates) : self
+    public function setCoordinates(?CargosCoordinates $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;
     }
     /**
-     * 
+     * Датализация адреса
      *
-     * @return CargosGeoData
+     * @return CargosGeoData|null
      */
-    public function getGeoData() : CargosGeoData
+    public function getGeoData() : ?CargosGeoData
     {
         return $this->geoData;
     }
     /**
-     * 
+     * Датализация адреса
      *
-     * @param CargosGeoData $geoData
+     * @param CargosGeoData|null $geoData
      *
      * @return self
      */
-    public function setGeoData(CargosGeoData $geoData) : self
+    public function setGeoData(?CargosGeoData $geoData) : self
     {
         $this->geoData = $geoData;
         return $this;

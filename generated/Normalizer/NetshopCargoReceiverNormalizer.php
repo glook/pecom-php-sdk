@@ -36,8 +36,11 @@ class NetshopCargoReceiverNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('identityCard', $data)) {
+        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
             $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\NetshopIdentityCard', 'json', $context));
+        }
+        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+            $object->setIdentityCard(null);
         }
         if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
             $object->setInn($data['inn']);

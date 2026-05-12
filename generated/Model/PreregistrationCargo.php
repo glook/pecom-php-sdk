@@ -17,15 +17,15 @@ class PreregistrationCargo
      */
     protected $receiver;
     /**
-     * 
+     * Информация о порядке возврата отказных/невостребованных грузов (актуально только для грузов EasyWay, в остальных продуктах игнорируется). Заполняется только если получатель возврата отличается от Отправителя или Способ возврата отличается от способа передачи и грузов в EasyWay. Например, при отправке мы забираем у Вас со склада, а возвратные грузы Вы забираете самостоятельно с нашего склада
      *
-     * @var PreregistrationRefusalWarehouse
+     * @var PreregistrationRefusalWarehouse|null
      */
     protected $refusalWarehouse;
     /**
      * 
      *
-     * @var PreregistrationServices
+     * @var PreregistrationServices|null
      */
     protected $services;
     /**
@@ -71,22 +71,22 @@ class PreregistrationCargo
         return $this;
     }
     /**
-     * 
+     * Информация о порядке возврата отказных/невостребованных грузов (актуально только для грузов EasyWay, в остальных продуктах игнорируется). Заполняется только если получатель возврата отличается от Отправителя или Способ возврата отличается от способа передачи и грузов в EasyWay. Например, при отправке мы забираем у Вас со склада, а возвратные грузы Вы забираете самостоятельно с нашего склада
      *
-     * @return PreregistrationRefusalWarehouse
+     * @return PreregistrationRefusalWarehouse|null
      */
-    public function getRefusalWarehouse() : PreregistrationRefusalWarehouse
+    public function getRefusalWarehouse() : ?PreregistrationRefusalWarehouse
     {
         return $this->refusalWarehouse;
     }
     /**
-     * 
+     * Информация о порядке возврата отказных/невостребованных грузов (актуально только для грузов EasyWay, в остальных продуктах игнорируется). Заполняется только если получатель возврата отличается от Отправителя или Способ возврата отличается от способа передачи и грузов в EasyWay. Например, при отправке мы забираем у Вас со склада, а возвратные грузы Вы забираете самостоятельно с нашего склада
      *
-     * @param PreregistrationRefusalWarehouse $refusalWarehouse
+     * @param PreregistrationRefusalWarehouse|null $refusalWarehouse
      *
      * @return self
      */
-    public function setRefusalWarehouse(PreregistrationRefusalWarehouse $refusalWarehouse) : self
+    public function setRefusalWarehouse(?PreregistrationRefusalWarehouse $refusalWarehouse) : self
     {
         $this->refusalWarehouse = $refusalWarehouse;
         return $this;
@@ -94,20 +94,20 @@ class PreregistrationCargo
     /**
      * 
      *
-     * @return PreregistrationServices
+     * @return PreregistrationServices|null
      */
-    public function getServices() : PreregistrationServices
+    public function getServices() : ?PreregistrationServices
     {
         return $this->services;
     }
     /**
      * 
      *
-     * @param PreregistrationServices $services
+     * @param PreregistrationServices|null $services
      *
      * @return self
      */
-    public function setServices(PreregistrationServices $services) : self
+    public function setServices(?PreregistrationServices $services) : self
     {
         $this->services = $services;
         return $this;

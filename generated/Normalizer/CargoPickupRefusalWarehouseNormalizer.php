@@ -42,8 +42,11 @@ class CargoPickupRefusalWarehouseNormalizer implements DenormalizerInterface, No
         elseif (\array_key_exists('address', $data) && $data['address'] === null) {
             $object->setAddress(null);
         }
-        if (\array_key_exists('recipient', $data)) {
+        if (\array_key_exists('recipient', $data) && $data['recipient'] !== null) {
             $object->setRecipient($this->denormalizer->denormalize($data['recipient'], 'glook\\PecomSdk\\Generated\\Model\\RefusalRecipient', 'json', $context));
+        }
+        elseif (\array_key_exists('recipient', $data) && $data['recipient'] === null) {
+            $object->setRecipient(null);
         }
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);

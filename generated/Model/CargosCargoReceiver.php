@@ -5,15 +5,15 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosCargoReceiver
 {
     /**
-     * 
+     * информация об актуальном получателе, не требующая специаальных прав доступа
      *
-     * @var AbbreviatedReceiver
+     * @var AbbreviatedReceiver|null
      */
     protected $abbreviated;
     /**
-     * 
+     * Филиал получателя
      *
-     * @var BranchInfo
+     * @var BranchInfo|null
      */
     protected $branch;
     /**
@@ -59,43 +59,43 @@ class CargosCargoReceiver
      */
     protected $receivingBySMSCode;
     /**
-     * 
+     * информация об актуальном получателе, не требующая специаальных прав доступа
      *
-     * @return AbbreviatedReceiver
+     * @return AbbreviatedReceiver|null
      */
-    public function getAbbreviated() : AbbreviatedReceiver
+    public function getAbbreviated() : ?AbbreviatedReceiver
     {
         return $this->abbreviated;
     }
     /**
-     * 
+     * информация об актуальном получателе, не требующая специаальных прав доступа
      *
-     * @param AbbreviatedReceiver $abbreviated
+     * @param AbbreviatedReceiver|null $abbreviated
      *
      * @return self
      */
-    public function setAbbreviated(AbbreviatedReceiver $abbreviated) : self
+    public function setAbbreviated(?AbbreviatedReceiver $abbreviated) : self
     {
         $this->abbreviated = $abbreviated;
         return $this;
     }
     /**
-     * 
+     * Филиал получателя
      *
-     * @return BranchInfo
+     * @return BranchInfo|null
      */
-    public function getBranch() : BranchInfo
+    public function getBranch() : ?BranchInfo
     {
         return $this->branch;
     }
     /**
-     * 
+     * Филиал получателя
      *
-     * @param BranchInfo $branch
+     * @param BranchInfo|null $branch
      *
      * @return self
      */
-    public function setBranch(BranchInfo $branch) : self
+    public function setBranch(?BranchInfo $branch) : self
     {
         $this->branch = $branch;
         return $this;

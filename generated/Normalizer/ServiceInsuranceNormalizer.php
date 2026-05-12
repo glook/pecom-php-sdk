@@ -48,8 +48,11 @@ class ServiceInsuranceNormalizer implements DenormalizerInterface, NormalizerInt
         elseif (\array_key_exists('enabled', $data) && $data['enabled'] === null) {
             $object->setEnabled(null);
         }
-        if (\array_key_exists('payer', $data)) {
+        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
             $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationPayer', 'json', $context));
+        }
+        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+            $object->setPayer(null);
         }
         return $object;
     }

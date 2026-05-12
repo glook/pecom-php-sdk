@@ -19,7 +19,7 @@ class CargoPickupServices
     /**
      * 
      *
-     * @var CashOnDelivery
+     * @var CashOnDelivery|null
      */
     protected $cashOnDelivery;
     /**
@@ -133,20 +133,20 @@ class CargoPickupServices
     /**
      * 
      *
-     * @return CashOnDelivery
+     * @return CashOnDelivery|null
      */
-    public function getCashOnDelivery() : CashOnDelivery
+    public function getCashOnDelivery() : ?CashOnDelivery
     {
         return $this->cashOnDelivery;
     }
     /**
      * 
      *
-     * @param CashOnDelivery $cashOnDelivery
+     * @param CashOnDelivery|null $cashOnDelivery
      *
      * @return self
      */
-    public function setCashOnDelivery(CashOnDelivery $cashOnDelivery) : self
+    public function setCashOnDelivery(?CashOnDelivery $cashOnDelivery) : self
     {
         $this->cashOnDelivery = $cashOnDelivery;
         return $this;

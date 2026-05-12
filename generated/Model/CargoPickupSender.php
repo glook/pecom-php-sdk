@@ -55,7 +55,7 @@ class CargoPickupSender
     /**
      * 
      *
-     * @var CargopickupIdentityCard
+     * @var CargopickupIdentityCard|null
      */
     protected $identityCard;
     /**
@@ -307,20 +307,20 @@ class CargoPickupSender
     /**
      * 
      *
-     * @return CargopickupIdentityCard
+     * @return CargopickupIdentityCard|null
      */
-    public function getIdentityCard() : CargopickupIdentityCard
+    public function getIdentityCard() : ?CargopickupIdentityCard
     {
         return $this->identityCard;
     }
     /**
      * 
      *
-     * @param CargopickupIdentityCard $identityCard
+     * @param CargopickupIdentityCard|null $identityCard
      *
      * @return self
      */
-    public function setIdentityCard(CargopickupIdentityCard $identityCard) : self
+    public function setIdentityCard(?CargopickupIdentityCard $identityCard) : self
     {
         $this->identityCard = $identityCard;
         return $this;

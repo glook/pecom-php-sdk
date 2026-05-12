@@ -36,8 +36,11 @@ class CargosGeoDataNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('address', $data)) {
+        if (\array_key_exists('address', $data) && $data['address'] !== null) {
             $object->setAddress($this->denormalizer->denormalize($data['address'], 'glook\\PecomSdk\\Generated\\Model\\GeoAddress', 'json', $context));
+        }
+        elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+            $object->setAddress(null);
         }
         if (\array_key_exists('kind', $data) && $data['kind'] !== null) {
             $object->setKind($data['kind']);

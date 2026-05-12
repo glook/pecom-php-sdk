@@ -84,8 +84,11 @@ class ServiceDeliveryNormalizer implements DenormalizerInterface, NormalizerInte
         elseif (\array_key_exists('isLoading', $data) && $data['isLoading'] === null) {
             $object->setIsLoading(null);
         }
-        if (\array_key_exists('payer', $data)) {
+        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
             $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationPayer', 'json', $context));
+        }
+        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+            $object->setPayer(null);
         }
         return $object;
     }

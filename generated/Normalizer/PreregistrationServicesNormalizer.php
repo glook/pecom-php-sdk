@@ -36,14 +36,23 @@ class PreregistrationServicesNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cashOnDelivery', $data)) {
+        if (\array_key_exists('cashOnDelivery', $data) && $data['cashOnDelivery'] !== null) {
             $object->setCashOnDelivery($this->denormalizer->denormalize($data['cashOnDelivery'], 'glook\\PecomSdk\\Generated\\Model\\ServiceCashOnDelivery', 'json', $context));
         }
-        if (\array_key_exists('delivery', $data)) {
+        elseif (\array_key_exists('cashOnDelivery', $data) && $data['cashOnDelivery'] === null) {
+            $object->setCashOnDelivery(null);
+        }
+        if (\array_key_exists('delivery', $data) && $data['delivery'] !== null) {
             $object->setDelivery($this->denormalizer->denormalize($data['delivery'], 'glook\\PecomSdk\\Generated\\Model\\ServiceDelivery', 'json', $context));
         }
-        if (\array_key_exists('documentsReturning', $data)) {
+        elseif (\array_key_exists('delivery', $data) && $data['delivery'] === null) {
+            $object->setDelivery(null);
+        }
+        if (\array_key_exists('documentsReturning', $data) && $data['documentsReturning'] !== null) {
             $object->setDocumentsReturning($this->denormalizer->denormalize($data['documentsReturning'], 'glook\\PecomSdk\\Generated\\Model\\ServiceToggle', 'json', $context));
+        }
+        elseif (\array_key_exists('documentsReturning', $data) && $data['documentsReturning'] === null) {
+            $object->setDocumentsReturning(null);
         }
         if (\array_key_exists('email', $data) && $data['email'] !== null) {
             $object->setEmail($data['email']);
@@ -51,26 +60,47 @@ class PreregistrationServicesNormalizer implements DenormalizerInterface, Normal
         elseif (\array_key_exists('email', $data) && $data['email'] === null) {
             $object->setEmail(null);
         }
-        if (\array_key_exists('hardPacking', $data)) {
+        if (\array_key_exists('hardPacking', $data) && $data['hardPacking'] !== null) {
             $object->setHardPacking($this->denormalizer->denormalize($data['hardPacking'], 'glook\\PecomSdk\\Generated\\Model\\ServiceWithPayer', 'json', $context));
         }
-        if (\array_key_exists('insurance', $data)) {
+        elseif (\array_key_exists('hardPacking', $data) && $data['hardPacking'] === null) {
+            $object->setHardPacking(null);
+        }
+        if (\array_key_exists('insurance', $data) && $data['insurance'] !== null) {
             $object->setInsurance($this->denormalizer->denormalize($data['insurance'], 'glook\\PecomSdk\\Generated\\Model\\ServiceInsurance', 'json', $context));
         }
-        if (\array_key_exists('pickUp', $data)) {
+        elseif (\array_key_exists('insurance', $data) && $data['insurance'] === null) {
+            $object->setInsurance(null);
+        }
+        if (\array_key_exists('pickUp', $data) && $data['pickUp'] !== null) {
             $object->setPickUp($this->denormalizer->denormalize($data['pickUp'], 'glook\\PecomSdk\\Generated\\Model\\ServicePickUp', 'json', $context));
         }
-        if (\array_key_exists('sealing', $data)) {
+        elseif (\array_key_exists('pickUp', $data) && $data['pickUp'] === null) {
+            $object->setPickUp(null);
+        }
+        if (\array_key_exists('sealing', $data) && $data['sealing'] !== null) {
             $object->setSealing($this->denormalizer->denormalize($data['sealing'], 'glook\\PecomSdk\\Generated\\Model\\ServiceWithPayer', 'json', $context));
         }
-        if (\array_key_exists('storing', $data)) {
+        elseif (\array_key_exists('sealing', $data) && $data['sealing'] === null) {
+            $object->setSealing(null);
+        }
+        if (\array_key_exists('storing', $data) && $data['storing'] !== null) {
             $object->setStoring($this->denormalizer->denormalize($data['storing'], 'glook\\PecomSdk\\Generated\\Model\\ServiceToggle', 'json', $context));
         }
-        if (\array_key_exists('strapping', $data)) {
+        elseif (\array_key_exists('storing', $data) && $data['storing'] === null) {
+            $object->setStoring(null);
+        }
+        if (\array_key_exists('strapping', $data) && $data['strapping'] !== null) {
             $object->setStrapping($this->denormalizer->denormalize($data['strapping'], 'glook\\PecomSdk\\Generated\\Model\\ServiceWithPayer', 'json', $context));
         }
-        if (\array_key_exists('transporting', $data)) {
+        elseif (\array_key_exists('strapping', $data) && $data['strapping'] === null) {
+            $object->setStrapping(null);
+        }
+        if (\array_key_exists('transporting', $data) && $data['transporting'] !== null) {
             $object->setTransporting($this->denormalizer->denormalize($data['transporting'], 'glook\\PecomSdk\\Generated\\Model\\ServiceTransporting', 'json', $context));
+        }
+        elseif (\array_key_exists('transporting', $data) && $data['transporting'] === null) {
+            $object->setTransporting(null);
         }
         return $object;
     }

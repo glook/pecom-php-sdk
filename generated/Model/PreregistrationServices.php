@@ -7,19 +7,19 @@ class PreregistrationServices
     /**
      * 
      *
-     * @var ServiceCashOnDelivery
+     * @var ServiceCashOnDelivery|null
      */
     protected $cashOnDelivery;
     /**
      * 
      *
-     * @var ServiceDelivery
+     * @var ServiceDelivery|null
      */
     protected $delivery;
     /**
      * 
      *
-     * @var ServiceToggle
+     * @var ServiceToggle|null
      */
     protected $documentsReturning;
     /**
@@ -31,62 +31,62 @@ class PreregistrationServices
     /**
      * 
      *
-     * @var ServiceWithPayer
+     * @var ServiceWithPayer|null
      */
     protected $hardPacking;
     /**
      * 
      *
-     * @var ServiceInsurance
+     * @var ServiceInsurance|null
      */
     protected $insurance;
     /**
      * 
      *
-     * @var ServicePickUp
+     * @var ServicePickUp|null
      */
     protected $pickUp;
     /**
      * 
      *
-     * @var ServiceWithPayer
+     * @var ServiceWithPayer|null
      */
     protected $sealing;
     /**
      * 
      *
-     * @var ServiceToggle
+     * @var ServiceToggle|null
      */
     protected $storing;
     /**
      * 
      *
-     * @var ServiceWithPayer
+     * @var ServiceWithPayer|null
      */
     protected $strapping;
     /**
      * 
      *
-     * @var ServiceTransporting
+     * @var ServiceTransporting|null
      */
     protected $transporting;
     /**
      * 
      *
-     * @return ServiceCashOnDelivery
+     * @return ServiceCashOnDelivery|null
      */
-    public function getCashOnDelivery() : ServiceCashOnDelivery
+    public function getCashOnDelivery() : ?ServiceCashOnDelivery
     {
         return $this->cashOnDelivery;
     }
     /**
      * 
      *
-     * @param ServiceCashOnDelivery $cashOnDelivery
+     * @param ServiceCashOnDelivery|null $cashOnDelivery
      *
      * @return self
      */
-    public function setCashOnDelivery(ServiceCashOnDelivery $cashOnDelivery) : self
+    public function setCashOnDelivery(?ServiceCashOnDelivery $cashOnDelivery) : self
     {
         $this->cashOnDelivery = $cashOnDelivery;
         return $this;
@@ -94,20 +94,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceDelivery
+     * @return ServiceDelivery|null
      */
-    public function getDelivery() : ServiceDelivery
+    public function getDelivery() : ?ServiceDelivery
     {
         return $this->delivery;
     }
     /**
      * 
      *
-     * @param ServiceDelivery $delivery
+     * @param ServiceDelivery|null $delivery
      *
      * @return self
      */
-    public function setDelivery(ServiceDelivery $delivery) : self
+    public function setDelivery(?ServiceDelivery $delivery) : self
     {
         $this->delivery = $delivery;
         return $this;
@@ -115,20 +115,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceToggle
+     * @return ServiceToggle|null
      */
-    public function getDocumentsReturning() : ServiceToggle
+    public function getDocumentsReturning() : ?ServiceToggle
     {
         return $this->documentsReturning;
     }
     /**
      * 
      *
-     * @param ServiceToggle $documentsReturning
+     * @param ServiceToggle|null $documentsReturning
      *
      * @return self
      */
-    public function setDocumentsReturning(ServiceToggle $documentsReturning) : self
+    public function setDocumentsReturning(?ServiceToggle $documentsReturning) : self
     {
         $this->documentsReturning = $documentsReturning;
         return $this;
@@ -157,20 +157,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceWithPayer
+     * @return ServiceWithPayer|null
      */
-    public function getHardPacking() : ServiceWithPayer
+    public function getHardPacking() : ?ServiceWithPayer
     {
         return $this->hardPacking;
     }
     /**
      * 
      *
-     * @param ServiceWithPayer $hardPacking
+     * @param ServiceWithPayer|null $hardPacking
      *
      * @return self
      */
-    public function setHardPacking(ServiceWithPayer $hardPacking) : self
+    public function setHardPacking(?ServiceWithPayer $hardPacking) : self
     {
         $this->hardPacking = $hardPacking;
         return $this;
@@ -178,20 +178,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceInsurance
+     * @return ServiceInsurance|null
      */
-    public function getInsurance() : ServiceInsurance
+    public function getInsurance() : ?ServiceInsurance
     {
         return $this->insurance;
     }
     /**
      * 
      *
-     * @param ServiceInsurance $insurance
+     * @param ServiceInsurance|null $insurance
      *
      * @return self
      */
-    public function setInsurance(ServiceInsurance $insurance) : self
+    public function setInsurance(?ServiceInsurance $insurance) : self
     {
         $this->insurance = $insurance;
         return $this;
@@ -199,20 +199,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServicePickUp
+     * @return ServicePickUp|null
      */
-    public function getPickUp() : ServicePickUp
+    public function getPickUp() : ?ServicePickUp
     {
         return $this->pickUp;
     }
     /**
      * 
      *
-     * @param ServicePickUp $pickUp
+     * @param ServicePickUp|null $pickUp
      *
      * @return self
      */
-    public function setPickUp(ServicePickUp $pickUp) : self
+    public function setPickUp(?ServicePickUp $pickUp) : self
     {
         $this->pickUp = $pickUp;
         return $this;
@@ -220,20 +220,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceWithPayer
+     * @return ServiceWithPayer|null
      */
-    public function getSealing() : ServiceWithPayer
+    public function getSealing() : ?ServiceWithPayer
     {
         return $this->sealing;
     }
     /**
      * 
      *
-     * @param ServiceWithPayer $sealing
+     * @param ServiceWithPayer|null $sealing
      *
      * @return self
      */
-    public function setSealing(ServiceWithPayer $sealing) : self
+    public function setSealing(?ServiceWithPayer $sealing) : self
     {
         $this->sealing = $sealing;
         return $this;
@@ -241,20 +241,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceToggle
+     * @return ServiceToggle|null
      */
-    public function getStoring() : ServiceToggle
+    public function getStoring() : ?ServiceToggle
     {
         return $this->storing;
     }
     /**
      * 
      *
-     * @param ServiceToggle $storing
+     * @param ServiceToggle|null $storing
      *
      * @return self
      */
-    public function setStoring(ServiceToggle $storing) : self
+    public function setStoring(?ServiceToggle $storing) : self
     {
         $this->storing = $storing;
         return $this;
@@ -262,20 +262,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceWithPayer
+     * @return ServiceWithPayer|null
      */
-    public function getStrapping() : ServiceWithPayer
+    public function getStrapping() : ?ServiceWithPayer
     {
         return $this->strapping;
     }
     /**
      * 
      *
-     * @param ServiceWithPayer $strapping
+     * @param ServiceWithPayer|null $strapping
      *
      * @return self
      */
-    public function setStrapping(ServiceWithPayer $strapping) : self
+    public function setStrapping(?ServiceWithPayer $strapping) : self
     {
         $this->strapping = $strapping;
         return $this;
@@ -283,20 +283,20 @@ class PreregistrationServices
     /**
      * 
      *
-     * @return ServiceTransporting
+     * @return ServiceTransporting|null
      */
-    public function getTransporting() : ServiceTransporting
+    public function getTransporting() : ?ServiceTransporting
     {
         return $this->transporting;
     }
     /**
      * 
      *
-     * @param ServiceTransporting $transporting
+     * @param ServiceTransporting|null $transporting
      *
      * @return self
      */
-    public function setTransporting(ServiceTransporting $transporting) : self
+    public function setTransporting(?ServiceTransporting $transporting) : self
     {
         $this->transporting = $transporting;
         return $this;

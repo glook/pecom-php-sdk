@@ -19,7 +19,7 @@ class NetshopInsurance
     /**
      * 
      *
-     * @var NetshopPayer
+     * @var NetshopPayer|null
      */
     protected $payer;
     /**
@@ -67,20 +67,20 @@ class NetshopInsurance
     /**
      * 
      *
-     * @return NetshopPayer
+     * @return NetshopPayer|null
      */
-    public function getPayer() : NetshopPayer
+    public function getPayer() : ?NetshopPayer
     {
         return $this->payer;
     }
     /**
      * 
      *
-     * @param NetshopPayer $payer
+     * @param NetshopPayer|null $payer
      *
      * @return self
      */
-    public function setPayer(NetshopPayer $payer) : self
+    public function setPayer(?NetshopPayer $payer) : self
     {
         $this->payer = $payer;
         return $this;

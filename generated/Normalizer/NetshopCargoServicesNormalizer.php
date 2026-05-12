@@ -42,8 +42,11 @@ class NetshopCargoServicesNormalizer implements DenormalizerInterface, Normalize
         elseif (\array_key_exists('documentsReturningEnabled', $data) && $data['documentsReturningEnabled'] === null) {
             $object->setDocumentsReturningEnabled(null);
         }
-        if (\array_key_exists('insurance', $data)) {
+        if (\array_key_exists('insurance', $data) && $data['insurance'] !== null) {
             $object->setInsurance($this->denormalizer->denormalize($data['insurance'], 'glook\\PecomSdk\\Generated\\Model\\NetshopInsurance', 'json', $context));
+        }
+        elseif (\array_key_exists('insurance', $data) && $data['insurance'] === null) {
+            $object->setInsurance(null);
         }
         if (\array_key_exists('palletTransporting', $data)) {
             $object->setPalletTransporting($this->denormalizer->denormalize($data['palletTransporting'], 'glook\\PecomSdk\\Generated\\Model\\NetshopPalletTransporting', 'json', $context));

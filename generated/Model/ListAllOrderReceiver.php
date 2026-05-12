@@ -5,9 +5,9 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderReceiver
 {
     /**
-     * 
+     * Контрагент
      *
-     * @var ListAllOrderReceiverCounterpart
+     * @var ListAllOrderReceiverCounterpart|null
      */
     protected $counterpart;
     /**
@@ -35,22 +35,22 @@ class ListAllOrderReceiver
      */
     protected $warehouseId;
     /**
-     * 
+     * Контрагент
      *
-     * @return ListAllOrderReceiverCounterpart
+     * @return ListAllOrderReceiverCounterpart|null
      */
-    public function getCounterpart() : ListAllOrderReceiverCounterpart
+    public function getCounterpart() : ?ListAllOrderReceiverCounterpart
     {
         return $this->counterpart;
     }
     /**
-     * 
+     * Контрагент
      *
-     * @param ListAllOrderReceiverCounterpart $counterpart
+     * @param ListAllOrderReceiverCounterpart|null $counterpart
      *
      * @return self
      */
-    public function setCounterpart(ListAllOrderReceiverCounterpart $counterpart) : self
+    public function setCounterpart(?ListAllOrderReceiverCounterpart $counterpart) : self
     {
         $this->counterpart = $counterpart;
         return $this;

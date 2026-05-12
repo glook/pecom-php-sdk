@@ -72,11 +72,17 @@ class ListAllOrderItemNormalizer implements DenormalizerInterface, NormalizerInt
         elseif (\array_key_exists('orderNumber', $data) && $data['orderNumber'] === null) {
             $object->setOrderNumber(null);
         }
-        if (\array_key_exists('Receiver', $data)) {
+        if (\array_key_exists('Receiver', $data) && $data['Receiver'] !== null) {
             $object->setReceiver($this->denormalizer->denormalize($data['Receiver'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiver', 'json', $context));
         }
-        if (\array_key_exists('Sender', $data)) {
+        elseif (\array_key_exists('Receiver', $data) && $data['Receiver'] === null) {
+            $object->setReceiver(null);
+        }
+        if (\array_key_exists('Sender', $data) && $data['Sender'] !== null) {
             $object->setSender($this->denormalizer->denormalize($data['Sender'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderSender', 'json', $context));
+        }
+        elseif (\array_key_exists('Sender', $data) && $data['Sender'] === null) {
+            $object->setSender(null);
         }
         if (\array_key_exists('shippingType', $data) && $data['shippingType'] !== null) {
             $object->setShippingType($data['shippingType']);

@@ -73,8 +73,11 @@ class ServiceCashOnDeliveryNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('sellerServices', $data) && $data['sellerServices'] === null) {
             $object->setSellerServices(null);
         }
-        if (\array_key_exists('specification', $data)) {
+        if (\array_key_exists('specification', $data) && $data['specification'] !== null) {
             $object->setSpecification($this->denormalizer->denormalize($data['specification'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationSpecification', 'json', $context));
+        }
+        elseif (\array_key_exists('specification', $data) && $data['specification'] === null) {
+            $object->setSpecification(null);
         }
         return $object;
     }

@@ -36,11 +36,17 @@ class BasicStatusItemNormalizer implements DenormalizerInterface, NormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cargo', $data)) {
+        if (\array_key_exists('cargo', $data) && $data['cargo'] !== null) {
             $object->setCargo($this->denormalizer->denormalize($data['cargo'], 'glook\\PecomSdk\\Generated\\Model\\BasicCargoInfo', 'json', $context));
         }
-        if (\array_key_exists('info', $data)) {
+        elseif (\array_key_exists('cargo', $data) && $data['cargo'] === null) {
+            $object->setCargo(null);
+        }
+        if (\array_key_exists('info', $data) && $data['info'] !== null) {
             $object->setInfo($this->denormalizer->denormalize($data['info'], 'glook\\PecomSdk\\Generated\\Model\\BasicStatusInfo', 'json', $context));
+        }
+        elseif (\array_key_exists('info', $data) && $data['info'] === null) {
+            $object->setInfo(null);
         }
         return $object;
     }

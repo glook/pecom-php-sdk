@@ -13,7 +13,7 @@ class NetshopCargoServices
     /**
      * 
      *
-     * @var NetshopInsurance
+     * @var NetshopInsurance|null
      */
     protected $insurance;
     /**
@@ -46,20 +46,20 @@ class NetshopCargoServices
     /**
      * 
      *
-     * @return NetshopInsurance
+     * @return NetshopInsurance|null
      */
-    public function getInsurance() : NetshopInsurance
+    public function getInsurance() : ?NetshopInsurance
     {
         return $this->insurance;
     }
     /**
      * 
      *
-     * @param NetshopInsurance $insurance
+     * @param NetshopInsurance|null $insurance
      *
      * @return self
      */
-    public function setInsurance(NetshopInsurance $insurance) : self
+    public function setInsurance(?NetshopInsurance $insurance) : self
     {
         $this->insurance = $insurance;
         return $this;

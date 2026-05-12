@@ -42,8 +42,11 @@ class CargoSenderNormalizer implements DenormalizerInterface, NormalizerInterfac
         elseif (\array_key_exists('branch', $data) && $data['branch'] === null) {
             $object->setBranch(null);
         }
-        if (\array_key_exists('branchInfo', $data)) {
+        if (\array_key_exists('branchInfo', $data) && $data['branchInfo'] !== null) {
             $object->setBranchInfo($this->denormalizer->denormalize($data['branchInfo'], 'glook\\PecomSdk\\Generated\\Model\\BranchInfo', 'json', $context));
+        }
+        elseif (\array_key_exists('branchInfo', $data) && $data['branchInfo'] === null) {
+            $object->setBranchInfo(null);
         }
         if (\array_key_exists('counterpartPaymentType', $data) && $data['counterpartPaymentType'] !== null) {
             $object->setCounterpartPaymentType($data['counterpartPaymentType']);

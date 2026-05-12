@@ -48,8 +48,11 @@ class CheckDeliveryDateRequestNormalizer implements DenormalizerInterface, Norma
         elseif (\array_key_exists('calculateDays', $data) && $data['calculateDays'] === null) {
             $object->setCalculateDays(null);
         }
-        if (\array_key_exists('coordinates', $data)) {
+        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
             $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\CoordinatesNumber', 'json', $context));
+        }
+        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+            $object->setCoordinates(null);
         }
         if (\array_key_exists('requestDateTime', $data) && $data['requestDateTime'] !== null) {
             $object->setRequestDateTime(\DateTime::createFromFormat('Y-m-d', $data['requestDateTime'])->setTime(0, 0, 0));

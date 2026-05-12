@@ -11,9 +11,9 @@ class CurrentStatusResponse
      */
     protected $cargos;
     /**
-     * 
+     * Ответ с ошибкой
      *
-     * @var CurrentStatusError
+     * @var CurrentStatusError|null
      */
     protected $error;
     /**
@@ -38,22 +38,22 @@ class CurrentStatusResponse
         return $this;
     }
     /**
-     * 
+     * Ответ с ошибкой
      *
-     * @return CurrentStatusError
+     * @return CurrentStatusError|null
      */
-    public function getError() : CurrentStatusError
+    public function getError() : ?CurrentStatusError
     {
         return $this->error;
     }
     /**
-     * 
+     * Ответ с ошибкой
      *
-     * @param CurrentStatusError $error
+     * @param CurrentStatusError|null $error
      *
      * @return self
      */
-    public function setError(CurrentStatusError $error) : self
+    public function setError(?CurrentStatusError $error) : self
     {
         $this->error = $error;
         return $this;

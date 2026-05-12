@@ -48,8 +48,11 @@ class PreregistrationReceiverNormalizer implements DenormalizerInterface, Normal
         elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
             $object->setComment(null);
         }
-        if (\array_key_exists('coordinates', $data)) {
+        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
             $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCoordinates', 'json', $context));
+        }
+        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+            $object->setCoordinates(null);
         }
         if (\array_key_exists('countryOfRegistrationCode', $data) && $data['countryOfRegistrationCode'] !== null) {
             $object->setCountryOfRegistrationCode($data['countryOfRegistrationCode']);
@@ -75,11 +78,17 @@ class PreregistrationReceiverNormalizer implements DenormalizerInterface, Normal
         elseif (\array_key_exists('GLN', $data) && $data['GLN'] === null) {
             $object->setGLN(null);
         }
-        if (\array_key_exists('identityCard', $data)) {
+        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
             $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationIdentityCard', 'json', $context));
         }
-        if (\array_key_exists('individual', $data)) {
+        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+            $object->setIdentityCard(null);
+        }
+        if (\array_key_exists('individual', $data) && $data['individual'] !== null) {
             $object->setIndividual($this->denormalizer->denormalize($data['individual'], 'glook\\PecomSdk\\Generated\\Model\\Individual', 'json', $context));
+        }
+        elseif (\array_key_exists('individual', $data) && $data['individual'] === null) {
+            $object->setIndividual(null);
         }
         if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
             $object->setInn($data['inn']);

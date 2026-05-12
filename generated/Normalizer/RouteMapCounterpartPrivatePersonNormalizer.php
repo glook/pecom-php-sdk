@@ -36,8 +36,11 @@ class RouteMapCounterpartPrivatePersonNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('identityCard', $data)) {
+        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
             $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\RouteMapCounterpartIdentityCard', 'json', $context));
+        }
+        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+            $object->setIdentityCard(null);
         }
         return $object;
     }

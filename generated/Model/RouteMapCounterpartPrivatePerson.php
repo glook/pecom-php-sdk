@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class RouteMapCounterpartPrivatePerson
 {
     /**
-     * 
+     * Документ удостоверяющий личность
      *
-     * @var RouteMapCounterpartIdentityCard
+     * @var RouteMapCounterpartIdentityCard|null
      */
     protected $identityCard;
     /**
-     * 
+     * Документ удостоверяющий личность
      *
-     * @return RouteMapCounterpartIdentityCard
+     * @return RouteMapCounterpartIdentityCard|null
      */
-    public function getIdentityCard() : RouteMapCounterpartIdentityCard
+    public function getIdentityCard() : ?RouteMapCounterpartIdentityCard
     {
         return $this->identityCard;
     }
     /**
-     * 
+     * Документ удостоверяющий личность
      *
-     * @param RouteMapCounterpartIdentityCard $identityCard
+     * @param RouteMapCounterpartIdentityCard|null $identityCard
      *
      * @return self
      */
-    public function setIdentityCard(RouteMapCounterpartIdentityCard $identityCard) : self
+    public function setIdentityCard(?RouteMapCounterpartIdentityCard $identityCard) : self
     {
         $this->identityCard = $identityCard;
         return $this;

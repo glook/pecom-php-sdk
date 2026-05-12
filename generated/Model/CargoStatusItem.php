@@ -5,136 +5,136 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoStatusItem
 {
     /**
-     * 
+     * Параметры груза
      *
-     * @var CargoInfo
+     * @var CargoInfo|null
      */
     protected $cargo;
     /**
-     * 
+     * Общая информация о грузе
      *
-     * @var CargoStatusInfo
+     * @var CargoStatusInfo|null
      */
     protected $info;
     /**
-     * 
+     * Получатель
      *
-     * @var CargosCargoReceiver
+     * @var CargosCargoReceiver|null
      */
     protected $receiver;
     /**
-     * 
+     * Отправитель
      *
-     * @var CargoSender
+     * @var CargoSender|null
      */
     protected $sender;
     /**
-     * 
+     * Услуги
      *
-     * @var CargoServices
+     * @var CargoServices|null
      */
     protected $services;
     /**
-     * 
+     * Параметры груза
      *
-     * @return CargoInfo
+     * @return CargoInfo|null
      */
-    public function getCargo() : CargoInfo
+    public function getCargo() : ?CargoInfo
     {
         return $this->cargo;
     }
     /**
-     * 
+     * Параметры груза
      *
-     * @param CargoInfo $cargo
+     * @param CargoInfo|null $cargo
      *
      * @return self
      */
-    public function setCargo(CargoInfo $cargo) : self
+    public function setCargo(?CargoInfo $cargo) : self
     {
         $this->cargo = $cargo;
         return $this;
     }
     /**
-     * 
+     * Общая информация о грузе
      *
-     * @return CargoStatusInfo
+     * @return CargoStatusInfo|null
      */
-    public function getInfo() : CargoStatusInfo
+    public function getInfo() : ?CargoStatusInfo
     {
         return $this->info;
     }
     /**
-     * 
+     * Общая информация о грузе
      *
-     * @param CargoStatusInfo $info
+     * @param CargoStatusInfo|null $info
      *
      * @return self
      */
-    public function setInfo(CargoStatusInfo $info) : self
+    public function setInfo(?CargoStatusInfo $info) : self
     {
         $this->info = $info;
         return $this;
     }
     /**
-     * 
+     * Получатель
      *
-     * @return CargosCargoReceiver
+     * @return CargosCargoReceiver|null
      */
-    public function getReceiver() : CargosCargoReceiver
+    public function getReceiver() : ?CargosCargoReceiver
     {
         return $this->receiver;
     }
     /**
-     * 
+     * Получатель
      *
-     * @param CargosCargoReceiver $receiver
+     * @param CargosCargoReceiver|null $receiver
      *
      * @return self
      */
-    public function setReceiver(CargosCargoReceiver $receiver) : self
+    public function setReceiver(?CargosCargoReceiver $receiver) : self
     {
         $this->receiver = $receiver;
         return $this;
     }
     /**
-     * 
+     * Отправитель
      *
-     * @return CargoSender
+     * @return CargoSender|null
      */
-    public function getSender() : CargoSender
+    public function getSender() : ?CargoSender
     {
         return $this->sender;
     }
     /**
-     * 
+     * Отправитель
      *
-     * @param CargoSender $sender
+     * @param CargoSender|null $sender
      *
      * @return self
      */
-    public function setSender(CargoSender $sender) : self
+    public function setSender(?CargoSender $sender) : self
     {
         $this->sender = $sender;
         return $this;
     }
     /**
-     * 
+     * Услуги
      *
-     * @return CargoServices
+     * @return CargoServices|null
      */
-    public function getServices() : CargoServices
+    public function getServices() : ?CargoServices
     {
         return $this->services;
     }
     /**
-     * 
+     * Услуги
      *
-     * @param CargoServices $services
+     * @param CargoServices|null $services
      *
      * @return self
      */
-    public function setServices(CargoServices $services) : self
+    public function setServices(?CargoServices $services) : self
     {
         $this->services = $services;
         return $this;

@@ -63,8 +63,11 @@ class NetshopPickupNormalizer implements DenormalizerInterface, NormalizerInterf
         elseif (\array_key_exists('lunchBreakTo', $data) && $data['lunchBreakTo'] === null) {
             $object->setLunchBreakTo(null);
         }
-        if (\array_key_exists('payer', $data)) {
+        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
             $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\NetshopPayer', 'json', $context));
+        }
+        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+            $object->setPayer(null);
         }
         if (\array_key_exists('person', $data)) {
             $object->setPerson($data['person']);

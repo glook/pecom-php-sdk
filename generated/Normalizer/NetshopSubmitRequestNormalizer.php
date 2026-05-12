@@ -43,8 +43,11 @@ class NetshopSubmitRequestNormalizer implements DenormalizerInterface, Normalize
             }
             $object->setCargos($values);
         }
-        if (\array_key_exists('pickup', $data)) {
+        if (\array_key_exists('pickup', $data) && $data['pickup'] !== null) {
             $object->setPickup($this->denormalizer->denormalize($data['pickup'], 'glook\\PecomSdk\\Generated\\Model\\NetshopPickup', 'json', $context));
+        }
+        elseif (\array_key_exists('pickup', $data) && $data['pickup'] === null) {
+            $object->setPickup(null);
         }
         if (\array_key_exists('sender', $data)) {
             $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\\PecomSdk\\Generated\\Model\\NetshopSender', 'json', $context));

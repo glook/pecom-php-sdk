@@ -36,8 +36,11 @@ class CounterpartyDocumentNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('documentType', $data)) {
+        if (\array_key_exists('documentType', $data) && $data['documentType'] !== null) {
             $object->setDocumentType($this->denormalizer->denormalize($data['documentType'], 'glook\\PecomSdk\\Generated\\Model\\DocumentType', 'json', $context));
+        }
+        elseif (\array_key_exists('documentType', $data) && $data['documentType'] === null) {
+            $object->setDocumentType(null);
         }
         if (\array_key_exists('expiredDate', $data) && $data['expiredDate'] !== null) {
             $object->setExpiredDate(\DateTime::createFromFormat('Y-m-d', $data['expiredDate'])->setTime(0, 0, 0));

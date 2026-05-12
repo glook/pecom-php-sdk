@@ -13,7 +13,7 @@ class CalculatePriceRequest
     /**
      * Данные контрагента для расчета с учетом спецусловий
      *
-     * @var Counterpart
+     * @var Counterpart|null
      */
     protected $counterpart;
     /**
@@ -23,15 +23,15 @@ class CalculatePriceRequest
      */
     protected $currencyCode = '643';
     /**
-     * Параметры адреса
+     * Параметры адреса доставки груза
      *
-     * @var AddressBlock
+     * @var AddressBlock|null
      */
     protected $delivery;
     /**
-     * Погрузочно-разгрузочные работы
+     * Погрузочно-разгрузочные работы при доставке
      *
-     * @var LoadingServices
+     * @var LoadingServices|null
      */
     protected $deliveryServices;
     /**
@@ -89,15 +89,15 @@ class CalculatePriceRequest
      */
     protected $needReturnDocuments;
     /**
-     * Параметры адреса
+     * Параметры адреса забора груза
      *
-     * @var AddressBlock
+     * @var AddressBlock|null
      */
     protected $pickup;
     /**
-     * Погрузочно-разгрузочные работы
+     * Погрузочно-разгрузочные работы при заборе
      *
-     * @var LoadingServices
+     * @var LoadingServices|null
      */
     protected $pickupServices;
     /**
@@ -160,20 +160,20 @@ class CalculatePriceRequest
     /**
      * Данные контрагента для расчета с учетом спецусловий
      *
-     * @return Counterpart
+     * @return Counterpart|null
      */
-    public function getCounterpart() : Counterpart
+    public function getCounterpart() : ?Counterpart
     {
         return $this->counterpart;
     }
     /**
      * Данные контрагента для расчета с учетом спецусловий
      *
-     * @param Counterpart $counterpart
+     * @param Counterpart|null $counterpart
      *
      * @return self
      */
-    public function setCounterpart(Counterpart $counterpart) : self
+    public function setCounterpart(?Counterpart $counterpart) : self
     {
         $this->counterpart = $counterpart;
         return $this;
@@ -200,43 +200,43 @@ class CalculatePriceRequest
         return $this;
     }
     /**
-     * Параметры адреса
+     * Параметры адреса доставки груза
      *
-     * @return AddressBlock
+     * @return AddressBlock|null
      */
-    public function getDelivery() : AddressBlock
+    public function getDelivery() : ?AddressBlock
     {
         return $this->delivery;
     }
     /**
-     * Параметры адреса
+     * Параметры адреса доставки груза
      *
-     * @param AddressBlock $delivery
+     * @param AddressBlock|null $delivery
      *
      * @return self
      */
-    public function setDelivery(AddressBlock $delivery) : self
+    public function setDelivery(?AddressBlock $delivery) : self
     {
         $this->delivery = $delivery;
         return $this;
     }
     /**
-     * Погрузочно-разгрузочные работы
+     * Погрузочно-разгрузочные работы при доставке
      *
-     * @return LoadingServices
+     * @return LoadingServices|null
      */
-    public function getDeliveryServices() : LoadingServices
+    public function getDeliveryServices() : ?LoadingServices
     {
         return $this->deliveryServices;
     }
     /**
-     * Погрузочно-разгрузочные работы
+     * Погрузочно-разгрузочные работы при доставке
      *
-     * @param LoadingServices $deliveryServices
+     * @param LoadingServices|null $deliveryServices
      *
      * @return self
      */
-    public function setDeliveryServices(LoadingServices $deliveryServices) : self
+    public function setDeliveryServices(?LoadingServices $deliveryServices) : self
     {
         $this->deliveryServices = $deliveryServices;
         return $this;
@@ -431,43 +431,43 @@ class CalculatePriceRequest
         return $this;
     }
     /**
-     * Параметры адреса
+     * Параметры адреса забора груза
      *
-     * @return AddressBlock
+     * @return AddressBlock|null
      */
-    public function getPickup() : AddressBlock
+    public function getPickup() : ?AddressBlock
     {
         return $this->pickup;
     }
     /**
-     * Параметры адреса
+     * Параметры адреса забора груза
      *
-     * @param AddressBlock $pickup
+     * @param AddressBlock|null $pickup
      *
      * @return self
      */
-    public function setPickup(AddressBlock $pickup) : self
+    public function setPickup(?AddressBlock $pickup) : self
     {
         $this->pickup = $pickup;
         return $this;
     }
     /**
-     * Погрузочно-разгрузочные работы
+     * Погрузочно-разгрузочные работы при заборе
      *
-     * @return LoadingServices
+     * @return LoadingServices|null
      */
-    public function getPickupServices() : LoadingServices
+    public function getPickupServices() : ?LoadingServices
     {
         return $this->pickupServices;
     }
     /**
-     * Погрузочно-разгрузочные работы
+     * Погрузочно-разгрузочные работы при заборе
      *
-     * @param LoadingServices $pickupServices
+     * @param LoadingServices|null $pickupServices
      *
      * @return self
      */
-    public function setPickupServices(LoadingServices $pickupServices) : self
+    public function setPickupServices(?LoadingServices $pickupServices) : self
     {
         $this->pickupServices = $pickupServices;
         return $this;

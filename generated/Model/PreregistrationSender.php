@@ -31,13 +31,13 @@ class PreregistrationSender
     /**
      * 
      *
-     * @var PreregistrationIdentityCard
+     * @var PreregistrationIdentityCard|null
      */
     protected $identityCard;
     /**
      * 
      *
-     * @var Individual
+     * @var Individual|null
      */
     protected $individual;
     /**
@@ -169,20 +169,20 @@ class PreregistrationSender
     /**
      * 
      *
-     * @return PreregistrationIdentityCard
+     * @return PreregistrationIdentityCard|null
      */
-    public function getIdentityCard() : PreregistrationIdentityCard
+    public function getIdentityCard() : ?PreregistrationIdentityCard
     {
         return $this->identityCard;
     }
     /**
      * 
      *
-     * @param PreregistrationIdentityCard $identityCard
+     * @param PreregistrationIdentityCard|null $identityCard
      *
      * @return self
      */
-    public function setIdentityCard(PreregistrationIdentityCard $identityCard) : self
+    public function setIdentityCard(?PreregistrationIdentityCard $identityCard) : self
     {
         $this->identityCard = $identityCard;
         return $this;
@@ -190,20 +190,20 @@ class PreregistrationSender
     /**
      * 
      *
-     * @return Individual
+     * @return Individual|null
      */
-    public function getIndividual() : Individual
+    public function getIndividual() : ?Individual
     {
         return $this->individual;
     }
     /**
      * 
      *
-     * @param Individual $individual
+     * @param Individual|null $individual
      *
      * @return self
      */
-    public function setIndividual(Individual $individual) : self
+    public function setIndividual(?Individual $individual) : self
     {
         $this->individual = $individual;
         return $this;

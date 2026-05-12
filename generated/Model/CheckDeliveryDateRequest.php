@@ -17,9 +17,9 @@ class CheckDeliveryDateRequest
      */
     protected $calculateDays = 1;
     /**
-     * Координаты адреса (в виде чисел для checkdeliverydate)
+     * Координаты адреса забора/доставки (используется для точности вычислений), если переданы координаты, то значение в поле `address` игнорируется. Необязательный параметр.
      *
-     * @var CoordinatesNumber
+     * @var CoordinatesNumber|null
      */
     protected $coordinates;
     /**
@@ -71,22 +71,22 @@ class CheckDeliveryDateRequest
         return $this;
     }
     /**
-     * Координаты адреса (в виде чисел для checkdeliverydate)
+     * Координаты адреса забора/доставки (используется для точности вычислений), если переданы координаты, то значение в поле `address` игнорируется. Необязательный параметр.
      *
-     * @return CoordinatesNumber
+     * @return CoordinatesNumber|null
      */
-    public function getCoordinates() : CoordinatesNumber
+    public function getCoordinates() : ?CoordinatesNumber
     {
         return $this->coordinates;
     }
     /**
-     * Координаты адреса (в виде чисел для checkdeliverydate)
+     * Координаты адреса забора/доставки (используется для точности вычислений), если переданы координаты, то значение в поле `address` игнорируется. Необязательный параметр.
      *
-     * @param CoordinatesNumber $coordinates
+     * @param CoordinatesNumber|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(CoordinatesNumber $coordinates) : self
+    public function setCoordinates(?CoordinatesNumber $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;

@@ -5,9 +5,9 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderSenderCounterpart
 {
     /**
-     * 
+     * Блок для юр.лица/ИП
      *
-     * @var ListAllOrderCounterpartLegalEntity
+     * @var ListAllOrderCounterpartLegalEntity|null
      */
     protected $legalEntity;
     /**
@@ -17,9 +17,9 @@ class ListAllOrderSenderCounterpart
      */
     protected $name;
     /**
-     * 
+     * Блок для физ.лица
      *
-     * @var ListAllOrderSenderCounterpartPhysicalPerson
+     * @var ListAllOrderSenderCounterpartPhysicalPerson|null
      */
     protected $physicalPerson;
     /**
@@ -29,22 +29,22 @@ class ListAllOrderSenderCounterpart
      */
     protected $type;
     /**
-     * 
+     * Блок для юр.лица/ИП
      *
-     * @return ListAllOrderCounterpartLegalEntity
+     * @return ListAllOrderCounterpartLegalEntity|null
      */
-    public function getLegalEntity() : ListAllOrderCounterpartLegalEntity
+    public function getLegalEntity() : ?ListAllOrderCounterpartLegalEntity
     {
         return $this->legalEntity;
     }
     /**
-     * 
+     * Блок для юр.лица/ИП
      *
-     * @param ListAllOrderCounterpartLegalEntity $legalEntity
+     * @param ListAllOrderCounterpartLegalEntity|null $legalEntity
      *
      * @return self
      */
-    public function setLegalEntity(ListAllOrderCounterpartLegalEntity $legalEntity) : self
+    public function setLegalEntity(?ListAllOrderCounterpartLegalEntity $legalEntity) : self
     {
         $this->legalEntity = $legalEntity;
         return $this;
@@ -71,22 +71,22 @@ class ListAllOrderSenderCounterpart
         return $this;
     }
     /**
-     * 
+     * Блок для физ.лица
      *
-     * @return ListAllOrderSenderCounterpartPhysicalPerson
+     * @return ListAllOrderSenderCounterpartPhysicalPerson|null
      */
-    public function getPhysicalPerson() : ListAllOrderSenderCounterpartPhysicalPerson
+    public function getPhysicalPerson() : ?ListAllOrderSenderCounterpartPhysicalPerson
     {
         return $this->physicalPerson;
     }
     /**
-     * 
+     * Блок для физ.лица
      *
-     * @param ListAllOrderSenderCounterpartPhysicalPerson $physicalPerson
+     * @param ListAllOrderSenderCounterpartPhysicalPerson|null $physicalPerson
      *
      * @return self
      */
-    public function setPhysicalPerson(ListAllOrderSenderCounterpartPhysicalPerson $physicalPerson) : self
+    public function setPhysicalPerson(?ListAllOrderSenderCounterpartPhysicalPerson $physicalPerson) : self
     {
         $this->physicalPerson = $physicalPerson;
         return $this;

@@ -39,8 +39,11 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesHardPackingNormalize
         if (\array_key_exists('enabled', $data)) {
             $object->setEnabled($data['enabled']);
         }
-        if (\array_key_exists('payer', $data)) {
+        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
             $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayer', 'json', $context));
+        }
+        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+            $object->setPayer(null);
         }
         if (\array_key_exists('positionsCount', $data) && $data['positionsCount'] !== null) {
             $object->setPositionsCount($data['positionsCount']);

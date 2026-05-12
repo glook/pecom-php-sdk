@@ -43,7 +43,7 @@ class ServiceCashOnDelivery
     /**
      * 
      *
-     * @var PreregistrationSpecification
+     * @var PreregistrationSpecification|null
      */
     protected $specification;
     /**
@@ -175,20 +175,20 @@ class ServiceCashOnDelivery
     /**
      * 
      *
-     * @return PreregistrationSpecification
+     * @return PreregistrationSpecification|null
      */
-    public function getSpecification() : PreregistrationSpecification
+    public function getSpecification() : ?PreregistrationSpecification
     {
         return $this->specification;
     }
     /**
      * 
      *
-     * @param PreregistrationSpecification $specification
+     * @param PreregistrationSpecification|null $specification
      *
      * @return self
      */
-    public function setSpecification(PreregistrationSpecification $specification) : self
+    public function setSpecification(?PreregistrationSpecification $specification) : self
     {
         $this->specification = $specification;
         return $this;

@@ -13,7 +13,7 @@ class CargoPickupRefusalWarehouse
     /**
      * 
      *
-     * @var RefusalRecipient
+     * @var RefusalRecipient|null
      */
     protected $recipient;
     /**
@@ -46,20 +46,20 @@ class CargoPickupRefusalWarehouse
     /**
      * 
      *
-     * @return RefusalRecipient
+     * @return RefusalRecipient|null
      */
-    public function getRecipient() : RefusalRecipient
+    public function getRecipient() : ?RefusalRecipient
     {
         return $this->recipient;
     }
     /**
      * 
      *
-     * @param RefusalRecipient $recipient
+     * @param RefusalRecipient|null $recipient
      *
      * @return self
      */
-    public function setRecipient(RefusalRecipient $recipient) : self
+    public function setRecipient(?RefusalRecipient $recipient) : self
     {
         $this->recipient = $recipient;
         return $this;

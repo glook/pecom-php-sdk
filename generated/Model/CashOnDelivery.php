@@ -43,7 +43,7 @@ class CashOnDelivery
     /**
      * 
      *
-     * @var CargopickupSpecification
+     * @var CargopickupSpecification|null
      */
     protected $specification;
     /**
@@ -175,20 +175,20 @@ class CashOnDelivery
     /**
      * 
      *
-     * @return CargopickupSpecification
+     * @return CargopickupSpecification|null
      */
-    public function getSpecification() : CargopickupSpecification
+    public function getSpecification() : ?CargopickupSpecification
     {
         return $this->specification;
     }
     /**
      * 
      *
-     * @param CargopickupSpecification $specification
+     * @param CargopickupSpecification|null $specification
      *
      * @return self
      */
-    public function setSpecification(CargopickupSpecification $specification) : self
+    public function setSpecification(?CargopickupSpecification $specification) : self
     {
         $this->specification = $specification;
         return $this;

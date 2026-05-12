@@ -11,9 +11,9 @@ class AddressBlock
      */
     protected $address;
     /**
-     * Координаты адреса (в виде строк для calculateprice)
+     * Необязательный параметр координат адреса (используется для точности вычислений).
      *
-     * @var CoordinatesString
+     * @var CoordinatesString|null
      */
     protected $coordinates;
     /**
@@ -38,22 +38,22 @@ class AddressBlock
         return $this;
     }
     /**
-     * Координаты адреса (в виде строк для calculateprice)
+     * Необязательный параметр координат адреса (используется для точности вычислений).
      *
-     * @return CoordinatesString
+     * @return CoordinatesString|null
      */
-    public function getCoordinates() : CoordinatesString
+    public function getCoordinates() : ?CoordinatesString
     {
         return $this->coordinates;
     }
     /**
-     * Координаты адреса (в виде строк для calculateprice)
+     * Необязательный параметр координат адреса (используется для точности вычислений).
      *
-     * @param CoordinatesString $coordinates
+     * @param CoordinatesString|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(CoordinatesString $coordinates) : self
+    public function setCoordinates(?CoordinatesString $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;

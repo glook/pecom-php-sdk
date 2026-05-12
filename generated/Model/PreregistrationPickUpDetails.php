@@ -31,7 +31,7 @@ class PreregistrationPickUpDetails
     /**
      * 
      *
-     * @var PreregistrationCoordinates
+     * @var PreregistrationCoordinates|null
      */
     protected $coordinates;
     /**
@@ -199,20 +199,20 @@ class PreregistrationPickUpDetails
     /**
      * 
      *
-     * @return PreregistrationCoordinates
+     * @return PreregistrationCoordinates|null
      */
-    public function getCoordinates() : PreregistrationCoordinates
+    public function getCoordinates() : ?PreregistrationCoordinates
     {
         return $this->coordinates;
     }
     /**
      * 
      *
-     * @param PreregistrationCoordinates $coordinates
+     * @param PreregistrationCoordinates|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(PreregistrationCoordinates $coordinates) : self
+    public function setCoordinates(?PreregistrationCoordinates $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;

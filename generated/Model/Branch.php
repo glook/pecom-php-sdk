@@ -35,9 +35,9 @@ class Branch
      */
     protected $coordinates;
     /**
-     * 
+     * Координаты GPS основного отделения филиала
      *
-     * @var BranchesCoordinates
+     * @var BranchesCoordinates|null
      */
     protected $coordinatesobj;
     /**
@@ -188,22 +188,22 @@ class Branch
         return $this;
     }
     /**
-     * 
+     * Координаты GPS основного отделения филиала
      *
-     * @return BranchesCoordinates
+     * @return BranchesCoordinates|null
      */
-    public function getCoordinatesobj() : BranchesCoordinates
+    public function getCoordinatesobj() : ?BranchesCoordinates
     {
         return $this->coordinatesobj;
     }
     /**
-     * 
+     * Координаты GPS основного отделения филиала
      *
-     * @param BranchesCoordinates $coordinatesobj
+     * @param BranchesCoordinates|null $coordinatesobj
      *
      * @return self
      */
-    public function setCoordinatesobj(BranchesCoordinates $coordinatesobj) : self
+    public function setCoordinatesobj(?BranchesCoordinates $coordinatesobj) : self
     {
         $this->coordinatesobj = $coordinatesobj;
         return $this;

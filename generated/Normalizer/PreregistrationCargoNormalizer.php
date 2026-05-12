@@ -42,11 +42,17 @@ class PreregistrationCargoNormalizer implements DenormalizerInterface, Normalize
         if (\array_key_exists('receiver', $data)) {
             $object->setReceiver($this->denormalizer->denormalize($data['receiver'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationReceiver', 'json', $context));
         }
-        if (\array_key_exists('refusalWarehouse', $data)) {
+        if (\array_key_exists('refusalWarehouse', $data) && $data['refusalWarehouse'] !== null) {
             $object->setRefusalWarehouse($this->denormalizer->denormalize($data['refusalWarehouse'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationRefusalWarehouse', 'json', $context));
         }
-        if (\array_key_exists('services', $data)) {
+        elseif (\array_key_exists('refusalWarehouse', $data) && $data['refusalWarehouse'] === null) {
+            $object->setRefusalWarehouse(null);
+        }
+        if (\array_key_exists('services', $data) && $data['services'] !== null) {
             $object->setServices($this->denormalizer->denormalize($data['services'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationServices', 'json', $context));
+        }
+        elseif (\array_key_exists('services', $data) && $data['services'] === null) {
+            $object->setServices(null);
         }
         return $object;
     }

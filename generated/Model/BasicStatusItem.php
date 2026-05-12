@@ -5,55 +5,55 @@ namespace glook\PecomSdk\Generated\Model;
 class BasicStatusItem
 {
     /**
-     * 
+     * Параметры груза
      *
-     * @var BasicCargoInfo
+     * @var BasicCargoInfo|null
      */
     protected $cargo;
     /**
-     * 
+     * Общая информация о грузе
      *
-     * @var BasicStatusInfo
+     * @var BasicStatusInfo|null
      */
     protected $info;
     /**
-     * 
+     * Параметры груза
      *
-     * @return BasicCargoInfo
+     * @return BasicCargoInfo|null
      */
-    public function getCargo() : BasicCargoInfo
+    public function getCargo() : ?BasicCargoInfo
     {
         return $this->cargo;
     }
     /**
-     * 
+     * Параметры груза
      *
-     * @param BasicCargoInfo $cargo
+     * @param BasicCargoInfo|null $cargo
      *
      * @return self
      */
-    public function setCargo(BasicCargoInfo $cargo) : self
+    public function setCargo(?BasicCargoInfo $cargo) : self
     {
         $this->cargo = $cargo;
         return $this;
     }
     /**
-     * 
+     * Общая информация о грузе
      *
-     * @return BasicStatusInfo
+     * @return BasicStatusInfo|null
      */
-    public function getInfo() : BasicStatusInfo
+    public function getInfo() : ?BasicStatusInfo
     {
         return $this->info;
     }
     /**
-     * 
+     * Общая информация о грузе
      *
-     * @param BasicStatusInfo $info
+     * @param BasicStatusInfo|null $info
      *
      * @return self
      */
-    public function setInfo(BasicStatusInfo $info) : self
+    public function setInfo(?BasicStatusInfo $info) : self
     {
         $this->info = $info;
         return $this;

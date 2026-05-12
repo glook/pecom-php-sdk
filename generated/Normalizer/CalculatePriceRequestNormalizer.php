@@ -46,8 +46,11 @@ class CalculatePriceRequestNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('cargos', $data) && $data['cargos'] === null) {
             $object->setCargos(null);
         }
-        if (\array_key_exists('counterpart', $data)) {
+        if (\array_key_exists('counterpart', $data) && $data['counterpart'] !== null) {
             $object->setCounterpart($this->denormalizer->denormalize($data['counterpart'], 'glook\\PecomSdk\\Generated\\Model\\Counterpart', 'json', $context));
+        }
+        elseif (\array_key_exists('counterpart', $data) && $data['counterpart'] === null) {
+            $object->setCounterpart(null);
         }
         if (\array_key_exists('currencyCode', $data) && $data['currencyCode'] !== null) {
             $object->setCurrencyCode($data['currencyCode']);
@@ -55,11 +58,17 @@ class CalculatePriceRequestNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('currencyCode', $data) && $data['currencyCode'] === null) {
             $object->setCurrencyCode(null);
         }
-        if (\array_key_exists('delivery', $data)) {
+        if (\array_key_exists('delivery', $data) && $data['delivery'] !== null) {
             $object->setDelivery($this->denormalizer->denormalize($data['delivery'], 'glook\\PecomSdk\\Generated\\Model\\AddressBlock', 'json', $context));
         }
-        if (\array_key_exists('deliveryServices', $data)) {
+        elseif (\array_key_exists('delivery', $data) && $data['delivery'] === null) {
+            $object->setDelivery(null);
+        }
+        if (\array_key_exists('deliveryServices', $data) && $data['deliveryServices'] !== null) {
             $object->setDeliveryServices($this->denormalizer->denormalize($data['deliveryServices'], 'glook\\PecomSdk\\Generated\\Model\\LoadingServices', 'json', $context));
+        }
+        elseif (\array_key_exists('deliveryServices', $data) && $data['deliveryServices'] === null) {
+            $object->setDeliveryServices(null);
         }
         if (\array_key_exists('isDelivery', $data) && $data['isDelivery'] !== null) {
             $object->setIsDelivery($data['isDelivery']);
@@ -115,11 +124,17 @@ class CalculatePriceRequestNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('needReturnDocuments', $data) && $data['needReturnDocuments'] === null) {
             $object->setNeedReturnDocuments(null);
         }
-        if (\array_key_exists('pickup', $data)) {
+        if (\array_key_exists('pickup', $data) && $data['pickup'] !== null) {
             $object->setPickup($this->denormalizer->denormalize($data['pickup'], 'glook\\PecomSdk\\Generated\\Model\\AddressBlock', 'json', $context));
         }
-        if (\array_key_exists('pickupServices', $data)) {
+        elseif (\array_key_exists('pickup', $data) && $data['pickup'] === null) {
+            $object->setPickup(null);
+        }
+        if (\array_key_exists('pickupServices', $data) && $data['pickupServices'] !== null) {
             $object->setPickupServices($this->denormalizer->denormalize($data['pickupServices'], 'glook\\PecomSdk\\Generated\\Model\\LoadingServices', 'json', $context));
+        }
+        elseif (\array_key_exists('pickupServices', $data) && $data['pickupServices'] === null) {
+            $object->setPickupServices(null);
         }
         if (\array_key_exists('plannedDateTime', $data) && $data['plannedDateTime'] !== null) {
             $object->setPlannedDateTime($data['plannedDateTime']);

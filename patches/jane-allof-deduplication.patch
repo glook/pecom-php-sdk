@@ -1,0 +1,42 @@
+Subject: Skip wrapper class for single $ref allOf (deduplication)
+
+When a property uses `allOf: [{$ref: X}]` (commonly with `nullable: true`)
+without local properties of its own, Jane currently generates a duplicate
+wrapper class for each property. The wrapper has identical structure to the
+referenced schema, only its name differs.
+
+This patch makes `AllOfGuesser::guessClass()` short-circuit when:
+- allOf contains exactly one item,
+- that item is a `Reference` (i.e. a pure `$ref`),
+- the wrapping object has no local `properties`,
+- the wrapping object has no `additionalProperties`.
+
+In that case the wrapper is transparent and `guessType()` already routes the
+property type to the referenced class via the chain guesser. Nullable info
+stays on the property level (`Property::isNullable()`), so nullable getters
+are preserved.
+
+See janephp/janephp#535 for upstream context.
+
+--- a/Guesser/JsonSchema/AllOfGuesser.php
++++ b/Guesser/JsonSchema/AllOfGuesser.php
+@@ -36,6 +36,19 @@ class AllOfGuesser implements GuesserInterface, TypeGuesserInterface, ChainGuess
+      */
+     public function guessClass($object, string $name, string $reference, Registry $registry): void
+     {
++        $allOfItems = $object->getAllOf();
++
++        // Прозрачная ссылка: allOf из одного $ref без локальных полей.
++        // Не создаём wrapper-класс — тип свойства будет разрезолвен через chainGuesser->guessType().
++        if (
++            \count($allOfItems) === 1
++            && $allOfItems[0] instanceof Reference
++            && (!method_exists($object, 'getProperties') || empty($object->getProperties()))
++            && (!method_exists($object, 'getAdditionalProperties') || $object->getAdditionalProperties() === null || $object->getAdditionalProperties() === false)
++        ) {
++            return;
++        }
++
+         $hasSubObject = false;
+
+         foreach ($object->getAllOf() as $allOf) {

@@ -26,11 +26,20 @@
   "require-dev": {
     "jane-php/open-api-3": "^6.3.9",
     "php-cs-fixer/shim": "^3.95",
-    "phpunit/phpunit": "^9.0"
+    "phpunit/phpunit": "^9.0",
+    "cweagans/composer-patches": "^1.7"
   },
   "config": {
     "allow-plugins": {
-      "php-http/discovery": true
+      "php-http/discovery": true,
+      "cweagans/composer-patches": true
+    }
+  },
+  "extra": {
+    "patches": {
+      "jane-php/json-schema": {
+        "Skip wrapper class for single $ref allOf (deduplication)": "patches/jane-allof-deduplication.patch"
+      }
     }
   },
   "autoload": {

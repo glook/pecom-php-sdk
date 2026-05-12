@@ -46,8 +46,11 @@ class CurrentStatusResponseNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('cargos', $data) && $data['cargos'] === null) {
             $object->setCargos(null);
         }
-        if (\array_key_exists('error', $data)) {
+        if (\array_key_exists('error', $data) && $data['error'] !== null) {
             $object->setError($this->denormalizer->denormalize($data['error'], 'glook\\PecomSdk\\Generated\\Model\\CurrentStatusError', 'json', $context));
+        }
+        elseif (\array_key_exists('error', $data) && $data['error'] === null) {
+            $object->setError(null);
         }
         return $object;
     }

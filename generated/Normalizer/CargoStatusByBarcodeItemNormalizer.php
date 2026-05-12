@@ -36,11 +36,17 @@ class CargoStatusByBarcodeItemNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cargo', $data)) {
+        if (\array_key_exists('cargo', $data) && $data['cargo'] !== null) {
             $object->setCargo($this->denormalizer->denormalize($data['cargo'], 'glook\\PecomSdk\\Generated\\Model\\CargoInfo', 'json', $context));
         }
-        if (\array_key_exists('info', $data)) {
+        elseif (\array_key_exists('cargo', $data) && $data['cargo'] === null) {
+            $object->setCargo(null);
+        }
+        if (\array_key_exists('info', $data) && $data['info'] !== null) {
             $object->setInfo($this->denormalizer->denormalize($data['info'], 'glook\\PecomSdk\\Generated\\Model\\CargoStatusInfo', 'json', $context));
+        }
+        elseif (\array_key_exists('info', $data) && $data['info'] === null) {
+            $object->setInfo(null);
         }
         if (\array_key_exists('positionBarCodes', $data) && $data['positionBarCodes'] !== null) {
             $values = array();
@@ -52,14 +58,23 @@ class CargoStatusByBarcodeItemNormalizer implements DenormalizerInterface, Norma
         elseif (\array_key_exists('positionBarCodes', $data) && $data['positionBarCodes'] === null) {
             $object->setPositionBarCodes(null);
         }
-        if (\array_key_exists('receiver', $data)) {
+        if (\array_key_exists('receiver', $data) && $data['receiver'] !== null) {
             $object->setReceiver($this->denormalizer->denormalize($data['receiver'], 'glook\\PecomSdk\\Generated\\Model\\CargosCargoReceiver', 'json', $context));
         }
-        if (\array_key_exists('sender', $data)) {
+        elseif (\array_key_exists('receiver', $data) && $data['receiver'] === null) {
+            $object->setReceiver(null);
+        }
+        if (\array_key_exists('sender', $data) && $data['sender'] !== null) {
             $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\\PecomSdk\\Generated\\Model\\CargoSender', 'json', $context));
         }
-        if (\array_key_exists('services', $data)) {
+        elseif (\array_key_exists('sender', $data) && $data['sender'] === null) {
+            $object->setSender(null);
+        }
+        if (\array_key_exists('services', $data) && $data['services'] !== null) {
             $object->setServices($this->denormalizer->denormalize($data['services'], 'glook\\PecomSdk\\Generated\\Model\\CargoServices', 'json', $context));
+        }
+        elseif (\array_key_exists('services', $data) && $data['services'] === null) {
+            $object->setServices(null);
         }
         return $object;
     }

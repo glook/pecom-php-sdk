@@ -46,8 +46,11 @@ class PreregistrationSubmitRequestNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('common', $data)) {
             $object->setCommon($this->denormalizer->denormalize($data['common'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCommon', 'json', $context));
         }
-        if (\array_key_exists('pickUpDetails', $data)) {
+        if (\array_key_exists('pickUpDetails', $data) && $data['pickUpDetails'] !== null) {
             $object->setPickUpDetails($this->denormalizer->denormalize($data['pickUpDetails'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationPickUpDetails', 'json', $context));
+        }
+        elseif (\array_key_exists('pickUpDetails', $data) && $data['pickUpDetails'] === null) {
+            $object->setPickUpDetails(null);
         }
         if (\array_key_exists('sender', $data)) {
             $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationSender', 'json', $context));

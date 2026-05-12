@@ -39,8 +39,11 @@ class NetshopSenderNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('city', $data)) {
             $object->setCity($data['city']);
         }
-        if (\array_key_exists('identityCard', $data)) {
+        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
             $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\NetshopIdentityCard', 'json', $context));
+        }
+        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+            $object->setIdentityCard(null);
         }
         if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
             $object->setInn($data['inn']);

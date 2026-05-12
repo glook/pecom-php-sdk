@@ -55,7 +55,7 @@ class ServiceDelivery
     /**
      * 
      *
-     * @var PreregistrationPayer
+     * @var PreregistrationPayer|null
      */
     protected $payer;
     /**
@@ -229,20 +229,20 @@ class ServiceDelivery
     /**
      * 
      *
-     * @return PreregistrationPayer
+     * @return PreregistrationPayer|null
      */
-    public function getPayer() : PreregistrationPayer
+    public function getPayer() : ?PreregistrationPayer
     {
         return $this->payer;
     }
     /**
      * 
      *
-     * @param PreregistrationPayer $payer
+     * @param PreregistrationPayer|null $payer
      *
      * @return self
      */
-    public function setPayer(PreregistrationPayer $payer) : self
+    public function setPayer(?PreregistrationPayer $payer) : self
     {
         $this->payer = $payer;
         return $this;

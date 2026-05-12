@@ -19,7 +19,7 @@ class CargoPickupReceiver
     /**
      * 
      *
-     * @var CargopickupCoordinates
+     * @var CargopickupCoordinates|null
      */
     protected $coordinates;
     /**
@@ -61,7 +61,7 @@ class CargoPickupReceiver
     /**
      * 
      *
-     * @var CargopickupIdentityCard
+     * @var CargopickupIdentityCard|null
      */
     protected $identityCard;
     /**
@@ -181,20 +181,20 @@ class CargoPickupReceiver
     /**
      * 
      *
-     * @return CargopickupCoordinates
+     * @return CargopickupCoordinates|null
      */
-    public function getCoordinates() : CargopickupCoordinates
+    public function getCoordinates() : ?CargopickupCoordinates
     {
         return $this->coordinates;
     }
     /**
      * 
      *
-     * @param CargopickupCoordinates $coordinates
+     * @param CargopickupCoordinates|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(CargopickupCoordinates $coordinates) : self
+    public function setCoordinates(?CargopickupCoordinates $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;
@@ -328,20 +328,20 @@ class CargoPickupReceiver
     /**
      * 
      *
-     * @return CargopickupIdentityCard
+     * @return CargopickupIdentityCard|null
      */
-    public function getIdentityCard() : CargopickupIdentityCard
+    public function getIdentityCard() : ?CargopickupIdentityCard
     {
         return $this->identityCard;
     }
     /**
      * 
      *
-     * @param CargopickupIdentityCard $identityCard
+     * @param CargopickupIdentityCard|null $identityCard
      *
      * @return self
      */
-    public function setIdentityCard(CargopickupIdentityCard $identityCard) : self
+    public function setIdentityCard(?CargopickupIdentityCard $identityCard) : self
     {
         $this->identityCard = $identityCard;
         return $this;

@@ -36,8 +36,11 @@ class ListAllOrderSenderCounterpartNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('LegalEntity', $data)) {
+        if (\array_key_exists('LegalEntity', $data) && $data['LegalEntity'] !== null) {
             $object->setLegalEntity($this->denormalizer->denormalize($data['LegalEntity'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderCounterpartLegalEntity', 'json', $context));
+        }
+        elseif (\array_key_exists('LegalEntity', $data) && $data['LegalEntity'] === null) {
+            $object->setLegalEntity(null);
         }
         if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
             $object->setName($data['Name']);
@@ -45,8 +48,11 @@ class ListAllOrderSenderCounterpartNormalizer implements DenormalizerInterface, 
         elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
             $object->setName(null);
         }
-        if (\array_key_exists('PhysicalPerson', $data)) {
+        if (\array_key_exists('PhysicalPerson', $data) && $data['PhysicalPerson'] !== null) {
             $object->setPhysicalPerson($this->denormalizer->denormalize($data['PhysicalPerson'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderSenderCounterpartPhysicalPerson', 'json', $context));
+        }
+        elseif (\array_key_exists('PhysicalPerson', $data) && $data['PhysicalPerson'] === null) {
+            $object->setPhysicalPerson(null);
         }
         if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
             $object->setType($data['Type']);

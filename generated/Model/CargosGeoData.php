@@ -5,9 +5,9 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosGeoData
 {
     /**
-     * 
+     * Адрес
      *
-     * @var GeoAddress
+     * @var GeoAddress|null
      */
     protected $address;
     /**
@@ -17,22 +17,22 @@ class CargosGeoData
      */
     protected $kind;
     /**
-     * 
+     * Адрес
      *
-     * @return GeoAddress
+     * @return GeoAddress|null
      */
-    public function getAddress() : GeoAddress
+    public function getAddress() : ?GeoAddress
     {
         return $this->address;
     }
     /**
-     * 
+     * Адрес
      *
-     * @param GeoAddress $address
+     * @param GeoAddress|null $address
      *
      * @return self
      */
-    public function setAddress(GeoAddress $address) : self
+    public function setAddress(?GeoAddress $address) : self
     {
         $this->address = $address;
         return $this;

@@ -36,8 +36,11 @@ class ListAllOrderReceiverNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('Counterpart', $data)) {
+        if (\array_key_exists('Counterpart', $data) && $data['Counterpart'] !== null) {
             $object->setCounterpart($this->denormalizer->denormalize($data['Counterpart'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiverCounterpart', 'json', $context));
+        }
+        elseif (\array_key_exists('Counterpart', $data) && $data['Counterpart'] === null) {
+            $object->setCounterpart(null);
         }
         if (\array_key_exists('DelivieryAddress', $data) && $data['DelivieryAddress'] !== null) {
             $object->setDelivieryAddress($data['DelivieryAddress']);

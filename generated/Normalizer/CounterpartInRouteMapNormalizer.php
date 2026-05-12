@@ -48,8 +48,11 @@ class CounterpartInRouteMapNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('countCargosForIntake', $data) && $data['countCargosForIntake'] === null) {
             $object->setCountCargosForIntake(null);
         }
-        if (\array_key_exists('counterpart', $data)) {
+        if (\array_key_exists('counterpart', $data) && $data['counterpart'] !== null) {
             $object->setCounterpart($this->denormalizer->denormalize($data['counterpart'], 'glook\\PecomSdk\\Generated\\Model\\RouteMapCounterpart', 'json', $context));
+        }
+        elseif (\array_key_exists('counterpart', $data) && $data['counterpart'] === null) {
+            $object->setCounterpart(null);
         }
         return $object;
     }

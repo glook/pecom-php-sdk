@@ -42,8 +42,11 @@ class AddressBlockNormalizer implements DenormalizerInterface, NormalizerInterfa
         elseif (\array_key_exists('address', $data) && $data['address'] === null) {
             $object->setAddress(null);
         }
-        if (\array_key_exists('coordinates', $data)) {
+        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
             $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\CoordinatesString', 'json', $context));
+        }
+        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+            $object->setCoordinates(null);
         }
         return $object;
     }

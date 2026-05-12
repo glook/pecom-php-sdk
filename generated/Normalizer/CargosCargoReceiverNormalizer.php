@@ -36,11 +36,17 @@ class CargosCargoReceiverNormalizer implements DenormalizerInterface, Normalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('abbreviated', $data)) {
+        if (\array_key_exists('abbreviated', $data) && $data['abbreviated'] !== null) {
             $object->setAbbreviated($this->denormalizer->denormalize($data['abbreviated'], 'glook\\PecomSdk\\Generated\\Model\\AbbreviatedReceiver', 'json', $context));
         }
-        if (\array_key_exists('branch', $data)) {
+        elseif (\array_key_exists('abbreviated', $data) && $data['abbreviated'] === null) {
+            $object->setAbbreviated(null);
+        }
+        if (\array_key_exists('branch', $data) && $data['branch'] !== null) {
             $object->setBranch($this->denormalizer->denormalize($data['branch'], 'glook\\PecomSdk\\Generated\\Model\\BranchInfo', 'json', $context));
+        }
+        elseif (\array_key_exists('branch', $data) && $data['branch'] === null) {
+            $object->setBranch(null);
         }
         if (\array_key_exists('counterpartPaymentType', $data) && $data['counterpartPaymentType'] !== null) {
             $object->setCounterpartPaymentType($data['counterpartPaymentType']);

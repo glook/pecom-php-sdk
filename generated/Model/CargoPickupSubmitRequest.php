@@ -7,7 +7,7 @@ class CargoPickupSubmitRequest
     /**
      * 
      *
-     * @var CargoPickupBilling
+     * @var CargoPickupBilling|null
      */
     protected $billing;
     /**
@@ -25,19 +25,19 @@ class CargoPickupSubmitRequest
     /**
      * 
      *
-     * @var CargoPickupPayments
+     * @var CargoPickupPayments|null
      */
     protected $payments;
     /**
      * 
      *
-     * @var CargoPickupReceiver
+     * @var CargoPickupReceiver|null
      */
     protected $receiver;
     /**
      * 
      *
-     * @var CargoPickupRefusalWarehouse
+     * @var CargoPickupRefusalWarehouse|null
      */
     protected $refusalWarehouse;
     /**
@@ -55,20 +55,20 @@ class CargoPickupSubmitRequest
     /**
      * 
      *
-     * @return CargoPickupBilling
+     * @return CargoPickupBilling|null
      */
-    public function getBilling() : CargoPickupBilling
+    public function getBilling() : ?CargoPickupBilling
     {
         return $this->billing;
     }
     /**
      * 
      *
-     * @param CargoPickupBilling $billing
+     * @param CargoPickupBilling|null $billing
      *
      * @return self
      */
-    public function setBilling(CargoPickupBilling $billing) : self
+    public function setBilling(?CargoPickupBilling $billing) : self
     {
         $this->billing = $billing;
         return $this;
@@ -118,20 +118,20 @@ class CargoPickupSubmitRequest
     /**
      * 
      *
-     * @return CargoPickupPayments
+     * @return CargoPickupPayments|null
      */
-    public function getPayments() : CargoPickupPayments
+    public function getPayments() : ?CargoPickupPayments
     {
         return $this->payments;
     }
     /**
      * 
      *
-     * @param CargoPickupPayments $payments
+     * @param CargoPickupPayments|null $payments
      *
      * @return self
      */
-    public function setPayments(CargoPickupPayments $payments) : self
+    public function setPayments(?CargoPickupPayments $payments) : self
     {
         $this->payments = $payments;
         return $this;
@@ -139,20 +139,20 @@ class CargoPickupSubmitRequest
     /**
      * 
      *
-     * @return CargoPickupReceiver
+     * @return CargoPickupReceiver|null
      */
-    public function getReceiver() : CargoPickupReceiver
+    public function getReceiver() : ?CargoPickupReceiver
     {
         return $this->receiver;
     }
     /**
      * 
      *
-     * @param CargoPickupReceiver $receiver
+     * @param CargoPickupReceiver|null $receiver
      *
      * @return self
      */
-    public function setReceiver(CargoPickupReceiver $receiver) : self
+    public function setReceiver(?CargoPickupReceiver $receiver) : self
     {
         $this->receiver = $receiver;
         return $this;
@@ -160,20 +160,20 @@ class CargoPickupSubmitRequest
     /**
      * 
      *
-     * @return CargoPickupRefusalWarehouse
+     * @return CargoPickupRefusalWarehouse|null
      */
-    public function getRefusalWarehouse() : CargoPickupRefusalWarehouse
+    public function getRefusalWarehouse() : ?CargoPickupRefusalWarehouse
     {
         return $this->refusalWarehouse;
     }
     /**
      * 
      *
-     * @param CargoPickupRefusalWarehouse $refusalWarehouse
+     * @param CargoPickupRefusalWarehouse|null $refusalWarehouse
      *
      * @return self
      */
-    public function setRefusalWarehouse(CargoPickupRefusalWarehouse $refusalWarehouse) : self
+    public function setRefusalWarehouse(?CargoPickupRefusalWarehouse $refusalWarehouse) : self
     {
         $this->refusalWarehouse = $refusalWarehouse;
         return $this;

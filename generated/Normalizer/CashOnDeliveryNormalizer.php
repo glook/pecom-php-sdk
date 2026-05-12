@@ -76,8 +76,11 @@ class CashOnDeliveryNormalizer implements DenormalizerInterface, NormalizerInter
         elseif (\array_key_exists('sellerServices', $data) && $data['sellerServices'] === null) {
             $object->setSellerServices(null);
         }
-        if (\array_key_exists('specification', $data)) {
+        if (\array_key_exists('specification', $data) && $data['specification'] !== null) {
             $object->setSpecification($this->denormalizer->denormalize($data['specification'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupSpecification', 'json', $context));
+        }
+        elseif (\array_key_exists('specification', $data) && $data['specification'] === null) {
+            $object->setSpecification(null);
         }
         return $object;
     }

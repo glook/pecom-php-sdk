@@ -41,15 +41,15 @@ class ListAllOrderItem
      */
     protected $orderNumber;
     /**
-     * 
+     * Получатель
      *
-     * @var ListAllOrderReceiver
+     * @var ListAllOrderReceiver|null
      */
     protected $receiver;
     /**
-     * 
+     * Отправитель
      *
-     * @var ListAllOrderSender
+     * @var ListAllOrderSender|null
      */
     protected $sender;
     /**
@@ -197,43 +197,43 @@ class ListAllOrderItem
         return $this;
     }
     /**
-     * 
+     * Получатель
      *
-     * @return ListAllOrderReceiver
+     * @return ListAllOrderReceiver|null
      */
-    public function getReceiver() : ListAllOrderReceiver
+    public function getReceiver() : ?ListAllOrderReceiver
     {
         return $this->receiver;
     }
     /**
-     * 
+     * Получатель
      *
-     * @param ListAllOrderReceiver $receiver
+     * @param ListAllOrderReceiver|null $receiver
      *
      * @return self
      */
-    public function setReceiver(ListAllOrderReceiver $receiver) : self
+    public function setReceiver(?ListAllOrderReceiver $receiver) : self
     {
         $this->receiver = $receiver;
         return $this;
     }
     /**
-     * 
+     * Отправитель
      *
-     * @return ListAllOrderSender
+     * @return ListAllOrderSender|null
      */
-    public function getSender() : ListAllOrderSender
+    public function getSender() : ?ListAllOrderSender
     {
         return $this->sender;
     }
     /**
-     * 
+     * Отправитель
      *
-     * @param ListAllOrderSender $sender
+     * @param ListAllOrderSender|null $sender
      *
      * @return self
      */
-    public function setSender(ListAllOrderSender $sender) : self
+    public function setSender(?ListAllOrderSender $sender) : self
     {
         $this->sender = $sender;
         return $this;

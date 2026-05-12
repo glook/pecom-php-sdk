@@ -48,8 +48,11 @@ class CargoPickupServicesNormalizer implements DenormalizerInterface, Normalizer
         elseif (\array_key_exists('carryingDistance', $data) && $data['carryingDistance'] === null) {
             $object->setCarryingDistance(null);
         }
-        if (\array_key_exists('cashOnDelivery', $data)) {
+        if (\array_key_exists('cashOnDelivery', $data) && $data['cashOnDelivery'] !== null) {
             $object->setCashOnDelivery($this->denormalizer->denormalize($data['cashOnDelivery'], 'glook\\PecomSdk\\Generated\\Model\\CashOnDelivery', 'json', $context));
+        }
+        elseif (\array_key_exists('cashOnDelivery', $data) && $data['cashOnDelivery'] === null) {
+            $object->setCashOnDelivery(null);
         }
         if (\array_key_exists('email', $data) && $data['email'] !== null) {
             $object->setEmail($data['email']);

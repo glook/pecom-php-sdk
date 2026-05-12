@@ -11,9 +11,9 @@ class CargoSender
      */
     protected $branch;
     /**
-     * 
+     * Филиал отправителя
      *
-     * @var BranchInfo
+     * @var BranchInfo|null
      */
     protected $branchInfo;
     /**
@@ -68,22 +68,22 @@ class CargoSender
         return $this;
     }
     /**
-     * 
+     * Филиал отправителя
      *
-     * @return BranchInfo
+     * @return BranchInfo|null
      */
-    public function getBranchInfo() : BranchInfo
+    public function getBranchInfo() : ?BranchInfo
     {
         return $this->branchInfo;
     }
     /**
-     * 
+     * Филиал отправителя
      *
-     * @param BranchInfo $branchInfo
+     * @param BranchInfo|null $branchInfo
      *
      * @return self
      */
-    public function setBranchInfo(BranchInfo $branchInfo) : self
+    public function setBranchInfo(?BranchInfo $branchInfo) : self
     {
         $this->branchInfo = $branchInfo;
         return $this;

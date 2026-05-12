@@ -42,8 +42,11 @@ class CurrentStatusItemNormalizer implements DenormalizerInterface, NormalizerIn
         elseif (\array_key_exists('cargoCode', $data) && $data['cargoCode'] === null) {
             $object->setCargoCode(null);
         }
-        if (\array_key_exists('currentStatus', $data)) {
+        if (\array_key_exists('currentStatus', $data) && $data['currentStatus'] !== null) {
             $object->setCurrentStatus($this->denormalizer->denormalize($data['currentStatus'], 'glook\\PecomSdk\\Generated\\Model\\CurrentStatus', 'json', $context));
+        }
+        elseif (\array_key_exists('currentStatus', $data) && $data['currentStatus'] === null) {
+            $object->setCurrentStatus(null);
         }
         return $object;
     }

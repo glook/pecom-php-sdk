@@ -58,8 +58,11 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
         elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
             $object->setCoordinates(null);
         }
-        if (\array_key_exists('coordinatesobj', $data)) {
+        if (\array_key_exists('coordinatesobj', $data) && $data['coordinatesobj'] !== null) {
             $object->setCoordinatesobj($this->denormalizer->denormalize($data['coordinatesobj'], 'glook\\PecomSdk\\Generated\\Model\\BranchesCoordinates', 'json', $context));
+        }
+        elseif (\array_key_exists('coordinatesobj', $data) && $data['coordinatesobj'] === null) {
+            $object->setCoordinatesobj(null);
         }
         if (\array_key_exists('country', $data)) {
             $object->setCountry($data['country']);

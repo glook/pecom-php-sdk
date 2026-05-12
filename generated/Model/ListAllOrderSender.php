@@ -11,9 +11,9 @@ class ListAllOrderSender
      */
     protected $branchId;
     /**
-     * 
+     * Контрагент
      *
-     * @var ListAllOrderSenderCounterpart
+     * @var ListAllOrderSenderCounterpart|null
      */
     protected $counterpart;
     /**
@@ -62,22 +62,22 @@ class ListAllOrderSender
         return $this;
     }
     /**
-     * 
+     * Контрагент
      *
-     * @return ListAllOrderSenderCounterpart
+     * @return ListAllOrderSenderCounterpart|null
      */
-    public function getCounterpart() : ListAllOrderSenderCounterpart
+    public function getCounterpart() : ?ListAllOrderSenderCounterpart
     {
         return $this->counterpart;
     }
     /**
-     * 
+     * Контрагент
      *
-     * @param ListAllOrderSenderCounterpart $counterpart
+     * @param ListAllOrderSenderCounterpart|null $counterpart
      *
      * @return self
      */
-    public function setCounterpart(ListAllOrderSenderCounterpart $counterpart) : self
+    public function setCounterpart(?ListAllOrderSenderCounterpart $counterpart) : self
     {
         $this->counterpart = $counterpart;
         return $this;

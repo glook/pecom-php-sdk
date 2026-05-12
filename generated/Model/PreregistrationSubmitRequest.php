@@ -19,7 +19,7 @@ class PreregistrationSubmitRequest
     /**
      * 
      *
-     * @var PreregistrationPickUpDetails
+     * @var PreregistrationPickUpDetails|null
      */
     protected $pickUpDetails;
     /**
@@ -73,20 +73,20 @@ class PreregistrationSubmitRequest
     /**
      * 
      *
-     * @return PreregistrationPickUpDetails
+     * @return PreregistrationPickUpDetails|null
      */
-    public function getPickUpDetails() : PreregistrationPickUpDetails
+    public function getPickUpDetails() : ?PreregistrationPickUpDetails
     {
         return $this->pickUpDetails;
     }
     /**
      * 
      *
-     * @param PreregistrationPickUpDetails $pickUpDetails
+     * @param PreregistrationPickUpDetails|null $pickUpDetails
      *
      * @return self
      */
-    public function setPickUpDetails(PreregistrationPickUpDetails $pickUpDetails) : self
+    public function setPickUpDetails(?PreregistrationPickUpDetails $pickUpDetails) : self
     {
         $this->pickUpDetails = $pickUpDetails;
         return $this;

@@ -7,62 +7,62 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $delivery;
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $hardPacking;
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $insurance;
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $moving;
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $pickUp;
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $sealing;
     /**
      * 
      *
-     * @var PaymentBlock
+     * @var PaymentBlock|null
      */
     protected $strapping;
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getDelivery() : PaymentBlock
+    public function getDelivery() : ?PaymentBlock
     {
         return $this->delivery;
     }
     /**
      * 
      *
-     * @param PaymentBlock $delivery
+     * @param PaymentBlock|null $delivery
      *
      * @return self
      */
-    public function setDelivery(PaymentBlock $delivery) : self
+    public function setDelivery(?PaymentBlock $delivery) : self
     {
         $this->delivery = $delivery;
         return $this;
@@ -70,20 +70,20 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getHardPacking() : PaymentBlock
+    public function getHardPacking() : ?PaymentBlock
     {
         return $this->hardPacking;
     }
     /**
      * 
      *
-     * @param PaymentBlock $hardPacking
+     * @param PaymentBlock|null $hardPacking
      *
      * @return self
      */
-    public function setHardPacking(PaymentBlock $hardPacking) : self
+    public function setHardPacking(?PaymentBlock $hardPacking) : self
     {
         $this->hardPacking = $hardPacking;
         return $this;
@@ -91,20 +91,20 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getInsurance() : PaymentBlock
+    public function getInsurance() : ?PaymentBlock
     {
         return $this->insurance;
     }
     /**
      * 
      *
-     * @param PaymentBlock $insurance
+     * @param PaymentBlock|null $insurance
      *
      * @return self
      */
-    public function setInsurance(PaymentBlock $insurance) : self
+    public function setInsurance(?PaymentBlock $insurance) : self
     {
         $this->insurance = $insurance;
         return $this;
@@ -112,20 +112,20 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getMoving() : PaymentBlock
+    public function getMoving() : ?PaymentBlock
     {
         return $this->moving;
     }
     /**
      * 
      *
-     * @param PaymentBlock $moving
+     * @param PaymentBlock|null $moving
      *
      * @return self
      */
-    public function setMoving(PaymentBlock $moving) : self
+    public function setMoving(?PaymentBlock $moving) : self
     {
         $this->moving = $moving;
         return $this;
@@ -133,20 +133,20 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getPickUp() : PaymentBlock
+    public function getPickUp() : ?PaymentBlock
     {
         return $this->pickUp;
     }
     /**
      * 
      *
-     * @param PaymentBlock $pickUp
+     * @param PaymentBlock|null $pickUp
      *
      * @return self
      */
-    public function setPickUp(PaymentBlock $pickUp) : self
+    public function setPickUp(?PaymentBlock $pickUp) : self
     {
         $this->pickUp = $pickUp;
         return $this;
@@ -154,20 +154,20 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getSealing() : PaymentBlock
+    public function getSealing() : ?PaymentBlock
     {
         return $this->sealing;
     }
     /**
      * 
      *
-     * @param PaymentBlock $sealing
+     * @param PaymentBlock|null $sealing
      *
      * @return self
      */
-    public function setSealing(PaymentBlock $sealing) : self
+    public function setSealing(?PaymentBlock $sealing) : self
     {
         $this->sealing = $sealing;
         return $this;
@@ -175,20 +175,20 @@ class CargoPickupPayments
     /**
      * 
      *
-     * @return PaymentBlock
+     * @return PaymentBlock|null
      */
-    public function getStrapping() : PaymentBlock
+    public function getStrapping() : ?PaymentBlock
     {
         return $this->strapping;
     }
     /**
      * 
      *
-     * @param PaymentBlock $strapping
+     * @param PaymentBlock|null $strapping
      *
      * @return self
      */
-    public function setStrapping(PaymentBlock $strapping) : self
+    public function setStrapping(?PaymentBlock $strapping) : self
     {
         $this->strapping = $strapping;
         return $this;

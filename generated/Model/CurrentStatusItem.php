@@ -11,9 +11,9 @@ class CurrentStatusItem
      */
     protected $cargoCode;
     /**
-     * 
+     * Текущий клиентский статус
      *
-     * @var CurrentStatus
+     * @var CurrentStatus|null
      */
     protected $currentStatus;
     /**
@@ -38,22 +38,22 @@ class CurrentStatusItem
         return $this;
     }
     /**
-     * 
+     * Текущий клиентский статус
      *
-     * @return CurrentStatus
+     * @return CurrentStatus|null
      */
-    public function getCurrentStatus() : CurrentStatus
+    public function getCurrentStatus() : ?CurrentStatus
     {
         return $this->currentStatus;
     }
     /**
-     * 
+     * Текущий клиентский статус
      *
-     * @param CurrentStatus $currentStatus
+     * @param CurrentStatus|null $currentStatus
      *
      * @return self
      */
-    public function setCurrentStatus(CurrentStatus $currentStatus) : self
+    public function setCurrentStatus(?CurrentStatus $currentStatus) : self
     {
         $this->currentStatus = $currentStatus;
         return $this;

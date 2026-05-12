@@ -60,11 +60,17 @@ class PreregistrationSenderNormalizer implements DenormalizerInterface, Normaliz
         elseif (\array_key_exists('fs', $data) && $data['fs'] === null) {
             $object->setFs(null);
         }
-        if (\array_key_exists('identityCard', $data)) {
+        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
             $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationIdentityCard', 'json', $context));
         }
-        if (\array_key_exists('individual', $data)) {
+        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+            $object->setIdentityCard(null);
+        }
+        if (\array_key_exists('individual', $data) && $data['individual'] !== null) {
             $object->setIndividual($this->denormalizer->denormalize($data['individual'], 'glook\\PecomSdk\\Generated\\Model\\Individual', 'json', $context));
+        }
+        elseif (\array_key_exists('individual', $data) && $data['individual'] === null) {
+            $object->setIndividual(null);
         }
         if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
             $object->setInn($data['inn']);

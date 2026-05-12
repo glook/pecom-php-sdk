@@ -19,7 +19,7 @@ class PreregistrationReceiver
     /**
      * 
      *
-     * @var PreregistrationCoordinates
+     * @var PreregistrationCoordinates|null
      */
     protected $coordinates;
     /**
@@ -49,13 +49,13 @@ class PreregistrationReceiver
     /**
      * 
      *
-     * @var PreregistrationIdentityCard
+     * @var PreregistrationIdentityCard|null
      */
     protected $identityCard;
     /**
      * 
      *
-     * @var Individual
+     * @var Individual|null
      */
     protected $individual;
     /**
@@ -145,20 +145,20 @@ class PreregistrationReceiver
     /**
      * 
      *
-     * @return PreregistrationCoordinates
+     * @return PreregistrationCoordinates|null
      */
-    public function getCoordinates() : PreregistrationCoordinates
+    public function getCoordinates() : ?PreregistrationCoordinates
     {
         return $this->coordinates;
     }
     /**
      * 
      *
-     * @param PreregistrationCoordinates $coordinates
+     * @param PreregistrationCoordinates|null $coordinates
      *
      * @return self
      */
-    public function setCoordinates(PreregistrationCoordinates $coordinates) : self
+    public function setCoordinates(?PreregistrationCoordinates $coordinates) : self
     {
         $this->coordinates = $coordinates;
         return $this;
@@ -250,20 +250,20 @@ class PreregistrationReceiver
     /**
      * 
      *
-     * @return PreregistrationIdentityCard
+     * @return PreregistrationIdentityCard|null
      */
-    public function getIdentityCard() : PreregistrationIdentityCard
+    public function getIdentityCard() : ?PreregistrationIdentityCard
     {
         return $this->identityCard;
     }
     /**
      * 
      *
-     * @param PreregistrationIdentityCard $identityCard
+     * @param PreregistrationIdentityCard|null $identityCard
      *
      * @return self
      */
-    public function setIdentityCard(PreregistrationIdentityCard $identityCard) : self
+    public function setIdentityCard(?PreregistrationIdentityCard $identityCard) : self
     {
         $this->identityCard = $identityCard;
         return $this;
@@ -271,20 +271,20 @@ class PreregistrationReceiver
     /**
      * 
      *
-     * @return Individual
+     * @return Individual|null
      */
-    public function getIndividual() : Individual
+    public function getIndividual() : ?Individual
     {
         return $this->individual;
     }
     /**
      * 
      *
-     * @param Individual $individual
+     * @param Individual|null $individual
      *
      * @return self
      */
-    public function setIndividual(Individual $individual) : self
+    public function setIndividual(?Individual $individual) : self
     {
         $this->individual = $individual;
         return $this;

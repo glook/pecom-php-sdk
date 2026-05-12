@@ -36,11 +36,17 @@ class RouteMapAddressNormalizer implements DenormalizerInterface, NormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('coordinates', $data)) {
+        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
             $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\CargosCoordinates', 'json', $context));
         }
-        if (\array_key_exists('geoData', $data)) {
+        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+            $object->setCoordinates(null);
+        }
+        if (\array_key_exists('geoData', $data) && $data['geoData'] !== null) {
             $object->setGeoData($this->denormalizer->denormalize($data['geoData'], 'glook\\PecomSdk\\Generated\\Model\\CargosGeoData', 'json', $context));
+        }
+        elseif (\array_key_exists('geoData', $data) && $data['geoData'] === null) {
+            $object->setGeoData(null);
         }
         if (\array_key_exists('operationAddresses', $data) && $data['operationAddresses'] !== null) {
             $values = array();

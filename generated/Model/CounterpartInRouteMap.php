@@ -17,9 +17,9 @@ class CounterpartInRouteMap
      */
     protected $countCargosForIntake;
     /**
-     * 
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
      *
-     * @var RouteMapCounterpart
+     * @var RouteMapCounterpart|null
      */
     protected $counterpart;
     /**
@@ -65,22 +65,22 @@ class CounterpartInRouteMap
         return $this;
     }
     /**
-     * 
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
      *
-     * @return RouteMapCounterpart
+     * @return RouteMapCounterpart|null
      */
-    public function getCounterpart() : RouteMapCounterpart
+    public function getCounterpart() : ?RouteMapCounterpart
     {
         return $this->counterpart;
     }
     /**
-     * 
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
      *
-     * @param RouteMapCounterpart $counterpart
+     * @param RouteMapCounterpart|null $counterpart
      *
      * @return self
      */
-    public function setCounterpart(RouteMapCounterpart $counterpart) : self
+    public function setCounterpart(?RouteMapCounterpart $counterpart) : self
     {
         $this->counterpart = $counterpart;
         return $this;

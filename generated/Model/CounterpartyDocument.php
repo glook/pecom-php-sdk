@@ -7,7 +7,7 @@ class CounterpartyDocument
     /**
      * 
      *
-     * @var DocumentType
+     * @var DocumentType|null
      */
     protected $documentType;
     /**
@@ -31,20 +31,20 @@ class CounterpartyDocument
     /**
      * 
      *
-     * @return DocumentType
+     * @return DocumentType|null
      */
-    public function getDocumentType() : DocumentType
+    public function getDocumentType() : ?DocumentType
     {
         return $this->documentType;
     }
     /**
      * 
      *
-     * @param DocumentType $documentType
+     * @param DocumentType|null $documentType
      *
      * @return self
      */
-    public function setDocumentType(DocumentType $documentType) : self
+    public function setDocumentType(?DocumentType $documentType) : self
     {
         $this->documentType = $documentType;
         return $this;

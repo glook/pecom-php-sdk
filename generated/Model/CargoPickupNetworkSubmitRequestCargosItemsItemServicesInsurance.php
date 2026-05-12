@@ -17,9 +17,9 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
      */
     protected $enabled;
     /**
-     * 
+     * Плательщик
      *
-     * @var CargopickupnetworkPayer
+     * @var CargopickupnetworkPayer|null
      */
     protected $payer;
     /**
@@ -65,22 +65,22 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
         return $this;
     }
     /**
-     * 
+     * Плательщик
      *
-     * @return CargopickupnetworkPayer
+     * @return CargopickupnetworkPayer|null
      */
-    public function getPayer() : CargopickupnetworkPayer
+    public function getPayer() : ?CargopickupnetworkPayer
     {
         return $this->payer;
     }
     /**
-     * 
+     * Плательщик
      *
-     * @param CargopickupnetworkPayer $payer
+     * @param CargopickupnetworkPayer|null $payer
      *
      * @return self
      */
-    public function setPayer(CargopickupnetworkPayer $payer) : self
+    public function setPayer(?CargopickupnetworkPayer $payer) : self
     {
         $this->payer = $payer;
         return $this;

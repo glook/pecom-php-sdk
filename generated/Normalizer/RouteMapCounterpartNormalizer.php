@@ -42,8 +42,11 @@ class RouteMapCounterpartNormalizer implements DenormalizerInterface, Normalizer
         elseif (\array_key_exists('form', $data) && $data['form'] === null) {
             $object->setForm(null);
         }
-        if (\array_key_exists('legalPerson', $data)) {
+        if (\array_key_exists('legalPerson', $data) && $data['legalPerson'] !== null) {
             $object->setLegalPerson($this->denormalizer->denormalize($data['legalPerson'], 'glook\\PecomSdk\\Generated\\Model\\RouteMapCounterpartLegalPerson', 'json', $context));
+        }
+        elseif (\array_key_exists('legalPerson', $data) && $data['legalPerson'] === null) {
+            $object->setLegalPerson(null);
         }
         if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
@@ -51,8 +54,11 @@ class RouteMapCounterpartNormalizer implements DenormalizerInterface, Normalizer
         elseif (\array_key_exists('name', $data) && $data['name'] === null) {
             $object->setName(null);
         }
-        if (\array_key_exists('privatePerson', $data)) {
+        if (\array_key_exists('privatePerson', $data) && $data['privatePerson'] !== null) {
             $object->setPrivatePerson($this->denormalizer->denormalize($data['privatePerson'], 'glook\\PecomSdk\\Generated\\Model\\RouteMapCounterpartPrivatePerson', 'json', $context));
+        }
+        elseif (\array_key_exists('privatePerson', $data) && $data['privatePerson'] === null) {
+            $object->setPrivatePerson(null);
         }
         return $object;
     }

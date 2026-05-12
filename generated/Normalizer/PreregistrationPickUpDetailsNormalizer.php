@@ -60,8 +60,11 @@ class PreregistrationPickUpDetailsNormalizer implements DenormalizerInterface, N
         elseif (\array_key_exists('carryingDistance', $data) && $data['carryingDistance'] === null) {
             $object->setCarryingDistance(null);
         }
-        if (\array_key_exists('coordinates', $data)) {
+        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
             $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCoordinates', 'json', $context));
+        }
+        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+            $object->setCoordinates(null);
         }
         if (\array_key_exists('dinnerFrom', $data) && $data['dinnerFrom'] !== null) {
             $object->setDinnerFrom($data['dinnerFrom']);

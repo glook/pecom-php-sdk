@@ -13,7 +13,7 @@ class NetshopSender
     /**
      * 
      *
-     * @var NetshopIdentityCard
+     * @var NetshopIdentityCard|null
      */
     protected $identityCard;
     /**
@@ -58,20 +58,20 @@ class NetshopSender
     /**
      * 
      *
-     * @return NetshopIdentityCard
+     * @return NetshopIdentityCard|null
      */
-    public function getIdentityCard() : NetshopIdentityCard
+    public function getIdentityCard() : ?NetshopIdentityCard
     {
         return $this->identityCard;
     }
     /**
      * 
      *
-     * @param NetshopIdentityCard $identityCard
+     * @param NetshopIdentityCard|null $identityCard
      *
      * @return self
      */
-    public function setIdentityCard(NetshopIdentityCard $identityCard) : self
+    public function setIdentityCard(?NetshopIdentityCard $identityCard) : self
     {
         $this->identityCard = $identityCard;
         return $this;
