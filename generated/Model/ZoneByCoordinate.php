@@ -29,7 +29,7 @@ class ZoneByCoordinate
      */
     protected $branchUID;
     /**
-     * 
+     * Координаты «Основного отделения филиала компании», к которому относится адрес
      *
      * @var BranchesCoordinates
      */
@@ -131,7 +131,7 @@ class ZoneByCoordinate
         return $this;
     }
     /**
-     * 
+     * Координаты «Основного отделения филиала компании», к которому относится адрес
      *
      * @return BranchesCoordinates
      */
@@ -140,7 +140,7 @@ class ZoneByCoordinate
         return $this->warehousePoint;
     }
     /**
-     * 
+     * Координаты «Основного отделения филиала компании», к которому относится адрес
      *
      * @param BranchesCoordinates $warehousePoint
      *

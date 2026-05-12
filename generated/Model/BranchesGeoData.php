@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesGeoData
 {
     /**
-     * 
+     * Адресные данные
      *
      * @var GeoDataAddress
      */
@@ -23,7 +23,7 @@ class BranchesGeoData
      */
     protected $precision;
     /**
-     * 
+     * Адресные данные
      *
      * @return GeoDataAddress
      */
@@ -32,7 +32,7 @@ class BranchesGeoData
         return $this->address;
     }
     /**
-     * 
+     * Адресные данные
      *
      * @param GeoDataAddress $address
      *

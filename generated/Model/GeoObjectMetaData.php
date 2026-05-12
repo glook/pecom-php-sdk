@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectMetaData
 {
     /**
-     * 
+     * Адресные данные
      *
      * @var GeoDataAddress
      */
@@ -35,7 +35,7 @@ class GeoObjectMetaData
      */
     protected $text;
     /**
-     * 
+     * Адресные данные
      *
      * @return GeoDataAddress
      */
@@ -44,7 +44,7 @@ class GeoObjectMetaData
         return $this->address;
     }
     /**
-     * 
+     * Адресные данные
      *
      * @param GeoDataAddress $address
      *

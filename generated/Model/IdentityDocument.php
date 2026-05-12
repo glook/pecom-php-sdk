@@ -11,7 +11,7 @@ class IdentityDocument
      */
     protected $guid;
     /**
-     * 
+     * Маска документа
      *
      * @var DocumentMask
      */
@@ -44,7 +44,7 @@ class IdentityDocument
         return $this;
     }
     /**
-     * 
+     * Маска документа
      *
      * @return DocumentMask
      */
@@ -53,7 +53,7 @@ class IdentityDocument
         return $this->mask;
     }
     /**
-     * 
+     * Маска документа
      *
      * @param DocumentMask $mask
      *

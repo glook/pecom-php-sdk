@@ -35,7 +35,7 @@ class BranchesDepartmentslimitPostResponse200
      */
     protected $type;
     /**
-     * 
+     * Лимиты ВГХ
      *
      * @var WdcLimits
      */
@@ -146,7 +146,7 @@ class BranchesDepartmentslimitPostResponse200
         return $this;
     }
     /**
-     * 
+     * Лимиты ВГХ
      *
      * @return WdcLimits
      */
@@ -155,7 +155,7 @@ class BranchesDepartmentslimitPostResponse200
         return $this->wdcLimits;
     }
     /**
-     * 
+     * Лимиты ВГХ
      *
      * @param WdcLimits $wdcLimits
      *

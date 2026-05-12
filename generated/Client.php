@@ -106,9 +106,6 @@ class Client extends \glook\PecomSdk\Generated\Runtime\Client\Client
         return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\BranchesCheckpickupdate($requestBody), $fetch);
     }
     /**
-     * Выводится перечень стран, в которых присутствуют отделения ПЭК. Обращаем Ваше внимание, что перед началом интеграции процессов по перевозке между разными странами и внутри стран (кроме РФ) необходимо уточнить ограничения и правила перевозки между интересующими направлениям у Вашего менеджера ПЭК!
-     *
-     * @param null|\stdClass $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \glook\PecomSdk\Generated\Exception\BranchesCountryBadRequestException
      * @throws \glook\PecomSdk\Generated\Exception\BranchesCountryForbiddenException
@@ -117,9 +114,9 @@ class Client extends \glook\PecomSdk\Generated\Runtime\Client\Client
      *
      * @return null|\glook\PecomSdk\Generated\Model\Country[]|\Psr\Http\Message\ResponseInterface
      */
-    public function branchesCountry(?\stdClass $requestBody = null, string $fetch = self::FETCH_OBJECT)
+    public function branchesCountry(string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\BranchesCountry($requestBody), $fetch);
+        return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\BranchesCountry(), $fetch);
     }
     /**
      * Возвращает допустимые документы, удостоверяющие личность, для страны отправления/получения.
@@ -734,9 +731,6 @@ class Client extends \glook\PecomSdk\Generated\Runtime\Client\Client
         return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\CounterpartsLegalformtypes(), $fetch);
     }
     /**
-     * Выводятся Валюты, в которых поддерживается расчет стоимости услуг ПЭК. Архивные валюты из списка исключаются.
-     *
-     * @param null|\stdClass $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \glook\PecomSdk\Generated\Exception\CurrencyAllBadRequestException
      * @throws \glook\PecomSdk\Generated\Exception\CurrencyAllForbiddenException
@@ -745,9 +739,9 @@ class Client extends \glook\PecomSdk\Generated\Runtime\Client\Client
      *
      * @return null|\glook\PecomSdk\Generated\Model\CurrencyItem[]|\Psr\Http\Message\ResponseInterface
      */
-    public function currencyAll(?\stdClass $requestBody = null, string $fetch = self::FETCH_OBJECT)
+    public function currencyAll(string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\CurrencyAll($requestBody), $fetch);
+        return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\CurrencyAll(), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -832,9 +826,6 @@ class Client extends \glook\PecomSdk\Generated\Runtime\Client\Client
         return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\OrderPrint($requestBody), $fetch);
     }
     /**
-     * С помощью метода можно получить список наименований типов штрих-кодов, которые можно указывать для мест грузов при подачи заявки
-     *
-     * @param \stdClass $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \glook\PecomSdk\Generated\Exception\PreregistrationAvailabletypebarcodeBadRequestException
      * @throws \glook\PecomSdk\Generated\Exception\PreregistrationAvailabletypebarcodeForbiddenException
@@ -843,9 +834,9 @@ class Client extends \glook\PecomSdk\Generated\Runtime\Client\Client
      *
      * @return null|\glook\PecomSdk\Generated\Model\BarcodeType[]|\Psr\Http\Message\ResponseInterface
      */
-    public function preregistrationAvailabletypebarcode(\stdClass $requestBody, string $fetch = self::FETCH_OBJECT)
+    public function preregistrationAvailabletypebarcode(string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\PreregistrationAvailabletypebarcode($requestBody), $fetch);
+        return $this->executeEndpoint(new \glook\PecomSdk\Generated\Endpoint\PreregistrationAvailabletypebarcode(), $fetch);
     }
     /**
     * - Максимальное количество грузов в одной заявке для orderType = 0 и 14 — **50**, для orderType = 3 и 4 - **1**.

@@ -5,13 +5,13 @@ namespace glook\PecomSdk\Generated\Model;
 class FeatureMember
 {
     /**
-     * 
+     * Найденный географический объект
      *
      * @var GeoObject
      */
     protected $geoObject;
     /**
-     * 
+     * Найденный географический объект
      *
      * @return GeoObject
      */
@@ -20,7 +20,7 @@ class FeatureMember
         return $this->geoObject;
     }
     /**
-     * 
+     * Найденный географический объект
      *
      * @param GeoObject $geoObject
      *

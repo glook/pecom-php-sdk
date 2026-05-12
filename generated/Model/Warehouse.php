@@ -23,7 +23,7 @@ class Warehouse
      */
     protected $coordinates;
     /**
-     * 
+     * Координаты GPS склада
      *
      * @var BranchesCoordinates
      */
@@ -236,7 +236,7 @@ class Warehouse
         return $this;
     }
     /**
-     * 
+     * Координаты GPS склада
      *
      * @return BranchesCoordinates
      */
@@ -245,7 +245,7 @@ class Warehouse
         return $this->coordinatesobj;
     }
     /**
-     * 
+     * Координаты GPS склада
      *
      * @param BranchesCoordinates $coordinatesobj
      *

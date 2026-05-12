@@ -17,7 +17,7 @@ class ScheduleShortWorkDay
      */
     protected $date;
     /**
-     * 
+     * Время работы сокращённого дня
      *
      * @var WorkTime
      */
@@ -65,7 +65,7 @@ class ScheduleShortWorkDay
         return $this;
     }
     /**
-     * 
+     * Время работы сокращённого дня
      *
      * @return WorkTime
      */
@@ -74,7 +74,7 @@ class ScheduleShortWorkDay
         return $this->workTime;
     }
     /**
-     * 
+     * Время работы сокращённого дня
      *
      * @param WorkTime $workTime
      *

@@ -4,15 +4,6 @@ namespace glook\PecomSdk\Generated\Endpoint;
 
 class BranchesCountry extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint implements \glook\PecomSdk\Generated\Runtime\Client\Endpoint
 {
-    /**
-     * Выводится перечень стран, в которых присутствуют отделения ПЭК. Обращаем Ваше внимание, что перед началом интеграции процессов по перевозке между разными странами и внутри стран (кроме РФ) необходимо уточнить ограничения и правила перевозки между интересующими направлениям у Вашего менеджера ПЭК!
-     *
-     * @param null|\stdClass $requestBody 
-     */
-    public function __construct(?\stdClass $requestBody = null)
-    {
-        $this->body = $requestBody;
-    }
     use \glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
     public function getMethod() : string
     {
@@ -24,9 +15,6 @@ class BranchesCountry extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpo
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
-        if ($this->body instanceof \stdClass) {
-            return array(array('Content-Type' => array('application/json')), json_encode($this->body));
-        }
         return array(array(), null);
     }
     public function getExtraHeaders() : array

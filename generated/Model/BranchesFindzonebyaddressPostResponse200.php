@@ -29,7 +29,7 @@ class BranchesFindzonebyaddressPostResponse200
      */
     protected $branchUID;
     /**
-     * 
+     * Геоданные адреса
      *
      * @var BranchesGeoData
      */
@@ -41,7 +41,7 @@ class BranchesFindzonebyaddressPostResponse200
      */
     protected $mainWarehouseId;
     /**
-     * 
+     * Координаты «Основного отделения филиала компании», к которому относится адрес
      *
      * @var BranchesCoordinates
      */
@@ -143,7 +143,7 @@ class BranchesFindzonebyaddressPostResponse200
         return $this;
     }
     /**
-     * 
+     * Геоданные адреса
      *
      * @return BranchesGeoData
      */
@@ -152,7 +152,7 @@ class BranchesFindzonebyaddressPostResponse200
         return $this->geoData;
     }
     /**
-     * 
+     * Геоданные адреса
      *
      * @param BranchesGeoData $geoData
      *
@@ -185,7 +185,7 @@ class BranchesFindzonebyaddressPostResponse200
         return $this;
     }
     /**
-     * 
+     * Координаты «Основного отделения филиала компании», к которому относится адрес
      *
      * @return BranchesCoordinates
      */
@@ -194,7 +194,7 @@ class BranchesFindzonebyaddressPostResponse200
         return $this->warehousePoint;
     }
     /**
-     * 
+     * Координаты «Основного отделения филиала компании», к которому относится адрес
      *
      * @param BranchesCoordinates $warehousePoint
      *

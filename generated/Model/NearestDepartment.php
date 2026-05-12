@@ -23,7 +23,7 @@ class NearestDepartment
      */
     protected $branchName;
     /**
-     * 
+     * Координаты отделения
      *
      * @var BranchesCoordinates
      */
@@ -194,7 +194,7 @@ class NearestDepartment
         return $this;
     }
     /**
-     * 
+     * Координаты отделения
      *
      * @return BranchesCoordinates
      */
@@ -203,7 +203,7 @@ class NearestDepartment
         return $this->coordinates;
     }
     /**
-     * 
+     * Координаты отделения
      *
      * @param BranchesCoordinates $coordinates
      *

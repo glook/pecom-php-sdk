@@ -4,15 +4,6 @@ namespace glook\PecomSdk\Generated\Endpoint;
 
 class PreregistrationAvailabletypebarcode extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint implements \glook\PecomSdk\Generated\Runtime\Client\Endpoint
 {
-    /**
-     * С помощью метода можно получить список наименований типов штрих-кодов, которые можно указывать для мест грузов при подачи заявки
-     *
-     * @param \stdClass $requestBody 
-     */
-    public function __construct(\stdClass $requestBody)
-    {
-        $this->body = $requestBody;
-    }
     use \glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
     public function getMethod() : string
     {
@@ -24,9 +15,6 @@ class PreregistrationAvailabletypebarcode extends \glook\PecomSdk\Generated\Runt
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
-        if ($this->body instanceof \stdClass) {
-            return array(array('Content-Type' => array('application/json')), json_encode($this->body));
-        }
         return array(array(), null);
     }
     public function getExtraHeaders() : array
