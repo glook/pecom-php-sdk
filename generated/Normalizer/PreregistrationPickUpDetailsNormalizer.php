@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\PreregistrationPickUpDetails;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class PreregistrationPickUpDetailsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\PreregistrationPickUpDetails';
+        return 'glook\PecomSdk\Generated\Model\PreregistrationPickUpDetails' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\PreregistrationPickUpDetails';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\PreregistrationPickUpDetails' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,123 +36,107 @@ class PreregistrationPickUpDetailsNormalizer implements DenormalizerInterface, N
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\PreregistrationPickUpDetails();
+        $object = new PreregistrationPickUpDetails();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('addressForDocuments', $data) && $data['addressForDocuments'] !== null) {
+        if (\array_key_exists('addressForDocuments', $data) && null !== $data['addressForDocuments']) {
             $object->setAddressForDocuments($data['addressForDocuments']);
-        }
-        elseif (\array_key_exists('addressForDocuments', $data) && $data['addressForDocuments'] === null) {
+        } elseif (\array_key_exists('addressForDocuments', $data) && null === $data['addressForDocuments']) {
             $object->setAddressForDocuments(null);
         }
-        if (\array_key_exists('addressForDocumentsComment', $data) && $data['addressForDocumentsComment'] !== null) {
+        if (\array_key_exists('addressForDocumentsComment', $data) && null !== $data['addressForDocumentsComment']) {
             $object->setAddressForDocumentsComment($data['addressForDocumentsComment']);
-        }
-        elseif (\array_key_exists('addressForDocumentsComment', $data) && $data['addressForDocumentsComment'] === null) {
+        } elseif (\array_key_exists('addressForDocumentsComment', $data) && null === $data['addressForDocumentsComment']) {
             $object->setAddressForDocumentsComment(null);
         }
-        if (\array_key_exists('addressStockComment', $data) && $data['addressStockComment'] !== null) {
+        if (\array_key_exists('addressStockComment', $data) && null !== $data['addressStockComment']) {
             $object->setAddressStockComment($data['addressStockComment']);
-        }
-        elseif (\array_key_exists('addressStockComment', $data) && $data['addressStockComment'] === null) {
+        } elseif (\array_key_exists('addressStockComment', $data) && null === $data['addressStockComment']) {
             $object->setAddressStockComment(null);
         }
-        if (\array_key_exists('carryingDistance', $data) && $data['carryingDistance'] !== null) {
+        if (\array_key_exists('carryingDistance', $data) && null !== $data['carryingDistance']) {
             $object->setCarryingDistance($data['carryingDistance']);
-        }
-        elseif (\array_key_exists('carryingDistance', $data) && $data['carryingDistance'] === null) {
+        } elseif (\array_key_exists('carryingDistance', $data) && null === $data['carryingDistance']) {
             $object->setCarryingDistance(null);
         }
-        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
-            $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCoordinates', 'json', $context));
-        }
-        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+        if (\array_key_exists('coordinates', $data) && null !== $data['coordinates']) {
+            $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\PecomSdk\Generated\Model\PreregistrationCoordinates', 'json', $context));
+        } elseif (\array_key_exists('coordinates', $data) && null === $data['coordinates']) {
             $object->setCoordinates(null);
         }
-        if (\array_key_exists('dinnerFrom', $data) && $data['dinnerFrom'] !== null) {
+        if (\array_key_exists('dinnerFrom', $data) && null !== $data['dinnerFrom']) {
             $object->setDinnerFrom($data['dinnerFrom']);
-        }
-        elseif (\array_key_exists('dinnerFrom', $data) && $data['dinnerFrom'] === null) {
+        } elseif (\array_key_exists('dinnerFrom', $data) && null === $data['dinnerFrom']) {
             $object->setDinnerFrom(null);
         }
-        if (\array_key_exists('dinnerTo', $data) && $data['dinnerTo'] !== null) {
+        if (\array_key_exists('dinnerTo', $data) && null !== $data['dinnerTo']) {
             $object->setDinnerTo($data['dinnerTo']);
-        }
-        elseif (\array_key_exists('dinnerTo', $data) && $data['dinnerTo'] === null) {
+        } elseif (\array_key_exists('dinnerTo', $data) && null === $data['dinnerTo']) {
             $object->setDinnerTo(null);
         }
-        if (\array_key_exists('floor', $data) && $data['floor'] !== null) {
+        if (\array_key_exists('floor', $data) && null !== $data['floor']) {
             $object->setFloor($data['floor']);
-        }
-        elseif (\array_key_exists('floor', $data) && $data['floor'] === null) {
+        } elseif (\array_key_exists('floor', $data) && null === $data['floor']) {
             $object->setFloor(null);
         }
-        if (\array_key_exists('isAuthorityNeeded', $data) && $data['isAuthorityNeeded'] !== null) {
+        if (\array_key_exists('isAuthorityNeeded', $data) && null !== $data['isAuthorityNeeded']) {
             $object->setIsAuthorityNeeded($data['isAuthorityNeeded']);
-        }
-        elseif (\array_key_exists('isAuthorityNeeded', $data) && $data['isAuthorityNeeded'] === null) {
+        } elseif (\array_key_exists('isAuthorityNeeded', $data) && null === $data['isAuthorityNeeded']) {
             $object->setIsAuthorityNeeded(null);
         }
-        if (\array_key_exists('isElevator', $data) && $data['isElevator'] !== null) {
+        if (\array_key_exists('isElevator', $data) && null !== $data['isElevator']) {
             $object->setIsElevator($data['isElevator']);
-        }
-        elseif (\array_key_exists('isElevator', $data) && $data['isElevator'] === null) {
+        } elseif (\array_key_exists('isElevator', $data) && null === $data['isElevator']) {
             $object->setIsElevator(null);
         }
-        if (\array_key_exists('isHydrolift', $data) && $data['isHydrolift'] !== null) {
+        if (\array_key_exists('isHydrolift', $data) && null !== $data['isHydrolift']) {
             $object->setIsHydrolift($data['isHydrolift']);
-        }
-        elseif (\array_key_exists('isHydrolift', $data) && $data['isHydrolift'] === null) {
+        } elseif (\array_key_exists('isHydrolift', $data) && null === $data['isHydrolift']) {
             $object->setIsHydrolift(null);
         }
-        if (\array_key_exists('isLoading', $data) && $data['isLoading'] !== null) {
+        if (\array_key_exists('isLoading', $data) && null !== $data['isLoading']) {
             $object->setIsLoading($data['isLoading']);
-        }
-        elseif (\array_key_exists('isLoading', $data) && $data['isLoading'] === null) {
+        } elseif (\array_key_exists('isLoading', $data) && null === $data['isLoading']) {
             $object->setIsLoading(null);
         }
-        if (\array_key_exists('isOpenCar', $data) && $data['isOpenCar'] !== null) {
+        if (\array_key_exists('isOpenCar', $data) && null !== $data['isOpenCar']) {
             $object->setIsOpenCar($data['isOpenCar']);
-        }
-        elseif (\array_key_exists('isOpenCar', $data) && $data['isOpenCar'] === null) {
+        } elseif (\array_key_exists('isOpenCar', $data) && null === $data['isOpenCar']) {
             $object->setIsOpenCar(null);
         }
-        if (\array_key_exists('isSideLoad', $data) && $data['isSideLoad'] !== null) {
+        if (\array_key_exists('isSideLoad', $data) && null !== $data['isSideLoad']) {
             $object->setIsSideLoad($data['isSideLoad']);
-        }
-        elseif (\array_key_exists('isSideLoad', $data) && $data['isSideLoad'] === null) {
+        } elseif (\array_key_exists('isSideLoad', $data) && null === $data['isSideLoad']) {
             $object->setIsSideLoad(null);
         }
-        if (\array_key_exists('isSpecialEquipment', $data) && $data['isSpecialEquipment'] !== null) {
+        if (\array_key_exists('isSpecialEquipment', $data) && null !== $data['isSpecialEquipment']) {
             $object->setIsSpecialEquipment($data['isSpecialEquipment']);
-        }
-        elseif (\array_key_exists('isSpecialEquipment', $data) && $data['isSpecialEquipment'] === null) {
+        } elseif (\array_key_exists('isSpecialEquipment', $data) && null === $data['isSpecialEquipment']) {
             $object->setIsSpecialEquipment(null);
         }
-        if (\array_key_exists('isUncovered', $data) && $data['isUncovered'] !== null) {
+        if (\array_key_exists('isUncovered', $data) && null !== $data['isUncovered']) {
             $object->setIsUncovered($data['isUncovered']);
-        }
-        elseif (\array_key_exists('isUncovered', $data) && $data['isUncovered'] === null) {
+        } elseif (\array_key_exists('isUncovered', $data) && null === $data['isUncovered']) {
             $object->setIsUncovered(null);
         }
-        if (\array_key_exists('periodTimeFrom', $data) && $data['periodTimeFrom'] !== null) {
+        if (\array_key_exists('periodTimeFrom', $data) && null !== $data['periodTimeFrom']) {
             $object->setPeriodTimeFrom($data['periodTimeFrom']);
-        }
-        elseif (\array_key_exists('periodTimeFrom', $data) && $data['periodTimeFrom'] === null) {
+        } elseif (\array_key_exists('periodTimeFrom', $data) && null === $data['periodTimeFrom']) {
             $object->setPeriodTimeFrom(null);
         }
-        if (\array_key_exists('periodTimeTo', $data) && $data['periodTimeTo'] !== null) {
+        if (\array_key_exists('periodTimeTo', $data) && null !== $data['periodTimeTo']) {
             $object->setPeriodTimeTo($data['periodTimeTo']);
-        }
-        elseif (\array_key_exists('periodTimeTo', $data) && $data['periodTimeTo'] === null) {
+        } elseif (\array_key_exists('periodTimeTo', $data) && null === $data['periodTimeTo']) {
             $object->setPeriodTimeTo(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getAddressForDocuments()) {
             $data['addressForDocuments'] = $object->getAddressForDocuments();
         }
@@ -203,6 +191,7 @@ class PreregistrationPickUpDetailsNormalizer implements DenormalizerInterface, N
         if (null !== $object->getPeriodTimeTo()) {
             $data['periodTimeTo'] = $object->getPeriodTimeTo();
         }
+
         return $data;
     }
 }

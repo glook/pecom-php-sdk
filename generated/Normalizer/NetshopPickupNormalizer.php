@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\NetshopPickup;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class NetshopPickupNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\NetshopPickup';
+        return 'glook\PecomSdk\Generated\Model\NetshopPickup' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\NetshopPickup';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\NetshopPickup' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class NetshopPickupNormalizer implements DenormalizerInterface, NormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\NetshopPickup();
+        $object = new NetshopPickup();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -42,31 +46,27 @@ class NetshopPickupNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('applicationDate', $data)) {
             $object->setApplicationDate(\DateTime::createFromFormat('Y-m-d', $data['applicationDate'])->setTime(0, 0, 0));
         }
-        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
+        if (\array_key_exists('comment', $data) && null !== $data['comment']) {
             $object->setComment($data['comment']);
-        }
-        elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+        } elseif (\array_key_exists('comment', $data) && null === $data['comment']) {
             $object->setComment(null);
         }
         if (\array_key_exists('enabled', $data)) {
             $object->setEnabled($data['enabled']);
         }
-        if (\array_key_exists('lunchBreakFrom', $data) && $data['lunchBreakFrom'] !== null) {
+        if (\array_key_exists('lunchBreakFrom', $data) && null !== $data['lunchBreakFrom']) {
             $object->setLunchBreakFrom($data['lunchBreakFrom']);
-        }
-        elseif (\array_key_exists('lunchBreakFrom', $data) && $data['lunchBreakFrom'] === null) {
+        } elseif (\array_key_exists('lunchBreakFrom', $data) && null === $data['lunchBreakFrom']) {
             $object->setLunchBreakFrom(null);
         }
-        if (\array_key_exists('lunchBreakTo', $data) && $data['lunchBreakTo'] !== null) {
+        if (\array_key_exists('lunchBreakTo', $data) && null !== $data['lunchBreakTo']) {
             $object->setLunchBreakTo($data['lunchBreakTo']);
-        }
-        elseif (\array_key_exists('lunchBreakTo', $data) && $data['lunchBreakTo'] === null) {
+        } elseif (\array_key_exists('lunchBreakTo', $data) && null === $data['lunchBreakTo']) {
             $object->setLunchBreakTo(null);
         }
-        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
-            $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\NetshopPayer', 'json', $context));
-        }
-        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+        if (\array_key_exists('payer', $data) && null !== $data['payer']) {
+            $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\PecomSdk\Generated\Model\NetshopPayer', 'json', $context));
+        } elseif (\array_key_exists('payer', $data) && null === $data['payer']) {
             $object->setPayer(null);
         }
         if (\array_key_exists('person', $data)) {
@@ -81,23 +81,23 @@ class NetshopPickupNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('weight', $data)) {
             $object->setWeight($data['weight']);
         }
-        if (\array_key_exists('workTimeFrom', $data) && $data['workTimeFrom'] !== null) {
+        if (\array_key_exists('workTimeFrom', $data) && null !== $data['workTimeFrom']) {
             $object->setWorkTimeFrom($data['workTimeFrom']);
-        }
-        elseif (\array_key_exists('workTimeFrom', $data) && $data['workTimeFrom'] === null) {
+        } elseif (\array_key_exists('workTimeFrom', $data) && null === $data['workTimeFrom']) {
             $object->setWorkTimeFrom(null);
         }
-        if (\array_key_exists('workTimeTo', $data) && $data['workTimeTo'] !== null) {
+        if (\array_key_exists('workTimeTo', $data) && null !== $data['workTimeTo']) {
             $object->setWorkTimeTo($data['workTimeTo']);
-        }
-        elseif (\array_key_exists('workTimeTo', $data) && $data['workTimeTo'] === null) {
+        } elseif (\array_key_exists('workTimeTo', $data) && null === $data['workTimeTo']) {
             $object->setWorkTimeTo(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['address'] = $object->getAddress();
         $data['applicationDate'] = $object->getApplicationDate()->format('Y-m-d');
         if (null !== $object->getComment()) {
@@ -123,6 +123,7 @@ class NetshopPickupNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null !== $object->getWorkTimeTo()) {
             $data['workTimeTo'] = $object->getWorkTimeTo();
         }
+
         return $data;
     }
 }

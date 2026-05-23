@@ -5,84 +5,69 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationSubmitResponseSender
 {
     /**
-     * Адрес склада отправления
+     * Адрес склада отправления.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $addressNormal;
+
     /**
-     * 
-     *
-     * @var PreregistrationSubmitResponseSenderCoordinates|null
+     * @var null|PreregistrationSubmitResponseCoordinates
      */
     protected $coordinates;
+
     /**
-     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя
+     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseID;
+
     /**
-     * Адрес склада отправления
-     *
-     * @return string|null
+     * Адрес склада отправления.
      */
-    public function getAddressNormal() : ?string
+    public function getAddressNormal(): ?string
     {
         return $this->addressNormal;
     }
+
     /**
-     * Адрес склада отправления
-     *
-     * @param string|null $addressNormal
-     *
-     * @return self
+     * Адрес склада отправления.
      */
-    public function setAddressNormal(?string $addressNormal) : self
+    public function setAddressNormal(?string $addressNormal): self
     {
         $this->addressNormal = $addressNormal;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return PreregistrationSubmitResponseSenderCoordinates|null
-     */
-    public function getCoordinates() : ?PreregistrationSubmitResponseSenderCoordinates
+
+    public function getCoordinates(): ?PreregistrationSubmitResponseCoordinates
     {
         return $this->coordinates;
     }
-    /**
-     * 
-     *
-     * @param PreregistrationSubmitResponseSenderCoordinates|null $coordinates
-     *
-     * @return self
-     */
-    public function setCoordinates(?PreregistrationSubmitResponseSenderCoordinates $coordinates) : self
+
+    public function setCoordinates(?PreregistrationSubmitResponseCoordinates $coordinates): self
     {
         $this->coordinates = $coordinates;
+
         return $this;
     }
+
     /**
-     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя
-     *
-     * @return string|null
+     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя.
      */
-    public function getWarehouseID() : ?string
+    public function getWarehouseID(): ?string
     {
         return $this->warehouseID;
     }
+
     /**
-     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя
-     *
-     * @param string|null $warehouseID
-     *
-     * @return self
+     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя.
      */
-    public function setWarehouseID(?string $warehouseID) : self
+    public function setWarehouseID(?string $warehouseID): self
     {
         $this->warehouseID = $warehouseID;
+
         return $this;
     }
 }

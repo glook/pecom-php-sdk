@@ -2,53 +2,68 @@
 
 namespace glook\PecomSdk\Generated\Endpoint;
 
-class CounterpartsLegalformtypes extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint implements \glook\PecomSdk\Generated\Runtime\Client\Endpoint
+use glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesBadRequestException;
+use glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesForbiddenException;
+use glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesInternalServerErrorException;
+use glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException;
+use glook\PecomSdk\Generated\Model\LegalFormType;
+use glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint;
+use glook\PecomSdk\Generated\Runtime\Client\Endpoint;
+use glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
+use Symfony\Component\Serializer\SerializerInterface;
+
+class CounterpartsLegalformtypes extends BaseEndpoint implements Endpoint
 {
-    use \glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    use EndpointTrait;
+
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+
+    public function getUri(): string
     {
         return '/counterparts/legalformtypes/';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+
+    public function getBody(SerializerInterface $serializer, $streamFactory = null): array
     {
-        return array(array(), null);
+        return [[], null];
     }
-    public function getExtraHeaders() : array
+
+    public function getExtraHeaders(): array
     {
-        return array('Accept' => array('application/json'));
+        return ['Accept' => ['application/json']];
     }
+
+    public function getAuthenticationScopes(): array
+    {
+        return ['BasicAuth'];
+    }
+
     /**
-     * {@inheritdoc}
+     * @return null|LegalFormType[]
      *
-     * @throws \glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesBadRequestException
-     * @throws \glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesForbiddenException
-     * @throws \glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesInternalServerErrorException
-     * @throws \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException
-     *
-     * @return null|\glook\PecomSdk\Generated\Model\LegalFormType[]
+     * @throws CounterpartsLegalformtypesBadRequestException
+     * @throws CounterpartsLegalformtypesForbiddenException
+     * @throws CounterpartsLegalformtypesInternalServerErrorException
+     * @throws UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\LegalFormType[]', 'json');
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            return $serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\LegalFormType[]', 'json');
         }
-        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesBadRequestException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new CounterpartsLegalformtypesBadRequestException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesForbiddenException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new CounterpartsLegalformtypesForbiddenException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\CounterpartsLegalformtypesInternalServerErrorException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new CounterpartsLegalformtypesInternalServerErrorException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        throw new \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException($status, $body);
-    }
-    public function getAuthenticationScopes() : array
-    {
-        return array('BasicAuth');
+
+        throw new UnexpectedStatusCodeException($status, $body);
     }
 }

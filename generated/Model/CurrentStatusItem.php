@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatusItem
 {
     /**
-     * Код груза
+     * Код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $cargoCode;
+
     /**
      * Текущий клиентский статус
      *
-     * @var CurrentStatus|null
+     * @var null|CurrentStatus
      */
     protected $currentStatus;
+
     /**
-     * Код груза
-     *
-     * @return string|null
+     * Код груза.
      */
-    public function getCargoCode() : ?string
+    public function getCargoCode(): ?string
     {
         return $this->cargoCode;
     }
+
     /**
-     * Код груза
-     *
-     * @param string|null $cargoCode
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoCode(?string $cargoCode) : self
+    public function setCargoCode(?string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
      * Текущий клиентский статус
-     *
-     * @return CurrentStatus|null
      */
-    public function getCurrentStatus() : ?CurrentStatus
+    public function getCurrentStatus(): ?CurrentStatus
     {
         return $this->currentStatus;
     }
+
     /**
      * Текущий клиентский статус
-     *
-     * @param CurrentStatus|null $currentStatus
-     *
-     * @return self
      */
-    public function setCurrentStatus(?CurrentStatus $currentStatus) : self
+    public function setCurrentStatus(?CurrentStatus $currentStatus): self
     {
         $this->currentStatus = $currentStatus;
+
         return $this;
     }
 }

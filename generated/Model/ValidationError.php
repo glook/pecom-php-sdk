@@ -5,30 +5,19 @@ namespace glook\PecomSdk\Generated\Model;
 class ValidationError
 {
     /**
-     * 
-     *
-     * @var ValidationErrorError|null
+     * @var null|ValidationErrorError
      */
     protected $error;
-    /**
-     * 
-     *
-     * @return ValidationErrorError|null
-     */
-    public function getError() : ?ValidationErrorError
+
+    public function getError(): ?ValidationErrorError
     {
         return $this->error;
     }
-    /**
-     * 
-     *
-     * @param ValidationErrorError|null $error
-     *
-     * @return self
-     */
-    public function setError(?ValidationErrorError $error) : self
+
+    public function setError(?ValidationErrorError $error): self
     {
         $this->error = $error;
+
         return $this;
     }
 }

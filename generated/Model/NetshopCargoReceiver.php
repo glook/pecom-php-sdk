@@ -5,111 +5,78 @@ namespace glook\PecomSdk\Generated\Model;
 class NetshopCargoReceiver
 {
     /**
-     * 
-     *
-     * @var NetshopIdentityCard|null
+     * @var null|NetshopIdentityCard
      */
     protected $identityCard;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
-     * код адреса получателя
+     * код адреса получателя.
      *
      * @var string
      */
     protected $receiverAddrCode;
-    /**
-     * 
-     *
-     * @return NetshopIdentityCard|null
-     */
-    public function getIdentityCard() : ?NetshopIdentityCard
+
+    public function getIdentityCard(): ?NetshopIdentityCard
     {
         return $this->identityCard;
     }
-    /**
-     * 
-     *
-     * @param NetshopIdentityCard|null $identityCard
-     *
-     * @return self
-     */
-    public function setIdentityCard(?NetshopIdentityCard $identityCard) : self
+
+    public function setIdentityCard(?NetshopIdentityCard $identityCard): self
     {
         $this->identityCard = $identityCard;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getInn() : ?string
+
+    public function getInn(): ?string
     {
         return $this->inn;
     }
-    /**
-     * 
-     *
-     * @param string|null $inn
-     *
-     * @return self
-     */
-    public function setInn(?string $inn) : self
+
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getPhone() : ?string
+
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
-    /**
-     * 
-     *
-     * @param string|null $phone
-     *
-     * @return self
-     */
-    public function setPhone(?string $phone) : self
+
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * код адреса получателя
-     *
-     * @return string
+     * код адреса получателя.
      */
-    public function getReceiverAddrCode() : string
+    public function getReceiverAddrCode(): string
     {
         return $this->receiverAddrCode;
     }
+
     /**
-     * код адреса получателя
-     *
-     * @param string $receiverAddrCode
-     *
-     * @return self
+     * код адреса получателя.
      */
-    public function setReceiverAddrCode(string $receiverAddrCode) : self
+    public function setReceiverAddrCode(string $receiverAddrCode): self
     {
         $this->receiverAddrCode = $receiverAddrCode;
+
         return $this;
     }
 }

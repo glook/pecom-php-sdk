@@ -5,219 +5,202 @@ namespace glook\PecomSdk\Generated\Model;
 class ForcedStoragePeriod
 {
     /**
-     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`
+     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $cargoStatus;
+
     /**
-     * Стоимость хранения
+     * Стоимость хранения.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $costStorage;
+
     /**
-     * Количество дней по окончанию действия тарифа
+     * Количество дней по окончанию действия тарифа.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $endDataNumber;
+
     /**
-     * Дата окончания начисления
+     * Дата окончания начисления.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $endDate;
+
     /**
-     * Минимальная стоимость хранения
+     * Минимальная стоимость хранения.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $minStorageCost;
+
     /**
-     * Ставка
+     * Ставка.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $rate;
+
     /**
-     * Количество дней с начала действия тарифа
+     * Количество дней с начала действия тарифа.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $startDataNumber;
+
     /**
-     * Дата начисления
+     * Дата начисления.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $startDate;
+
     /**
-     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`
-     *
-     * @return string|null
+     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`.
      */
-    public function getCargoStatus() : ?string
+    public function getCargoStatus(): ?string
     {
         return $this->cargoStatus;
     }
+
     /**
-     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`
-     *
-     * @param string|null $cargoStatus
-     *
-     * @return self
+     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`.
      */
-    public function setCargoStatus(?string $cargoStatus) : self
+    public function setCargoStatus(?string $cargoStatus): self
     {
         $this->cargoStatus = $cargoStatus;
+
         return $this;
     }
+
     /**
-     * Стоимость хранения
-     *
-     * @return float|null
+     * Стоимость хранения.
      */
-    public function getCostStorage() : ?float
+    public function getCostStorage(): ?float
     {
         return $this->costStorage;
     }
+
     /**
-     * Стоимость хранения
-     *
-     * @param float|null $costStorage
-     *
-     * @return self
+     * Стоимость хранения.
      */
-    public function setCostStorage(?float $costStorage) : self
+    public function setCostStorage(?float $costStorage): self
     {
         $this->costStorage = $costStorage;
+
         return $this;
     }
+
     /**
-     * Количество дней по окончанию действия тарифа
-     *
-     * @return float|null
+     * Количество дней по окончанию действия тарифа.
      */
-    public function getEndDataNumber() : ?float
+    public function getEndDataNumber(): ?float
     {
         return $this->endDataNumber;
     }
+
     /**
-     * Количество дней по окончанию действия тарифа
-     *
-     * @param float|null $endDataNumber
-     *
-     * @return self
+     * Количество дней по окончанию действия тарифа.
      */
-    public function setEndDataNumber(?float $endDataNumber) : self
+    public function setEndDataNumber(?float $endDataNumber): self
     {
         $this->endDataNumber = $endDataNumber;
+
         return $this;
     }
+
     /**
-     * Дата окончания начисления
-     *
-     * @return string|null
+     * Дата окончания начисления.
      */
-    public function getEndDate() : ?string
+    public function getEndDate(): ?string
     {
         return $this->endDate;
     }
+
     /**
-     * Дата окончания начисления
-     *
-     * @param string|null $endDate
-     *
-     * @return self
+     * Дата окончания начисления.
      */
-    public function setEndDate(?string $endDate) : self
+    public function setEndDate(?string $endDate): self
     {
         $this->endDate = $endDate;
+
         return $this;
     }
+
     /**
-     * Минимальная стоимость хранения
-     *
-     * @return float|null
+     * Минимальная стоимость хранения.
      */
-    public function getMinStorageCost() : ?float
+    public function getMinStorageCost(): ?float
     {
         return $this->minStorageCost;
     }
+
     /**
-     * Минимальная стоимость хранения
-     *
-     * @param float|null $minStorageCost
-     *
-     * @return self
+     * Минимальная стоимость хранения.
      */
-    public function setMinStorageCost(?float $minStorageCost) : self
+    public function setMinStorageCost(?float $minStorageCost): self
     {
         $this->minStorageCost = $minStorageCost;
+
         return $this;
     }
+
     /**
-     * Ставка
-     *
-     * @return float|null
+     * Ставка.
      */
-    public function getRate() : ?float
+    public function getRate(): ?float
     {
         return $this->rate;
     }
+
     /**
-     * Ставка
-     *
-     * @param float|null $rate
-     *
-     * @return self
+     * Ставка.
      */
-    public function setRate(?float $rate) : self
+    public function setRate(?float $rate): self
     {
         $this->rate = $rate;
+
         return $this;
     }
+
     /**
-     * Количество дней с начала действия тарифа
-     *
-     * @return float|null
+     * Количество дней с начала действия тарифа.
      */
-    public function getStartDataNumber() : ?float
+    public function getStartDataNumber(): ?float
     {
         return $this->startDataNumber;
     }
+
     /**
-     * Количество дней с начала действия тарифа
-     *
-     * @param float|null $startDataNumber
-     *
-     * @return self
+     * Количество дней с начала действия тарифа.
      */
-    public function setStartDataNumber(?float $startDataNumber) : self
+    public function setStartDataNumber(?float $startDataNumber): self
     {
         $this->startDataNumber = $startDataNumber;
+
         return $this;
     }
+
     /**
-     * Дата начисления
-     *
-     * @return string|null
+     * Дата начисления.
      */
-    public function getStartDate() : ?string
+    public function getStartDate(): ?string
     {
         return $this->startDate;
     }
+
     /**
-     * Дата начисления
-     *
-     * @param string|null $startDate
-     *
-     * @return self
+     * Дата начисления.
      */
-    public function setStartDate(?string $startDate) : self
+    public function setStartDate(?string $startDate): self
     {
         $this->startDate = $startDate;
+
         return $this;
     }
 }

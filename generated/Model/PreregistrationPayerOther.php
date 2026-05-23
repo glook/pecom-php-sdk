@@ -5,192 +5,169 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationPayerOther
 {
     /**
-     * Код страны регистрации по классификатору строка. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия
+     * Код страны регистрации по классификатору строка. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $countryOfRegistrationCode;
+
     /**
      * сокращенная форма собственности юр.лица/индивидуального предпринимателя (из списка ПЭК). Необзательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $fs;
+
     /**
-     * 
-     *
-     * @var PreregistrationPayerOtherIdentityCard|null
+     * @var null|PreregistrationPayerOtherIdentityCard
      */
     protected $identityCard;
+
     /**
-     * ИНН третьего лица, обязательно для Юридических лиц и ИП (для физических лиц не передавать)
+     * ИНН третьего лица, обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * Тип контрагента. Необязательно, если не передан реквизит `countryOfRegistrationCode`. Рекомендуется к заполнению. Значения: 1 - Юридическое лицо, 2 - Индивидуальный предприниматель, 3 - Физическое лицо. Указание значения 3 недоступно при type = 7 «ДТС Автоперевозка»
+     * Тип контрагента. Необязательно, если не передан реквизит `countryOfRegistrationCode`. Рекомендуется к заполнению. Значения: 1 - Юридическое лицо, 2 - Индивидуальный предприниматель, 3 - Физическое лицо. Указание значения 3 недоступно при type = 7 «ДТС Автоперевозка».
      *
-     * @var int|null
+     * @var null|int
      */
     protected $legalForm;
+
     /**
-     * Телефон, обязательно
+     * Телефон, обязательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
-     * Наименование, обязательно
+     * Наименование, обязательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $title;
+
     /**
-     * Код страны регистрации по классификатору строка. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия
-     *
-     * @return string|null
+     * Код страны регистрации по классификатору строка. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия.
      */
-    public function getCountryOfRegistrationCode() : ?string
+    public function getCountryOfRegistrationCode(): ?string
     {
         return $this->countryOfRegistrationCode;
     }
+
     /**
-     * Код страны регистрации по классификатору строка. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия
-     *
-     * @param string|null $countryOfRegistrationCode
-     *
-     * @return self
+     * Код страны регистрации по классификатору строка. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия.
      */
-    public function setCountryOfRegistrationCode(?string $countryOfRegistrationCode) : self
+    public function setCountryOfRegistrationCode(?string $countryOfRegistrationCode): self
     {
         $this->countryOfRegistrationCode = $countryOfRegistrationCode;
+
         return $this;
     }
+
     /**
      * сокращенная форма собственности юр.лица/индивидуального предпринимателя (из списка ПЭК). Необзательно.
-     *
-     * @return string|null
      */
-    public function getFs() : ?string
+    public function getFs(): ?string
     {
         return $this->fs;
     }
+
     /**
      * сокращенная форма собственности юр.лица/индивидуального предпринимателя (из списка ПЭК). Необзательно.
-     *
-     * @param string|null $fs
-     *
-     * @return self
      */
-    public function setFs(?string $fs) : self
+    public function setFs(?string $fs): self
     {
         $this->fs = $fs;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return PreregistrationPayerOtherIdentityCard|null
-     */
-    public function getIdentityCard() : ?PreregistrationPayerOtherIdentityCard
+
+    public function getIdentityCard(): ?PreregistrationPayerOtherIdentityCard
     {
         return $this->identityCard;
     }
-    /**
-     * 
-     *
-     * @param PreregistrationPayerOtherIdentityCard|null $identityCard
-     *
-     * @return self
-     */
-    public function setIdentityCard(?PreregistrationPayerOtherIdentityCard $identityCard) : self
+
+    public function setIdentityCard(?PreregistrationPayerOtherIdentityCard $identityCard): self
     {
         $this->identityCard = $identityCard;
+
         return $this;
     }
+
     /**
-     * ИНН третьего лица, обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @return string|null
+     * ИНН третьего лица, обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН третьего лица, обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН третьего лица, обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * Тип контрагента. Необязательно, если не передан реквизит `countryOfRegistrationCode`. Рекомендуется к заполнению. Значения: 1 - Юридическое лицо, 2 - Индивидуальный предприниматель, 3 - Физическое лицо. Указание значения 3 недоступно при type = 7 «ДТС Автоперевозка»
-     *
-     * @return int|null
+     * Тип контрагента. Необязательно, если не передан реквизит `countryOfRegistrationCode`. Рекомендуется к заполнению. Значения: 1 - Юридическое лицо, 2 - Индивидуальный предприниматель, 3 - Физическое лицо. Указание значения 3 недоступно при type = 7 «ДТС Автоперевозка».
      */
-    public function getLegalForm() : ?int
+    public function getLegalForm(): ?int
     {
         return $this->legalForm;
     }
+
     /**
-     * Тип контрагента. Необязательно, если не передан реквизит `countryOfRegistrationCode`. Рекомендуется к заполнению. Значения: 1 - Юридическое лицо, 2 - Индивидуальный предприниматель, 3 - Физическое лицо. Указание значения 3 недоступно при type = 7 «ДТС Автоперевозка»
-     *
-     * @param int|null $legalForm
-     *
-     * @return self
+     * Тип контрагента. Необязательно, если не передан реквизит `countryOfRegistrationCode`. Рекомендуется к заполнению. Значения: 1 - Юридическое лицо, 2 - Индивидуальный предприниматель, 3 - Физическое лицо. Указание значения 3 недоступно при type = 7 «ДТС Автоперевозка».
      */
-    public function setLegalForm(?int $legalForm) : self
+    public function setLegalForm(?int $legalForm): self
     {
         $this->legalForm = $legalForm;
+
         return $this;
     }
+
     /**
-     * Телефон, обязательно
-     *
-     * @return string|null
+     * Телефон, обязательно.
      */
-    public function getPhone() : ?string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
+
     /**
-     * Телефон, обязательно
-     *
-     * @param string|null $phone
-     *
-     * @return self
+     * Телефон, обязательно.
      */
-    public function setPhone(?string $phone) : self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование, обязательно
-     *
-     * @return string|null
+     * Наименование, обязательно.
      */
-    public function getTitle() : ?string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
+
     /**
-     * Наименование, обязательно
-     *
-     * @param string|null $title
-     *
-     * @return self
+     * Наименование, обязательно.
      */
-    public function setTitle(?string $title) : self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 }

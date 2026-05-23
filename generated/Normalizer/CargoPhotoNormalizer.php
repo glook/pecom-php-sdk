@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPhoto;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPhotoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPhoto';
+        return 'glook\PecomSdk\Generated\Model\CargoPhoto' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPhoto';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPhoto' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,32 @@ class CargoPhotoNormalizer implements DenormalizerInterface, NormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPhoto();
+        $object = new CargoPhoto();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('data', $data) && $data['data'] !== null) {
+        if (\array_key_exists('data', $data) && null !== $data['data']) {
             $object->setData($data['data']);
-        }
-        elseif (\array_key_exists('data', $data) && $data['data'] === null) {
+        } elseif (\array_key_exists('data', $data) && null === $data['data']) {
             $object->setData(null);
         }
-        if (\array_key_exists('filename', $data) && $data['filename'] !== null) {
+        if (\array_key_exists('filename', $data) && null !== $data['filename']) {
             $object->setFilename($data['filename']);
-        }
-        elseif (\array_key_exists('filename', $data) && $data['filename'] === null) {
+        } elseif (\array_key_exists('filename', $data) && null === $data['filename']) {
             $object->setFilename(null);
         }
-        if (\array_key_exists('mimeType', $data) && $data['mimeType'] !== null) {
+        if (\array_key_exists('mimeType', $data) && null !== $data['mimeType']) {
             $object->setMimeType($data['mimeType']);
-        }
-        elseif (\array_key_exists('mimeType', $data) && $data['mimeType'] === null) {
+        } elseif (\array_key_exists('mimeType', $data) && null === $data['mimeType']) {
             $object->setMimeType(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getData()) {
             $data['data'] = $object->getData();
         }
@@ -68,6 +71,7 @@ class CargoPhotoNormalizer implements DenormalizerInterface, NormalizerInterface
         if (null !== $object->getMimeType()) {
             $data['mimeType'] = $object->getMimeType();
         }
+
         return $data;
     }
 }

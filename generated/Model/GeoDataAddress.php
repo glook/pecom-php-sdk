@@ -10,79 +10,76 @@ class GeoDataAddress
      * @var GeoDataAddressComponent[]
      */
     protected $components;
+
     /**
-     * Код страны, к которой относится адрес (выводится только если определен точный адрес)
+     * Код страны, к которой относится адрес (выводится только если определен точный адрес).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $countryCode;
+
     /**
-     * Полное представление найденного адреса
+     * Полное представление найденного адреса.
      *
      * @var string
      */
     protected $formatted;
+
     /**
      * Массив составляющих частей адреса: страна, регион, населенный пункт, улица, дом
      *
      * @return GeoDataAddressComponent[]
      */
-    public function getComponents() : array
+    public function getComponents(): array
     {
         return $this->components;
     }
+
     /**
      * Массив составляющих частей адреса: страна, регион, населенный пункт, улица, дом
      *
      * @param GeoDataAddressComponent[] $components
-     *
-     * @return self
      */
-    public function setComponents(array $components) : self
+    public function setComponents(array $components): self
     {
         $this->components = $components;
+
         return $this;
     }
+
     /**
-     * Код страны, к которой относится адрес (выводится только если определен точный адрес)
-     *
-     * @return string|null
+     * Код страны, к которой относится адрес (выводится только если определен точный адрес).
      */
-    public function getCountryCode() : ?string
+    public function getCountryCode(): ?string
     {
         return $this->countryCode;
     }
+
     /**
-     * Код страны, к которой относится адрес (выводится только если определен точный адрес)
-     *
-     * @param string|null $countryCode
-     *
-     * @return self
+     * Код страны, к которой относится адрес (выводится только если определен точный адрес).
      */
-    public function setCountryCode(?string $countryCode) : self
+    public function setCountryCode(?string $countryCode): self
     {
         $this->countryCode = $countryCode;
+
         return $this;
     }
+
     /**
-     * Полное представление найденного адреса
-     *
-     * @return string
+     * Полное представление найденного адреса.
      */
-    public function getFormatted() : string
+    public function getFormatted(): string
     {
         return $this->formatted;
     }
+
     /**
-     * Полное представление найденного адреса
-     *
-     * @param string $formatted
-     *
-     * @return self
+     * Полное представление найденного адреса.
      */
-    public function setFormatted(string $formatted) : self
+    public function setFormatted(string $formatted): self
     {
         $this->formatted = $formatted;
+
         return $this;
     }
 }

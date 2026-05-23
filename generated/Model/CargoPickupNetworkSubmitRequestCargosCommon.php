@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosCommon
 {
     /**
-     * Общие размеры, объём и весь груза
+     * Общие размеры, объём и весь груза.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosCommonCargoTotals|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
      */
     protected $cargoTotals;
+
     /**
-     * Определение плательщиков для всех грузов
+     * Определение плательщиков для всех грузов.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosCommonServices|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosCommonServices
      */
     protected $services;
+
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки
+     * Тип штрих-кодов, указанных для мест грузов заявки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $typeClientBarcode;
+
     /**
-     * Общие размеры, объём и весь груза
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosCommonCargoTotals|null
+     * Общие размеры, объём и весь груза.
      */
-    public function getCargoTotals() : ?CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
+    public function getCargoTotals(): ?CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     {
         return $this->cargoTotals;
     }
+
     /**
-     * Общие размеры, объём и весь груза
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosCommonCargoTotals|null $cargoTotals
-     *
-     * @return self
+     * Общие размеры, объём и весь груза.
      */
-    public function setCargoTotals(?CargoPickupNetworkSubmitRequestCargosCommonCargoTotals $cargoTotals) : self
+    public function setCargoTotals(?CargoPickupNetworkSubmitRequestCargosCommonCargoTotals $cargoTotals): self
     {
         $this->cargoTotals = $cargoTotals;
+
         return $this;
     }
+
     /**
-     * Определение плательщиков для всех грузов
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosCommonServices|null
+     * Определение плательщиков для всех грузов.
      */
-    public function getServices() : ?CargoPickupNetworkSubmitRequestCargosCommonServices
+    public function getServices(): ?CargoPickupNetworkSubmitRequestCargosCommonServices
     {
         return $this->services;
     }
+
     /**
-     * Определение плательщиков для всех грузов
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosCommonServices|null $services
-     *
-     * @return self
+     * Определение плательщиков для всех грузов.
      */
-    public function setServices(?CargoPickupNetworkSubmitRequestCargosCommonServices $services) : self
+    public function setServices(?CargoPickupNetworkSubmitRequestCargosCommonServices $services): self
     {
         $this->services = $services;
+
         return $this;
     }
+
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки
-     *
-     * @return string|null
+     * Тип штрих-кодов, указанных для мест грузов заявки.
      */
-    public function getTypeClientBarcode() : ?string
+    public function getTypeClientBarcode(): ?string
     {
         return $this->typeClientBarcode;
     }
+
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки
-     *
-     * @param string|null $typeClientBarcode
-     *
-     * @return self
+     * Тип штрих-кодов, указанных для мест грузов заявки.
      */
-    public function setTypeClientBarcode(?string $typeClientBarcode) : self
+    public function setTypeClientBarcode(?string $typeClientBarcode): self
     {
         $this->typeClientBarcode = $typeClientBarcode;
+
         return $this;
     }
 }

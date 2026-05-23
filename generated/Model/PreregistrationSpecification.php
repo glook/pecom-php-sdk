@@ -5,30 +5,25 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationSpecification
 {
     /**
-     * 
-     *
-     * @var PreregistrationSpecificationItem[]|null
+     * @var null|PreregistrationSpecificationItem[]
      */
     protected $specifications;
+
     /**
-     * 
-     *
-     * @return PreregistrationSpecificationItem[]|null
+     * @return null|PreregistrationSpecificationItem[]
      */
-    public function getSpecifications() : ?array
+    public function getSpecifications(): ?array
     {
         return $this->specifications;
     }
+
     /**
-     * 
-     *
-     * @param PreregistrationSpecificationItem[]|null $specifications
-     *
-     * @return self
+     * @param null|PreregistrationSpecificationItem[] $specifications
      */
-    public function setSpecifications(?array $specifications) : self
+    public function setSpecifications(?array $specifications): self
     {
         $this->specifications = $specifications;
+
         return $this;
     }
 }

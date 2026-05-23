@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class CoordinatesString
 {
     /**
-     * Широта
+     * Широта.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $latitude;
+
     /**
-     * Долгота
+     * Долгота.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $longitude;
+
     /**
-     * Широта
-     *
-     * @return string|null
+     * Широта.
      */
-    public function getLatitude() : ?string
+    public function getLatitude(): ?string
     {
         return $this->latitude;
     }
+
     /**
-     * Широта
-     *
-     * @param string|null $latitude
-     *
-     * @return self
+     * Широта.
      */
-    public function setLatitude(?string $latitude) : self
+    public function setLatitude(?string $latitude): self
     {
         $this->latitude = $latitude;
+
         return $this;
     }
+
     /**
-     * Долгота
-     *
-     * @return string|null
+     * Долгота.
      */
-    public function getLongitude() : ?string
+    public function getLongitude(): ?string
     {
         return $this->longitude;
     }
+
     /**
-     * Долгота
-     *
-     * @param string|null $longitude
-     *
-     * @return self
+     * Долгота.
      */
-    public function setLongitude(?string $longitude) : self
+    public function setLongitude(?string $longitude): self
     {
         $this->longitude = $longitude;
+
         return $this;
     }
 }

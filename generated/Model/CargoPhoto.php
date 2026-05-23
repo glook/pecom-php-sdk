@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPhoto
 {
     /**
-     * Содержимое файла
+     * Содержимое файла.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $data;
+
     /**
-     * Имя файла
+     * Имя файла.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $filename;
+
     /**
      * MIME-тип
      *
-     * @var string|null
+     * @var null|string
      */
     protected $mimeType;
+
     /**
-     * Содержимое файла
-     *
-     * @return string|null
+     * Содержимое файла.
      */
-    public function getData() : ?string
+    public function getData(): ?string
     {
         return $this->data;
     }
+
     /**
-     * Содержимое файла
-     *
-     * @param string|null $data
-     *
-     * @return self
+     * Содержимое файла.
      */
-    public function setData(?string $data) : self
+    public function setData(?string $data): self
     {
         $this->data = $data;
+
         return $this;
     }
+
     /**
-     * Имя файла
-     *
-     * @return string|null
+     * Имя файла.
      */
-    public function getFilename() : ?string
+    public function getFilename(): ?string
     {
         return $this->filename;
     }
+
     /**
-     * Имя файла
-     *
-     * @param string|null $filename
-     *
-     * @return self
+     * Имя файла.
      */
-    public function setFilename(?string $filename) : self
+    public function setFilename(?string $filename): self
     {
         $this->filename = $filename;
+
         return $this;
     }
+
     /**
      * MIME-тип
-     *
-     * @return string|null
      */
-    public function getMimeType() : ?string
+    public function getMimeType(): ?string
     {
         return $this->mimeType;
     }
+
     /**
      * MIME-тип
-     *
-     * @param string|null $mimeType
-     *
-     * @return self
      */
-    public function setMimeType(?string $mimeType) : self
+    public function setMimeType(?string $mimeType): self
     {
         $this->mimeType = $mimeType;
+
         return $this;
     }
 }

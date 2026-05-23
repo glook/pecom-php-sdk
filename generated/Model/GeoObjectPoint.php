@@ -5,30 +5,27 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectPoint
 {
     /**
-     * Координаты центральной точки, найденного объекта (долгота широта)
+     * Координаты центральной точки, найденного объекта (долгота широта).
      *
      * @var string
      */
     protected $pos;
+
     /**
-     * Координаты центральной точки, найденного объекта (долгота широта)
-     *
-     * @return string
+     * Координаты центральной точки, найденного объекта (долгота широта).
      */
-    public function getPos() : string
+    public function getPos(): string
     {
         return $this->pos;
     }
+
     /**
-     * Координаты центральной точки, найденного объекта (долгота широта)
-     *
-     * @param string $pos
-     *
-     * @return self
+     * Координаты центральной точки, найденного объекта (долгота широта).
      */
-    public function setPos(string $pos) : self
+    public function setPos(string $pos): self
     {
         $this->pos = $pos;
+
         return $this;
     }
 }

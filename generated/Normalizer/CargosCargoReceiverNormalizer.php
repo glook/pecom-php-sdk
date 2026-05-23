@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargosCargoReceiver;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargosCargoReceiverNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargosCargoReceiver';
+        return 'glook\PecomSdk\Generated\Model\CargosCargoReceiver' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargosCargoReceiver';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargosCargoReceiver' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,69 +36,62 @@ class CargosCargoReceiverNormalizer implements DenormalizerInterface, Normalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargosCargoReceiver();
+        $object = new CargosCargoReceiver();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('abbreviated', $data) && $data['abbreviated'] !== null) {
-            $object->setAbbreviated($this->denormalizer->denormalize($data['abbreviated'], 'glook\\PecomSdk\\Generated\\Model\\AbbreviatedReceiver', 'json', $context));
-        }
-        elseif (\array_key_exists('abbreviated', $data) && $data['abbreviated'] === null) {
+        if (\array_key_exists('abbreviated', $data) && null !== $data['abbreviated']) {
+            $object->setAbbreviated($this->denormalizer->denormalize($data['abbreviated'], 'glook\PecomSdk\Generated\Model\AbbreviatedReceiver', 'json', $context));
+        } elseif (\array_key_exists('abbreviated', $data) && null === $data['abbreviated']) {
             $object->setAbbreviated(null);
         }
-        if (\array_key_exists('branch', $data) && $data['branch'] !== null) {
-            $object->setBranch($this->denormalizer->denormalize($data['branch'], 'glook\\PecomSdk\\Generated\\Model\\BranchInfo', 'json', $context));
-        }
-        elseif (\array_key_exists('branch', $data) && $data['branch'] === null) {
+        if (\array_key_exists('branch', $data) && null !== $data['branch']) {
+            $object->setBranch($this->denormalizer->denormalize($data['branch'], 'glook\PecomSdk\Generated\Model\BranchInfo', 'json', $context));
+        } elseif (\array_key_exists('branch', $data) && null === $data['branch']) {
             $object->setBranch(null);
         }
-        if (\array_key_exists('counterpartPaymentType', $data) && $data['counterpartPaymentType'] !== null) {
+        if (\array_key_exists('counterpartPaymentType', $data) && null !== $data['counterpartPaymentType']) {
             $object->setCounterpartPaymentType($data['counterpartPaymentType']);
-        }
-        elseif (\array_key_exists('counterpartPaymentType', $data) && $data['counterpartPaymentType'] === null) {
+        } elseif (\array_key_exists('counterpartPaymentType', $data) && null === $data['counterpartPaymentType']) {
             $object->setCounterpartPaymentType(null);
         }
-        if (\array_key_exists('isCorrect', $data) && $data['isCorrect'] !== null) {
+        if (\array_key_exists('isCorrect', $data) && null !== $data['isCorrect']) {
             $object->setIsCorrect($data['isCorrect']);
-        }
-        elseif (\array_key_exists('isCorrect', $data) && $data['isCorrect'] === null) {
+        } elseif (\array_key_exists('isCorrect', $data) && null === $data['isCorrect']) {
             $object->setIsCorrect(null);
         }
-        if (\array_key_exists('person', $data) && $data['person'] !== null) {
+        if (\array_key_exists('person', $data) && null !== $data['person']) {
             $object->setPerson($data['person']);
-        }
-        elseif (\array_key_exists('person', $data) && $data['person'] === null) {
+        } elseif (\array_key_exists('person', $data) && null === $data['person']) {
             $object->setPerson(null);
         }
-        if (\array_key_exists('phone', $data) && $data['phone'] !== null) {
+        if (\array_key_exists('phone', $data) && null !== $data['phone']) {
             $object->setPhone($data['phone']);
-        }
-        elseif (\array_key_exists('phone', $data) && $data['phone'] === null) {
+        } elseif (\array_key_exists('phone', $data) && null === $data['phone']) {
             $object->setPhone(null);
         }
-        if (\array_key_exists('receiver', $data) && $data['receiver'] !== null) {
+        if (\array_key_exists('receiver', $data) && null !== $data['receiver']) {
             $object->setReceiver($data['receiver']);
-        }
-        elseif (\array_key_exists('receiver', $data) && $data['receiver'] === null) {
+        } elseif (\array_key_exists('receiver', $data) && null === $data['receiver']) {
             $object->setReceiver(null);
         }
-        if (\array_key_exists('receivingByDocument', $data) && $data['receivingByDocument'] !== null) {
+        if (\array_key_exists('receivingByDocument', $data) && null !== $data['receivingByDocument']) {
             $object->setReceivingByDocument($data['receivingByDocument']);
-        }
-        elseif (\array_key_exists('receivingByDocument', $data) && $data['receivingByDocument'] === null) {
+        } elseif (\array_key_exists('receivingByDocument', $data) && null === $data['receivingByDocument']) {
             $object->setReceivingByDocument(null);
         }
-        if (\array_key_exists('receivingBySMSCode', $data) && $data['receivingBySMSCode'] !== null) {
+        if (\array_key_exists('receivingBySMSCode', $data) && null !== $data['receivingBySMSCode']) {
             $object->setReceivingBySMSCode($data['receivingBySMSCode']);
-        }
-        elseif (\array_key_exists('receivingBySMSCode', $data) && $data['receivingBySMSCode'] === null) {
+        } elseif (\array_key_exists('receivingBySMSCode', $data) && null === $data['receivingBySMSCode']) {
             $object->setReceivingBySMSCode(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getAbbreviated()) {
             $data['abbreviated'] = $this->normalizer->normalize($object->getAbbreviated(), 'json', $context);
         }
@@ -122,6 +119,7 @@ class CargosCargoReceiverNormalizer implements DenormalizerInterface, Normalizer
         if (null !== $object->getReceivingBySMSCode()) {
             $data['receivingBySMSCode'] = $object->getReceivingBySMSCode();
         }
+
         return $data;
     }
 }

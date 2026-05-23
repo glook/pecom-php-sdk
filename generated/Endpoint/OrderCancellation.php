@@ -2,67 +2,84 @@
 
 namespace glook\PecomSdk\Generated\Endpoint;
 
-class OrderCancellation extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint implements \glook\PecomSdk\Generated\Runtime\Client\Endpoint
+use glook\PecomSdk\Generated\Exception\OrderCancellationBadRequestException;
+use glook\PecomSdk\Generated\Exception\OrderCancellationForbiddenException;
+use glook\PecomSdk\Generated\Exception\OrderCancellationInternalServerErrorException;
+use glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException;
+use glook\PecomSdk\Generated\Model\OrderCancellationResult;
+use glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint;
+use glook\PecomSdk\Generated\Runtime\Client\Endpoint;
+use glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
+use Symfony\Component\Serializer\SerializerInterface;
+
+class OrderCancellation extends BaseEndpoint implements Endpoint
 {
+    use EndpointTrait;
+
     /**
-    * Использовать метод нужно не ранее, чем через 5 – 10 минут после подачи заявки
-    Заявка на забор может быть аннулирована до момента её планирования в маршрутном листе водителя
-    Аннулирование заявок с самопривозом на склад ПЭК не требуется
-    *
-    * @param array[] $requestBody 
-    */
+     * Использовать метод нужно не ранее, чем через 5 – 10 минут после подачи заявки
+     * Заявка на забор может быть аннулирована до момента её планирования в маршрутном листе водителя
+     * Аннулирование заявок с самопривозом на склад ПЭК не требуется.
+     *
+     * @param array[] $requestBody
+     */
     public function __construct(array $requestBody)
     {
         $this->body = $requestBody;
     }
-    use \glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+
+    public function getUri(): string
     {
         return '/order/cancellation/';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+
+    public function getBody(SerializerInterface $serializer, $streamFactory = null): array
     {
         if (is_array($this->body) and isset($this->body[0]) and is_array($this->body[0])) {
-            return array(array('Content-Type' => array('application/json')), json_encode($this->body));
+            return [['Content-Type' => ['application/json']], json_encode($this->body)];
         }
-        return array(array(), null);
+
+        return [[], null];
     }
-    public function getExtraHeaders() : array
+
+    public function getExtraHeaders(): array
     {
-        return array('Accept' => array('application/json'));
+        return ['Accept' => ['application/json']];
     }
+
+    public function getAuthenticationScopes(): array
+    {
+        return ['BasicAuth'];
+    }
+
     /**
-     * {@inheritdoc}
+     * @return null|OrderCancellationResult[]
      *
-     * @throws \glook\PecomSdk\Generated\Exception\OrderCancellationBadRequestException
-     * @throws \glook\PecomSdk\Generated\Exception\OrderCancellationForbiddenException
-     * @throws \glook\PecomSdk\Generated\Exception\OrderCancellationInternalServerErrorException
-     * @throws \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException
-     *
-     * @return null|\glook\PecomSdk\Generated\Model\OrderCancellationResult[]
+     * @throws OrderCancellationBadRequestException
+     * @throws OrderCancellationForbiddenException
+     * @throws OrderCancellationInternalServerErrorException
+     * @throws UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\OrderCancellationResult[]', 'json');
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            return $serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\OrderCancellationResult[]', 'json');
         }
-        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\OrderCancellationBadRequestException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new OrderCancellationBadRequestException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\OrderCancellationForbiddenException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new OrderCancellationForbiddenException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\OrderCancellationInternalServerErrorException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new OrderCancellationInternalServerErrorException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        throw new \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException($status, $body);
-    }
-    public function getAuthenticationScopes() : array
-    {
-        return array('BasicAuth');
+
+        throw new UnexpectedStatusCodeException($status, $body);
     }
 }

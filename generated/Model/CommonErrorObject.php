@@ -5,77 +5,76 @@ namespace glook\PecomSdk\Generated\Model;
 class CommonErrorObject
 {
     /**
-     * Краткий заголовок ошибки
+     * Краткий заголовок ошибки.
      *
      * @var string
      */
     protected $title;
+
     /**
-     * Подробное сообщение об ошибке
+     * Подробное сообщение об ошибке.
      *
      * @var string
      */
     protected $message;
+
     /**
      * Дополнительные данные об ошибке, если они возвращены сервисом
      *
-     * @var mixed|null
+     * @var null|mixed
      */
     protected $error;
+
     /**
-     * HTTP-статус или сервисный статус, если он присутствует в теле ответа
+     * HTTP-статус или сервисный статус, если он присутствует в теле ответа.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $status;
+
     /**
-     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса)
+     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса).
      *
-     * @var ValidationErrorField[]|null
+     * @var null|ValidationErrorField[]
      */
     protected $fields;
+
     /**
-     * Краткий заголовок ошибки
-     *
-     * @return string
+     * Краткий заголовок ошибки.
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
+
     /**
-     * Краткий заголовок ошибки
-     *
-     * @param string $title
-     *
-     * @return self
+     * Краткий заголовок ошибки.
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
+
     /**
-     * Подробное сообщение об ошибке
-     *
-     * @return string
+     * Подробное сообщение об ошибке.
      */
-    public function getMessage() : string
+    public function getMessage(): string
     {
         return $this->message;
     }
+
     /**
-     * Подробное сообщение об ошибке
-     *
-     * @param string $message
-     *
-     * @return self
+     * Подробное сообщение об ошибке.
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message): self
     {
         $this->message = $message;
+
         return $this;
     }
+
     /**
      * Дополнительные данные об ошибке, если они возвращены сервисом
      *
@@ -85,58 +84,56 @@ class CommonErrorObject
     {
         return $this->error;
     }
+
     /**
      * Дополнительные данные об ошибке, если они возвращены сервисом
      *
      * @param mixed $error
-     *
-     * @return self
      */
-    public function setError($error) : self
+    public function setError($error): self
     {
         $this->error = $error;
+
         return $this;
     }
+
     /**
-     * HTTP-статус или сервисный статус, если он присутствует в теле ответа
-     *
-     * @return int|null
+     * HTTP-статус или сервисный статус, если он присутствует в теле ответа.
      */
-    public function getStatus() : ?int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
+
     /**
-     * HTTP-статус или сервисный статус, если он присутствует в теле ответа
-     *
-     * @param int|null $status
-     *
-     * @return self
+     * HTTP-статус или сервисный статус, если он присутствует в теле ответа.
      */
-    public function setStatus(?int $status) : self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
+
         return $this;
     }
+
     /**
-     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса)
+     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса).
      *
-     * @return ValidationErrorField[]|null
+     * @return null|ValidationErrorField[]
      */
-    public function getFields() : ?array
+    public function getFields(): ?array
     {
         return $this->fields;
     }
+
     /**
-     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса)
+     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса).
      *
-     * @param ValidationErrorField[]|null $fields
-     *
-     * @return self
+     * @param null|ValidationErrorField[] $fields
      */
-    public function setFields(?array $fields) : self
+    public function setFields(?array $fields): self
     {
         $this->fields = $fields;
+
         return $this;
     }
 }

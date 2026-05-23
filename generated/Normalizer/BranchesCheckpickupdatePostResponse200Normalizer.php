@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\BranchesCheckpickupdatePostResponse200;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class BranchesCheckpickupdatePostResponse200Normalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\BranchesCheckpickupdatePostResponse200';
+        return 'glook\PecomSdk\Generated\Model\BranchesCheckpickupdatePostResponse200' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\BranchesCheckpickupdatePostResponse200';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\BranchesCheckpickupdatePostResponse200' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class BranchesCheckpickupdatePostResponse200Normalizer implements DenormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\BranchesCheckpickupdatePostResponse200();
+        $object = new BranchesCheckpickupdatePostResponse200();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -40,14 +44,14 @@ class BranchesCheckpickupdatePostResponse200Normalizer implements DenormalizerIn
             $object->setAddressAvailable($data['AddressAvailable']);
         }
         if (\array_key_exists('AvailablePickupDatesAfter', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['AvailablePickupDatesAfter'] as $value) {
                 $values[] = \DateTime::createFromFormat('Y-m-d', $value)->setTime(0, 0, 0);
             }
             $object->setAvailablePickupDatesAfter($values);
         }
         if (\array_key_exists('AvailablePickupDatesBefore', $data)) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($data['AvailablePickupDatesBefore'] as $value_1) {
                 $values_1[] = \DateTime::createFromFormat('Y-m-d', $value_1)->setTime(0, 0, 0);
             }
@@ -56,23 +60,26 @@ class BranchesCheckpickupdatePostResponse200Normalizer implements DenormalizerIn
         if (\array_key_exists('PickupDateAvailable', $data)) {
             $object->setPickupDateAvailable($data['PickupDateAvailable']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['AddressAvailable'] = $object->getAddressAvailable();
-        $values = array();
+        $values = [];
         foreach ($object->getAvailablePickupDatesAfter() as $value) {
             $values[] = $value->format('Y-m-d');
         }
         $data['AvailablePickupDatesAfter'] = $values;
-        $values_1 = array();
+        $values_1 = [];
         foreach ($object->getAvailablePickupDatesBefore() as $value_1) {
             $values_1[] = $value_1->format('Y-m-d');
         }
         $data['AvailablePickupDatesBefore'] = $values_1;
         $data['PickupDateAvailable'] = $object->getPickupDateAvailable();
+
         return $data;
     }
 }

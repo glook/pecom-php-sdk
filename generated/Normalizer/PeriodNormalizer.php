@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\Period;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class PeriodNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\Period';
+        return 'glook\PecomSdk\Generated\Model\Period' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\Period';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\Period' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,32 @@ class PeriodNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\Period();
+        $object = new Period();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('isDayLight', $data) && $data['isDayLight'] !== null) {
+        if (\array_key_exists('isDayLight', $data) && null !== $data['isDayLight']) {
             $object->setIsDayLight($data['isDayLight']);
-        }
-        elseif (\array_key_exists('isDayLight', $data) && $data['isDayLight'] === null) {
+        } elseif (\array_key_exists('isDayLight', $data) && null === $data['isDayLight']) {
             $object->setIsDayLight(null);
         }
-        if (\array_key_exists('periodTimeFrom', $data) && $data['periodTimeFrom'] !== null) {
+        if (\array_key_exists('periodTimeFrom', $data) && null !== $data['periodTimeFrom']) {
             $object->setPeriodTimeFrom($data['periodTimeFrom']);
-        }
-        elseif (\array_key_exists('periodTimeFrom', $data) && $data['periodTimeFrom'] === null) {
+        } elseif (\array_key_exists('periodTimeFrom', $data) && null === $data['periodTimeFrom']) {
             $object->setPeriodTimeFrom(null);
         }
-        if (\array_key_exists('periodTimeTo', $data) && $data['periodTimeTo'] !== null) {
+        if (\array_key_exists('periodTimeTo', $data) && null !== $data['periodTimeTo']) {
             $object->setPeriodTimeTo($data['periodTimeTo']);
-        }
-        elseif (\array_key_exists('periodTimeTo', $data) && $data['periodTimeTo'] === null) {
+        } elseif (\array_key_exists('periodTimeTo', $data) && null === $data['periodTimeTo']) {
             $object->setPeriodTimeTo(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getIsDayLight()) {
             $data['isDayLight'] = $object->getIsDayLight();
         }
@@ -68,6 +71,7 @@ class PeriodNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (null !== $object->getPeriodTimeTo()) {
             $data['periodTimeTo'] = $object->getPeriodTimeTo();
         }
+
         return $data;
     }
 }

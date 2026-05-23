@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsCargoinvoicebyperiodRequest
 {
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
      *
      * @var string
      */
     protected $counterpartGuid;
+
     /**
-     * Начальная дата периода запроса, дата берется по оформлению груза
+     * Начальная дата периода запроса, дата берется по оформлению груза.
      *
      * @var \DateTime
      */
     protected $dateFrom;
+
     /**
-     * Конечная дата периода запроса, дата берется по оформлению груза
+     * Конечная дата периода запроса, дата берется по оформлению груза.
      *
      * @var \DateTime
      */
     protected $dateTo;
+
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
-     *
-     * @return string
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
      */
-    public function getCounterpartGuid() : string
+    public function getCounterpartGuid(): string
     {
         return $this->counterpartGuid;
     }
+
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
-     *
-     * @param string $counterpartGuid
-     *
-     * @return self
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
      */
-    public function setCounterpartGuid(string $counterpartGuid) : self
+    public function setCounterpartGuid(string $counterpartGuid): self
     {
         $this->counterpartGuid = $counterpartGuid;
+
         return $this;
     }
+
     /**
-     * Начальная дата периода запроса, дата берется по оформлению груза
-     *
-     * @return \DateTime
+     * Начальная дата периода запроса, дата берется по оформлению груза.
      */
-    public function getDateFrom() : \DateTime
+    public function getDateFrom(): \DateTime
     {
         return $this->dateFrom;
     }
+
     /**
-     * Начальная дата периода запроса, дата берется по оформлению груза
-     *
-     * @param \DateTime $dateFrom
-     *
-     * @return self
+     * Начальная дата периода запроса, дата берется по оформлению груза.
      */
-    public function setDateFrom(\DateTime $dateFrom) : self
+    public function setDateFrom(\DateTime $dateFrom): self
     {
         $this->dateFrom = $dateFrom;
+
         return $this;
     }
+
     /**
-     * Конечная дата периода запроса, дата берется по оформлению груза
-     *
-     * @return \DateTime
+     * Конечная дата периода запроса, дата берется по оформлению груза.
      */
-    public function getDateTo() : \DateTime
+    public function getDateTo(): \DateTime
     {
         return $this->dateTo;
     }
+
     /**
-     * Конечная дата периода запроса, дата берется по оформлению груза
-     *
-     * @param \DateTime $dateTo
-     *
-     * @return self
+     * Конечная дата периода запроса, дата берется по оформлению груза.
      */
-    public function setDateTo(\DateTime $dateTo) : self
+    public function setDateTo(\DateTime $dateTo): self
     {
         $this->dateTo = $dateTo;
+
         return $this;
     }
 }

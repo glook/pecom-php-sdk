@@ -5,84 +5,81 @@ namespace glook\PecomSdk\Generated\Model;
 class DeliveryDateResult
 {
     /**
-     * Ближайший день забора/доставки от переданной даты в запросе
+     * Ближайший день забора/доставки от переданной даты в запросе.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $date;
+
     /**
-     * В этот день действует льготный тариф на забор/доставку по запрошенному адресу
+     * В этот день действует льготный тариф на забор/доставку по запрошенному адресу.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isPreferential;
+
     /**
      * Минимальные временные интервалы на забор/доставку груза.
      *
-     * @var Period[]|null
+     * @var null|Period[]
      */
     protected $periods;
+
     /**
-     * Ближайший день забора/доставки от переданной даты в запросе
-     *
-     * @return string|null
+     * Ближайший день забора/доставки от переданной даты в запросе.
      */
-    public function getDate() : ?string
+    public function getDate(): ?string
     {
         return $this->date;
     }
+
     /**
-     * Ближайший день забора/доставки от переданной даты в запросе
-     *
-     * @param string|null $date
-     *
-     * @return self
+     * Ближайший день забора/доставки от переданной даты в запросе.
      */
-    public function setDate(?string $date) : self
+    public function setDate(?string $date): self
     {
         $this->date = $date;
+
         return $this;
     }
+
     /**
-     * В этот день действует льготный тариф на забор/доставку по запрошенному адресу
-     *
-     * @return bool|null
+     * В этот день действует льготный тариф на забор/доставку по запрошенному адресу.
      */
-    public function getIsPreferential() : ?bool
+    public function getIsPreferential(): ?bool
     {
         return $this->isPreferential;
     }
+
     /**
-     * В этот день действует льготный тариф на забор/доставку по запрошенному адресу
-     *
-     * @param bool|null $isPreferential
-     *
-     * @return self
+     * В этот день действует льготный тариф на забор/доставку по запрошенному адресу.
      */
-    public function setIsPreferential(?bool $isPreferential) : self
+    public function setIsPreferential(?bool $isPreferential): self
     {
         $this->isPreferential = $isPreferential;
+
         return $this;
     }
+
     /**
      * Минимальные временные интервалы на забор/доставку груза.
      *
-     * @return Period[]|null
+     * @return null|Period[]
      */
-    public function getPeriods() : ?array
+    public function getPeriods(): ?array
     {
         return $this->periods;
     }
+
     /**
      * Минимальные временные интервалы на забор/доставку груза.
      *
-     * @param Period[]|null $periods
-     *
-     * @return self
+     * @param null|Period[] $periods
      */
-    public function setPeriods(?array $periods) : self
+    public function setPeriods(?array $periods): self
     {
         $this->periods = $periods;
+
         return $this;
     }
 }

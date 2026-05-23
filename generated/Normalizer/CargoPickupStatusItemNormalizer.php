@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupStatusItem;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupStatusItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupStatusItem';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupStatusItem' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupStatusItem';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupStatusItem' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,96 +36,85 @@ class CargoPickupStatusItemNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupStatusItem();
+        $object = new CargoPickupStatusItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('carBrand', $data) && $data['carBrand'] !== null) {
+        if (\array_key_exists('carBrand', $data) && null !== $data['carBrand']) {
             $object->setCarBrand($data['carBrand']);
-        }
-        elseif (\array_key_exists('carBrand', $data) && $data['carBrand'] === null) {
+        } elseif (\array_key_exists('carBrand', $data) && null === $data['carBrand']) {
             $object->setCarBrand(null);
         }
-        if (\array_key_exists('carDriver', $data) && $data['carDriver'] !== null) {
+        if (\array_key_exists('carDriver', $data) && null !== $data['carDriver']) {
             $object->setCarDriver($data['carDriver']);
-        }
-        elseif (\array_key_exists('carDriver', $data) && $data['carDriver'] === null) {
+        } elseif (\array_key_exists('carDriver', $data) && null === $data['carDriver']) {
             $object->setCarDriver(null);
         }
-        if (\array_key_exists('carDriverPhone', $data) && $data['carDriverPhone'] !== null) {
+        if (\array_key_exists('carDriverPhone', $data) && null !== $data['carDriverPhone']) {
             $object->setCarDriverPhone($data['carDriverPhone']);
-        }
-        elseif (\array_key_exists('carDriverPhone', $data) && $data['carDriverPhone'] === null) {
+        } elseif (\array_key_exists('carDriverPhone', $data) && null === $data['carDriverPhone']) {
             $object->setCarDriverPhone(null);
         }
         if (\array_key_exists('cargoCode', $data)) {
             $object->setCargoCode($data['cargoCode']);
         }
-        if (\array_key_exists('carNumber', $data) && $data['carNumber'] !== null) {
+        if (\array_key_exists('carNumber', $data) && null !== $data['carNumber']) {
             $object->setCarNumber($data['carNumber']);
-        }
-        elseif (\array_key_exists('carNumber', $data) && $data['carNumber'] === null) {
+        } elseif (\array_key_exists('carNumber', $data) && null === $data['carNumber']) {
             $object->setCarNumber(null);
         }
-        if (\array_key_exists('error', $data) && $data['error'] !== null) {
+        if (\array_key_exists('error', $data) && null !== $data['error']) {
             $object->setError($data['error']);
-        }
-        elseif (\array_key_exists('error', $data) && $data['error'] === null) {
+        } elseif (\array_key_exists('error', $data) && null === $data['error']) {
             $object->setError(null);
         }
-        if (\array_key_exists('fenceStatus', $data) && $data['fenceStatus'] !== null) {
+        if (\array_key_exists('fenceStatus', $data) && null !== $data['fenceStatus']) {
             $object->setFenceStatus($data['fenceStatus']);
-        }
-        elseif (\array_key_exists('fenceStatus', $data) && $data['fenceStatus'] === null) {
+        } elseif (\array_key_exists('fenceStatus', $data) && null === $data['fenceStatus']) {
             $object->setFenceStatus(null);
         }
-        if (\array_key_exists('intakeStatus', $data) && $data['intakeStatus'] !== null) {
+        if (\array_key_exists('intakeStatus', $data) && null !== $data['intakeStatus']) {
             $object->setIntakeStatus($data['intakeStatus']);
-        }
-        elseif (\array_key_exists('intakeStatus', $data) && $data['intakeStatus'] === null) {
+        } elseif (\array_key_exists('intakeStatus', $data) && null === $data['intakeStatus']) {
             $object->setIntakeStatus(null);
         }
-        if (\array_key_exists('intakeStatusCode', $data) && $data['intakeStatusCode'] !== null) {
+        if (\array_key_exists('intakeStatusCode', $data) && null !== $data['intakeStatusCode']) {
             $object->setIntakeStatusCode($data['intakeStatusCode']);
-        }
-        elseif (\array_key_exists('intakeStatusCode', $data) && $data['intakeStatusCode'] === null) {
+        } elseif (\array_key_exists('intakeStatusCode', $data) && null === $data['intakeStatusCode']) {
             $object->setIntakeStatusCode(null);
         }
-        if (\array_key_exists('intervalFrom', $data) && $data['intervalFrom'] !== null) {
+        if (\array_key_exists('intervalFrom', $data) && null !== $data['intervalFrom']) {
             $object->setIntervalFrom($data['intervalFrom']);
-        }
-        elseif (\array_key_exists('intervalFrom', $data) && $data['intervalFrom'] === null) {
+        } elseif (\array_key_exists('intervalFrom', $data) && null === $data['intervalFrom']) {
             $object->setIntervalFrom(null);
         }
-        if (\array_key_exists('intervalLunchBreakFrom', $data) && $data['intervalLunchBreakFrom'] !== null) {
+        if (\array_key_exists('intervalLunchBreakFrom', $data) && null !== $data['intervalLunchBreakFrom']) {
             $object->setIntervalLunchBreakFrom($data['intervalLunchBreakFrom']);
-        }
-        elseif (\array_key_exists('intervalLunchBreakFrom', $data) && $data['intervalLunchBreakFrom'] === null) {
+        } elseif (\array_key_exists('intervalLunchBreakFrom', $data) && null === $data['intervalLunchBreakFrom']) {
             $object->setIntervalLunchBreakFrom(null);
         }
-        if (\array_key_exists('intervalLunchBreakTo', $data) && $data['intervalLunchBreakTo'] !== null) {
+        if (\array_key_exists('intervalLunchBreakTo', $data) && null !== $data['intervalLunchBreakTo']) {
             $object->setIntervalLunchBreakTo($data['intervalLunchBreakTo']);
-        }
-        elseif (\array_key_exists('intervalLunchBreakTo', $data) && $data['intervalLunchBreakTo'] === null) {
+        } elseif (\array_key_exists('intervalLunchBreakTo', $data) && null === $data['intervalLunchBreakTo']) {
             $object->setIntervalLunchBreakTo(null);
         }
-        if (\array_key_exists('intervalTo', $data) && $data['intervalTo'] !== null) {
+        if (\array_key_exists('intervalTo', $data) && null !== $data['intervalTo']) {
             $object->setIntervalTo($data['intervalTo']);
-        }
-        elseif (\array_key_exists('intervalTo', $data) && $data['intervalTo'] === null) {
+        } elseif (\array_key_exists('intervalTo', $data) && null === $data['intervalTo']) {
             $object->setIntervalTo(null);
         }
-        if (\array_key_exists('pickupDate', $data) && $data['pickupDate'] !== null) {
+        if (\array_key_exists('pickupDate', $data) && null !== $data['pickupDate']) {
             $object->setPickupDate(\DateTime::createFromFormat('Y-m-d', $data['pickupDate'])->setTime(0, 0, 0));
-        }
-        elseif (\array_key_exists('pickupDate', $data) && $data['pickupDate'] === null) {
+        } elseif (\array_key_exists('pickupDate', $data) && null === $data['pickupDate']) {
             $object->setPickupDate(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCarBrand()) {
             $data['carBrand'] = $object->getCarBrand();
         }
@@ -162,6 +155,7 @@ class CargoPickupStatusItemNormalizer implements DenormalizerInterface, Normaliz
         if (null !== $object->getPickupDate()) {
             $data['pickupDate'] = $object->getPickupDate()->format('Y-m-d');
         }
+
         return $data;
     }
 }

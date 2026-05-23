@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoDetailsResponse;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoDetailsResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoDetailsResponse';
+        return 'glook\PecomSdk\Generated\Model\CargoDetailsResponse' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoDetailsResponse';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoDetailsResponse' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,42 +36,41 @@ class CargoDetailsResponseNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoDetailsResponse();
+        $object = new CargoDetailsResponse();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cargoCode', $data) && $data['cargoCode'] !== null) {
+        if (\array_key_exists('cargoCode', $data) && null !== $data['cargoCode']) {
             $object->setCargoCode($data['cargoCode']);
-        }
-        elseif (\array_key_exists('cargoCode', $data) && $data['cargoCode'] === null) {
+        } elseif (\array_key_exists('cargoCode', $data) && null === $data['cargoCode']) {
             $object->setCargoCode(null);
         }
-        if (\array_key_exists('details', $data) && $data['details'] !== null) {
-            $values = array();
+        if (\array_key_exists('details', $data) && null !== $data['details']) {
+            $values = [];
             foreach ($data['details'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CargoDetail', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CargoDetail', 'json', $context);
             }
             $object->setDetails($values);
-        }
-        elseif (\array_key_exists('details', $data) && $data['details'] === null) {
+        } elseif (\array_key_exists('details', $data) && null === $data['details']) {
             $object->setDetails(null);
         }
-        if (\array_key_exists('senderInn', $data) && $data['senderInn'] !== null) {
+        if (\array_key_exists('senderInn', $data) && null !== $data['senderInn']) {
             $object->setSenderInn($data['senderInn']);
-        }
-        elseif (\array_key_exists('senderInn', $data) && $data['senderInn'] === null) {
+        } elseif (\array_key_exists('senderInn', $data) && null === $data['senderInn']) {
             $object->setSenderInn(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCargoCode()) {
             $data['cargoCode'] = $object->getCargoCode();
         }
         if (null !== $object->getDetails()) {
-            $values = array();
+            $values = [];
             foreach ($object->getDetails() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -76,6 +79,7 @@ class CargoDetailsResponseNormalizer implements DenormalizerInterface, Normalize
         if (null !== $object->getSenderInn()) {
             $data['senderInn'] = $object->getSenderInn();
         }
+
         return $data;
     }
 }

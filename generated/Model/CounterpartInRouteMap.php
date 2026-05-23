@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class CounterpartInRouteMap
 {
     /**
-     * Количество грузов, запланированных к доставке
+     * Количество грузов, запланированных к доставке.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $countCargosForDelivery;
+
     /**
-     * Количество грузов, запланированных к забору
+     * Количество грузов, запланированных к забору.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $countCargosForIntake;
+
     /**
-     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода).
      *
-     * @var RouteMapCounterpart|null
+     * @var null|RouteMapCounterpart
      */
     protected $counterpart;
+
     /**
-     * Количество грузов, запланированных к доставке
-     *
-     * @return float|null
+     * Количество грузов, запланированных к доставке.
      */
-    public function getCountCargosForDelivery() : ?float
+    public function getCountCargosForDelivery(): ?float
     {
         return $this->countCargosForDelivery;
     }
+
     /**
-     * Количество грузов, запланированных к доставке
-     *
-     * @param float|null $countCargosForDelivery
-     *
-     * @return self
+     * Количество грузов, запланированных к доставке.
      */
-    public function setCountCargosForDelivery(?float $countCargosForDelivery) : self
+    public function setCountCargosForDelivery(?float $countCargosForDelivery): self
     {
         $this->countCargosForDelivery = $countCargosForDelivery;
+
         return $this;
     }
+
     /**
-     * Количество грузов, запланированных к забору
-     *
-     * @return float|null
+     * Количество грузов, запланированных к забору.
      */
-    public function getCountCargosForIntake() : ?float
+    public function getCountCargosForIntake(): ?float
     {
         return $this->countCargosForIntake;
     }
+
     /**
-     * Количество грузов, запланированных к забору
-     *
-     * @param float|null $countCargosForIntake
-     *
-     * @return self
+     * Количество грузов, запланированных к забору.
      */
-    public function setCountCargosForIntake(?float $countCargosForIntake) : self
+    public function setCountCargosForIntake(?float $countCargosForIntake): self
     {
         $this->countCargosForIntake = $countCargosForIntake;
+
         return $this;
     }
+
     /**
-     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
-     *
-     * @return RouteMapCounterpart|null
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода).
      */
-    public function getCounterpart() : ?RouteMapCounterpart
+    public function getCounterpart(): ?RouteMapCounterpart
     {
         return $this->counterpart;
     }
+
     /**
-     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
-     *
-     * @param RouteMapCounterpart|null $counterpart
-     *
-     * @return self
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода).
      */
-    public function setCounterpart(?RouteMapCounterpart $counterpart) : self
+    public function setCounterpart(?RouteMapCounterpart $counterpart): self
     {
         $this->counterpart = $counterpart;
+
         return $this;
     }
 }

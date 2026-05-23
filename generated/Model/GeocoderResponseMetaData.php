@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class GeocoderResponseMetaData
 {
     /**
-     * Количество найденных вариантов адресов по строке запроса
+     * Количество найденных вариантов адресов по строке запроса.
      *
      * @var string
      */
     protected $found;
+
     /**
-     * Часть адреса, по которому подбирались варианты
+     * Часть адреса, по которому подбирались варианты.
      *
      * @var string
      */
     protected $request;
+
     /**
-     * Максимальное количество результатов
+     * Максимальное количество результатов.
      *
      * @var string
      */
     protected $results;
+
     /**
-     * Количество найденных вариантов адресов по строке запроса
-     *
-     * @return string
+     * Количество найденных вариантов адресов по строке запроса.
      */
-    public function getFound() : string
+    public function getFound(): string
     {
         return $this->found;
     }
+
     /**
-     * Количество найденных вариантов адресов по строке запроса
-     *
-     * @param string $found
-     *
-     * @return self
+     * Количество найденных вариантов адресов по строке запроса.
      */
-    public function setFound(string $found) : self
+    public function setFound(string $found): self
     {
         $this->found = $found;
+
         return $this;
     }
+
     /**
-     * Часть адреса, по которому подбирались варианты
-     *
-     * @return string
+     * Часть адреса, по которому подбирались варианты.
      */
-    public function getRequest() : string
+    public function getRequest(): string
     {
         return $this->request;
     }
+
     /**
-     * Часть адреса, по которому подбирались варианты
-     *
-     * @param string $request
-     *
-     * @return self
+     * Часть адреса, по которому подбирались варианты.
      */
-    public function setRequest(string $request) : self
+    public function setRequest(string $request): self
     {
         $this->request = $request;
+
         return $this;
     }
+
     /**
-     * Максимальное количество результатов
-     *
-     * @return string
+     * Максимальное количество результатов.
      */
-    public function getResults() : string
+    public function getResults(): string
     {
         return $this->results;
     }
+
     /**
-     * Максимальное количество результатов
-     *
-     * @param string $results
-     *
-     * @return self
+     * Максимальное количество результатов.
      */
-    public function setResults(string $results) : self
+    public function setResults(string $results): self
     {
         $this->results = $results;
+
         return $this;
     }
 }

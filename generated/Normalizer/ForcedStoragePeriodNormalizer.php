@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ForcedStoragePeriod;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ForcedStoragePeriodNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ForcedStoragePeriod';
+        return 'glook\PecomSdk\Generated\Model\ForcedStoragePeriod' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ForcedStoragePeriod';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ForcedStoragePeriod' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,63 +36,57 @@ class ForcedStoragePeriodNormalizer implements DenormalizerInterface, Normalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ForcedStoragePeriod();
+        $object = new ForcedStoragePeriod();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cargoStatus', $data) && $data['cargoStatus'] !== null) {
+        if (\array_key_exists('cargoStatus', $data) && null !== $data['cargoStatus']) {
             $object->setCargoStatus($data['cargoStatus']);
-        }
-        elseif (\array_key_exists('cargoStatus', $data) && $data['cargoStatus'] === null) {
+        } elseif (\array_key_exists('cargoStatus', $data) && null === $data['cargoStatus']) {
             $object->setCargoStatus(null);
         }
-        if (\array_key_exists('costStorage', $data) && $data['costStorage'] !== null) {
+        if (\array_key_exists('costStorage', $data) && null !== $data['costStorage']) {
             $object->setCostStorage($data['costStorage']);
-        }
-        elseif (\array_key_exists('costStorage', $data) && $data['costStorage'] === null) {
+        } elseif (\array_key_exists('costStorage', $data) && null === $data['costStorage']) {
             $object->setCostStorage(null);
         }
-        if (\array_key_exists('endDataNumber', $data) && $data['endDataNumber'] !== null) {
+        if (\array_key_exists('endDataNumber', $data) && null !== $data['endDataNumber']) {
             $object->setEndDataNumber($data['endDataNumber']);
-        }
-        elseif (\array_key_exists('endDataNumber', $data) && $data['endDataNumber'] === null) {
+        } elseif (\array_key_exists('endDataNumber', $data) && null === $data['endDataNumber']) {
             $object->setEndDataNumber(null);
         }
-        if (\array_key_exists('endDate', $data) && $data['endDate'] !== null) {
+        if (\array_key_exists('endDate', $data) && null !== $data['endDate']) {
             $object->setEndDate($data['endDate']);
-        }
-        elseif (\array_key_exists('endDate', $data) && $data['endDate'] === null) {
+        } elseif (\array_key_exists('endDate', $data) && null === $data['endDate']) {
             $object->setEndDate(null);
         }
-        if (\array_key_exists('minStorageCost', $data) && $data['minStorageCost'] !== null) {
+        if (\array_key_exists('minStorageCost', $data) && null !== $data['minStorageCost']) {
             $object->setMinStorageCost($data['minStorageCost']);
-        }
-        elseif (\array_key_exists('minStorageCost', $data) && $data['minStorageCost'] === null) {
+        } elseif (\array_key_exists('minStorageCost', $data) && null === $data['minStorageCost']) {
             $object->setMinStorageCost(null);
         }
-        if (\array_key_exists('rate', $data) && $data['rate'] !== null) {
+        if (\array_key_exists('rate', $data) && null !== $data['rate']) {
             $object->setRate($data['rate']);
-        }
-        elseif (\array_key_exists('rate', $data) && $data['rate'] === null) {
+        } elseif (\array_key_exists('rate', $data) && null === $data['rate']) {
             $object->setRate(null);
         }
-        if (\array_key_exists('startDataNumber', $data) && $data['startDataNumber'] !== null) {
+        if (\array_key_exists('startDataNumber', $data) && null !== $data['startDataNumber']) {
             $object->setStartDataNumber($data['startDataNumber']);
-        }
-        elseif (\array_key_exists('startDataNumber', $data) && $data['startDataNumber'] === null) {
+        } elseif (\array_key_exists('startDataNumber', $data) && null === $data['startDataNumber']) {
             $object->setStartDataNumber(null);
         }
-        if (\array_key_exists('startDate', $data) && $data['startDate'] !== null) {
+        if (\array_key_exists('startDate', $data) && null !== $data['startDate']) {
             $object->setStartDate($data['startDate']);
-        }
-        elseif (\array_key_exists('startDate', $data) && $data['startDate'] === null) {
+        } elseif (\array_key_exists('startDate', $data) && null === $data['startDate']) {
             $object->setStartDate(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCargoStatus()) {
             $data['cargoStatus'] = $object->getCargoStatus();
         }
@@ -113,6 +111,7 @@ class ForcedStoragePeriodNormalizer implements DenormalizerInterface, Normalizer
         if (null !== $object->getStartDate()) {
             $data['startDate'] = $object->getStartDate();
         }
+
         return $data;
     }
 }

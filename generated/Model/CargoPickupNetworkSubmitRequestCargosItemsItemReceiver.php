@@ -5,165 +5,152 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
 {
     /**
-     * Наименование филиала получателя
+     * Наименование филиала получателя.
      *
      * @var string
      */
     protected $city;
+
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц
+     * Документ, удостоверяющий личность. Обязательно для физических лиц.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
      */
     protected $identityCard;
+
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * Контактное лицо
+     * Контактное лицо.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $person;
+
     /**
-     * Телефон
+     * Телефон.
      *
      * @var string
      */
     protected $phone;
+
     /**
-     * Наименование получателя
+     * Наименование получателя.
      *
      * @var string
      */
     protected $title;
+
     /**
-     * Наименование филиала получателя
-     *
-     * @return string
+     * Наименование филиала получателя.
      */
-    public function getCity() : string
+    public function getCity(): string
     {
         return $this->city;
     }
+
     /**
-     * Наименование филиала получателя
-     *
-     * @param string $city
-     *
-     * @return self
+     * Наименование филиала получателя.
      */
-    public function setCity(string $city) : self
+    public function setCity(string $city): self
     {
         $this->city = $city;
+
         return $this;
     }
+
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard|null
+     * Документ, удостоверяющий личность. Обязательно для физических лиц.
      */
-    public function getIdentityCard() : ?CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
+    public function getIdentityCard(): ?CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     {
         return $this->identityCard;
     }
+
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard|null $identityCard
-     *
-     * @return self
+     * Документ, удостоверяющий личность. Обязательно для физических лиц.
      */
-    public function setIdentityCard(?CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard $identityCard) : self
+    public function setIdentityCard(?CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard $identityCard): self
     {
         $this->identityCard = $identityCard;
+
         return $this;
     }
+
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @return string|null
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * Контактное лицо
-     *
-     * @return string|null
+     * Контактное лицо.
      */
-    public function getPerson() : ?string
+    public function getPerson(): ?string
     {
         return $this->person;
     }
+
     /**
-     * Контактное лицо
-     *
-     * @param string|null $person
-     *
-     * @return self
+     * Контактное лицо.
      */
-    public function setPerson(?string $person) : self
+    public function setPerson(?string $person): self
     {
         $this->person = $person;
+
         return $this;
     }
+
     /**
-     * Телефон
-     *
-     * @return string
+     * Телефон.
      */
-    public function getPhone() : string
+    public function getPhone(): string
     {
         return $this->phone;
     }
+
     /**
-     * Телефон
-     *
-     * @param string $phone
-     *
-     * @return self
+     * Телефон.
      */
-    public function setPhone(string $phone) : self
+    public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование получателя
-     *
-     * @return string
+     * Наименование получателя.
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
+
     /**
-     * Наименование получателя
-     *
-     * @param string $title
-     *
-     * @return self
+     * Наименование получателя.
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 }

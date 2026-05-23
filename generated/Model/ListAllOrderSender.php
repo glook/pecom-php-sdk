@@ -5,165 +5,152 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderSender
 {
     /**
-     * Идентификатор филиала
+     * Идентификатор филиала.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchId;
+
     /**
      * Контрагент
      *
-     * @var ListAllOrderSenderCounterpart|null
+     * @var null|ListAllOrderSenderCounterpart
      */
     protected $counterpart;
+
     /**
-     * Адрес забора груза, если заказана услуга забора
+     * Адрес забора груза, если заказана услуга забора.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $intakeAddress;
+
     /**
-     * Заказана услуга забора груза
+     * Заказана услуга забора груза.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isIntake;
+
     /**
-     * Адрес склада в городе отправления
+     * Адрес склада в городе отправления.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseAddress;
+
     /**
-     * Идентификатор склада отправления
+     * Идентификатор склада отправления.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseId;
+
     /**
-     * Идентификатор филиала
-     *
-     * @return string|null
+     * Идентификатор филиала.
      */
-    public function getBranchId() : ?string
+    public function getBranchId(): ?string
     {
         return $this->branchId;
     }
+
     /**
-     * Идентификатор филиала
-     *
-     * @param string|null $branchId
-     *
-     * @return self
+     * Идентификатор филиала.
      */
-    public function setBranchId(?string $branchId) : self
+    public function setBranchId(?string $branchId): self
     {
         $this->branchId = $branchId;
+
         return $this;
     }
+
     /**
      * Контрагент
-     *
-     * @return ListAllOrderSenderCounterpart|null
      */
-    public function getCounterpart() : ?ListAllOrderSenderCounterpart
+    public function getCounterpart(): ?ListAllOrderSenderCounterpart
     {
         return $this->counterpart;
     }
+
     /**
      * Контрагент
-     *
-     * @param ListAllOrderSenderCounterpart|null $counterpart
-     *
-     * @return self
      */
-    public function setCounterpart(?ListAllOrderSenderCounterpart $counterpart) : self
+    public function setCounterpart(?ListAllOrderSenderCounterpart $counterpart): self
     {
         $this->counterpart = $counterpart;
+
         return $this;
     }
+
     /**
-     * Адрес забора груза, если заказана услуга забора
-     *
-     * @return string|null
+     * Адрес забора груза, если заказана услуга забора.
      */
-    public function getIntakeAddress() : ?string
+    public function getIntakeAddress(): ?string
     {
         return $this->intakeAddress;
     }
+
     /**
-     * Адрес забора груза, если заказана услуга забора
-     *
-     * @param string|null $intakeAddress
-     *
-     * @return self
+     * Адрес забора груза, если заказана услуга забора.
      */
-    public function setIntakeAddress(?string $intakeAddress) : self
+    public function setIntakeAddress(?string $intakeAddress): self
     {
         $this->intakeAddress = $intakeAddress;
+
         return $this;
     }
+
     /**
-     * Заказана услуга забора груза
-     *
-     * @return bool|null
+     * Заказана услуга забора груза.
      */
-    public function getIsIntake() : ?bool
+    public function getIsIntake(): ?bool
     {
         return $this->isIntake;
     }
+
     /**
-     * Заказана услуга забора груза
-     *
-     * @param bool|null $isIntake
-     *
-     * @return self
+     * Заказана услуга забора груза.
      */
-    public function setIsIntake(?bool $isIntake) : self
+    public function setIsIntake(?bool $isIntake): self
     {
         $this->isIntake = $isIntake;
+
         return $this;
     }
+
     /**
-     * Адрес склада в городе отправления
-     *
-     * @return string|null
+     * Адрес склада в городе отправления.
      */
-    public function getWarehouseAddress() : ?string
+    public function getWarehouseAddress(): ?string
     {
         return $this->warehouseAddress;
     }
+
     /**
-     * Адрес склада в городе отправления
-     *
-     * @param string|null $warehouseAddress
-     *
-     * @return self
+     * Адрес склада в городе отправления.
      */
-    public function setWarehouseAddress(?string $warehouseAddress) : self
+    public function setWarehouseAddress(?string $warehouseAddress): self
     {
         $this->warehouseAddress = $warehouseAddress;
+
         return $this;
     }
+
     /**
-     * Идентификатор склада отправления
-     *
-     * @return string|null
+     * Идентификатор склада отправления.
      */
-    public function getWarehouseId() : ?string
+    public function getWarehouseId(): ?string
     {
         return $this->warehouseId;
     }
+
     /**
-     * Идентификатор склада отправления
-     *
-     * @param string|null $warehouseId
-     *
-     * @return self
+     * Идентификатор склада отправления.
      */
-    public function setWarehouseId(?string $warehouseId) : self
+    public function setWarehouseId(?string $warehouseId): self
     {
         $this->warehouseId = $warehouseId;
+
         return $this;
     }
 }

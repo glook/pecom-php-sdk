@@ -7,136 +7,125 @@ class ListAllOrderReceiver
     /**
      * Контрагент
      *
-     * @var ListAllOrderReceiverCounterpart|null
+     * @var null|ListAllOrderReceiverCounterpart
      */
     protected $counterpart;
+
     /**
-     * Адрес доставки груза, если заказана услуга доставки до адреса
+     * Адрес доставки груза, если заказана услуга доставки до адреса.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $delivieryAddress;
+
     /**
-     * Заказана услуга доставки до адреса получателя
+     * Заказана услуга доставки до адреса получателя.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isDelivery;
+
     /**
-     * Адрес склада в городе получения
+     * Адрес склада в городе получения.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseAddress;
+
     /**
-     * Идентификатор склада получения
+     * Идентификатор склада получения.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseId;
+
     /**
      * Контрагент
-     *
-     * @return ListAllOrderReceiverCounterpart|null
      */
-    public function getCounterpart() : ?ListAllOrderReceiverCounterpart
+    public function getCounterpart(): ?ListAllOrderReceiverCounterpart
     {
         return $this->counterpart;
     }
+
     /**
      * Контрагент
-     *
-     * @param ListAllOrderReceiverCounterpart|null $counterpart
-     *
-     * @return self
      */
-    public function setCounterpart(?ListAllOrderReceiverCounterpart $counterpart) : self
+    public function setCounterpart(?ListAllOrderReceiverCounterpart $counterpart): self
     {
         $this->counterpart = $counterpart;
+
         return $this;
     }
+
     /**
-     * Адрес доставки груза, если заказана услуга доставки до адреса
-     *
-     * @return string|null
+     * Адрес доставки груза, если заказана услуга доставки до адреса.
      */
-    public function getDelivieryAddress() : ?string
+    public function getDelivieryAddress(): ?string
     {
         return $this->delivieryAddress;
     }
+
     /**
-     * Адрес доставки груза, если заказана услуга доставки до адреса
-     *
-     * @param string|null $delivieryAddress
-     *
-     * @return self
+     * Адрес доставки груза, если заказана услуга доставки до адреса.
      */
-    public function setDelivieryAddress(?string $delivieryAddress) : self
+    public function setDelivieryAddress(?string $delivieryAddress): self
     {
         $this->delivieryAddress = $delivieryAddress;
+
         return $this;
     }
+
     /**
-     * Заказана услуга доставки до адреса получателя
-     *
-     * @return bool|null
+     * Заказана услуга доставки до адреса получателя.
      */
-    public function getIsDelivery() : ?bool
+    public function getIsDelivery(): ?bool
     {
         return $this->isDelivery;
     }
+
     /**
-     * Заказана услуга доставки до адреса получателя
-     *
-     * @param bool|null $isDelivery
-     *
-     * @return self
+     * Заказана услуга доставки до адреса получателя.
      */
-    public function setIsDelivery(?bool $isDelivery) : self
+    public function setIsDelivery(?bool $isDelivery): self
     {
         $this->isDelivery = $isDelivery;
+
         return $this;
     }
+
     /**
-     * Адрес склада в городе получения
-     *
-     * @return string|null
+     * Адрес склада в городе получения.
      */
-    public function getWarehouseAddress() : ?string
+    public function getWarehouseAddress(): ?string
     {
         return $this->warehouseAddress;
     }
+
     /**
-     * Адрес склада в городе получения
-     *
-     * @param string|null $warehouseAddress
-     *
-     * @return self
+     * Адрес склада в городе получения.
      */
-    public function setWarehouseAddress(?string $warehouseAddress) : self
+    public function setWarehouseAddress(?string $warehouseAddress): self
     {
         $this->warehouseAddress = $warehouseAddress;
+
         return $this;
     }
+
     /**
-     * Идентификатор склада получения
-     *
-     * @return string|null
+     * Идентификатор склада получения.
      */
-    public function getWarehouseId() : ?string
+    public function getWarehouseId(): ?string
     {
         return $this->warehouseId;
     }
+
     /**
-     * Идентификатор склада получения
-     *
-     * @param string|null $warehouseId
-     *
-     * @return self
+     * Идентификатор склада получения.
      */
-    public function setWarehouseId(?string $warehouseId) : self
+    public function setWarehouseId(?string $warehouseId): self
     {
         $this->warehouseId = $warehouseId;
+
         return $this;
     }
 }

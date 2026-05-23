@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\BranchesFindzonebyaddressPostResponse200;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class BranchesFindzonebyaddressPostResponse200Normalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\BranchesFindzonebyaddressPostResponse200';
+        return 'glook\PecomSdk\Generated\Model\BranchesFindzonebyaddressPostResponse200' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\BranchesFindzonebyaddressPostResponse200';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\BranchesFindzonebyaddressPostResponse200' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class BranchesFindzonebyaddressPostResponse200Normalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\BranchesFindzonebyaddressPostResponse200();
+        $object = new BranchesFindzonebyaddressPostResponse200();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -49,13 +53,13 @@ class BranchesFindzonebyaddressPostResponse200Normalizer implements Denormalizer
             $object->setBranchUID($data['branchUID']);
         }
         if (\array_key_exists('GeoData', $data)) {
-            $object->setGeoData($this->denormalizer->denormalize($data['GeoData'], 'glook\\PecomSdk\\Generated\\Model\\BranchesGeoData', 'json', $context));
+            $object->setGeoData($this->denormalizer->denormalize($data['GeoData'], 'glook\PecomSdk\Generated\Model\BranchesGeoData', 'json', $context));
         }
         if (\array_key_exists('mainWarehouseId', $data)) {
             $object->setMainWarehouseId($data['mainWarehouseId']);
         }
         if (\array_key_exists('warehousePoint', $data)) {
-            $object->setWarehousePoint($this->denormalizer->denormalize($data['warehousePoint'], 'glook\\PecomSdk\\Generated\\Model\\BranchesCoordinates', 'json', $context));
+            $object->setWarehousePoint($this->denormalizer->denormalize($data['warehousePoint'], 'glook\PecomSdk\Generated\Model\BranchesCoordinates', 'json', $context));
         }
         if (\array_key_exists('zoneId', $data)) {
             $object->setZoneId($data['zoneId']);
@@ -63,11 +67,13 @@ class BranchesFindzonebyaddressPostResponse200Normalizer implements Denormalizer
         if (\array_key_exists('zoneName', $data)) {
             $object->setZoneName($data['zoneName']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['bitrixId'] = $object->getBitrixId();
         $data['branchCode'] = $object->getBranchCode();
         $data['branchTitle'] = $object->getBranchTitle();
@@ -77,6 +83,7 @@ class BranchesFindzonebyaddressPostResponse200Normalizer implements Denormalizer
         $data['warehousePoint'] = $this->normalizer->normalize($object->getWarehousePoint(), 'json', $context);
         $data['zoneId'] = $object->getZoneId();
         $data['zoneName'] = $object->getZoneName();
+
         return $data;
     }
 }

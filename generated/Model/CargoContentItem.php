@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoContentItem
 {
     /**
-     * Код наименования груза
+     * Код наименования груза.
      *
      * @var string
      */
     protected $code;
+
     /**
-     * признак хрупкости груза. Если стоит `true`, то для перевозки груза данной категории необходимо заказывать Защитную транспортировочную упаковку
+     * признак хрупкости груза. Если стоит `true`, то для перевозки груза данной категории необходимо заказывать Защитную транспортировочную упаковку.
      *
      * @var bool
      */
     protected $isFragile;
+
     /**
-     * Наименование груза
+     * Наименование груза.
      *
      * @var string
      */
     protected $name;
+
     /**
-     * Код наименования груза
-     *
-     * @return string
+     * Код наименования груза.
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->code;
     }
+
     /**
-     * Код наименования груза
-     *
-     * @param string $code
-     *
-     * @return self
+     * Код наименования груза.
      */
-    public function setCode(string $code) : self
+    public function setCode(string $code): self
     {
         $this->code = $code;
+
         return $this;
     }
+
     /**
-     * признак хрупкости груза. Если стоит `true`, то для перевозки груза данной категории необходимо заказывать Защитную транспортировочную упаковку
-     *
-     * @return bool
+     * признак хрупкости груза. Если стоит `true`, то для перевозки груза данной категории необходимо заказывать Защитную транспортировочную упаковку.
      */
-    public function getIsFragile() : bool
+    public function getIsFragile(): bool
     {
         return $this->isFragile;
     }
+
     /**
-     * признак хрупкости груза. Если стоит `true`, то для перевозки груза данной категории необходимо заказывать Защитную транспортировочную упаковку
-     *
-     * @param bool $isFragile
-     *
-     * @return self
+     * признак хрупкости груза. Если стоит `true`, то для перевозки груза данной категории необходимо заказывать Защитную транспортировочную упаковку.
      */
-    public function setIsFragile(bool $isFragile) : self
+    public function setIsFragile(bool $isFragile): self
     {
         $this->isFragile = $isFragile;
+
         return $this;
     }
+
     /**
-     * Наименование груза
-     *
-     * @return string
+     * Наименование груза.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Наименование груза
-     *
-     * @param string $name
-     *
-     * @return self
+     * Наименование груза.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 }

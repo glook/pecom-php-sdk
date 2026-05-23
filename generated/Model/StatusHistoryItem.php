@@ -5,57 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class StatusHistoryItem
 {
     /**
-     * Код груза
+     * Код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $cargoCode;
+
     /**
-     * Все время в часовом поясе UTC + 3 часа
+     * Все время в часовом поясе UTC + 3 часа.
      *
-     * @var StatusHistoryStatus[]|null
+     * @var null|StatusHistoryStatus[]
      */
     protected $statuses;
+
     /**
-     * Код груза
-     *
-     * @return string|null
+     * Код груза.
      */
-    public function getCargoCode() : ?string
+    public function getCargoCode(): ?string
     {
         return $this->cargoCode;
     }
+
     /**
-     * Код груза
-     *
-     * @param string|null $cargoCode
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoCode(?string $cargoCode) : self
+    public function setCargoCode(?string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
-     * Все время в часовом поясе UTC + 3 часа
+     * Все время в часовом поясе UTC + 3 часа.
      *
-     * @return StatusHistoryStatus[]|null
+     * @return null|StatusHistoryStatus[]
      */
-    public function getStatuses() : ?array
+    public function getStatuses(): ?array
     {
         return $this->statuses;
     }
+
     /**
-     * Все время в часовом поясе UTC + 3 часа
+     * Все время в часовом поясе UTC + 3 часа.
      *
-     * @param StatusHistoryStatus[]|null $statuses
-     *
-     * @return self
+     * @param null|StatusHistoryStatus[] $statuses
      */
-    public function setStatuses(?array $statuses) : self
+    public function setStatuses(?array $statuses): self
     {
         $this->statuses = $statuses;
+
         return $this;
     }
 }

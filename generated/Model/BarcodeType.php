@@ -5,30 +5,27 @@ namespace glook\PecomSdk\Generated\Model;
 class BarcodeType
 {
     /**
-     * Тип штрих-кода
+     * Тип штрих-кода.
      *
      * @var string
      */
     protected $type;
+
     /**
-     * Тип штрих-кода
-     *
-     * @return string
+     * Тип штрих-кода.
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
+
     /**
-     * Тип штрих-кода
-     *
-     * @param string $type
-     *
-     * @return self
+     * Тип штрих-кода.
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesChecknocalcservicesPostBody
 {
     /**
-     * ID филиала назначения груза, см. комментарии к методу
+     * ID филиала назначения груза, см. комментарии к методу.
      *
      * @var string
      */
     protected $branchReceiverId;
+
     /**
-     * ID филиала отправления груза, см. комментарии к методу
+     * ID филиала отправления груза, см. комментарии к методу.
      *
      * @var string
      */
     protected $branchSenderId;
+
     /**
-     * ID филиала назначения груза, см. комментарии к методу
-     *
-     * @return string
+     * ID филиала назначения груза, см. комментарии к методу.
      */
-    public function getBranchReceiverId() : string
+    public function getBranchReceiverId(): string
     {
         return $this->branchReceiverId;
     }
+
     /**
-     * ID филиала назначения груза, см. комментарии к методу
-     *
-     * @param string $branchReceiverId
-     *
-     * @return self
+     * ID филиала назначения груза, см. комментарии к методу.
      */
-    public function setBranchReceiverId(string $branchReceiverId) : self
+    public function setBranchReceiverId(string $branchReceiverId): self
     {
         $this->branchReceiverId = $branchReceiverId;
+
         return $this;
     }
+
     /**
-     * ID филиала отправления груза, см. комментарии к методу
-     *
-     * @return string
+     * ID филиала отправления груза, см. комментарии к методу.
      */
-    public function getBranchSenderId() : string
+    public function getBranchSenderId(): string
     {
         return $this->branchSenderId;
     }
+
     /**
-     * ID филиала отправления груза, см. комментарии к методу
-     *
-     * @param string $branchSenderId
-     *
-     * @return self
+     * ID филиала отправления груза, см. комментарии к методу.
      */
-    public function setBranchSenderId(string $branchSenderId) : self
+    public function setBranchSenderId(string $branchSenderId): self
     {
         $this->branchSenderId = $branchSenderId;
+
         return $this;
     }
 }

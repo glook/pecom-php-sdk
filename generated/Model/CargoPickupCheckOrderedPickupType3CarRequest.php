@@ -10,52 +10,47 @@ class CargoPickupCheckOrderedPickupType3CarRequest
      * @var \DateTime
      */
     protected $intakePlanDateTime;
+
     /**
-     * ИНН отправителя
+     * ИНН отправителя.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $senderInn;
+
     /**
      * Плановая дата выполнения. Дата забора груза, на которую проверяется наличие заказа машины.
-     *
-     * @return \DateTime
      */
-    public function getIntakePlanDateTime() : \DateTime
+    public function getIntakePlanDateTime(): \DateTime
     {
         return $this->intakePlanDateTime;
     }
+
     /**
      * Плановая дата выполнения. Дата забора груза, на которую проверяется наличие заказа машины.
-     *
-     * @param \DateTime $intakePlanDateTime
-     *
-     * @return self
      */
-    public function setIntakePlanDateTime(\DateTime $intakePlanDateTime) : self
+    public function setIntakePlanDateTime(\DateTime $intakePlanDateTime): self
     {
         $this->intakePlanDateTime = $intakePlanDateTime;
+
         return $this;
     }
+
     /**
-     * ИНН отправителя
-     *
-     * @return string|null
+     * ИНН отправителя.
      */
-    public function getSenderInn() : ?string
+    public function getSenderInn(): ?string
     {
         return $this->senderInn;
     }
+
     /**
-     * ИНН отправителя
-     *
-     * @param string|null $senderInn
-     *
-     * @return self
+     * ИНН отправителя.
      */
-    public function setSenderInn(?string $senderInn) : self
+    public function setSenderInn(?string $senderInn): self
     {
         $this->senderInn = $senderInn;
+
         return $this;
     }
 }

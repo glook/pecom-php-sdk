@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CalculatePriceResponse;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CalculatePriceResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CalculatePriceResponse';
+        return 'glook\PecomSdk\Generated\Model\CalculatePriceResponse' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CalculatePriceResponse';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CalculatePriceResponse' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,87 +36,79 @@ class CalculatePriceResponseNormalizer implements DenormalizerInterface, Normali
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CalculatePriceResponse();
+        $object = new CalculatePriceResponse();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('branchReceiver', $data) && $data['branchReceiver'] !== null) {
+        if (\array_key_exists('branchReceiver', $data) && null !== $data['branchReceiver']) {
             $object->setBranchReceiver($data['branchReceiver']);
-        }
-        elseif (\array_key_exists('branchReceiver', $data) && $data['branchReceiver'] === null) {
+        } elseif (\array_key_exists('branchReceiver', $data) && null === $data['branchReceiver']) {
             $object->setBranchReceiver(null);
         }
-        if (\array_key_exists('branchReceiverUID', $data) && $data['branchReceiverUID'] !== null) {
+        if (\array_key_exists('branchReceiverUID', $data) && null !== $data['branchReceiverUID']) {
             $object->setBranchReceiverUID($data['branchReceiverUID']);
-        }
-        elseif (\array_key_exists('branchReceiverUID', $data) && $data['branchReceiverUID'] === null) {
+        } elseif (\array_key_exists('branchReceiverUID', $data) && null === $data['branchReceiverUID']) {
             $object->setBranchReceiverUID(null);
         }
-        if (\array_key_exists('branchSender', $data) && $data['branchSender'] !== null) {
+        if (\array_key_exists('branchSender', $data) && null !== $data['branchSender']) {
             $object->setBranchSender($data['branchSender']);
-        }
-        elseif (\array_key_exists('branchSender', $data) && $data['branchSender'] === null) {
+        } elseif (\array_key_exists('branchSender', $data) && null === $data['branchSender']) {
             $object->setBranchSender(null);
         }
-        if (\array_key_exists('branchSenderUID', $data) && $data['branchSenderUID'] !== null) {
+        if (\array_key_exists('branchSenderUID', $data) && null !== $data['branchSenderUID']) {
             $object->setBranchSenderUID($data['branchSenderUID']);
-        }
-        elseif (\array_key_exists('branchSenderUID', $data) && $data['branchSenderUID'] === null) {
+        } elseif (\array_key_exists('branchSenderUID', $data) && null === $data['branchSenderUID']) {
             $object->setBranchSenderUID(null);
         }
-        if (\array_key_exists('commonTerms', $data) && $data['commonTerms'] !== null) {
-            $values = array();
+        if (\array_key_exists('commonTerms', $data) && null !== $data['commonTerms']) {
+            $values = [];
             foreach ($data['commonTerms'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CommonTerm', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CommonTerm', 'json', $context);
             }
             $object->setCommonTerms($values);
-        }
-        elseif (\array_key_exists('commonTerms', $data) && $data['commonTerms'] === null) {
+        } elseif (\array_key_exists('commonTerms', $data) && null === $data['commonTerms']) {
             $object->setCommonTerms(null);
         }
-        if (\array_key_exists('currencyCode', $data) && $data['currencyCode'] !== null) {
+        if (\array_key_exists('currencyCode', $data) && null !== $data['currencyCode']) {
             $object->setCurrencyCode($data['currencyCode']);
-        }
-        elseif (\array_key_exists('currencyCode', $data) && $data['currencyCode'] === null) {
+        } elseif (\array_key_exists('currencyCode', $data) && null === $data['currencyCode']) {
             $object->setCurrencyCode(null);
         }
-        if (\array_key_exists('errorMessage', $data) && $data['errorMessage'] !== null) {
+        if (\array_key_exists('errorMessage', $data) && null !== $data['errorMessage']) {
             $object->setErrorMessage($data['errorMessage']);
-        }
-        elseif (\array_key_exists('errorMessage', $data) && $data['errorMessage'] === null) {
+        } elseif (\array_key_exists('errorMessage', $data) && null === $data['errorMessage']) {
             $object->setErrorMessage(null);
         }
-        if (\array_key_exists('hasError', $data) && $data['hasError'] !== null) {
+        if (\array_key_exists('hasError', $data) && null !== $data['hasError']) {
             $object->setHasError($data['hasError']);
-        }
-        elseif (\array_key_exists('hasError', $data) && $data['hasError'] === null) {
+        } elseif (\array_key_exists('hasError', $data) && null === $data['hasError']) {
             $object->setHasError(null);
         }
-        if (\array_key_exists('transfers', $data) && $data['transfers'] !== null) {
-            $values_1 = array();
+        if (\array_key_exists('transfers', $data) && null !== $data['transfers']) {
+            $values_1 = [];
             foreach ($data['transfers'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\Transfer', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\PecomSdk\Generated\Model\Transfer', 'json', $context);
             }
             $object->setTransfers($values_1);
-        }
-        elseif (\array_key_exists('transfers', $data) && $data['transfers'] === null) {
+        } elseif (\array_key_exists('transfers', $data) && null === $data['transfers']) {
             $object->setTransfers(null);
         }
-        if (\array_key_exists('transportingTimes', $data) && $data['transportingTimes'] !== null) {
-            $values_2 = array();
+        if (\array_key_exists('transportingTimes', $data) && null !== $data['transportingTimes']) {
+            $values_2 = [];
             foreach ($data['transportingTimes'] as $value_2) {
                 $values_2[] = $value_2;
             }
             $object->setTransportingTimes($values_2);
-        }
-        elseif (\array_key_exists('transportingTimes', $data) && $data['transportingTimes'] === null) {
+        } elseif (\array_key_exists('transportingTimes', $data) && null === $data['transportingTimes']) {
             $object->setTransportingTimes(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getBranchReceiver()) {
             $data['branchReceiver'] = $object->getBranchReceiver();
         }
@@ -126,7 +122,7 @@ class CalculatePriceResponseNormalizer implements DenormalizerInterface, Normali
             $data['branchSenderUID'] = $object->getBranchSenderUID();
         }
         if (null !== $object->getCommonTerms()) {
-            $values = array();
+            $values = [];
             foreach ($object->getCommonTerms() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -142,19 +138,20 @@ class CalculatePriceResponseNormalizer implements DenormalizerInterface, Normali
             $data['hasError'] = $object->getHasError();
         }
         if (null !== $object->getTransfers()) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($object->getTransfers() as $value_1) {
                 $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
             $data['transfers'] = $values_1;
         }
         if (null !== $object->getTransportingTimes()) {
-            $values_2 = array();
+            $values_2 = [];
             foreach ($object->getTransportingTimes() as $value_2) {
                 $values_2[] = $value_2;
             }
             $data['transportingTimes'] = $values_2;
         }
+
         return $data;
     }
 }

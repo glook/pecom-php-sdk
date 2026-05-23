@@ -5,138 +5,127 @@ namespace glook\PecomSdk\Generated\Model;
 class DivisionTimeOfWork
 {
     /**
-     * День недели (1 - понедельник, 6 - суббота)
+     * День недели (1 - понедельник, 6 - суббота).
      *
      * @var string
      */
     protected $dayOfWeek;
+
     /**
-     * Начало обеденного перерыва
+     * Начало обеденного перерыва.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $dinnerFrom;
+
     /**
-     * Конец обеденного перерыва
+     * Конец обеденного перерыва.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $dinnerTo;
+
     /**
-     * Начало рабочего дня. Пустая строка означает время 00:00
+     * Начало рабочего дня. Пустая строка означает время 00:00.
      *
      * @var string
      */
     protected $workFrom;
+
     /**
-     * Конец рабочего дня
+     * Конец рабочего дня.
      *
      * @var string
      */
     protected $workTo;
+
     /**
-     * День недели (1 - понедельник, 6 - суббота)
-     *
-     * @return string
+     * День недели (1 - понедельник, 6 - суббота).
      */
-    public function getDayOfWeek() : string
+    public function getDayOfWeek(): string
     {
         return $this->dayOfWeek;
     }
+
     /**
-     * День недели (1 - понедельник, 6 - суббота)
-     *
-     * @param string $dayOfWeek
-     *
-     * @return self
+     * День недели (1 - понедельник, 6 - суббота).
      */
-    public function setDayOfWeek(string $dayOfWeek) : self
+    public function setDayOfWeek(string $dayOfWeek): self
     {
         $this->dayOfWeek = $dayOfWeek;
+
         return $this;
     }
+
     /**
-     * Начало обеденного перерыва
-     *
-     * @return string|null
+     * Начало обеденного перерыва.
      */
-    public function getDinnerFrom() : ?string
+    public function getDinnerFrom(): ?string
     {
         return $this->dinnerFrom;
     }
+
     /**
-     * Начало обеденного перерыва
-     *
-     * @param string|null $dinnerFrom
-     *
-     * @return self
+     * Начало обеденного перерыва.
      */
-    public function setDinnerFrom(?string $dinnerFrom) : self
+    public function setDinnerFrom(?string $dinnerFrom): self
     {
         $this->dinnerFrom = $dinnerFrom;
+
         return $this;
     }
+
     /**
-     * Конец обеденного перерыва
-     *
-     * @return string|null
+     * Конец обеденного перерыва.
      */
-    public function getDinnerTo() : ?string
+    public function getDinnerTo(): ?string
     {
         return $this->dinnerTo;
     }
+
     /**
-     * Конец обеденного перерыва
-     *
-     * @param string|null $dinnerTo
-     *
-     * @return self
+     * Конец обеденного перерыва.
      */
-    public function setDinnerTo(?string $dinnerTo) : self
+    public function setDinnerTo(?string $dinnerTo): self
     {
         $this->dinnerTo = $dinnerTo;
+
         return $this;
     }
+
     /**
-     * Начало рабочего дня. Пустая строка означает время 00:00
-     *
-     * @return string
+     * Начало рабочего дня. Пустая строка означает время 00:00.
      */
-    public function getWorkFrom() : string
+    public function getWorkFrom(): string
     {
         return $this->workFrom;
     }
+
     /**
-     * Начало рабочего дня. Пустая строка означает время 00:00
-     *
-     * @param string $workFrom
-     *
-     * @return self
+     * Начало рабочего дня. Пустая строка означает время 00:00.
      */
-    public function setWorkFrom(string $workFrom) : self
+    public function setWorkFrom(string $workFrom): self
     {
         $this->workFrom = $workFrom;
+
         return $this;
     }
+
     /**
-     * Конец рабочего дня
-     *
-     * @return string
+     * Конец рабочего дня.
      */
-    public function getWorkTo() : string
+    public function getWorkTo(): string
     {
         return $this->workTo;
     }
+
     /**
-     * Конец рабочего дня
-     *
-     * @param string $workTo
-     *
-     * @return self
+     * Конец рабочего дня.
      */
-    public function setWorkTo(string $workTo) : self
+    public function setWorkTo(string $workTo): self
     {
         $this->workTo = $workTo;
+
         return $this;
     }
 }

@@ -5,84 +5,67 @@ namespace glook\PecomSdk\Generated\Model;
 class NetshopReceiver
 {
     /**
-     * 
-     *
      * @var string
      */
     protected $inn;
+
     /**
-     * Название получателя
+     * Название получателя.
      *
      * @var string
      */
     protected $receiver;
+
     /**
-     * 
-     *
      * @var NetshopStore[]
      */
     protected $stores;
-    /**
-     * 
-     *
-     * @return string
-     */
-    public function getInn() : string
+
+    public function getInn(): string
     {
         return $this->inn;
     }
-    /**
-     * 
-     *
-     * @param string $inn
-     *
-     * @return self
-     */
-    public function setInn(string $inn) : self
+
+    public function setInn(string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * Название получателя
-     *
-     * @return string
+     * Название получателя.
      */
-    public function getReceiver() : string
+    public function getReceiver(): string
     {
         return $this->receiver;
     }
+
     /**
-     * Название получателя
-     *
-     * @param string $receiver
-     *
-     * @return self
+     * Название получателя.
      */
-    public function setReceiver(string $receiver) : self
+    public function setReceiver(string $receiver): self
     {
         $this->receiver = $receiver;
+
         return $this;
     }
+
     /**
-     * 
-     *
      * @return NetshopStore[]
      */
-    public function getStores() : array
+    public function getStores(): array
     {
         return $this->stores;
     }
+
     /**
-     * 
-     *
      * @param NetshopStore[] $stores
-     *
-     * @return self
      */
-    public function setStores(array $stores) : self
+    public function setStores(array $stores): self
     {
         $this->stores = $stores;
+
         return $this;
     }
 }

@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class Country
 {
     /**
-     * Код страны по общероссийскому классификатору
+     * Код страны по общероссийскому классификатору.
      *
      * @var string
      */
     protected $codeByClassifier;
+
     /**
-     * Наименование страны
+     * Наименование страны.
      *
      * @var string
      */
     protected $name;
+
     /**
-     * Краткое наименование страны
+     * Краткое наименование страны.
      *
      * @var string
      */
     protected $shortName;
+
     /**
-     * Код страны по общероссийскому классификатору
-     *
-     * @return string
+     * Код страны по общероссийскому классификатору.
      */
-    public function getCodeByClassifier() : string
+    public function getCodeByClassifier(): string
     {
         return $this->codeByClassifier;
     }
+
     /**
-     * Код страны по общероссийскому классификатору
-     *
-     * @param string $codeByClassifier
-     *
-     * @return self
+     * Код страны по общероссийскому классификатору.
      */
-    public function setCodeByClassifier(string $codeByClassifier) : self
+    public function setCodeByClassifier(string $codeByClassifier): self
     {
         $this->codeByClassifier = $codeByClassifier;
+
         return $this;
     }
+
     /**
-     * Наименование страны
-     *
-     * @return string
+     * Наименование страны.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Наименование страны
-     *
-     * @param string $name
-     *
-     * @return self
+     * Наименование страны.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
+
     /**
-     * Краткое наименование страны
-     *
-     * @return string
+     * Краткое наименование страны.
      */
-    public function getShortName() : string
+    public function getShortName(): string
     {
         return $this->shortName;
     }
+
     /**
-     * Краткое наименование страны
-     *
-     * @param string $shortName
-     *
-     * @return self
+     * Краткое наименование страны.
      */
-    public function setShortName(string $shortName) : self
+    public function setShortName(string $shortName): self
     {
         $this->shortName = $shortName;
+
         return $this;
     }
 }

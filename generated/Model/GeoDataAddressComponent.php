@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoDataAddressComponent
 {
     /**
-     * Тип компоненты адреса
+     * Тип компоненты адреса.
      *
      * @var string
      */
     protected $kind;
+
     /**
-     * Название компоненты адреса
+     * Название компоненты адреса.
      *
      * @var string
      */
     protected $name;
+
     /**
-     * Тип компоненты адреса
-     *
-     * @return string
+     * Тип компоненты адреса.
      */
-    public function getKind() : string
+    public function getKind(): string
     {
         return $this->kind;
     }
+
     /**
-     * Тип компоненты адреса
-     *
-     * @param string $kind
-     *
-     * @return self
+     * Тип компоненты адреса.
      */
-    public function setKind(string $kind) : self
+    public function setKind(string $kind): self
     {
         $this->kind = $kind;
+
         return $this;
     }
+
     /**
-     * Название компоненты адреса
-     *
-     * @return string
+     * Название компоненты адреса.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Название компоненты адреса
-     *
-     * @param string $name
-     *
-     * @return self
+     * Название компоненты адреса.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 }

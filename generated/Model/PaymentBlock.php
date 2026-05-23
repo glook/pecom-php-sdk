@@ -5,246 +5,211 @@ namespace glook\PecomSdk\Generated\Model;
 class PaymentBlock
 {
     /**
-     * По умолчанию 643
+     * По умолчанию 643.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $countryOfRegistrationCode;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $fs;
+
     /**
-     * 
-     *
-     * @var CargopickupIdentityCard|null
+     * @var null|CargopickupIdentityCard
      */
     protected $identityCard;
+
     /**
-     * ИНН третьего лица. Для юрлица/ИП при type = 3
+     * ИНН третьего лица. Для юрлица/ИП при type = 3.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо
+     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $legalForm;
+
     /**
-     * Наименование филиала оплаты за услугу. Обязателен при указании плательщиком третьего лица (`type=3`)
+     * Наименование филиала оплаты за услугу. Обязателен при указании плательщиком третьего лица (`type=3`).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $paymentCity;
+
     /**
-     * Телефон третьего лица. Обязательно при type = 3
+     * Телефон третьего лица. Обязательно при type = 3.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
-     * Наименование третьего лица. Обязательно при type = 3
+     * Наименование третьего лица. Обязательно при type = 3.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $title;
+
     /**
-     * Плательщик. 1 — отправитель, 2 — получатель, 3 — третье лицо
+     * Плательщик. 1 — отправитель, 2 — получатель, 3 — третье лицо.
      *
      * @var int
      */
     protected $type;
+
     /**
-     * По умолчанию 643
-     *
-     * @return string|null
+     * По умолчанию 643.
      */
-    public function getCountryOfRegistrationCode() : ?string
+    public function getCountryOfRegistrationCode(): ?string
     {
         return $this->countryOfRegistrationCode;
     }
+
     /**
-     * По умолчанию 643
-     *
-     * @param string|null $countryOfRegistrationCode
-     *
-     * @return self
+     * По умолчанию 643.
      */
-    public function setCountryOfRegistrationCode(?string $countryOfRegistrationCode) : self
+    public function setCountryOfRegistrationCode(?string $countryOfRegistrationCode): self
     {
         $this->countryOfRegistrationCode = $countryOfRegistrationCode;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getFs() : ?string
+
+    public function getFs(): ?string
     {
         return $this->fs;
     }
-    /**
-     * 
-     *
-     * @param string|null $fs
-     *
-     * @return self
-     */
-    public function setFs(?string $fs) : self
+
+    public function setFs(?string $fs): self
     {
         $this->fs = $fs;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return CargopickupIdentityCard|null
-     */
-    public function getIdentityCard() : ?CargopickupIdentityCard
+
+    public function getIdentityCard(): ?CargopickupIdentityCard
     {
         return $this->identityCard;
     }
-    /**
-     * 
-     *
-     * @param CargopickupIdentityCard|null $identityCard
-     *
-     * @return self
-     */
-    public function setIdentityCard(?CargopickupIdentityCard $identityCard) : self
+
+    public function setIdentityCard(?CargopickupIdentityCard $identityCard): self
     {
         $this->identityCard = $identityCard;
+
         return $this;
     }
+
     /**
-     * ИНН третьего лица. Для юрлица/ИП при type = 3
-     *
-     * @return string|null
+     * ИНН третьего лица. Для юрлица/ИП при type = 3.
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН третьего лица. Для юрлица/ИП при type = 3
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН третьего лица. Для юрлица/ИП при type = 3.
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо
-     *
-     * @return int|null
+     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо.
      */
-    public function getLegalForm() : ?int
+    public function getLegalForm(): ?int
     {
         return $this->legalForm;
     }
+
     /**
-     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо
-     *
-     * @param int|null $legalForm
-     *
-     * @return self
+     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо.
      */
-    public function setLegalForm(?int $legalForm) : self
+    public function setLegalForm(?int $legalForm): self
     {
         $this->legalForm = $legalForm;
+
         return $this;
     }
+
     /**
-     * Наименование филиала оплаты за услугу. Обязателен при указании плательщиком третьего лица (`type=3`)
-     *
-     * @return string|null
+     * Наименование филиала оплаты за услугу. Обязателен при указании плательщиком третьего лица (`type=3`).
      */
-    public function getPaymentCity() : ?string
+    public function getPaymentCity(): ?string
     {
         return $this->paymentCity;
     }
+
     /**
-     * Наименование филиала оплаты за услугу. Обязателен при указании плательщиком третьего лица (`type=3`)
-     *
-     * @param string|null $paymentCity
-     *
-     * @return self
+     * Наименование филиала оплаты за услугу. Обязателен при указании плательщиком третьего лица (`type=3`).
      */
-    public function setPaymentCity(?string $paymentCity) : self
+    public function setPaymentCity(?string $paymentCity): self
     {
         $this->paymentCity = $paymentCity;
+
         return $this;
     }
+
     /**
-     * Телефон третьего лица. Обязательно при type = 3
-     *
-     * @return string|null
+     * Телефон третьего лица. Обязательно при type = 3.
      */
-    public function getPhone() : ?string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
+
     /**
-     * Телефон третьего лица. Обязательно при type = 3
-     *
-     * @param string|null $phone
-     *
-     * @return self
+     * Телефон третьего лица. Обязательно при type = 3.
      */
-    public function setPhone(?string $phone) : self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование третьего лица. Обязательно при type = 3
-     *
-     * @return string|null
+     * Наименование третьего лица. Обязательно при type = 3.
      */
-    public function getTitle() : ?string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
+
     /**
-     * Наименование третьего лица. Обязательно при type = 3
-     *
-     * @param string|null $title
-     *
-     * @return self
+     * Наименование третьего лица. Обязательно при type = 3.
      */
-    public function setTitle(?string $title) : self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
+
     /**
-     * Плательщик. 1 — отправитель, 2 — получатель, 3 — третье лицо
-     *
-     * @return int
+     * Плательщик. 1 — отправитель, 2 — получатель, 3 — третье лицо.
      */
-    public function getType() : int
+    public function getType(): int
     {
         return $this->type;
     }
+
     /**
-     * Плательщик. 1 — отправитель, 2 — получатель, 3 — третье лицо
-     *
-     * @param int $type
-     *
-     * @return self
+     * Плательщик. 1 — отправитель, 2 — получатель, 3 — третье лицо.
      */
-    public function setType(int $type) : self
+    public function setType(int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

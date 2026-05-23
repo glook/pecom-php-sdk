@@ -5,57 +5,36 @@ namespace glook\PecomSdk\Generated\Model;
 class BillingNumber
 {
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $billingNo;
+
     /**
-     * 
-     *
-     * @var float|null
+     * @var null|float
      */
     protected $billingSum;
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getBillingNo() : ?string
+
+    public function getBillingNo(): ?string
     {
         return $this->billingNo;
     }
-    /**
-     * 
-     *
-     * @param string|null $billingNo
-     *
-     * @return self
-     */
-    public function setBillingNo(?string $billingNo) : self
+
+    public function setBillingNo(?string $billingNo): self
     {
         $this->billingNo = $billingNo;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return float|null
-     */
-    public function getBillingSum() : ?float
+
+    public function getBillingSum(): ?float
     {
         return $this->billingSum;
     }
-    /**
-     * 
-     *
-     * @param float|null $billingSum
-     *
-     * @return self
-     */
-    public function setBillingSum(?float $billingSum) : self
+
+    public function setBillingSum(?float $billingSum): self
     {
         $this->billingSum = $billingSum;
+
         return $this;
     }
 }

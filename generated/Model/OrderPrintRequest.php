@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class OrderPrintRequest
 {
     /**
-     * Код груза
+     * Код груза.
      *
      * @var string
      */
     protected $cargoIndex;
+
     /**
-     * Тип файла
+     * Тип файла.
      *
      * @var string
      */
     protected $type;
+
     /**
-     * Код груза
-     *
-     * @return string
+     * Код груза.
      */
-    public function getCargoIndex() : string
+    public function getCargoIndex(): string
     {
         return $this->cargoIndex;
     }
+
     /**
-     * Код груза
-     *
-     * @param string $cargoIndex
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoIndex(string $cargoIndex) : self
+    public function setCargoIndex(string $cargoIndex): self
     {
         $this->cargoIndex = $cargoIndex;
+
         return $this;
     }
+
     /**
-     * Тип файла
-     *
-     * @return string
+     * Тип файла.
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
+
     /**
-     * Тип файла
-     *
-     * @param string $type
-     *
-     * @return self
+     * Тип файла.
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

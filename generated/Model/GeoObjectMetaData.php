@@ -5,138 +5,127 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectMetaData
 {
     /**
-     * Адресные данные
+     * Адресные данные.
      *
      * @var GeoDataAddress
      */
     protected $address;
+
     /**
-     * Детализированные адресные данные
+     * Детализированные адресные данные.
      *
      * @var GeoObjectMetaDataAddressDetails
      */
     protected $addressDetails;
+
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе
+     * Название компоненты адреса, до которой определен адрес в ответе.
      *
      * @var string
      */
     protected $kind;
+
     /**
-     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно
+     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно.
      *
      * @var string
      */
     protected $precision;
+
     /**
-     * Полный адрес, предлагаемый как вариант искомого по запросу
+     * Полный адрес, предлагаемый как вариант искомого по запросу.
      *
      * @var string
      */
     protected $text;
+
     /**
-     * Адресные данные
-     *
-     * @return GeoDataAddress
+     * Адресные данные.
      */
-    public function getAddress() : GeoDataAddress
+    public function getAddress(): GeoDataAddress
     {
         return $this->address;
     }
+
     /**
-     * Адресные данные
-     *
-     * @param GeoDataAddress $address
-     *
-     * @return self
+     * Адресные данные.
      */
-    public function setAddress(GeoDataAddress $address) : self
+    public function setAddress(GeoDataAddress $address): self
     {
         $this->address = $address;
+
         return $this;
     }
+
     /**
-     * Детализированные адресные данные
-     *
-     * @return GeoObjectMetaDataAddressDetails
+     * Детализированные адресные данные.
      */
-    public function getAddressDetails() : GeoObjectMetaDataAddressDetails
+    public function getAddressDetails(): GeoObjectMetaDataAddressDetails
     {
         return $this->addressDetails;
     }
+
     /**
-     * Детализированные адресные данные
-     *
-     * @param GeoObjectMetaDataAddressDetails $addressDetails
-     *
-     * @return self
+     * Детализированные адресные данные.
      */
-    public function setAddressDetails(GeoObjectMetaDataAddressDetails $addressDetails) : self
+    public function setAddressDetails(GeoObjectMetaDataAddressDetails $addressDetails): self
     {
         $this->addressDetails = $addressDetails;
+
         return $this;
     }
+
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе
-     *
-     * @return string
+     * Название компоненты адреса, до которой определен адрес в ответе.
      */
-    public function getKind() : string
+    public function getKind(): string
     {
         return $this->kind;
     }
+
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе
-     *
-     * @param string $kind
-     *
-     * @return self
+     * Название компоненты адреса, до которой определен адрес в ответе.
      */
-    public function setKind(string $kind) : self
+    public function setKind(string $kind): self
     {
         $this->kind = $kind;
+
         return $this;
     }
+
     /**
-     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно
-     *
-     * @return string
+     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно.
      */
-    public function getPrecision() : string
+    public function getPrecision(): string
     {
         return $this->precision;
     }
+
     /**
-     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно
-     *
-     * @param string $precision
-     *
-     * @return self
+     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно.
      */
-    public function setPrecision(string $precision) : self
+    public function setPrecision(string $precision): self
     {
         $this->precision = $precision;
+
         return $this;
     }
+
     /**
-     * Полный адрес, предлагаемый как вариант искомого по запросу
-     *
-     * @return string
+     * Полный адрес, предлагаемый как вариант искомого по запросу.
      */
-    public function getText() : string
+    public function getText(): string
     {
         return $this->text;
     }
+
     /**
-     * Полный адрес, предлагаемый как вариант искомого по запросу
-     *
-     * @param string $text
-     *
-     * @return self
+     * Полный адрес, предлагаемый как вариант искомого по запросу.
      */
-    public function setText(string $text) : self
+    public function setText(string $text): self
     {
         $this->text = $text;
+
         return $this;
     }
 }

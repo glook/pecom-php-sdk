@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class Individual
 {
     /**
-     * Имя или первая буква имени (инициал)
+     * Имя или первая буква имени (инициал).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $firstName;
+
     /**
-     * Фамилия
+     * Фамилия.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $lastName;
+
     /**
-     * Отчество или первая буква отчества (инициал), если имеется
+     * Отчество или первая буква отчества (инициал), если имеется.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $patronymic;
+
     /**
-     * Имя или первая буква имени (инициал)
-     *
-     * @return string|null
+     * Имя или первая буква имени (инициал).
      */
-    public function getFirstName() : ?string
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
+
     /**
-     * Имя или первая буква имени (инициал)
-     *
-     * @param string|null $firstName
-     *
-     * @return self
+     * Имя или первая буква имени (инициал).
      */
-    public function setFirstName(?string $firstName) : self
+    public function setFirstName(?string $firstName): self
     {
         $this->firstName = $firstName;
+
         return $this;
     }
+
     /**
-     * Фамилия
-     *
-     * @return string|null
+     * Фамилия.
      */
-    public function getLastName() : ?string
+    public function getLastName(): ?string
     {
         return $this->lastName;
     }
+
     /**
-     * Фамилия
-     *
-     * @param string|null $lastName
-     *
-     * @return self
+     * Фамилия.
      */
-    public function setLastName(?string $lastName) : self
+    public function setLastName(?string $lastName): self
     {
         $this->lastName = $lastName;
+
         return $this;
     }
+
     /**
-     * Отчество или первая буква отчества (инициал), если имеется
-     *
-     * @return string|null
+     * Отчество или первая буква отчества (инициал), если имеется.
      */
-    public function getPatronymic() : ?string
+    public function getPatronymic(): ?string
     {
         return $this->patronymic;
     }
+
     /**
-     * Отчество или первая буква отчества (инициал), если имеется
-     *
-     * @param string|null $patronymic
-     *
-     * @return self
+     * Отчество или первая буква отчества (инициал), если имеется.
      */
-    public function setPatronymic(?string $patronymic) : self
+    public function setPatronymic(?string $patronymic): self
     {
         $this->patronymic = $patronymic;
+
         return $this;
     }
 }

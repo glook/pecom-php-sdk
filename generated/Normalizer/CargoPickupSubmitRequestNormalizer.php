@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupSubmitRequest;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupSubmitRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupSubmitRequest';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupSubmitRequest' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupSubmitRequest';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupSubmitRequest' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,64 +36,61 @@ class CargoPickupSubmitRequestNormalizer implements DenormalizerInterface, Norma
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupSubmitRequest();
+        $object = new CargoPickupSubmitRequest();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('billing', $data) && $data['billing'] !== null) {
-            $object->setBilling($this->denormalizer->denormalize($data['billing'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupBilling', 'json', $context));
-        }
-        elseif (\array_key_exists('billing', $data) && $data['billing'] === null) {
+        if (\array_key_exists('billing', $data) && null !== $data['billing']) {
+            $object->setBilling($this->denormalizer->denormalize($data['billing'], 'glook\PecomSdk\Generated\Model\CargoPickupBilling', 'json', $context));
+        } elseif (\array_key_exists('billing', $data) && null === $data['billing']) {
             $object->setBilling(null);
         }
         if (\array_key_exists('common', $data)) {
-            $object->setCommon($this->denormalizer->denormalize($data['common'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupCommon', 'json', $context));
+            $object->setCommon($this->denormalizer->denormalize($data['common'], 'glook\PecomSdk\Generated\Model\CargoPickupCommon', 'json', $context));
         }
-        if (\array_key_exists('files', $data) && $data['files'] !== null) {
-            $values = array();
+        if (\array_key_exists('files', $data) && null !== $data['files']) {
+            $values = [];
             foreach ($data['files'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CargoPickupFile', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CargoPickupFile', 'json', $context);
             }
             $object->setFiles($values);
-        }
-        elseif (\array_key_exists('files', $data) && $data['files'] === null) {
+        } elseif (\array_key_exists('files', $data) && null === $data['files']) {
             $object->setFiles(null);
         }
-        if (\array_key_exists('payments', $data) && $data['payments'] !== null) {
-            $object->setPayments($this->denormalizer->denormalize($data['payments'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupPayments', 'json', $context));
-        }
-        elseif (\array_key_exists('payments', $data) && $data['payments'] === null) {
+        if (\array_key_exists('payments', $data) && null !== $data['payments']) {
+            $object->setPayments($this->denormalizer->denormalize($data['payments'], 'glook\PecomSdk\Generated\Model\CargoPickupPayments', 'json', $context));
+        } elseif (\array_key_exists('payments', $data) && null === $data['payments']) {
             $object->setPayments(null);
         }
-        if (\array_key_exists('receiver', $data) && $data['receiver'] !== null) {
-            $object->setReceiver($this->denormalizer->denormalize($data['receiver'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupReceiver', 'json', $context));
-        }
-        elseif (\array_key_exists('receiver', $data) && $data['receiver'] === null) {
+        if (\array_key_exists('receiver', $data) && null !== $data['receiver']) {
+            $object->setReceiver($this->denormalizer->denormalize($data['receiver'], 'glook\PecomSdk\Generated\Model\CargoPickupReceiver', 'json', $context));
+        } elseif (\array_key_exists('receiver', $data) && null === $data['receiver']) {
             $object->setReceiver(null);
         }
-        if (\array_key_exists('refusalWarehouse', $data) && $data['refusalWarehouse'] !== null) {
-            $object->setRefusalWarehouse($this->denormalizer->denormalize($data['refusalWarehouse'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupRefusalWarehouse', 'json', $context));
-        }
-        elseif (\array_key_exists('refusalWarehouse', $data) && $data['refusalWarehouse'] === null) {
+        if (\array_key_exists('refusalWarehouse', $data) && null !== $data['refusalWarehouse']) {
+            $object->setRefusalWarehouse($this->denormalizer->denormalize($data['refusalWarehouse'], 'glook\PecomSdk\Generated\Model\CargoPickupRefusalWarehouse', 'json', $context));
+        } elseif (\array_key_exists('refusalWarehouse', $data) && null === $data['refusalWarehouse']) {
             $object->setRefusalWarehouse(null);
         }
         if (\array_key_exists('sender', $data)) {
-            $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupSender', 'json', $context));
+            $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\PecomSdk\Generated\Model\CargoPickupSender', 'json', $context));
         }
         if (\array_key_exists('services', $data)) {
-            $object->setServices($this->denormalizer->denormalize($data['services'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupServices', 'json', $context));
+            $object->setServices($this->denormalizer->denormalize($data['services'], 'glook\PecomSdk\Generated\Model\CargoPickupServices', 'json', $context));
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getBilling()) {
             $data['billing'] = $this->normalizer->normalize($object->getBilling(), 'json', $context);
         }
         $data['common'] = $this->normalizer->normalize($object->getCommon(), 'json', $context);
         if (null !== $object->getFiles()) {
-            $values = array();
+            $values = [];
             foreach ($object->getFiles() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -106,6 +107,7 @@ class CargoPickupSubmitRequestNormalizer implements DenormalizerInterface, Norma
         }
         $data['sender'] = $this->normalizer->normalize($object->getSender(), 'json', $context);
         $data['services'] = $this->normalizer->normalize($object->getServices(), 'json', $context);
+
         return $data;
     }
 }

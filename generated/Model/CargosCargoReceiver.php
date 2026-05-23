@@ -5,246 +5,227 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosCargoReceiver
 {
     /**
-     * информация об актуальном получателе, не требующая специаальных прав доступа
+     * информация об актуальном получателе, не требующая специаальных прав доступа.
      *
-     * @var AbbreviatedReceiver|null
+     * @var null|AbbreviatedReceiver
      */
     protected $abbreviated;
+
     /**
-     * Филиал получателя
+     * Филиал получателя.
      *
-     * @var BranchInfo|null
+     * @var null|BranchInfo
      */
     protected $branch;
+
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
      *
-     * @var int|null
+     * @var null|int
      */
     protected $counterpartPaymentType;
+
     /**
-     * Данные по получателю и способу получения груза в ответе метода достоверны (в редких случаях информация в API может быть не достоверной) (`true` — данные достоверны, `false` — под данным получателя необходима консультация сотрудника ПЭК)
+     * Данные по получателю и способу получения груза в ответе метода достоверны (в редких случаях информация в API может быть не достоверной) (`true` — данные достоверны, `false` — под данным получателя необходима консультация сотрудника ПЭК).
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isCorrect;
+
     /**
-     * Ответственное лицо
+     * Ответственное лицо.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $person;
+
     /**
-     * Телефоны
+     * Телефоны.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
-     * Наименование
+     * Наименование.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $receiver;
+
     /**
-     * Груз можно получить предъявив документ удостоверяющий личность и доверенность (при получении по доверенности) (`true` — если получение по документу возможно, `false` — в противном случае)
+     * Груз можно получить предъявив документ удостоверяющий личность и доверенность (при получении по доверенности) (`true` — если получение по документу возможно, `false` — в противном случае).
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $receivingByDocument;
+
     /**
-     * Груз можно получить по СМС коду (`true` — если возможно, `false` — если невозможно)
+     * Груз можно получить по СМС коду (`true` — если возможно, `false` — если невозможно).
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $receivingBySMSCode;
+
     /**
-     * информация об актуальном получателе, не требующая специаальных прав доступа
-     *
-     * @return AbbreviatedReceiver|null
+     * информация об актуальном получателе, не требующая специаальных прав доступа.
      */
-    public function getAbbreviated() : ?AbbreviatedReceiver
+    public function getAbbreviated(): ?AbbreviatedReceiver
     {
         return $this->abbreviated;
     }
+
     /**
-     * информация об актуальном получателе, не требующая специаальных прав доступа
-     *
-     * @param AbbreviatedReceiver|null $abbreviated
-     *
-     * @return self
+     * информация об актуальном получателе, не требующая специаальных прав доступа.
      */
-    public function setAbbreviated(?AbbreviatedReceiver $abbreviated) : self
+    public function setAbbreviated(?AbbreviatedReceiver $abbreviated): self
     {
         $this->abbreviated = $abbreviated;
+
         return $this;
     }
+
     /**
-     * Филиал получателя
-     *
-     * @return BranchInfo|null
+     * Филиал получателя.
      */
-    public function getBranch() : ?BranchInfo
+    public function getBranch(): ?BranchInfo
     {
         return $this->branch;
     }
+
     /**
-     * Филиал получателя
-     *
-     * @param BranchInfo|null $branch
-     *
-     * @return self
+     * Филиал получателя.
      */
-    public function setBranch(?BranchInfo $branch) : self
+    public function setBranch(?BranchInfo $branch): self
     {
         $this->branch = $branch;
+
         return $this;
     }
+
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
-     *
-     * @return int|null
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
      */
-    public function getCounterpartPaymentType() : ?int
+    public function getCounterpartPaymentType(): ?int
     {
         return $this->counterpartPaymentType;
     }
+
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
-     *
-     * @param int|null $counterpartPaymentType
-     *
-     * @return self
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
      */
-    public function setCounterpartPaymentType(?int $counterpartPaymentType) : self
+    public function setCounterpartPaymentType(?int $counterpartPaymentType): self
     {
         $this->counterpartPaymentType = $counterpartPaymentType;
+
         return $this;
     }
+
     /**
-     * Данные по получателю и способу получения груза в ответе метода достоверны (в редких случаях информация в API может быть не достоверной) (`true` — данные достоверны, `false` — под данным получателя необходима консультация сотрудника ПЭК)
-     *
-     * @return bool|null
+     * Данные по получателю и способу получения груза в ответе метода достоверны (в редких случаях информация в API может быть не достоверной) (`true` — данные достоверны, `false` — под данным получателя необходима консультация сотрудника ПЭК).
      */
-    public function getIsCorrect() : ?bool
+    public function getIsCorrect(): ?bool
     {
         return $this->isCorrect;
     }
+
     /**
-     * Данные по получателю и способу получения груза в ответе метода достоверны (в редких случаях информация в API может быть не достоверной) (`true` — данные достоверны, `false` — под данным получателя необходима консультация сотрудника ПЭК)
-     *
-     * @param bool|null $isCorrect
-     *
-     * @return self
+     * Данные по получателю и способу получения груза в ответе метода достоверны (в редких случаях информация в API может быть не достоверной) (`true` — данные достоверны, `false` — под данным получателя необходима консультация сотрудника ПЭК).
      */
-    public function setIsCorrect(?bool $isCorrect) : self
+    public function setIsCorrect(?bool $isCorrect): self
     {
         $this->isCorrect = $isCorrect;
+
         return $this;
     }
+
     /**
-     * Ответственное лицо
-     *
-     * @return string|null
+     * Ответственное лицо.
      */
-    public function getPerson() : ?string
+    public function getPerson(): ?string
     {
         return $this->person;
     }
+
     /**
-     * Ответственное лицо
-     *
-     * @param string|null $person
-     *
-     * @return self
+     * Ответственное лицо.
      */
-    public function setPerson(?string $person) : self
+    public function setPerson(?string $person): self
     {
         $this->person = $person;
+
         return $this;
     }
+
     /**
-     * Телефоны
-     *
-     * @return string|null
+     * Телефоны.
      */
-    public function getPhone() : ?string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
+
     /**
-     * Телефоны
-     *
-     * @param string|null $phone
-     *
-     * @return self
+     * Телефоны.
      */
-    public function setPhone(?string $phone) : self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование
-     *
-     * @return string|null
+     * Наименование.
      */
-    public function getReceiver() : ?string
+    public function getReceiver(): ?string
     {
         return $this->receiver;
     }
+
     /**
-     * Наименование
-     *
-     * @param string|null $receiver
-     *
-     * @return self
+     * Наименование.
      */
-    public function setReceiver(?string $receiver) : self
+    public function setReceiver(?string $receiver): self
     {
         $this->receiver = $receiver;
+
         return $this;
     }
+
     /**
-     * Груз можно получить предъявив документ удостоверяющий личность и доверенность (при получении по доверенности) (`true` — если получение по документу возможно, `false` — в противном случае)
-     *
-     * @return bool|null
+     * Груз можно получить предъявив документ удостоверяющий личность и доверенность (при получении по доверенности) (`true` — если получение по документу возможно, `false` — в противном случае).
      */
-    public function getReceivingByDocument() : ?bool
+    public function getReceivingByDocument(): ?bool
     {
         return $this->receivingByDocument;
     }
+
     /**
-     * Груз можно получить предъявив документ удостоверяющий личность и доверенность (при получении по доверенности) (`true` — если получение по документу возможно, `false` — в противном случае)
-     *
-     * @param bool|null $receivingByDocument
-     *
-     * @return self
+     * Груз можно получить предъявив документ удостоверяющий личность и доверенность (при получении по доверенности) (`true` — если получение по документу возможно, `false` — в противном случае).
      */
-    public function setReceivingByDocument(?bool $receivingByDocument) : self
+    public function setReceivingByDocument(?bool $receivingByDocument): self
     {
         $this->receivingByDocument = $receivingByDocument;
+
         return $this;
     }
+
     /**
-     * Груз можно получить по СМС коду (`true` — если возможно, `false` — если невозможно)
-     *
-     * @return bool|null
+     * Груз можно получить по СМС коду (`true` — если возможно, `false` — если невозможно).
      */
-    public function getReceivingBySMSCode() : ?bool
+    public function getReceivingBySMSCode(): ?bool
     {
         return $this->receivingBySMSCode;
     }
+
     /**
-     * Груз можно получить по СМС коду (`true` — если возможно, `false` — если невозможно)
-     *
-     * @param bool|null $receivingBySMSCode
-     *
-     * @return self
+     * Груз можно получить по СМС коду (`true` — если возможно, `false` — если невозможно).
      */
-    public function setReceivingBySMSCode(?bool $receivingBySMSCode) : self
+    public function setReceivingBySMSCode(?bool $receivingBySMSCode): self
     {
         $this->receivingBySMSCode = $receivingBySMSCode;
+
         return $this;
     }
 }

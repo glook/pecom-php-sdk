@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\PaymentBlock;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class PaymentBlockNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\PaymentBlock';
+        return 'glook\PecomSdk\Generated\Model\PaymentBlock' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\PaymentBlock';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\PaymentBlock' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,66 +36,60 @@ class PaymentBlockNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\PaymentBlock();
+        $object = new PaymentBlock();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('countryOfRegistrationCode', $data) && $data['countryOfRegistrationCode'] !== null) {
+        if (\array_key_exists('countryOfRegistrationCode', $data) && null !== $data['countryOfRegistrationCode']) {
             $object->setCountryOfRegistrationCode($data['countryOfRegistrationCode']);
-        }
-        elseif (\array_key_exists('countryOfRegistrationCode', $data) && $data['countryOfRegistrationCode'] === null) {
+        } elseif (\array_key_exists('countryOfRegistrationCode', $data) && null === $data['countryOfRegistrationCode']) {
             $object->setCountryOfRegistrationCode(null);
         }
-        if (\array_key_exists('fs', $data) && $data['fs'] !== null) {
+        if (\array_key_exists('fs', $data) && null !== $data['fs']) {
             $object->setFs($data['fs']);
-        }
-        elseif (\array_key_exists('fs', $data) && $data['fs'] === null) {
+        } elseif (\array_key_exists('fs', $data) && null === $data['fs']) {
             $object->setFs(null);
         }
-        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
-            $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupIdentityCard', 'json', $context));
-        }
-        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+        if (\array_key_exists('identityCard', $data) && null !== $data['identityCard']) {
+            $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\PecomSdk\Generated\Model\CargopickupIdentityCard', 'json', $context));
+        } elseif (\array_key_exists('identityCard', $data) && null === $data['identityCard']) {
             $object->setIdentityCard(null);
         }
-        if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
+        if (\array_key_exists('inn', $data) && null !== $data['inn']) {
             $object->setInn($data['inn']);
-        }
-        elseif (\array_key_exists('inn', $data) && $data['inn'] === null) {
+        } elseif (\array_key_exists('inn', $data) && null === $data['inn']) {
             $object->setInn(null);
         }
-        if (\array_key_exists('legalForm', $data) && $data['legalForm'] !== null) {
+        if (\array_key_exists('legalForm', $data) && null !== $data['legalForm']) {
             $object->setLegalForm($data['legalForm']);
-        }
-        elseif (\array_key_exists('legalForm', $data) && $data['legalForm'] === null) {
+        } elseif (\array_key_exists('legalForm', $data) && null === $data['legalForm']) {
             $object->setLegalForm(null);
         }
-        if (\array_key_exists('paymentCity', $data) && $data['paymentCity'] !== null) {
+        if (\array_key_exists('paymentCity', $data) && null !== $data['paymentCity']) {
             $object->setPaymentCity($data['paymentCity']);
-        }
-        elseif (\array_key_exists('paymentCity', $data) && $data['paymentCity'] === null) {
+        } elseif (\array_key_exists('paymentCity', $data) && null === $data['paymentCity']) {
             $object->setPaymentCity(null);
         }
-        if (\array_key_exists('phone', $data) && $data['phone'] !== null) {
+        if (\array_key_exists('phone', $data) && null !== $data['phone']) {
             $object->setPhone($data['phone']);
-        }
-        elseif (\array_key_exists('phone', $data) && $data['phone'] === null) {
+        } elseif (\array_key_exists('phone', $data) && null === $data['phone']) {
             $object->setPhone(null);
         }
-        if (\array_key_exists('title', $data) && $data['title'] !== null) {
+        if (\array_key_exists('title', $data) && null !== $data['title']) {
             $object->setTitle($data['title']);
-        }
-        elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+        } elseif (\array_key_exists('title', $data) && null === $data['title']) {
             $object->setTitle(null);
         }
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCountryOfRegistrationCode()) {
             $data['countryOfRegistrationCode'] = $object->getCountryOfRegistrationCode();
         }
@@ -117,6 +115,7 @@ class PaymentBlockNormalizer implements DenormalizerInterface, NormalizerInterfa
             $data['title'] = $object->getTitle();
         }
         $data['type'] = $object->getType();
+
         return $data;
     }
 }

@@ -7,109 +7,100 @@ class BranchInfo
     /**
      * Адрес
      *
-     * @var string|null
+     * @var null|string
      */
     protected $address;
+
     /**
-     * Филиал
+     * Филиал.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $city;
+
     /**
-     * Email
+     * Email.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $email;
+
     /**
-     * Телефоны
+     * Телефоны.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
      * Адрес
-     *
-     * @return string|null
      */
-    public function getAddress() : ?string
+    public function getAddress(): ?string
     {
         return $this->address;
     }
+
     /**
      * Адрес
-     *
-     * @param string|null $address
-     *
-     * @return self
      */
-    public function setAddress(?string $address) : self
+    public function setAddress(?string $address): self
     {
         $this->address = $address;
+
         return $this;
     }
+
     /**
-     * Филиал
-     *
-     * @return string|null
+     * Филиал.
      */
-    public function getCity() : ?string
+    public function getCity(): ?string
     {
         return $this->city;
     }
+
     /**
-     * Филиал
-     *
-     * @param string|null $city
-     *
-     * @return self
+     * Филиал.
      */
-    public function setCity(?string $city) : self
+    public function setCity(?string $city): self
     {
         $this->city = $city;
+
         return $this;
     }
+
     /**
-     * Email
-     *
-     * @return string|null
+     * Email.
      */
-    public function getEmail() : ?string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
+
     /**
-     * Email
-     *
-     * @param string|null $email
-     *
-     * @return self
+     * Email.
      */
-    public function setEmail(?string $email) : self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
+
         return $this;
     }
+
     /**
-     * Телефоны
-     *
-     * @return string|null
+     * Телефоны.
      */
-    public function getPhone() : ?string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
+
     /**
-     * Телефоны
-     *
-     * @param string|null $phone
-     *
-     * @return self
+     * Телефоны.
      */
-    public function setPhone(?string $phone) : self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
 }

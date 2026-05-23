@@ -5,30 +5,27 @@ namespace glook\PecomSdk\Generated\Model;
 class SuggestAddressResponse
 {
     /**
-     * Ответ геокодера
+     * Ответ геокодера.
      *
      * @var SuggestAddressResponseResponse
      */
     protected $response;
+
     /**
-     * Ответ геокодера
-     *
-     * @return SuggestAddressResponseResponse
+     * Ответ геокодера.
      */
-    public function getResponse() : SuggestAddressResponseResponse
+    public function getResponse(): SuggestAddressResponseResponse
     {
         return $this->response;
     }
+
     /**
-     * Ответ геокодера
-     *
-     * @param SuggestAddressResponseResponse $response
-     *
-     * @return self
+     * Ответ геокодера.
      */
-    public function setResponse(SuggestAddressResponseResponse $response) : self
+    public function setResponse(SuggestAddressResponseResponse $response): self
     {
         $this->response = $response;
+
         return $this;
     }
 }

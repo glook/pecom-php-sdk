@@ -7,55 +7,50 @@ class CargosGeoData
     /**
      * Адрес
      *
-     * @var GeoAddress|null
+     * @var null|GeoAddress
      */
     protected $address;
+
     /**
-     * Тип адреса
+     * Тип адреса.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kind;
+
     /**
      * Адрес
-     *
-     * @return GeoAddress|null
      */
-    public function getAddress() : ?GeoAddress
+    public function getAddress(): ?GeoAddress
     {
         return $this->address;
     }
+
     /**
      * Адрес
-     *
-     * @param GeoAddress|null $address
-     *
-     * @return self
      */
-    public function setAddress(?GeoAddress $address) : self
+    public function setAddress(?GeoAddress $address): self
     {
         $this->address = $address;
+
         return $this;
     }
+
     /**
-     * Тип адреса
-     *
-     * @return string|null
+     * Тип адреса.
      */
-    public function getKind() : ?string
+    public function getKind(): ?string
     {
         return $this->kind;
     }
+
     /**
-     * Тип адреса
-     *
-     * @param string|null $kind
-     *
-     * @return self
+     * Тип адреса.
      */
-    public function setKind(?string $kind) : self
+    public function setKind(?string $kind): self
     {
         $this->kind = $kind;
+
         return $this;
     }
 }

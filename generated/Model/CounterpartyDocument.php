@@ -5,111 +5,94 @@ namespace glook\PecomSdk\Generated\Model;
 class CounterpartyDocument
 {
     /**
-     * 
-     *
-     * @var DocumentType|null
+     * @var null|DocumentType
      */
     protected $documentType;
+
     /**
-     * Дата окончания действия документа удостоверяющего личность
+     * Дата окончания действия документа удостоверяющего личность.
      *
-     * @var \DateTime|null
+     * @var null|\DateTime
      */
     protected $expiredDate;
+
     /**
-     * Номер документа удостоверяющего личность
+     * Номер документа удостоверяющего личность.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $number;
+
     /**
-     * Серия документа удостоверяющего личность
+     * Серия документа удостоверяющего личность.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $series;
-    /**
-     * 
-     *
-     * @return DocumentType|null
-     */
-    public function getDocumentType() : ?DocumentType
+
+    public function getDocumentType(): ?DocumentType
     {
         return $this->documentType;
     }
-    /**
-     * 
-     *
-     * @param DocumentType|null $documentType
-     *
-     * @return self
-     */
-    public function setDocumentType(?DocumentType $documentType) : self
+
+    public function setDocumentType(?DocumentType $documentType): self
     {
         $this->documentType = $documentType;
+
         return $this;
     }
+
     /**
-     * Дата окончания действия документа удостоверяющего личность
-     *
-     * @return \DateTime|null
+     * Дата окончания действия документа удостоверяющего личность.
      */
-    public function getExpiredDate() : ?\DateTime
+    public function getExpiredDate(): ?\DateTime
     {
         return $this->expiredDate;
     }
+
     /**
-     * Дата окончания действия документа удостоверяющего личность
-     *
-     * @param \DateTime|null $expiredDate
-     *
-     * @return self
+     * Дата окончания действия документа удостоверяющего личность.
      */
-    public function setExpiredDate(?\DateTime $expiredDate) : self
+    public function setExpiredDate(?\DateTime $expiredDate): self
     {
         $this->expiredDate = $expiredDate;
+
         return $this;
     }
+
     /**
-     * Номер документа удостоверяющего личность
-     *
-     * @return string|null
+     * Номер документа удостоверяющего личность.
      */
-    public function getNumber() : ?string
+    public function getNumber(): ?string
     {
         return $this->number;
     }
+
     /**
-     * Номер документа удостоверяющего личность
-     *
-     * @param string|null $number
-     *
-     * @return self
+     * Номер документа удостоверяющего личность.
      */
-    public function setNumber(?string $number) : self
+    public function setNumber(?string $number): self
     {
         $this->number = $number;
+
         return $this;
     }
+
     /**
-     * Серия документа удостоверяющего личность
-     *
-     * @return string|null
+     * Серия документа удостоверяющего личность.
      */
-    public function getSeries() : ?string
+    public function getSeries(): ?string
     {
         return $this->series;
     }
+
     /**
-     * Серия документа удостоверяющего личность
-     *
-     * @param string|null $series
-     *
-     * @return self
+     * Серия документа удостоверяющего личность.
      */
-    public function setSeries(?string $series) : self
+    public function setSeries(?string $series): self
     {
         $this->series = $series;
+
         return $this;
     }
 }

@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CurrentStatus;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CurrentStatusNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CurrentStatus';
+        return 'glook\PecomSdk\Generated\Model\CurrentStatus' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CurrentStatus';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CurrentStatus' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,45 +36,42 @@ class CurrentStatusNormalizer implements DenormalizerInterface, NormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CurrentStatus();
+        $object = new CurrentStatus();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('ClientStatus', $data) && $data['ClientStatus'] !== null) {
+        if (\array_key_exists('ClientStatus', $data) && null !== $data['ClientStatus']) {
             $object->setClientStatus($data['ClientStatus']);
-        }
-        elseif (\array_key_exists('ClientStatus', $data) && $data['ClientStatus'] === null) {
+        } elseif (\array_key_exists('ClientStatus', $data) && null === $data['ClientStatus']) {
             $object->setClientStatus(null);
         }
-        if (\array_key_exists('ClientStatusLevel2', $data) && $data['ClientStatusLevel2'] !== null) {
+        if (\array_key_exists('ClientStatusLevel2', $data) && null !== $data['ClientStatusLevel2']) {
             $object->setClientStatusLevel2($data['ClientStatusLevel2']);
-        }
-        elseif (\array_key_exists('ClientStatusLevel2', $data) && $data['ClientStatusLevel2'] === null) {
+        } elseif (\array_key_exists('ClientStatusLevel2', $data) && null === $data['ClientStatusLevel2']) {
             $object->setClientStatusLevel2(null);
         }
-        if (\array_key_exists('Id', $data) && $data['Id'] !== null) {
+        if (\array_key_exists('Id', $data) && null !== $data['Id']) {
             $object->setId($data['Id']);
-        }
-        elseif (\array_key_exists('Id', $data) && $data['Id'] === null) {
+        } elseif (\array_key_exists('Id', $data) && null === $data['Id']) {
             $object->setId(null);
         }
-        if (\array_key_exists('IsActive', $data) && $data['IsActive'] !== null) {
+        if (\array_key_exists('IsActive', $data) && null !== $data['IsActive']) {
             $object->setIsActive($data['IsActive']);
-        }
-        elseif (\array_key_exists('IsActive', $data) && $data['IsActive'] === null) {
+        } elseif (\array_key_exists('IsActive', $data) && null === $data['IsActive']) {
             $object->setIsActive(null);
         }
-        if (\array_key_exists('Tooltip', $data) && $data['Tooltip'] !== null) {
+        if (\array_key_exists('Tooltip', $data) && null !== $data['Tooltip']) {
             $object->setTooltip($data['Tooltip']);
-        }
-        elseif (\array_key_exists('Tooltip', $data) && $data['Tooltip'] === null) {
+        } elseif (\array_key_exists('Tooltip', $data) && null === $data['Tooltip']) {
             $object->setTooltip(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getClientStatus()) {
             $data['ClientStatus'] = $object->getClientStatus();
         }
@@ -86,6 +87,7 @@ class CurrentStatusNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null !== $object->getTooltip()) {
             $data['Tooltip'] = $object->getTooltip();
         }
+
         return $data;
     }
 }

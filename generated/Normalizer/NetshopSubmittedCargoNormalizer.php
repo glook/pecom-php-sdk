@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\NetshopSubmittedCargo;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class NetshopSubmittedCargoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\NetshopSubmittedCargo';
+        return 'glook\PecomSdk\Generated\Model\NetshopSubmittedCargo' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\NetshopSubmittedCargo';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\NetshopSubmittedCargo' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class NetshopSubmittedCargoNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\NetshopSubmittedCargo();
+        $object = new NetshopSubmittedCargo();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,27 +50,28 @@ class NetshopSubmittedCargoNormalizer implements DenormalizerInterface, Normaliz
             $object->setOrderNumber($data['orderNumber']);
         }
         if (\array_key_exists('positions', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['positions'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\NetshopCargoPosition', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\NetshopCargoPosition', 'json', $context);
             }
             $object->setPositions($values);
         }
-        if (\array_key_exists('stockTitle', $data) && $data['stockTitle'] !== null) {
+        if (\array_key_exists('stockTitle', $data) && null !== $data['stockTitle']) {
             $object->setStockTitle($data['stockTitle']);
-        }
-        elseif (\array_key_exists('stockTitle', $data) && $data['stockTitle'] === null) {
+        } elseif (\array_key_exists('stockTitle', $data) && null === $data['stockTitle']) {
             $object->setStockTitle(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['barcode'] = $object->getBarcode();
         $data['cargoCode'] = $object->getCargoCode();
         $data['orderNumber'] = $object->getOrderNumber();
-        $values = array();
+        $values = [];
         foreach ($object->getPositions() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
@@ -74,6 +79,7 @@ class NetshopSubmittedCargoNormalizer implements DenormalizerInterface, Normaliz
         if (null !== $object->getStockTitle()) {
             $data['stockTitle'] = $object->getStockTitle();
         }
+
         return $data;
     }
 }

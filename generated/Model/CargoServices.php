@@ -7,217 +7,208 @@ class CargoServices
     /**
      * Задолженность, которую необходимо оплатить для получения груза, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $debt;
+
     /**
-     * В актуальной версии протокола не используется
+     * В актуальной версии протокола не используется.
      *
-     * @var mixed[][]|null
+     * @var null|mixed[][]
      */
     protected $debtList;
+
     /**
-     * В актуальной версии протокола не используется
+     * В актуальной версии протокола не используется.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $freeService;
+
     /**
-     * Защитная транспортировочная упаковка
+     * Защитная транспортировочная упаковка.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $hardPack;
+
     /**
-     * Страхование
+     * Страхование.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $insurance;
+
     /**
-     * Массив услуг
+     * Массив услуг.
      *
-     * @var CargosServiceItem[]|null
+     * @var null|CargosServiceItem[]
      */
     protected $items;
+
     /**
-     * Груз является возвратными документами
+     * Груз является возвратными документами.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $resendDocs;
+
     /**
      * Итого, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $sum;
+
     /**
      * Задолженность, которую необходимо оплатить для получения груза, руб.
-     *
-     * @return float|null
      */
-    public function getDebt() : ?float
+    public function getDebt(): ?float
     {
         return $this->debt;
     }
+
     /**
      * Задолженность, которую необходимо оплатить для получения груза, руб.
-     *
-     * @param float|null $debt
-     *
-     * @return self
      */
-    public function setDebt(?float $debt) : self
+    public function setDebt(?float $debt): self
     {
         $this->debt = $debt;
+
         return $this;
     }
+
     /**
-     * В актуальной версии протокола не используется
+     * В актуальной версии протокола не используется.
      *
-     * @return mixed[][]|null
+     * @return null|mixed[][]
      */
-    public function getDebtList() : ?array
+    public function getDebtList(): ?array
     {
         return $this->debtList;
     }
+
     /**
-     * В актуальной версии протокола не используется
+     * В актуальной версии протокола не используется.
      *
-     * @param mixed[][]|null $debtList
-     *
-     * @return self
+     * @param null|mixed[][] $debtList
      */
-    public function setDebtList(?array $debtList) : self
+    public function setDebtList(?array $debtList): self
     {
         $this->debtList = $debtList;
+
         return $this;
     }
+
     /**
-     * В актуальной версии протокола не используется
-     *
-     * @return bool|null
+     * В актуальной версии протокола не используется.
      */
-    public function getFreeService() : ?bool
+    public function getFreeService(): ?bool
     {
         return $this->freeService;
     }
+
     /**
-     * В актуальной версии протокола не используется
-     *
-     * @param bool|null $freeService
-     *
-     * @return self
+     * В актуальной версии протокола не используется.
      */
-    public function setFreeService(?bool $freeService) : self
+    public function setFreeService(?bool $freeService): self
     {
         $this->freeService = $freeService;
+
         return $this;
     }
+
     /**
-     * Защитная транспортировочная упаковка
-     *
-     * @return bool|null
+     * Защитная транспортировочная упаковка.
      */
-    public function getHardPack() : ?bool
+    public function getHardPack(): ?bool
     {
         return $this->hardPack;
     }
+
     /**
-     * Защитная транспортировочная упаковка
-     *
-     * @param bool|null $hardPack
-     *
-     * @return self
+     * Защитная транспортировочная упаковка.
      */
-    public function setHardPack(?bool $hardPack) : self
+    public function setHardPack(?bool $hardPack): self
     {
         $this->hardPack = $hardPack;
+
         return $this;
     }
+
     /**
-     * Страхование
-     *
-     * @return bool|null
+     * Страхование.
      */
-    public function getInsurance() : ?bool
+    public function getInsurance(): ?bool
     {
         return $this->insurance;
     }
+
     /**
-     * Страхование
-     *
-     * @param bool|null $insurance
-     *
-     * @return self
+     * Страхование.
      */
-    public function setInsurance(?bool $insurance) : self
+    public function setInsurance(?bool $insurance): self
     {
         $this->insurance = $insurance;
+
         return $this;
     }
+
     /**
-     * Массив услуг
+     * Массив услуг.
      *
-     * @return CargosServiceItem[]|null
+     * @return null|CargosServiceItem[]
      */
-    public function getItems() : ?array
+    public function getItems(): ?array
     {
         return $this->items;
     }
+
     /**
-     * Массив услуг
+     * Массив услуг.
      *
-     * @param CargosServiceItem[]|null $items
-     *
-     * @return self
+     * @param null|CargosServiceItem[] $items
      */
-    public function setItems(?array $items) : self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
+
         return $this;
     }
+
     /**
-     * Груз является возвратными документами
-     *
-     * @return bool|null
+     * Груз является возвратными документами.
      */
-    public function getResendDocs() : ?bool
+    public function getResendDocs(): ?bool
     {
         return $this->resendDocs;
     }
+
     /**
-     * Груз является возвратными документами
-     *
-     * @param bool|null $resendDocs
-     *
-     * @return self
+     * Груз является возвратными документами.
      */
-    public function setResendDocs(?bool $resendDocs) : self
+    public function setResendDocs(?bool $resendDocs): self
     {
         $this->resendDocs = $resendDocs;
+
         return $this;
     }
+
     /**
      * Итого, руб.
-     *
-     * @return float|null
      */
-    public function getSum() : ?float
+    public function getSum(): ?float
     {
         return $this->sum;
     }
+
     /**
      * Итого, руб.
-     *
-     * @param float|null $sum
-     *
-     * @return self
      */
-    public function setSum(?float $sum) : self
+    public function setSum(?float $sum): self
     {
         $this->sum = $sum;
+
         return $this;
     }
 }

@@ -5,31 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsGetcontentErrorResponseError
 {
     /**
-     * Детали ошибки. Может быть null
+     * Детали ошибки. Может быть null.
      *
-     * @var mixed|null
+     * @var null|mixed
      */
     protected $error;
+
     /**
-     * Сообщение ошибки
+     * Сообщение ошибки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $message;
+
     /**
      * HTTP/сервисный статус
      *
      * @var int
      */
     protected $status;
+
     /**
-     * Заголовок ошибки
+     * Заголовок ошибки.
      *
      * @var string
      */
     protected $title;
+
     /**
-     * Детали ошибки. Может быть null
+     * Детали ошибки. Может быть null.
      *
      * @return mixed
      */
@@ -37,79 +41,70 @@ class CargosdocumentsGetcontentErrorResponseError
     {
         return $this->error;
     }
+
     /**
-     * Детали ошибки. Может быть null
+     * Детали ошибки. Может быть null.
      *
      * @param mixed $error
-     *
-     * @return self
      */
-    public function setError($error) : self
+    public function setError($error): self
     {
         $this->error = $error;
+
         return $this;
     }
+
     /**
-     * Сообщение ошибки
-     *
-     * @return string|null
+     * Сообщение ошибки.
      */
-    public function getMessage() : ?string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
+
     /**
-     * Сообщение ошибки
-     *
-     * @param string|null $message
-     *
-     * @return self
+     * Сообщение ошибки.
      */
-    public function setMessage(?string $message) : self
+    public function setMessage(?string $message): self
     {
         $this->message = $message;
+
         return $this;
     }
+
     /**
      * HTTP/сервисный статус
-     *
-     * @return int
      */
-    public function getStatus() : int
+    public function getStatus(): int
     {
         return $this->status;
     }
+
     /**
      * HTTP/сервисный статус
-     *
-     * @param int $status
-     *
-     * @return self
      */
-    public function setStatus(int $status) : self
+    public function setStatus(int $status): self
     {
         $this->status = $status;
+
         return $this;
     }
+
     /**
-     * Заголовок ошибки
-     *
-     * @return string
+     * Заголовок ошибки.
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
+
     /**
-     * Заголовок ошибки
-     *
-     * @param string $title
-     *
-     * @return self
+     * Заголовок ошибки.
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 }

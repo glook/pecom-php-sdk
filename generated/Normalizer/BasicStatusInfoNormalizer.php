@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\BasicStatusInfo;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class BasicStatusInfoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\BasicStatusInfo';
+        return 'glook\PecomSdk\Generated\Model\BasicStatusInfo' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\BasicStatusInfo';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\BasicStatusInfo' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,63 +36,57 @@ class BasicStatusInfoNormalizer implements DenormalizerInterface, NormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\BasicStatusInfo();
+        $object = new BasicStatusInfo();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('arrivalDateTime', $data) && $data['arrivalDateTime'] !== null) {
+        if (\array_key_exists('arrivalDateTime', $data) && null !== $data['arrivalDateTime']) {
             $object->setArrivalDateTime($data['arrivalDateTime']);
-        }
-        elseif (\array_key_exists('arrivalDateTime', $data) && $data['arrivalDateTime'] === null) {
+        } elseif (\array_key_exists('arrivalDateTime', $data) && null === $data['arrivalDateTime']) {
             $object->setArrivalDateTime(null);
         }
-        if (\array_key_exists('arrivalPlanDateTime', $data) && $data['arrivalPlanDateTime'] !== null) {
+        if (\array_key_exists('arrivalPlanDateTime', $data) && null !== $data['arrivalPlanDateTime']) {
             $object->setArrivalPlanDateTime($data['arrivalPlanDateTime']);
-        }
-        elseif (\array_key_exists('arrivalPlanDateTime', $data) && $data['arrivalPlanDateTime'] === null) {
+        } elseif (\array_key_exists('arrivalPlanDateTime', $data) && null === $data['arrivalPlanDateTime']) {
             $object->setArrivalPlanDateTime(null);
         }
-        if (\array_key_exists('cargoStatus', $data) && $data['cargoStatus'] !== null) {
+        if (\array_key_exists('cargoStatus', $data) && null !== $data['cargoStatus']) {
             $object->setCargoStatus($data['cargoStatus']);
-        }
-        elseif (\array_key_exists('cargoStatus', $data) && $data['cargoStatus'] === null) {
+        } elseif (\array_key_exists('cargoStatus', $data) && null === $data['cargoStatus']) {
             $object->setCargoStatus(null);
         }
-        if (\array_key_exists('deliveryPlanDate', $data) && $data['deliveryPlanDate'] !== null) {
+        if (\array_key_exists('deliveryPlanDate', $data) && null !== $data['deliveryPlanDate']) {
             $object->setDeliveryPlanDate($data['deliveryPlanDate']);
-        }
-        elseif (\array_key_exists('deliveryPlanDate', $data) && $data['deliveryPlanDate'] === null) {
+        } elseif (\array_key_exists('deliveryPlanDate', $data) && null === $data['deliveryPlanDate']) {
             $object->setDeliveryPlanDate(null);
         }
-        if (\array_key_exists('giveOutDateTime', $data) && $data['giveOutDateTime'] !== null) {
+        if (\array_key_exists('giveOutDateTime', $data) && null !== $data['giveOutDateTime']) {
             $object->setGiveOutDateTime($data['giveOutDateTime']);
-        }
-        elseif (\array_key_exists('giveOutDateTime', $data) && $data['giveOutDateTime'] === null) {
+        } elseif (\array_key_exists('giveOutDateTime', $data) && null === $data['giveOutDateTime']) {
             $object->setGiveOutDateTime(null);
         }
-        if (\array_key_exists('receivedByClientDateTime', $data) && $data['receivedByClientDateTime'] !== null) {
+        if (\array_key_exists('receivedByClientDateTime', $data) && null !== $data['receivedByClientDateTime']) {
             $object->setReceivedByClientDateTime($data['receivedByClientDateTime']);
-        }
-        elseif (\array_key_exists('receivedByClientDateTime', $data) && $data['receivedByClientDateTime'] === null) {
+        } elseif (\array_key_exists('receivedByClientDateTime', $data) && null === $data['receivedByClientDateTime']) {
             $object->setReceivedByClientDateTime(null);
         }
-        if (\array_key_exists('sendingDateTime', $data) && $data['sendingDateTime'] !== null) {
+        if (\array_key_exists('sendingDateTime', $data) && null !== $data['sendingDateTime']) {
             $object->setSendingDateTime($data['sendingDateTime']);
-        }
-        elseif (\array_key_exists('sendingDateTime', $data) && $data['sendingDateTime'] === null) {
+        } elseif (\array_key_exists('sendingDateTime', $data) && null === $data['sendingDateTime']) {
             $object->setSendingDateTime(null);
         }
-        if (\array_key_exists('takeOnStockDateTime', $data) && $data['takeOnStockDateTime'] !== null) {
+        if (\array_key_exists('takeOnStockDateTime', $data) && null !== $data['takeOnStockDateTime']) {
             $object->setTakeOnStockDateTime($data['takeOnStockDateTime']);
-        }
-        elseif (\array_key_exists('takeOnStockDateTime', $data) && $data['takeOnStockDateTime'] === null) {
+        } elseif (\array_key_exists('takeOnStockDateTime', $data) && null === $data['takeOnStockDateTime']) {
             $object->setTakeOnStockDateTime(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getArrivalDateTime()) {
             $data['arrivalDateTime'] = $object->getArrivalDateTime();
         }
@@ -113,6 +111,7 @@ class BasicStatusInfoNormalizer implements DenormalizerInterface, NormalizerInte
         if (null !== $object->getTakeOnStockDateTime()) {
             $data['takeOnStockDateTime'] = $object->getTakeOnStockDateTime();
         }
+
         return $data;
     }
 }

@@ -5,94 +5,89 @@ namespace glook\PecomSdk\Generated\Model;
 class ParamItem
 {
     /**
-     * Идентификатор параметра
+     * Идентификатор параметра.
      *
      * @var string
      */
     protected $key;
+
     /**
-     * Название параметра
+     * Название параметра.
      *
      * @var string
      */
     protected $name;
+
     /**
-     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean)
+     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean).
      *
      * @var string
      */
     protected $type;
+
     /**
-     * Значение параметра
+     * Значение параметра.
      *
-     * @var mixed|null
+     * @var null|mixed
      */
     protected $values;
+
     /**
-     * Идентификатор параметра
-     *
-     * @return string
+     * Идентификатор параметра.
      */
-    public function getKey() : string
+    public function getKey(): string
     {
         return $this->key;
     }
+
     /**
-     * Идентификатор параметра
-     *
-     * @param string $key
-     *
-     * @return self
+     * Идентификатор параметра.
      */
-    public function setKey(string $key) : self
+    public function setKey(string $key): self
     {
         $this->key = $key;
+
         return $this;
     }
+
     /**
-     * Название параметра
-     *
-     * @return string
+     * Название параметра.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Название параметра
-     *
-     * @param string $name
-     *
-     * @return self
+     * Название параметра.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
+
     /**
-     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean)
-     *
-     * @return string
+     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean).
      */
-    public function getType() : string
+    public function getType(): string
     {
         return $this->type;
     }
+
     /**
-     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean)
-     *
-     * @param string $type
-     *
-     * @return self
+     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean).
      */
-    public function setType(string $type) : self
+    public function setType(string $type): self
     {
         $this->type = $type;
+
         return $this;
     }
+
     /**
-     * Значение параметра
+     * Значение параметра.
      *
      * @return mixed
      */
@@ -100,16 +95,16 @@ class ParamItem
     {
         return $this->values;
     }
+
     /**
-     * Значение параметра
+     * Значение параметра.
      *
      * @param mixed $values
-     *
-     * @return self
      */
-    public function setValues($values) : self
+    public function setValues($values): self
     {
         $this->values = $values;
+
         return $this;
     }
 }

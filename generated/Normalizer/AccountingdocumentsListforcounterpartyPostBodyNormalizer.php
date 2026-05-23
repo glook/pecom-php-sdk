@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\AccountingdocumentsListforcounterpartyPostBody;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class AccountingdocumentsListforcounterpartyPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\AccountingdocumentsListforcounterpartyPostBody';
+        return 'glook\PecomSdk\Generated\Model\AccountingdocumentsListforcounterpartyPostBody' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\AccountingdocumentsListforcounterpartyPostBody';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\AccountingdocumentsListforcounterpartyPostBody' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class AccountingdocumentsListforcounterpartyPostBodyNormalizer implements Denorm
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\AccountingdocumentsListforcounterpartyPostBody();
+        $object = new AccountingdocumentsListforcounterpartyPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -48,20 +52,21 @@ class AccountingdocumentsListforcounterpartyPostBodyNormalizer implements Denorm
         if (\array_key_exists('INN', $data)) {
             $object->setINN($data['INN']);
         }
-        if (\array_key_exists('KPP', $data) && $data['KPP'] !== null) {
+        if (\array_key_exists('KPP', $data) && null !== $data['KPP']) {
             $object->setKPP($data['KPP']);
-        }
-        elseif (\array_key_exists('KPP', $data) && $data['KPP'] === null) {
+        } elseif (\array_key_exists('KPP', $data) && null === $data['KPP']) {
             $object->setKPP(null);
         }
         if (\array_key_exists('token', $data)) {
             $object->setToken($data['token']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['branchId'] = $object->getBranchId();
         $data['dateBegin'] = $object->getDateBegin();
         $data['dateEnd'] = $object->getDateEnd();
@@ -70,6 +75,7 @@ class AccountingdocumentsListforcounterpartyPostBodyNormalizer implements Denorm
             $data['KPP'] = $object->getKPP();
         }
         $data['token'] = $object->getToken();
+
         return $data;
     }
 }

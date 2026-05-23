@@ -2,53 +2,68 @@
 
 namespace glook\PecomSdk\Generated\Endpoint;
 
-class AuthCreatetokentoaccessprivatedata extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint implements \glook\PecomSdk\Generated\Runtime\Client\Endpoint
+use glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataBadRequestException;
+use glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataForbiddenException;
+use glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataInternalServerErrorException;
+use glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException;
+use glook\PecomSdk\Generated\Model\AuthTokenResponse;
+use glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint;
+use glook\PecomSdk\Generated\Runtime\Client\Endpoint;
+use glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
+use Symfony\Component\Serializer\SerializerInterface;
+
+class AuthCreatetokentoaccessprivatedata extends BaseEndpoint implements Endpoint
 {
-    use \glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    use EndpointTrait;
+
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+
+    public function getUri(): string
     {
         return '/auth/createtokentoaccessprivatedata/';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+
+    public function getBody(SerializerInterface $serializer, $streamFactory = null): array
     {
-        return array(array(), null);
+        return [[], null];
     }
-    public function getExtraHeaders() : array
+
+    public function getExtraHeaders(): array
     {
-        return array('Accept' => array('application/json'));
+        return ['Accept' => ['application/json']];
     }
+
+    public function getAuthenticationScopes(): array
+    {
+        return ['BasicAuth'];
+    }
+
     /**
-     * {@inheritdoc}
+     * @return null|AuthTokenResponse
      *
-     * @throws \glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataBadRequestException
-     * @throws \glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataForbiddenException
-     * @throws \glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataInternalServerErrorException
-     * @throws \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException
-     *
-     * @return null|\glook\PecomSdk\Generated\Model\AuthTokenResponse
+     * @throws AuthCreatetokentoaccessprivatedataBadRequestException
+     * @throws AuthCreatetokentoaccessprivatedataForbiddenException
+     * @throws AuthCreatetokentoaccessprivatedataInternalServerErrorException
+     * @throws UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\AuthTokenResponse', 'json');
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            return $serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\AuthTokenResponse', 'json');
         }
-        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataBadRequestException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new AuthCreatetokentoaccessprivatedataBadRequestException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataForbiddenException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new AuthCreatetokentoaccessprivatedataForbiddenException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\AuthCreatetokentoaccessprivatedataInternalServerErrorException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new AuthCreatetokentoaccessprivatedataInternalServerErrorException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        throw new \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException($status, $body);
-    }
-    public function getAuthenticationScopes() : array
-    {
-        return array('BasicAuth');
+
+        throw new UnexpectedStatusCodeException($status, $body);
     }
 }

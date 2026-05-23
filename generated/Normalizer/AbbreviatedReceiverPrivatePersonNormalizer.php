@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\AbbreviatedReceiverPrivatePerson;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class AbbreviatedReceiverPrivatePersonNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\AbbreviatedReceiverPrivatePerson';
+        return 'glook\PecomSdk\Generated\Model\AbbreviatedReceiverPrivatePerson' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\AbbreviatedReceiverPrivatePerson';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\AbbreviatedReceiverPrivatePerson' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,34 @@ class AbbreviatedReceiverPrivatePersonNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\AbbreviatedReceiverPrivatePerson();
+        $object = new AbbreviatedReceiverPrivatePerson();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
+        if (\array_key_exists('Name', $data) && null !== $data['Name']) {
             $object->setName($data['Name']);
-        }
-        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+        } elseif (\array_key_exists('Name', $data) && null === $data['Name']) {
             $object->setName(null);
         }
-        if (\array_key_exists('phone', $data) && $data['phone'] !== null) {
+        if (\array_key_exists('phone', $data) && null !== $data['phone']) {
             $object->setPhone($data['phone']);
-        }
-        elseif (\array_key_exists('phone', $data) && $data['phone'] === null) {
+        } elseif (\array_key_exists('phone', $data) && null === $data['phone']) {
             $object->setPhone(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getName()) {
             $data['Name'] = $object->getName();
         }
         if (null !== $object->getPhone()) {
             $data['phone'] = $object->getPhone();
         }
+
         return $data;
     }
 }

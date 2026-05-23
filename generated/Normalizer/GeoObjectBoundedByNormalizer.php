@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\GeoObjectBoundedBy;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class GeoObjectBoundedByNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\GeoObjectBoundedBy';
+        return 'glook\PecomSdk\Generated\Model\GeoObjectBoundedBy' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\GeoObjectBoundedBy';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\GeoObjectBoundedBy' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,19 +36,22 @@ class GeoObjectBoundedByNormalizer implements DenormalizerInterface, NormalizerI
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\GeoObjectBoundedBy();
+        $object = new GeoObjectBoundedBy();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('Envelope', $data)) {
-            $object->setEnvelope($this->denormalizer->denormalize($data['Envelope'], 'glook\\PecomSdk\\Generated\\Model\\GeoObjectBoundedByEnvelope', 'json', $context));
+            $object->setEnvelope($this->denormalizer->denormalize($data['Envelope'], 'glook\PecomSdk\Generated\Model\GeoObjectBoundedByEnvelope', 'json', $context));
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['Envelope'] = $this->normalizer->normalize($object->getEnvelope(), 'json', $context);
+
         return $data;
     }
 }

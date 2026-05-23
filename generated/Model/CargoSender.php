@@ -5,192 +5,177 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoSender
 {
     /**
-     * Филиал
+     * Филиал.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branch;
+
     /**
-     * Филиал отправителя
+     * Филиал отправителя.
      *
-     * @var BranchInfo|null
+     * @var null|BranchInfo
      */
     protected $branchInfo;
+
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
      *
-     * @var int|null
+     * @var null|int
      */
     protected $counterpartPaymentType;
+
     /**
      * Адрес забора груза, если заказана услуга забора. Требуются права на получение информации.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $intakeAddress;
+
     /**
-     * Ответственное лицо
+     * Ответственное лицо.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $person;
+
     /**
-     * Телефоны
+     * Телефоны.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
-     * Наименование
+     * Наименование.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $sender;
+
     /**
-     * Филиал
-     *
-     * @return string|null
+     * Филиал.
      */
-    public function getBranch() : ?string
+    public function getBranch(): ?string
     {
         return $this->branch;
     }
+
     /**
-     * Филиал
-     *
-     * @param string|null $branch
-     *
-     * @return self
+     * Филиал.
      */
-    public function setBranch(?string $branch) : self
+    public function setBranch(?string $branch): self
     {
         $this->branch = $branch;
+
         return $this;
     }
+
     /**
-     * Филиал отправителя
-     *
-     * @return BranchInfo|null
+     * Филиал отправителя.
      */
-    public function getBranchInfo() : ?BranchInfo
+    public function getBranchInfo(): ?BranchInfo
     {
         return $this->branchInfo;
     }
+
     /**
-     * Филиал отправителя
-     *
-     * @param BranchInfo|null $branchInfo
-     *
-     * @return self
+     * Филиал отправителя.
      */
-    public function setBranchInfo(?BranchInfo $branchInfo) : self
+    public function setBranchInfo(?BranchInfo $branchInfo): self
     {
         $this->branchInfo = $branchInfo;
+
         return $this;
     }
+
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
-     *
-     * @return int|null
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
      */
-    public function getCounterpartPaymentType() : ?int
+    public function getCounterpartPaymentType(): ?int
     {
         return $this->counterpartPaymentType;
     }
+
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
-     *
-     * @param int|null $counterpartPaymentType
-     *
-     * @return self
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
      */
-    public function setCounterpartPaymentType(?int $counterpartPaymentType) : self
+    public function setCounterpartPaymentType(?int $counterpartPaymentType): self
     {
         $this->counterpartPaymentType = $counterpartPaymentType;
+
         return $this;
     }
+
     /**
      * Адрес забора груза, если заказана услуга забора. Требуются права на получение информации.
-     *
-     * @return string|null
      */
-    public function getIntakeAddress() : ?string
+    public function getIntakeAddress(): ?string
     {
         return $this->intakeAddress;
     }
+
     /**
      * Адрес забора груза, если заказана услуга забора. Требуются права на получение информации.
-     *
-     * @param string|null $intakeAddress
-     *
-     * @return self
      */
-    public function setIntakeAddress(?string $intakeAddress) : self
+    public function setIntakeAddress(?string $intakeAddress): self
     {
         $this->intakeAddress = $intakeAddress;
+
         return $this;
     }
+
     /**
-     * Ответственное лицо
-     *
-     * @return string|null
+     * Ответственное лицо.
      */
-    public function getPerson() : ?string
+    public function getPerson(): ?string
     {
         return $this->person;
     }
+
     /**
-     * Ответственное лицо
-     *
-     * @param string|null $person
-     *
-     * @return self
+     * Ответственное лицо.
      */
-    public function setPerson(?string $person) : self
+    public function setPerson(?string $person): self
     {
         $this->person = $person;
+
         return $this;
     }
+
     /**
-     * Телефоны
-     *
-     * @return string|null
+     * Телефоны.
      */
-    public function getPhone() : ?string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
+
     /**
-     * Телефоны
-     *
-     * @param string|null $phone
-     *
-     * @return self
+     * Телефоны.
      */
-    public function setPhone(?string $phone) : self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование
-     *
-     * @return string|null
+     * Наименование.
      */
-    public function getSender() : ?string
+    public function getSender(): ?string
     {
         return $this->sender;
     }
+
     /**
-     * Наименование
-     *
-     * @param string|null $sender
-     *
-     * @return self
+     * Наименование.
      */
-    public function setSender(?string $sender) : self
+    public function setSender(?string $sender): self
     {
         $this->sender = $sender;
+
         return $this;
     }
 }

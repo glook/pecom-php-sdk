@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\Warehouse;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\Warehouse';
+        return 'glook\PecomSdk\Generated\Model\Warehouse' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\Warehouse';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\Warehouse' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\Warehouse();
+        $object = new Warehouse();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,18 +50,16 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setCoordinates($data['coordinates']);
         }
         if (\array_key_exists('coordinatesobj', $data)) {
-            $object->setCoordinatesobj($this->denormalizer->denormalize($data['coordinatesobj'], 'glook\\PecomSdk\\Generated\\Model\\BranchesCoordinates', 'json', $context));
+            $object->setCoordinatesobj($this->denormalizer->denormalize($data['coordinatesobj'], 'glook\PecomSdk\Generated\Model\BranchesCoordinates', 'json', $context));
         }
-        if (\array_key_exists('isRestrictions', $data) && $data['isRestrictions'] !== null) {
+        if (\array_key_exists('isRestrictions', $data) && null !== $data['isRestrictions']) {
             $object->setIsRestrictions($data['isRestrictions']);
-        }
-        elseif (\array_key_exists('isRestrictions', $data) && $data['isRestrictions'] === null) {
+        } elseif (\array_key_exists('isRestrictions', $data) && null === $data['isRestrictions']) {
             $object->setIsRestrictions(null);
         }
-        if (\array_key_exists('departmentClosingDate', $data) && $data['departmentClosingDate'] !== null) {
+        if (\array_key_exists('departmentClosingDate', $data) && null !== $data['departmentClosingDate']) {
             $object->setDepartmentClosingDate($data['departmentClosingDate']);
-        }
-        elseif (\array_key_exists('departmentClosingDate', $data) && $data['departmentClosingDate'] === null) {
+        } elseif (\array_key_exists('departmentClosingDate', $data) && null === $data['departmentClosingDate']) {
             $object->setDepartmentClosingDate(null);
         }
         if (\array_key_exists('divisionId', $data)) {
@@ -67,25 +69,23 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setDivisionName($data['divisionName']);
         }
         if (\array_key_exists('divisionTimeOfWork', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['divisionTimeOfWork'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\DivisionTimeOfWork', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\DivisionTimeOfWork', 'json', $context);
             }
             $object->setDivisionTimeOfWork($values);
         }
         if (\array_key_exists('email', $data)) {
             $object->setEmail($data['email']);
         }
-        if (\array_key_exists('endOfAvailabilityBeforeClosing', $data) && $data['endOfAvailabilityBeforeClosing'] !== null) {
+        if (\array_key_exists('endOfAvailabilityBeforeClosing', $data) && null !== $data['endOfAvailabilityBeforeClosing']) {
             $object->setEndOfAvailabilityBeforeClosing($data['endOfAvailabilityBeforeClosing']);
-        }
-        elseif (\array_key_exists('endOfAvailabilityBeforeClosing', $data) && $data['endOfAvailabilityBeforeClosing'] === null) {
+        } elseif (\array_key_exists('endOfAvailabilityBeforeClosing', $data) && null === $data['endOfAvailabilityBeforeClosing']) {
             $object->setEndOfAvailabilityBeforeClosing(null);
         }
-        if (\array_key_exists('endOfCostCalculationAvailability', $data) && $data['endOfCostCalculationAvailability'] !== null) {
+        if (\array_key_exists('endOfCostCalculationAvailability', $data) && null !== $data['endOfCostCalculationAvailability']) {
             $object->setEndOfCostCalculationAvailability($data['endOfCostCalculationAvailability']);
-        }
-        elseif (\array_key_exists('endOfCostCalculationAvailability', $data) && $data['endOfCostCalculationAvailability'] === null) {
+        } elseif (\array_key_exists('endOfCostCalculationAvailability', $data) && null === $data['endOfCostCalculationAvailability']) {
             $object->setEndOfCostCalculationAvailability(null);
         }
         if (\array_key_exists('id', $data)) {
@@ -122,16 +122,16 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setPointerDescription($data['pointerDescription']);
         }
         if (\array_key_exists('scheduleHolidayDays', $data)) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($data['scheduleHolidayDays'] as $value_1) {
                 $values_1[] = $value_1;
             }
             $object->setScheduleHolidayDays($values_1);
         }
         if (\array_key_exists('scheduleShortWorkDays', $data)) {
-            $values_2 = array();
+            $values_2 = [];
             foreach ($data['scheduleShortWorkDays'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'glook\\PecomSdk\\Generated\\Model\\ScheduleShortWorkDay', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'glook\PecomSdk\Generated\Model\ScheduleShortWorkDay', 'json', $context);
             }
             $object->setScheduleShortWorkDays($values_2);
         }
@@ -139,7 +139,7 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
             $object->setTelephone($data['telephone']);
         }
         if (\array_key_exists('timeOfWork', $data)) {
-            $values_3 = array();
+            $values_3 = [];
             foreach ($data['timeOfWork'] as $value_3) {
                 $values_3[] = $value_3;
             }
@@ -148,11 +148,13 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('warehouseCode', $data)) {
             $object->setWarehouseCode($data['warehouseCode']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['address'] = $object->getAddress();
         $data['addressDivision'] = $object->getAddressDivision();
         $data['coordinates'] = $object->getCoordinates();
@@ -163,7 +165,7 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         }
         $data['divisionId'] = $object->getDivisionId();
         $data['divisionName'] = $object->getDivisionName();
-        $values = array();
+        $values = [];
         foreach ($object->getDivisionTimeOfWork() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
@@ -186,23 +188,24 @@ class WarehouseNormalizer implements DenormalizerInterface, NormalizerInterface,
         $data['maxWeightPerPlace'] = $object->getMaxWeightPerPlace();
         $data['name'] = $object->getName();
         $data['pointerDescription'] = $object->getPointerDescription();
-        $values_1 = array();
+        $values_1 = [];
         foreach ($object->getScheduleHolidayDays() as $value_1) {
             $values_1[] = $value_1;
         }
         $data['scheduleHolidayDays'] = $values_1;
-        $values_2 = array();
+        $values_2 = [];
         foreach ($object->getScheduleShortWorkDays() as $value_2) {
             $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
         }
         $data['scheduleShortWorkDays'] = $values_2;
         $data['telephone'] = $object->getTelephone();
-        $values_3 = array();
+        $values_3 = [];
         foreach ($object->getTimeOfWork() as $value_3) {
             $values_3[] = $value_3;
         }
         $data['timeOfWork'] = $values_3;
         $data['warehouseCode'] = $object->getWarehouseCode();
+
         return $data;
     }
 }

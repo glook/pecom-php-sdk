@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class ClientPackingKindItem
 {
     /**
-     * Идентификатор упаковки
+     * Идентификатор упаковки.
      *
      * @var string
      */
     protected $code;
+
     /**
-     * Наименование упаковки
+     * Наименование упаковки.
      *
      * @var string
      */
     protected $name;
+
     /**
-     * Идентификатор упаковки
-     *
-     * @return string
+     * Идентификатор упаковки.
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->code;
     }
+
     /**
-     * Идентификатор упаковки
-     *
-     * @param string $code
-     *
-     * @return self
+     * Идентификатор упаковки.
      */
-    public function setCode(string $code) : self
+    public function setCode(string $code): self
     {
         $this->code = $code;
+
         return $this;
     }
+
     /**
-     * Наименование упаковки
-     *
-     * @return string
+     * Наименование упаковки.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Наименование упаковки
-     *
-     * @param string $name
-     *
-     * @return self
+     * Наименование упаковки.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 }

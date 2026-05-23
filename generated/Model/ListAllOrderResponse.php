@@ -5,30 +5,31 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderResponse
 {
     /**
-     * Грузы
+     * Грузы.
      *
-     * @var ListAllOrderItem[]|null
+     * @var null|ListAllOrderItem[]
      */
     protected $cargos;
+
     /**
-     * Грузы
+     * Грузы.
      *
-     * @return ListAllOrderItem[]|null
+     * @return null|ListAllOrderItem[]
      */
-    public function getCargos() : ?array
+    public function getCargos(): ?array
     {
         return $this->cargos;
     }
+
     /**
-     * Грузы
+     * Грузы.
      *
-     * @param ListAllOrderItem[]|null $cargos
-     *
-     * @return self
+     * @param null|ListAllOrderItem[] $cargos
      */
-    public function setCargos(?array $cargos) : self
+    public function setCargos(?array $cargos): self
     {
         $this->cargos = $cargos;
+
         return $this;
     }
 }

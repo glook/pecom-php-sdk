@@ -5,30 +5,31 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosStatusResponse
 {
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @var CargoStatusItem[]|null
+     * @var null|CargoStatusItem[]
      */
     protected $cargos;
+
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @return CargoStatusItem[]|null
+     * @return null|CargoStatusItem[]
      */
-    public function getCargos() : ?array
+    public function getCargos(): ?array
     {
         return $this->cargos;
     }
+
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @param CargoStatusItem[]|null $cargos
-     *
-     * @return self
+     * @param null|CargoStatusItem[] $cargos
      */
-    public function setCargos(?array $cargos) : self
+    public function setCargos(?array $cargos): self
     {
         $this->cargos = $cargos;
+
         return $this;
     }
 }

@@ -5,273 +5,252 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosServiceItem
 {
     /**
-     * Филиал
+     * Филиал.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branch;
+
     /**
-     * Валюта
+     * Валюта.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $currencyName;
+
     /**
-     * Описание
+     * Описание.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $description;
+
     /**
-     * Оплаченная сумма, руб
+     * Оплаченная сумма, руб.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $paid;
+
     /**
-     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо
+     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $payerForm;
+
     /**
-     * Описание
+     * Описание.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $payerName;
+
     /**
-     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо)
+     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо).
      *
-     * @var int|null
+     * @var null|int
      */
     protected $payerType;
+
     /**
-     * Выбранный способ оплаты задолженности
+     * Выбранный способ оплаты задолженности.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $paymentMethod;
+
     /**
-     * Необходима оплата задолженности для получения груза
+     * Необходима оплата задолженности для получения груза.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $payToReceive;
+
     /**
      * Стоимость, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $price;
+
     /**
-     * Филиал
-     *
-     * @return string|null
+     * Филиал.
      */
-    public function getBranch() : ?string
+    public function getBranch(): ?string
     {
         return $this->branch;
     }
+
     /**
-     * Филиал
-     *
-     * @param string|null $branch
-     *
-     * @return self
+     * Филиал.
      */
-    public function setBranch(?string $branch) : self
+    public function setBranch(?string $branch): self
     {
         $this->branch = $branch;
+
         return $this;
     }
+
     /**
-     * Валюта
-     *
-     * @return string|null
+     * Валюта.
      */
-    public function getCurrencyName() : ?string
+    public function getCurrencyName(): ?string
     {
         return $this->currencyName;
     }
+
     /**
-     * Валюта
-     *
-     * @param string|null $currencyName
-     *
-     * @return self
+     * Валюта.
      */
-    public function setCurrencyName(?string $currencyName) : self
+    public function setCurrencyName(?string $currencyName): self
     {
         $this->currencyName = $currencyName;
+
         return $this;
     }
+
     /**
-     * Описание
-     *
-     * @return string|null
+     * Описание.
      */
-    public function getDescription() : ?string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
+
     /**
-     * Описание
-     *
-     * @param string|null $description
-     *
-     * @return self
+     * Описание.
      */
-    public function setDescription(?string $description) : self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
+
         return $this;
     }
+
     /**
-     * Оплаченная сумма, руб
-     *
-     * @return int|null
+     * Оплаченная сумма, руб.
      */
-    public function getPaid() : ?int
+    public function getPaid(): ?int
     {
         return $this->paid;
     }
+
     /**
-     * Оплаченная сумма, руб
-     *
-     * @param int|null $paid
-     *
-     * @return self
+     * Оплаченная сумма, руб.
      */
-    public function setPaid(?int $paid) : self
+    public function setPaid(?int $paid): self
     {
         $this->paid = $paid;
+
         return $this;
     }
+
     /**
-     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо
-     *
-     * @return int|null
+     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо.
      */
-    public function getPayerForm() : ?int
+    public function getPayerForm(): ?int
     {
         return $this->payerForm;
     }
+
     /**
-     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо
-     *
-     * @param int|null $payerForm
-     *
-     * @return self
+     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо.
      */
-    public function setPayerForm(?int $payerForm) : self
+    public function setPayerForm(?int $payerForm): self
     {
         $this->payerForm = $payerForm;
+
         return $this;
     }
+
     /**
-     * Описание
-     *
-     * @return string|null
+     * Описание.
      */
-    public function getPayerName() : ?string
+    public function getPayerName(): ?string
     {
         return $this->payerName;
     }
+
     /**
-     * Описание
-     *
-     * @param string|null $payerName
-     *
-     * @return self
+     * Описание.
      */
-    public function setPayerName(?string $payerName) : self
+    public function setPayerName(?string $payerName): self
     {
         $this->payerName = $payerName;
+
         return $this;
     }
+
     /**
-     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо)
-     *
-     * @return int|null
+     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо).
      */
-    public function getPayerType() : ?int
+    public function getPayerType(): ?int
     {
         return $this->payerType;
     }
+
     /**
-     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо)
-     *
-     * @param int|null $payerType
-     *
-     * @return self
+     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо).
      */
-    public function setPayerType(?int $payerType) : self
+    public function setPayerType(?int $payerType): self
     {
         $this->payerType = $payerType;
+
         return $this;
     }
+
     /**
-     * Выбранный способ оплаты задолженности
-     *
-     * @return string|null
+     * Выбранный способ оплаты задолженности.
      */
-    public function getPaymentMethod() : ?string
+    public function getPaymentMethod(): ?string
     {
         return $this->paymentMethod;
     }
+
     /**
-     * Выбранный способ оплаты задолженности
-     *
-     * @param string|null $paymentMethod
-     *
-     * @return self
+     * Выбранный способ оплаты задолженности.
      */
-    public function setPaymentMethod(?string $paymentMethod) : self
+    public function setPaymentMethod(?string $paymentMethod): self
     {
         $this->paymentMethod = $paymentMethod;
+
         return $this;
     }
+
     /**
-     * Необходима оплата задолженности для получения груза
-     *
-     * @return bool|null
+     * Необходима оплата задолженности для получения груза.
      */
-    public function getPayToReceive() : ?bool
+    public function getPayToReceive(): ?bool
     {
         return $this->payToReceive;
     }
+
     /**
-     * Необходима оплата задолженности для получения груза
-     *
-     * @param bool|null $payToReceive
-     *
-     * @return self
+     * Необходима оплата задолженности для получения груза.
      */
-    public function setPayToReceive(?bool $payToReceive) : self
+    public function setPayToReceive(?bool $payToReceive): self
     {
         $this->payToReceive = $payToReceive;
+
         return $this;
     }
+
     /**
      * Стоимость, руб.
-     *
-     * @return float|null
      */
-    public function getPrice() : ?float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
+
     /**
      * Стоимость, руб.
-     *
-     * @param float|null $price
-     *
-     * @return self
      */
-    public function setPrice(?float $price) : self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
+
         return $this;
     }
 }

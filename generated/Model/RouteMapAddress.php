@@ -5,111 +5,110 @@ namespace glook\PecomSdk\Generated\Model;
 class RouteMapAddress
 {
     /**
-     * Координаты, по которым будут выполняться операции забора/доставки грузов
+     * Координаты, по которым будут выполняться операции забора/доставки грузов.
      *
-     * @var CargosCoordinates|null
+     * @var null|CargosCoordinates
      */
     protected $coordinates;
+
     /**
-     * Датализация адреса
+     * Датализация адреса.
      *
-     * @var CargosGeoData|null
+     * @var null|CargosGeoData
      */
     protected $geoData;
+
     /**
-     * Перечень строковых представлений адресов — как они указаны в системах ПЭК
+     * Перечень строковых представлений адресов — как они указаны в системах ПЭК.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $operationAddresses;
+
     /**
-     * если на адрес в один день будет назначено более 1 машины, то в массиве будет 2 элемента, каждый содержит информацию об одном маршрутном листе/водителе
+     * если на адрес в один день будет назначено более 1 машины, то в массиве будет 2 элемента, каждый содержит информацию об одном маршрутном листе/водителе.
      *
-     * @var RouteMap[]|null
+     * @var null|RouteMap[]
      */
     protected $routeMaps;
+
     /**
-     * Координаты, по которым будут выполняться операции забора/доставки грузов
-     *
-     * @return CargosCoordinates|null
+     * Координаты, по которым будут выполняться операции забора/доставки грузов.
      */
-    public function getCoordinates() : ?CargosCoordinates
+    public function getCoordinates(): ?CargosCoordinates
     {
         return $this->coordinates;
     }
+
     /**
-     * Координаты, по которым будут выполняться операции забора/доставки грузов
-     *
-     * @param CargosCoordinates|null $coordinates
-     *
-     * @return self
+     * Координаты, по которым будут выполняться операции забора/доставки грузов.
      */
-    public function setCoordinates(?CargosCoordinates $coordinates) : self
+    public function setCoordinates(?CargosCoordinates $coordinates): self
     {
         $this->coordinates = $coordinates;
+
         return $this;
     }
+
     /**
-     * Датализация адреса
-     *
-     * @return CargosGeoData|null
+     * Датализация адреса.
      */
-    public function getGeoData() : ?CargosGeoData
+    public function getGeoData(): ?CargosGeoData
     {
         return $this->geoData;
     }
+
     /**
-     * Датализация адреса
-     *
-     * @param CargosGeoData|null $geoData
-     *
-     * @return self
+     * Датализация адреса.
      */
-    public function setGeoData(?CargosGeoData $geoData) : self
+    public function setGeoData(?CargosGeoData $geoData): self
     {
         $this->geoData = $geoData;
+
         return $this;
     }
+
     /**
-     * Перечень строковых представлений адресов — как они указаны в системах ПЭК
+     * Перечень строковых представлений адресов — как они указаны в системах ПЭК.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getOperationAddresses() : ?array
+    public function getOperationAddresses(): ?array
     {
         return $this->operationAddresses;
     }
+
     /**
-     * Перечень строковых представлений адресов — как они указаны в системах ПЭК
+     * Перечень строковых представлений адресов — как они указаны в системах ПЭК.
      *
-     * @param string[]|null $operationAddresses
-     *
-     * @return self
+     * @param null|string[] $operationAddresses
      */
-    public function setOperationAddresses(?array $operationAddresses) : self
+    public function setOperationAddresses(?array $operationAddresses): self
     {
         $this->operationAddresses = $operationAddresses;
+
         return $this;
     }
+
     /**
-     * если на адрес в один день будет назначено более 1 машины, то в массиве будет 2 элемента, каждый содержит информацию об одном маршрутном листе/водителе
+     * если на адрес в один день будет назначено более 1 машины, то в массиве будет 2 элемента, каждый содержит информацию об одном маршрутном листе/водителе.
      *
-     * @return RouteMap[]|null
+     * @return null|RouteMap[]
      */
-    public function getRouteMaps() : ?array
+    public function getRouteMaps(): ?array
     {
         return $this->routeMaps;
     }
+
     /**
-     * если на адрес в один день будет назначено более 1 машины, то в массиве будет 2 элемента, каждый содержит информацию об одном маршрутном листе/водителе
+     * если на адрес в один день будет назначено более 1 машины, то в массиве будет 2 элемента, каждый содержит информацию об одном маршрутном листе/водителе.
      *
-     * @param RouteMap[]|null $routeMaps
-     *
-     * @return self
+     * @param null|RouteMap[] $routeMaps
      */
-    public function setRouteMaps(?array $routeMaps) : self
+    public function setRouteMaps(?array $routeMaps): self
     {
         $this->routeMaps = $routeMaps;
+
         return $this;
     }
 }

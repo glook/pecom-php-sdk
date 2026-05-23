@@ -5,111 +5,102 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosCommonServices
 {
     /**
-     * Плательщик за услугу доставки
+     * Плательщик за услугу доставки.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosCommonServicesDelivery|null
+     * @var null|CargopickupnetworkServicePayer
      */
     protected $delivery;
+
     /**
-     * Плательщик за услугу страхования
+     * Плательщик за услугу страхования.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosCommonServicesInsurance|null
+     * @var null|CargopickupnetworkServicePayer
      */
     protected $insurance;
+
     /**
-     * Плательщик за услугу забора груза
+     * Плательщик за услугу забора груза.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosCommonServicesPickUp|null
+     * @var null|CargopickupnetworkServicePayer
      */
     protected $pickUp;
+
     /**
-     * Плательщик за услугу перевозки
+     * Плательщик за услугу перевозки.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosCommonServicesTransporting|null
+     * @var null|CargopickupnetworkServicePayer
      */
     protected $transporting;
+
     /**
-     * Плательщик за услугу доставки
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosCommonServicesDelivery|null
+     * Плательщик за услугу доставки.
      */
-    public function getDelivery() : ?CargoPickupNetworkSubmitRequestCargosCommonServicesDelivery
+    public function getDelivery(): ?CargopickupnetworkServicePayer
     {
         return $this->delivery;
     }
+
     /**
-     * Плательщик за услугу доставки
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosCommonServicesDelivery|null $delivery
-     *
-     * @return self
+     * Плательщик за услугу доставки.
      */
-    public function setDelivery(?CargoPickupNetworkSubmitRequestCargosCommonServicesDelivery $delivery) : self
+    public function setDelivery(?CargopickupnetworkServicePayer $delivery): self
     {
         $this->delivery = $delivery;
+
         return $this;
     }
+
     /**
-     * Плательщик за услугу страхования
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosCommonServicesInsurance|null
+     * Плательщик за услугу страхования.
      */
-    public function getInsurance() : ?CargoPickupNetworkSubmitRequestCargosCommonServicesInsurance
+    public function getInsurance(): ?CargopickupnetworkServicePayer
     {
         return $this->insurance;
     }
+
     /**
-     * Плательщик за услугу страхования
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosCommonServicesInsurance|null $insurance
-     *
-     * @return self
+     * Плательщик за услугу страхования.
      */
-    public function setInsurance(?CargoPickupNetworkSubmitRequestCargosCommonServicesInsurance $insurance) : self
+    public function setInsurance(?CargopickupnetworkServicePayer $insurance): self
     {
         $this->insurance = $insurance;
+
         return $this;
     }
+
     /**
-     * Плательщик за услугу забора груза
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosCommonServicesPickUp|null
+     * Плательщик за услугу забора груза.
      */
-    public function getPickUp() : ?CargoPickupNetworkSubmitRequestCargosCommonServicesPickUp
+    public function getPickUp(): ?CargopickupnetworkServicePayer
     {
         return $this->pickUp;
     }
+
     /**
-     * Плательщик за услугу забора груза
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosCommonServicesPickUp|null $pickUp
-     *
-     * @return self
+     * Плательщик за услугу забора груза.
      */
-    public function setPickUp(?CargoPickupNetworkSubmitRequestCargosCommonServicesPickUp $pickUp) : self
+    public function setPickUp(?CargopickupnetworkServicePayer $pickUp): self
     {
         $this->pickUp = $pickUp;
+
         return $this;
     }
+
     /**
-     * Плательщик за услугу перевозки
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosCommonServicesTransporting|null
+     * Плательщик за услугу перевозки.
      */
-    public function getTransporting() : ?CargoPickupNetworkSubmitRequestCargosCommonServicesTransporting
+    public function getTransporting(): ?CargopickupnetworkServicePayer
     {
         return $this->transporting;
     }
+
     /**
-     * Плательщик за услугу перевозки
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosCommonServicesTransporting|null $transporting
-     *
-     * @return self
+     * Плательщик за услугу перевозки.
      */
-    public function setTransporting(?CargoPickupNetworkSubmitRequestCargosCommonServicesTransporting $transporting) : self
+    public function setTransporting(?CargopickupnetworkServicePayer $transporting): self
     {
         $this->transporting = $transporting;
+
         return $this;
     }
 }

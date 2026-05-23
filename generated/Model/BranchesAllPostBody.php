@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesAllPostBody
 {
     /**
-     * Идентификатор филиала (параметры ниже будет проигнорированы)
+     * Идентификатор филиала (параметры ниже будет проигнорированы).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchId;
+
     /**
-     * Идентификатор отделения (параметр ниже будет проигнорирован)
+     * Идентификатор отделения (параметр ниже будет проигнорирован).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $divisionId;
+
     /**
-     * Идентификатор склада
+     * Идентификатор склада.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseId;
+
     /**
-     * Идентификатор филиала (параметры ниже будет проигнорированы)
-     *
-     * @return string|null
+     * Идентификатор филиала (параметры ниже будет проигнорированы).
      */
-    public function getBranchId() : ?string
+    public function getBranchId(): ?string
     {
         return $this->branchId;
     }
+
     /**
-     * Идентификатор филиала (параметры ниже будет проигнорированы)
-     *
-     * @param string|null $branchId
-     *
-     * @return self
+     * Идентификатор филиала (параметры ниже будет проигнорированы).
      */
-    public function setBranchId(?string $branchId) : self
+    public function setBranchId(?string $branchId): self
     {
         $this->branchId = $branchId;
+
         return $this;
     }
+
     /**
-     * Идентификатор отделения (параметр ниже будет проигнорирован)
-     *
-     * @return string|null
+     * Идентификатор отделения (параметр ниже будет проигнорирован).
      */
-    public function getDivisionId() : ?string
+    public function getDivisionId(): ?string
     {
         return $this->divisionId;
     }
+
     /**
-     * Идентификатор отделения (параметр ниже будет проигнорирован)
-     *
-     * @param string|null $divisionId
-     *
-     * @return self
+     * Идентификатор отделения (параметр ниже будет проигнорирован).
      */
-    public function setDivisionId(?string $divisionId) : self
+    public function setDivisionId(?string $divisionId): self
     {
         $this->divisionId = $divisionId;
+
         return $this;
     }
+
     /**
-     * Идентификатор склада
-     *
-     * @return string|null
+     * Идентификатор склада.
      */
-    public function getWarehouseId() : ?string
+    public function getWarehouseId(): ?string
     {
         return $this->warehouseId;
     }
+
     /**
-     * Идентификатор склада
-     *
-     * @param string|null $warehouseId
-     *
-     * @return self
+     * Идентификатор склада.
      */
-    public function setWarehouseId(?string $warehouseId) : self
+    public function setWarehouseId(?string $warehouseId): self
     {
         $this->warehouseId = $warehouseId;
+
         return $this;
     }
 }

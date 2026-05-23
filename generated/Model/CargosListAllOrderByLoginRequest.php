@@ -10,79 +10,72 @@ class CargosListAllOrderByLoginRequest
      * @var \DateTime
      */
     protected $dateBegin;
+
     /**
-     * Дата, до
+     * Дата, до.
      *
      * @var \DateTime
      */
     protected $dateEnd;
+
     /**
-     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза
+     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза.
      *
      * @var int
      */
     protected $selectBy;
+
     /**
      * Дата, от
-     *
-     * @return \DateTime
      */
-    public function getDateBegin() : \DateTime
+    public function getDateBegin(): \DateTime
     {
         return $this->dateBegin;
     }
+
     /**
      * Дата, от
-     *
-     * @param \DateTime $dateBegin
-     *
-     * @return self
      */
-    public function setDateBegin(\DateTime $dateBegin) : self
+    public function setDateBegin(\DateTime $dateBegin): self
     {
         $this->dateBegin = $dateBegin;
+
         return $this;
     }
+
     /**
-     * Дата, до
-     *
-     * @return \DateTime
+     * Дата, до.
      */
-    public function getDateEnd() : \DateTime
+    public function getDateEnd(): \DateTime
     {
         return $this->dateEnd;
     }
+
     /**
-     * Дата, до
-     *
-     * @param \DateTime $dateEnd
-     *
-     * @return self
+     * Дата, до.
      */
-    public function setDateEnd(\DateTime $dateEnd) : self
+    public function setDateEnd(\DateTime $dateEnd): self
     {
         $this->dateEnd = $dateEnd;
+
         return $this;
     }
+
     /**
-     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза
-     *
-     * @return int
+     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза.
      */
-    public function getSelectBy() : int
+    public function getSelectBy(): int
     {
         return $this->selectBy;
     }
+
     /**
-     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза
-     *
-     * @param int $selectBy
-     *
-     * @return self
+     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза.
      */
-    public function setSelectBy(int $selectBy) : self
+    public function setSelectBy(int $selectBy): self
     {
         $this->selectBy = $selectBy;
+
         return $this;
     }
 }

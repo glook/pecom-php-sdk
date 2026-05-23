@@ -5,84 +5,81 @@ namespace glook\PecomSdk\Generated\Model;
 class BasicCargoInfo
 {
     /**
-     * Штрих-код груза
+     * Штрих-код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $cargoBarCode;
+
     /**
-     * Код груза
+     * Код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $code;
+
     /**
      * Штрих-коды грузомест
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $positionBarCodes;
+
     /**
-     * Штрих-код груза
-     *
-     * @return string|null
+     * Штрих-код груза.
      */
-    public function getCargoBarCode() : ?string
+    public function getCargoBarCode(): ?string
     {
         return $this->cargoBarCode;
     }
+
     /**
-     * Штрих-код груза
-     *
-     * @param string|null $cargoBarCode
-     *
-     * @return self
+     * Штрих-код груза.
      */
-    public function setCargoBarCode(?string $cargoBarCode) : self
+    public function setCargoBarCode(?string $cargoBarCode): self
     {
         $this->cargoBarCode = $cargoBarCode;
+
         return $this;
     }
+
     /**
-     * Код груза
-     *
-     * @return string|null
+     * Код груза.
      */
-    public function getCode() : ?string
+    public function getCode(): ?string
     {
         return $this->code;
     }
+
     /**
-     * Код груза
-     *
-     * @param string|null $code
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCode(?string $code) : self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
+
         return $this;
     }
+
     /**
      * Штрих-коды грузомест
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getPositionBarCodes() : ?array
+    public function getPositionBarCodes(): ?array
     {
         return $this->positionBarCodes;
     }
+
     /**
      * Штрих-коды грузомест
      *
-     * @param string[]|null $positionBarCodes
-     *
-     * @return self
+     * @param null|string[] $positionBarCodes
      */
-    public function setPositionBarCodes(?array $positionBarCodes) : self
+    public function setPositionBarCodes(?array $positionBarCodes): self
     {
         $this->positionBarCodes = $positionBarCodes;
+
         return $this;
     }
 }

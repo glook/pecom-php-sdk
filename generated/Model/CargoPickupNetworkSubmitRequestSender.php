@@ -5,354 +5,327 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestSender
 {
     /**
-     * Адрес офиса, по которому находятся документы на получения грузов
+     * Адрес офиса, по которому находятся документы на получения грузов.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $addressOffice;
+
     /**
-     * Адрес, по которому необходимо забрать груз
+     * Адрес, по которому необходимо забрать груз.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $addressStock;
+
     /**
-     * Наименование филиала отправителя
+     * Наименование филиала отправителя.
      *
      * @var string
      */
     protected $city;
+
     /**
-     * E-mail
+     * E-mail.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $email;
+
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц
+     * Документ, удостоверяющий личность. Обязательно для физических лиц.
      *
-     * @var CargoPickupNetworkSubmitRequestSenderIdentityCard|null
+     * @var null|CargopickupnetworkIdentityCard
      */
     protected $identityCard;
+
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * Время начала обеденного перерыва
+     * Время начала обеденного перерыва.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $lunchBreakFrom;
+
     /**
-     * Время окончания обеденного перерыва
+     * Время окончания обеденного перерыва.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $lunchBreakTo;
+
     /**
-     * Контактное лицо
+     * Контактное лицо.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $person;
+
     /**
-     * Телефон
+     * Телефон.
      *
      * @var string
      */
     protected $phone;
+
     /**
-     * Наименование отправителя
+     * Наименование отправителя.
      *
      * @var string
      */
     protected $title;
+
     /**
-     * Время начала рабочего дня
+     * Время начала рабочего дня.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $workTimeFrom;
+
     /**
-     * Время окончания рабочего дня
+     * Время окончания рабочего дня.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $workTimeTo;
+
     /**
-     * Адрес офиса, по которому находятся документы на получения грузов
-     *
-     * @return string|null
+     * Адрес офиса, по которому находятся документы на получения грузов.
      */
-    public function getAddressOffice() : ?string
+    public function getAddressOffice(): ?string
     {
         return $this->addressOffice;
     }
+
     /**
-     * Адрес офиса, по которому находятся документы на получения грузов
-     *
-     * @param string|null $addressOffice
-     *
-     * @return self
+     * Адрес офиса, по которому находятся документы на получения грузов.
      */
-    public function setAddressOffice(?string $addressOffice) : self
+    public function setAddressOffice(?string $addressOffice): self
     {
         $this->addressOffice = $addressOffice;
+
         return $this;
     }
+
     /**
-     * Адрес, по которому необходимо забрать груз
-     *
-     * @return string|null
+     * Адрес, по которому необходимо забрать груз.
      */
-    public function getAddressStock() : ?string
+    public function getAddressStock(): ?string
     {
         return $this->addressStock;
     }
+
     /**
-     * Адрес, по которому необходимо забрать груз
-     *
-     * @param string|null $addressStock
-     *
-     * @return self
+     * Адрес, по которому необходимо забрать груз.
      */
-    public function setAddressStock(?string $addressStock) : self
+    public function setAddressStock(?string $addressStock): self
     {
         $this->addressStock = $addressStock;
+
         return $this;
     }
+
     /**
-     * Наименование филиала отправителя
-     *
-     * @return string
+     * Наименование филиала отправителя.
      */
-    public function getCity() : string
+    public function getCity(): string
     {
         return $this->city;
     }
+
     /**
-     * Наименование филиала отправителя
-     *
-     * @param string $city
-     *
-     * @return self
+     * Наименование филиала отправителя.
      */
-    public function setCity(string $city) : self
+    public function setCity(string $city): self
     {
         $this->city = $city;
+
         return $this;
     }
+
     /**
-     * E-mail
-     *
-     * @return string|null
+     * E-mail.
      */
-    public function getEmail() : ?string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
+
     /**
-     * E-mail
-     *
-     * @param string|null $email
-     *
-     * @return self
+     * E-mail.
      */
-    public function setEmail(?string $email) : self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
+
         return $this;
     }
+
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц
-     *
-     * @return CargoPickupNetworkSubmitRequestSenderIdentityCard|null
+     * Документ, удостоверяющий личность. Обязательно для физических лиц.
      */
-    public function getIdentityCard() : ?CargoPickupNetworkSubmitRequestSenderIdentityCard
+    public function getIdentityCard(): ?CargopickupnetworkIdentityCard
     {
         return $this->identityCard;
     }
+
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц
-     *
-     * @param CargoPickupNetworkSubmitRequestSenderIdentityCard|null $identityCard
-     *
-     * @return self
+     * Документ, удостоверяющий личность. Обязательно для физических лиц.
      */
-    public function setIdentityCard(?CargoPickupNetworkSubmitRequestSenderIdentityCard $identityCard) : self
+    public function setIdentityCard(?CargopickupnetworkIdentityCard $identityCard): self
     {
         $this->identityCard = $identityCard;
+
         return $this;
     }
+
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @return string|null
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * Время начала обеденного перерыва
-     *
-     * @return string|null
+     * Время начала обеденного перерыва.
      */
-    public function getLunchBreakFrom() : ?string
+    public function getLunchBreakFrom(): ?string
     {
         return $this->lunchBreakFrom;
     }
+
     /**
-     * Время начала обеденного перерыва
-     *
-     * @param string|null $lunchBreakFrom
-     *
-     * @return self
+     * Время начала обеденного перерыва.
      */
-    public function setLunchBreakFrom(?string $lunchBreakFrom) : self
+    public function setLunchBreakFrom(?string $lunchBreakFrom): self
     {
         $this->lunchBreakFrom = $lunchBreakFrom;
+
         return $this;
     }
+
     /**
-     * Время окончания обеденного перерыва
-     *
-     * @return string|null
+     * Время окончания обеденного перерыва.
      */
-    public function getLunchBreakTo() : ?string
+    public function getLunchBreakTo(): ?string
     {
         return $this->lunchBreakTo;
     }
+
     /**
-     * Время окончания обеденного перерыва
-     *
-     * @param string|null $lunchBreakTo
-     *
-     * @return self
+     * Время окончания обеденного перерыва.
      */
-    public function setLunchBreakTo(?string $lunchBreakTo) : self
+    public function setLunchBreakTo(?string $lunchBreakTo): self
     {
         $this->lunchBreakTo = $lunchBreakTo;
+
         return $this;
     }
+
     /**
-     * Контактное лицо
-     *
-     * @return string|null
+     * Контактное лицо.
      */
-    public function getPerson() : ?string
+    public function getPerson(): ?string
     {
         return $this->person;
     }
+
     /**
-     * Контактное лицо
-     *
-     * @param string|null $person
-     *
-     * @return self
+     * Контактное лицо.
      */
-    public function setPerson(?string $person) : self
+    public function setPerson(?string $person): self
     {
         $this->person = $person;
+
         return $this;
     }
+
     /**
-     * Телефон
-     *
-     * @return string
+     * Телефон.
      */
-    public function getPhone() : string
+    public function getPhone(): string
     {
         return $this->phone;
     }
+
     /**
-     * Телефон
-     *
-     * @param string $phone
-     *
-     * @return self
+     * Телефон.
      */
-    public function setPhone(string $phone) : self
+    public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование отправителя
-     *
-     * @return string
+     * Наименование отправителя.
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
+
     /**
-     * Наименование отправителя
-     *
-     * @param string $title
-     *
-     * @return self
+     * Наименование отправителя.
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
+
     /**
-     * Время начала рабочего дня
-     *
-     * @return string|null
+     * Время начала рабочего дня.
      */
-    public function getWorkTimeFrom() : ?string
+    public function getWorkTimeFrom(): ?string
     {
         return $this->workTimeFrom;
     }
+
     /**
-     * Время начала рабочего дня
-     *
-     * @param string|null $workTimeFrom
-     *
-     * @return self
+     * Время начала рабочего дня.
      */
-    public function setWorkTimeFrom(?string $workTimeFrom) : self
+    public function setWorkTimeFrom(?string $workTimeFrom): self
     {
         $this->workTimeFrom = $workTimeFrom;
+
         return $this;
     }
+
     /**
-     * Время окончания рабочего дня
-     *
-     * @return string|null
+     * Время окончания рабочего дня.
      */
-    public function getWorkTimeTo() : ?string
+    public function getWorkTimeTo(): ?string
     {
         return $this->workTimeTo;
     }
+
     /**
-     * Время окончания рабочего дня
-     *
-     * @param string|null $workTimeTo
-     *
-     * @return self
+     * Время окончания рабочего дня.
      */
-    public function setWorkTimeTo(?string $workTimeTo) : self
+    public function setWorkTimeTo(?string $workTimeTo): self
     {
         $this->workTimeTo = $workTimeTo;
+
         return $this;
     }
 }

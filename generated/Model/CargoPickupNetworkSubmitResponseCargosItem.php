@@ -5,192 +5,185 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitResponseCargosItem
 {
     /**
-     * Значение для штрих-кода в формате EAN-13
+     * Значение для штрих-кода в формате EAN-13.
      *
      * @var string
      */
     protected $barcode;
+
     /**
-     * Код груза
+     * Код груза.
      *
      * @var string
      */
     protected $cargoCode;
+
     /**
-     * Штрих-коды клиента
+     * Штрих-коды клиента.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $clientPositionsBarcode;
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
+     * Произвольное значение для синхронизации на стороне клиента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $customerCorrelation;
+
     /**
-     * Номер заказа
+     * Номер заказа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $orderNumber;
+
     /**
-     * Информация о местах
+     * Информация о местах.
      *
-     * @var CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]|null
+     * @var null|CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]
      */
     protected $positions;
+
     /**
-     * Тип штрих-кода
+     * Тип штрих-кода.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $typeClientBarcode;
+
     /**
-     * Значение для штрих-кода в формате EAN-13
-     *
-     * @return string
+     * Значение для штрих-кода в формате EAN-13.
      */
-    public function getBarcode() : string
+    public function getBarcode(): string
     {
         return $this->barcode;
     }
+
     /**
-     * Значение для штрих-кода в формате EAN-13
-     *
-     * @param string $barcode
-     *
-     * @return self
+     * Значение для штрих-кода в формате EAN-13.
      */
-    public function setBarcode(string $barcode) : self
+    public function setBarcode(string $barcode): self
     {
         $this->barcode = $barcode;
+
         return $this;
     }
+
     /**
-     * Код груза
-     *
-     * @return string
+     * Код груза.
      */
-    public function getCargoCode() : string
+    public function getCargoCode(): string
     {
         return $this->cargoCode;
     }
+
     /**
-     * Код груза
-     *
-     * @param string $cargoCode
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoCode(string $cargoCode) : self
+    public function setCargoCode(string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
-     * Штрих-коды клиента
+     * Штрих-коды клиента.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getClientPositionsBarcode() : ?array
+    public function getClientPositionsBarcode(): ?array
     {
         return $this->clientPositionsBarcode;
     }
+
     /**
-     * Штрих-коды клиента
+     * Штрих-коды клиента.
      *
-     * @param string[]|null $clientPositionsBarcode
-     *
-     * @return self
+     * @param null|string[] $clientPositionsBarcode
      */
-    public function setClientPositionsBarcode(?array $clientPositionsBarcode) : self
+    public function setClientPositionsBarcode(?array $clientPositionsBarcode): self
     {
         $this->clientPositionsBarcode = $clientPositionsBarcode;
+
         return $this;
     }
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
-     *
-     * @return string|null
+     * Произвольное значение для синхронизации на стороне клиента.
      */
-    public function getCustomerCorrelation() : ?string
+    public function getCustomerCorrelation(): ?string
     {
         return $this->customerCorrelation;
     }
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
-     *
-     * @param string|null $customerCorrelation
-     *
-     * @return self
+     * Произвольное значение для синхронизации на стороне клиента.
      */
-    public function setCustomerCorrelation(?string $customerCorrelation) : self
+    public function setCustomerCorrelation(?string $customerCorrelation): self
     {
         $this->customerCorrelation = $customerCorrelation;
+
         return $this;
     }
+
     /**
-     * Номер заказа
-     *
-     * @return string|null
+     * Номер заказа.
      */
-    public function getOrderNumber() : ?string
+    public function getOrderNumber(): ?string
     {
         return $this->orderNumber;
     }
+
     /**
-     * Номер заказа
-     *
-     * @param string|null $orderNumber
-     *
-     * @return self
+     * Номер заказа.
      */
-    public function setOrderNumber(?string $orderNumber) : self
+    public function setOrderNumber(?string $orderNumber): self
     {
         $this->orderNumber = $orderNumber;
+
         return $this;
     }
+
     /**
-     * Информация о местах
+     * Информация о местах.
      *
-     * @return CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]|null
+     * @return null|CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]
      */
-    public function getPositions() : ?array
+    public function getPositions(): ?array
     {
         return $this->positions;
     }
+
     /**
-     * Информация о местах
+     * Информация о местах.
      *
-     * @param CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]|null $positions
-     *
-     * @return self
+     * @param null|CargoPickupNetworkSubmitResponseCargosItemPositionsItem[] $positions
      */
-    public function setPositions(?array $positions) : self
+    public function setPositions(?array $positions): self
     {
         $this->positions = $positions;
+
         return $this;
     }
+
     /**
-     * Тип штрих-кода
-     *
-     * @return string|null
+     * Тип штрих-кода.
      */
-    public function getTypeClientBarcode() : ?string
+    public function getTypeClientBarcode(): ?string
     {
         return $this->typeClientBarcode;
     }
+
     /**
-     * Тип штрих-кода
-     *
-     * @param string|null $typeClientBarcode
-     *
-     * @return self
+     * Тип штрих-кода.
      */
-    public function setTypeClientBarcode(?string $typeClientBarcode) : self
+    public function setTypeClientBarcode(?string $typeClientBarcode): self
     {
         $this->typeClientBarcode = $typeClientBarcode;
+
         return $this;
     }
 }

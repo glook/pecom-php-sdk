@@ -5,84 +5,81 @@ namespace glook\PecomSdk\Generated\Model;
 class NotificationCargoSubscribeRequest
 {
     /**
-     * Коды грузов
+     * Коды грузов.
      *
      * @var string[]
      */
     protected $cargoCodes;
+
     /**
-     * email для уведомления, поле необязательно, если указано значение поля `phone`
+     * email для уведомления, поле необязательно, если указано значение поля `phone`.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $email;
+
     /**
-     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`
+     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $phone;
+
     /**
-     * Коды грузов
+     * Коды грузов.
      *
      * @return string[]
      */
-    public function getCargoCodes() : array
+    public function getCargoCodes(): array
     {
         return $this->cargoCodes;
     }
+
     /**
-     * Коды грузов
+     * Коды грузов.
      *
      * @param string[] $cargoCodes
-     *
-     * @return self
      */
-    public function setCargoCodes(array $cargoCodes) : self
+    public function setCargoCodes(array $cargoCodes): self
     {
         $this->cargoCodes = $cargoCodes;
+
         return $this;
     }
+
     /**
-     * email для уведомления, поле необязательно, если указано значение поля `phone`
-     *
-     * @return string|null
+     * email для уведомления, поле необязательно, если указано значение поля `phone`.
      */
-    public function getEmail() : ?string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
+
     /**
-     * email для уведомления, поле необязательно, если указано значение поля `phone`
-     *
-     * @param string|null $email
-     *
-     * @return self
+     * email для уведомления, поле необязательно, если указано значение поля `phone`.
      */
-    public function setEmail(?string $email) : self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
+
         return $this;
     }
+
     /**
-     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`
-     *
-     * @return string|null
+     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`.
      */
-    public function getPhone() : ?string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
+
     /**
-     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`
-     *
-     * @param string|null $phone
-     *
-     * @return self
+     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`.
      */
-    public function setPhone(?string $phone) : self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
 }

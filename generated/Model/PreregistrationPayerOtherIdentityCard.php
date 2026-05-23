@@ -5,138 +5,127 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationPayerOtherIdentityCard
 {
     /**
-     * Дата выдачи документа, удостоверяющего личность
+     * Дата выдачи документа, удостоверяющего личность.
      *
-     * @var \DateTime|null
+     * @var null|\DateTime
      */
     protected $date;
+
     /**
-     * служебное поле для других документов
+     * служебное поле для других документов.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $note;
+
     /**
      * Номер
      *
-     * @var string|null
+     * @var null|string
      */
     protected $number;
+
     /**
-     * Серия
+     * Серия.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $series;
+
     /**
-     * тип документа. Возможные значения: 1 - Паспорт (прочие страны), 2 - Разрешение на временное проживание, 3 - Водительское удостоверение, 4 - Вид на жительство, 6 - Удостоверение беженца, 10 - Паспорт гражданина РФ
+     * тип документа. Возможные значения: 1 - Паспорт (прочие страны), 2 - Разрешение на временное проживание, 3 - Водительское удостоверение, 4 - Вид на жительство, 6 - Удостоверение беженца, 10 - Паспорт гражданина РФ.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $type;
+
     /**
-     * Дата выдачи документа, удостоверяющего личность
-     *
-     * @return \DateTime|null
+     * Дата выдачи документа, удостоверяющего личность.
      */
-    public function getDate() : ?\DateTime
+    public function getDate(): ?\DateTime
     {
         return $this->date;
     }
+
     /**
-     * Дата выдачи документа, удостоверяющего личность
-     *
-     * @param \DateTime|null $date
-     *
-     * @return self
+     * Дата выдачи документа, удостоверяющего личность.
      */
-    public function setDate(?\DateTime $date) : self
+    public function setDate(?\DateTime $date): self
     {
         $this->date = $date;
+
         return $this;
     }
+
     /**
-     * служебное поле для других документов
-     *
-     * @return string|null
+     * служебное поле для других документов.
      */
-    public function getNote() : ?string
+    public function getNote(): ?string
     {
         return $this->note;
     }
+
     /**
-     * служебное поле для других документов
-     *
-     * @param string|null $note
-     *
-     * @return self
+     * служебное поле для других документов.
      */
-    public function setNote(?string $note) : self
+    public function setNote(?string $note): self
     {
         $this->note = $note;
+
         return $this;
     }
+
     /**
      * Номер
-     *
-     * @return string|null
      */
-    public function getNumber() : ?string
+    public function getNumber(): ?string
     {
         return $this->number;
     }
+
     /**
      * Номер
-     *
-     * @param string|null $number
-     *
-     * @return self
      */
-    public function setNumber(?string $number) : self
+    public function setNumber(?string $number): self
     {
         $this->number = $number;
+
         return $this;
     }
+
     /**
-     * Серия
-     *
-     * @return string|null
+     * Серия.
      */
-    public function getSeries() : ?string
+    public function getSeries(): ?string
     {
         return $this->series;
     }
+
     /**
-     * Серия
-     *
-     * @param string|null $series
-     *
-     * @return self
+     * Серия.
      */
-    public function setSeries(?string $series) : self
+    public function setSeries(?string $series): self
     {
         $this->series = $series;
+
         return $this;
     }
+
     /**
-     * тип документа. Возможные значения: 1 - Паспорт (прочие страны), 2 - Разрешение на временное проживание, 3 - Водительское удостоверение, 4 - Вид на жительство, 6 - Удостоверение беженца, 10 - Паспорт гражданина РФ
-     *
-     * @return int|null
+     * тип документа. Возможные значения: 1 - Паспорт (прочие страны), 2 - Разрешение на временное проживание, 3 - Водительское удостоверение, 4 - Вид на жительство, 6 - Удостоверение беженца, 10 - Паспорт гражданина РФ.
      */
-    public function getType() : ?int
+    public function getType(): ?int
     {
         return $this->type;
     }
+
     /**
-     * тип документа. Возможные значения: 1 - Паспорт (прочие страны), 2 - Разрешение на временное проживание, 3 - Водительское удостоверение, 4 - Вид на жительство, 6 - Удостоверение беженца, 10 - Паспорт гражданина РФ
-     *
-     * @param int|null $type
-     *
-     * @return self
+     * тип документа. Возможные значения: 1 - Паспорт (прочие страны), 2 - Разрешение на временное проживание, 3 - Водительское удостоверение, 4 - Вид на жительство, 6 - Удостоверение беженца, 10 - Паспорт гражданина РФ.
      */
-    public function setType(?int $type) : self
+    public function setType(?int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

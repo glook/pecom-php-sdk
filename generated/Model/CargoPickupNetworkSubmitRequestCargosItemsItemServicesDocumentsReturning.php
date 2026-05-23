@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
 {
     /**
-     * Заказана ли услуга
+     * Заказана ли услуга.
      *
      * @var bool
      */
     protected $enabled;
+
     /**
-     * Плательщик
+     * Плательщик.
      *
-     * @var CargopickupnetworkPayer|null
+     * @var null|CargopickupnetworkPayer
      */
     protected $payer;
+
     /**
-     * Заказана ли услуга
-     *
-     * @return bool
+     * Заказана ли услуга.
      */
-    public function getEnabled() : bool
+    public function getEnabled(): bool
     {
         return $this->enabled;
     }
+
     /**
-     * Заказана ли услуга
-     *
-     * @param bool $enabled
-     *
-     * @return self
+     * Заказана ли услуга.
      */
-    public function setEnabled(bool $enabled) : self
+    public function setEnabled(bool $enabled): self
     {
         $this->enabled = $enabled;
+
         return $this;
     }
+
     /**
-     * Плательщик
-     *
-     * @return CargopickupnetworkPayer|null
+     * Плательщик.
      */
-    public function getPayer() : ?CargopickupnetworkPayer
+    public function getPayer(): ?CargopickupnetworkPayer
     {
         return $this->payer;
     }
+
     /**
-     * Плательщик
-     *
-     * @param CargopickupnetworkPayer|null $payer
-     *
-     * @return self
+     * Плательщик.
      */
-    public function setPayer(?CargopickupnetworkPayer $payer) : self
+    public function setPayer(?CargopickupnetworkPayer $payer): self
     {
         $this->payer = $payer;
+
         return $this;
     }
 }

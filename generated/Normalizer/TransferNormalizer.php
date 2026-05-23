@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\Transfer;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class TransferNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\Transfer';
+        return 'glook\PecomSdk\Generated\Model\Transfer' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\Transfer';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\Transfer' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,61 +36,56 @@ class TransferNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\Transfer();
+        $object = new Transfer();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('costTotal', $data) && $data['costTotal'] !== null) {
+        if (\array_key_exists('costTotal', $data) && null !== $data['costTotal']) {
             $object->setCostTotal($data['costTotal']);
-        }
-        elseif (\array_key_exists('costTotal', $data) && $data['costTotal'] === null) {
+        } elseif (\array_key_exists('costTotal', $data) && null === $data['costTotal']) {
             $object->setCostTotal(null);
         }
-        if (\array_key_exists('errorMessage', $data) && $data['errorMessage'] !== null) {
+        if (\array_key_exists('errorMessage', $data) && null !== $data['errorMessage']) {
             $object->setErrorMessage($data['errorMessage']);
-        }
-        elseif (\array_key_exists('errorMessage', $data) && $data['errorMessage'] === null) {
+        } elseif (\array_key_exists('errorMessage', $data) && null === $data['errorMessage']) {
             $object->setErrorMessage(null);
         }
-        if (\array_key_exists('estDeliveryTime', $data) && $data['estDeliveryTime'] !== null) {
+        if (\array_key_exists('estDeliveryTime', $data) && null !== $data['estDeliveryTime']) {
             $object->setEstDeliveryTime($data['estDeliveryTime']);
-        }
-        elseif (\array_key_exists('estDeliveryTime', $data) && $data['estDeliveryTime'] === null) {
+        } elseif (\array_key_exists('estDeliveryTime', $data) && null === $data['estDeliveryTime']) {
             $object->setEstDeliveryTime(null);
         }
-        if (\array_key_exists('hasError', $data) && $data['hasError'] !== null) {
+        if (\array_key_exists('hasError', $data) && null !== $data['hasError']) {
             $object->setHasError($data['hasError']);
-        }
-        elseif (\array_key_exists('hasError', $data) && $data['hasError'] === null) {
+        } elseif (\array_key_exists('hasError', $data) && null === $data['hasError']) {
             $object->setHasError(null);
         }
-        if (\array_key_exists('services', $data) && $data['services'] !== null) {
-            $values = array();
+        if (\array_key_exists('services', $data) && null !== $data['services']) {
+            $values = [];
             foreach ($data['services'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CalculatorServiceItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CalculatorServiceItem', 'json', $context);
             }
             $object->setServices($values);
-        }
-        elseif (\array_key_exists('services', $data) && $data['services'] === null) {
+        } elseif (\array_key_exists('services', $data) && null === $data['services']) {
             $object->setServices(null);
         }
-        if (\array_key_exists('transportingTypes', $data) && $data['transportingTypes'] !== null) {
+        if (\array_key_exists('transportingTypes', $data) && null !== $data['transportingTypes']) {
             $object->setTransportingTypes($data['transportingTypes']);
-        }
-        elseif (\array_key_exists('transportingTypes', $data) && $data['transportingTypes'] === null) {
+        } elseif (\array_key_exists('transportingTypes', $data) && null === $data['transportingTypes']) {
             $object->setTransportingTypes(null);
         }
-        if (\array_key_exists('type', $data) && $data['type'] !== null) {
+        if (\array_key_exists('type', $data) && null !== $data['type']) {
             $object->setType($data['type']);
-        }
-        elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+        } elseif (\array_key_exists('type', $data) && null === $data['type']) {
             $object->setType(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCostTotal()) {
             $data['costTotal'] = $object->getCostTotal();
         }
@@ -100,7 +99,7 @@ class TransferNormalizer implements DenormalizerInterface, NormalizerInterface, 
             $data['hasError'] = $object->getHasError();
         }
         if (null !== $object->getServices()) {
-            $values = array();
+            $values = [];
             foreach ($object->getServices() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -112,6 +111,7 @@ class TransferNormalizer implements DenormalizerInterface, NormalizerInterface, 
         if (null !== $object->getType()) {
             $data['type'] = $object->getType();
         }
+
         return $data;
     }
 }

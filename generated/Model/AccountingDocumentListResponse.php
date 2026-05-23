@@ -5,30 +5,31 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingDocumentListResponse
 {
     /**
-     * Список документов
+     * Список документов.
      *
-     * @var AccountingDocument[]|null
+     * @var null|AccountingDocument[]
      */
     protected $documents;
+
     /**
-     * Список документов
+     * Список документов.
      *
-     * @return AccountingDocument[]|null
+     * @return null|AccountingDocument[]
      */
-    public function getDocuments() : ?array
+    public function getDocuments(): ?array
     {
         return $this->documents;
     }
+
     /**
-     * Список документов
+     * Список документов.
      *
-     * @param AccountingDocument[]|null $documents
-     *
-     * @return self
+     * @param null|AccountingDocument[] $documents
      */
-    public function setDocuments(?array $documents) : self
+    public function setDocuments(?array $documents): self
     {
         $this->documents = $documents;
+
         return $this;
     }
 }

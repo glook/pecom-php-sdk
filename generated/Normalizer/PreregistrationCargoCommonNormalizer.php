@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\PreregistrationCargoCommon;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCargoCommon';
+        return 'glook\PecomSdk\Generated\Model\PreregistrationCargoCommon' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCargoCommon';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\PreregistrationCargoCommon' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,103 +36,89 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\PreregistrationCargoCommon();
+        $object = new PreregistrationCargoCommon();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('accompanyingDocuments', $data) && $data['accompanyingDocuments'] !== null) {
+        if (\array_key_exists('accompanyingDocuments', $data) && null !== $data['accompanyingDocuments']) {
             $object->setAccompanyingDocuments($data['accompanyingDocuments']);
-        }
-        elseif (\array_key_exists('accompanyingDocuments', $data) && $data['accompanyingDocuments'] === null) {
+        } elseif (\array_key_exists('accompanyingDocuments', $data) && null === $data['accompanyingDocuments']) {
             $object->setAccompanyingDocuments(null);
         }
-        if (\array_key_exists('accompanyingDocumentsDate', $data) && $data['accompanyingDocumentsDate'] !== null) {
+        if (\array_key_exists('accompanyingDocumentsDate', $data) && null !== $data['accompanyingDocumentsDate']) {
             $object->setAccompanyingDocumentsDate(\DateTime::createFromFormat('Y-m-d', $data['accompanyingDocumentsDate'])->setTime(0, 0, 0));
-        }
-        elseif (\array_key_exists('accompanyingDocumentsDate', $data) && $data['accompanyingDocumentsDate'] === null) {
+        } elseif (\array_key_exists('accompanyingDocumentsDate', $data) && null === $data['accompanyingDocumentsDate']) {
             $object->setAccompanyingDocumentsDate(null);
         }
-        if (\array_key_exists('accompanyingDocumentsName', $data) && $data['accompanyingDocumentsName'] !== null) {
+        if (\array_key_exists('accompanyingDocumentsName', $data) && null !== $data['accompanyingDocumentsName']) {
             $object->setAccompanyingDocumentsName($data['accompanyingDocumentsName']);
-        }
-        elseif (\array_key_exists('accompanyingDocumentsName', $data) && $data['accompanyingDocumentsName'] === null) {
+        } elseif (\array_key_exists('accompanyingDocumentsName', $data) && null === $data['accompanyingDocumentsName']) {
             $object->setAccompanyingDocumentsName(null);
         }
-        if (\array_key_exists('accompanyingDocumentsNumber', $data) && $data['accompanyingDocumentsNumber'] !== null) {
+        if (\array_key_exists('accompanyingDocumentsNumber', $data) && null !== $data['accompanyingDocumentsNumber']) {
             $object->setAccompanyingDocumentsNumber($data['accompanyingDocumentsNumber']);
-        }
-        elseif (\array_key_exists('accompanyingDocumentsNumber', $data) && $data['accompanyingDocumentsNumber'] === null) {
+        } elseif (\array_key_exists('accompanyingDocumentsNumber', $data) && null === $data['accompanyingDocumentsNumber']) {
             $object->setAccompanyingDocumentsNumber(null);
         }
-        if (\array_key_exists('accompanyingDocumentsNumberTTN', $data) && $data['accompanyingDocumentsNumberTTN'] !== null) {
+        if (\array_key_exists('accompanyingDocumentsNumberTTN', $data) && null !== $data['accompanyingDocumentsNumberTTN']) {
             $object->setAccompanyingDocumentsNumberTTN($data['accompanyingDocumentsNumberTTN']);
-        }
-        elseif (\array_key_exists('accompanyingDocumentsNumberTTN', $data) && $data['accompanyingDocumentsNumberTTN'] === null) {
+        } elseif (\array_key_exists('accompanyingDocumentsNumberTTN', $data) && null === $data['accompanyingDocumentsNumberTTN']) {
             $object->setAccompanyingDocumentsNumberTTN(null);
         }
-        if (\array_key_exists('cargoPlaceList', $data) && $data['cargoPlaceList'] !== null) {
-            $values = array();
+        if (\array_key_exists('cargoPlaceList', $data) && null !== $data['cargoPlaceList']) {
+            $values = [];
             foreach ($data['cargoPlaceList'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\PreregistrationCargoPlace', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\PreregistrationCargoPlace', 'json', $context);
             }
             $object->setCargoPlaceList($values);
-        }
-        elseif (\array_key_exists('cargoPlaceList', $data) && $data['cargoPlaceList'] === null) {
+        } elseif (\array_key_exists('cargoPlaceList', $data) && null === $data['cargoPlaceList']) {
             $object->setCargoPlaceList(null);
         }
-        if (\array_key_exists('clientPositionsBarcode', $data) && $data['clientPositionsBarcode'] !== null) {
-            $values_1 = array();
+        if (\array_key_exists('clientPositionsBarcode', $data) && null !== $data['clientPositionsBarcode']) {
+            $values_1 = [];
             foreach ($data['clientPositionsBarcode'] as $value_1) {
                 $values_1[] = $value_1;
             }
             $object->setClientPositionsBarcode($values_1);
-        }
-        elseif (\array_key_exists('clientPositionsBarcode', $data) && $data['clientPositionsBarcode'] === null) {
+        } elseif (\array_key_exists('clientPositionsBarcode', $data) && null === $data['clientPositionsBarcode']) {
             $object->setClientPositionsBarcode(null);
         }
-        if (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] !== null) {
+        if (\array_key_exists('customerCorrelation', $data) && null !== $data['customerCorrelation']) {
             $object->setCustomerCorrelation($data['customerCorrelation']);
-        }
-        elseif (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] === null) {
+        } elseif (\array_key_exists('customerCorrelation', $data) && null === $data['customerCorrelation']) {
             $object->setCustomerCorrelation(null);
         }
         if (\array_key_exists('description', $data)) {
             $object->setDescription($data['description']);
         }
-        if (\array_key_exists('height', $data) && $data['height'] !== null) {
+        if (\array_key_exists('height', $data) && null !== $data['height']) {
             $object->setHeight($data['height']);
-        }
-        elseif (\array_key_exists('height', $data) && $data['height'] === null) {
+        } elseif (\array_key_exists('height', $data) && null === $data['height']) {
             $object->setHeight(null);
         }
-        if (\array_key_exists('length', $data) && $data['length'] !== null) {
+        if (\array_key_exists('length', $data) && null !== $data['length']) {
             $object->setLength($data['length']);
-        }
-        elseif (\array_key_exists('length', $data) && $data['length'] === null) {
+        } elseif (\array_key_exists('length', $data) && null === $data['length']) {
             $object->setLength(null);
         }
-        if (\array_key_exists('orderNumber', $data) && $data['orderNumber'] !== null) {
+        if (\array_key_exists('orderNumber', $data) && null !== $data['orderNumber']) {
             $object->setOrderNumber($data['orderNumber']);
-        }
-        elseif (\array_key_exists('orderNumber', $data) && $data['orderNumber'] === null) {
+        } elseif (\array_key_exists('orderNumber', $data) && null === $data['orderNumber']) {
             $object->setOrderNumber(null);
         }
-        if (\array_key_exists('palletCount', $data) && $data['palletCount'] !== null) {
+        if (\array_key_exists('palletCount', $data) && null !== $data['palletCount']) {
             $object->setPalletCount($data['palletCount']);
-        }
-        elseif (\array_key_exists('palletCount', $data) && $data['palletCount'] === null) {
+        } elseif (\array_key_exists('palletCount', $data) && null === $data['palletCount']) {
             $object->setPalletCount(null);
         }
-        if (\array_key_exists('palletType', $data) && $data['palletType'] !== null) {
+        if (\array_key_exists('palletType', $data) && null !== $data['palletType']) {
             $object->setPalletType($data['palletType']);
-        }
-        elseif (\array_key_exists('palletType', $data) && $data['palletType'] === null) {
+        } elseif (\array_key_exists('palletType', $data) && null === $data['palletType']) {
             $object->setPalletType(null);
         }
-        if (\array_key_exists('paymentForm', $data) && $data['paymentForm'] !== null) {
+        if (\array_key_exists('paymentForm', $data) && null !== $data['paymentForm']) {
             $object->setPaymentForm($data['paymentForm']);
-        }
-        elseif (\array_key_exists('paymentForm', $data) && $data['paymentForm'] === null) {
+        } elseif (\array_key_exists('paymentForm', $data) && null === $data['paymentForm']) {
             $object->setPaymentForm(null);
         }
         if (\array_key_exists('positionsCount', $data)) {
@@ -137,35 +127,33 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);
         }
-        if (\array_key_exists('typeClientBarcode', $data) && $data['typeClientBarcode'] !== null) {
+        if (\array_key_exists('typeClientBarcode', $data) && null !== $data['typeClientBarcode']) {
             $object->setTypeClientBarcode($data['typeClientBarcode']);
-        }
-        elseif (\array_key_exists('typeClientBarcode', $data) && $data['typeClientBarcode'] === null) {
+        } elseif (\array_key_exists('typeClientBarcode', $data) && null === $data['typeClientBarcode']) {
             $object->setTypeClientBarcode(null);
         }
-        if (\array_key_exists('volume', $data) && $data['volume'] !== null) {
+        if (\array_key_exists('volume', $data) && null !== $data['volume']) {
             $object->setVolume($data['volume']);
-        }
-        elseif (\array_key_exists('volume', $data) && $data['volume'] === null) {
+        } elseif (\array_key_exists('volume', $data) && null === $data['volume']) {
             $object->setVolume(null);
         }
-        if (\array_key_exists('weight', $data) && $data['weight'] !== null) {
+        if (\array_key_exists('weight', $data) && null !== $data['weight']) {
             $object->setWeight($data['weight']);
-        }
-        elseif (\array_key_exists('weight', $data) && $data['weight'] === null) {
+        } elseif (\array_key_exists('weight', $data) && null === $data['weight']) {
             $object->setWeight(null);
         }
-        if (\array_key_exists('width', $data) && $data['width'] !== null) {
+        if (\array_key_exists('width', $data) && null !== $data['width']) {
             $object->setWidth($data['width']);
-        }
-        elseif (\array_key_exists('width', $data) && $data['width'] === null) {
+        } elseif (\array_key_exists('width', $data) && null === $data['width']) {
             $object->setWidth(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getAccompanyingDocuments()) {
             $data['accompanyingDocuments'] = $object->getAccompanyingDocuments();
         }
@@ -182,14 +170,14 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
             $data['accompanyingDocumentsNumberTTN'] = $object->getAccompanyingDocumentsNumberTTN();
         }
         if (null !== $object->getCargoPlaceList()) {
-            $values = array();
+            $values = [];
             foreach ($object->getCargoPlaceList() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
             $data['cargoPlaceList'] = $values;
         }
         if (null !== $object->getClientPositionsBarcode()) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($object->getClientPositionsBarcode() as $value_1) {
                 $values_1[] = $value_1;
             }
@@ -231,6 +219,7 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getWidth()) {
             $data['width'] = $object->getWidth();
         }
+
         return $data;
     }
 }

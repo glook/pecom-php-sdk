@@ -5,489 +5,444 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationPickUpDetails
 {
     /**
-     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно
+     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $addressForDocuments;
+
     /**
-     * Комментарий к забору документов по другому адресу
+     * Комментарий к забору документов по другому адресу.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $addressForDocumentsComment;
+
     /**
      * Произвольная пометка для операции забора, поле необязательно. Если для получения груза нужно предварительно получить документы по другому адресу, то в данном поле дополнительно необходимо указать: "Требуется забор документов на другом адресе".
      *
-     * @var string|null
+     * @var null|string
      */
     protected $addressStockComment;
+
     /**
-     * Метры переноски груза
+     * Метры переноски груза.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $carryingDistance;
+
     /**
-     * 
-     *
-     * @var PreregistrationCoordinates|null
+     * @var null|PreregistrationCoordinates
      */
     protected $coordinates;
+
     /**
-     * Время начала  перерыва, поле необязательно
+     * Время начала  перерыва, поле необязательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $dinnerFrom;
+
     /**
-     * Время окончания перерыва, поле необязательно
+     * Время окончания перерыва, поле необязательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $dinnerTo;
+
     /**
      * Этаж, с которого необходимо забрать груз, поле необязательно.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $floor;
+
     /**
-     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента
+     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isAuthorityNeeded;
+
     /**
      * Есть лифт
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isElevator;
+
     /**
      * Необходима погрузка с использованием Гидролифта  силами «ПЭК», поле необязательно. По умолчанию false. Услуга предоставляется только в городах Москва, Санкт-Петербург и Калининград.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isHydrolift;
+
     /**
      * Необходима погрузка силами «ПЭК», поле необязательно. По умолчанию false.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isLoading;
+
     /**
-     * Необходима открытая машина, поле необязательно, если не указано считается равным false
+     * Необходима открытая машина, поле необязательно, если не указано считается равным false.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isOpenCar;
+
     /**
-     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false
+     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isSideLoad;
+
     /**
-     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false
+     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isSpecialEquipment;
+
     /**
-     * Необходима растентовка, поле необязательно, если не указано считается равным false
+     * Необходима растентовка, поле необязательно, если не указано считается равным false.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isUncovered;
+
     /**
-     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
+     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
      *
-     * @var string|null
+     * @var null|string
      */
     protected $periodTimeFrom;
+
     /**
-     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
+     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
      *
-     * @var string|null
+     * @var null|string
      */
     protected $periodTimeTo;
+
     /**
-     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно
-     *
-     * @return string|null
+     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно.
      */
-    public function getAddressForDocuments() : ?string
+    public function getAddressForDocuments(): ?string
     {
         return $this->addressForDocuments;
     }
+
     /**
-     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно
-     *
-     * @param string|null $addressForDocuments
-     *
-     * @return self
+     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно.
      */
-    public function setAddressForDocuments(?string $addressForDocuments) : self
+    public function setAddressForDocuments(?string $addressForDocuments): self
     {
         $this->addressForDocuments = $addressForDocuments;
+
         return $this;
     }
+
     /**
-     * Комментарий к забору документов по другому адресу
-     *
-     * @return string|null
+     * Комментарий к забору документов по другому адресу.
      */
-    public function getAddressForDocumentsComment() : ?string
+    public function getAddressForDocumentsComment(): ?string
     {
         return $this->addressForDocumentsComment;
     }
+
     /**
-     * Комментарий к забору документов по другому адресу
-     *
-     * @param string|null $addressForDocumentsComment
-     *
-     * @return self
+     * Комментарий к забору документов по другому адресу.
      */
-    public function setAddressForDocumentsComment(?string $addressForDocumentsComment) : self
+    public function setAddressForDocumentsComment(?string $addressForDocumentsComment): self
     {
         $this->addressForDocumentsComment = $addressForDocumentsComment;
+
         return $this;
     }
+
     /**
      * Произвольная пометка для операции забора, поле необязательно. Если для получения груза нужно предварительно получить документы по другому адресу, то в данном поле дополнительно необходимо указать: "Требуется забор документов на другом адресе".
-     *
-     * @return string|null
      */
-    public function getAddressStockComment() : ?string
+    public function getAddressStockComment(): ?string
     {
         return $this->addressStockComment;
     }
+
     /**
      * Произвольная пометка для операции забора, поле необязательно. Если для получения груза нужно предварительно получить документы по другому адресу, то в данном поле дополнительно необходимо указать: "Требуется забор документов на другом адресе".
-     *
-     * @param string|null $addressStockComment
-     *
-     * @return self
      */
-    public function setAddressStockComment(?string $addressStockComment) : self
+    public function setAddressStockComment(?string $addressStockComment): self
     {
         $this->addressStockComment = $addressStockComment;
+
         return $this;
     }
+
     /**
-     * Метры переноски груза
-     *
-     * @return int|null
+     * Метры переноски груза.
      */
-    public function getCarryingDistance() : ?int
+    public function getCarryingDistance(): ?int
     {
         return $this->carryingDistance;
     }
+
     /**
-     * Метры переноски груза
-     *
-     * @param int|null $carryingDistance
-     *
-     * @return self
+     * Метры переноски груза.
      */
-    public function setCarryingDistance(?int $carryingDistance) : self
+    public function setCarryingDistance(?int $carryingDistance): self
     {
         $this->carryingDistance = $carryingDistance;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return PreregistrationCoordinates|null
-     */
-    public function getCoordinates() : ?PreregistrationCoordinates
+
+    public function getCoordinates(): ?PreregistrationCoordinates
     {
         return $this->coordinates;
     }
-    /**
-     * 
-     *
-     * @param PreregistrationCoordinates|null $coordinates
-     *
-     * @return self
-     */
-    public function setCoordinates(?PreregistrationCoordinates $coordinates) : self
+
+    public function setCoordinates(?PreregistrationCoordinates $coordinates): self
     {
         $this->coordinates = $coordinates;
+
         return $this;
     }
+
     /**
-     * Время начала  перерыва, поле необязательно
-     *
-     * @return string|null
+     * Время начала  перерыва, поле необязательно.
      */
-    public function getDinnerFrom() : ?string
+    public function getDinnerFrom(): ?string
     {
         return $this->dinnerFrom;
     }
+
     /**
-     * Время начала  перерыва, поле необязательно
-     *
-     * @param string|null $dinnerFrom
-     *
-     * @return self
+     * Время начала  перерыва, поле необязательно.
      */
-    public function setDinnerFrom(?string $dinnerFrom) : self
+    public function setDinnerFrom(?string $dinnerFrom): self
     {
         $this->dinnerFrom = $dinnerFrom;
+
         return $this;
     }
+
     /**
-     * Время окончания перерыва, поле необязательно
-     *
-     * @return string|null
+     * Время окончания перерыва, поле необязательно.
      */
-    public function getDinnerTo() : ?string
+    public function getDinnerTo(): ?string
     {
         return $this->dinnerTo;
     }
+
     /**
-     * Время окончания перерыва, поле необязательно
-     *
-     * @param string|null $dinnerTo
-     *
-     * @return self
+     * Время окончания перерыва, поле необязательно.
      */
-    public function setDinnerTo(?string $dinnerTo) : self
+    public function setDinnerTo(?string $dinnerTo): self
     {
         $this->dinnerTo = $dinnerTo;
+
         return $this;
     }
+
     /**
      * Этаж, с которого необходимо забрать груз, поле необязательно.
-     *
-     * @return int|null
      */
-    public function getFloor() : ?int
+    public function getFloor(): ?int
     {
         return $this->floor;
     }
+
     /**
      * Этаж, с которого необходимо забрать груз, поле необязательно.
-     *
-     * @param int|null $floor
-     *
-     * @return self
      */
-    public function setFloor(?int $floor) : self
+    public function setFloor(?int $floor): self
     {
         $this->floor = $floor;
+
         return $this;
     }
+
     /**
-     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента
-     *
-     * @return bool|null
+     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента.
      */
-    public function getIsAuthorityNeeded() : ?bool
+    public function getIsAuthorityNeeded(): ?bool
     {
         return $this->isAuthorityNeeded;
     }
+
     /**
-     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента
-     *
-     * @param bool|null $isAuthorityNeeded
-     *
-     * @return self
+     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента.
      */
-    public function setIsAuthorityNeeded(?bool $isAuthorityNeeded) : self
+    public function setIsAuthorityNeeded(?bool $isAuthorityNeeded): self
     {
         $this->isAuthorityNeeded = $isAuthorityNeeded;
+
         return $this;
     }
+
     /**
      * Есть лифт
-     *
-     * @return bool|null
      */
-    public function getIsElevator() : ?bool
+    public function getIsElevator(): ?bool
     {
         return $this->isElevator;
     }
+
     /**
      * Есть лифт
-     *
-     * @param bool|null $isElevator
-     *
-     * @return self
      */
-    public function setIsElevator(?bool $isElevator) : self
+    public function setIsElevator(?bool $isElevator): self
     {
         $this->isElevator = $isElevator;
+
         return $this;
     }
+
     /**
      * Необходима погрузка с использованием Гидролифта  силами «ПЭК», поле необязательно. По умолчанию false. Услуга предоставляется только в городах Москва, Санкт-Петербург и Калининград.
-     *
-     * @return bool|null
      */
-    public function getIsHydrolift() : ?bool
+    public function getIsHydrolift(): ?bool
     {
         return $this->isHydrolift;
     }
+
     /**
      * Необходима погрузка с использованием Гидролифта  силами «ПЭК», поле необязательно. По умолчанию false. Услуга предоставляется только в городах Москва, Санкт-Петербург и Калининград.
-     *
-     * @param bool|null $isHydrolift
-     *
-     * @return self
      */
-    public function setIsHydrolift(?bool $isHydrolift) : self
+    public function setIsHydrolift(?bool $isHydrolift): self
     {
         $this->isHydrolift = $isHydrolift;
+
         return $this;
     }
+
     /**
      * Необходима погрузка силами «ПЭК», поле необязательно. По умолчанию false.
-     *
-     * @return bool|null
      */
-    public function getIsLoading() : ?bool
+    public function getIsLoading(): ?bool
     {
         return $this->isLoading;
     }
+
     /**
      * Необходима погрузка силами «ПЭК», поле необязательно. По умолчанию false.
-     *
-     * @param bool|null $isLoading
-     *
-     * @return self
      */
-    public function setIsLoading(?bool $isLoading) : self
+    public function setIsLoading(?bool $isLoading): self
     {
         $this->isLoading = $isLoading;
+
         return $this;
     }
+
     /**
-     * Необходима открытая машина, поле необязательно, если не указано считается равным false
-     *
-     * @return bool|null
+     * Необходима открытая машина, поле необязательно, если не указано считается равным false.
      */
-    public function getIsOpenCar() : ?bool
+    public function getIsOpenCar(): ?bool
     {
         return $this->isOpenCar;
     }
+
     /**
-     * Необходима открытая машина, поле необязательно, если не указано считается равным false
-     *
-     * @param bool|null $isOpenCar
-     *
-     * @return self
+     * Необходима открытая машина, поле необязательно, если не указано считается равным false.
      */
-    public function setIsOpenCar(?bool $isOpenCar) : self
+    public function setIsOpenCar(?bool $isOpenCar): self
     {
         $this->isOpenCar = $isOpenCar;
+
         return $this;
     }
+
     /**
-     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false
-     *
-     * @return bool|null
+     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false.
      */
-    public function getIsSideLoad() : ?bool
+    public function getIsSideLoad(): ?bool
     {
         return $this->isSideLoad;
     }
+
     /**
-     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false
-     *
-     * @param bool|null $isSideLoad
-     *
-     * @return self
+     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false.
      */
-    public function setIsSideLoad(?bool $isSideLoad) : self
+    public function setIsSideLoad(?bool $isSideLoad): self
     {
         $this->isSideLoad = $isSideLoad;
+
         return $this;
     }
+
     /**
-     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false
-     *
-     * @return bool|null
+     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false.
      */
-    public function getIsSpecialEquipment() : ?bool
+    public function getIsSpecialEquipment(): ?bool
     {
         return $this->isSpecialEquipment;
     }
+
     /**
-     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false
-     *
-     * @param bool|null $isSpecialEquipment
-     *
-     * @return self
+     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false.
      */
-    public function setIsSpecialEquipment(?bool $isSpecialEquipment) : self
+    public function setIsSpecialEquipment(?bool $isSpecialEquipment): self
     {
         $this->isSpecialEquipment = $isSpecialEquipment;
+
         return $this;
     }
+
     /**
-     * Необходима растентовка, поле необязательно, если не указано считается равным false
-     *
-     * @return bool|null
+     * Необходима растентовка, поле необязательно, если не указано считается равным false.
      */
-    public function getIsUncovered() : ?bool
+    public function getIsUncovered(): ?bool
     {
         return $this->isUncovered;
     }
+
     /**
-     * Необходима растентовка, поле необязательно, если не указано считается равным false
-     *
-     * @param bool|null $isUncovered
-     *
-     * @return self
+     * Необходима растентовка, поле необязательно, если не указано считается равным false.
      */
-    public function setIsUncovered(?bool $isUncovered) : self
+    public function setIsUncovered(?bool $isUncovered): self
     {
         $this->isUncovered = $isUncovered;
+
         return $this;
     }
+
     /**
-     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
-     *
-     * @return string|null
+     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
      */
-    public function getPeriodTimeFrom() : ?string
+    public function getPeriodTimeFrom(): ?string
     {
         return $this->periodTimeFrom;
     }
+
     /**
-     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
-     *
-     * @param string|null $periodTimeFrom
-     *
-     * @return self
+     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
      */
-    public function setPeriodTimeFrom(?string $periodTimeFrom) : self
+    public function setPeriodTimeFrom(?string $periodTimeFrom): self
     {
         $this->periodTimeFrom = $periodTimeFrom;
+
         return $this;
     }
+
     /**
-     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
-     *
-     * @return string|null
+     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
      */
-    public function getPeriodTimeTo() : ?string
+    public function getPeriodTimeTo(): ?string
     {
         return $this->periodTimeTo;
     }
+
     /**
-     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
-     *
-     * @param string|null $periodTimeTo
-     *
-     * @return self
+     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
      */
-    public function setPeriodTimeTo(?string $periodTimeTo) : self
+    public function setPeriodTimeTo(?string $periodTimeTo): self
     {
         $this->periodTimeTo = $periodTimeTo;
+
         return $this;
     }
 }

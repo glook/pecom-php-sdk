@@ -7,190 +7,179 @@ class Transfer
     /**
      * Общая стоимость услуг по продукту/тарифу, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $costTotal;
+
     /**
-     * Текст ошибки по тарифу
+     * Текст ошибки по тарифу.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $errorMessage;
+
     /**
-     * Срок перевозки (календарные дни). На основании заказанных услуг забора/доставки
+     * Срок перевозки (календарные дни). На основании заказанных услуг забора/доставки.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $estDeliveryTime;
+
     /**
-     * Признак ошибок при расчетах по тарифу
+     * Признак ошибок при расчетах по тарифу.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $hasError;
+
     /**
-     * Данные по услугам, входящим в продукт/тариф. Перечень услуг, которые будут выставлены в УПД, после перевозки груза с указанными параметрами. Каждый элемент массива и подмассива — отдельная услуга, со своей стоимостью
+     * Данные по услугам, входящим в продукт/тариф. Перечень услуг, которые будут выставлены в УПД, после перевозки груза с указанными параметрами. Каждый элемент массива и подмассива — отдельная услуга, со своей стоимостью.
      *
-     * @var CalculatorServiceItem[]|null
+     * @var null|CalculatorServiceItem[]
      */
     protected $services;
+
     /**
-     * В актуальной версии протокола API не используется
+     * В актуальной версии протокола API не используется.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $transportingTypes;
+
     /**
      * Продукт/тариф, для которого выведена стоимость. `type=3` соответствует автоперевозке, `type=1` — авиа.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $type;
+
     /**
      * Общая стоимость услуг по продукту/тарифу, руб.
-     *
-     * @return float|null
      */
-    public function getCostTotal() : ?float
+    public function getCostTotal(): ?float
     {
         return $this->costTotal;
     }
+
     /**
      * Общая стоимость услуг по продукту/тарифу, руб.
-     *
-     * @param float|null $costTotal
-     *
-     * @return self
      */
-    public function setCostTotal(?float $costTotal) : self
+    public function setCostTotal(?float $costTotal): self
     {
         $this->costTotal = $costTotal;
+
         return $this;
     }
+
     /**
-     * Текст ошибки по тарифу
-     *
-     * @return string|null
+     * Текст ошибки по тарифу.
      */
-    public function getErrorMessage() : ?string
+    public function getErrorMessage(): ?string
     {
         return $this->errorMessage;
     }
+
     /**
-     * Текст ошибки по тарифу
-     *
-     * @param string|null $errorMessage
-     *
-     * @return self
+     * Текст ошибки по тарифу.
      */
-    public function setErrorMessage(?string $errorMessage) : self
+    public function setErrorMessage(?string $errorMessage): self
     {
         $this->errorMessage = $errorMessage;
+
         return $this;
     }
+
     /**
-     * Срок перевозки (календарные дни). На основании заказанных услуг забора/доставки
-     *
-     * @return float|null
+     * Срок перевозки (календарные дни). На основании заказанных услуг забора/доставки.
      */
-    public function getEstDeliveryTime() : ?float
+    public function getEstDeliveryTime(): ?float
     {
         return $this->estDeliveryTime;
     }
+
     /**
-     * Срок перевозки (календарные дни). На основании заказанных услуг забора/доставки
-     *
-     * @param float|null $estDeliveryTime
-     *
-     * @return self
+     * Срок перевозки (календарные дни). На основании заказанных услуг забора/доставки.
      */
-    public function setEstDeliveryTime(?float $estDeliveryTime) : self
+    public function setEstDeliveryTime(?float $estDeliveryTime): self
     {
         $this->estDeliveryTime = $estDeliveryTime;
+
         return $this;
     }
+
     /**
-     * Признак ошибок при расчетах по тарифу
-     *
-     * @return bool|null
+     * Признак ошибок при расчетах по тарифу.
      */
-    public function getHasError() : ?bool
+    public function getHasError(): ?bool
     {
         return $this->hasError;
     }
+
     /**
-     * Признак ошибок при расчетах по тарифу
-     *
-     * @param bool|null $hasError
-     *
-     * @return self
+     * Признак ошибок при расчетах по тарифу.
      */
-    public function setHasError(?bool $hasError) : self
+    public function setHasError(?bool $hasError): self
     {
         $this->hasError = $hasError;
+
         return $this;
     }
+
     /**
-     * Данные по услугам, входящим в продукт/тариф. Перечень услуг, которые будут выставлены в УПД, после перевозки груза с указанными параметрами. Каждый элемент массива и подмассива — отдельная услуга, со своей стоимостью
+     * Данные по услугам, входящим в продукт/тариф. Перечень услуг, которые будут выставлены в УПД, после перевозки груза с указанными параметрами. Каждый элемент массива и подмассива — отдельная услуга, со своей стоимостью.
      *
-     * @return CalculatorServiceItem[]|null
+     * @return null|CalculatorServiceItem[]
      */
-    public function getServices() : ?array
+    public function getServices(): ?array
     {
         return $this->services;
     }
+
     /**
-     * Данные по услугам, входящим в продукт/тариф. Перечень услуг, которые будут выставлены в УПД, после перевозки груза с указанными параметрами. Каждый элемент массива и подмассива — отдельная услуга, со своей стоимостью
+     * Данные по услугам, входящим в продукт/тариф. Перечень услуг, которые будут выставлены в УПД, после перевозки груза с указанными параметрами. Каждый элемент массива и подмассива — отдельная услуга, со своей стоимостью.
      *
-     * @param CalculatorServiceItem[]|null $services
-     *
-     * @return self
+     * @param null|CalculatorServiceItem[] $services
      */
-    public function setServices(?array $services) : self
+    public function setServices(?array $services): self
     {
         $this->services = $services;
+
         return $this;
     }
+
     /**
-     * В актуальной версии протокола API не используется
-     *
-     * @return int|null
+     * В актуальной версии протокола API не используется.
      */
-    public function getTransportingTypes() : ?int
+    public function getTransportingTypes(): ?int
     {
         return $this->transportingTypes;
     }
+
     /**
-     * В актуальной версии протокола API не используется
-     *
-     * @param int|null $transportingTypes
-     *
-     * @return self
+     * В актуальной версии протокола API не используется.
      */
-    public function setTransportingTypes(?int $transportingTypes) : self
+    public function setTransportingTypes(?int $transportingTypes): self
     {
         $this->transportingTypes = $transportingTypes;
+
         return $this;
     }
+
     /**
      * Продукт/тариф, для которого выведена стоимость. `type=3` соответствует автоперевозке, `type=1` — авиа.
-     *
-     * @return int|null
      */
-    public function getType() : ?int
+    public function getType(): ?int
     {
         return $this->type;
     }
+
     /**
      * Продукт/тариф, для которого выведена стоимость. `type=3` соответствует автоперевозке, `type=1` — авиа.
-     *
-     * @param int|null $type
-     *
-     * @return self
      */
-    public function setType(?int $type) : self
+    public function setType(?int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

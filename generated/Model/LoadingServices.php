@@ -5,111 +5,102 @@ namespace glook\PecomSdk\Generated\Model;
 class LoadingServices
 {
     /**
-     * Перенести груз (в метрах)
+     * Перенести груз (в метрах).
      *
-     * @var float|null
+     * @var null|float
      */
     protected $carryingDistance;
+
     /**
-     * Поднять/спустить на этаж
+     * Поднять/спустить на этаж.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $floor;
+
     /**
-     * Подъем на лифте
+     * Подъем на лифте.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isElevator;
+
     /**
-     * Расчитывать ПРР
+     * Расчитывать ПРР.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isLoading;
+
     /**
-     * Перенести груз (в метрах)
-     *
-     * @return float|null
+     * Перенести груз (в метрах).
      */
-    public function getCarryingDistance() : ?float
+    public function getCarryingDistance(): ?float
     {
         return $this->carryingDistance;
     }
+
     /**
-     * Перенести груз (в метрах)
-     *
-     * @param float|null $carryingDistance
-     *
-     * @return self
+     * Перенести груз (в метрах).
      */
-    public function setCarryingDistance(?float $carryingDistance) : self
+    public function setCarryingDistance(?float $carryingDistance): self
     {
         $this->carryingDistance = $carryingDistance;
+
         return $this;
     }
+
     /**
-     * Поднять/спустить на этаж
-     *
-     * @return int|null
+     * Поднять/спустить на этаж.
      */
-    public function getFloor() : ?int
+    public function getFloor(): ?int
     {
         return $this->floor;
     }
+
     /**
-     * Поднять/спустить на этаж
-     *
-     * @param int|null $floor
-     *
-     * @return self
+     * Поднять/спустить на этаж.
      */
-    public function setFloor(?int $floor) : self
+    public function setFloor(?int $floor): self
     {
         $this->floor = $floor;
+
         return $this;
     }
+
     /**
-     * Подъем на лифте
-     *
-     * @return bool|null
+     * Подъем на лифте.
      */
-    public function getIsElevator() : ?bool
+    public function getIsElevator(): ?bool
     {
         return $this->isElevator;
     }
+
     /**
-     * Подъем на лифте
-     *
-     * @param bool|null $isElevator
-     *
-     * @return self
+     * Подъем на лифте.
      */
-    public function setIsElevator(?bool $isElevator) : self
+    public function setIsElevator(?bool $isElevator): self
     {
         $this->isElevator = $isElevator;
+
         return $this;
     }
+
     /**
-     * Расчитывать ПРР
-     *
-     * @return bool|null
+     * Расчитывать ПРР.
      */
-    public function getIsLoading() : ?bool
+    public function getIsLoading(): ?bool
     {
         return $this->isLoading;
     }
+
     /**
-     * Расчитывать ПРР
-     *
-     * @param bool|null $isLoading
-     *
-     * @return self
+     * Расчитывать ПРР.
      */
-    public function setIsLoading(?bool $isLoading) : self
+    public function setIsLoading(?bool $isLoading): self
     {
         $this->isLoading = $isLoading;
+
         return $this;
     }
 }

@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\PreregistrationSpecificationItem;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class PreregistrationSpecificationItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\PreregistrationSpecificationItem';
+        return 'glook\PecomSdk\Generated\Model\PreregistrationSpecificationItem' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\PreregistrationSpecificationItem';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\PreregistrationSpecificationItem' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class PreregistrationSpecificationItemNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\PreregistrationSpecificationItem();
+        $object = new PreregistrationSpecificationItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -48,22 +52,19 @@ class PreregistrationSpecificationItemNormalizer implements DenormalizerInterfac
         if (\array_key_exists('calculationSubject', $data)) {
             $object->setCalculationSubject($data['calculationSubject']);
         }
-        if (\array_key_exists('groupMarkedGood', $data) && $data['groupMarkedGood'] !== null) {
+        if (\array_key_exists('groupMarkedGood', $data) && null !== $data['groupMarkedGood']) {
             $object->setGroupMarkedGood($data['groupMarkedGood']);
-        }
-        elseif (\array_key_exists('groupMarkedGood', $data) && $data['groupMarkedGood'] === null) {
+        } elseif (\array_key_exists('groupMarkedGood', $data) && null === $data['groupMarkedGood']) {
             $object->setGroupMarkedGood(null);
         }
-        if (\array_key_exists('markingCode', $data) && $data['markingCode'] !== null) {
+        if (\array_key_exists('markingCode', $data) && null !== $data['markingCode']) {
             $object->setMarkingCode($data['markingCode']);
-        }
-        elseif (\array_key_exists('markingCode', $data) && $data['markingCode'] === null) {
+        } elseif (\array_key_exists('markingCode', $data) && null === $data['markingCode']) {
             $object->setMarkingCode(null);
         }
-        if (\array_key_exists('measureOfQuantity', $data) && $data['measureOfQuantity'] !== null) {
+        if (\array_key_exists('measureOfQuantity', $data) && null !== $data['measureOfQuantity']) {
             $object->setMeasureOfQuantity($data['measureOfQuantity']);
-        }
-        elseif (\array_key_exists('measureOfQuantity', $data) && $data['measureOfQuantity'] === null) {
+        } elseif (\array_key_exists('measureOfQuantity', $data) && null === $data['measureOfQuantity']) {
             $object->setMeasureOfQuantity(null);
         }
         if (\array_key_exists('rateVAT', $data)) {
@@ -90,11 +91,13 @@ class PreregistrationSpecificationItemNormalizer implements DenormalizerInterfac
         if (\array_key_exists('vendorPhone', $data)) {
             $object->setVendorPhone($data['vendorPhone']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['actualCostPerUnit'] = $object->getActualCostPerUnit();
         $data['actualCostTotal'] = $object->getActualCostTotal();
         $data['amount'] = $object->getAmount();
@@ -116,6 +119,7 @@ class PreregistrationSpecificationItemNormalizer implements DenormalizerInterfac
         $data['vendorINN'] = $object->getVendorINN();
         $data['vendorName'] = $object->getVendorName();
         $data['vendorPhone'] = $object->getVendorPhone();
+
         return $data;
     }
 }

@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\BranchDivision;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class BranchDivisionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\BranchDivision';
+        return 'glook\PecomSdk\Generated\Model\BranchDivision' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\BranchDivision';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\BranchDivision' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class BranchDivisionNormalizer implements DenormalizerInterface, NormalizerInter
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\BranchDivision();
+        $object = new BranchDivision();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -61,24 +65,26 @@ class BranchDivisionNormalizer implements DenormalizerInterface, NormalizerInter
             $object->setName($data['name']);
         }
         if (\array_key_exists('warehouses', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['warehouses'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\Warehouse', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\Warehouse', 'json', $context);
             }
             $object->setWarehouses($values);
         }
         if (\array_key_exists('kindsOfTransportation', $data)) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($data['kindsOfTransportation'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\KindOfTransportation', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\PecomSdk\Generated\Model\KindOfTransportation', 'json', $context);
             }
             $object->setKindsOfTransportation($values_1);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['cityId'] = $object->getCityId();
         $data['departmentType'] = $object->getDepartmentType();
         $data['departmentTypeId'] = $object->getDepartmentTypeId();
@@ -87,16 +93,17 @@ class BranchDivisionNormalizer implements DenormalizerInterface, NormalizerInter
         $data['isAcceptanceOnly'] = $object->getIsAcceptanceOnly();
         $data['isPartialDistributionAllowed'] = $object->getIsPartialDistributionAllowed();
         $data['name'] = $object->getName();
-        $values = array();
+        $values = [];
         foreach ($object->getWarehouses() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['warehouses'] = $values;
-        $values_1 = array();
+        $values_1 = [];
         foreach ($object->getKindsOfTransportation() as $value_1) {
             $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
         }
         $data['kindsOfTransportation'] = $values_1;
+
         return $data;
     }
 }

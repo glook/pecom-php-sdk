@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponseCargosItem;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupNetworkSubmitResponseCargosItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitResponseCargosItem';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponseCargosItem' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitResponseCargosItem';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponseCargosItem' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class CargoPickupNetworkSubmitResponseCargosItemNormalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponseCargosItem();
+        $object = new CargoPickupNetworkSubmitResponseCargosItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -42,53 +46,50 @@ class CargoPickupNetworkSubmitResponseCargosItemNormalizer implements Denormaliz
         if (\array_key_exists('cargoCode', $data)) {
             $object->setCargoCode($data['cargoCode']);
         }
-        if (\array_key_exists('clientPositionsBarcode', $data) && $data['clientPositionsBarcode'] !== null) {
-            $values = array();
+        if (\array_key_exists('clientPositionsBarcode', $data) && null !== $data['clientPositionsBarcode']) {
+            $values = [];
             foreach ($data['clientPositionsBarcode'] as $value) {
                 $values[] = $value;
             }
             $object->setClientPositionsBarcode($values);
-        }
-        elseif (\array_key_exists('clientPositionsBarcode', $data) && $data['clientPositionsBarcode'] === null) {
+        } elseif (\array_key_exists('clientPositionsBarcode', $data) && null === $data['clientPositionsBarcode']) {
             $object->setClientPositionsBarcode(null);
         }
-        if (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] !== null) {
+        if (\array_key_exists('customerCorrelation', $data) && null !== $data['customerCorrelation']) {
             $object->setCustomerCorrelation($data['customerCorrelation']);
-        }
-        elseif (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] === null) {
+        } elseif (\array_key_exists('customerCorrelation', $data) && null === $data['customerCorrelation']) {
             $object->setCustomerCorrelation(null);
         }
-        if (\array_key_exists('orderNumber', $data) && $data['orderNumber'] !== null) {
+        if (\array_key_exists('orderNumber', $data) && null !== $data['orderNumber']) {
             $object->setOrderNumber($data['orderNumber']);
-        }
-        elseif (\array_key_exists('orderNumber', $data) && $data['orderNumber'] === null) {
+        } elseif (\array_key_exists('orderNumber', $data) && null === $data['orderNumber']) {
             $object->setOrderNumber(null);
         }
-        if (\array_key_exists('positions', $data) && $data['positions'] !== null) {
-            $values_1 = array();
+        if (\array_key_exists('positions', $data) && null !== $data['positions']) {
+            $values_1 = [];
             foreach ($data['positions'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitResponseCargosItemPositionsItem', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponseCargosItemPositionsItem', 'json', $context);
             }
             $object->setPositions($values_1);
-        }
-        elseif (\array_key_exists('positions', $data) && $data['positions'] === null) {
+        } elseif (\array_key_exists('positions', $data) && null === $data['positions']) {
             $object->setPositions(null);
         }
-        if (\array_key_exists('typeClientBarcode', $data) && $data['typeClientBarcode'] !== null) {
+        if (\array_key_exists('typeClientBarcode', $data) && null !== $data['typeClientBarcode']) {
             $object->setTypeClientBarcode($data['typeClientBarcode']);
-        }
-        elseif (\array_key_exists('typeClientBarcode', $data) && $data['typeClientBarcode'] === null) {
+        } elseif (\array_key_exists('typeClientBarcode', $data) && null === $data['typeClientBarcode']) {
             $object->setTypeClientBarcode(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['barcode'] = $object->getBarcode();
         $data['cargoCode'] = $object->getCargoCode();
         if (null !== $object->getClientPositionsBarcode()) {
-            $values = array();
+            $values = [];
             foreach ($object->getClientPositionsBarcode() as $value) {
                 $values[] = $value;
             }
@@ -101,7 +102,7 @@ class CargoPickupNetworkSubmitResponseCargosItemNormalizer implements Denormaliz
             $data['orderNumber'] = $object->getOrderNumber();
         }
         if (null !== $object->getPositions()) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($object->getPositions() as $value_1) {
                 $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
@@ -110,6 +111,7 @@ class CargoPickupNetworkSubmitResponseCargosItemNormalizer implements Denormaliz
         if (null !== $object->getTypeClientBarcode()) {
             $data['typeClientBarcode'] = $object->getTypeClientBarcode();
         }
+
         return $data;
     }
 }

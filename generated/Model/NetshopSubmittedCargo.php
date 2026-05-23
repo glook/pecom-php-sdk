@@ -5,138 +5,109 @@ namespace glook\PecomSdk\Generated\Model;
 class NetshopSubmittedCargo
 {
     /**
-     * Значение для штрих-кода в формате EAN-13
+     * Значение для штрих-кода в формате EAN-13.
      *
      * @var string
      */
     protected $barcode;
+
     /**
-     * 
-     *
      * @var string
      */
     protected $cargoCode;
+
     /**
-     * 
-     *
      * @var string
      */
     protected $orderNumber;
+
     /**
-     * 
-     *
      * @var NetshopCargoPosition[]
      */
     protected $positions;
+
     /**
-     * Наименование склада приема груза
+     * Наименование склада приема груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $stockTitle;
+
     /**
-     * Значение для штрих-кода в формате EAN-13
-     *
-     * @return string
+     * Значение для штрих-кода в формате EAN-13.
      */
-    public function getBarcode() : string
+    public function getBarcode(): string
     {
         return $this->barcode;
     }
+
     /**
-     * Значение для штрих-кода в формате EAN-13
-     *
-     * @param string $barcode
-     *
-     * @return self
+     * Значение для штрих-кода в формате EAN-13.
      */
-    public function setBarcode(string $barcode) : self
+    public function setBarcode(string $barcode): self
     {
         $this->barcode = $barcode;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string
-     */
-    public function getCargoCode() : string
+
+    public function getCargoCode(): string
     {
         return $this->cargoCode;
     }
-    /**
-     * 
-     *
-     * @param string $cargoCode
-     *
-     * @return self
-     */
-    public function setCargoCode(string $cargoCode) : self
+
+    public function setCargoCode(string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string
-     */
-    public function getOrderNumber() : string
+
+    public function getOrderNumber(): string
     {
         return $this->orderNumber;
     }
-    /**
-     * 
-     *
-     * @param string $orderNumber
-     *
-     * @return self
-     */
-    public function setOrderNumber(string $orderNumber) : self
+
+    public function setOrderNumber(string $orderNumber): self
     {
         $this->orderNumber = $orderNumber;
+
         return $this;
     }
+
     /**
-     * 
-     *
      * @return NetshopCargoPosition[]
      */
-    public function getPositions() : array
+    public function getPositions(): array
     {
         return $this->positions;
     }
+
     /**
-     * 
-     *
      * @param NetshopCargoPosition[] $positions
-     *
-     * @return self
      */
-    public function setPositions(array $positions) : self
+    public function setPositions(array $positions): self
     {
         $this->positions = $positions;
+
         return $this;
     }
+
     /**
-     * Наименование склада приема груза
-     *
-     * @return string|null
+     * Наименование склада приема груза.
      */
-    public function getStockTitle() : ?string
+    public function getStockTitle(): ?string
     {
         return $this->stockTitle;
     }
+
     /**
-     * Наименование склада приема груза
-     *
-     * @param string|null $stockTitle
-     *
-     * @return self
+     * Наименование склада приема груза.
      */
-    public function setStockTitle(?string $stockTitle) : self
+    public function setStockTitle(?string $stockTitle): self
     {
         $this->stockTitle = $stockTitle;
+
         return $this;
     }
 }

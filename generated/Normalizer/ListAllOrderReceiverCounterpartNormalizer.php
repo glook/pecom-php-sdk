@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpart;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ListAllOrderReceiverCounterpartNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiverCounterpart';
+        return 'glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpart' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiverCounterpart';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpart' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,39 +36,37 @@ class ListAllOrderReceiverCounterpartNormalizer implements DenormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpart();
+        $object = new ListAllOrderReceiverCounterpart();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('LegalEntity', $data) && $data['LegalEntity'] !== null) {
-            $object->setLegalEntity($this->denormalizer->denormalize($data['LegalEntity'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderCounterpartLegalEntity', 'json', $context));
-        }
-        elseif (\array_key_exists('LegalEntity', $data) && $data['LegalEntity'] === null) {
+        if (\array_key_exists('LegalEntity', $data) && null !== $data['LegalEntity']) {
+            $object->setLegalEntity($this->denormalizer->denormalize($data['LegalEntity'], 'glook\PecomSdk\Generated\Model\ListAllOrderCounterpartLegalEntity', 'json', $context));
+        } elseif (\array_key_exists('LegalEntity', $data) && null === $data['LegalEntity']) {
             $object->setLegalEntity(null);
         }
-        if (\array_key_exists('Name', $data) && $data['Name'] !== null) {
+        if (\array_key_exists('Name', $data) && null !== $data['Name']) {
             $object->setName($data['Name']);
-        }
-        elseif (\array_key_exists('Name', $data) && $data['Name'] === null) {
+        } elseif (\array_key_exists('Name', $data) && null === $data['Name']) {
             $object->setName(null);
         }
-        if (\array_key_exists('PhysicalPerson', $data) && $data['PhysicalPerson'] !== null) {
-            $object->setPhysicalPerson($this->denormalizer->denormalize($data['PhysicalPerson'], 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiverCounterpartPhysicalPerson', 'json', $context));
-        }
-        elseif (\array_key_exists('PhysicalPerson', $data) && $data['PhysicalPerson'] === null) {
+        if (\array_key_exists('PhysicalPerson', $data) && null !== $data['PhysicalPerson']) {
+            $object->setPhysicalPerson($this->denormalizer->denormalize($data['PhysicalPerson'], 'glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpartPhysicalPerson', 'json', $context));
+        } elseif (\array_key_exists('PhysicalPerson', $data) && null === $data['PhysicalPerson']) {
             $object->setPhysicalPerson(null);
         }
-        if (\array_key_exists('Type', $data) && $data['Type'] !== null) {
+        if (\array_key_exists('Type', $data) && null !== $data['Type']) {
             $object->setType($data['Type']);
-        }
-        elseif (\array_key_exists('Type', $data) && $data['Type'] === null) {
+        } elseif (\array_key_exists('Type', $data) && null === $data['Type']) {
             $object->setType(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getLegalEntity()) {
             $data['LegalEntity'] = $this->normalizer->normalize($object->getLegalEntity(), 'json', $context);
         }
@@ -77,6 +79,7 @@ class ListAllOrderReceiverCounterpartNormalizer implements DenormalizerInterface
         if (null !== $object->getType()) {
             $data['Type'] = $object->getType();
         }
+
         return $data;
     }
 }

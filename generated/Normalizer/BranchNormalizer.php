@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\Branch;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\Branch';
+        return 'glook\PecomSdk\Generated\Model\Branch' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\Branch';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\Branch' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\Branch();
+        $object = new Branch();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,22 +50,20 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setBranchCode($data['branchCode']);
         }
         if (\array_key_exists('cities', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['cities'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\BranchCity', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\BranchCity', 'json', $context);
             }
             $object->setCities($values);
         }
-        if (\array_key_exists('coordinates', $data) && $data['coordinates'] !== null) {
+        if (\array_key_exists('coordinates', $data) && null !== $data['coordinates']) {
             $object->setCoordinates($data['coordinates']);
-        }
-        elseif (\array_key_exists('coordinates', $data) && $data['coordinates'] === null) {
+        } elseif (\array_key_exists('coordinates', $data) && null === $data['coordinates']) {
             $object->setCoordinates(null);
         }
-        if (\array_key_exists('coordinatesobj', $data) && $data['coordinatesobj'] !== null) {
-            $object->setCoordinatesobj($this->denormalizer->denormalize($data['coordinatesobj'], 'glook\\PecomSdk\\Generated\\Model\\BranchesCoordinates', 'json', $context));
-        }
-        elseif (\array_key_exists('coordinatesobj', $data) && $data['coordinatesobj'] === null) {
+        if (\array_key_exists('coordinatesobj', $data) && null !== $data['coordinatesobj']) {
+            $object->setCoordinatesobj($this->denormalizer->denormalize($data['coordinatesobj'], 'glook\PecomSdk\Generated\Model\BranchesCoordinates', 'json', $context));
+        } elseif (\array_key_exists('coordinatesobj', $data) && null === $data['coordinatesobj']) {
             $object->setCoordinatesobj(null);
         }
         if (\array_key_exists('country', $data)) {
@@ -71,9 +73,9 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
             $object->setCountryOfRegistrationCode($data['countryOfRegistrationCode']);
         }
         if (\array_key_exists('divisions', $data)) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($data['divisions'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\BranchDivision', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\PecomSdk\Generated\Model\BranchDivision', 'json', $context);
             }
             $object->setDivisions($values_1);
         }
@@ -89,15 +91,17 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
         if (\array_key_exists('title', $data)) {
             $object->setTitle($data['title']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['address'] = $object->getAddress();
         $data['bitrixId'] = $object->getBitrixId();
         $data['branchCode'] = $object->getBranchCode();
-        $values = array();
+        $values = [];
         foreach ($object->getCities() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
@@ -110,7 +114,7 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
         }
         $data['country'] = $object->getCountry();
         $data['countryOfRegistrationCode'] = $object->getCountryOfRegistrationCode();
-        $values_1 = array();
+        $values_1 = [];
         foreach ($object->getDivisions() as $value_1) {
             $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
         }
@@ -119,6 +123,7 @@ class BranchNormalizer implements DenormalizerInterface, NormalizerInterface, De
         $data['postalCode'] = $object->getPostalCode();
         $data['timezone'] = $object->getTimezone();
         $data['title'] = $object->getTitle();
+
         return $data;
     }
 }

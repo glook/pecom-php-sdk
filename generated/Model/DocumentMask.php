@@ -7,55 +7,50 @@ class DocumentMask
     /**
      * Номер
      *
-     * @var string|null
+     * @var null|string
      */
     protected $number;
+
     /**
-     * Серия
+     * Серия.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $series;
+
     /**
      * Номер
-     *
-     * @return string|null
      */
-    public function getNumber() : ?string
+    public function getNumber(): ?string
     {
         return $this->number;
     }
+
     /**
      * Номер
-     *
-     * @param string|null $number
-     *
-     * @return self
      */
-    public function setNumber(?string $number) : self
+    public function setNumber(?string $number): self
     {
         $this->number = $number;
+
         return $this;
     }
+
     /**
-     * Серия
-     *
-     * @return string|null
+     * Серия.
      */
-    public function getSeries() : ?string
+    public function getSeries(): ?string
     {
         return $this->series;
     }
+
     /**
-     * Серия
-     *
-     * @param string|null $series
-     *
-     * @return self
+     * Серия.
      */
-    public function setSeries(?string $series) : self
+    public function setSeries(?string $series): self
     {
         $this->series = $series;
+
         return $this;
     }
 }

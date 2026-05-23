@@ -5,30 +5,27 @@ namespace glook\PecomSdk\Generated\Model;
 class ServiceToggle
 {
     /**
-     * Заказана ли услуга
+     * Заказана ли услуга.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $enabled;
+
     /**
-     * Заказана ли услуга
-     *
-     * @return bool|null
+     * Заказана ли услуга.
      */
-    public function getEnabled() : ?bool
+    public function getEnabled(): ?bool
     {
         return $this->enabled;
     }
+
     /**
-     * Заказана ли услуга
-     *
-     * @param bool|null $enabled
-     *
-     * @return self
+     * Заказана ли услуга.
      */
-    public function setEnabled(?bool $enabled) : self
+    public function setEnabled(?bool $enabled): self
     {
         $this->enabled = $enabled;
+
         return $this;
     }
 }

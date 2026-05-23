@@ -2,65 +2,81 @@
 
 namespace glook\PecomSdk\Generated\Endpoint;
 
-class CargopickupCheckOrderedPickupType3Car extends \glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint implements \glook\PecomSdk\Generated\Runtime\Client\Endpoint
+use glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarBadRequestException;
+use glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarForbiddenException;
+use glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarInternalServerErrorException;
+use glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException;
+use glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarRequest;
+use glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarResponse;
+use glook\PecomSdk\Generated\Runtime\Client\BaseEndpoint;
+use glook\PecomSdk\Generated\Runtime\Client\Endpoint;
+use glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
+use Symfony\Component\Serializer\SerializerInterface;
+
+class CargopickupCheckOrderedPickupType3Car extends BaseEndpoint implements Endpoint
 {
+    use EndpointTrait;
+
     /**
      * Метод работает при подключеной услуге "Упрощенный заказ машины" и возвращает ранее отправленные методом [`/cargopickup/submit/`](#tag/cargopickup/POST/cargopickup/submit/) заказы на машины (со значением параметра "pickupType": 3). Может использоваться для проверки ранее поданного заказа на машину и получения его статуса.
-     *
-     * @param \glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarRequest $requestBody 
      */
-    public function __construct(\glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarRequest $requestBody)
+    public function __construct(CargoPickupCheckOrderedPickupType3CarRequest $requestBody)
     {
         $this->body = $requestBody;
     }
-    use \glook\PecomSdk\Generated\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+
+    public function getUri(): string
     {
         return '/cargopickup/checkOrderedPickupType3Car/';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+
+    public function getBody(SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarRequest) {
-            return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
+        if ($this->body instanceof CargoPickupCheckOrderedPickupType3CarRequest) {
+            return [['Content-Type' => ['application/json']], $serializer->serialize($this->body, 'json')];
         }
-        return array(array(), null);
+
+        return [[], null];
     }
-    public function getExtraHeaders() : array
+
+    public function getExtraHeaders(): array
     {
-        return array('Accept' => array('application/json'));
+        return ['Accept' => ['application/json']];
     }
+
+    public function getAuthenticationScopes(): array
+    {
+        return ['BasicAuth'];
+    }
+
     /**
-     * {@inheritdoc}
+     * @return null|CargoPickupCheckOrderedPickupType3CarResponse
      *
-     * @throws \glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarBadRequestException
-     * @throws \glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarForbiddenException
-     * @throws \glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarInternalServerErrorException
-     * @throws \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException
-     *
-     * @return null|\glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarResponse
+     * @throws CargopickupCheckOrderedPickupType3CarBadRequestException
+     * @throws CargopickupCheckOrderedPickupType3CarForbiddenException
+     * @throws CargopickupCheckOrderedPickupType3CarInternalServerErrorException
+     * @throws UnexpectedStatusCodeException
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CargoPickupCheckOrderedPickupType3CarResponse', 'json');
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            return $serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarResponse', 'json');
         }
-        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarBadRequestException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new CargopickupCheckOrderedPickupType3CarBadRequestException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarForbiddenException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new CargopickupCheckOrderedPickupType3CarForbiddenException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \glook\PecomSdk\Generated\Exception\CargopickupCheckOrderedPickupType3CarInternalServerErrorException($serializer->deserialize($body, 'glook\\PecomSdk\\Generated\\Model\\CommonErrorEnvelope', 'json'));
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+            throw new CargopickupCheckOrderedPickupType3CarInternalServerErrorException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));
         }
-        throw new \glook\PecomSdk\Generated\Exception\UnexpectedStatusCodeException($status, $body);
-    }
-    public function getAuthenticationScopes() : array
-    {
-        return array('BasicAuth');
+
+        throw new UnexpectedStatusCodeException($status, $body);
     }
 }

@@ -5,111 +5,84 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoItem
 {
     /**
-     * Значение для штрих-кода в формате EAN-13
+     * Значение для штрих-кода в формате EAN-13.
      *
      * @var string
      */
     protected $barcode;
+
     /**
-     * 
-     *
      * @var string
      */
     protected $cargoCode;
+
     /**
-     * 
-     *
-     * @var CargoPosition[]|null
+     * @var null|CargoPosition[]
      */
     protected $positions;
+
     /**
-     * 
-     *
      * @var CargopickupCargoReceiver
      */
     protected $receiver;
+
     /**
-     * Значение для штрих-кода в формате EAN-13
-     *
-     * @return string
+     * Значение для штрих-кода в формате EAN-13.
      */
-    public function getBarcode() : string
+    public function getBarcode(): string
     {
         return $this->barcode;
     }
+
     /**
-     * Значение для штрих-кода в формате EAN-13
-     *
-     * @param string $barcode
-     *
-     * @return self
+     * Значение для штрих-кода в формате EAN-13.
      */
-    public function setBarcode(string $barcode) : self
+    public function setBarcode(string $barcode): self
     {
         $this->barcode = $barcode;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string
-     */
-    public function getCargoCode() : string
+
+    public function getCargoCode(): string
     {
         return $this->cargoCode;
     }
-    /**
-     * 
-     *
-     * @param string $cargoCode
-     *
-     * @return self
-     */
-    public function setCargoCode(string $cargoCode) : self
+
+    public function setCargoCode(string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
-     * 
-     *
-     * @return CargoPosition[]|null
+     * @return null|CargoPosition[]
      */
-    public function getPositions() : ?array
+    public function getPositions(): ?array
     {
         return $this->positions;
     }
+
     /**
-     * 
-     *
-     * @param CargoPosition[]|null $positions
-     *
-     * @return self
+     * @param null|CargoPosition[] $positions
      */
-    public function setPositions(?array $positions) : self
+    public function setPositions(?array $positions): self
     {
         $this->positions = $positions;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return CargopickupCargoReceiver
-     */
-    public function getReceiver() : CargopickupCargoReceiver
+
+    public function getReceiver(): CargopickupCargoReceiver
     {
         return $this->receiver;
     }
-    /**
-     * 
-     *
-     * @param CargopickupCargoReceiver $receiver
-     *
-     * @return self
-     */
-    public function setReceiver(CargopickupCargoReceiver $receiver) : self
+
+    public function setReceiver(CargopickupCargoReceiver $receiver): self
     {
         $this->receiver = $receiver;
+
         return $this;
     }
 }

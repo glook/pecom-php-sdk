@@ -5,273 +5,268 @@ namespace glook\PecomSdk\Generated\Model;
 class CommonTerm
 {
     /**
-     * Филиал-получатель
+     * Филиал-получатель.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchReceiver;
+
     /**
-     * Филиал-отправитель
+     * Филиал-отправитель.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchSender;
+
     /**
-     * Дни льготной доставки. Значения соответствуют дню недели льготной доставки (понедельник — 1, воскресенье — 7)
+     * Дни льготной доставки. Значения соответствуют дню недели льготной доставки (понедельник — 1, воскресенье — 7).
      *
-     * @var float[]|null
+     * @var null|float[]
      */
     protected $discountedDeliveryWeekDays;
+
     /**
      * Указываются дни недели отправки груза из филиала отправления в филиал получения. 1 — ПН, 2 — ВТ и т.д.
      *
-     * @var float[]|null
+     * @var null|float[]
      */
     protected $senderShippingDays;
+
     /**
-     * Ориентировочные сроки перевозки, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`. Значения по срокам перевозки представлены в виде строки «КоличествоДнейПеревозки» или «МинимальноеКоличествоДнейПеревозки – МаксимальноеКоличествоДнейПеревозки»
+     * Ориентировочные сроки перевозки, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`. Значения по срокам перевозки представлены в виде строки «КоличествоДнейПеревозки» или «МинимальноеКоличествоДнейПеревозки – МаксимальноеКоличествоДнейПеревозки».
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $transporting;
+
     /**
-     * В актуальной версии протокола API не используется
+     * В актуальной версии протокола API не используется.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $transportingTypes;
+
     /**
      * Ориентировочные сроки перевозки с доставкой, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $transportingWithDelivery;
+
     /**
-     * Срок перевозки с забором и доставкой, суток
+     * Срок перевозки с забором и доставкой, суток.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $transportingWithDeliveryWithPickup;
+
     /**
-     * Срок перевозки с забором, суток
+     * Срок перевозки с забором, суток.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $transportingWithPickup;
+
     /**
-     * Продукт/тариф, для которого выведены сроки
+     * Продукт/тариф, для которого выведены сроки.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $type;
+
     /**
-     * Филиал-получатель
-     *
-     * @return string|null
+     * Филиал-получатель.
      */
-    public function getBranchReceiver() : ?string
+    public function getBranchReceiver(): ?string
     {
         return $this->branchReceiver;
     }
+
     /**
-     * Филиал-получатель
-     *
-     * @param string|null $branchReceiver
-     *
-     * @return self
+     * Филиал-получатель.
      */
-    public function setBranchReceiver(?string $branchReceiver) : self
+    public function setBranchReceiver(?string $branchReceiver): self
     {
         $this->branchReceiver = $branchReceiver;
+
         return $this;
     }
+
     /**
-     * Филиал-отправитель
-     *
-     * @return string|null
+     * Филиал-отправитель.
      */
-    public function getBranchSender() : ?string
+    public function getBranchSender(): ?string
     {
         return $this->branchSender;
     }
+
     /**
-     * Филиал-отправитель
-     *
-     * @param string|null $branchSender
-     *
-     * @return self
+     * Филиал-отправитель.
      */
-    public function setBranchSender(?string $branchSender) : self
+    public function setBranchSender(?string $branchSender): self
     {
         $this->branchSender = $branchSender;
+
         return $this;
     }
+
     /**
-     * Дни льготной доставки. Значения соответствуют дню недели льготной доставки (понедельник — 1, воскресенье — 7)
+     * Дни льготной доставки. Значения соответствуют дню недели льготной доставки (понедельник — 1, воскресенье — 7).
      *
-     * @return float[]|null
+     * @return null|float[]
      */
-    public function getDiscountedDeliveryWeekDays() : ?array
+    public function getDiscountedDeliveryWeekDays(): ?array
     {
         return $this->discountedDeliveryWeekDays;
     }
+
     /**
-     * Дни льготной доставки. Значения соответствуют дню недели льготной доставки (понедельник — 1, воскресенье — 7)
+     * Дни льготной доставки. Значения соответствуют дню недели льготной доставки (понедельник — 1, воскресенье — 7).
      *
-     * @param float[]|null $discountedDeliveryWeekDays
-     *
-     * @return self
+     * @param null|float[] $discountedDeliveryWeekDays
      */
-    public function setDiscountedDeliveryWeekDays(?array $discountedDeliveryWeekDays) : self
+    public function setDiscountedDeliveryWeekDays(?array $discountedDeliveryWeekDays): self
     {
         $this->discountedDeliveryWeekDays = $discountedDeliveryWeekDays;
+
         return $this;
     }
+
     /**
      * Указываются дни недели отправки груза из филиала отправления в филиал получения. 1 — ПН, 2 — ВТ и т.д.
      *
-     * @return float[]|null
+     * @return null|float[]
      */
-    public function getSenderShippingDays() : ?array
+    public function getSenderShippingDays(): ?array
     {
         return $this->senderShippingDays;
     }
+
     /**
      * Указываются дни недели отправки груза из филиала отправления в филиал получения. 1 — ПН, 2 — ВТ и т.д.
      *
-     * @param float[]|null $senderShippingDays
-     *
-     * @return self
+     * @param null|float[] $senderShippingDays
      */
-    public function setSenderShippingDays(?array $senderShippingDays) : self
+    public function setSenderShippingDays(?array $senderShippingDays): self
     {
         $this->senderShippingDays = $senderShippingDays;
+
         return $this;
     }
+
     /**
-     * Ориентировочные сроки перевозки, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`. Значения по срокам перевозки представлены в виде строки «КоличествоДнейПеревозки» или «МинимальноеКоличествоДнейПеревозки – МаксимальноеКоличествоДнейПеревозки»
+     * Ориентировочные сроки перевозки, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`. Значения по срокам перевозки представлены в виде строки «КоличествоДнейПеревозки» или «МинимальноеКоличествоДнейПеревозки – МаксимальноеКоличествоДнейПеревозки».
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getTransporting() : ?array
+    public function getTransporting(): ?array
     {
         return $this->transporting;
     }
+
     /**
-     * Ориентировочные сроки перевозки, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`. Значения по срокам перевозки представлены в виде строки «КоличествоДнейПеревозки» или «МинимальноеКоличествоДнейПеревозки – МаксимальноеКоличествоДнейПеревозки»
+     * Ориентировочные сроки перевозки, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`. Значения по срокам перевозки представлены в виде строки «КоличествоДнейПеревозки» или «МинимальноеКоличествоДнейПеревозки – МаксимальноеКоличествоДнейПеревозки».
      *
-     * @param string[]|null $transporting
-     *
-     * @return self
+     * @param null|string[] $transporting
      */
-    public function setTransporting(?array $transporting) : self
+    public function setTransporting(?array $transporting): self
     {
         $this->transporting = $transporting;
+
         return $this;
     }
+
     /**
-     * В актуальной версии протокола API не используется
-     *
-     * @return int|null
+     * В актуальной версии протокола API не используется.
      */
-    public function getTransportingTypes() : ?int
+    public function getTransportingTypes(): ?int
     {
         return $this->transportingTypes;
     }
+
     /**
-     * В актуальной версии протокола API не используется
-     *
-     * @param int|null $transportingTypes
-     *
-     * @return self
+     * В актуальной версии протокола API не используется.
      */
-    public function setTransportingTypes(?int $transportingTypes) : self
+    public function setTransportingTypes(?int $transportingTypes): self
     {
         $this->transportingTypes = $transportingTypes;
+
         return $this;
     }
+
     /**
      * Ориентировочные сроки перевозки с доставкой, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getTransportingWithDelivery() : ?array
+    public function getTransportingWithDelivery(): ?array
     {
         return $this->transportingWithDelivery;
     }
+
     /**
      * Ориентировочные сроки перевозки с доставкой, суток. Из массива надо выбрать элемент в соответствии со временем сдачи груза на склад и массивом данных по времени приемки груза `transportingTimes`.
      *
-     * @param string[]|null $transportingWithDelivery
-     *
-     * @return self
+     * @param null|string[] $transportingWithDelivery
      */
-    public function setTransportingWithDelivery(?array $transportingWithDelivery) : self
+    public function setTransportingWithDelivery(?array $transportingWithDelivery): self
     {
         $this->transportingWithDelivery = $transportingWithDelivery;
+
         return $this;
     }
+
     /**
-     * Срок перевозки с забором и доставкой, суток
-     *
-     * @return string|null
+     * Срок перевозки с забором и доставкой, суток.
      */
-    public function getTransportingWithDeliveryWithPickup() : ?string
+    public function getTransportingWithDeliveryWithPickup(): ?string
     {
         return $this->transportingWithDeliveryWithPickup;
     }
+
     /**
-     * Срок перевозки с забором и доставкой, суток
-     *
-     * @param string|null $transportingWithDeliveryWithPickup
-     *
-     * @return self
+     * Срок перевозки с забором и доставкой, суток.
      */
-    public function setTransportingWithDeliveryWithPickup(?string $transportingWithDeliveryWithPickup) : self
+    public function setTransportingWithDeliveryWithPickup(?string $transportingWithDeliveryWithPickup): self
     {
         $this->transportingWithDeliveryWithPickup = $transportingWithDeliveryWithPickup;
+
         return $this;
     }
+
     /**
-     * Срок перевозки с забором, суток
-     *
-     * @return string|null
+     * Срок перевозки с забором, суток.
      */
-    public function getTransportingWithPickup() : ?string
+    public function getTransportingWithPickup(): ?string
     {
         return $this->transportingWithPickup;
     }
+
     /**
-     * Срок перевозки с забором, суток
-     *
-     * @param string|null $transportingWithPickup
-     *
-     * @return self
+     * Срок перевозки с забором, суток.
      */
-    public function setTransportingWithPickup(?string $transportingWithPickup) : self
+    public function setTransportingWithPickup(?string $transportingWithPickup): self
     {
         $this->transportingWithPickup = $transportingWithPickup;
+
         return $this;
     }
+
     /**
-     * Продукт/тариф, для которого выведены сроки
-     *
-     * @return int|null
+     * Продукт/тариф, для которого выведены сроки.
      */
-    public function getType() : ?int
+    public function getType(): ?int
     {
         return $this->type;
     }
+
     /**
-     * Продукт/тариф, для которого выведены сроки
-     *
-     * @param int|null $type
-     *
-     * @return self
+     * Продукт/тариф, для которого выведены сроки.
      */
-    public function setType(?int $type) : self
+    public function setType(?int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

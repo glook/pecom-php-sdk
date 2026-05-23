@@ -5,138 +5,127 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingDocumentService
 {
     /**
-     * Код груза
+     * Код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $cargoCode;
+
     /**
      * Ставка НДС
      *
-     * @var string|null
+     * @var null|string
      */
     protected $rateVAT;
+
     /**
      * Сумма с НДС, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $sum;
+
     /**
      * Сумма НДС, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $sumVAT;
+
     /**
-     * Вид услуги
+     * Вид услуги.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $type;
+
     /**
-     * Код груза
-     *
-     * @return string|null
+     * Код груза.
      */
-    public function getCargoCode() : ?string
+    public function getCargoCode(): ?string
     {
         return $this->cargoCode;
     }
+
     /**
-     * Код груза
-     *
-     * @param string|null $cargoCode
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoCode(?string $cargoCode) : self
+    public function setCargoCode(?string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
      * Ставка НДС
-     *
-     * @return string|null
      */
-    public function getRateVAT() : ?string
+    public function getRateVAT(): ?string
     {
         return $this->rateVAT;
     }
+
     /**
      * Ставка НДС
-     *
-     * @param string|null $rateVAT
-     *
-     * @return self
      */
-    public function setRateVAT(?string $rateVAT) : self
+    public function setRateVAT(?string $rateVAT): self
     {
         $this->rateVAT = $rateVAT;
+
         return $this;
     }
+
     /**
      * Сумма с НДС, руб.
-     *
-     * @return float|null
      */
-    public function getSum() : ?float
+    public function getSum(): ?float
     {
         return $this->sum;
     }
+
     /**
      * Сумма с НДС, руб.
-     *
-     * @param float|null $sum
-     *
-     * @return self
      */
-    public function setSum(?float $sum) : self
+    public function setSum(?float $sum): self
     {
         $this->sum = $sum;
+
         return $this;
     }
+
     /**
      * Сумма НДС, руб.
-     *
-     * @return float|null
      */
-    public function getSumVAT() : ?float
+    public function getSumVAT(): ?float
     {
         return $this->sumVAT;
     }
+
     /**
      * Сумма НДС, руб.
-     *
-     * @param float|null $sumVAT
-     *
-     * @return self
      */
-    public function setSumVAT(?float $sumVAT) : self
+    public function setSumVAT(?float $sumVAT): self
     {
         $this->sumVAT = $sumVAT;
+
         return $this;
     }
+
     /**
-     * Вид услуги
-     *
-     * @return string|null
+     * Вид услуги.
      */
-    public function getType() : ?string
+    public function getType(): ?string
     {
         return $this->type;
     }
+
     /**
-     * Вид услуги
-     *
-     * @param string|null $type
-     *
-     * @return self
+     * Вид услуги.
      */
-    public function setType(?string $type) : self
+    public function setType(?string $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

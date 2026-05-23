@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupSubmitResponse;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupSubmitResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupSubmitResponse';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupSubmitResponse' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupSubmitResponse';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupSubmitResponse' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,45 +36,45 @@ class CargoPickupSubmitResponseNormalizer implements DenormalizerInterface, Norm
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupSubmitResponse();
+        $object = new CargoPickupSubmitResponse();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('cargos', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['cargos'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CargoItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CargoItem', 'json', $context);
             }
             $object->setCargos($values);
         }
-        if (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] !== null) {
+        if (\array_key_exists('customerCorrelation', $data) && null !== $data['customerCorrelation']) {
             $object->setCustomerCorrelation($data['customerCorrelation']);
-        }
-        elseif (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] === null) {
+        } elseif (\array_key_exists('customerCorrelation', $data) && null === $data['customerCorrelation']) {
             $object->setCustomerCorrelation(null);
         }
         if (\array_key_exists('documentId', $data)) {
             $object->setDocumentId($data['documentId']);
         }
-        if (\array_key_exists('notifications', $data) && $data['notifications'] !== null) {
-            $values_1 = array();
+        if (\array_key_exists('notifications', $data) && null !== $data['notifications']) {
+            $values_1 = [];
             foreach ($data['notifications'] as $value_1) {
                 $values_1[] = $value_1;
             }
             $object->setNotifications($values_1);
-        }
-        elseif (\array_key_exists('notifications', $data) && $data['notifications'] === null) {
+        } elseif (\array_key_exists('notifications', $data) && null === $data['notifications']) {
             $object->setNotifications(null);
         }
         if (\array_key_exists('sender', $data)) {
-            $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupSenderResponse', 'json', $context));
+            $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\PecomSdk\Generated\Model\CargoPickupSenderResponse', 'json', $context));
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
-        $values = array();
+        $data = [];
+        $values = [];
         foreach ($object->getCargos() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
@@ -80,13 +84,14 @@ class CargoPickupSubmitResponseNormalizer implements DenormalizerInterface, Norm
         }
         $data['documentId'] = $object->getDocumentId();
         if (null !== $object->getNotifications()) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($object->getNotifications() as $value_1) {
                 $values_1[] = $value_1;
             }
             $data['notifications'] = $values_1;
         }
         $data['sender'] = $this->normalizer->normalize($object->getSender(), 'json', $context);
+
         return $data;
     }
 }

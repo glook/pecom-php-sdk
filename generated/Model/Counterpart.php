@@ -5,111 +5,106 @@ namespace glook\PecomSdk\Generated\Model;
 class Counterpart
 {
     /**
-     * Номер карты клиента
+     * Номер карты клиента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $counterpartClientCard;
+
     /**
-     * ИНН контрагента
+     * ИНН контрагента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * КПП контрагента
+     * КПП контрагента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kpp;
+
     /**
-     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки
+     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки.
      *
-     * @var float[]|null
+     * @var null|float[]
      */
     protected $whoMakesCalculation;
+
     /**
-     * Номер карты клиента
-     *
-     * @return string|null
+     * Номер карты клиента.
      */
-    public function getCounterpartClientCard() : ?string
+    public function getCounterpartClientCard(): ?string
     {
         return $this->counterpartClientCard;
     }
+
     /**
-     * Номер карты клиента
-     *
-     * @param string|null $counterpartClientCard
-     *
-     * @return self
+     * Номер карты клиента.
      */
-    public function setCounterpartClientCard(?string $counterpartClientCard) : self
+    public function setCounterpartClientCard(?string $counterpartClientCard): self
     {
         $this->counterpartClientCard = $counterpartClientCard;
+
         return $this;
     }
+
     /**
-     * ИНН контрагента
-     *
-     * @return string|null
+     * ИНН контрагента.
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН контрагента
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН контрагента.
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * КПП контрагента
-     *
-     * @return string|null
+     * КПП контрагента.
      */
-    public function getKpp() : ?string
+    public function getKpp(): ?string
     {
         return $this->kpp;
     }
+
     /**
-     * КПП контрагента
-     *
-     * @param string|null $kpp
-     *
-     * @return self
+     * КПП контрагента.
      */
-    public function setKpp(?string $kpp) : self
+    public function setKpp(?string $kpp): self
     {
         $this->kpp = $kpp;
+
         return $this;
     }
+
     /**
-     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки
+     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки.
      *
-     * @return float[]|null
+     * @return null|float[]
      */
-    public function getWhoMakesCalculation() : ?array
+    public function getWhoMakesCalculation(): ?array
     {
         return $this->whoMakesCalculation;
     }
+
     /**
-     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки
+     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки.
      *
-     * @param float[]|null $whoMakesCalculation
-     *
-     * @return self
+     * @param null|float[] $whoMakesCalculation
      */
-    public function setWhoMakesCalculation(?array $whoMakesCalculation) : self
+    public function setWhoMakesCalculation(?array $whoMakesCalculation): self
     {
         $this->whoMakesCalculation = $whoMakesCalculation;
+
         return $this;
     }
 }

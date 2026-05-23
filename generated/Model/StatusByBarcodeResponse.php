@@ -5,30 +5,31 @@ namespace glook\PecomSdk\Generated\Model;
 class StatusByBarcodeResponse
 {
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @var CargoStatusByBarcodeItem[]|null
+     * @var null|CargoStatusByBarcodeItem[]
      */
     protected $cargos;
+
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @return CargoStatusByBarcodeItem[]|null
+     * @return null|CargoStatusByBarcodeItem[]
      */
-    public function getCargos() : ?array
+    public function getCargos(): ?array
     {
         return $this->cargos;
     }
+
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @param CargoStatusByBarcodeItem[]|null $cargos
-     *
-     * @return self
+     * @param null|CargoStatusByBarcodeItem[] $cargos
      */
-    public function setCargos(?array $cargos) : self
+    public function setCargos(?array $cargos): self
     {
         $this->cargos = $cargos;
+
         return $this;
     }
 }

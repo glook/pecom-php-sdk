@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItem;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupNetworkSubmitRequestCargosItemsItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItem';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItem' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItem';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItem' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,33 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemNormalizer implements Denorm
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItem();
+        $object = new CargoPickupNetworkSubmitRequestCargosItemsItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('cargo', $data)) {
-            $object->setCargo($this->denormalizer->denormalize($data['cargo'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemCargo', 'json', $context));
+            $object->setCargo($this->denormalizer->denormalize($data['cargo'], 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemCargo', 'json', $context));
         }
-        if (\array_key_exists('conditions', $data) && $data['conditions'] !== null) {
-            $object->setConditions($this->denormalizer->denormalize($data['conditions'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemConditions', 'json', $context));
-        }
-        elseif (\array_key_exists('conditions', $data) && $data['conditions'] === null) {
+        if (\array_key_exists('conditions', $data) && null !== $data['conditions']) {
+            $object->setConditions($this->denormalizer->denormalize($data['conditions'], 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemConditions', 'json', $context));
+        } elseif (\array_key_exists('conditions', $data) && null === $data['conditions']) {
             $object->setConditions(null);
         }
         if (\array_key_exists('receiver', $data)) {
-            $object->setReceiver($this->denormalizer->denormalize($data['receiver'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemReceiver', 'json', $context));
+            $object->setReceiver($this->denormalizer->denormalize($data['receiver'], 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemReceiver', 'json', $context));
         }
-        if (\array_key_exists('services', $data) && $data['services'] !== null) {
-            $object->setServices($this->denormalizer->denormalize($data['services'], 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemServices', 'json', $context));
-        }
-        elseif (\array_key_exists('services', $data) && $data['services'] === null) {
+        if (\array_key_exists('services', $data) && null !== $data['services']) {
+            $object->setServices($this->denormalizer->denormalize($data['services'], 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemServices', 'json', $context));
+        } elseif (\array_key_exists('services', $data) && null === $data['services']) {
             $object->setServices(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['cargo'] = $this->normalizer->normalize($object->getCargo(), 'json', $context);
         if (null !== $object->getConditions()) {
             $data['conditions'] = $this->normalizer->normalize($object->getConditions(), 'json', $context);
@@ -67,6 +71,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemNormalizer implements Denorm
         if (null !== $object->getServices()) {
             $data['services'] = $this->normalizer->normalize($object->getServices(), 'json', $context);
         }
+
         return $data;
     }
 }

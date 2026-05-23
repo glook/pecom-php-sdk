@@ -5,84 +5,81 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoDetailsResponse
 {
     /**
-     * Код груза
+     * Код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $cargoCode;
+
     /**
-     * Информация о составе груза
+     * Информация о составе груза.
      *
-     * @var CargoDetail[]|null
+     * @var null|CargoDetail[]
      */
     protected $details;
+
     /**
-     * ИНН отправителя
+     * ИНН отправителя.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $senderInn;
+
     /**
-     * Код груза
-     *
-     * @return string|null
+     * Код груза.
      */
-    public function getCargoCode() : ?string
+    public function getCargoCode(): ?string
     {
         return $this->cargoCode;
     }
+
     /**
-     * Код груза
-     *
-     * @param string|null $cargoCode
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoCode(?string $cargoCode) : self
+    public function setCargoCode(?string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
-     * Информация о составе груза
+     * Информация о составе груза.
      *
-     * @return CargoDetail[]|null
+     * @return null|CargoDetail[]
      */
-    public function getDetails() : ?array
+    public function getDetails(): ?array
     {
         return $this->details;
     }
+
     /**
-     * Информация о составе груза
+     * Информация о составе груза.
      *
-     * @param CargoDetail[]|null $details
-     *
-     * @return self
+     * @param null|CargoDetail[] $details
      */
-    public function setDetails(?array $details) : self
+    public function setDetails(?array $details): self
     {
         $this->details = $details;
+
         return $this;
     }
+
     /**
-     * ИНН отправителя
-     *
-     * @return string|null
+     * ИНН отправителя.
      */
-    public function getSenderInn() : ?string
+    public function getSenderInn(): ?string
     {
         return $this->senderInn;
     }
+
     /**
-     * ИНН отправителя
-     *
-     * @param string|null $senderInn
-     *
-     * @return self
+     * ИНН отправителя.
      */
-    public function setSenderInn(?string $senderInn) : self
+    public function setSenderInn(?string $senderInn): self
     {
         $this->senderInn = $senderInn;
+
         return $this;
     }
 }

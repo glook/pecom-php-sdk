@@ -5,30 +5,31 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosDeliveryStatusRequest
 {
     /**
-     * Индексы грузов
+     * Индексы грузов.
      *
      * @var string[]
      */
     protected $cargoCodes;
+
     /**
-     * Индексы грузов
+     * Индексы грузов.
      *
      * @return string[]
      */
-    public function getCargoCodes() : array
+    public function getCargoCodes(): array
     {
         return $this->cargoCodes;
     }
+
     /**
-     * Индексы грузов
+     * Индексы грузов.
      *
      * @param string[] $cargoCodes
-     *
-     * @return self
      */
-    public function setCargoCodes(array $cargoCodes) : self
+    public function setCargoCodes(array $cargoCodes): self
     {
         $this->cargoCodes = $cargoCodes;
+
         return $this;
     }
 }

@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\GeoObjectMetaDataProperty;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class GeoObjectMetaDataPropertyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\GeoObjectMetaDataProperty';
+        return 'glook\PecomSdk\Generated\Model\GeoObjectMetaDataProperty' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\GeoObjectMetaDataProperty';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\GeoObjectMetaDataProperty' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,19 +36,22 @@ class GeoObjectMetaDataPropertyNormalizer implements DenormalizerInterface, Norm
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\GeoObjectMetaDataProperty();
+        $object = new GeoObjectMetaDataProperty();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('GeocoderMetaData', $data)) {
-            $object->setGeocoderMetaData($this->denormalizer->denormalize($data['GeocoderMetaData'], 'glook\\PecomSdk\\Generated\\Model\\GeoObjectMetaData', 'json', $context));
+            $object->setGeocoderMetaData($this->denormalizer->denormalize($data['GeocoderMetaData'], 'glook\PecomSdk\Generated\Model\GeoObjectMetaData', 'json', $context));
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['GeocoderMetaData'] = $this->normalizer->normalize($object->getGeocoderMetaData(), 'json', $context);
+
         return $data;
     }
 }

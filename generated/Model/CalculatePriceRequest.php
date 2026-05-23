@@ -5,597 +5,560 @@ namespace glook\PecomSdk\Generated\Model;
 class CalculatePriceRequest
 {
     /**
-     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88
+     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88.
      *
-     * @var Cargo[]|null
+     * @var null|Cargo[]
      */
     protected $cargos;
+
     /**
-     * Данные контрагента для расчета с учетом спецусловий
+     * Данные контрагента для расчета с учетом спецусловий.
      *
-     * @var Counterpart|null
+     * @var null|Counterpart
      */
     protected $counterpart;
+
     /**
-     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/)
+     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $currencyCode = '643';
+
     /**
-     * Параметры адреса доставки груза
+     * Параметры адреса доставки груза.
      *
-     * @var AddressBlock|null
+     * @var null|AddressBlock
      */
     protected $delivery;
+
     /**
-     * Погрузочно-разгрузочные работы при доставке
+     * Погрузочно-разгрузочные работы при доставке.
      *
-     * @var LoadingServices|null
+     * @var null|LoadingServices
      */
     protected $deliveryServices;
+
     /**
-     * Нужна доставка
+     * Нужна доставка.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isDelivery;
+
     /**
-     * Признак гипермаркета
+     * Признак гипермаркета.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isHyperMarket;
+
     /**
-     * Страхование
+     * Страхование.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isInsurance;
+
     /**
      * Стоимость груза (сумма, на которую будет застрахован груз), руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $isInsurancePrice;
+
     /**
-     * Растентовка получателя
+     * Растентовка получателя.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isOpenCarReceiver;
+
     /**
-     * Растентовка отправителя
+     * Растентовка отправителя.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isOpenCarSender;
+
     /**
      * Нужен забор
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isPickUp;
+
     /**
-     * Организация перевозки сопроводительных документов (см. комментарии)
+     * Организация перевозки сопроводительных документов (см. комментарии).
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $needArrangeTransportationDocuments;
+
     /**
-     * Возврат документов (см. комментарии)
+     * Возврат документов (см. комментарии).
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $needReturnDocuments;
+
     /**
-     * Параметры адреса забора груза
+     * Параметры адреса забора груза.
      *
-     * @var AddressBlock|null
+     * @var null|AddressBlock
      */
     protected $pickup;
+
     /**
-     * Погрузочно-разгрузочные работы при заборе
+     * Погрузочно-разгрузочные работы при заборе.
      *
-     * @var LoadingServices|null
+     * @var null|LoadingServices
      */
     protected $pickupServices;
+
     /**
      * Дата и время планируемой передачи груза в ПЭК (по часовому поясу филиала отправления): при заказанном заборе — дата и время начала интервала забора груза (не позднее 4-х часов до окончания работы филиала), при самопривозе — дата и время плановой сдачи груза на склад ПЭК Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $plannedDateTime;
+
     /**
      * В актуальной версии протокола не используется.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $receiverDistanceType;
+
     /**
-     * Идентификатор склада получателя (см. комментарии)
+     * Идентификатор склада получателя (см. комментарии).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $receiverWarehouseId;
+
     /**
      * В актуальной версии протокола не используется.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $senderDistanceType;
+
     /**
-     * Идентификатор склада отправителя (см. комментарии)
+     * Идентификатор склада отправителя (см. комментарии).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $senderWarehouseId;
+
     /**
-     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто
+     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто.
      *
      * @var float[]
      */
     protected $types;
+
     /**
-     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88
+     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88.
      *
-     * @return Cargo[]|null
+     * @return null|Cargo[]
      */
-    public function getCargos() : ?array
+    public function getCargos(): ?array
     {
         return $this->cargos;
     }
+
     /**
-     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88
+     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88.
      *
-     * @param Cargo[]|null $cargos
-     *
-     * @return self
+     * @param null|Cargo[] $cargos
      */
-    public function setCargos(?array $cargos) : self
+    public function setCargos(?array $cargos): self
     {
         $this->cargos = $cargos;
+
         return $this;
     }
+
     /**
-     * Данные контрагента для расчета с учетом спецусловий
-     *
-     * @return Counterpart|null
+     * Данные контрагента для расчета с учетом спецусловий.
      */
-    public function getCounterpart() : ?Counterpart
+    public function getCounterpart(): ?Counterpart
     {
         return $this->counterpart;
     }
+
     /**
-     * Данные контрагента для расчета с учетом спецусловий
-     *
-     * @param Counterpart|null $counterpart
-     *
-     * @return self
+     * Данные контрагента для расчета с учетом спецусловий.
      */
-    public function setCounterpart(?Counterpart $counterpart) : self
+    public function setCounterpart(?Counterpart $counterpart): self
     {
         $this->counterpart = $counterpart;
+
         return $this;
     }
+
     /**
-     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/)
-     *
-     * @return string|null
+     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/).
      */
-    public function getCurrencyCode() : ?string
+    public function getCurrencyCode(): ?string
     {
         return $this->currencyCode;
     }
+
     /**
-     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/)
-     *
-     * @param string|null $currencyCode
-     *
-     * @return self
+     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/).
      */
-    public function setCurrencyCode(?string $currencyCode) : self
+    public function setCurrencyCode(?string $currencyCode): self
     {
         $this->currencyCode = $currencyCode;
+
         return $this;
     }
+
     /**
-     * Параметры адреса доставки груза
-     *
-     * @return AddressBlock|null
+     * Параметры адреса доставки груза.
      */
-    public function getDelivery() : ?AddressBlock
+    public function getDelivery(): ?AddressBlock
     {
         return $this->delivery;
     }
+
     /**
-     * Параметры адреса доставки груза
-     *
-     * @param AddressBlock|null $delivery
-     *
-     * @return self
+     * Параметры адреса доставки груза.
      */
-    public function setDelivery(?AddressBlock $delivery) : self
+    public function setDelivery(?AddressBlock $delivery): self
     {
         $this->delivery = $delivery;
+
         return $this;
     }
+
     /**
-     * Погрузочно-разгрузочные работы при доставке
-     *
-     * @return LoadingServices|null
+     * Погрузочно-разгрузочные работы при доставке.
      */
-    public function getDeliveryServices() : ?LoadingServices
+    public function getDeliveryServices(): ?LoadingServices
     {
         return $this->deliveryServices;
     }
+
     /**
-     * Погрузочно-разгрузочные работы при доставке
-     *
-     * @param LoadingServices|null $deliveryServices
-     *
-     * @return self
+     * Погрузочно-разгрузочные работы при доставке.
      */
-    public function setDeliveryServices(?LoadingServices $deliveryServices) : self
+    public function setDeliveryServices(?LoadingServices $deliveryServices): self
     {
         $this->deliveryServices = $deliveryServices;
+
         return $this;
     }
+
     /**
-     * Нужна доставка
-     *
-     * @return bool|null
+     * Нужна доставка.
      */
-    public function getIsDelivery() : ?bool
+    public function getIsDelivery(): ?bool
     {
         return $this->isDelivery;
     }
+
     /**
-     * Нужна доставка
-     *
-     * @param bool|null $isDelivery
-     *
-     * @return self
+     * Нужна доставка.
      */
-    public function setIsDelivery(?bool $isDelivery) : self
+    public function setIsDelivery(?bool $isDelivery): self
     {
         $this->isDelivery = $isDelivery;
+
         return $this;
     }
+
     /**
-     * Признак гипермаркета
-     *
-     * @return bool|null
+     * Признак гипермаркета.
      */
-    public function getIsHyperMarket() : ?bool
+    public function getIsHyperMarket(): ?bool
     {
         return $this->isHyperMarket;
     }
+
     /**
-     * Признак гипермаркета
-     *
-     * @param bool|null $isHyperMarket
-     *
-     * @return self
+     * Признак гипермаркета.
      */
-    public function setIsHyperMarket(?bool $isHyperMarket) : self
+    public function setIsHyperMarket(?bool $isHyperMarket): self
     {
         $this->isHyperMarket = $isHyperMarket;
+
         return $this;
     }
+
     /**
-     * Страхование
-     *
-     * @return bool|null
+     * Страхование.
      */
-    public function getIsInsurance() : ?bool
+    public function getIsInsurance(): ?bool
     {
         return $this->isInsurance;
     }
+
     /**
-     * Страхование
-     *
-     * @param bool|null $isInsurance
-     *
-     * @return self
+     * Страхование.
      */
-    public function setIsInsurance(?bool $isInsurance) : self
+    public function setIsInsurance(?bool $isInsurance): self
     {
         $this->isInsurance = $isInsurance;
+
         return $this;
     }
+
     /**
      * Стоимость груза (сумма, на которую будет застрахован груз), руб.
-     *
-     * @return float|null
      */
-    public function getIsInsurancePrice() : ?float
+    public function getIsInsurancePrice(): ?float
     {
         return $this->isInsurancePrice;
     }
+
     /**
      * Стоимость груза (сумма, на которую будет застрахован груз), руб.
-     *
-     * @param float|null $isInsurancePrice
-     *
-     * @return self
      */
-    public function setIsInsurancePrice(?float $isInsurancePrice) : self
+    public function setIsInsurancePrice(?float $isInsurancePrice): self
     {
         $this->isInsurancePrice = $isInsurancePrice;
+
         return $this;
     }
+
     /**
-     * Растентовка получателя
-     *
-     * @return bool|null
+     * Растентовка получателя.
      */
-    public function getIsOpenCarReceiver() : ?bool
+    public function getIsOpenCarReceiver(): ?bool
     {
         return $this->isOpenCarReceiver;
     }
+
     /**
-     * Растентовка получателя
-     *
-     * @param bool|null $isOpenCarReceiver
-     *
-     * @return self
+     * Растентовка получателя.
      */
-    public function setIsOpenCarReceiver(?bool $isOpenCarReceiver) : self
+    public function setIsOpenCarReceiver(?bool $isOpenCarReceiver): self
     {
         $this->isOpenCarReceiver = $isOpenCarReceiver;
+
         return $this;
     }
+
     /**
-     * Растентовка отправителя
-     *
-     * @return bool|null
+     * Растентовка отправителя.
      */
-    public function getIsOpenCarSender() : ?bool
+    public function getIsOpenCarSender(): ?bool
     {
         return $this->isOpenCarSender;
     }
+
     /**
-     * Растентовка отправителя
-     *
-     * @param bool|null $isOpenCarSender
-     *
-     * @return self
+     * Растентовка отправителя.
      */
-    public function setIsOpenCarSender(?bool $isOpenCarSender) : self
+    public function setIsOpenCarSender(?bool $isOpenCarSender): self
     {
         $this->isOpenCarSender = $isOpenCarSender;
+
         return $this;
     }
+
     /**
      * Нужен забор
-     *
-     * @return bool|null
      */
-    public function getIsPickUp() : ?bool
+    public function getIsPickUp(): ?bool
     {
         return $this->isPickUp;
     }
+
     /**
      * Нужен забор
-     *
-     * @param bool|null $isPickUp
-     *
-     * @return self
      */
-    public function setIsPickUp(?bool $isPickUp) : self
+    public function setIsPickUp(?bool $isPickUp): self
     {
         $this->isPickUp = $isPickUp;
+
         return $this;
     }
+
     /**
-     * Организация перевозки сопроводительных документов (см. комментарии)
-     *
-     * @return bool|null
+     * Организация перевозки сопроводительных документов (см. комментарии).
      */
-    public function getNeedArrangeTransportationDocuments() : ?bool
+    public function getNeedArrangeTransportationDocuments(): ?bool
     {
         return $this->needArrangeTransportationDocuments;
     }
+
     /**
-     * Организация перевозки сопроводительных документов (см. комментарии)
-     *
-     * @param bool|null $needArrangeTransportationDocuments
-     *
-     * @return self
+     * Организация перевозки сопроводительных документов (см. комментарии).
      */
-    public function setNeedArrangeTransportationDocuments(?bool $needArrangeTransportationDocuments) : self
+    public function setNeedArrangeTransportationDocuments(?bool $needArrangeTransportationDocuments): self
     {
         $this->needArrangeTransportationDocuments = $needArrangeTransportationDocuments;
+
         return $this;
     }
+
     /**
-     * Возврат документов (см. комментарии)
-     *
-     * @return bool|null
+     * Возврат документов (см. комментарии).
      */
-    public function getNeedReturnDocuments() : ?bool
+    public function getNeedReturnDocuments(): ?bool
     {
         return $this->needReturnDocuments;
     }
+
     /**
-     * Возврат документов (см. комментарии)
-     *
-     * @param bool|null $needReturnDocuments
-     *
-     * @return self
+     * Возврат документов (см. комментарии).
      */
-    public function setNeedReturnDocuments(?bool $needReturnDocuments) : self
+    public function setNeedReturnDocuments(?bool $needReturnDocuments): self
     {
         $this->needReturnDocuments = $needReturnDocuments;
+
         return $this;
     }
+
     /**
-     * Параметры адреса забора груза
-     *
-     * @return AddressBlock|null
+     * Параметры адреса забора груза.
      */
-    public function getPickup() : ?AddressBlock
+    public function getPickup(): ?AddressBlock
     {
         return $this->pickup;
     }
+
     /**
-     * Параметры адреса забора груза
-     *
-     * @param AddressBlock|null $pickup
-     *
-     * @return self
+     * Параметры адреса забора груза.
      */
-    public function setPickup(?AddressBlock $pickup) : self
+    public function setPickup(?AddressBlock $pickup): self
     {
         $this->pickup = $pickup;
+
         return $this;
     }
+
     /**
-     * Погрузочно-разгрузочные работы при заборе
-     *
-     * @return LoadingServices|null
+     * Погрузочно-разгрузочные работы при заборе.
      */
-    public function getPickupServices() : ?LoadingServices
+    public function getPickupServices(): ?LoadingServices
     {
         return $this->pickupServices;
     }
+
     /**
-     * Погрузочно-разгрузочные работы при заборе
-     *
-     * @param LoadingServices|null $pickupServices
-     *
-     * @return self
+     * Погрузочно-разгрузочные работы при заборе.
      */
-    public function setPickupServices(?LoadingServices $pickupServices) : self
+    public function setPickupServices(?LoadingServices $pickupServices): self
     {
         $this->pickupServices = $pickupServices;
+
         return $this;
     }
+
     /**
      * Дата и время планируемой передачи груза в ПЭК (по часовому поясу филиала отправления): при заказанном заборе — дата и время начала интервала забора груза (не позднее 4-х часов до окончания работы филиала), при самопривозе — дата и время плановой сдачи груза на склад ПЭК Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
-     *
-     * @return string|null
      */
-    public function getPlannedDateTime() : ?string
+    public function getPlannedDateTime(): ?string
     {
         return $this->plannedDateTime;
     }
+
     /**
      * Дата и время планируемой передачи груза в ПЭК (по часовому поясу филиала отправления): при заказанном заборе — дата и время начала интервала забора груза (не позднее 4-х часов до окончания работы филиала), при самопривозе — дата и время плановой сдачи груза на склад ПЭК Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
-     *
-     * @param string|null $plannedDateTime
-     *
-     * @return self
      */
-    public function setPlannedDateTime(?string $plannedDateTime) : self
+    public function setPlannedDateTime(?string $plannedDateTime): self
     {
         $this->plannedDateTime = $plannedDateTime;
+
         return $this;
     }
+
     /**
      * В актуальной версии протокола не используется.
-     *
-     * @return int|null
      */
-    public function getReceiverDistanceType() : ?int
+    public function getReceiverDistanceType(): ?int
     {
         return $this->receiverDistanceType;
     }
+
     /**
      * В актуальной версии протокола не используется.
-     *
-     * @param int|null $receiverDistanceType
-     *
-     * @return self
      */
-    public function setReceiverDistanceType(?int $receiverDistanceType) : self
+    public function setReceiverDistanceType(?int $receiverDistanceType): self
     {
         $this->receiverDistanceType = $receiverDistanceType;
+
         return $this;
     }
+
     /**
-     * Идентификатор склада получателя (см. комментарии)
-     *
-     * @return string|null
+     * Идентификатор склада получателя (см. комментарии).
      */
-    public function getReceiverWarehouseId() : ?string
+    public function getReceiverWarehouseId(): ?string
     {
         return $this->receiverWarehouseId;
     }
+
     /**
-     * Идентификатор склада получателя (см. комментарии)
-     *
-     * @param string|null $receiverWarehouseId
-     *
-     * @return self
+     * Идентификатор склада получателя (см. комментарии).
      */
-    public function setReceiverWarehouseId(?string $receiverWarehouseId) : self
+    public function setReceiverWarehouseId(?string $receiverWarehouseId): self
     {
         $this->receiverWarehouseId = $receiverWarehouseId;
+
         return $this;
     }
+
     /**
      * В актуальной версии протокола не используется.
-     *
-     * @return int|null
      */
-    public function getSenderDistanceType() : ?int
+    public function getSenderDistanceType(): ?int
     {
         return $this->senderDistanceType;
     }
+
     /**
      * В актуальной версии протокола не используется.
-     *
-     * @param int|null $senderDistanceType
-     *
-     * @return self
      */
-    public function setSenderDistanceType(?int $senderDistanceType) : self
+    public function setSenderDistanceType(?int $senderDistanceType): self
     {
         $this->senderDistanceType = $senderDistanceType;
+
         return $this;
     }
+
     /**
-     * Идентификатор склада отправителя (см. комментарии)
-     *
-     * @return string|null
+     * Идентификатор склада отправителя (см. комментарии).
      */
-    public function getSenderWarehouseId() : ?string
+    public function getSenderWarehouseId(): ?string
     {
         return $this->senderWarehouseId;
     }
+
     /**
-     * Идентификатор склада отправителя (см. комментарии)
-     *
-     * @param string|null $senderWarehouseId
-     *
-     * @return self
+     * Идентификатор склада отправителя (см. комментарии).
      */
-    public function setSenderWarehouseId(?string $senderWarehouseId) : self
+    public function setSenderWarehouseId(?string $senderWarehouseId): self
     {
         $this->senderWarehouseId = $senderWarehouseId;
+
         return $this;
     }
+
     /**
-     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто
+     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто.
      *
      * @return float[]
      */
-    public function getTypes() : array
+    public function getTypes(): array
     {
         return $this->types;
     }
+
     /**
-     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто
+     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто.
      *
      * @param float[] $types
-     *
-     * @return self
      */
-    public function setTypes(array $types) : self
+    public function setTypes(array $types): self
     {
         $this->types = $types;
+
         return $this;
     }
 }

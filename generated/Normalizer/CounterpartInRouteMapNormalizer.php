@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CounterpartInRouteMap;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CounterpartInRouteMapNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CounterpartInRouteMap';
+        return 'glook\PecomSdk\Generated\Model\CounterpartInRouteMap' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CounterpartInRouteMap';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CounterpartInRouteMap' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,32 @@ class CounterpartInRouteMapNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CounterpartInRouteMap();
+        $object = new CounterpartInRouteMap();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('countCargosForDelivery', $data) && $data['countCargosForDelivery'] !== null) {
+        if (\array_key_exists('countCargosForDelivery', $data) && null !== $data['countCargosForDelivery']) {
             $object->setCountCargosForDelivery($data['countCargosForDelivery']);
-        }
-        elseif (\array_key_exists('countCargosForDelivery', $data) && $data['countCargosForDelivery'] === null) {
+        } elseif (\array_key_exists('countCargosForDelivery', $data) && null === $data['countCargosForDelivery']) {
             $object->setCountCargosForDelivery(null);
         }
-        if (\array_key_exists('countCargosForIntake', $data) && $data['countCargosForIntake'] !== null) {
+        if (\array_key_exists('countCargosForIntake', $data) && null !== $data['countCargosForIntake']) {
             $object->setCountCargosForIntake($data['countCargosForIntake']);
-        }
-        elseif (\array_key_exists('countCargosForIntake', $data) && $data['countCargosForIntake'] === null) {
+        } elseif (\array_key_exists('countCargosForIntake', $data) && null === $data['countCargosForIntake']) {
             $object->setCountCargosForIntake(null);
         }
-        if (\array_key_exists('counterpart', $data) && $data['counterpart'] !== null) {
-            $object->setCounterpart($this->denormalizer->denormalize($data['counterpart'], 'glook\\PecomSdk\\Generated\\Model\\RouteMapCounterpart', 'json', $context));
-        }
-        elseif (\array_key_exists('counterpart', $data) && $data['counterpart'] === null) {
+        if (\array_key_exists('counterpart', $data) && null !== $data['counterpart']) {
+            $object->setCounterpart($this->denormalizer->denormalize($data['counterpart'], 'glook\PecomSdk\Generated\Model\RouteMapCounterpart', 'json', $context));
+        } elseif (\array_key_exists('counterpart', $data) && null === $data['counterpart']) {
             $object->setCounterpart(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCountCargosForDelivery()) {
             $data['countCargosForDelivery'] = $object->getCountCargosForDelivery();
         }
@@ -68,6 +71,7 @@ class CounterpartInRouteMapNormalizer implements DenormalizerInterface, Normaliz
         if (null !== $object->getCounterpart()) {
             $data['counterpart'] = $this->normalizer->normalize($object->getCounterpart(), 'json', $context);
         }
+
         return $data;
     }
 }

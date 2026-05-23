@@ -5,57 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatusResponse
 {
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @var CurrentStatusItem[]|null
+     * @var null|CurrentStatusItem[]
      */
     protected $cargos;
+
     /**
-     * Ответ с ошибкой
+     * Ответ с ошибкой.
      *
-     * @var CurrentStatusError|null
+     * @var null|CurrentStatusError
      */
     protected $error;
+
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @return CurrentStatusItem[]|null
+     * @return null|CurrentStatusItem[]
      */
-    public function getCargos() : ?array
+    public function getCargos(): ?array
     {
         return $this->cargos;
     }
+
     /**
-     * Статусы грузов
+     * Статусы грузов.
      *
-     * @param CurrentStatusItem[]|null $cargos
-     *
-     * @return self
+     * @param null|CurrentStatusItem[] $cargos
      */
-    public function setCargos(?array $cargos) : self
+    public function setCargos(?array $cargos): self
     {
         $this->cargos = $cargos;
+
         return $this;
     }
+
     /**
-     * Ответ с ошибкой
-     *
-     * @return CurrentStatusError|null
+     * Ответ с ошибкой.
      */
-    public function getError() : ?CurrentStatusError
+    public function getError(): ?CurrentStatusError
     {
         return $this->error;
     }
+
     /**
-     * Ответ с ошибкой
-     *
-     * @param CurrentStatusError|null $error
-     *
-     * @return self
+     * Ответ с ошибкой.
      */
-    public function setError(?CurrentStatusError $error) : self
+    public function setError(?CurrentStatusError $error): self
     {
         $this->error = $error;
+
         return $this;
     }
 }

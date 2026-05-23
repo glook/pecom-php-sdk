@@ -7,217 +7,204 @@ class RouteMap
     /**
      * Наименование филиала ПЭК, к которому относится маршрутный лист
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchName;
+
     /**
-     * Контрагенты в маршрутном листе
+     * Контрагенты в маршрутном листе.
      *
-     * @var CounterpartInRouteMap[]|null
+     * @var null|CounterpartInRouteMap[]
      */
     protected $counterpartsInRouteMap;
+
     /**
-     * ФИО водителя
+     * ФИО водителя.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $driverFIO;
+
     /**
-     * паспортные данные водителя (используются для заказа пропусков)
+     * паспортные данные водителя (используются для заказа пропусков).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $driverPassport;
+
     /**
-     * Телефон водителя
+     * Телефон водителя.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $driverPhone;
+
     /**
-     * Внутренний идентификатор маршрутного листа
+     * Внутренний идентификатор маршрутного листа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $routeMapUID;
+
     /**
-     * наименование марки автомобиля водитлея
+     * наименование марки автомобиля водитлея.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $vehicleBrand;
+
     /**
-     * государственный номер автомобиля
+     * государственный номер автомобиля.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $vehicleNumber;
+
     /**
      * Наименование филиала ПЭК, к которому относится маршрутный лист
-     *
-     * @return string|null
      */
-    public function getBranchName() : ?string
+    public function getBranchName(): ?string
     {
         return $this->branchName;
     }
+
     /**
      * Наименование филиала ПЭК, к которому относится маршрутный лист
-     *
-     * @param string|null $branchName
-     *
-     * @return self
      */
-    public function setBranchName(?string $branchName) : self
+    public function setBranchName(?string $branchName): self
     {
         $this->branchName = $branchName;
+
         return $this;
     }
+
     /**
-     * Контрагенты в маршрутном листе
+     * Контрагенты в маршрутном листе.
      *
-     * @return CounterpartInRouteMap[]|null
+     * @return null|CounterpartInRouteMap[]
      */
-    public function getCounterpartsInRouteMap() : ?array
+    public function getCounterpartsInRouteMap(): ?array
     {
         return $this->counterpartsInRouteMap;
     }
+
     /**
-     * Контрагенты в маршрутном листе
+     * Контрагенты в маршрутном листе.
      *
-     * @param CounterpartInRouteMap[]|null $counterpartsInRouteMap
-     *
-     * @return self
+     * @param null|CounterpartInRouteMap[] $counterpartsInRouteMap
      */
-    public function setCounterpartsInRouteMap(?array $counterpartsInRouteMap) : self
+    public function setCounterpartsInRouteMap(?array $counterpartsInRouteMap): self
     {
         $this->counterpartsInRouteMap = $counterpartsInRouteMap;
+
         return $this;
     }
+
     /**
-     * ФИО водителя
-     *
-     * @return string|null
+     * ФИО водителя.
      */
-    public function getDriverFIO() : ?string
+    public function getDriverFIO(): ?string
     {
         return $this->driverFIO;
     }
+
     /**
-     * ФИО водителя
-     *
-     * @param string|null $driverFIO
-     *
-     * @return self
+     * ФИО водителя.
      */
-    public function setDriverFIO(?string $driverFIO) : self
+    public function setDriverFIO(?string $driverFIO): self
     {
         $this->driverFIO = $driverFIO;
+
         return $this;
     }
+
     /**
-     * паспортные данные водителя (используются для заказа пропусков)
-     *
-     * @return string|null
+     * паспортные данные водителя (используются для заказа пропусков).
      */
-    public function getDriverPassport() : ?string
+    public function getDriverPassport(): ?string
     {
         return $this->driverPassport;
     }
+
     /**
-     * паспортные данные водителя (используются для заказа пропусков)
-     *
-     * @param string|null $driverPassport
-     *
-     * @return self
+     * паспортные данные водителя (используются для заказа пропусков).
      */
-    public function setDriverPassport(?string $driverPassport) : self
+    public function setDriverPassport(?string $driverPassport): self
     {
         $this->driverPassport = $driverPassport;
+
         return $this;
     }
+
     /**
-     * Телефон водителя
-     *
-     * @return string|null
+     * Телефон водителя.
      */
-    public function getDriverPhone() : ?string
+    public function getDriverPhone(): ?string
     {
         return $this->driverPhone;
     }
+
     /**
-     * Телефон водителя
-     *
-     * @param string|null $driverPhone
-     *
-     * @return self
+     * Телефон водителя.
      */
-    public function setDriverPhone(?string $driverPhone) : self
+    public function setDriverPhone(?string $driverPhone): self
     {
         $this->driverPhone = $driverPhone;
+
         return $this;
     }
+
     /**
-     * Внутренний идентификатор маршрутного листа
-     *
-     * @return string|null
+     * Внутренний идентификатор маршрутного листа.
      */
-    public function getRouteMapUID() : ?string
+    public function getRouteMapUID(): ?string
     {
         return $this->routeMapUID;
     }
+
     /**
-     * Внутренний идентификатор маршрутного листа
-     *
-     * @param string|null $routeMapUID
-     *
-     * @return self
+     * Внутренний идентификатор маршрутного листа.
      */
-    public function setRouteMapUID(?string $routeMapUID) : self
+    public function setRouteMapUID(?string $routeMapUID): self
     {
         $this->routeMapUID = $routeMapUID;
+
         return $this;
     }
+
     /**
-     * наименование марки автомобиля водитлея
-     *
-     * @return string|null
+     * наименование марки автомобиля водитлея.
      */
-    public function getVehicleBrand() : ?string
+    public function getVehicleBrand(): ?string
     {
         return $this->vehicleBrand;
     }
+
     /**
-     * наименование марки автомобиля водитлея
-     *
-     * @param string|null $vehicleBrand
-     *
-     * @return self
+     * наименование марки автомобиля водитлея.
      */
-    public function setVehicleBrand(?string $vehicleBrand) : self
+    public function setVehicleBrand(?string $vehicleBrand): self
     {
         $this->vehicleBrand = $vehicleBrand;
+
         return $this;
     }
+
     /**
-     * государственный номер автомобиля
-     *
-     * @return string|null
+     * государственный номер автомобиля.
      */
-    public function getVehicleNumber() : ?string
+    public function getVehicleNumber(): ?string
     {
         return $this->vehicleNumber;
     }
+
     /**
-     * государственный номер автомобиля
-     *
-     * @param string|null $vehicleNumber
-     *
-     * @return self
+     * государственный номер автомобиля.
      */
-    public function setVehicleNumber(?string $vehicleNumber) : self
+    public function setVehicleNumber(?string $vehicleNumber): self
     {
         $this->vehicleNumber = $vehicleNumber;
+
         return $this;
     }
 }

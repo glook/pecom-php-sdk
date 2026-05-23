@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemCargo;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupNetworkSubmitRequestCargosItemsItemCargoNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemCargo';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemCargo' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemCargo';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemCargo' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,84 +36,76 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargoNormalizer implements D
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemCargo();
+        $object = new CargoPickupNetworkSubmitRequestCargosItemsItemCargo();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('clientPositionsBarcode', $data) && $data['clientPositionsBarcode'] !== null) {
-            $values = array();
+        if (\array_key_exists('clientPositionsBarcode', $data) && null !== $data['clientPositionsBarcode']) {
+            $values = [];
             foreach ($data['clientPositionsBarcode'] as $value) {
                 $values[] = $value;
             }
             $object->setClientPositionsBarcode($values);
-        }
-        elseif (\array_key_exists('clientPositionsBarcode', $data) && $data['clientPositionsBarcode'] === null) {
+        } elseif (\array_key_exists('clientPositionsBarcode', $data) && null === $data['clientPositionsBarcode']) {
             $object->setClientPositionsBarcode(null);
         }
-        if (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] !== null) {
+        if (\array_key_exists('customerCorrelation', $data) && null !== $data['customerCorrelation']) {
             $object->setCustomerCorrelation($data['customerCorrelation']);
-        }
-        elseif (\array_key_exists('customerCorrelation', $data) && $data['customerCorrelation'] === null) {
+        } elseif (\array_key_exists('customerCorrelation', $data) && null === $data['customerCorrelation']) {
             $object->setCustomerCorrelation(null);
         }
-        if (\array_key_exists('description', $data) && $data['description'] !== null) {
+        if (\array_key_exists('description', $data) && null !== $data['description']) {
             $object->setDescription($data['description']);
-        }
-        elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+        } elseif (\array_key_exists('description', $data) && null === $data['description']) {
             $object->setDescription(null);
         }
-        if (\array_key_exists('height', $data) && $data['height'] !== null) {
+        if (\array_key_exists('height', $data) && null !== $data['height']) {
             $object->setHeight($data['height']);
-        }
-        elseif (\array_key_exists('height', $data) && $data['height'] === null) {
+        } elseif (\array_key_exists('height', $data) && null === $data['height']) {
             $object->setHeight(null);
         }
-        if (\array_key_exists('length', $data) && $data['length'] !== null) {
+        if (\array_key_exists('length', $data) && null !== $data['length']) {
             $object->setLength($data['length']);
-        }
-        elseif (\array_key_exists('length', $data) && $data['length'] === null) {
+        } elseif (\array_key_exists('length', $data) && null === $data['length']) {
             $object->setLength(null);
         }
-        if (\array_key_exists('orderNumber', $data) && $data['orderNumber'] !== null) {
+        if (\array_key_exists('orderNumber', $data) && null !== $data['orderNumber']) {
             $object->setOrderNumber($data['orderNumber']);
-        }
-        elseif (\array_key_exists('orderNumber', $data) && $data['orderNumber'] === null) {
+        } elseif (\array_key_exists('orderNumber', $data) && null === $data['orderNumber']) {
             $object->setOrderNumber(null);
         }
-        if (\array_key_exists('positionsCount', $data) && $data['positionsCount'] !== null) {
+        if (\array_key_exists('positionsCount', $data) && null !== $data['positionsCount']) {
             $object->setPositionsCount($data['positionsCount']);
-        }
-        elseif (\array_key_exists('positionsCount', $data) && $data['positionsCount'] === null) {
+        } elseif (\array_key_exists('positionsCount', $data) && null === $data['positionsCount']) {
             $object->setPositionsCount(null);
         }
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);
         }
-        if (\array_key_exists('volume', $data) && $data['volume'] !== null) {
+        if (\array_key_exists('volume', $data) && null !== $data['volume']) {
             $object->setVolume($data['volume']);
-        }
-        elseif (\array_key_exists('volume', $data) && $data['volume'] === null) {
+        } elseif (\array_key_exists('volume', $data) && null === $data['volume']) {
             $object->setVolume(null);
         }
-        if (\array_key_exists('weight', $data) && $data['weight'] !== null) {
+        if (\array_key_exists('weight', $data) && null !== $data['weight']) {
             $object->setWeight($data['weight']);
-        }
-        elseif (\array_key_exists('weight', $data) && $data['weight'] === null) {
+        } elseif (\array_key_exists('weight', $data) && null === $data['weight']) {
             $object->setWeight(null);
         }
-        if (\array_key_exists('width', $data) && $data['width'] !== null) {
+        if (\array_key_exists('width', $data) && null !== $data['width']) {
             $object->setWidth($data['width']);
-        }
-        elseif (\array_key_exists('width', $data) && $data['width'] === null) {
+        } elseif (\array_key_exists('width', $data) && null === $data['width']) {
             $object->setWidth(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getClientPositionsBarcode()) {
-            $values = array();
+            $values = [];
             foreach ($object->getClientPositionsBarcode() as $value) {
                 $values[] = $value;
             }
@@ -143,6 +139,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargoNormalizer implements D
         if (null !== $object->getWidth()) {
             $data['width'] = $object->getWidth();
         }
+
         return $data;
     }
 }

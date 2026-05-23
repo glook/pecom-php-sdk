@@ -5,570 +5,535 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationCargoCommon
 {
     /**
-     * Есть комплект сопроводительных документов
+     * Есть комплект сопроводительных документов.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $accompanyingDocuments;
+
     /**
-     * Дата документа
+     * Дата документа.
      *
-     * @var \DateTime|null
+     * @var null|\DateTime
      */
     protected $accompanyingDocumentsDate;
+
     /**
-     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12
+     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $accompanyingDocumentsName;
+
     /**
-     * Номер документа
+     * Номер документа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $accompanyingDocumentsNumber;
+
     /**
-     * Номер ТТН
+     * Номер ТТН.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $accompanyingDocumentsNumberTTN;
+
     /**
      * Массив с габаритами каждого грузоместа клиента. Необязательно. Имеет смысл при подключенной услуге "Доверительная приемка". Для продукта EasyWay (type 12) услуга подключена по умолчанию (передача данных так же не обязательна). Если передан массив с габаритами каждого грузоместа, то проводим проверку на сравнение общих Веса и Объёма груза, переданных в массиве "cargos", с суммарными Весом и Объёмом, рассчитанными в массиве грузомест "cargoPlaceList". Должны совпадать.
      *
-     * @var PreregistrationCargoPlace[]|null
+     * @var null|PreregistrationCargoPlace[]
      */
     protected $cargoPlaceList;
+
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12)
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12).
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $clientPositionsBarcode;
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
+     * Произвольное значение для синхронизации на стороне клиента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $customerCorrelation;
+
     /**
-     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
+     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
      *
      * @var string
      */
     protected $description;
+
     /**
      * Примерная наибольшая высота из всех мест, м. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
      *
-     * @var float|null
+     * @var null|float
      */
     protected $height;
+
     /**
      * Примерная наибольшая длина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
      *
-     * @var float|null
+     * @var null|float
      */
     protected $length;
+
     /**
-     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов
+     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $orderNumber;
+
     /**
-     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка»
+     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка».
      *
-     * @var int|null
+     * @var null|int
      */
     protected $palletCount;
+
     /**
-     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120
+     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $palletType;
+
     /**
-     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию
+     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $paymentForm;
+
     /**
      * Количество мест
      *
      * @var int
      */
     protected $positionsCount;
+
     /**
-     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка»
+     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка».
      *
      * @var int
      */
     protected $type;
+
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
+     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $typeClientBarcode;
+
     /**
      * Общий объём груза, м3. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
      *
-     * @var float|null
+     * @var null|float
      */
     protected $volume;
+
     /**
      * Общий вес груза, кг. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
      *
-     * @var float|null
+     * @var null|float
      */
     protected $weight;
+
     /**
      * Примерная наибольшая ширина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
      *
-     * @var float|null
+     * @var null|float
      */
     protected $width;
+
     /**
-     * Есть комплект сопроводительных документов
-     *
-     * @return bool|null
+     * Есть комплект сопроводительных документов.
      */
-    public function getAccompanyingDocuments() : ?bool
+    public function getAccompanyingDocuments(): ?bool
     {
         return $this->accompanyingDocuments;
     }
+
     /**
-     * Есть комплект сопроводительных документов
-     *
-     * @param bool|null $accompanyingDocuments
-     *
-     * @return self
+     * Есть комплект сопроводительных документов.
      */
-    public function setAccompanyingDocuments(?bool $accompanyingDocuments) : self
+    public function setAccompanyingDocuments(?bool $accompanyingDocuments): self
     {
         $this->accompanyingDocuments = $accompanyingDocuments;
+
         return $this;
     }
+
     /**
-     * Дата документа
-     *
-     * @return \DateTime|null
+     * Дата документа.
      */
-    public function getAccompanyingDocumentsDate() : ?\DateTime
+    public function getAccompanyingDocumentsDate(): ?\DateTime
     {
         return $this->accompanyingDocumentsDate;
     }
+
     /**
-     * Дата документа
-     *
-     * @param \DateTime|null $accompanyingDocumentsDate
-     *
-     * @return self
+     * Дата документа.
      */
-    public function setAccompanyingDocumentsDate(?\DateTime $accompanyingDocumentsDate) : self
+    public function setAccompanyingDocumentsDate(?\DateTime $accompanyingDocumentsDate): self
     {
         $this->accompanyingDocumentsDate = $accompanyingDocumentsDate;
+
         return $this;
     }
+
     /**
-     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12
-     *
-     * @return int|null
+     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12.
      */
-    public function getAccompanyingDocumentsName() : ?int
+    public function getAccompanyingDocumentsName(): ?int
     {
         return $this->accompanyingDocumentsName;
     }
+
     /**
-     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12
-     *
-     * @param int|null $accompanyingDocumentsName
-     *
-     * @return self
+     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12.
      */
-    public function setAccompanyingDocumentsName(?int $accompanyingDocumentsName) : self
+    public function setAccompanyingDocumentsName(?int $accompanyingDocumentsName): self
     {
         $this->accompanyingDocumentsName = $accompanyingDocumentsName;
+
         return $this;
     }
+
     /**
-     * Номер документа
-     *
-     * @return string|null
+     * Номер документа.
      */
-    public function getAccompanyingDocumentsNumber() : ?string
+    public function getAccompanyingDocumentsNumber(): ?string
     {
         return $this->accompanyingDocumentsNumber;
     }
+
     /**
-     * Номер документа
-     *
-     * @param string|null $accompanyingDocumentsNumber
-     *
-     * @return self
+     * Номер документа.
      */
-    public function setAccompanyingDocumentsNumber(?string $accompanyingDocumentsNumber) : self
+    public function setAccompanyingDocumentsNumber(?string $accompanyingDocumentsNumber): self
     {
         $this->accompanyingDocumentsNumber = $accompanyingDocumentsNumber;
+
         return $this;
     }
+
     /**
-     * Номер ТТН
-     *
-     * @return string|null
+     * Номер ТТН.
      */
-    public function getAccompanyingDocumentsNumberTTN() : ?string
+    public function getAccompanyingDocumentsNumberTTN(): ?string
     {
         return $this->accompanyingDocumentsNumberTTN;
     }
+
     /**
-     * Номер ТТН
-     *
-     * @param string|null $accompanyingDocumentsNumberTTN
-     *
-     * @return self
+     * Номер ТТН.
      */
-    public function setAccompanyingDocumentsNumberTTN(?string $accompanyingDocumentsNumberTTN) : self
+    public function setAccompanyingDocumentsNumberTTN(?string $accompanyingDocumentsNumberTTN): self
     {
         $this->accompanyingDocumentsNumberTTN = $accompanyingDocumentsNumberTTN;
+
         return $this;
     }
+
     /**
      * Массив с габаритами каждого грузоместа клиента. Необязательно. Имеет смысл при подключенной услуге "Доверительная приемка". Для продукта EasyWay (type 12) услуга подключена по умолчанию (передача данных так же не обязательна). Если передан массив с габаритами каждого грузоместа, то проводим проверку на сравнение общих Веса и Объёма груза, переданных в массиве "cargos", с суммарными Весом и Объёмом, рассчитанными в массиве грузомест "cargoPlaceList". Должны совпадать.
      *
-     * @return PreregistrationCargoPlace[]|null
+     * @return null|PreregistrationCargoPlace[]
      */
-    public function getCargoPlaceList() : ?array
+    public function getCargoPlaceList(): ?array
     {
         return $this->cargoPlaceList;
     }
+
     /**
      * Массив с габаритами каждого грузоместа клиента. Необязательно. Имеет смысл при подключенной услуге "Доверительная приемка". Для продукта EasyWay (type 12) услуга подключена по умолчанию (передача данных так же не обязательна). Если передан массив с габаритами каждого грузоместа, то проводим проверку на сравнение общих Веса и Объёма груза, переданных в массиве "cargos", с суммарными Весом и Объёмом, рассчитанными в массиве грузомест "cargoPlaceList". Должны совпадать.
      *
-     * @param PreregistrationCargoPlace[]|null $cargoPlaceList
-     *
-     * @return self
+     * @param null|PreregistrationCargoPlace[] $cargoPlaceList
      */
-    public function setCargoPlaceList(?array $cargoPlaceList) : self
+    public function setCargoPlaceList(?array $cargoPlaceList): self
     {
         $this->cargoPlaceList = $cargoPlaceList;
+
         return $this;
     }
+
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12)
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12).
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getClientPositionsBarcode() : ?array
+    public function getClientPositionsBarcode(): ?array
     {
         return $this->clientPositionsBarcode;
     }
+
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12)
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12).
      *
-     * @param string[]|null $clientPositionsBarcode
-     *
-     * @return self
+     * @param null|string[] $clientPositionsBarcode
      */
-    public function setClientPositionsBarcode(?array $clientPositionsBarcode) : self
+    public function setClientPositionsBarcode(?array $clientPositionsBarcode): self
     {
         $this->clientPositionsBarcode = $clientPositionsBarcode;
+
         return $this;
     }
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
-     *
-     * @return string|null
+     * Произвольное значение для синхронизации на стороне клиента.
      */
-    public function getCustomerCorrelation() : ?string
+    public function getCustomerCorrelation(): ?string
     {
         return $this->customerCorrelation;
     }
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
-     *
-     * @param string|null $customerCorrelation
-     *
-     * @return self
+     * Произвольное значение для синхронизации на стороне клиента.
      */
-    public function setCustomerCorrelation(?string $customerCorrelation) : self
+    public function setCustomerCorrelation(?string $customerCorrelation): self
     {
         $this->customerCorrelation = $customerCorrelation;
+
         return $this;
     }
+
     /**
-     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
-     *
-     * @return string
+     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
      */
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return $this->description;
     }
+
     /**
-     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
-     *
-     * @param string $description
-     *
-     * @return self
+     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description): self
     {
         $this->description = $description;
+
         return $this;
     }
+
     /**
      * Примерная наибольшая высота из всех мест, м. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
-     *
-     * @return float|null
      */
-    public function getHeight() : ?float
+    public function getHeight(): ?float
     {
         return $this->height;
     }
+
     /**
      * Примерная наибольшая высота из всех мест, м. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
-     *
-     * @param float|null $height
-     *
-     * @return self
      */
-    public function setHeight(?float $height) : self
+    public function setHeight(?float $height): self
     {
         $this->height = $height;
+
         return $this;
     }
+
     /**
      * Примерная наибольшая длина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
-     *
-     * @return float|null
      */
-    public function getLength() : ?float
+    public function getLength(): ?float
     {
         return $this->length;
     }
+
     /**
      * Примерная наибольшая длина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
-     *
-     * @param float|null $length
-     *
-     * @return self
      */
-    public function setLength(?float $length) : self
+    public function setLength(?float $length): self
     {
         $this->length = $length;
+
         return $this;
     }
+
     /**
-     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов
-     *
-     * @return string|null
+     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов.
      */
-    public function getOrderNumber() : ?string
+    public function getOrderNumber(): ?string
     {
         return $this->orderNumber;
     }
+
     /**
-     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов
-     *
-     * @param string|null $orderNumber
-     *
-     * @return self
+     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов.
      */
-    public function setOrderNumber(?string $orderNumber) : self
+    public function setOrderNumber(?string $orderNumber): self
     {
         $this->orderNumber = $orderNumber;
+
         return $this;
     }
+
     /**
-     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка»
-     *
-     * @return int|null
+     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка».
      */
-    public function getPalletCount() : ?int
+    public function getPalletCount(): ?int
     {
         return $this->palletCount;
     }
+
     /**
-     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка»
-     *
-     * @param int|null $palletCount
-     *
-     * @return self
+     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка».
      */
-    public function setPalletCount(?int $palletCount) : self
+    public function setPalletCount(?int $palletCount): self
     {
         $this->palletCount = $palletCount;
+
         return $this;
     }
+
     /**
-     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120
-     *
-     * @return int|null
+     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120.
      */
-    public function getPalletType() : ?int
+    public function getPalletType(): ?int
     {
         return $this->palletType;
     }
+
     /**
-     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120
-     *
-     * @param int|null $palletType
-     *
-     * @return self
+     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120.
      */
-    public function setPalletType(?int $palletType) : self
+    public function setPalletType(?int $palletType): self
     {
         $this->palletType = $palletType;
+
         return $this;
     }
+
     /**
-     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию
-     *
-     * @return int|null
+     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию.
      */
-    public function getPaymentForm() : ?int
+    public function getPaymentForm(): ?int
     {
         return $this->paymentForm;
     }
+
     /**
-     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию
-     *
-     * @param int|null $paymentForm
-     *
-     * @return self
+     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию.
      */
-    public function setPaymentForm(?int $paymentForm) : self
+    public function setPaymentForm(?int $paymentForm): self
     {
         $this->paymentForm = $paymentForm;
+
         return $this;
     }
+
     /**
      * Количество мест
-     *
-     * @return int
      */
-    public function getPositionsCount() : int
+    public function getPositionsCount(): int
     {
         return $this->positionsCount;
     }
+
     /**
      * Количество мест
-     *
-     * @param int $positionsCount
-     *
-     * @return self
      */
-    public function setPositionsCount(int $positionsCount) : self
+    public function setPositionsCount(int $positionsCount): self
     {
         $this->positionsCount = $positionsCount;
+
         return $this;
     }
+
     /**
-     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка»
-     *
-     * @return int
+     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка».
      */
-    public function getType() : int
+    public function getType(): int
     {
         return $this->type;
     }
+
     /**
-     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка»
-     *
-     * @param int $type
-     *
-     * @return self
+     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка».
      */
-    public function setType(int $type) : self
+    public function setType(int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
+
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
-     *
-     * @return string|null
+     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
      */
-    public function getTypeClientBarcode() : ?string
+    public function getTypeClientBarcode(): ?string
     {
         return $this->typeClientBarcode;
     }
+
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
-     *
-     * @param string|null $typeClientBarcode
-     *
-     * @return self
+     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
      */
-    public function setTypeClientBarcode(?string $typeClientBarcode) : self
+    public function setTypeClientBarcode(?string $typeClientBarcode): self
     {
         $this->typeClientBarcode = $typeClientBarcode;
+
         return $this;
     }
+
     /**
      * Общий объём груза, м3. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
-     *
-     * @return float|null
      */
-    public function getVolume() : ?float
+    public function getVolume(): ?float
     {
         return $this->volume;
     }
+
     /**
      * Общий объём груза, м3. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
-     *
-     * @param float|null $volume
-     *
-     * @return self
      */
-    public function setVolume(?float $volume) : self
+    public function setVolume(?float $volume): self
     {
         $this->volume = $volume;
+
         return $this;
     }
+
     /**
      * Общий вес груза, кг. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
-     *
-     * @return float|null
      */
-    public function getWeight() : ?float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
+
     /**
      * Общий вес груза, кг. Обязательно для orderType 3, 4, 14. Обязательно для orderType 0, 14 при type = 7 «ДТС Автоперевозка».
-     *
-     * @param float|null $weight
-     *
-     * @return self
      */
-    public function setWeight(?float $weight) : self
+    public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
+
         return $this;
     }
+
     /**
      * Примерная наибольшая ширина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
-     *
-     * @return float|null
      */
-    public function getWidth() : ?float
+    public function getWidth(): ?float
     {
         return $this->width;
     }
+
     /**
      * Примерная наибольшая ширина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
-     *
-     * @param float|null $width
-     *
-     * @return self
      */
-    public function setWidth(?float $width) : self
+    public function setWidth(?float $width): self
     {
         $this->width = $width;
+
         return $this;
     }
 }

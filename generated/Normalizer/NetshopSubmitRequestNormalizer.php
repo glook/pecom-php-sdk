@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\NetshopSubmitRequest;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class NetshopSubmitRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\NetshopSubmitRequest';
+        return 'glook\PecomSdk\Generated\Model\NetshopSubmitRequest' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\NetshopSubmitRequest';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\NetshopSubmitRequest' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,32 +36,33 @@ class NetshopSubmitRequestNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\NetshopSubmitRequest();
+        $object = new NetshopSubmitRequest();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('cargos', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['cargos'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\NetshopCargo', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\NetshopCargo', 'json', $context);
             }
             $object->setCargos($values);
         }
-        if (\array_key_exists('pickup', $data) && $data['pickup'] !== null) {
-            $object->setPickup($this->denormalizer->denormalize($data['pickup'], 'glook\\PecomSdk\\Generated\\Model\\NetshopPickup', 'json', $context));
-        }
-        elseif (\array_key_exists('pickup', $data) && $data['pickup'] === null) {
+        if (\array_key_exists('pickup', $data) && null !== $data['pickup']) {
+            $object->setPickup($this->denormalizer->denormalize($data['pickup'], 'glook\PecomSdk\Generated\Model\NetshopPickup', 'json', $context));
+        } elseif (\array_key_exists('pickup', $data) && null === $data['pickup']) {
             $object->setPickup(null);
         }
         if (\array_key_exists('sender', $data)) {
-            $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\\PecomSdk\\Generated\\Model\\NetshopSender', 'json', $context));
+            $object->setSender($this->denormalizer->denormalize($data['sender'], 'glook\PecomSdk\Generated\Model\NetshopSender', 'json', $context));
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
-        $values = array();
+        $data = [];
+        $values = [];
         foreach ($object->getCargos() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
@@ -66,6 +71,7 @@ class NetshopSubmitRequestNormalizer implements DenormalizerInterface, Normalize
             $data['pickup'] = $this->normalizer->normalize($object->getPickup(), 'json', $context);
         }
         $data['sender'] = $this->normalizer->normalize($object->getSender(), 'json', $context);
+
         return $data;
     }
 }

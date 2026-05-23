@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\BranchesDepartmentslimitPostResponse200;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class BranchesDepartmentslimitPostResponse200Normalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\BranchesDepartmentslimitPostResponse200';
+        return 'glook\PecomSdk\Generated\Model\BranchesDepartmentslimitPostResponse200' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\BranchesDepartmentslimitPostResponse200';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\BranchesDepartmentslimitPostResponse200' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,39 +36,39 @@ class BranchesDepartmentslimitPostResponse200Normalizer implements DenormalizerI
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\BranchesDepartmentslimitPostResponse200();
+        $object = new BranchesDepartmentslimitPostResponse200();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('recipientBranchId', $data)) {
             $object->setRecipientBranchId($data['recipientBranchId']);
         }
-        if (\array_key_exists('recipientWarehouseId', $data) && $data['recipientWarehouseId'] !== null) {
+        if (\array_key_exists('recipientWarehouseId', $data) && null !== $data['recipientWarehouseId']) {
             $object->setRecipientWarehouseId($data['recipientWarehouseId']);
-        }
-        elseif (\array_key_exists('recipientWarehouseId', $data) && $data['recipientWarehouseId'] === null) {
+        } elseif (\array_key_exists('recipientWarehouseId', $data) && null === $data['recipientWarehouseId']) {
             $object->setRecipientWarehouseId(null);
         }
         if (\array_key_exists('senderBranchId', $data)) {
             $object->setSenderBranchId($data['senderBranchId']);
         }
-        if (\array_key_exists('senderWarehouseId', $data) && $data['senderWarehouseId'] !== null) {
+        if (\array_key_exists('senderWarehouseId', $data) && null !== $data['senderWarehouseId']) {
             $object->setSenderWarehouseId($data['senderWarehouseId']);
-        }
-        elseif (\array_key_exists('senderWarehouseId', $data) && $data['senderWarehouseId'] === null) {
+        } elseif (\array_key_exists('senderWarehouseId', $data) && null === $data['senderWarehouseId']) {
             $object->setSenderWarehouseId(null);
         }
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);
         }
         if (\array_key_exists('wdcLimits', $data)) {
-            $object->setWdcLimits($this->denormalizer->denormalize($data['wdcLimits'], 'glook\\PecomSdk\\Generated\\Model\\WdcLimits', 'json', $context));
+            $object->setWdcLimits($this->denormalizer->denormalize($data['wdcLimits'], 'glook\PecomSdk\Generated\Model\WdcLimits', 'json', $context));
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['recipientBranchId'] = $object->getRecipientBranchId();
         if (null !== $object->getRecipientWarehouseId()) {
             $data['recipientWarehouseId'] = $object->getRecipientWarehouseId();
@@ -75,6 +79,7 @@ class BranchesDepartmentslimitPostResponse200Normalizer implements DenormalizerI
         }
         $data['type'] = $object->getType();
         $data['wdcLimits'] = $this->normalizer->normalize($object->getWdcLimits(), 'json', $context);
+
         return $data;
     }
 }

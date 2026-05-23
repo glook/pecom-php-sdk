@@ -5,138 +5,127 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
 {
     /**
-     * Дата выдачи документа, удостоверяющего личность
+     * Дата выдачи документа, удостоверяющего личность.
      *
      * @var \DateTime
      */
     protected $date;
+
     /**
-     * Служебное поле
+     * Служебное поле.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $note;
+
     /**
      * Номер
      *
      * @var string
      */
     protected $number;
+
     /**
-     * Серия
+     * Серия.
      *
      * @var string
      */
     protected $series;
+
     /**
-     * Тип документа (0 — без предоставления документа, 1–12)
+     * Тип документа (0 — без предоставления документа, 1–12).
      *
      * @var int
      */
     protected $type;
+
     /**
-     * Дата выдачи документа, удостоверяющего личность
-     *
-     * @return \DateTime
+     * Дата выдачи документа, удостоверяющего личность.
      */
-    public function getDate() : \DateTime
+    public function getDate(): \DateTime
     {
         return $this->date;
     }
+
     /**
-     * Дата выдачи документа, удостоверяющего личность
-     *
-     * @param \DateTime $date
-     *
-     * @return self
+     * Дата выдачи документа, удостоверяющего личность.
      */
-    public function setDate(\DateTime $date) : self
+    public function setDate(\DateTime $date): self
     {
         $this->date = $date;
+
         return $this;
     }
+
     /**
-     * Служебное поле
-     *
-     * @return string|null
+     * Служебное поле.
      */
-    public function getNote() : ?string
+    public function getNote(): ?string
     {
         return $this->note;
     }
+
     /**
-     * Служебное поле
-     *
-     * @param string|null $note
-     *
-     * @return self
+     * Служебное поле.
      */
-    public function setNote(?string $note) : self
+    public function setNote(?string $note): self
     {
         $this->note = $note;
+
         return $this;
     }
+
     /**
      * Номер
-     *
-     * @return string
      */
-    public function getNumber() : string
+    public function getNumber(): string
     {
         return $this->number;
     }
+
     /**
      * Номер
-     *
-     * @param string $number
-     *
-     * @return self
      */
-    public function setNumber(string $number) : self
+    public function setNumber(string $number): self
     {
         $this->number = $number;
+
         return $this;
     }
+
     /**
-     * Серия
-     *
-     * @return string
+     * Серия.
      */
-    public function getSeries() : string
+    public function getSeries(): string
     {
         return $this->series;
     }
+
     /**
-     * Серия
-     *
-     * @param string $series
-     *
-     * @return self
+     * Серия.
      */
-    public function setSeries(string $series) : self
+    public function setSeries(string $series): self
     {
         $this->series = $series;
+
         return $this;
     }
+
     /**
-     * Тип документа (0 — без предоставления документа, 1–12)
-     *
-     * @return int
+     * Тип документа (0 — без предоставления документа, 1–12).
      */
-    public function getType() : int
+    public function getType(): int
     {
         return $this->type;
     }
+
     /**
-     * Тип документа (0 — без предоставления документа, 1–12)
-     *
-     * @param int $type
-     *
-     * @return self
+     * Тип документа (0 — без предоставления документа, 1–12).
      */
-    public function setType(int $type) : self
+    public function setType(int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

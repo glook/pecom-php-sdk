@@ -5,111 +5,102 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatusError
 {
     /**
-     * Детали ошибки
+     * Детали ошибки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $error;
+
     /**
-     * Сообщение об ошибке
+     * Сообщение об ошибке.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $message;
+
     /**
-     * HTTP статус код
+     * HTTP статус код.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $status;
+
     /**
-     * Заголовок ошибки
+     * Заголовок ошибки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $title;
+
     /**
-     * Детали ошибки
-     *
-     * @return string|null
+     * Детали ошибки.
      */
-    public function getError() : ?string
+    public function getError(): ?string
     {
         return $this->error;
     }
+
     /**
-     * Детали ошибки
-     *
-     * @param string|null $error
-     *
-     * @return self
+     * Детали ошибки.
      */
-    public function setError(?string $error) : self
+    public function setError(?string $error): self
     {
         $this->error = $error;
+
         return $this;
     }
+
     /**
-     * Сообщение об ошибке
-     *
-     * @return string|null
+     * Сообщение об ошибке.
      */
-    public function getMessage() : ?string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
+
     /**
-     * Сообщение об ошибке
-     *
-     * @param string|null $message
-     *
-     * @return self
+     * Сообщение об ошибке.
      */
-    public function setMessage(?string $message) : self
+    public function setMessage(?string $message): self
     {
         $this->message = $message;
+
         return $this;
     }
+
     /**
-     * HTTP статус код
-     *
-     * @return int|null
+     * HTTP статус код.
      */
-    public function getStatus() : ?int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
+
     /**
-     * HTTP статус код
-     *
-     * @param int|null $status
-     *
-     * @return self
+     * HTTP статус код.
      */
-    public function setStatus(?int $status) : self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
+
         return $this;
     }
+
     /**
-     * Заголовок ошибки
-     *
-     * @return string|null
+     * Заголовок ошибки.
      */
-    public function getTitle() : ?string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
+
     /**
-     * Заголовок ошибки
-     *
-     * @param string|null $title
-     *
-     * @return self
+     * Заголовок ошибки.
      */
-    public function setTitle(?string $title) : self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 }

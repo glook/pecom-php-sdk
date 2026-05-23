@@ -10,79 +10,72 @@ class CurrencyItem
      * @var string
      */
     protected $code;
+
     /**
-     * Полное наименование валюты
+     * Полное наименование валюты.
      *
      * @var string
      */
     protected $fullName;
+
     /**
-     * Краткое наименование валюты
+     * Краткое наименование валюты.
      *
      * @var string
      */
     protected $name;
+
     /**
      * Код валюты по общероссийскому классификатору валют
-     *
-     * @return string
      */
-    public function getCode() : string
+    public function getCode(): string
     {
         return $this->code;
     }
+
     /**
      * Код валюты по общероссийскому классификатору валют
-     *
-     * @param string $code
-     *
-     * @return self
      */
-    public function setCode(string $code) : self
+    public function setCode(string $code): self
     {
         $this->code = $code;
+
         return $this;
     }
+
     /**
-     * Полное наименование валюты
-     *
-     * @return string
+     * Полное наименование валюты.
      */
-    public function getFullName() : string
+    public function getFullName(): string
     {
         return $this->fullName;
     }
+
     /**
-     * Полное наименование валюты
-     *
-     * @param string $fullName
-     *
-     * @return self
+     * Полное наименование валюты.
      */
-    public function setFullName(string $fullName) : self
+    public function setFullName(string $fullName): self
     {
         $this->fullName = $fullName;
+
         return $this;
     }
+
     /**
-     * Краткое наименование валюты
-     *
-     * @return string
+     * Краткое наименование валюты.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Краткое наименование валюты
-     *
-     * @param string $name
-     *
-     * @return self
+     * Краткое наименование валюты.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 }

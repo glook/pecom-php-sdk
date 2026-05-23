@@ -5,138 +5,125 @@ namespace glook\PecomSdk\Generated\Model;
 class ValidationErrorError
 {
     /**
-     * Дополнительная ошибка
+     * Дополнительная ошибка.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $error;
+
     /**
-     * 
-     *
-     * @var ValidationErrorErrorFieldsItem[]|null
+     * @var null|ValidationErrorErrorFieldsItem[]
      */
     protected $fields;
+
     /**
-     * Общее описание ошибки
+     * Общее описание ошибки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $message;
+
     /**
-     * HTTP-статус ошибки
+     * HTTP-статус ошибки.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $status;
+
     /**
-     * Краткий заголовок ошибки
+     * Краткий заголовок ошибки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $title;
+
     /**
-     * Дополнительная ошибка
-     *
-     * @return string|null
+     * Дополнительная ошибка.
      */
-    public function getError() : ?string
+    public function getError(): ?string
     {
         return $this->error;
     }
+
     /**
-     * Дополнительная ошибка
-     *
-     * @param string|null $error
-     *
-     * @return self
+     * Дополнительная ошибка.
      */
-    public function setError(?string $error) : self
+    public function setError(?string $error): self
     {
         $this->error = $error;
+
         return $this;
     }
+
     /**
-     * 
-     *
-     * @return ValidationErrorErrorFieldsItem[]|null
+     * @return null|ValidationErrorErrorFieldsItem[]
      */
-    public function getFields() : ?array
+    public function getFields(): ?array
     {
         return $this->fields;
     }
+
     /**
-     * 
-     *
-     * @param ValidationErrorErrorFieldsItem[]|null $fields
-     *
-     * @return self
+     * @param null|ValidationErrorErrorFieldsItem[] $fields
      */
-    public function setFields(?array $fields) : self
+    public function setFields(?array $fields): self
     {
         $this->fields = $fields;
+
         return $this;
     }
+
     /**
-     * Общее описание ошибки
-     *
-     * @return string|null
+     * Общее описание ошибки.
      */
-    public function getMessage() : ?string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
+
     /**
-     * Общее описание ошибки
-     *
-     * @param string|null $message
-     *
-     * @return self
+     * Общее описание ошибки.
      */
-    public function setMessage(?string $message) : self
+    public function setMessage(?string $message): self
     {
         $this->message = $message;
+
         return $this;
     }
+
     /**
-     * HTTP-статус ошибки
-     *
-     * @return int|null
+     * HTTP-статус ошибки.
      */
-    public function getStatus() : ?int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
+
     /**
-     * HTTP-статус ошибки
-     *
-     * @param int|null $status
-     *
-     * @return self
+     * HTTP-статус ошибки.
      */
-    public function setStatus(?int $status) : self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
+
         return $this;
     }
+
     /**
-     * Краткий заголовок ошибки
-     *
-     * @return string|null
+     * Краткий заголовок ошибки.
      */
-    public function getTitle() : ?string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
+
     /**
-     * Краткий заголовок ошибки
-     *
-     * @param string|null $title
-     *
-     * @return self
+     * Краткий заголовок ошибки.
      */
-    public function setTitle(?string $title) : self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 }

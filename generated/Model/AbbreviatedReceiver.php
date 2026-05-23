@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class AbbreviatedReceiver
 {
     /**
-     * блок выводится, если получатель юр.лицо или ИП (наименование юр.лица/ИП не содержит)
+     * блок выводится, если получатель юр.лицо или ИП (наименование юр.лица/ИП не содержит).
      *
-     * @var AbbreviatedReceiverLegalPerson|null
+     * @var null|AbbreviatedReceiverLegalPerson
      */
     protected $legalPerson;
+
     /**
-     * блок выводится, если получатель - физичекое лицо. В противном случае блок не выводится
+     * блок выводится, если получатель - физичекое лицо. В противном случае блок не выводится.
      *
-     * @var AbbreviatedReceiverPrivatePerson|null
+     * @var null|AbbreviatedReceiverPrivatePerson
      */
     protected $privatePerson;
+
     /**
-     * блок выводится, если получатель юр.лицо или ИП (наименование юр.лица/ИП не содержит)
-     *
-     * @return AbbreviatedReceiverLegalPerson|null
+     * блок выводится, если получатель юр.лицо или ИП (наименование юр.лица/ИП не содержит).
      */
-    public function getLegalPerson() : ?AbbreviatedReceiverLegalPerson
+    public function getLegalPerson(): ?AbbreviatedReceiverLegalPerson
     {
         return $this->legalPerson;
     }
+
     /**
-     * блок выводится, если получатель юр.лицо или ИП (наименование юр.лица/ИП не содержит)
-     *
-     * @param AbbreviatedReceiverLegalPerson|null $legalPerson
-     *
-     * @return self
+     * блок выводится, если получатель юр.лицо или ИП (наименование юр.лица/ИП не содержит).
      */
-    public function setLegalPerson(?AbbreviatedReceiverLegalPerson $legalPerson) : self
+    public function setLegalPerson(?AbbreviatedReceiverLegalPerson $legalPerson): self
     {
         $this->legalPerson = $legalPerson;
+
         return $this;
     }
+
     /**
-     * блок выводится, если получатель - физичекое лицо. В противном случае блок не выводится
-     *
-     * @return AbbreviatedReceiverPrivatePerson|null
+     * блок выводится, если получатель - физичекое лицо. В противном случае блок не выводится.
      */
-    public function getPrivatePerson() : ?AbbreviatedReceiverPrivatePerson
+    public function getPrivatePerson(): ?AbbreviatedReceiverPrivatePerson
     {
         return $this->privatePerson;
     }
+
     /**
-     * блок выводится, если получатель - физичекое лицо. В противном случае блок не выводится
-     *
-     * @param AbbreviatedReceiverPrivatePerson|null $privatePerson
-     *
-     * @return self
+     * блок выводится, если получатель - физичекое лицо. В противном случае блок не выводится.
      */
-    public function setPrivatePerson(?AbbreviatedReceiverPrivatePerson $privatePerson) : self
+    public function setPrivatePerson(?AbbreviatedReceiverPrivatePerson $privatePerson): self
     {
         $this->privatePerson = $privatePerson;
+
         return $this;
     }
 }

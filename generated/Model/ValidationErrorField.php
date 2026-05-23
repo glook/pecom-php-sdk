@@ -5,57 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class ValidationErrorField
 {
     /**
-     * Имя поля, в котором возникла ошибка
+     * Имя поля, в котором возникла ошибка.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $key;
+
     /**
-     * Сообщения об ошибках для поля
+     * Сообщения об ошибках для поля.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $value;
+
     /**
-     * Имя поля, в котором возникла ошибка
-     *
-     * @return string|null
+     * Имя поля, в котором возникла ошибка.
      */
-    public function getKey() : ?string
+    public function getKey(): ?string
     {
         return $this->key;
     }
+
     /**
-     * Имя поля, в котором возникла ошибка
-     *
-     * @param string|null $key
-     *
-     * @return self
+     * Имя поля, в котором возникла ошибка.
      */
-    public function setKey(?string $key) : self
+    public function setKey(?string $key): self
     {
         $this->key = $key;
+
         return $this;
     }
+
     /**
-     * Сообщения об ошибках для поля
+     * Сообщения об ошибках для поля.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getValue() : ?array
+    public function getValue(): ?array
     {
         return $this->value;
     }
+
     /**
-     * Сообщения об ошибках для поля
+     * Сообщения об ошибках для поля.
      *
-     * @param string[]|null $value
-     *
-     * @return self
+     * @param null|string[] $value
      */
-    public function setValue(?array $value) : self
+    public function setValue(?array $value): self
     {
         $this->value = $value;
+
         return $this;
     }
 }

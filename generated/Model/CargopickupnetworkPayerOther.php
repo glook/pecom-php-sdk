@@ -5,138 +5,127 @@ namespace glook\PecomSdk\Generated\Model;
 class CargopickupnetworkPayerOther
 {
     /**
-     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3
+     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3.
      *
-     * @var CargopickupnetworkPayerOtherIdentityCard|null
+     * @var null|CargopickupnetworkIdentityCard
      */
     protected $identityCard;
+
     /**
-     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
+     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * Наименование филиала оплаты за услугу
+     * Наименование филиала оплаты за услугу.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $paymentCity;
+
     /**
-     * Телефон
+     * Телефон.
      *
      * @var string
      */
     protected $phone;
+
     /**
-     * Наименование третьего лица
+     * Наименование третьего лица.
      *
      * @var string
      */
     protected $title;
+
     /**
-     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3
-     *
-     * @return CargopickupnetworkPayerOtherIdentityCard|null
+     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3.
      */
-    public function getIdentityCard() : ?CargopickupnetworkPayerOtherIdentityCard
+    public function getIdentityCard(): ?CargopickupnetworkIdentityCard
     {
         return $this->identityCard;
     }
+
     /**
-     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3
-     *
-     * @param CargopickupnetworkPayerOtherIdentityCard|null $identityCard
-     *
-     * @return self
+     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3.
      */
-    public function setIdentityCard(?CargopickupnetworkPayerOtherIdentityCard $identityCard) : self
+    public function setIdentityCard(?CargopickupnetworkIdentityCard $identityCard): self
     {
         $this->identityCard = $identityCard;
+
         return $this;
     }
+
     /**
-     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @return string|null
+     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * Наименование филиала оплаты за услугу
-     *
-     * @return string|null
+     * Наименование филиала оплаты за услугу.
      */
-    public function getPaymentCity() : ?string
+    public function getPaymentCity(): ?string
     {
         return $this->paymentCity;
     }
+
     /**
-     * Наименование филиала оплаты за услугу
-     *
-     * @param string|null $paymentCity
-     *
-     * @return self
+     * Наименование филиала оплаты за услугу.
      */
-    public function setPaymentCity(?string $paymentCity) : self
+    public function setPaymentCity(?string $paymentCity): self
     {
         $this->paymentCity = $paymentCity;
+
         return $this;
     }
+
     /**
-     * Телефон
-     *
-     * @return string
+     * Телефон.
      */
-    public function getPhone() : string
+    public function getPhone(): string
     {
         return $this->phone;
     }
+
     /**
-     * Телефон
-     *
-     * @param string $phone
-     *
-     * @return self
+     * Телефон.
      */
-    public function setPhone(string $phone) : self
+    public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
+
     /**
-     * Наименование третьего лица
-     *
-     * @return string
+     * Наименование третьего лица.
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
+
     /**
-     * Наименование третьего лица
-     *
-     * @param string $title
-     *
-     * @return self
+     * Наименование третьего лица.
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
 }

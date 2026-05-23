@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CashOnDelivery;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CashOnDeliveryNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CashOnDelivery';
+        return 'glook\PecomSdk\Generated\Model\CashOnDelivery' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CashOnDelivery';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CashOnDelivery' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,61 +36,56 @@ class CashOnDeliveryNormalizer implements DenormalizerInterface, NormalizerInter
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CashOnDelivery();
+        $object = new CashOnDelivery();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('actualCost', $data) && $data['actualCost'] !== null) {
+        if (\array_key_exists('actualCost', $data) && null !== $data['actualCost']) {
             $object->setActualCost($data['actualCost']);
-        }
-        elseif (\array_key_exists('actualCost', $data) && $data['actualCost'] === null) {
+        } elseif (\array_key_exists('actualCost', $data) && null === $data['actualCost']) {
             $object->setActualCost(null);
         }
-        if (\array_key_exists('cashOnDeliverySum', $data) && $data['cashOnDeliverySum'] !== null) {
+        if (\array_key_exists('cashOnDeliverySum', $data) && null !== $data['cashOnDeliverySum']) {
             $object->setCashOnDeliverySum($data['cashOnDeliverySum']);
-        }
-        elseif (\array_key_exists('cashOnDeliverySum', $data) && $data['cashOnDeliverySum'] === null) {
+        } elseif (\array_key_exists('cashOnDeliverySum', $data) && null === $data['cashOnDeliverySum']) {
             $object->setCashOnDeliverySum(null);
         }
-        if (\array_key_exists('enabled', $data) && $data['enabled'] !== null) {
+        if (\array_key_exists('enabled', $data) && null !== $data['enabled']) {
             $object->setEnabled($data['enabled']);
-        }
-        elseif (\array_key_exists('enabled', $data) && $data['enabled'] === null) {
+        } elseif (\array_key_exists('enabled', $data) && null === $data['enabled']) {
             $object->setEnabled(null);
         }
-        if (\array_key_exists('includeTES', $data) && $data['includeTES'] !== null) {
+        if (\array_key_exists('includeTES', $data) && null !== $data['includeTES']) {
             $object->setIncludeTES($data['includeTES']);
-        }
-        elseif (\array_key_exists('includeTES', $data) && $data['includeTES'] === null) {
+        } elseif (\array_key_exists('includeTES', $data) && null === $data['includeTES']) {
             $object->setIncludeTES(null);
         }
-        if (\array_key_exists('sellerPhone', $data) && $data['sellerPhone'] !== null) {
+        if (\array_key_exists('sellerPhone', $data) && null !== $data['sellerPhone']) {
             $object->setSellerPhone($data['sellerPhone']);
-        }
-        elseif (\array_key_exists('sellerPhone', $data) && $data['sellerPhone'] === null) {
+        } elseif (\array_key_exists('sellerPhone', $data) && null === $data['sellerPhone']) {
             $object->setSellerPhone(null);
         }
-        if (\array_key_exists('sellerServices', $data) && $data['sellerServices'] !== null) {
-            $values = array();
+        if (\array_key_exists('sellerServices', $data) && null !== $data['sellerServices']) {
+            $values = [];
             foreach ($data['sellerServices'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CargopickupSellerService', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CargopickupSellerService', 'json', $context);
             }
             $object->setSellerServices($values);
-        }
-        elseif (\array_key_exists('sellerServices', $data) && $data['sellerServices'] === null) {
+        } elseif (\array_key_exists('sellerServices', $data) && null === $data['sellerServices']) {
             $object->setSellerServices(null);
         }
-        if (\array_key_exists('specification', $data) && $data['specification'] !== null) {
-            $object->setSpecification($this->denormalizer->denormalize($data['specification'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupSpecification', 'json', $context));
-        }
-        elseif (\array_key_exists('specification', $data) && $data['specification'] === null) {
+        if (\array_key_exists('specification', $data) && null !== $data['specification']) {
+            $object->setSpecification($this->denormalizer->denormalize($data['specification'], 'glook\PecomSdk\Generated\Model\CargopickupSpecification', 'json', $context));
+        } elseif (\array_key_exists('specification', $data) && null === $data['specification']) {
             $object->setSpecification(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getActualCost()) {
             $data['actualCost'] = $object->getActualCost();
         }
@@ -103,7 +102,7 @@ class CashOnDeliveryNormalizer implements DenormalizerInterface, NormalizerInter
             $data['sellerPhone'] = $object->getSellerPhone();
         }
         if (null !== $object->getSellerServices()) {
-            $values = array();
+            $values = [];
             foreach ($object->getSellerServices() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -112,6 +111,7 @@ class CashOnDeliveryNormalizer implements DenormalizerInterface, NormalizerInter
         if (null !== $object->getSpecification()) {
             $data['specification'] = $this->normalizer->normalize($object->getSpecification(), 'json', $context);
         }
+
         return $data;
     }
 }

@@ -5,300 +5,197 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationServices
 {
     /**
-     * 
-     *
-     * @var ServiceCashOnDelivery|null
+     * @var null|ServiceCashOnDelivery
      */
     protected $cashOnDelivery;
+
     /**
-     * 
-     *
-     * @var ServiceDelivery|null
+     * @var null|ServiceDelivery
      */
     protected $delivery;
+
     /**
-     * 
-     *
-     * @var ServiceToggle|null
+     * @var null|ServiceToggle
      */
     protected $documentsReturning;
+
     /**
-     * Email для бухгалтерских уведомлений
+     * Email для бухгалтерских уведомлений.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $email;
+
     /**
-     * 
-     *
-     * @var ServiceWithPayer|null
+     * @var null|ServiceWithPayer
      */
     protected $hardPacking;
+
     /**
-     * 
-     *
-     * @var ServiceInsurance|null
+     * @var null|ServiceInsurance
      */
     protected $insurance;
+
     /**
-     * 
-     *
-     * @var ServicePickUp|null
+     * @var null|ServicePickUp
      */
     protected $pickUp;
+
     /**
-     * 
-     *
-     * @var ServiceWithPayer|null
+     * @var null|ServiceWithPayer
      */
     protected $sealing;
+
     /**
-     * 
-     *
-     * @var ServiceToggle|null
+     * @var null|ServiceToggle
      */
     protected $storing;
+
     /**
-     * 
-     *
-     * @var ServiceWithPayer|null
+     * @var null|ServiceWithPayer
      */
     protected $strapping;
+
     /**
-     * 
-     *
-     * @var ServiceTransporting|null
+     * @var null|ServiceTransporting
      */
     protected $transporting;
-    /**
-     * 
-     *
-     * @return ServiceCashOnDelivery|null
-     */
-    public function getCashOnDelivery() : ?ServiceCashOnDelivery
+
+    public function getCashOnDelivery(): ?ServiceCashOnDelivery
     {
         return $this->cashOnDelivery;
     }
-    /**
-     * 
-     *
-     * @param ServiceCashOnDelivery|null $cashOnDelivery
-     *
-     * @return self
-     */
-    public function setCashOnDelivery(?ServiceCashOnDelivery $cashOnDelivery) : self
+
+    public function setCashOnDelivery(?ServiceCashOnDelivery $cashOnDelivery): self
     {
         $this->cashOnDelivery = $cashOnDelivery;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceDelivery|null
-     */
-    public function getDelivery() : ?ServiceDelivery
+
+    public function getDelivery(): ?ServiceDelivery
     {
         return $this->delivery;
     }
-    /**
-     * 
-     *
-     * @param ServiceDelivery|null $delivery
-     *
-     * @return self
-     */
-    public function setDelivery(?ServiceDelivery $delivery) : self
+
+    public function setDelivery(?ServiceDelivery $delivery): self
     {
         $this->delivery = $delivery;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceToggle|null
-     */
-    public function getDocumentsReturning() : ?ServiceToggle
+
+    public function getDocumentsReturning(): ?ServiceToggle
     {
         return $this->documentsReturning;
     }
-    /**
-     * 
-     *
-     * @param ServiceToggle|null $documentsReturning
-     *
-     * @return self
-     */
-    public function setDocumentsReturning(?ServiceToggle $documentsReturning) : self
+
+    public function setDocumentsReturning(?ServiceToggle $documentsReturning): self
     {
         $this->documentsReturning = $documentsReturning;
+
         return $this;
     }
+
     /**
-     * Email для бухгалтерских уведомлений
-     *
-     * @return string|null
+     * Email для бухгалтерских уведомлений.
      */
-    public function getEmail() : ?string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
+
     /**
-     * Email для бухгалтерских уведомлений
-     *
-     * @param string|null $email
-     *
-     * @return self
+     * Email для бухгалтерских уведомлений.
      */
-    public function setEmail(?string $email) : self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceWithPayer|null
-     */
-    public function getHardPacking() : ?ServiceWithPayer
+
+    public function getHardPacking(): ?ServiceWithPayer
     {
         return $this->hardPacking;
     }
-    /**
-     * 
-     *
-     * @param ServiceWithPayer|null $hardPacking
-     *
-     * @return self
-     */
-    public function setHardPacking(?ServiceWithPayer $hardPacking) : self
+
+    public function setHardPacking(?ServiceWithPayer $hardPacking): self
     {
         $this->hardPacking = $hardPacking;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceInsurance|null
-     */
-    public function getInsurance() : ?ServiceInsurance
+
+    public function getInsurance(): ?ServiceInsurance
     {
         return $this->insurance;
     }
-    /**
-     * 
-     *
-     * @param ServiceInsurance|null $insurance
-     *
-     * @return self
-     */
-    public function setInsurance(?ServiceInsurance $insurance) : self
+
+    public function setInsurance(?ServiceInsurance $insurance): self
     {
         $this->insurance = $insurance;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServicePickUp|null
-     */
-    public function getPickUp() : ?ServicePickUp
+
+    public function getPickUp(): ?ServicePickUp
     {
         return $this->pickUp;
     }
-    /**
-     * 
-     *
-     * @param ServicePickUp|null $pickUp
-     *
-     * @return self
-     */
-    public function setPickUp(?ServicePickUp $pickUp) : self
+
+    public function setPickUp(?ServicePickUp $pickUp): self
     {
         $this->pickUp = $pickUp;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceWithPayer|null
-     */
-    public function getSealing() : ?ServiceWithPayer
+
+    public function getSealing(): ?ServiceWithPayer
     {
         return $this->sealing;
     }
-    /**
-     * 
-     *
-     * @param ServiceWithPayer|null $sealing
-     *
-     * @return self
-     */
-    public function setSealing(?ServiceWithPayer $sealing) : self
+
+    public function setSealing(?ServiceWithPayer $sealing): self
     {
         $this->sealing = $sealing;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceToggle|null
-     */
-    public function getStoring() : ?ServiceToggle
+
+    public function getStoring(): ?ServiceToggle
     {
         return $this->storing;
     }
-    /**
-     * 
-     *
-     * @param ServiceToggle|null $storing
-     *
-     * @return self
-     */
-    public function setStoring(?ServiceToggle $storing) : self
+
+    public function setStoring(?ServiceToggle $storing): self
     {
         $this->storing = $storing;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceWithPayer|null
-     */
-    public function getStrapping() : ?ServiceWithPayer
+
+    public function getStrapping(): ?ServiceWithPayer
     {
         return $this->strapping;
     }
-    /**
-     * 
-     *
-     * @param ServiceWithPayer|null $strapping
-     *
-     * @return self
-     */
-    public function setStrapping(?ServiceWithPayer $strapping) : self
+
+    public function setStrapping(?ServiceWithPayer $strapping): self
     {
         $this->strapping = $strapping;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return ServiceTransporting|null
-     */
-    public function getTransporting() : ?ServiceTransporting
+
+    public function getTransporting(): ?ServiceTransporting
     {
         return $this->transporting;
     }
-    /**
-     * 
-     *
-     * @param ServiceTransporting|null $transporting
-     *
-     * @return self
-     */
-    public function setTransporting(?ServiceTransporting $transporting) : self
+
+    public function setTransporting(?ServiceTransporting $transporting): self
     {
         $this->transporting = $transporting;
+
         return $this;
     }
 }

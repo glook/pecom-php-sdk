@@ -7,82 +7,75 @@ class RouteMapCounterpartIdentityCard
     /**
      * Номер
      *
-     * @var string|null
+     * @var null|string
      */
     protected $number;
+
     /**
-     * Серия
+     * Серия.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $series;
+
     /**
-     * Наименование вида документа, удостоверяющего личность
+     * Наименование вида документа, удостоверяющего личность.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $typeName;
+
     /**
      * Номер
-     *
-     * @return string|null
      */
-    public function getNumber() : ?string
+    public function getNumber(): ?string
     {
         return $this->number;
     }
+
     /**
      * Номер
-     *
-     * @param string|null $number
-     *
-     * @return self
      */
-    public function setNumber(?string $number) : self
+    public function setNumber(?string $number): self
     {
         $this->number = $number;
+
         return $this;
     }
+
     /**
-     * Серия
-     *
-     * @return string|null
+     * Серия.
      */
-    public function getSeries() : ?string
+    public function getSeries(): ?string
     {
         return $this->series;
     }
+
     /**
-     * Серия
-     *
-     * @param string|null $series
-     *
-     * @return self
+     * Серия.
      */
-    public function setSeries(?string $series) : self
+    public function setSeries(?string $series): self
     {
         $this->series = $series;
+
         return $this;
     }
+
     /**
-     * Наименование вида документа, удостоверяющего личность
-     *
-     * @return string|null
+     * Наименование вида документа, удостоверяющего личность.
      */
-    public function getTypeName() : ?string
+    public function getTypeName(): ?string
     {
         return $this->typeName;
     }
+
     /**
-     * Наименование вида документа, удостоверяющего личность
-     *
-     * @param string|null $typeName
-     *
-     * @return self
+     * Наименование вида документа, удостоверяющего личность.
      */
-    public function setTypeName(?string $typeName) : self
+    public function setTypeName(?string $typeName): self
     {
         $this->typeName = $typeName;
+
         return $this;
     }
 }

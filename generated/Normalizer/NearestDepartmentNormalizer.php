@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\NearestDepartment;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\NearestDepartment';
+        return 'glook\PecomSdk\Generated\Model\NearestDepartment' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\NearestDepartment';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\NearestDepartment' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\NearestDepartment();
+        $object = new NearestDepartment();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,7 +50,7 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setBranchName($data['branchName']);
         }
         if (\array_key_exists('coordinates', $data)) {
-            $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\\PecomSdk\\Generated\\Model\\BranchesCoordinates', 'json', $context));
+            $object->setCoordinates($this->denormalizer->denormalize($data['coordinates'], 'glook\PecomSdk\Generated\Model\BranchesCoordinates', 'json', $context));
         }
         if (\array_key_exists('departmentType', $data)) {
             $object->setDepartmentType($data['departmentType']);
@@ -85,16 +89,16 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
             $object->setPriority($data['priority']);
         }
         if (\array_key_exists('scheduleHolidayDays', $data)) {
-            $values = array();
+            $values = [];
             foreach ($data['scheduleHolidayDays'] as $value) {
                 $values[] = $value;
             }
             $object->setScheduleHolidayDays($values);
         }
         if (\array_key_exists('scheduleShortWorkDays', $data)) {
-            $values_1 = array();
+            $values_1 = [];
             foreach ($data['scheduleShortWorkDays'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\\PecomSdk\\Generated\\Model\\ScheduleShortWorkDay', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\PecomSdk\Generated\Model\ScheduleShortWorkDay', 'json', $context);
             }
             $object->setScheduleShortWorkDays($values_1);
         }
@@ -107,11 +111,13 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
         if (\array_key_exists('warehouseId', $data)) {
             $object->setWarehouseId($data['warehouseId']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['address'] = $object->getAddress();
         $data['branchId'] = $object->getBranchId();
         $data['branchName'] = $object->getBranchName();
@@ -128,12 +134,12 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
         $data['maxWeightOnePlace'] = $object->getMaxWeightOnePlace();
         $data['phone'] = $object->getPhone();
         $data['priority'] = $object->getPriority();
-        $values = array();
+        $values = [];
         foreach ($object->getScheduleHolidayDays() as $value) {
             $values[] = $value;
         }
         $data['scheduleHolidayDays'] = $values;
-        $values_1 = array();
+        $values_1 = [];
         foreach ($object->getScheduleShortWorkDays() as $value_1) {
             $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
         }
@@ -141,6 +147,7 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
         $data['timeZone'] = $object->getTimeZone();
         $data['townBitrixId'] = $object->getTownBitrixId();
         $data['warehouseId'] = $object->getWarehouseId();
+
         return $data;
     }
 }

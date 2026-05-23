@@ -7,217 +7,194 @@ class PreregistrationSubmitResponseCargo
     /**
      * Значение для штрих-кода в формате EAN-13.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $barcode;
+
     /**
-     * Код груза
+     * Код груза.
      *
      * @var string
      */
     protected $cargoCode;
+
     /**
-     * Штрих-коды мест груза
+     * Штрих-коды мест груза.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $clientPositionsBarcode;
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
+     * Произвольное значение для синхронизации на стороне клиента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $customerCorrelation;
+
     /**
-     * Номер заказа
+     * Номер заказа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $orderNumber;
+
     /**
-     * 
-     *
-     * @var PreregistrationSubmitResponseCargoPosition[]|null
+     * @var null|PreregistrationSubmitResponseCargoPosition[]
      */
     protected $positions;
+
     /**
-     * 
-     *
      * @var PreregistrationSubmitResponseReceiver
      */
     protected $receiver;
+
     /**
-     * Наименование склада приема груза, поле необязательно
+     * Наименование склада приема груза, поле необязательно.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $stockTitle;
+
     /**
      * Значение для штрих-кода в формате EAN-13.
-     *
-     * @return string|null
      */
-    public function getBarcode() : ?string
+    public function getBarcode(): ?string
     {
         return $this->barcode;
     }
+
     /**
      * Значение для штрих-кода в формате EAN-13.
-     *
-     * @param string|null $barcode
-     *
-     * @return self
      */
-    public function setBarcode(?string $barcode) : self
+    public function setBarcode(?string $barcode): self
     {
         $this->barcode = $barcode;
+
         return $this;
     }
+
     /**
-     * Код груза
-     *
-     * @return string
+     * Код груза.
      */
-    public function getCargoCode() : string
+    public function getCargoCode(): string
     {
         return $this->cargoCode;
     }
+
     /**
-     * Код груза
-     *
-     * @param string $cargoCode
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCargoCode(string $cargoCode) : self
+    public function setCargoCode(string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
+
     /**
-     * Штрих-коды мест груза
+     * Штрих-коды мест груза.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getClientPositionsBarcode() : ?array
+    public function getClientPositionsBarcode(): ?array
     {
         return $this->clientPositionsBarcode;
     }
+
     /**
-     * Штрих-коды мест груза
+     * Штрих-коды мест груза.
      *
-     * @param string[]|null $clientPositionsBarcode
-     *
-     * @return self
+     * @param null|string[] $clientPositionsBarcode
      */
-    public function setClientPositionsBarcode(?array $clientPositionsBarcode) : self
+    public function setClientPositionsBarcode(?array $clientPositionsBarcode): self
     {
         $this->clientPositionsBarcode = $clientPositionsBarcode;
+
         return $this;
     }
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
-     *
-     * @return string|null
+     * Произвольное значение для синхронизации на стороне клиента.
      */
-    public function getCustomerCorrelation() : ?string
+    public function getCustomerCorrelation(): ?string
     {
         return $this->customerCorrelation;
     }
+
     /**
-     * Произвольное значение для синхронизации на стороне клиента
-     *
-     * @param string|null $customerCorrelation
-     *
-     * @return self
+     * Произвольное значение для синхронизации на стороне клиента.
      */
-    public function setCustomerCorrelation(?string $customerCorrelation) : self
+    public function setCustomerCorrelation(?string $customerCorrelation): self
     {
         $this->customerCorrelation = $customerCorrelation;
+
         return $this;
     }
+
     /**
-     * Номер заказа
-     *
-     * @return string|null
+     * Номер заказа.
      */
-    public function getOrderNumber() : ?string
+    public function getOrderNumber(): ?string
     {
         return $this->orderNumber;
     }
+
     /**
-     * Номер заказа
-     *
-     * @param string|null $orderNumber
-     *
-     * @return self
+     * Номер заказа.
      */
-    public function setOrderNumber(?string $orderNumber) : self
+    public function setOrderNumber(?string $orderNumber): self
     {
         $this->orderNumber = $orderNumber;
+
         return $this;
     }
+
     /**
-     * 
-     *
-     * @return PreregistrationSubmitResponseCargoPosition[]|null
+     * @return null|PreregistrationSubmitResponseCargoPosition[]
      */
-    public function getPositions() : ?array
+    public function getPositions(): ?array
     {
         return $this->positions;
     }
+
     /**
-     * 
-     *
-     * @param PreregistrationSubmitResponseCargoPosition[]|null $positions
-     *
-     * @return self
+     * @param null|PreregistrationSubmitResponseCargoPosition[] $positions
      */
-    public function setPositions(?array $positions) : self
+    public function setPositions(?array $positions): self
     {
         $this->positions = $positions;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return PreregistrationSubmitResponseReceiver
-     */
-    public function getReceiver() : PreregistrationSubmitResponseReceiver
+
+    public function getReceiver(): PreregistrationSubmitResponseReceiver
     {
         return $this->receiver;
     }
-    /**
-     * 
-     *
-     * @param PreregistrationSubmitResponseReceiver $receiver
-     *
-     * @return self
-     */
-    public function setReceiver(PreregistrationSubmitResponseReceiver $receiver) : self
+
+    public function setReceiver(PreregistrationSubmitResponseReceiver $receiver): self
     {
         $this->receiver = $receiver;
+
         return $this;
     }
+
     /**
-     * Наименование склада приема груза, поле необязательно
-     *
-     * @return string|null
+     * Наименование склада приема груза, поле необязательно.
      */
-    public function getStockTitle() : ?string
+    public function getStockTitle(): ?string
     {
         return $this->stockTitle;
     }
+
     /**
-     * Наименование склада приема груза, поле необязательно
-     *
-     * @param string|null $stockTitle
-     *
-     * @return self
+     * Наименование склада приема груза, поле необязательно.
      */
-    public function setStockTitle(?string $stockTitle) : self
+    public function setStockTitle(?string $stockTitle): self
     {
         $this->stockTitle = $stockTitle;
+
         return $this;
     }
 }

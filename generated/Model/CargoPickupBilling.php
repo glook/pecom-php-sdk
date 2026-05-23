@@ -5,30 +5,25 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupBilling
 {
     /**
-     * 
-     *
-     * @var BillingNumber[]|null
+     * @var null|BillingNumber[]
      */
     protected $billingNumbers;
+
     /**
-     * 
-     *
-     * @return BillingNumber[]|null
+     * @return null|BillingNumber[]
      */
-    public function getBillingNumbers() : ?array
+    public function getBillingNumbers(): ?array
     {
         return $this->billingNumbers;
     }
+
     /**
-     * 
-     *
-     * @param BillingNumber[]|null $billingNumbers
-     *
-     * @return self
+     * @param null|BillingNumber[] $billingNumbers
      */
-    public function setBillingNumbers(?array $billingNumbers) : self
+    public function setBillingNumbers(?array $billingNumbers): self
     {
         $this->billingNumbers = $billingNumbers;
+
         return $this;
     }
 }

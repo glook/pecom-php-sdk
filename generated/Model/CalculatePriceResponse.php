@@ -5,273 +5,264 @@ namespace glook\PecomSdk\Generated\Model;
 class CalculatePriceResponse
 {
     /**
-     * Наименование филиала получения. Отвечает за оказание услуги «последняя миля». При выдаче в отделении выводится филиал по организационной структуре
+     * Наименование филиала получения. Отвечает за оказание услуги «последняя миля». При выдаче в отделении выводится филиал по организационной структуре.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchReceiver;
+
     /**
-     * Идентификатор филиала получения
+     * Идентификатор филиала получения.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchReceiverUID;
+
     /**
-     * Наименование филиала отправления. Отвечает за оказание услуги «первая миля». При сдаче в отделении выводится филиал по организационной структуре
+     * Наименование филиала отправления. Отвечает за оказание услуги «первая миля». При сдаче в отделении выводится филиал по организационной структуре.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchSender;
+
     /**
-     * Идентификатор филиала отправления
+     * Идентификатор филиала отправления.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $branchSenderUID;
+
     /**
      * Общие данные по срокам перевозок.
      *
-     * @var CommonTerm[]|null
+     * @var null|CommonTerm[]
      */
     protected $commonTerms;
+
     /**
-     * Код валюты, в которой выполнен расчет стоимости
+     * Код валюты, в которой выполнен расчет стоимости.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $currencyCode;
+
     /**
-     * Текст ошибки
+     * Текст ошибки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $errorMessage;
+
     /**
-     * Признак ошибок при расчетах
+     * Признак ошибок при расчетах.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $hasError;
+
     /**
-     * Результаты расчетов по каждому из запрошенных продуктов/тарифов
+     * Результаты расчетов по каждому из запрошенных продуктов/тарифов.
      *
-     * @var Transfer[]|null
+     * @var null|Transfer[]
      */
     protected $transfers;
+
     /**
-     * Массив данных по времени приемки груза. Используется для точного определения сроков перевозки. Значения времени, до которого ожидается, что груз будет сдан на склад. Из соответствующего элемента массива `transporting` или `transportingWithDelivery` нужно взять значение сроков перевозки
+     * Массив данных по времени приемки груза. Используется для точного определения сроков перевозки. Значения времени, до которого ожидается, что груз будет сдан на склад. Из соответствующего элемента массива `transporting` или `transportingWithDelivery` нужно взять значение сроков перевозки.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $transportingTimes;
+
     /**
-     * Наименование филиала получения. Отвечает за оказание услуги «последняя миля». При выдаче в отделении выводится филиал по организационной структуре
-     *
-     * @return string|null
+     * Наименование филиала получения. Отвечает за оказание услуги «последняя миля». При выдаче в отделении выводится филиал по организационной структуре.
      */
-    public function getBranchReceiver() : ?string
+    public function getBranchReceiver(): ?string
     {
         return $this->branchReceiver;
     }
+
     /**
-     * Наименование филиала получения. Отвечает за оказание услуги «последняя миля». При выдаче в отделении выводится филиал по организационной структуре
-     *
-     * @param string|null $branchReceiver
-     *
-     * @return self
+     * Наименование филиала получения. Отвечает за оказание услуги «последняя миля». При выдаче в отделении выводится филиал по организационной структуре.
      */
-    public function setBranchReceiver(?string $branchReceiver) : self
+    public function setBranchReceiver(?string $branchReceiver): self
     {
         $this->branchReceiver = $branchReceiver;
+
         return $this;
     }
+
     /**
-     * Идентификатор филиала получения
-     *
-     * @return string|null
+     * Идентификатор филиала получения.
      */
-    public function getBranchReceiverUID() : ?string
+    public function getBranchReceiverUID(): ?string
     {
         return $this->branchReceiverUID;
     }
+
     /**
-     * Идентификатор филиала получения
-     *
-     * @param string|null $branchReceiverUID
-     *
-     * @return self
+     * Идентификатор филиала получения.
      */
-    public function setBranchReceiverUID(?string $branchReceiverUID) : self
+    public function setBranchReceiverUID(?string $branchReceiverUID): self
     {
         $this->branchReceiverUID = $branchReceiverUID;
+
         return $this;
     }
+
     /**
-     * Наименование филиала отправления. Отвечает за оказание услуги «первая миля». При сдаче в отделении выводится филиал по организационной структуре
-     *
-     * @return string|null
+     * Наименование филиала отправления. Отвечает за оказание услуги «первая миля». При сдаче в отделении выводится филиал по организационной структуре.
      */
-    public function getBranchSender() : ?string
+    public function getBranchSender(): ?string
     {
         return $this->branchSender;
     }
+
     /**
-     * Наименование филиала отправления. Отвечает за оказание услуги «первая миля». При сдаче в отделении выводится филиал по организационной структуре
-     *
-     * @param string|null $branchSender
-     *
-     * @return self
+     * Наименование филиала отправления. Отвечает за оказание услуги «первая миля». При сдаче в отделении выводится филиал по организационной структуре.
      */
-    public function setBranchSender(?string $branchSender) : self
+    public function setBranchSender(?string $branchSender): self
     {
         $this->branchSender = $branchSender;
+
         return $this;
     }
+
     /**
-     * Идентификатор филиала отправления
-     *
-     * @return string|null
+     * Идентификатор филиала отправления.
      */
-    public function getBranchSenderUID() : ?string
+    public function getBranchSenderUID(): ?string
     {
         return $this->branchSenderUID;
     }
+
     /**
-     * Идентификатор филиала отправления
-     *
-     * @param string|null $branchSenderUID
-     *
-     * @return self
+     * Идентификатор филиала отправления.
      */
-    public function setBranchSenderUID(?string $branchSenderUID) : self
+    public function setBranchSenderUID(?string $branchSenderUID): self
     {
         $this->branchSenderUID = $branchSenderUID;
+
         return $this;
     }
+
     /**
      * Общие данные по срокам перевозок.
      *
-     * @return CommonTerm[]|null
+     * @return null|CommonTerm[]
      */
-    public function getCommonTerms() : ?array
+    public function getCommonTerms(): ?array
     {
         return $this->commonTerms;
     }
+
     /**
      * Общие данные по срокам перевозок.
      *
-     * @param CommonTerm[]|null $commonTerms
-     *
-     * @return self
+     * @param null|CommonTerm[] $commonTerms
      */
-    public function setCommonTerms(?array $commonTerms) : self
+    public function setCommonTerms(?array $commonTerms): self
     {
         $this->commonTerms = $commonTerms;
+
         return $this;
     }
+
     /**
-     * Код валюты, в которой выполнен расчет стоимости
-     *
-     * @return string|null
+     * Код валюты, в которой выполнен расчет стоимости.
      */
-    public function getCurrencyCode() : ?string
+    public function getCurrencyCode(): ?string
     {
         return $this->currencyCode;
     }
+
     /**
-     * Код валюты, в которой выполнен расчет стоимости
-     *
-     * @param string|null $currencyCode
-     *
-     * @return self
+     * Код валюты, в которой выполнен расчет стоимости.
      */
-    public function setCurrencyCode(?string $currencyCode) : self
+    public function setCurrencyCode(?string $currencyCode): self
     {
         $this->currencyCode = $currencyCode;
+
         return $this;
     }
+
     /**
-     * Текст ошибки
-     *
-     * @return string|null
+     * Текст ошибки.
      */
-    public function getErrorMessage() : ?string
+    public function getErrorMessage(): ?string
     {
         return $this->errorMessage;
     }
+
     /**
-     * Текст ошибки
-     *
-     * @param string|null $errorMessage
-     *
-     * @return self
+     * Текст ошибки.
      */
-    public function setErrorMessage(?string $errorMessage) : self
+    public function setErrorMessage(?string $errorMessage): self
     {
         $this->errorMessage = $errorMessage;
+
         return $this;
     }
+
     /**
-     * Признак ошибок при расчетах
-     *
-     * @return bool|null
+     * Признак ошибок при расчетах.
      */
-    public function getHasError() : ?bool
+    public function getHasError(): ?bool
     {
         return $this->hasError;
     }
+
     /**
-     * Признак ошибок при расчетах
-     *
-     * @param bool|null $hasError
-     *
-     * @return self
+     * Признак ошибок при расчетах.
      */
-    public function setHasError(?bool $hasError) : self
+    public function setHasError(?bool $hasError): self
     {
         $this->hasError = $hasError;
+
         return $this;
     }
+
     /**
-     * Результаты расчетов по каждому из запрошенных продуктов/тарифов
+     * Результаты расчетов по каждому из запрошенных продуктов/тарифов.
      *
-     * @return Transfer[]|null
+     * @return null|Transfer[]
      */
-    public function getTransfers() : ?array
+    public function getTransfers(): ?array
     {
         return $this->transfers;
     }
+
     /**
-     * Результаты расчетов по каждому из запрошенных продуктов/тарифов
+     * Результаты расчетов по каждому из запрошенных продуктов/тарифов.
      *
-     * @param Transfer[]|null $transfers
-     *
-     * @return self
+     * @param null|Transfer[] $transfers
      */
-    public function setTransfers(?array $transfers) : self
+    public function setTransfers(?array $transfers): self
     {
         $this->transfers = $transfers;
+
         return $this;
     }
+
     /**
-     * Массив данных по времени приемки груза. Используется для точного определения сроков перевозки. Значения времени, до которого ожидается, что груз будет сдан на склад. Из соответствующего элемента массива `transporting` или `transportingWithDelivery` нужно взять значение сроков перевозки
+     * Массив данных по времени приемки груза. Используется для точного определения сроков перевозки. Значения времени, до которого ожидается, что груз будет сдан на склад. Из соответствующего элемента массива `transporting` или `transportingWithDelivery` нужно взять значение сроков перевозки.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getTransportingTimes() : ?array
+    public function getTransportingTimes(): ?array
     {
         return $this->transportingTimes;
     }
+
     /**
-     * Массив данных по времени приемки груза. Используется для точного определения сроков перевозки. Значения времени, до которого ожидается, что груз будет сдан на склад. Из соответствующего элемента массива `transporting` или `transportingWithDelivery` нужно взять значение сроков перевозки
+     * Массив данных по времени приемки груза. Используется для точного определения сроков перевозки. Значения времени, до которого ожидается, что груз будет сдан на склад. Из соответствующего элемента массива `transporting` или `transportingWithDelivery` нужно взять значение сроков перевозки.
      *
-     * @param string[]|null $transportingTimes
-     *
-     * @return self
+     * @param null|string[] $transportingTimes
      */
-    public function setTransportingTimes(?array $transportingTimes) : self
+    public function setTransportingTimes(?array $transportingTimes): self
     {
         $this->transportingTimes = $transportingTimes;
+
         return $this;
     }
 }

@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpartPhysicalPerson;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ListAllOrderReceiverCounterpartPhysicalPersonNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiverCounterpartPhysicalPerson';
+        return 'glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpartPhysicalPerson' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ListAllOrderReceiverCounterpartPhysicalPerson';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpartPhysicalPerson' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,32 @@ class ListAllOrderReceiverCounterpartPhysicalPersonNormalizer implements Denorma
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ListAllOrderReceiverCounterpartPhysicalPerson();
+        $object = new ListAllOrderReceiverCounterpartPhysicalPerson();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('Number', $data) && $data['Number'] !== null) {
+        if (\array_key_exists('Number', $data) && null !== $data['Number']) {
             $object->setNumber($data['Number']);
-        }
-        elseif (\array_key_exists('Number', $data) && $data['Number'] === null) {
+        } elseif (\array_key_exists('Number', $data) && null === $data['Number']) {
             $object->setNumber(null);
         }
-        if (\array_key_exists('Series', $data) && $data['Series'] !== null) {
+        if (\array_key_exists('Series', $data) && null !== $data['Series']) {
             $object->setSeries($data['Series']);
-        }
-        elseif (\array_key_exists('Series', $data) && $data['Series'] === null) {
+        } elseif (\array_key_exists('Series', $data) && null === $data['Series']) {
             $object->setSeries(null);
         }
-        if (\array_key_exists('typeDocumet', $data) && $data['typeDocumet'] !== null) {
+        if (\array_key_exists('typeDocumet', $data) && null !== $data['typeDocumet']) {
             $object->setTypeDocumet($data['typeDocumet']);
-        }
-        elseif (\array_key_exists('typeDocumet', $data) && $data['typeDocumet'] === null) {
+        } elseif (\array_key_exists('typeDocumet', $data) && null === $data['typeDocumet']) {
             $object->setTypeDocumet(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getNumber()) {
             $data['Number'] = $object->getNumber();
         }
@@ -68,6 +71,7 @@ class ListAllOrderReceiverCounterpartPhysicalPersonNormalizer implements Denorma
         if (null !== $object->getTypeDocumet()) {
             $data['typeDocumet'] = $object->getTypeDocumet();
         }
+
         return $data;
     }
 }

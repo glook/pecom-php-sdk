@@ -5,165 +5,152 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingdocumentsListforcounterpartyPostBody
 {
     /**
-     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`
+     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`.
      *
      * @var string
      */
     protected $branchId;
+
     /**
-     * Дата и время начала запрашиваемого периода
+     * Дата и время начала запрашиваемого периода.
      *
      * @var string
      */
     protected $dateBegin;
+
     /**
-     * Дата и время конца запрашиваемого периода
+     * Дата и время конца запрашиваемого периода.
      *
      * @var string
      */
     protected $dateEnd;
+
     /**
-     * ИНН плательщика
+     * ИНН плательщика.
      *
      * @var string
      */
     protected $iNN;
+
     /**
-     * КПП плательщика
+     * КПП плательщика.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kPP;
+
     /**
-     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
+     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
      *
      * @var string
      */
     protected $token;
+
     /**
-     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`
-     *
-     * @return string
+     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`.
      */
-    public function getBranchId() : string
+    public function getBranchId(): string
     {
         return $this->branchId;
     }
+
     /**
-     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`
-     *
-     * @param string $branchId
-     *
-     * @return self
+     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`.
      */
-    public function setBranchId(string $branchId) : self
+    public function setBranchId(string $branchId): self
     {
         $this->branchId = $branchId;
+
         return $this;
     }
+
     /**
-     * Дата и время начала запрашиваемого периода
-     *
-     * @return string
+     * Дата и время начала запрашиваемого периода.
      */
-    public function getDateBegin() : string
+    public function getDateBegin(): string
     {
         return $this->dateBegin;
     }
+
     /**
-     * Дата и время начала запрашиваемого периода
-     *
-     * @param string $dateBegin
-     *
-     * @return self
+     * Дата и время начала запрашиваемого периода.
      */
-    public function setDateBegin(string $dateBegin) : self
+    public function setDateBegin(string $dateBegin): self
     {
         $this->dateBegin = $dateBegin;
+
         return $this;
     }
+
     /**
-     * Дата и время конца запрашиваемого периода
-     *
-     * @return string
+     * Дата и время конца запрашиваемого периода.
      */
-    public function getDateEnd() : string
+    public function getDateEnd(): string
     {
         return $this->dateEnd;
     }
+
     /**
-     * Дата и время конца запрашиваемого периода
-     *
-     * @param string $dateEnd
-     *
-     * @return self
+     * Дата и время конца запрашиваемого периода.
      */
-    public function setDateEnd(string $dateEnd) : self
+    public function setDateEnd(string $dateEnd): self
     {
         $this->dateEnd = $dateEnd;
+
         return $this;
     }
+
     /**
-     * ИНН плательщика
-     *
-     * @return string
+     * ИНН плательщика.
      */
-    public function getINN() : string
+    public function getINN(): string
     {
         return $this->iNN;
     }
+
     /**
-     * ИНН плательщика
-     *
-     * @param string $iNN
-     *
-     * @return self
+     * ИНН плательщика.
      */
-    public function setINN(string $iNN) : self
+    public function setINN(string $iNN): self
     {
         $this->iNN = $iNN;
+
         return $this;
     }
+
     /**
-     * КПП плательщика
-     *
-     * @return string|null
+     * КПП плательщика.
      */
-    public function getKPP() : ?string
+    public function getKPP(): ?string
     {
         return $this->kPP;
     }
+
     /**
-     * КПП плательщика
-     *
-     * @param string|null $kPP
-     *
-     * @return self
+     * КПП плательщика.
      */
-    public function setKPP(?string $kPP) : self
+    public function setKPP(?string $kPP): self
     {
         $this->kPP = $kPP;
+
         return $this;
     }
+
     /**
-     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
-     *
-     * @return string
+     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
      */
-    public function getToken() : string
+    public function getToken(): string
     {
         return $this->token;
     }
+
     /**
-     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
-     *
-     * @param string $token
-     *
-     * @return self
+     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
      */
-    public function setToken(string $token) : self
+    public function setToken(string $token): self
     {
         $this->token = $token;
+
         return $this;
     }
 }

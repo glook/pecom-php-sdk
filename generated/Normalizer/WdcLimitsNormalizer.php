@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\WdcLimits;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class WdcLimitsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\WdcLimits';
+        return 'glook\PecomSdk\Generated\Model\WdcLimits' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\WdcLimits';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\WdcLimits' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,7 +36,7 @@ class WdcLimitsNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\WdcLimits();
+        $object = new WdcLimits();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -57,11 +61,13 @@ class WdcLimitsNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('width', $data)) {
             $object->setWidth($data['width']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['height'] = $object->getHeight();
         $data['length'] = $object->getLength();
         $data['maxLength'] = $object->getMaxLength();
@@ -69,6 +75,7 @@ class WdcLimitsNormalizer implements DenormalizerInterface, NormalizerInterface,
         $data['volume'] = $object->getVolume();
         $data['weight'] = $object->getWeight();
         $data['width'] = $object->getWidth();
+
         return $data;
     }
 }

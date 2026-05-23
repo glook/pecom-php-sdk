@@ -7,109 +7,100 @@ class CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     /**
      * Максимальный габарит, м
      *
-     * @var float|null
+     * @var null|float
      */
     protected $maxDimension;
+
     /**
      * Общее количество мест, шт
      *
-     * @var int|null
+     * @var null|int
      */
     protected $positionsCount;
+
     /**
-     * Общий объём, м³
+     * Общий объём, м³.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $volume;
+
     /**
-     * Общий вес, кг
+     * Общий вес, кг.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $weight;
+
     /**
      * Максимальный габарит, м
-     *
-     * @return float|null
      */
-    public function getMaxDimension() : ?float
+    public function getMaxDimension(): ?float
     {
         return $this->maxDimension;
     }
+
     /**
      * Максимальный габарит, м
-     *
-     * @param float|null $maxDimension
-     *
-     * @return self
      */
-    public function setMaxDimension(?float $maxDimension) : self
+    public function setMaxDimension(?float $maxDimension): self
     {
         $this->maxDimension = $maxDimension;
+
         return $this;
     }
+
     /**
      * Общее количество мест, шт
-     *
-     * @return int|null
      */
-    public function getPositionsCount() : ?int
+    public function getPositionsCount(): ?int
     {
         return $this->positionsCount;
     }
+
     /**
      * Общее количество мест, шт
-     *
-     * @param int|null $positionsCount
-     *
-     * @return self
      */
-    public function setPositionsCount(?int $positionsCount) : self
+    public function setPositionsCount(?int $positionsCount): self
     {
         $this->positionsCount = $positionsCount;
+
         return $this;
     }
+
     /**
-     * Общий объём, м³
-     *
-     * @return float|null
+     * Общий объём, м³.
      */
-    public function getVolume() : ?float
+    public function getVolume(): ?float
     {
         return $this->volume;
     }
+
     /**
-     * Общий объём, м³
-     *
-     * @param float|null $volume
-     *
-     * @return self
+     * Общий объём, м³.
      */
-    public function setVolume(?float $volume) : self
+    public function setVolume(?float $volume): self
     {
         $this->volume = $volume;
+
         return $this;
     }
+
     /**
-     * Общий вес, кг
-     *
-     * @return float|null
+     * Общий вес, кг.
      */
-    public function getWeight() : ?float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
+
     /**
-     * Общий вес, кг
-     *
-     * @param float|null $weight
-     *
-     * @return self
+     * Общий вес, кг.
      */
-    public function setWeight(?float $weight) : self
+    public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
+
         return $this;
     }
 }

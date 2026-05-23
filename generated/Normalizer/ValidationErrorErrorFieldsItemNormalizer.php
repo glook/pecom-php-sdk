@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ValidationErrorErrorFieldsItem;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ValidationErrorErrorFieldsItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ValidationErrorErrorFieldsItem';
+        return 'glook\PecomSdk\Generated\Model\ValidationErrorErrorFieldsItem' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ValidationErrorErrorFieldsItem';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ValidationErrorErrorFieldsItem' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,41 +36,42 @@ class ValidationErrorErrorFieldsItemNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ValidationErrorErrorFieldsItem();
+        $object = new ValidationErrorErrorFieldsItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('Key', $data) && $data['Key'] !== null) {
+        if (\array_key_exists('Key', $data) && null !== $data['Key']) {
             $object->setKey($data['Key']);
-        }
-        elseif (\array_key_exists('Key', $data) && $data['Key'] === null) {
+        } elseif (\array_key_exists('Key', $data) && null === $data['Key']) {
             $object->setKey(null);
         }
-        if (\array_key_exists('Value', $data) && $data['Value'] !== null) {
-            $values = array();
+        if (\array_key_exists('Value', $data) && null !== $data['Value']) {
+            $values = [];
             foreach ($data['Value'] as $value) {
                 $values[] = $value;
             }
             $object->setValue($values);
-        }
-        elseif (\array_key_exists('Value', $data) && $data['Value'] === null) {
+        } elseif (\array_key_exists('Value', $data) && null === $data['Value']) {
             $object->setValue(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getKey()) {
             $data['Key'] = $object->getKey();
         }
         if (null !== $object->getValue()) {
-            $values = array();
+            $values = [];
             foreach ($object->getValue() as $value) {
                 $values[] = $value;
             }
             $data['Value'] = $values;
         }
+
         return $data;
     }
 }

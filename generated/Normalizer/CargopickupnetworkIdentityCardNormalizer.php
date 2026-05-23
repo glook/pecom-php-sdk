@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargopickupnetworkIdentityCard;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class CargopickupnetworkPayerOtherIdentityCardNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+class CargopickupnetworkIdentityCardNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayerOtherIdentityCard';
+        return 'glook\PecomSdk\Generated\Model\CargopickupnetworkIdentityCard' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayerOtherIdentityCard';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargopickupnetworkIdentityCard' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,17 +36,16 @@ class CargopickupnetworkPayerOtherIdentityCardNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargopickupnetworkPayerOtherIdentityCard();
+        $object = new CargopickupnetworkIdentityCard();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('date', $data)) {
             $object->setDate(\DateTime::createFromFormat('Y-m-d', $data['date'])->setTime(0, 0, 0));
         }
-        if (\array_key_exists('note', $data) && $data['note'] !== null) {
+        if (\array_key_exists('note', $data) && null !== $data['note']) {
             $object->setNote($data['note']);
-        }
-        elseif (\array_key_exists('note', $data) && $data['note'] === null) {
+        } elseif (\array_key_exists('note', $data) && null === $data['note']) {
             $object->setNote(null);
         }
         if (\array_key_exists('number', $data)) {
@@ -54,11 +57,13 @@ class CargopickupnetworkPayerOtherIdentityCardNormalizer implements Denormalizer
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['date'] = $object->getDate()->format('Y-m-d');
         if (null !== $object->getNote()) {
             $data['note'] = $object->getNote();
@@ -66,6 +71,7 @@ class CargopickupnetworkPayerOtherIdentityCardNormalizer implements Denormalizer
         $data['number'] = $object->getNumber();
         $data['series'] = $object->getSeries();
         $data['type'] = $object->getType();
+
         return $data;
     }
 }

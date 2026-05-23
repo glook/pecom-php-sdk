@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemConditions;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupNetworkSubmitRequestCargosItemsItemConditionsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemConditions';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemConditions' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemConditions';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemConditions' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,51 +36,47 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemConditionsNormalizer impleme
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemConditions();
+        $object = new CargoPickupNetworkSubmitRequestCargosItemsItemConditions();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('isFast', $data) && $data['isFast'] !== null) {
+        if (\array_key_exists('isFast', $data) && null !== $data['isFast']) {
             $object->setIsFast($data['isFast']);
-        }
-        elseif (\array_key_exists('isFast', $data) && $data['isFast'] === null) {
+        } elseif (\array_key_exists('isFast', $data) && null === $data['isFast']) {
             $object->setIsFast(null);
         }
-        if (\array_key_exists('isLoading', $data) && $data['isLoading'] !== null) {
+        if (\array_key_exists('isLoading', $data) && null !== $data['isLoading']) {
             $object->setIsLoading($data['isLoading']);
-        }
-        elseif (\array_key_exists('isLoading', $data) && $data['isLoading'] === null) {
+        } elseif (\array_key_exists('isLoading', $data) && null === $data['isLoading']) {
             $object->setIsLoading(null);
         }
-        if (\array_key_exists('isOpenCar', $data) && $data['isOpenCar'] !== null) {
+        if (\array_key_exists('isOpenCar', $data) && null !== $data['isOpenCar']) {
             $object->setIsOpenCar($data['isOpenCar']);
-        }
-        elseif (\array_key_exists('isOpenCar', $data) && $data['isOpenCar'] === null) {
+        } elseif (\array_key_exists('isOpenCar', $data) && null === $data['isOpenCar']) {
             $object->setIsOpenCar(null);
         }
-        if (\array_key_exists('isSideLoad', $data) && $data['isSideLoad'] !== null) {
+        if (\array_key_exists('isSideLoad', $data) && null !== $data['isSideLoad']) {
             $object->setIsSideLoad($data['isSideLoad']);
-        }
-        elseif (\array_key_exists('isSideLoad', $data) && $data['isSideLoad'] === null) {
+        } elseif (\array_key_exists('isSideLoad', $data) && null === $data['isSideLoad']) {
             $object->setIsSideLoad(null);
         }
-        if (\array_key_exists('isSpecialEquipment', $data) && $data['isSpecialEquipment'] !== null) {
+        if (\array_key_exists('isSpecialEquipment', $data) && null !== $data['isSpecialEquipment']) {
             $object->setIsSpecialEquipment($data['isSpecialEquipment']);
-        }
-        elseif (\array_key_exists('isSpecialEquipment', $data) && $data['isSpecialEquipment'] === null) {
+        } elseif (\array_key_exists('isSpecialEquipment', $data) && null === $data['isSpecialEquipment']) {
             $object->setIsSpecialEquipment(null);
         }
-        if (\array_key_exists('isUncovered', $data) && $data['isUncovered'] !== null) {
+        if (\array_key_exists('isUncovered', $data) && null !== $data['isUncovered']) {
             $object->setIsUncovered($data['isUncovered']);
-        }
-        elseif (\array_key_exists('isUncovered', $data) && $data['isUncovered'] === null) {
+        } elseif (\array_key_exists('isUncovered', $data) && null === $data['isUncovered']) {
             $object->setIsUncovered(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getIsFast()) {
             $data['isFast'] = $object->getIsFast();
         }
@@ -95,6 +95,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemConditionsNormalizer impleme
         if (null !== $object->getIsUncovered()) {
             $data['isUncovered'] = $object->getIsUncovered();
         }
+
         return $data;
     }
 }

@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ReceiverUpdateRequest;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ReceiverUpdateRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ReceiverUpdateRequest';
+        return 'glook\PecomSdk\Generated\Model\ReceiverUpdateRequest' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ReceiverUpdateRequest';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ReceiverUpdateRequest' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,72 +36,65 @@ class ReceiverUpdateRequestNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ReceiverUpdateRequest();
+        $object = new ReceiverUpdateRequest();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('address', $data) && $data['address'] !== null) {
+        if (\array_key_exists('address', $data) && null !== $data['address']) {
             $object->setAddress($data['address']);
-        }
-        elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+        } elseif (\array_key_exists('address', $data) && null === $data['address']) {
             $object->setAddress(null);
         }
-        if (\array_key_exists('city', $data) && $data['city'] !== null) {
+        if (\array_key_exists('city', $data) && null !== $data['city']) {
             $object->setCity($data['city']);
-        }
-        elseif (\array_key_exists('city', $data) && $data['city'] === null) {
+        } elseif (\array_key_exists('city', $data) && null === $data['city']) {
             $object->setCity(null);
         }
-        if (\array_key_exists('clearAddress', $data) && $data['clearAddress'] !== null) {
+        if (\array_key_exists('clearAddress', $data) && null !== $data['clearAddress']) {
             $object->setClearAddress($data['clearAddress']);
-        }
-        elseif (\array_key_exists('clearAddress', $data) && $data['clearAddress'] === null) {
+        } elseif (\array_key_exists('clearAddress', $data) && null === $data['clearAddress']) {
             $object->setClearAddress(null);
         }
-        if (\array_key_exists('clearInn', $data) && $data['clearInn'] !== null) {
+        if (\array_key_exists('clearInn', $data) && null !== $data['clearInn']) {
             $object->setClearInn($data['clearInn']);
-        }
-        elseif (\array_key_exists('clearInn', $data) && $data['clearInn'] === null) {
+        } elseif (\array_key_exists('clearInn', $data) && null === $data['clearInn']) {
             $object->setClearInn(null);
         }
-        if (\array_key_exists('clearPerson', $data) && $data['clearPerson'] !== null) {
+        if (\array_key_exists('clearPerson', $data) && null !== $data['clearPerson']) {
             $object->setClearPerson($data['clearPerson']);
-        }
-        elseif (\array_key_exists('clearPerson', $data) && $data['clearPerson'] === null) {
+        } elseif (\array_key_exists('clearPerson', $data) && null === $data['clearPerson']) {
             $object->setClearPerson(null);
         }
         if (\array_key_exists('code', $data)) {
             $object->setCode($data['code']);
         }
-        if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
+        if (\array_key_exists('inn', $data) && null !== $data['inn']) {
             $object->setInn($data['inn']);
-        }
-        elseif (\array_key_exists('inn', $data) && $data['inn'] === null) {
+        } elseif (\array_key_exists('inn', $data) && null === $data['inn']) {
             $object->setInn(null);
         }
-        if (\array_key_exists('person', $data) && $data['person'] !== null) {
+        if (\array_key_exists('person', $data) && null !== $data['person']) {
             $object->setPerson($data['person']);
-        }
-        elseif (\array_key_exists('person', $data) && $data['person'] === null) {
+        } elseif (\array_key_exists('person', $data) && null === $data['person']) {
             $object->setPerson(null);
         }
-        if (\array_key_exists('phone', $data) && $data['phone'] !== null) {
+        if (\array_key_exists('phone', $data) && null !== $data['phone']) {
             $object->setPhone($data['phone']);
-        }
-        elseif (\array_key_exists('phone', $data) && $data['phone'] === null) {
+        } elseif (\array_key_exists('phone', $data) && null === $data['phone']) {
             $object->setPhone(null);
         }
-        if (\array_key_exists('title', $data) && $data['title'] !== null) {
+        if (\array_key_exists('title', $data) && null !== $data['title']) {
             $object->setTitle($data['title']);
-        }
-        elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+        } elseif (\array_key_exists('title', $data) && null === $data['title']) {
             $object->setTitle(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getAddress()) {
             $data['address'] = $object->getAddress();
         }
@@ -126,6 +123,7 @@ class ReceiverUpdateRequestNormalizer implements DenormalizerInterface, Normaliz
         if (null !== $object->getTitle()) {
             $data['title'] = $object->getTitle();
         }
+
         return $data;
     }
 }

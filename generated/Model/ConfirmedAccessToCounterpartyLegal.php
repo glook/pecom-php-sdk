@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class ConfirmedAccessToCounterpartyLegal
 {
     /**
-     * ИНН
+     * ИНН.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
      * КПП
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kpp;
+
     /**
-     * ИНН
-     *
-     * @return string|null
+     * ИНН.
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН.
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
      * КПП
-     *
-     * @return string|null
      */
-    public function getKpp() : ?string
+    public function getKpp(): ?string
     {
         return $this->kpp;
     }
+
     /**
      * КПП
-     *
-     * @param string|null $kpp
-     *
-     * @return self
      */
-    public function setKpp(?string $kpp) : self
+    public function setKpp(?string $kpp): self
     {
         $this->kpp = $kpp;
+
         return $this;
     }
 }

@@ -5,57 +5,60 @@ namespace glook\PecomSdk\Generated\Model;
 class ForcedStorageItem
 {
     /**
-     * Праздничные дни
+     * Праздничные дни.
      *
-     * @var string[]|null
+     * @var null|string[]
      */
     protected $holidays;
+
     /**
-     * Расчёт услуги вынужденное хранение
+     * Расчёт услуги вынужденное хранение.
      *
-     * @var ForcedStoragePeriod[]|null
+     * @var null|ForcedStoragePeriod[]
      */
     protected $items;
+
     /**
-     * Праздничные дни
+     * Праздничные дни.
      *
-     * @return string[]|null
+     * @return null|string[]
      */
-    public function getHolidays() : ?array
+    public function getHolidays(): ?array
     {
         return $this->holidays;
     }
+
     /**
-     * Праздничные дни
+     * Праздничные дни.
      *
-     * @param string[]|null $holidays
-     *
-     * @return self
+     * @param null|string[] $holidays
      */
-    public function setHolidays(?array $holidays) : self
+    public function setHolidays(?array $holidays): self
     {
         $this->holidays = $holidays;
+
         return $this;
     }
+
     /**
-     * Расчёт услуги вынужденное хранение
+     * Расчёт услуги вынужденное хранение.
      *
-     * @return ForcedStoragePeriod[]|null
+     * @return null|ForcedStoragePeriod[]
      */
-    public function getItems() : ?array
+    public function getItems(): ?array
     {
         return $this->items;
     }
+
     /**
-     * Расчёт услуги вынужденное хранение
+     * Расчёт услуги вынужденное хранение.
      *
-     * @param ForcedStoragePeriod[]|null $items
-     *
-     * @return self
+     * @param null|ForcedStoragePeriod[] $items
      */
-    public function setItems(?array $items) : self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
+
         return $this;
     }
 }

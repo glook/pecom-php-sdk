@@ -5,57 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitResponse
 {
     /**
-     * Информация о принятии данных грузов, описанных в заявках
+     * Информация о принятии данных грузов, описанных в заявках.
      *
      * @var CargoPickupNetworkSubmitResponseCargosItem[]
      */
     protected $cargos;
+
     /**
-     * Номер заявки
+     * Номер заявки.
      *
      * @var int
      */
     protected $documentId;
+
     /**
-     * Информация о принятии данных грузов, описанных в заявках
+     * Информация о принятии данных грузов, описанных в заявках.
      *
      * @return CargoPickupNetworkSubmitResponseCargosItem[]
      */
-    public function getCargos() : array
+    public function getCargos(): array
     {
         return $this->cargos;
     }
+
     /**
-     * Информация о принятии данных грузов, описанных в заявках
+     * Информация о принятии данных грузов, описанных в заявках.
      *
      * @param CargoPickupNetworkSubmitResponseCargosItem[] $cargos
-     *
-     * @return self
      */
-    public function setCargos(array $cargos) : self
+    public function setCargos(array $cargos): self
     {
         $this->cargos = $cargos;
+
         return $this;
     }
+
     /**
-     * Номер заявки
-     *
-     * @return int
+     * Номер заявки.
      */
-    public function getDocumentId() : int
+    public function getDocumentId(): int
     {
         return $this->documentId;
     }
+
     /**
-     * Номер заявки
-     *
-     * @param int $documentId
-     *
-     * @return self
+     * Номер заявки.
      */
-    public function setDocumentId(int $documentId) : self
+    public function setDocumentId(int $documentId): self
     {
         $this->documentId = $documentId;
+
         return $this;
     }
 }

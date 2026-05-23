@@ -2,6 +2,4 @@
 
 namespace glook\PecomSdk\Generated\Exception;
 
-interface ServerException extends ApiException
-{
-}
+interface ServerException extends ApiException {}

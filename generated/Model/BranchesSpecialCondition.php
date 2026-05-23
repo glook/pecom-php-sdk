@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesSpecialCondition
 {
     /**
-     * Наименование услуги
+     * Наименование услуги.
      *
      * @var string
      */
     protected $title;
+
     /**
-     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления
+     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления.
      *
      * @var string
      */
     protected $uID;
+
     /**
-     * Наименование услуги
-     *
-     * @return string
+     * Наименование услуги.
      */
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
+
     /**
-     * Наименование услуги
-     *
-     * @param string $title
-     *
-     * @return self
+     * Наименование услуги.
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+
         return $this;
     }
+
     /**
-     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления
-     *
-     * @return string
+     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления.
      */
-    public function getUID() : string
+    public function getUID(): string
     {
         return $this->uID;
     }
+
     /**
-     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления
-     *
-     * @param string $uID
-     *
-     * @return self
+     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления.
      */
-    public function setUID(string $uID) : self
+    public function setUID(string $uID): self
     {
         $this->uID = $uID;
+
         return $this;
     }
 }

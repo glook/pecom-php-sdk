@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class Period
 {
     /**
-     * Временной интервал без наценки на забор/доставку в ночное время. Значение `false` означает, что будет наценка за ночное время (возможность оказания услуги необходимо уточнять у менеджера)
+     * Временной интервал без наценки на забор/доставку в ночное время. Значение `false` означает, что будет наценка за ночное время (возможность оказания услуги необходимо уточнять у менеджера).
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isDayLight;
+
     /**
-     * Время начала интервала
+     * Время начала интервала.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $periodTimeFrom;
+
     /**
-     * Время окончания интервала
+     * Время окончания интервала.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $periodTimeTo;
+
     /**
-     * Временной интервал без наценки на забор/доставку в ночное время. Значение `false` означает, что будет наценка за ночное время (возможность оказания услуги необходимо уточнять у менеджера)
-     *
-     * @return bool|null
+     * Временной интервал без наценки на забор/доставку в ночное время. Значение `false` означает, что будет наценка за ночное время (возможность оказания услуги необходимо уточнять у менеджера).
      */
-    public function getIsDayLight() : ?bool
+    public function getIsDayLight(): ?bool
     {
         return $this->isDayLight;
     }
+
     /**
-     * Временной интервал без наценки на забор/доставку в ночное время. Значение `false` означает, что будет наценка за ночное время (возможность оказания услуги необходимо уточнять у менеджера)
-     *
-     * @param bool|null $isDayLight
-     *
-     * @return self
+     * Временной интервал без наценки на забор/доставку в ночное время. Значение `false` означает, что будет наценка за ночное время (возможность оказания услуги необходимо уточнять у менеджера).
      */
-    public function setIsDayLight(?bool $isDayLight) : self
+    public function setIsDayLight(?bool $isDayLight): self
     {
         $this->isDayLight = $isDayLight;
+
         return $this;
     }
+
     /**
-     * Время начала интервала
-     *
-     * @return string|null
+     * Время начала интервала.
      */
-    public function getPeriodTimeFrom() : ?string
+    public function getPeriodTimeFrom(): ?string
     {
         return $this->periodTimeFrom;
     }
+
     /**
-     * Время начала интервала
-     *
-     * @param string|null $periodTimeFrom
-     *
-     * @return self
+     * Время начала интервала.
      */
-    public function setPeriodTimeFrom(?string $periodTimeFrom) : self
+    public function setPeriodTimeFrom(?string $periodTimeFrom): self
     {
         $this->periodTimeFrom = $periodTimeFrom;
+
         return $this;
     }
+
     /**
-     * Время окончания интервала
-     *
-     * @return string|null
+     * Время окончания интервала.
      */
-    public function getPeriodTimeTo() : ?string
+    public function getPeriodTimeTo(): ?string
     {
         return $this->periodTimeTo;
     }
+
     /**
-     * Время окончания интервала
-     *
-     * @param string|null $periodTimeTo
-     *
-     * @return self
+     * Время окончания интервала.
      */
-    public function setPeriodTimeTo(?string $periodTimeTo) : self
+    public function setPeriodTimeTo(?string $periodTimeTo): self
     {
         $this->periodTimeTo = $periodTimeTo;
+
         return $this;
     }
 }

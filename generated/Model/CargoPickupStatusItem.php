@@ -5,381 +5,240 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupStatusItem
 {
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $carBrand;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $carDriver;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $carDriverPhone;
+
     /**
-     * 
-     *
      * @var string
      */
     protected $cargoCode;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $carNumber;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $error;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $fenceStatus;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $intakeStatus;
+
     /**
-     * 
-     *
-     * @var int|null
+     * @var null|int
      */
     protected $intakeStatusCode;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $intervalFrom;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $intervalLunchBreakFrom;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $intervalLunchBreakTo;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $intervalTo;
+
     /**
-     * 
-     *
-     * @var \DateTime|null
+     * @var null|\DateTime
      */
     protected $pickupDate;
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getCarBrand() : ?string
+
+    public function getCarBrand(): ?string
     {
         return $this->carBrand;
     }
-    /**
-     * 
-     *
-     * @param string|null $carBrand
-     *
-     * @return self
-     */
-    public function setCarBrand(?string $carBrand) : self
+
+    public function setCarBrand(?string $carBrand): self
     {
         $this->carBrand = $carBrand;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getCarDriver() : ?string
+
+    public function getCarDriver(): ?string
     {
         return $this->carDriver;
     }
-    /**
-     * 
-     *
-     * @param string|null $carDriver
-     *
-     * @return self
-     */
-    public function setCarDriver(?string $carDriver) : self
+
+    public function setCarDriver(?string $carDriver): self
     {
         $this->carDriver = $carDriver;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getCarDriverPhone() : ?string
+
+    public function getCarDriverPhone(): ?string
     {
         return $this->carDriverPhone;
     }
-    /**
-     * 
-     *
-     * @param string|null $carDriverPhone
-     *
-     * @return self
-     */
-    public function setCarDriverPhone(?string $carDriverPhone) : self
+
+    public function setCarDriverPhone(?string $carDriverPhone): self
     {
         $this->carDriverPhone = $carDriverPhone;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string
-     */
-    public function getCargoCode() : string
+
+    public function getCargoCode(): string
     {
         return $this->cargoCode;
     }
-    /**
-     * 
-     *
-     * @param string $cargoCode
-     *
-     * @return self
-     */
-    public function setCargoCode(string $cargoCode) : self
+
+    public function setCargoCode(string $cargoCode): self
     {
         $this->cargoCode = $cargoCode;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getCarNumber() : ?string
+
+    public function getCarNumber(): ?string
     {
         return $this->carNumber;
     }
-    /**
-     * 
-     *
-     * @param string|null $carNumber
-     *
-     * @return self
-     */
-    public function setCarNumber(?string $carNumber) : self
+
+    public function setCarNumber(?string $carNumber): self
     {
         $this->carNumber = $carNumber;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getError() : ?string
+
+    public function getError(): ?string
     {
         return $this->error;
     }
-    /**
-     * 
-     *
-     * @param string|null $error
-     *
-     * @return self
-     */
-    public function setError(?string $error) : self
+
+    public function setError(?string $error): self
     {
         $this->error = $error;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getFenceStatus() : ?string
+
+    public function getFenceStatus(): ?string
     {
         return $this->fenceStatus;
     }
-    /**
-     * 
-     *
-     * @param string|null $fenceStatus
-     *
-     * @return self
-     */
-    public function setFenceStatus(?string $fenceStatus) : self
+
+    public function setFenceStatus(?string $fenceStatus): self
     {
         $this->fenceStatus = $fenceStatus;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getIntakeStatus() : ?string
+
+    public function getIntakeStatus(): ?string
     {
         return $this->intakeStatus;
     }
-    /**
-     * 
-     *
-     * @param string|null $intakeStatus
-     *
-     * @return self
-     */
-    public function setIntakeStatus(?string $intakeStatus) : self
+
+    public function setIntakeStatus(?string $intakeStatus): self
     {
         $this->intakeStatus = $intakeStatus;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return int|null
-     */
-    public function getIntakeStatusCode() : ?int
+
+    public function getIntakeStatusCode(): ?int
     {
         return $this->intakeStatusCode;
     }
-    /**
-     * 
-     *
-     * @param int|null $intakeStatusCode
-     *
-     * @return self
-     */
-    public function setIntakeStatusCode(?int $intakeStatusCode) : self
+
+    public function setIntakeStatusCode(?int $intakeStatusCode): self
     {
         $this->intakeStatusCode = $intakeStatusCode;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getIntervalFrom() : ?string
+
+    public function getIntervalFrom(): ?string
     {
         return $this->intervalFrom;
     }
-    /**
-     * 
-     *
-     * @param string|null $intervalFrom
-     *
-     * @return self
-     */
-    public function setIntervalFrom(?string $intervalFrom) : self
+
+    public function setIntervalFrom(?string $intervalFrom): self
     {
         $this->intervalFrom = $intervalFrom;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getIntervalLunchBreakFrom() : ?string
+
+    public function getIntervalLunchBreakFrom(): ?string
     {
         return $this->intervalLunchBreakFrom;
     }
-    /**
-     * 
-     *
-     * @param string|null $intervalLunchBreakFrom
-     *
-     * @return self
-     */
-    public function setIntervalLunchBreakFrom(?string $intervalLunchBreakFrom) : self
+
+    public function setIntervalLunchBreakFrom(?string $intervalLunchBreakFrom): self
     {
         $this->intervalLunchBreakFrom = $intervalLunchBreakFrom;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getIntervalLunchBreakTo() : ?string
+
+    public function getIntervalLunchBreakTo(): ?string
     {
         return $this->intervalLunchBreakTo;
     }
-    /**
-     * 
-     *
-     * @param string|null $intervalLunchBreakTo
-     *
-     * @return self
-     */
-    public function setIntervalLunchBreakTo(?string $intervalLunchBreakTo) : self
+
+    public function setIntervalLunchBreakTo(?string $intervalLunchBreakTo): self
     {
         $this->intervalLunchBreakTo = $intervalLunchBreakTo;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getIntervalTo() : ?string
+
+    public function getIntervalTo(): ?string
     {
         return $this->intervalTo;
     }
-    /**
-     * 
-     *
-     * @param string|null $intervalTo
-     *
-     * @return self
-     */
-    public function setIntervalTo(?string $intervalTo) : self
+
+    public function setIntervalTo(?string $intervalTo): self
     {
         $this->intervalTo = $intervalTo;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return \DateTime|null
-     */
-    public function getPickupDate() : ?\DateTime
+
+    public function getPickupDate(): ?\DateTime
     {
         return $this->pickupDate;
     }
-    /**
-     * 
-     *
-     * @param \DateTime|null $pickupDate
-     *
-     * @return self
-     */
-    public function setPickupDate(?\DateTime $pickupDate) : self
+
+    public function setPickupDate(?\DateTime $pickupDate): self
     {
         $this->pickupDate = $pickupDate;
+
         return $this;
     }
 }

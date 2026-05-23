@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CancelAndReturnResponse;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CancelAndReturnResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CancelAndReturnResponse';
+        return 'glook\PecomSdk\Generated\Model\CancelAndReturnResponse' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CancelAndReturnResponse';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CancelAndReturnResponse' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,34 @@ class CancelAndReturnResponseNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CancelAndReturnResponse();
+        $object = new CancelAndReturnResponse();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('description', $data) && $data['description'] !== null) {
+        if (\array_key_exists('description', $data) && null !== $data['description']) {
             $object->setDescription($data['description']);
-        }
-        elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+        } elseif (\array_key_exists('description', $data) && null === $data['description']) {
             $object->setDescription(null);
         }
-        if (\array_key_exists('success', $data) && $data['success'] !== null) {
+        if (\array_key_exists('success', $data) && null !== $data['success']) {
             $object->setSuccess($data['success']);
-        }
-        elseif (\array_key_exists('success', $data) && $data['success'] === null) {
+        } elseif (\array_key_exists('success', $data) && null === $data['success']) {
             $object->setSuccess(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getDescription()) {
             $data['description'] = $object->getDescription();
         }
         if (null !== $object->getSuccess()) {
             $data['success'] = $object->getSuccess();
         }
+
         return $data;
     }
 }

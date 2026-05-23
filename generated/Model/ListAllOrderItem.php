@@ -5,300 +5,277 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderItem
 {
     /**
-     * Статус груза
+     * Статус груза.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $cargoStatus;
+
     /**
-     * Наименование груза
+     * Наименование груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $description;
+
     /**
      * Плановая дата забора груза Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $intakePlanDateTime;
+
     /**
-     * Вид перевозки
+     * Вид перевозки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kindOfTransportationType;
+
     /**
-     * Дата и время создания заявки
+     * Дата и время создания заявки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $orderDate;
+
     /**
-     * Номер заказа клиента
+     * Номер заказа клиента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $orderNumber;
+
     /**
-     * Получатель
+     * Получатель.
      *
-     * @var ListAllOrderReceiver|null
+     * @var null|ListAllOrderReceiver
      */
     protected $receiver;
+
     /**
-     * Отправитель
+     * Отправитель.
      *
-     * @var ListAllOrderSender|null
+     * @var null|ListAllOrderSender
      */
     protected $sender;
+
     /**
-     * Тип перевозки
+     * Тип перевозки.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $shippingType;
+
     /**
      * Дата и время сдачи груза Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $takeOnStockDateTime;
+
     /**
-     * Код груза
+     * Код груза.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $code;
+
     /**
-     * Статус груза
-     *
-     * @return int|null
+     * Статус груза.
      */
-    public function getCargoStatus() : ?int
+    public function getCargoStatus(): ?int
     {
         return $this->cargoStatus;
     }
+
     /**
-     * Статус груза
-     *
-     * @param int|null $cargoStatus
-     *
-     * @return self
+     * Статус груза.
      */
-    public function setCargoStatus(?int $cargoStatus) : self
+    public function setCargoStatus(?int $cargoStatus): self
     {
         $this->cargoStatus = $cargoStatus;
+
         return $this;
     }
+
     /**
-     * Наименование груза
-     *
-     * @return string|null
+     * Наименование груза.
      */
-    public function getDescription() : ?string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
+
     /**
-     * Наименование груза
-     *
-     * @param string|null $description
-     *
-     * @return self
+     * Наименование груза.
      */
-    public function setDescription(?string $description) : self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
+
         return $this;
     }
+
     /**
      * Плановая дата забора груза Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
-     *
-     * @return string|null
      */
-    public function getIntakePlanDateTime() : ?string
+    public function getIntakePlanDateTime(): ?string
     {
         return $this->intakePlanDateTime;
     }
+
     /**
      * Плановая дата забора груза Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
-     *
-     * @param string|null $intakePlanDateTime
-     *
-     * @return self
      */
-    public function setIntakePlanDateTime(?string $intakePlanDateTime) : self
+    public function setIntakePlanDateTime(?string $intakePlanDateTime): self
     {
         $this->intakePlanDateTime = $intakePlanDateTime;
+
         return $this;
     }
+
     /**
-     * Вид перевозки
-     *
-     * @return string|null
+     * Вид перевозки.
      */
-    public function getKindOfTransportationType() : ?string
+    public function getKindOfTransportationType(): ?string
     {
         return $this->kindOfTransportationType;
     }
+
     /**
-     * Вид перевозки
-     *
-     * @param string|null $kindOfTransportationType
-     *
-     * @return self
+     * Вид перевозки.
      */
-    public function setKindOfTransportationType(?string $kindOfTransportationType) : self
+    public function setKindOfTransportationType(?string $kindOfTransportationType): self
     {
         $this->kindOfTransportationType = $kindOfTransportationType;
+
         return $this;
     }
+
     /**
-     * Дата и время создания заявки
-     *
-     * @return string|null
+     * Дата и время создания заявки.
      */
-    public function getOrderDate() : ?string
+    public function getOrderDate(): ?string
     {
         return $this->orderDate;
     }
+
     /**
-     * Дата и время создания заявки
-     *
-     * @param string|null $orderDate
-     *
-     * @return self
+     * Дата и время создания заявки.
      */
-    public function setOrderDate(?string $orderDate) : self
+    public function setOrderDate(?string $orderDate): self
     {
         $this->orderDate = $orderDate;
+
         return $this;
     }
+
     /**
-     * Номер заказа клиента
-     *
-     * @return string|null
+     * Номер заказа клиента.
      */
-    public function getOrderNumber() : ?string
+    public function getOrderNumber(): ?string
     {
         return $this->orderNumber;
     }
+
     /**
-     * Номер заказа клиента
-     *
-     * @param string|null $orderNumber
-     *
-     * @return self
+     * Номер заказа клиента.
      */
-    public function setOrderNumber(?string $orderNumber) : self
+    public function setOrderNumber(?string $orderNumber): self
     {
         $this->orderNumber = $orderNumber;
+
         return $this;
     }
+
     /**
-     * Получатель
-     *
-     * @return ListAllOrderReceiver|null
+     * Получатель.
      */
-    public function getReceiver() : ?ListAllOrderReceiver
+    public function getReceiver(): ?ListAllOrderReceiver
     {
         return $this->receiver;
     }
+
     /**
-     * Получатель
-     *
-     * @param ListAllOrderReceiver|null $receiver
-     *
-     * @return self
+     * Получатель.
      */
-    public function setReceiver(?ListAllOrderReceiver $receiver) : self
+    public function setReceiver(?ListAllOrderReceiver $receiver): self
     {
         $this->receiver = $receiver;
+
         return $this;
     }
+
     /**
-     * Отправитель
-     *
-     * @return ListAllOrderSender|null
+     * Отправитель.
      */
-    public function getSender() : ?ListAllOrderSender
+    public function getSender(): ?ListAllOrderSender
     {
         return $this->sender;
     }
+
     /**
-     * Отправитель
-     *
-     * @param ListAllOrderSender|null $sender
-     *
-     * @return self
+     * Отправитель.
      */
-    public function setSender(?ListAllOrderSender $sender) : self
+    public function setSender(?ListAllOrderSender $sender): self
     {
         $this->sender = $sender;
+
         return $this;
     }
+
     /**
-     * Тип перевозки
-     *
-     * @return string|null
+     * Тип перевозки.
      */
-    public function getShippingType() : ?string
+    public function getShippingType(): ?string
     {
         return $this->shippingType;
     }
+
     /**
-     * Тип перевозки
-     *
-     * @param string|null $shippingType
-     *
-     * @return self
+     * Тип перевозки.
      */
-    public function setShippingType(?string $shippingType) : self
+    public function setShippingType(?string $shippingType): self
     {
         $this->shippingType = $shippingType;
+
         return $this;
     }
+
     /**
      * Дата и время сдачи груза Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
-     *
-     * @return string|null
      */
-    public function getTakeOnStockDateTime() : ?string
+    public function getTakeOnStockDateTime(): ?string
     {
         return $this->takeOnStockDateTime;
     }
+
     /**
      * Дата и время сдачи груза Формат даты/времени указан как строка, так как API может возвращать локальное время без timezone.
-     *
-     * @param string|null $takeOnStockDateTime
-     *
-     * @return self
      */
-    public function setTakeOnStockDateTime(?string $takeOnStockDateTime) : self
+    public function setTakeOnStockDateTime(?string $takeOnStockDateTime): self
     {
         $this->takeOnStockDateTime = $takeOnStockDateTime;
+
         return $this;
     }
+
     /**
-     * Код груза
-     *
-     * @return string|null
+     * Код груза.
      */
-    public function getCode() : ?string
+    public function getCode(): ?string
     {
         return $this->code;
     }
+
     /**
-     * Код груза
-     *
-     * @param string|null $code
-     *
-     * @return self
+     * Код груза.
      */
-    public function setCode(?string $code) : self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
+
         return $this;
     }
 }

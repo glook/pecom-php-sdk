@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderCounterpartLegalEntity
 {
     /**
-     * ИНН
+     * ИНН.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $iNN;
+
     /**
      * КПП
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kPP;
+
     /**
-     * ИНН
-     *
-     * @return string|null
+     * ИНН.
      */
-    public function getINN() : ?string
+    public function getINN(): ?string
     {
         return $this->iNN;
     }
+
     /**
-     * ИНН
-     *
-     * @param string|null $iNN
-     *
-     * @return self
+     * ИНН.
      */
-    public function setINN(?string $iNN) : self
+    public function setINN(?string $iNN): self
     {
         $this->iNN = $iNN;
+
         return $this;
     }
+
     /**
      * КПП
-     *
-     * @return string|null
      */
-    public function getKPP() : ?string
+    public function getKPP(): ?string
     {
         return $this->kPP;
     }
+
     /**
      * КПП
-     *
-     * @param string|null $kPP
-     *
-     * @return self
      */
-    public function setKPP(?string $kPP) : self
+    public function setKPP(?string $kPP): self
     {
         $this->kPP = $kPP;
+
         return $this;
     }
 }

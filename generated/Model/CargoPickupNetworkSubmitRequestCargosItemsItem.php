@@ -5,111 +5,102 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItem
 {
     /**
-     * Параметры груза
+     * Параметры груза.
      *
      * @var CargoPickupNetworkSubmitRequestCargosItemsItemCargo
      */
     protected $cargo;
+
     /**
-     * Условия перевозки
+     * Условия перевозки.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemConditions|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemConditions
      */
     protected $conditions;
+
     /**
-     * Получатель
+     * Получатель.
      *
      * @var CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
      */
     protected $receiver;
+
     /**
-     * Услуги
+     * Услуги.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServices|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServices
      */
     protected $services;
+
     /**
-     * Параметры груза
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemCargo
+     * Параметры груза.
      */
-    public function getCargo() : CargoPickupNetworkSubmitRequestCargosItemsItemCargo
+    public function getCargo(): CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     {
         return $this->cargo;
     }
+
     /**
-     * Параметры груза
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemCargo $cargo
-     *
-     * @return self
+     * Параметры груза.
      */
-    public function setCargo(CargoPickupNetworkSubmitRequestCargosItemsItemCargo $cargo) : self
+    public function setCargo(CargoPickupNetworkSubmitRequestCargosItemsItemCargo $cargo): self
     {
         $this->cargo = $cargo;
+
         return $this;
     }
+
     /**
-     * Условия перевозки
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemConditions|null
+     * Условия перевозки.
      */
-    public function getConditions() : ?CargoPickupNetworkSubmitRequestCargosItemsItemConditions
+    public function getConditions(): ?CargoPickupNetworkSubmitRequestCargosItemsItemConditions
     {
         return $this->conditions;
     }
+
     /**
-     * Условия перевозки
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemConditions|null $conditions
-     *
-     * @return self
+     * Условия перевозки.
      */
-    public function setConditions(?CargoPickupNetworkSubmitRequestCargosItemsItemConditions $conditions) : self
+    public function setConditions(?CargoPickupNetworkSubmitRequestCargosItemsItemConditions $conditions): self
     {
         $this->conditions = $conditions;
+
         return $this;
     }
+
     /**
-     * Получатель
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
+     * Получатель.
      */
-    public function getReceiver() : CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
+    public function getReceiver(): CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     {
         return $this->receiver;
     }
+
     /**
-     * Получатель
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemReceiver $receiver
-     *
-     * @return self
+     * Получатель.
      */
-    public function setReceiver(CargoPickupNetworkSubmitRequestCargosItemsItemReceiver $receiver) : self
+    public function setReceiver(CargoPickupNetworkSubmitRequestCargosItemsItemReceiver $receiver): self
     {
         $this->receiver = $receiver;
+
         return $this;
     }
+
     /**
-     * Услуги
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServices|null
+     * Услуги.
      */
-    public function getServices() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServices
+    public function getServices(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServices
     {
         return $this->services;
     }
+
     /**
-     * Услуги
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServices|null $services
-     *
-     * @return self
+     * Услуги.
      */
-    public function setServices(?CargoPickupNetworkSubmitRequestCargosItemsItemServices $services) : self
+    public function setServices(?CargoPickupNetworkSubmitRequestCargosItemsItemServices $services): self
     {
         $this->services = $services;
+
         return $this;
     }
 }

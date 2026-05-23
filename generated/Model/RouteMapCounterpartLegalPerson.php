@@ -5,57 +5,52 @@ namespace glook\PecomSdk\Generated\Model;
 class RouteMapCounterpartLegalPerson
 {
     /**
-     * ИНН контрагента
+     * ИНН контрагента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $inn;
+
     /**
-     * КПП контрагента
+     * КПП контрагента.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $kpp;
+
     /**
-     * ИНН контрагента
-     *
-     * @return string|null
+     * ИНН контрагента.
      */
-    public function getInn() : ?string
+    public function getInn(): ?string
     {
         return $this->inn;
     }
+
     /**
-     * ИНН контрагента
-     *
-     * @param string|null $inn
-     *
-     * @return self
+     * ИНН контрагента.
      */
-    public function setInn(?string $inn) : self
+    public function setInn(?string $inn): self
     {
         $this->inn = $inn;
+
         return $this;
     }
+
     /**
-     * КПП контрагента
-     *
-     * @return string|null
+     * КПП контрагента.
      */
-    public function getKpp() : ?string
+    public function getKpp(): ?string
     {
         return $this->kpp;
     }
+
     /**
-     * КПП контрагента
-     *
-     * @param string|null $kpp
-     *
-     * @return self
+     * КПП контрагента.
      */
-    public function setKpp(?string $kpp) : self
+    public function setKpp(?string $kpp): self
     {
         $this->kpp = $kpp;
+
         return $this;
     }
 }

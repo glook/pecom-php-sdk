@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ServiceWithPayer;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ServiceWithPayerNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ServiceWithPayer';
+        return 'glook\PecomSdk\Generated\Model\ServiceWithPayer' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ServiceWithPayer';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ServiceWithPayer' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,34 @@ class ServiceWithPayerNormalizer implements DenormalizerInterface, NormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ServiceWithPayer();
+        $object = new ServiceWithPayer();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('enabled', $data) && $data['enabled'] !== null) {
+        if (\array_key_exists('enabled', $data) && null !== $data['enabled']) {
             $object->setEnabled($data['enabled']);
-        }
-        elseif (\array_key_exists('enabled', $data) && $data['enabled'] === null) {
+        } elseif (\array_key_exists('enabled', $data) && null === $data['enabled']) {
             $object->setEnabled(null);
         }
-        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
-            $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\PreregistrationPayer', 'json', $context));
-        }
-        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+        if (\array_key_exists('payer', $data) && null !== $data['payer']) {
+            $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\PecomSdk\Generated\Model\PreregistrationPayer', 'json', $context));
+        } elseif (\array_key_exists('payer', $data) && null === $data['payer']) {
             $object->setPayer(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getEnabled()) {
             $data['enabled'] = $object->getEnabled();
         }
         if (null !== $object->getPayer()) {
             $data['payer'] = $this->normalizer->normalize($object->getPayer(), 'json', $context);
         }
+
         return $data;
     }
 }

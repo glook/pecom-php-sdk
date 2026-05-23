@@ -5,165 +5,152 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemConditions
 {
     /**
-     * Необходима скоростная перевозка. В актуальной версии протокола не используется
+     * Необходима скоростная перевозка. В актуальной версии протокола не используется.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isFast;
+
     /**
-     * Необходима разгрузка силами «ПЭК» при доставке получателю
+     * Необходима разгрузка силами «ПЭК» при доставке получателю.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isLoading;
+
     /**
-     * Необходима открытая машина при заборе у отправителя
+     * Необходима открытая машина при заборе у отправителя.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isOpenCar;
+
     /**
-     * Необходима боковая погрузка при заборе у отправителя
+     * Необходима боковая погрузка при заборе у отправителя.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isSideLoad;
+
     /**
-     * Необходима машина со специальным оборудованием при заборе у отправителя
+     * Необходима машина со специальным оборудованием при заборе у отправителя.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isSpecialEquipment;
+
     /**
-     * Необходима растентовка при заборе у отправителя. В актуальной версии протокола не используется
+     * Необходима растентовка при заборе у отправителя. В актуальной версии протокола не используется.
      *
-     * @var bool|null
+     * @var null|bool
      */
     protected $isUncovered;
+
     /**
-     * Необходима скоростная перевозка. В актуальной версии протокола не используется
-     *
-     * @return bool|null
+     * Необходима скоростная перевозка. В актуальной версии протокола не используется.
      */
-    public function getIsFast() : ?bool
+    public function getIsFast(): ?bool
     {
         return $this->isFast;
     }
+
     /**
-     * Необходима скоростная перевозка. В актуальной версии протокола не используется
-     *
-     * @param bool|null $isFast
-     *
-     * @return self
+     * Необходима скоростная перевозка. В актуальной версии протокола не используется.
      */
-    public function setIsFast(?bool $isFast) : self
+    public function setIsFast(?bool $isFast): self
     {
         $this->isFast = $isFast;
+
         return $this;
     }
+
     /**
-     * Необходима разгрузка силами «ПЭК» при доставке получателю
-     *
-     * @return bool|null
+     * Необходима разгрузка силами «ПЭК» при доставке получателю.
      */
-    public function getIsLoading() : ?bool
+    public function getIsLoading(): ?bool
     {
         return $this->isLoading;
     }
+
     /**
-     * Необходима разгрузка силами «ПЭК» при доставке получателю
-     *
-     * @param bool|null $isLoading
-     *
-     * @return self
+     * Необходима разгрузка силами «ПЭК» при доставке получателю.
      */
-    public function setIsLoading(?bool $isLoading) : self
+    public function setIsLoading(?bool $isLoading): self
     {
         $this->isLoading = $isLoading;
+
         return $this;
     }
+
     /**
-     * Необходима открытая машина при заборе у отправителя
-     *
-     * @return bool|null
+     * Необходима открытая машина при заборе у отправителя.
      */
-    public function getIsOpenCar() : ?bool
+    public function getIsOpenCar(): ?bool
     {
         return $this->isOpenCar;
     }
+
     /**
-     * Необходима открытая машина при заборе у отправителя
-     *
-     * @param bool|null $isOpenCar
-     *
-     * @return self
+     * Необходима открытая машина при заборе у отправителя.
      */
-    public function setIsOpenCar(?bool $isOpenCar) : self
+    public function setIsOpenCar(?bool $isOpenCar): self
     {
         $this->isOpenCar = $isOpenCar;
+
         return $this;
     }
+
     /**
-     * Необходима боковая погрузка при заборе у отправителя
-     *
-     * @return bool|null
+     * Необходима боковая погрузка при заборе у отправителя.
      */
-    public function getIsSideLoad() : ?bool
+    public function getIsSideLoad(): ?bool
     {
         return $this->isSideLoad;
     }
+
     /**
-     * Необходима боковая погрузка при заборе у отправителя
-     *
-     * @param bool|null $isSideLoad
-     *
-     * @return self
+     * Необходима боковая погрузка при заборе у отправителя.
      */
-    public function setIsSideLoad(?bool $isSideLoad) : self
+    public function setIsSideLoad(?bool $isSideLoad): self
     {
         $this->isSideLoad = $isSideLoad;
+
         return $this;
     }
+
     /**
-     * Необходима машина со специальным оборудованием при заборе у отправителя
-     *
-     * @return bool|null
+     * Необходима машина со специальным оборудованием при заборе у отправителя.
      */
-    public function getIsSpecialEquipment() : ?bool
+    public function getIsSpecialEquipment(): ?bool
     {
         return $this->isSpecialEquipment;
     }
+
     /**
-     * Необходима машина со специальным оборудованием при заборе у отправителя
-     *
-     * @param bool|null $isSpecialEquipment
-     *
-     * @return self
+     * Необходима машина со специальным оборудованием при заборе у отправителя.
      */
-    public function setIsSpecialEquipment(?bool $isSpecialEquipment) : self
+    public function setIsSpecialEquipment(?bool $isSpecialEquipment): self
     {
         $this->isSpecialEquipment = $isSpecialEquipment;
+
         return $this;
     }
+
     /**
-     * Необходима растентовка при заборе у отправителя. В актуальной версии протокола не используется
-     *
-     * @return bool|null
+     * Необходима растентовка при заборе у отправителя. В актуальной версии протокола не используется.
      */
-    public function getIsUncovered() : ?bool
+    public function getIsUncovered(): ?bool
     {
         return $this->isUncovered;
     }
+
     /**
-     * Необходима растентовка при заборе у отправителя. В актуальной версии протокола не используется
-     *
-     * @param bool|null $isUncovered
-     *
-     * @return self
+     * Необходима растентовка при заборе у отправителя. В актуальной версии протокола не используется.
      */
-    public function setIsUncovered(?bool $isUncovered) : self
+    public function setIsUncovered(?bool $isUncovered): self
     {
         $this->isUncovered = $isUncovered;
+
         return $this;
     }
 }

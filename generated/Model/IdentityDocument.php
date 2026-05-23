@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class IdentityDocument
 {
     /**
-     * Уникальный идентификатор типа документа
+     * Уникальный идентификатор типа документа.
      *
      * @var string
      */
     protected $guid;
+
     /**
-     * Маска документа
+     * Маска документа.
      *
      * @var DocumentMask
      */
     protected $mask;
+
     /**
-     * Наименование документа
+     * Наименование документа.
      *
      * @var string
      */
     protected $name;
+
     /**
-     * Уникальный идентификатор типа документа
-     *
-     * @return string
+     * Уникальный идентификатор типа документа.
      */
-    public function getGuid() : string
+    public function getGuid(): string
     {
         return $this->guid;
     }
+
     /**
-     * Уникальный идентификатор типа документа
-     *
-     * @param string $guid
-     *
-     * @return self
+     * Уникальный идентификатор типа документа.
      */
-    public function setGuid(string $guid) : self
+    public function setGuid(string $guid): self
     {
         $this->guid = $guid;
+
         return $this;
     }
+
     /**
-     * Маска документа
-     *
-     * @return DocumentMask
+     * Маска документа.
      */
-    public function getMask() : DocumentMask
+    public function getMask(): DocumentMask
     {
         return $this->mask;
     }
+
     /**
-     * Маска документа
-     *
-     * @param DocumentMask $mask
-     *
-     * @return self
+     * Маска документа.
      */
-    public function setMask(DocumentMask $mask) : self
+    public function setMask(DocumentMask $mask): self
     {
         $this->mask = $mask;
+
         return $this;
     }
+
     /**
-     * Наименование документа
-     *
-     * @return string
+     * Наименование документа.
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
+
     /**
-     * Наименование документа
-     *
-     * @param string $name
-     *
-     * @return self
+     * Наименование документа.
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 }

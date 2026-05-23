@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CalculatorServiceItem;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CalculatorServiceItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CalculatorServiceItem';
+        return 'glook\PecomSdk\Generated\Model\CalculatorServiceItem' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CalculatorServiceItem';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CalculatorServiceItem' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,55 +36,51 @@ class CalculatorServiceItemNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CalculatorServiceItem();
+        $object = new CalculatorServiceItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cost', $data) && $data['cost'] !== null) {
+        if (\array_key_exists('cost', $data) && null !== $data['cost']) {
             $object->setCost($data['cost']);
-        }
-        elseif (\array_key_exists('cost', $data) && $data['cost'] === null) {
+        } elseif (\array_key_exists('cost', $data) && null === $data['cost']) {
             $object->setCost(null);
         }
-        if (\array_key_exists('info', $data) && $data['info'] !== null) {
+        if (\array_key_exists('info', $data) && null !== $data['info']) {
             $object->setInfo($data['info']);
-        }
-        elseif (\array_key_exists('info', $data) && $data['info'] === null) {
+        } elseif (\array_key_exists('info', $data) && null === $data['info']) {
             $object->setInfo(null);
         }
-        if (\array_key_exists('insuranceTerm', $data) && $data['insuranceTerm'] !== null) {
+        if (\array_key_exists('insuranceTerm', $data) && null !== $data['insuranceTerm']) {
             $object->setInsuranceTerm($data['insuranceTerm']);
-        }
-        elseif (\array_key_exists('insuranceTerm', $data) && $data['insuranceTerm'] === null) {
+        } elseif (\array_key_exists('insuranceTerm', $data) && null === $data['insuranceTerm']) {
             $object->setInsuranceTerm(null);
         }
-        if (\array_key_exists('senderCity', $data) && $data['senderCity'] !== null) {
+        if (\array_key_exists('senderCity', $data) && null !== $data['senderCity']) {
             $object->setSenderCity($data['senderCity']);
-        }
-        elseif (\array_key_exists('senderCity', $data) && $data['senderCity'] === null) {
+        } elseif (\array_key_exists('senderCity', $data) && null === $data['senderCity']) {
             $object->setSenderCity(null);
         }
-        if (\array_key_exists('services', $data) && $data['services'] !== null) {
-            $values = array();
+        if (\array_key_exists('services', $data) && null !== $data['services']) {
+            $values = [];
             foreach ($data['services'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CalculatorServiceItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CalculatorServiceItem', 'json', $context);
             }
             $object->setServices($values);
-        }
-        elseif (\array_key_exists('services', $data) && $data['services'] === null) {
+        } elseif (\array_key_exists('services', $data) && null === $data['services']) {
             $object->setServices(null);
         }
-        if (\array_key_exists('serviceType', $data) && $data['serviceType'] !== null) {
+        if (\array_key_exists('serviceType', $data) && null !== $data['serviceType']) {
             $object->setServiceType($data['serviceType']);
-        }
-        elseif (\array_key_exists('serviceType', $data) && $data['serviceType'] === null) {
+        } elseif (\array_key_exists('serviceType', $data) && null === $data['serviceType']) {
             $object->setServiceType(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCost()) {
             $data['cost'] = $object->getCost();
         }
@@ -94,7 +94,7 @@ class CalculatorServiceItemNormalizer implements DenormalizerInterface, Normaliz
             $data['senderCity'] = $object->getSenderCity();
         }
         if (null !== $object->getServices()) {
-            $values = array();
+            $values = [];
             foreach ($object->getServices() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -103,6 +103,7 @@ class CalculatorServiceItemNormalizer implements DenormalizerInterface, Normaliz
         if (null !== $object->getServiceType()) {
             $data['serviceType'] = $object->getServiceType();
         }
+
         return $data;
     }
 }

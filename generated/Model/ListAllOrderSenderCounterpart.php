@@ -7,109 +7,100 @@ class ListAllOrderSenderCounterpart
     /**
      * Блок для юр.лица/ИП
      *
-     * @var ListAllOrderCounterpartLegalEntity|null
+     * @var null|ListAllOrderCounterpartLegalEntity
      */
     protected $legalEntity;
+
     /**
-     * Наименование/ФИО
+     * Наименование/ФИО.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $name;
+
     /**
-     * Блок для физ.лица
+     * Блок для физ.лица.
      *
-     * @var ListAllOrderSenderCounterpartPhysicalPerson|null
+     * @var null|ListAllOrderSenderCounterpartPhysicalPerson
      */
     protected $physicalPerson;
+
     /**
-     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо
+     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо.
      *
-     * @var int|null
+     * @var null|int
      */
     protected $type;
+
     /**
      * Блок для юр.лица/ИП
-     *
-     * @return ListAllOrderCounterpartLegalEntity|null
      */
-    public function getLegalEntity() : ?ListAllOrderCounterpartLegalEntity
+    public function getLegalEntity(): ?ListAllOrderCounterpartLegalEntity
     {
         return $this->legalEntity;
     }
+
     /**
      * Блок для юр.лица/ИП
-     *
-     * @param ListAllOrderCounterpartLegalEntity|null $legalEntity
-     *
-     * @return self
      */
-    public function setLegalEntity(?ListAllOrderCounterpartLegalEntity $legalEntity) : self
+    public function setLegalEntity(?ListAllOrderCounterpartLegalEntity $legalEntity): self
     {
         $this->legalEntity = $legalEntity;
+
         return $this;
     }
+
     /**
-     * Наименование/ФИО
-     *
-     * @return string|null
+     * Наименование/ФИО.
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
+
     /**
-     * Наименование/ФИО
-     *
-     * @param string|null $name
-     *
-     * @return self
+     * Наименование/ФИО.
      */
-    public function setName(?string $name) : self
+    public function setName(?string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
+
     /**
-     * Блок для физ.лица
-     *
-     * @return ListAllOrderSenderCounterpartPhysicalPerson|null
+     * Блок для физ.лица.
      */
-    public function getPhysicalPerson() : ?ListAllOrderSenderCounterpartPhysicalPerson
+    public function getPhysicalPerson(): ?ListAllOrderSenderCounterpartPhysicalPerson
     {
         return $this->physicalPerson;
     }
+
     /**
-     * Блок для физ.лица
-     *
-     * @param ListAllOrderSenderCounterpartPhysicalPerson|null $physicalPerson
-     *
-     * @return self
+     * Блок для физ.лица.
      */
-    public function setPhysicalPerson(?ListAllOrderSenderCounterpartPhysicalPerson $physicalPerson) : self
+    public function setPhysicalPerson(?ListAllOrderSenderCounterpartPhysicalPerson $physicalPerson): self
     {
         $this->physicalPerson = $physicalPerson;
+
         return $this;
     }
+
     /**
-     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо
-     *
-     * @return int|null
+     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо.
      */
-    public function getType() : ?int
+    public function getType(): ?int
     {
         return $this->type;
     }
+
     /**
-     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо
-     *
-     * @param int|null $type
-     *
-     * @return self
+     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо.
      */
-    public function setType(?int $type) : self
+    public function setType(?int $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

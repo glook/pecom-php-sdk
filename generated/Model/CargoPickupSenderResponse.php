@@ -5,84 +5,61 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupSenderResponse
 {
     /**
-     * Нормализованный адрес как он был идентифицирован системами ПЭК
+     * Нормализованный адрес как он был идентифицирован системами ПЭК.
      *
      * @var string
      */
     protected $addressNormal;
+
     /**
-     * 
-     *
      * @var CoordinateNumbers
      */
     protected $coordinates;
+
     /**
-     * 
-     *
-     * @var string|null
+     * @var null|string
      */
     protected $warehouseID;
+
     /**
-     * Нормализованный адрес как он был идентифицирован системами ПЭК
-     *
-     * @return string
+     * Нормализованный адрес как он был идентифицирован системами ПЭК.
      */
-    public function getAddressNormal() : string
+    public function getAddressNormal(): string
     {
         return $this->addressNormal;
     }
+
     /**
-     * Нормализованный адрес как он был идентифицирован системами ПЭК
-     *
-     * @param string $addressNormal
-     *
-     * @return self
+     * Нормализованный адрес как он был идентифицирован системами ПЭК.
      */
-    public function setAddressNormal(string $addressNormal) : self
+    public function setAddressNormal(string $addressNormal): self
     {
         $this->addressNormal = $addressNormal;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return CoordinateNumbers
-     */
-    public function getCoordinates() : CoordinateNumbers
+
+    public function getCoordinates(): CoordinateNumbers
     {
         return $this->coordinates;
     }
-    /**
-     * 
-     *
-     * @param CoordinateNumbers $coordinates
-     *
-     * @return self
-     */
-    public function setCoordinates(CoordinateNumbers $coordinates) : self
+
+    public function setCoordinates(CoordinateNumbers $coordinates): self
     {
         $this->coordinates = $coordinates;
+
         return $this;
     }
-    /**
-     * 
-     *
-     * @return string|null
-     */
-    public function getWarehouseID() : ?string
+
+    public function getWarehouseID(): ?string
     {
         return $this->warehouseID;
     }
-    /**
-     * 
-     *
-     * @param string|null $warehouseID
-     *
-     * @return self
-     */
-    public function setWarehouseID(?string $warehouseID) : self
+
+    public function setWarehouseID(?string $warehouseID): self
     {
         $this->warehouseID = $warehouseID;
+
         return $this;
     }
 }

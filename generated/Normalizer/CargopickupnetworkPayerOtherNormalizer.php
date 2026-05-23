@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargopickupnetworkPayerOther;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargopickupnetworkPayerOtherNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayerOther';
+        return 'glook\PecomSdk\Generated\Model\CargopickupnetworkPayerOther' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayerOther';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargopickupnetworkPayerOther' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,26 +36,23 @@ class CargopickupnetworkPayerOtherNormalizer implements DenormalizerInterface, N
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargopickupnetworkPayerOther();
+        $object = new CargopickupnetworkPayerOther();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('identityCard', $data) && $data['identityCard'] !== null) {
-            $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayerOtherIdentityCard', 'json', $context));
-        }
-        elseif (\array_key_exists('identityCard', $data) && $data['identityCard'] === null) {
+        if (\array_key_exists('identityCard', $data) && null !== $data['identityCard']) {
+            $object->setIdentityCard($this->denormalizer->denormalize($data['identityCard'], 'glook\PecomSdk\Generated\Model\CargopickupnetworkIdentityCard', 'json', $context));
+        } elseif (\array_key_exists('identityCard', $data) && null === $data['identityCard']) {
             $object->setIdentityCard(null);
         }
-        if (\array_key_exists('inn', $data) && $data['inn'] !== null) {
+        if (\array_key_exists('inn', $data) && null !== $data['inn']) {
             $object->setInn($data['inn']);
-        }
-        elseif (\array_key_exists('inn', $data) && $data['inn'] === null) {
+        } elseif (\array_key_exists('inn', $data) && null === $data['inn']) {
             $object->setInn(null);
         }
-        if (\array_key_exists('paymentCity', $data) && $data['paymentCity'] !== null) {
+        if (\array_key_exists('paymentCity', $data) && null !== $data['paymentCity']) {
             $object->setPaymentCity($data['paymentCity']);
-        }
-        elseif (\array_key_exists('paymentCity', $data) && $data['paymentCity'] === null) {
+        } elseif (\array_key_exists('paymentCity', $data) && null === $data['paymentCity']) {
             $object->setPaymentCity(null);
         }
         if (\array_key_exists('phone', $data)) {
@@ -60,11 +61,13 @@ class CargopickupnetworkPayerOtherNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('title', $data)) {
             $object->setTitle($data['title']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getIdentityCard()) {
             $data['identityCard'] = $this->normalizer->normalize($object->getIdentityCard(), 'json', $context);
         }
@@ -76,6 +79,7 @@ class CargopickupnetworkPayerOtherNormalizer implements DenormalizerInterface, N
         }
         $data['phone'] = $object->getPhone();
         $data['title'] = $object->getTitle();
+
         return $data;
     }
 }

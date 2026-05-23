@@ -5,84 +5,81 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoAddress
 {
     /**
-     * Компоненты адреса
+     * Компоненты адреса.
      *
-     * @var GeoAddressComponent[]|null
+     * @var null|GeoAddressComponent[]
      */
     protected $components;
+
     /**
-     * Код страны
+     * Код страны.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $countryCode;
+
     /**
      * Форматированный адрес
      *
-     * @var string|null
+     * @var null|string
      */
     protected $formatted;
+
     /**
-     * Компоненты адреса
+     * Компоненты адреса.
      *
-     * @return GeoAddressComponent[]|null
+     * @return null|GeoAddressComponent[]
      */
-    public function getComponents() : ?array
+    public function getComponents(): ?array
     {
         return $this->components;
     }
+
     /**
-     * Компоненты адреса
+     * Компоненты адреса.
      *
-     * @param GeoAddressComponent[]|null $components
-     *
-     * @return self
+     * @param null|GeoAddressComponent[] $components
      */
-    public function setComponents(?array $components) : self
+    public function setComponents(?array $components): self
     {
         $this->components = $components;
+
         return $this;
     }
+
     /**
-     * Код страны
-     *
-     * @return string|null
+     * Код страны.
      */
-    public function getCountryCode() : ?string
+    public function getCountryCode(): ?string
     {
         return $this->countryCode;
     }
+
     /**
-     * Код страны
-     *
-     * @param string|null $countryCode
-     *
-     * @return self
+     * Код страны.
      */
-    public function setCountryCode(?string $countryCode) : self
+    public function setCountryCode(?string $countryCode): self
     {
         $this->countryCode = $countryCode;
+
         return $this;
     }
+
     /**
      * Форматированный адрес
-     *
-     * @return string|null
      */
-    public function getFormatted() : ?string
+    public function getFormatted(): ?string
     {
         return $this->formatted;
     }
+
     /**
      * Форматированный адрес
-     *
-     * @param string|null $formatted
-     *
-     * @return self
      */
-    public function setFormatted(?string $formatted) : self
+    public function setFormatted(?string $formatted): self
     {
         $this->formatted = $formatted;
+
         return $this;
     }
 }

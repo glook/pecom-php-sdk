@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsuranceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,30 +36,30 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsuranceNormalizer 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance();
+        $object = new CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cost', $data) && $data['cost'] !== null) {
+        if (\array_key_exists('cost', $data) && null !== $data['cost']) {
             $object->setCost($data['cost']);
-        }
-        elseif (\array_key_exists('cost', $data) && $data['cost'] === null) {
+        } elseif (\array_key_exists('cost', $data) && null === $data['cost']) {
             $object->setCost(null);
         }
         if (\array_key_exists('enabled', $data)) {
             $object->setEnabled($data['enabled']);
         }
-        if (\array_key_exists('payer', $data) && $data['payer'] !== null) {
-            $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\\PecomSdk\\Generated\\Model\\CargopickupnetworkPayer', 'json', $context));
-        }
-        elseif (\array_key_exists('payer', $data) && $data['payer'] === null) {
+        if (\array_key_exists('payer', $data) && null !== $data['payer']) {
+            $object->setPayer($this->denormalizer->denormalize($data['payer'], 'glook\PecomSdk\Generated\Model\CargopickupnetworkPayer', 'json', $context));
+        } elseif (\array_key_exists('payer', $data) && null === $data['payer']) {
             $object->setPayer(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCost()) {
             $data['cost'] = $object->getCost();
         }
@@ -63,6 +67,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsuranceNormalizer 
         if (null !== $object->getPayer()) {
             $data['payer'] = $this->normalizer->normalize($object->getPayer(), 'json', $context);
         }
+
         return $data;
     }
 }

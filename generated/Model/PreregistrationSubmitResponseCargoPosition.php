@@ -5,30 +5,27 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationSubmitResponseCargoPosition
 {
     /**
-     * Значение для штрих-кода в формате CODE-128/EAN-128
+     * Значение для штрих-кода в формате CODE-128/EAN-128.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $barcode;
+
     /**
-     * Значение для штрих-кода в формате CODE-128/EAN-128
-     *
-     * @return string|null
+     * Значение для штрих-кода в формате CODE-128/EAN-128.
      */
-    public function getBarcode() : ?string
+    public function getBarcode(): ?string
     {
         return $this->barcode;
     }
+
     /**
-     * Значение для штрих-кода в формате CODE-128/EAN-128
-     *
-     * @param string|null $barcode
-     *
-     * @return self
+     * Значение для штрих-кода в формате CODE-128/EAN-128.
      */
-    public function setBarcode(?string $barcode) : self
+    public function setBarcode(?string $barcode): self
     {
         $this->barcode = $barcode;
+
         return $this;
     }
 }

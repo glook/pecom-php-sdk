@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\ConfirmedAccessToCounterparty;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ConfirmedAccessToCounterpartyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\ConfirmedAccessToCounterparty';
+        return 'glook\PecomSdk\Generated\Model\ConfirmedAccessToCounterparty' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\ConfirmedAccessToCounterparty';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\ConfirmedAccessToCounterparty' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,33 +36,30 @@ class ConfirmedAccessToCounterpartyNormalizer implements DenormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\ConfirmedAccessToCounterparty();
+        $object = new ConfirmedAccessToCounterparty();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('counterpartClientCard', $data) && $data['counterpartClientCard'] !== null) {
+        if (\array_key_exists('counterpartClientCard', $data) && null !== $data['counterpartClientCard']) {
             $object->setCounterpartClientCard($data['counterpartClientCard']);
-        }
-        elseif (\array_key_exists('counterpartClientCard', $data) && $data['counterpartClientCard'] === null) {
+        } elseif (\array_key_exists('counterpartClientCard', $data) && null === $data['counterpartClientCard']) {
             $object->setCounterpartClientCard(null);
         }
-        if (\array_key_exists('documents', $data) && $data['documents'] !== null) {
-            $values = array();
+        if (\array_key_exists('documents', $data) && null !== $data['documents']) {
+            $values = [];
             foreach ($data['documents'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\\PecomSdk\\Generated\\Model\\CounterpartyDocument', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\CounterpartyDocument', 'json', $context);
             }
             $object->setDocuments($values);
-        }
-        elseif (\array_key_exists('documents', $data) && $data['documents'] === null) {
+        } elseif (\array_key_exists('documents', $data) && null === $data['documents']) {
             $object->setDocuments(null);
         }
         if (\array_key_exists('guid', $data)) {
             $object->setGuid($data['guid']);
         }
-        if (\array_key_exists('legal', $data) && $data['legal'] !== null) {
-            $object->setLegal($this->denormalizer->denormalize($data['legal'], 'glook\\PecomSdk\\Generated\\Model\\ConfirmedAccessToCounterpartyLegal', 'json', $context));
-        }
-        elseif (\array_key_exists('legal', $data) && $data['legal'] === null) {
+        if (\array_key_exists('legal', $data) && null !== $data['legal']) {
+            $object->setLegal($this->denormalizer->denormalize($data['legal'], 'glook\PecomSdk\Generated\Model\ConfirmedAccessToCounterpartyLegal', 'json', $context));
+        } elseif (\array_key_exists('legal', $data) && null === $data['legal']) {
             $object->setLegal(null);
         }
         if (\array_key_exists('legalForm', $data)) {
@@ -67,16 +68,18 @@ class ConfirmedAccessToCounterpartyNormalizer implements DenormalizerInterface, 
         if (\array_key_exists('title', $data)) {
             $object->setTitle($data['title']);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         if (null !== $object->getCounterpartClientCard()) {
             $data['counterpartClientCard'] = $object->getCounterpartClientCard();
         }
         if (null !== $object->getDocuments()) {
-            $values = array();
+            $values = [];
             foreach ($object->getDocuments() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
@@ -88,6 +91,7 @@ class ConfirmedAccessToCounterpartyNormalizer implements DenormalizerInterface, 
         }
         $data['legalForm'] = $object->getLegalForm();
         $data['title'] = $object->getTitle();
+
         return $data;
     }
 }

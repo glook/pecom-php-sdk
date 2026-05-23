@@ -5,192 +5,181 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingDocument
 {
     /**
-     * Дата документа
+     * Дата документа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $date;
+
     /**
-     * Номер документа
+     * Номер документа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $number;
+
     /**
      * Ставка НДС
      *
-     * @var string|null
+     * @var null|string
      */
     protected $rateVAT;
+
     /**
-     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null
+     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null.
      *
-     * @var AccountingDocumentService[]|null
+     * @var null|AccountingDocumentService[]
      */
     protected $services;
+
     /**
      * Сумма с НДС, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $sum;
+
     /**
      * Сумма НДС, руб.
      *
-     * @var float|null
+     * @var null|float
      */
     protected $sumVAT;
+
     /**
-     * Вид документа
+     * Вид документа.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $type;
+
     /**
-     * Дата документа
-     *
-     * @return string|null
+     * Дата документа.
      */
-    public function getDate() : ?string
+    public function getDate(): ?string
     {
         return $this->date;
     }
+
     /**
-     * Дата документа
-     *
-     * @param string|null $date
-     *
-     * @return self
+     * Дата документа.
      */
-    public function setDate(?string $date) : self
+    public function setDate(?string $date): self
     {
         $this->date = $date;
+
         return $this;
     }
+
     /**
-     * Номер документа
-     *
-     * @return string|null
+     * Номер документа.
      */
-    public function getNumber() : ?string
+    public function getNumber(): ?string
     {
         return $this->number;
     }
+
     /**
-     * Номер документа
-     *
-     * @param string|null $number
-     *
-     * @return self
+     * Номер документа.
      */
-    public function setNumber(?string $number) : self
+    public function setNumber(?string $number): self
     {
         $this->number = $number;
+
         return $this;
     }
+
     /**
      * Ставка НДС
-     *
-     * @return string|null
      */
-    public function getRateVAT() : ?string
+    public function getRateVAT(): ?string
     {
         return $this->rateVAT;
     }
+
     /**
      * Ставка НДС
-     *
-     * @param string|null $rateVAT
-     *
-     * @return self
      */
-    public function setRateVAT(?string $rateVAT) : self
+    public function setRateVAT(?string $rateVAT): self
     {
         $this->rateVAT = $rateVAT;
+
         return $this;
     }
+
     /**
-     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null
+     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null.
      *
-     * @return AccountingDocumentService[]|null
+     * @return null|AccountingDocumentService[]
      */
-    public function getServices() : ?array
+    public function getServices(): ?array
     {
         return $this->services;
     }
+
     /**
-     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null
+     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null.
      *
-     * @param AccountingDocumentService[]|null $services
-     *
-     * @return self
+     * @param null|AccountingDocumentService[] $services
      */
-    public function setServices(?array $services) : self
+    public function setServices(?array $services): self
     {
         $this->services = $services;
+
         return $this;
     }
+
     /**
      * Сумма с НДС, руб.
-     *
-     * @return float|null
      */
-    public function getSum() : ?float
+    public function getSum(): ?float
     {
         return $this->sum;
     }
+
     /**
      * Сумма с НДС, руб.
-     *
-     * @param float|null $sum
-     *
-     * @return self
      */
-    public function setSum(?float $sum) : self
+    public function setSum(?float $sum): self
     {
         $this->sum = $sum;
+
         return $this;
     }
+
     /**
      * Сумма НДС, руб.
-     *
-     * @return float|null
      */
-    public function getSumVAT() : ?float
+    public function getSumVAT(): ?float
     {
         return $this->sumVAT;
     }
+
     /**
      * Сумма НДС, руб.
-     *
-     * @param float|null $sumVAT
-     *
-     * @return self
      */
-    public function setSumVAT(?float $sumVAT) : self
+    public function setSumVAT(?float $sumVAT): self
     {
         $this->sumVAT = $sumVAT;
+
         return $this;
     }
+
     /**
-     * Вид документа
-     *
-     * @return string|null
+     * Вид документа.
      */
-    public function getType() : ?string
+    public function getType(): ?string
     {
         return $this->type;
     }
+
     /**
-     * Вид документа
-     *
-     * @param string|null $type
-     *
-     * @return self
+     * Вид документа.
      */
-    public function setType(?string $type) : self
+    public function setType(?string $type): self
     {
         $this->type = $type;
+
         return $this;
     }
 }

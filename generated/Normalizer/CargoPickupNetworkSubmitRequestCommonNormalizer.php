@@ -2,29 +2,33 @@
 
 namespace glook\PecomSdk\Generated\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCommon;
 use glook\PecomSdk\Generated\Runtime\Normalizer\CheckArray;
-use Symfony\Component\Serializer\Exception\InvalidArgumentException;
+use Jane\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class CargoPickupNetworkSubmitRequestCommonNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
+
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCommon';
+        return 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCommon' === $type;
     }
+
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'glook\\PecomSdk\\Generated\\Model\\CargoPickupNetworkSubmitRequestCommon';
+        return is_object($data) && 'glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCommon' === get_class($data);
     }
-    public function denormalize($data, $class, $format = null, array $context = array())
+
+    public function denormalize($data, $class, $format = null, array $context = [])
     {
         if (isset($data['$ref'])) {
             return new Reference($data['$ref'], $context['document-origin']);
@@ -32,30 +36,30 @@ class CargoPickupNetworkSubmitRequestCommonNormalizer implements DenormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequestCommon();
+        $object = new CargoPickupNetworkSubmitRequestCommon();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('applicationDate', $data)) {
             $object->setApplicationDate(\DateTime::createFromFormat('Y-m-d', $data['applicationDate'])->setTime(0, 0, 0));
         }
-        if (\array_key_exists('description', $data) && $data['description'] !== null) {
+        if (\array_key_exists('description', $data) && null !== $data['description']) {
             $object->setDescription($data['description']);
-        }
-        elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+        } elseif (\array_key_exists('description', $data) && null === $data['description']) {
             $object->setDescription(null);
         }
-        if (\array_key_exists('responsiblePerson', $data) && $data['responsiblePerson'] !== null) {
+        if (\array_key_exists('responsiblePerson', $data) && null !== $data['responsiblePerson']) {
             $object->setResponsiblePerson($data['responsiblePerson']);
-        }
-        elseif (\array_key_exists('responsiblePerson', $data) && $data['responsiblePerson'] === null) {
+        } elseif (\array_key_exists('responsiblePerson', $data) && null === $data['responsiblePerson']) {
             $object->setResponsiblePerson(null);
         }
+
         return $object;
     }
-    public function normalize($object, $format = null, array $context = array())
+
+    public function normalize($object, $format = null, array $context = [])
     {
-        $data = array();
+        $data = [];
         $data['applicationDate'] = $object->getApplicationDate()->format('Y-m-d');
         if (null !== $object->getDescription()) {
             $data['description'] = $object->getDescription();
@@ -63,6 +67,7 @@ class CargoPickupNetworkSubmitRequestCommonNormalizer implements DenormalizerInt
         if (null !== $object->getResponsiblePerson()) {
             $data['responsiblePerson'] = $object->getResponsiblePerson();
         }
+
         return $data;
     }
 }

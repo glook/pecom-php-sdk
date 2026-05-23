@@ -5,84 +5,77 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsGetcontentSuccessResponse
 {
     /**
-     * Тело документа в стандарте - base64
+     * Тело документа в стандарте - base64.
      *
      * @var string
      */
     protected $docBody;
+
     /**
-     * Если был указан входящий параметр `docFormat`
+     * Если был указан входящий параметр `docFormat`.
      *
-     * @var string|null
+     * @var null|string
      */
     protected $docFormat;
+
     /**
-     * Наименование документа
+     * Наименование документа.
      *
      * @var string
      */
     protected $docName;
+
     /**
-     * Тело документа в стандарте - base64
-     *
-     * @return string
+     * Тело документа в стандарте - base64.
      */
-    public function getDocBody() : string
+    public function getDocBody(): string
     {
         return $this->docBody;
     }
+
     /**
-     * Тело документа в стандарте - base64
-     *
-     * @param string $docBody
-     *
-     * @return self
+     * Тело документа в стандарте - base64.
      */
-    public function setDocBody(string $docBody) : self
+    public function setDocBody(string $docBody): self
     {
         $this->docBody = $docBody;
+
         return $this;
     }
+
     /**
-     * Если был указан входящий параметр `docFormat`
-     *
-     * @return string|null
+     * Если был указан входящий параметр `docFormat`.
      */
-    public function getDocFormat() : ?string
+    public function getDocFormat(): ?string
     {
         return $this->docFormat;
     }
+
     /**
-     * Если был указан входящий параметр `docFormat`
-     *
-     * @param string|null $docFormat
-     *
-     * @return self
+     * Если был указан входящий параметр `docFormat`.
      */
-    public function setDocFormat(?string $docFormat) : self
+    public function setDocFormat(?string $docFormat): self
     {
         $this->docFormat = $docFormat;
+
         return $this;
     }
+
     /**
-     * Наименование документа
-     *
-     * @return string
+     * Наименование документа.
      */
-    public function getDocName() : string
+    public function getDocName(): string
     {
         return $this->docName;
     }
+
     /**
-     * Наименование документа
-     *
-     * @param string $docName
-     *
-     * @return self
+     * Наименование документа.
      */
-    public function setDocName(string $docName) : self
+    public function setDocName(string $docName): self
     {
         $this->docName = $docName;
+
         return $this;
     }
 }

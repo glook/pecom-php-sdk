@@ -5,219 +5,202 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServices
 {
     /**
-     * Доставка
+     * Доставка.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
      */
     protected $delivery;
+
     /**
-     * Возврат документов
+     * Возврат документов.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
      */
     protected $documentsReturning;
+
     /**
-     * Защитная транспортировочная упаковка
+     * Защитная транспортировочная упаковка.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesHardPacking|null
+     * @var null|CargopickupnetworkServiceWithPayerAndPositions
      */
     protected $hardPacking;
+
     /**
-     * Страховка
+     * Страховка.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
      */
     protected $insurance;
+
     /**
-     * Услуга забора груза
+     * Услуга забора груза.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesPickUp|null
+     * @var null|CargopickupnetworkServicePayer
      */
     protected $pickUp;
+
     /**
-     * Пломбировка
+     * Пломбировка.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesSealing|null
+     * @var null|CargopickupnetworkServiceWithPayerAndPositions
      */
     protected $sealing;
+
     /**
-     * Упаковка стреппинг-лентой
+     * Упаковка стреппинг-лентой.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping|null
+     * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
      */
     protected $strapping;
+
     /**
-     * Перевозка
+     * Перевозка.
      *
-     * @var CargoPickupNetworkSubmitRequestCargosItemsItemServicesTransporting|null
+     * @var null|CargopickupnetworkServicePayer
      */
     protected $transporting;
+
     /**
-     * Доставка
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery|null
+     * Доставка.
      */
-    public function getDelivery() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
+    public function getDelivery(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     {
         return $this->delivery;
     }
+
     /**
-     * Доставка
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery|null $delivery
-     *
-     * @return self
+     * Доставка.
      */
-    public function setDelivery(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery $delivery) : self
+    public function setDelivery(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery $delivery): self
     {
         $this->delivery = $delivery;
+
         return $this;
     }
+
     /**
-     * Возврат документов
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning|null
+     * Возврат документов.
      */
-    public function getDocumentsReturning() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
+    public function getDocumentsReturning(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
     {
         return $this->documentsReturning;
     }
+
     /**
-     * Возврат документов
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning|null $documentsReturning
-     *
-     * @return self
+     * Возврат документов.
      */
-    public function setDocumentsReturning(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning $documentsReturning) : self
+    public function setDocumentsReturning(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning $documentsReturning): self
     {
         $this->documentsReturning = $documentsReturning;
+
         return $this;
     }
+
     /**
-     * Защитная транспортировочная упаковка
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesHardPacking|null
+     * Защитная транспортировочная упаковка.
      */
-    public function getHardPacking() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesHardPacking
+    public function getHardPacking(): ?CargopickupnetworkServiceWithPayerAndPositions
     {
         return $this->hardPacking;
     }
+
     /**
-     * Защитная транспортировочная упаковка
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesHardPacking|null $hardPacking
-     *
-     * @return self
+     * Защитная транспортировочная упаковка.
      */
-    public function setHardPacking(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesHardPacking $hardPacking) : self
+    public function setHardPacking(?CargopickupnetworkServiceWithPayerAndPositions $hardPacking): self
     {
         $this->hardPacking = $hardPacking;
+
         return $this;
     }
+
     /**
-     * Страховка
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance|null
+     * Страховка.
      */
-    public function getInsurance() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
+    public function getInsurance(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     {
         return $this->insurance;
     }
+
     /**
-     * Страховка
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance|null $insurance
-     *
-     * @return self
+     * Страховка.
      */
-    public function setInsurance(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance $insurance) : self
+    public function setInsurance(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance $insurance): self
     {
         $this->insurance = $insurance;
+
         return $this;
     }
+
     /**
-     * Услуга забора груза
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesPickUp|null
+     * Услуга забора груза.
      */
-    public function getPickUp() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesPickUp
+    public function getPickUp(): ?CargopickupnetworkServicePayer
     {
         return $this->pickUp;
     }
+
     /**
-     * Услуга забора груза
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesPickUp|null $pickUp
-     *
-     * @return self
+     * Услуга забора груза.
      */
-    public function setPickUp(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesPickUp $pickUp) : self
+    public function setPickUp(?CargopickupnetworkServicePayer $pickUp): self
     {
         $this->pickUp = $pickUp;
+
         return $this;
     }
+
     /**
-     * Пломбировка
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesSealing|null
+     * Пломбировка.
      */
-    public function getSealing() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesSealing
+    public function getSealing(): ?CargopickupnetworkServiceWithPayerAndPositions
     {
         return $this->sealing;
     }
+
     /**
-     * Пломбировка
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesSealing|null $sealing
-     *
-     * @return self
+     * Пломбировка.
      */
-    public function setSealing(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesSealing $sealing) : self
+    public function setSealing(?CargopickupnetworkServiceWithPayerAndPositions $sealing): self
     {
         $this->sealing = $sealing;
+
         return $this;
     }
+
     /**
-     * Упаковка стреппинг-лентой
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping|null
+     * Упаковка стреппинг-лентой.
      */
-    public function getStrapping() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
+    public function getStrapping(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
     {
         return $this->strapping;
     }
+
     /**
-     * Упаковка стреппинг-лентой
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping|null $strapping
-     *
-     * @return self
+     * Упаковка стреппинг-лентой.
      */
-    public function setStrapping(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping $strapping) : self
+    public function setStrapping(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping $strapping): self
     {
         $this->strapping = $strapping;
+
         return $this;
     }
+
     /**
-     * Перевозка
-     *
-     * @return CargoPickupNetworkSubmitRequestCargosItemsItemServicesTransporting|null
+     * Перевозка.
      */
-    public function getTransporting() : ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesTransporting
+    public function getTransporting(): ?CargopickupnetworkServicePayer
     {
         return $this->transporting;
     }
+
     /**
-     * Перевозка
-     *
-     * @param CargoPickupNetworkSubmitRequestCargosItemsItemServicesTransporting|null $transporting
-     *
-     * @return self
+     * Перевозка.
      */
-    public function setTransporting(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesTransporting $transporting) : self
+    public function setTransporting(?CargopickupnetworkServicePayer $transporting): self
     {
         $this->transporting = $transporting;
+
         return $this;
     }
 }
