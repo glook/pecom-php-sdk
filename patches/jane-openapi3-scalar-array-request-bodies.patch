@@ -1,0 +1,61 @@
+Subject: Generate scalar array request bodies correctly
+
+Jane 6.3.9 treats every array request body without a generated model as
+`array[]` because it reads the PHP type from the array schema itself. For a
+valid OpenAPI schema like `type: array` + `items.type: string`, this produces
+`@param array[]` and a body guard that only serializes nested arrays.
+
+This patch keeps model arrays unchanged, but for scalar item arrays it:
+- derives PHPDoc item type from `items.type`, e.g. `string[]`,
+- accepts any PHP array body, including a flat `string[]` or an empty array.
+
+--- a/Generator/RequestBodyContent/AbstractBodyContentGenerator.php
++++ b/Generator/RequestBodyContent/AbstractBodyContentGenerator.php
+@@ -32,7 +32,13 @@
+         $classGuess = $this->guessClass->guessClass($schema, $reference . '/schema', $context->getRegistry(), $array);
+ 
+         if ($classGuess === null) {
+-            $types = $this->schemaTypeToPHP($schema->getType(), $schema->getFormat());
++            if ($array && $this->isScalarArraySchema($schema)) {
++                /** @var Schema $items */
++                $items = $schema->getItems();
++                $types = $this->schemaTypeToPHP($items->getType(), $items->getFormat());
++            } else {
++                $types = $this->schemaTypeToPHP($schema->getType(), $schema->getFormat());
++            }
+ 
+             if ($array) {
+                 $types = array_map(function ($type) {
+@@ -62,6 +68,10 @@
+ 
+         if (null === $classGuess) {
+             if ($array) {
++                if ($this->isScalarArraySchema($schema)) {
++                    return new Expr\FuncCall(new Name('is_array'), [new Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'body'))]);
++                }
++
+                 return new Expr\BinaryOp\LogicalAnd(
+                     new Expr\BinaryOp\LogicalAnd(
+                         new Expr\FuncCall(new Name('is_array'), [new Arg(new Expr\PropertyFetch(new Expr\Variable('this'), 'body'))]),
+@@ -111,6 +121,21 @@
+         );
+     }
+ 
++    private function isScalarArraySchema(?Schema $schema): bool
++    {
++        if (!$schema instanceof Schema || 'array' !== $schema->getType()) {
++            return false;
++        }
++
++        $items = $schema->getItems();
++
++        if (!$items instanceof Schema) {
++            return false;
++        }
++
++        return \in_array($items->getType(), ['string', 'number', 'boolean', 'integer'], true);
++    }
++
+     private function schemaTypeToPHP(?string $type, ?string $format = null): array
+     {
+         if (null === $format) {

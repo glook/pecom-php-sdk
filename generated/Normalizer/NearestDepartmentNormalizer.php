@@ -67,20 +67,30 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
         if (\array_key_exists('isActive', $data)) {
             $object->setIsActive($data['isActive']);
         }
-        if (\array_key_exists('maxCount', $data)) {
+        if (\array_key_exists('maxCount', $data) && null !== $data['maxCount']) {
             $object->setMaxCount($data['maxCount']);
+        } elseif (\array_key_exists('maxCount', $data) && null === $data['maxCount']) {
+            $object->setMaxCount(null);
         }
-        if (\array_key_exists('maxDimension', $data)) {
+        if (\array_key_exists('maxDimension', $data) && null !== $data['maxDimension']) {
             $object->setMaxDimension($data['maxDimension']);
+        } elseif (\array_key_exists('maxDimension', $data) && null === $data['maxDimension']) {
+            $object->setMaxDimension(null);
         }
-        if (\array_key_exists('maxVolume', $data)) {
+        if (\array_key_exists('maxVolume', $data) && null !== $data['maxVolume']) {
             $object->setMaxVolume($data['maxVolume']);
+        } elseif (\array_key_exists('maxVolume', $data) && null === $data['maxVolume']) {
+            $object->setMaxVolume(null);
         }
-        if (\array_key_exists('maxWeight', $data)) {
+        if (\array_key_exists('maxWeight', $data) && null !== $data['maxWeight']) {
             $object->setMaxWeight($data['maxWeight']);
+        } elseif (\array_key_exists('maxWeight', $data) && null === $data['maxWeight']) {
+            $object->setMaxWeight(null);
         }
-        if (\array_key_exists('maxWeightOnePlace', $data)) {
+        if (\array_key_exists('maxWeightOnePlace', $data) && null !== $data['maxWeightOnePlace']) {
             $object->setMaxWeightOnePlace($data['maxWeightOnePlace']);
+        } elseif (\array_key_exists('maxWeightOnePlace', $data) && null === $data['maxWeightOnePlace']) {
+            $object->setMaxWeightOnePlace(null);
         }
         if (\array_key_exists('phone', $data)) {
             $object->setPhone($data['phone']);
@@ -108,8 +118,10 @@ class NearestDepartmentNormalizer implements DenormalizerInterface, NormalizerIn
         if (\array_key_exists('townBitrixId', $data)) {
             $object->setTownBitrixId($data['townBitrixId']);
         }
-        if (\array_key_exists('warehouseId', $data)) {
+        if (\array_key_exists('warehouseId', $data) && null !== $data['warehouseId']) {
             $object->setWarehouseId($data['warehouseId']);
+        } elseif (\array_key_exists('warehouseId', $data) && null === $data['warehouseId']) {
+            $object->setWarehouseId(null);
         }
 
         return $object;

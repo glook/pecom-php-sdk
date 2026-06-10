@@ -1143,8 +1143,8 @@ class Client extends Runtime\Client\Client
      * Заявка на забор может быть аннулирована до момента её планирования в маршрутном листе водителя
      * Аннулирование заявок с самопривозом на склад ПЭК не требуется.
      *
-     * @param array[] $requestBody
-     * @param string  $fetch       Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param string[] $requestBody
+     * @param string   $fetch       Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|OrderCancellationResult[]|ResponseInterface
      *

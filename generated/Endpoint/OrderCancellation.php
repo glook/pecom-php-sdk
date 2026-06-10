@@ -21,7 +21,7 @@ class OrderCancellation extends BaseEndpoint implements Endpoint
      * Заявка на забор может быть аннулирована до момента её планирования в маршрутном листе водителя
      * Аннулирование заявок с самопривозом на склад ПЭК не требуется.
      *
-     * @param array[] $requestBody
+     * @param string[] $requestBody
      */
     public function __construct(array $requestBody)
     {
@@ -40,7 +40,7 @@ class OrderCancellation extends BaseEndpoint implements Endpoint
 
     public function getBody(SerializerInterface $serializer, $streamFactory = null): array
     {
-        if (is_array($this->body) and isset($this->body[0]) and is_array($this->body[0])) {
+        if (is_array($this->body)) {
             return [['Content-Type' => ['application/json']], json_encode($this->body)];
         }
 

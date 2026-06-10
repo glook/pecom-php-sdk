@@ -49,10 +49,8 @@ class ParamItemNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (\array_key_exists('type', $data)) {
             $object->setType($data['type']);
         }
-        if (\array_key_exists('values', $data) && null !== $data['values']) {
+        if (\array_key_exists('values', $data)) {
             $object->setValues($data['values']);
-        } elseif (\array_key_exists('values', $data) && null === $data['values']) {
-            $object->setValues(null);
         }
 
         return $object;

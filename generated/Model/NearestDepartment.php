@@ -70,35 +70,35 @@ class NearestDepartment
     /**
      * Ограничение на количество мест груза, которое может обрабатывать отделение. 0 – ограничений нет.
      *
-     * @var int
+     * @var null|int
      */
     protected $maxCount;
 
     /**
      * Ограничение на максимальный габарит груза (наибольший размер из длины, ширины и высоты из всех мест), который может обрабатывать отделение. 0 – ограничений нет.
      *
-     * @var float
+     * @var null|float
      */
     protected $maxDimension;
 
     /**
      * Ограничение на общий объем груза, который может обрабатывать отделение. 0 – ограничений нет.
      *
-     * @var float
+     * @var null|float
      */
     protected $maxVolume;
 
     /**
      * Ограничение на общий вес груза, который может обрабатывать отделение. 0 – ограничений нет.
      *
-     * @var float
+     * @var null|float
      */
     protected $maxWeight;
 
     /**
      * Ограничение на максимальный вес одного места груза, который может обрабатывать отделение. 0 – ограничений нет.
      *
-     * @var float
+     * @var null|float
      */
     protected $maxWeightOnePlace;
 
@@ -147,7 +147,7 @@ class NearestDepartment
     /**
      * ID склада, используется в методах расчета стоимости и подачи заявок.
      *
-     * @var string
+     * @var null|string
      */
     protected $warehouseId;
 
@@ -316,7 +316,7 @@ class NearestDepartment
     /**
      * Ограничение на количество мест груза, которое может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function getMaxCount(): int
+    public function getMaxCount(): ?int
     {
         return $this->maxCount;
     }
@@ -324,7 +324,7 @@ class NearestDepartment
     /**
      * Ограничение на количество мест груза, которое может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function setMaxCount(int $maxCount): self
+    public function setMaxCount(?int $maxCount): self
     {
         $this->maxCount = $maxCount;
 
@@ -334,7 +334,7 @@ class NearestDepartment
     /**
      * Ограничение на максимальный габарит груза (наибольший размер из длины, ширины и высоты из всех мест), который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function getMaxDimension(): float
+    public function getMaxDimension(): ?float
     {
         return $this->maxDimension;
     }
@@ -342,7 +342,7 @@ class NearestDepartment
     /**
      * Ограничение на максимальный габарит груза (наибольший размер из длины, ширины и высоты из всех мест), который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function setMaxDimension(float $maxDimension): self
+    public function setMaxDimension(?float $maxDimension): self
     {
         $this->maxDimension = $maxDimension;
 
@@ -352,7 +352,7 @@ class NearestDepartment
     /**
      * Ограничение на общий объем груза, который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function getMaxVolume(): float
+    public function getMaxVolume(): ?float
     {
         return $this->maxVolume;
     }
@@ -360,7 +360,7 @@ class NearestDepartment
     /**
      * Ограничение на общий объем груза, который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function setMaxVolume(float $maxVolume): self
+    public function setMaxVolume(?float $maxVolume): self
     {
         $this->maxVolume = $maxVolume;
 
@@ -370,7 +370,7 @@ class NearestDepartment
     /**
      * Ограничение на общий вес груза, который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function getMaxWeight(): float
+    public function getMaxWeight(): ?float
     {
         return $this->maxWeight;
     }
@@ -378,7 +378,7 @@ class NearestDepartment
     /**
      * Ограничение на общий вес груза, который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function setMaxWeight(float $maxWeight): self
+    public function setMaxWeight(?float $maxWeight): self
     {
         $this->maxWeight = $maxWeight;
 
@@ -388,7 +388,7 @@ class NearestDepartment
     /**
      * Ограничение на максимальный вес одного места груза, который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function getMaxWeightOnePlace(): float
+    public function getMaxWeightOnePlace(): ?float
     {
         return $this->maxWeightOnePlace;
     }
@@ -396,7 +396,7 @@ class NearestDepartment
     /**
      * Ограничение на максимальный вес одного места груза, который может обрабатывать отделение. 0 – ограничений нет.
      */
-    public function setMaxWeightOnePlace(float $maxWeightOnePlace): self
+    public function setMaxWeightOnePlace(?float $maxWeightOnePlace): self
     {
         $this->maxWeightOnePlace = $maxWeightOnePlace;
 
@@ -522,7 +522,7 @@ class NearestDepartment
     /**
      * ID склада, используется в методах расчета стоимости и подачи заявок.
      */
-    public function getWarehouseId(): string
+    public function getWarehouseId(): ?string
     {
         return $this->warehouseId;
     }
@@ -530,7 +530,7 @@ class NearestDepartment
     /**
      * ID склада, используется в методах расчета стоимости и подачи заявок.
      */
-    public function setWarehouseId(string $warehouseId): self
+    public function setWarehouseId(?string $warehouseId): self
     {
         $this->warehouseId = $warehouseId;
 

@@ -28,7 +28,7 @@ class ParamItem
     /**
      * Значение параметра.
      *
-     * @var null|mixed
+     * @var mixed
      */
     protected $values;
 

@@ -40,26 +40,40 @@ class WdcLimitsNormalizer implements DenormalizerInterface, NormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('height', $data)) {
+        if (\array_key_exists('height', $data) && null !== $data['height']) {
             $object->setHeight($data['height']);
+        } elseif (\array_key_exists('height', $data) && null === $data['height']) {
+            $object->setHeight(null);
         }
-        if (\array_key_exists('length', $data)) {
+        if (\array_key_exists('length', $data) && null !== $data['length']) {
             $object->setLength($data['length']);
+        } elseif (\array_key_exists('length', $data) && null === $data['length']) {
+            $object->setLength(null);
         }
-        if (\array_key_exists('maxLength', $data)) {
+        if (\array_key_exists('maxLength', $data) && null !== $data['maxLength']) {
             $object->setMaxLength($data['maxLength']);
+        } elseif (\array_key_exists('maxLength', $data) && null === $data['maxLength']) {
+            $object->setMaxLength(null);
         }
-        if (\array_key_exists('totalWeight', $data)) {
+        if (\array_key_exists('totalWeight', $data) && null !== $data['totalWeight']) {
             $object->setTotalWeight($data['totalWeight']);
+        } elseif (\array_key_exists('totalWeight', $data) && null === $data['totalWeight']) {
+            $object->setTotalWeight(null);
         }
-        if (\array_key_exists('volume', $data)) {
+        if (\array_key_exists('volume', $data) && null !== $data['volume']) {
             $object->setVolume($data['volume']);
+        } elseif (\array_key_exists('volume', $data) && null === $data['volume']) {
+            $object->setVolume(null);
         }
-        if (\array_key_exists('weight', $data)) {
+        if (\array_key_exists('weight', $data) && null !== $data['weight']) {
             $object->setWeight($data['weight']);
+        } elseif (\array_key_exists('weight', $data) && null === $data['weight']) {
+            $object->setWeight(null);
         }
-        if (\array_key_exists('width', $data)) {
+        if (\array_key_exists('width', $data) && null !== $data['width']) {
             $object->setWidth($data['width']);
+        } elseif (\array_key_exists('width', $data) && null === $data['width']) {
+            $object->setWidth(null);
         }
 
         return $object;

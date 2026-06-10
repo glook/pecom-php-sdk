@@ -7,56 +7,56 @@ class WdcLimits
     /**
      * Максимальная высота грузоместа.
      *
-     * @var float
+     * @var null|float
      */
     protected $height;
 
     /**
      * Максимальная длина грузоместа.
      *
-     * @var float
+     * @var null|float
      */
     protected $length;
 
     /**
      * Максимальный габарит грузоместа.
      *
-     * @var float
+     * @var null|float
      */
     protected $maxLength;
 
     /**
      * Максимальный общий вес груза.
      *
-     * @var float
+     * @var null|float
      */
     protected $totalWeight;
 
     /**
      * Максимальный объем грузоместа.
      *
-     * @var float
+     * @var null|float
      */
     protected $volume;
 
     /**
      * Максимальный вес грузоместа.
      *
-     * @var float
+     * @var null|float
      */
     protected $weight;
 
     /**
      * Максимальная ширина грузоместа.
      *
-     * @var float
+     * @var null|float
      */
     protected $width;
 
     /**
      * Максимальная высота грузоместа.
      */
-    public function getHeight(): float
+    public function getHeight(): ?float
     {
         return $this->height;
     }
@@ -64,7 +64,7 @@ class WdcLimits
     /**
      * Максимальная высота грузоместа.
      */
-    public function setHeight(float $height): self
+    public function setHeight(?float $height): self
     {
         $this->height = $height;
 
@@ -74,7 +74,7 @@ class WdcLimits
     /**
      * Максимальная длина грузоместа.
      */
-    public function getLength(): float
+    public function getLength(): ?float
     {
         return $this->length;
     }
@@ -82,7 +82,7 @@ class WdcLimits
     /**
      * Максимальная длина грузоместа.
      */
-    public function setLength(float $length): self
+    public function setLength(?float $length): self
     {
         $this->length = $length;
 
@@ -92,7 +92,7 @@ class WdcLimits
     /**
      * Максимальный габарит грузоместа.
      */
-    public function getMaxLength(): float
+    public function getMaxLength(): ?float
     {
         return $this->maxLength;
     }
@@ -100,7 +100,7 @@ class WdcLimits
     /**
      * Максимальный габарит грузоместа.
      */
-    public function setMaxLength(float $maxLength): self
+    public function setMaxLength(?float $maxLength): self
     {
         $this->maxLength = $maxLength;
 
@@ -110,7 +110,7 @@ class WdcLimits
     /**
      * Максимальный общий вес груза.
      */
-    public function getTotalWeight(): float
+    public function getTotalWeight(): ?float
     {
         return $this->totalWeight;
     }
@@ -118,7 +118,7 @@ class WdcLimits
     /**
      * Максимальный общий вес груза.
      */
-    public function setTotalWeight(float $totalWeight): self
+    public function setTotalWeight(?float $totalWeight): self
     {
         $this->totalWeight = $totalWeight;
 
@@ -128,7 +128,7 @@ class WdcLimits
     /**
      * Максимальный объем грузоместа.
      */
-    public function getVolume(): float
+    public function getVolume(): ?float
     {
         return $this->volume;
     }
@@ -136,7 +136,7 @@ class WdcLimits
     /**
      * Максимальный объем грузоместа.
      */
-    public function setVolume(float $volume): self
+    public function setVolume(?float $volume): self
     {
         $this->volume = $volume;
 
@@ -146,7 +146,7 @@ class WdcLimits
     /**
      * Максимальный вес грузоместа.
      */
-    public function getWeight(): float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
@@ -154,7 +154,7 @@ class WdcLimits
     /**
      * Максимальный вес грузоместа.
      */
-    public function setWeight(float $weight): self
+    public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
 
@@ -164,7 +164,7 @@ class WdcLimits
     /**
      * Максимальная ширина грузоместа.
      */
-    public function getWidth(): float
+    public function getWidth(): ?float
     {
         return $this->width;
     }
@@ -172,7 +172,7 @@ class WdcLimits
     /**
      * Максимальная ширина грузоместа.
      */
-    public function setWidth(float $width): self
+    public function setWidth(?float $width): self
     {
         $this->width = $width;
 
