@@ -1,9 +1,8 @@
-Subject: Generate and validate scalar response bodies
+Subject: Generate declared scalar and oneOf response bodies
 
-Jane 6.3.9 records non-nullable string response schemas as null and decodes
-them without checking the declared type. This patch derives string and
-string-array PHP types from the response schema, validates them through the
-existing serializer, and rejects non-array JSON before array deserialization.
+Jane 6.3.9 records scalar and oneOf response schemas as null and decodes
+oneOf bodies into untyped values. This patch derives the declared PHP types,
+validates oneOf branches, and deserializes successful responses into models.
 
 --- a/Generator/Endpoint/GetTransformResponseBodyTrait.php
 +++ b/Generator/Endpoint/GetTransformResponseBodyTrait.php
@@ -11,12 +10,44 @@ existing serializer, and rejects non-array JSON before array deserialization.
 +            $hasExplicitNullResponse = count(array_keys($outputTypes, 'null', true)) > 1;
 @@ -85,0 +87,4 @@
 +
-+            if (!$hasExplicitNullResponse && array_filter($outputTypes, [$this, 'isScalarResponseType'])) {
++            if (!$hasExplicitNullResponse && array_filter($outputTypes, [$this, 'isInferredResponseType'])) {
 +                $outputTypes = array_values(array_diff($outputTypes, ['null']));
 +            }
-@@ -255,0 +261 @@
+@@ -141 +146 @@
+-            [$returnType, $throwType, $returnStatement] = $this->createContentDenormalizationStatement(
++            [$returnType, $throwType, $returnStatements] = $this->createContentDenormalizationStatement(
+@@ -156 +161 @@
+-                return [$returnTypes, $throwTypes, [$returnStatement]];
++                return [$returnTypes, $throwTypes, $returnStatements];
+@@ -165 +170 @@
+-                    'stmts' => [$returnStatement],
++                    'stmts' => $returnStatements,
+@@ -176 +181 @@
+-                [$returnType, $throwType, $returnStatement] = $this->createContentDenormalizationStatement(
++                [$returnType, $throwType, $returnStatements] = $this->createContentDenormalizationStatement(
+@@ -204 +209 @@
+-                        'stmts' => [$returnStatement],
++                        'stmts' => $returnStatements,
+@@ -251 +256,8 @@
+-        $classGuess = $guessClass->guessClass($schema, $reference, $context->getRegistry(), $array);
++        $oneOfBranches = $this->getOneOfResponseBranches($schema, $reference, $guessClass, $context);
++        $classGuess = null;
++        $array = false;
++
++        if (!$oneOfBranches) {
++            $classGuess = $guessClass->guessClass($schema, $reference, $context->getRegistry(), $array);
++        }
++
+@@ -255,0 +268,2 @@
 +        $scalarType = $this->getScalarResponseType($schema);
-@@ -270,0 +277,11 @@
++        $contentStatements = null;
+@@ -257 +271,4 @@
+-        if (null !== $classGuess) {
++        if ($oneOfBranches) {
++            $returnType = implode('|', array_column($oneOfBranches, 'returnType'));
++            $contentStatements = $this->createOneOfResponseStatements($oneOfBranches, $guessClass, $context);
++        } elseif (null !== $classGuess) {
+@@ -270,0 +288,11 @@
 +                    new Node\Arg(new Scalar\String_('json')),
 +                ]
 +            );
@@ -28,10 +59,14 @@ existing serializer, and rejects non-array JSON before array deserialization.
 +                [
 +                    new Node\Arg(new Expr\Variable('body')),
 +                    new Node\Arg(new Scalar\String_($scalarType)),
-@@ -280,0 +298,19 @@
-+
+@@ -280 +308,3 @@
+-        $contentStatement = new Stmt\Return_($serializeStmt);
++        if (null === $contentStatements) {
++            $contentStatements = [new Stmt\Return_($serializeStmt)];
++        }
+@@ -281,0 +312,19 @@
 +        if (null !== $scalarType && '[]' === substr($scalarType, -2)) {
-+            $contentStatement = new Stmt\If_(
++            $contentStatements = [new Stmt\If_(
 +                new Expr\BooleanNot(
 +                    new Expr\FuncCall(new Name('is_array'), [
 +                        new Node\Arg(new Expr\FuncCall(new Name('json_decode'), [
@@ -46,9 +81,196 @@ existing serializer, and rejects non-array JSON before array deserialization.
 +                    ))],
 +                    'else' => new Stmt\Else_([new Stmt\Return_($serializeStmt)]),
 +                ]
++            )];
++        }
++
+@@ -295 +344 @@
+-            $contentStatement = new Stmt\Throw_(new Expr\New_(new Name($throwType), $classGuess ? [
++            $contentStatements = [new Stmt\Throw_(new Expr\New_(new Name($throwType), $classGuess ? [
+@@ -297 +346 @@
+-            ] : []));
++            ] : []))];
+@@ -300 +349,101 @@
+-        return [$returnType, $throwType, $contentStatement];
++        return [$returnType, $throwType, $contentStatements];
++    }
++
++    private function getOneOfResponseBranches($schema, string $reference, GuessClass $guessClass, Context $context): array
++    {
++        if (!$schema instanceof Schema || true === $schema->getNullable()) {
++            return [];
++        }
++
++        $oneOf = $schema->getOneOf();
++
++        if (!\is_array($oneOf) || \count($oneOf) < 2) {
++            return [];
++        }
++
++        $branches = [];
++
++        foreach ($oneOf as $index => $branchSchema) {
++            $branchReference = $reference . '/oneOf/' . $index;
++            $classGuess = $guessClass->guessClass($branchSchema, $branchReference, $context->getRegistry(), $array);
++
++            if (null === $classGuess || !$branchSchema instanceof Schema) {
++                return [];
++            }
++
++            $class = $context->getRegistry()->getSchema($classGuess->getReference())->getNamespace() . '\\Model\\' . $classGuess->getName();
++
++            if ($array) {
++                $class .= '[]';
++            }
++
++            $branches[] = [
++                'class' => $class,
++                'returnType' => '\\' . $class,
++                'schema' => $branchSchema,
++                'reference' => $branchReference,
++            ];
++        }
++
++        return $branches;
++    }
++
++    private function createOneOfResponseStatements(array $branches, GuessClass $guessClass, Context $context): array
++    {
++        $decodedBody = new Expr\Variable($context->getUniqueVariableName('decodedBody'));
++        $matchingTypes = new Expr\Variable($context->getUniqueVariableName('matchingTypes'));
++        $statements = [
++            new Stmt\Expression(new Expr\Assign(
++                $decodedBody,
++                new Expr\FuncCall(new Name('json_decode'), [new Node\Arg(new Expr\Variable('body'))])
++            )),
++            new Stmt\Expression(new Expr\Assign($matchingTypes, new Expr\Array_())),
++        ];
++
++        foreach ($branches as $branch) {
++            $statements[] = new Stmt\If_(
++                $this->createSchemaMatchCondition($branch['schema'], $decodedBody, $branch['reference'], $guessClass, $context),
++                [
++                    'stmts' => [new Stmt\Expression(new Expr\Assign(
++                        new Expr\ArrayDimFetch($matchingTypes),
++                        new Scalar\String_($branch['class'])
++                    ))],
++                ]
 +            );
 +        }
-@@ -301,0 +338,24 @@
++
++        $exception = new Expr\New_(
++            new Name\FullyQualified(\UnexpectedValueException::class),
++            [new Node\Arg(new Scalar\String_('Ответ API должен соответствовать ровно одной схеме oneOf'))]
++        );
++        $statements[] = new Stmt\If_(
++            new Expr\BinaryOp\NotIdentical(
++                new Scalar\LNumber(1),
++                new Expr\FuncCall(new Name('count'), [new Node\Arg($matchingTypes)])
++            ),
++            ['stmts' => [new Stmt\Throw_($exception)]]
++        );
++
++        foreach ($branches as $branch) {
++            $statements[] = new Stmt\If_(
++                new Expr\BinaryOp\Identical(
++                    new Expr\ArrayDimFetch($matchingTypes, new Scalar\LNumber(0)),
++                    new Scalar\String_($branch['class'])
++                ),
++                [
++                    'stmts' => [new Stmt\Return_(new Expr\MethodCall(
++                        new Expr\Variable('serializer'),
++                        'deserialize',
++                        [
++                            new Node\Arg(new Expr\Variable('body')),
++                            new Node\Arg(new Scalar\String_($branch['class'])),
++                            new Node\Arg(new Scalar\String_('json')),
++                        ]
++                    ))],
++                ]
++            );
++        }
++
++        $statements[] = new Stmt\Throw_($exception);
++
++        return $statements;
+@@ -301,0 +451,101 @@
++
++    private function createSchemaMatchCondition($schema, Expr $input, string $reference, GuessClass $guessClass, Context $context): Expr
++    {
++        if ($schema instanceof Reference) {
++            [$reference, $schema] = $guessClass->resolve($schema, Schema::class);
++        }
++
++        if (!$schema instanceof Schema) {
++            return new Expr\ConstFetch(new Name('false'));
++        }
++
++        $type = $schema->getType();
++
++        if ('array' === $type) {
++            $item = new Expr\Variable($context->getUniqueVariableName('item'));
++            $itemCondition = $this->createSchemaMatchCondition($schema->getItems(), $item, $reference . '/items', $guessClass, $context);
++            $condition = new Expr\BinaryOp\BooleanAnd(
++                new Expr\FuncCall(new Name('is_array'), [new Node\Arg($input)]),
++                new Expr\BooleanNot(new Expr\FuncCall(new Name('array_filter'), [
++                    new Node\Arg($input),
++                    new Node\Arg(new Expr\Closure([
++                        'params' => [new Node\Param($item)],
++                        'stmts' => [new Stmt\Return_(new Expr\BooleanNot($itemCondition))],
++                    ])),
++                ]))
++            );
++        } elseif ('object' === $type || $schema->getProperties()) {
++            $condition = new Expr\FuncCall(new Name('is_object'), [new Node\Arg($input)]);
++            $required = $schema->getRequired() ?: [];
++
++            foreach ($schema->getProperties() ?: [] as $propertyName => $propertySchema) {
++                $propertyExists = new Expr\FuncCall(new Name('property_exists'), [
++                    new Node\Arg($input),
++                    new Node\Arg(new Scalar\String_($propertyName)),
++                ]);
++                $propertyCondition = $this->createSchemaMatchCondition(
++                    $propertySchema,
++                    new Expr\PropertyFetch($input, new Scalar\String_($propertyName)),
++                    $reference . '/properties/' . $propertyName,
++                    $guessClass,
++                    $context
++                );
++
++                if (\in_array($propertyName, $required, true)) {
++                    $propertyCondition = new Expr\BinaryOp\BooleanAnd($propertyExists, $propertyCondition);
++                } else {
++                    $propertyCondition = new Expr\BinaryOp\BooleanOr(new Expr\BooleanNot($propertyExists), $propertyCondition);
++                }
++
++                $condition = new Expr\BinaryOp\BooleanAnd($condition, $propertyCondition);
++            }
++        } elseif ('string' === $type) {
++            $condition = new Expr\FuncCall(new Name('is_string'), [new Node\Arg($input)]);
++        } elseif ('integer' === $type) {
++            $condition = new Expr\FuncCall(new Name('is_int'), [new Node\Arg($input)]);
++        } elseif ('number' === $type) {
++            $condition = new Expr\BinaryOp\BooleanOr(
++                new Expr\FuncCall(new Name('is_int'), [new Node\Arg($input)]),
++                new Expr\FuncCall(new Name('is_float'), [new Node\Arg($input)])
++            );
++        } elseif ('boolean' === $type) {
++            $condition = new Expr\FuncCall(new Name('is_bool'), [new Node\Arg($input)]);
++        } elseif ('null' === $type) {
++            $condition = new Expr\FuncCall(new Name('is_null'), [new Node\Arg($input)]);
++        } else {
++            $condition = new Expr\ConstFetch(new Name('false'));
++        }
++
++        if (true === $schema->getNullable()) {
++            return new Expr\BinaryOp\BooleanOr(
++                new Expr\FuncCall(new Name('is_null'), [new Node\Arg($input)]),
++                $condition
++            );
++        }
++
++        return $condition;
++    }
 +
 +    private function getScalarResponseType($schema): ?string
 +    {
@@ -69,7 +291,7 @@ existing serializer, and rejects non-array JSON before array deserialization.
 +        return null;
 +    }
 +
-+    private function isScalarResponseType(string $type): bool
++    private function isInferredResponseType(string $type): bool
 +    {
-+        return 'string' === $type || 'string[]' === $type;
++        return 'string' === $type || 'string[]' === $type || false !== strpos($type, '|');
 +    }

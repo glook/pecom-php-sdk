@@ -241,6 +241,8 @@ use glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarResponse;
 use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponse;
+use glook\PecomSdk\Generated\Model\CargoPickupStatusError;
+use glook\PecomSdk\Generated\Model\CargoPickupStatusItem;
 use glook\PecomSdk\Generated\Model\CargoPickupStatusRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupSubmitRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupSubmitResponse;
@@ -250,7 +252,9 @@ use glook\PecomSdk\Generated\Model\CargosCurrentStatusRequest;
 use glook\PecomSdk\Generated\Model\CargosDeliveryStatusRequest;
 use glook\PecomSdk\Generated\Model\CargosDetailsRequest;
 use glook\PecomSdk\Generated\Model\CargosdocumentsCargoinvoicebyperiodRequest;
+use glook\PecomSdk\Generated\Model\CargosdocumentsGetcontentErrorResponse;
 use glook\PecomSdk\Generated\Model\CargosdocumentsGetcontentRequest;
+use glook\PecomSdk\Generated\Model\CargosdocumentsGetcontentSuccessResponse;
 use glook\PecomSdk\Generated\Model\CargosdocumentsOrderRequest;
 use glook\PecomSdk\Generated\Model\CargosdocumentsOrderResponse;
 use glook\PecomSdk\Generated\Model\CargosForcedStorageRequest;
@@ -635,7 +639,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface
+     * @return CargoPickupStatusError|CargoPickupStatusItem[]|ResponseInterface
      *
      * @throws CargopickupStatusBadRequestException
      * @throws CargopickupStatusForbiddenException
@@ -969,7 +973,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface
+     * @return CargosdocumentsGetcontentErrorResponse|CargosdocumentsGetcontentSuccessResponse|ResponseInterface
      *
      * @throws CargosdocumentsGetcontentBadRequestException
      * @throws CargosdocumentsGetcontentForbiddenException
