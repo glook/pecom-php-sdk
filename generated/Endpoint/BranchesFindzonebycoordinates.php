@@ -57,7 +57,7 @@ class BranchesFindzonebycoordinates extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ZoneByCoordinate[]
+     * @return ZoneByCoordinate[]
      *
      * @throws BranchesFindzonebycoordinatesBadRequestException
      * @throws BranchesFindzonebycoordinatesForbiddenException

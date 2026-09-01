@@ -192,6 +192,42 @@ class PecomErrorAwareHttpClientTest extends TestCase
         $client->sendRequest($this->makeRequest());
     }
 
+    /**
+     * @dataProvider unusableErrorStatuses
+     *
+     * @param mixed $errorStatus
+     */
+    public function testUnusableErrorStatusFallsBackToHttpStatus(int $httpStatus, $errorStatus): void
+    {
+        $body = json_encode([
+            'error' => [
+                'title' => 'Системная ошибка',
+                'message' => 'Ошибка',
+                'status' => $errorStatus,
+            ],
+        ]);
+
+        $response = $this->makeResponse($httpStatus, $body);
+        $client = new PecomErrorAwareHttpClient($this->makeClient($response));
+
+        try {
+            $client->sendRequest($this->makeRequest());
+            $this->fail('Expected PecomApiException');
+        } catch (PecomApiException $e) {
+            $this->assertSame($httpStatus, $e->getCode());
+            $this->assertSame($httpStatus, $e->getResponse()->getStatusCode());
+        }
+    }
+
+    public function unusableErrorStatuses(): array
+    {
+        return [
+            'zero with HTTP error' => [503, 0],
+            'zero with inline error' => [200, 0],
+            'non-integer status' => [503, '400'],
+        ];
+    }
+
     public function testValidationExceptionHasGetFieldsAndGetResponse(): void
     {
         $fields = [

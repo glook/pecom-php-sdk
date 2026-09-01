@@ -59,7 +59,7 @@ class ReceiversUpdate extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ReceiversSuccessResponse
+     * @return ReceiversSuccessResponse
      *
      * @throws ReceiversUpdateBadRequestException
      * @throws ReceiversUpdateForbiddenException

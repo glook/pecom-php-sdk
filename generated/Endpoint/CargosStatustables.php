@@ -55,7 +55,7 @@ class CargosStatustables extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|StatusTableItem[]
+     * @return StatusTableItem[]
      *
      * @throws CargosStatustablesBadRequestException
      * @throws CargosStatustablesForbiddenException

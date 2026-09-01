@@ -241,6 +241,8 @@ use glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupCheckOrderedPickupType3CarResponse;
 use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupNetworkSubmitResponse;
+use glook\PecomSdk\Generated\Model\CargoPickupStatusError;
+use glook\PecomSdk\Generated\Model\CargoPickupStatusItem;
 use glook\PecomSdk\Generated\Model\CargoPickupStatusRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupSubmitRequest;
 use glook\PecomSdk\Generated\Model\CargoPickupSubmitResponse;
@@ -250,7 +252,9 @@ use glook\PecomSdk\Generated\Model\CargosCurrentStatusRequest;
 use glook\PecomSdk\Generated\Model\CargosDeliveryStatusRequest;
 use glook\PecomSdk\Generated\Model\CargosDetailsRequest;
 use glook\PecomSdk\Generated\Model\CargosdocumentsCargoinvoicebyperiodRequest;
+use glook\PecomSdk\Generated\Model\CargosdocumentsGetcontentErrorResponse;
 use glook\PecomSdk\Generated\Model\CargosdocumentsGetcontentRequest;
+use glook\PecomSdk\Generated\Model\CargosdocumentsGetcontentSuccessResponse;
 use glook\PecomSdk\Generated\Model\CargosdocumentsOrderRequest;
 use glook\PecomSdk\Generated\Model\CargosdocumentsOrderResponse;
 use glook\PecomSdk\Generated\Model\CargosForcedStorageRequest;
@@ -313,7 +317,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|AuthTokenResponse|ResponseInterface
+     * @return AuthTokenResponse|ResponseInterface
      *
      * @throws AuthCreatetokentoaccessprivatedataBadRequestException
      * @throws AuthCreatetokentoaccessprivatedataForbiddenException
@@ -328,7 +332,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|AuthProfileDataResponse|ResponseInterface
+     * @return AuthProfileDataResponse|ResponseInterface
      *
      * @throws AuthProfiledataBadRequestException
      * @throws AuthProfiledataForbiddenException
@@ -346,7 +350,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|AccountingDocumentListResponse|ResponseInterface
+     * @return AccountingDocumentListResponse|ResponseInterface
      *
      * @throws AccountingdocumentsListforcounterpartyBadRequestException
      * @throws AccountingdocumentsListforcounterpartyForbiddenException
@@ -370,7 +374,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesAllPostResponse200|ResponseInterface
+     * @return BranchesAllPostResponse200|ResponseInterface
      *
      * @throws BranchesAllBadRequestException
      * @throws BranchesAllForbiddenException
@@ -389,7 +393,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesChecknocalcservicesPostResponse200Item[]|ResponseInterface
+     * @return BranchesChecknocalcservicesPostResponse200Item[]|ResponseInterface
      *
      * @throws BranchesChecknocalcservicesBadRequestException
      * @throws BranchesChecknocalcservicesForbiddenException
@@ -407,7 +411,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesCheckpickupdatePostResponse200|ResponseInterface
+     * @return BranchesCheckpickupdatePostResponse200|ResponseInterface
      *
      * @throws BranchesCheckpickupdateBadRequestException
      * @throws BranchesCheckpickupdateForbiddenException
@@ -422,7 +426,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|Country[]|ResponseInterface
+     * @return Country[]|ResponseInterface
      *
      * @throws BranchesCountryBadRequestException
      * @throws BranchesCountryForbiddenException
@@ -439,7 +443,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesCountrytypeidentitydocumentPostResponse200|ResponseInterface
+     * @return BranchesCountrytypeidentitydocumentPostResponse200|ResponseInterface
      *
      * @throws BranchesCountrytypeidentitydocumentBadRequestException
      * @throws BranchesCountrytypeidentitydocumentForbiddenException
@@ -459,7 +463,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesDepartmentslimitPostResponse200|ResponseInterface
+     * @return BranchesDepartmentslimitPostResponse200|ResponseInterface
      *
      * @throws BranchesDepartmentslimitBadRequestException
      * @throws BranchesDepartmentslimitForbiddenException
@@ -476,7 +480,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesFindzonebyaddressPostResponse200|ResponseInterface
+     * @return BranchesFindzonebyaddressPostResponse200|ResponseInterface
      *
      * @throws BranchesFindzonebyaddressBadRequestException
      * @throws BranchesFindzonebyaddressForbiddenException
@@ -494,7 +498,7 @@ class Client extends Runtime\Client\Client
      * @param BranchesFindzonebycoordinatesPostBodyItem[] $requestBody
      * @param string                                      $fetch       Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|ZoneByCoordinate[]
+     * @return ResponseInterface|ZoneByCoordinate[]
      *
      * @throws BranchesFindzonebycoordinatesBadRequestException
      * @throws BranchesFindzonebycoordinatesForbiddenException
@@ -511,7 +515,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BranchesNearestdepartmentsPostResponse200|ResponseInterface
+     * @return BranchesNearestdepartmentsPostResponse200|ResponseInterface
      *
      * @throws BranchesNearestdepartmentsBadRequestException
      * @throws BranchesNearestdepartmentsForbiddenException
@@ -531,7 +535,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|SuggestAddressResponse
+     * @return ResponseInterface|SuggestAddressResponse
      *
      * @throws BranchesSuggestaddressofintakeordeliveryBadRequestException
      * @throws BranchesSuggestaddressofintakeordeliveryForbiddenException
@@ -571,7 +575,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CalculatePriceResponse|ResponseInterface
+     * @return CalculatePriceResponse|ResponseInterface
      *
      * @throws CalculatorCalculatepriceBadRequestException
      * @throws CalculatorCalculatepriceForbiddenException
@@ -588,7 +592,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|DeliveryDateResult[]|ResponseInterface
+     * @return DeliveryDateResult[]|ResponseInterface
      *
      * @throws CalculatorCheckdeliverydateBadRequestException
      * @throws CalculatorCheckdeliverydateForbiddenException
@@ -603,7 +607,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargoContentItem[]|ResponseInterface
+     * @return CargoContentItem[]|ResponseInterface
      *
      * @throws CargocontentAllBadRequestException
      * @throws CargocontentAllForbiddenException
@@ -620,7 +624,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargoPickupCheckOrderedPickupType3CarResponse|ResponseInterface
+     * @return CargoPickupCheckOrderedPickupType3CarResponse|ResponseInterface
      *
      * @throws CargopickupCheckOrderedPickupType3CarBadRequestException
      * @throws CargopickupCheckOrderedPickupType3CarForbiddenException
@@ -635,7 +639,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface
+     * @return CargoPickupStatusError|CargoPickupStatusItem[]|ResponseInterface
      *
      * @throws CargopickupStatusBadRequestException
      * @throws CargopickupStatusForbiddenException
@@ -676,7 +680,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargoPickupSubmitResponse|ResponseInterface
+     * @return CargoPickupSubmitResponse|ResponseInterface
      *
      * @throws CargopickupSubmitBadRequestException
      * @throws CargopickupSubmitForbiddenException
@@ -716,7 +720,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargoPickupNetworkSubmitResponse|ResponseInterface
+     * @return CargoPickupNetworkSubmitResponse|ResponseInterface
      *
      * @throws CargopickupnetworkSubmitBadRequestException
      * @throws CargopickupnetworkSubmitForbiddenException
@@ -735,7 +739,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BasicStatusResponse|ResponseInterface
+     * @return BasicStatusResponse|ResponseInterface
      *
      * @throws CargosBasicstatusBadRequestException
      * @throws CargosBasicstatusForbiddenException
@@ -754,7 +758,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CancelAndReturnResponse|ResponseInterface
+     * @return CancelAndReturnResponse|ResponseInterface
      *
      * @throws CargosCancelandreturncargoBadRequestException
      * @throws CargosCancelandreturncargoForbiddenException
@@ -771,7 +775,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CurrentStatusResponse|ResponseInterface
+     * @return CurrentStatusResponse|ResponseInterface
      *
      * @throws CargosCurrentstatusBadRequestException
      * @throws CargosCurrentstatusForbiddenException
@@ -786,7 +790,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|DeliveryStatusItem[]|ResponseInterface
+     * @return DeliveryStatusItem[]|ResponseInterface
      *
      * @throws CargosDeliverystatusBadRequestException
      * @throws CargosDeliverystatusForbiddenException
@@ -803,7 +807,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargoDetailsResponse|ResponseInterface
+     * @return CargoDetailsResponse|ResponseInterface
      *
      * @throws CargosDetailsBadRequestException
      * @throws CargosDetailsForbiddenException
@@ -818,7 +822,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ForcedStorageItem[]|ResponseInterface
+     * @return ForcedStorageItem[]|ResponseInterface
      *
      * @throws CargosGetinfoforcedstorageBadRequestException
      * @throws CargosGetinfoforcedstorageForbiddenException
@@ -833,7 +837,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ListAllOrderResponse|ResponseInterface
+     * @return ListAllOrderResponse|ResponseInterface
      *
      * @throws CargosListallorderbyloginBadRequestException
      * @throws CargosListallorderbyloginForbiddenException
@@ -850,7 +854,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|RouteMapAddress[]
+     * @return ResponseInterface|RouteMapAddress[]
      *
      * @throws CargosRoutesanddriverinfoBadRequestException
      * @throws CargosRoutesanddriverinfoForbiddenException
@@ -871,7 +875,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargosStatusResponse|ResponseInterface
+     * @return CargosStatusResponse|ResponseInterface
      *
      * @throws CargosStatusBadRequestException
      * @throws CargosStatusForbiddenException
@@ -892,7 +896,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|StatusByBarcodeResponse
+     * @return ResponseInterface|StatusByBarcodeResponse
      *
      * @throws CargosStatusbypositionbarcodesBadRequestException
      * @throws CargosStatusbypositionbarcodesForbiddenException
@@ -909,7 +913,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|StatusHistoryItem[]
+     * @return ResponseInterface|StatusHistoryItem[]
      *
      * @throws CargosStatusfullhistoryBadRequestException
      * @throws CargosStatusfullhistoryForbiddenException
@@ -927,7 +931,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|StatusTableItem[]
+     * @return ResponseInterface|StatusTableItem[]
      *
      * @throws CargosStatustablesBadRequestException
      * @throws CargosStatustablesForbiddenException
@@ -969,7 +973,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface
+     * @return CargosdocumentsGetcontentErrorResponse|CargosdocumentsGetcontentSuccessResponse|ResponseInterface
      *
      * @throws CargosdocumentsGetcontentBadRequestException
      * @throws CargosdocumentsGetcontentForbiddenException
@@ -992,7 +996,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CargosdocumentsOrderResponse|ResponseInterface
+     * @return CargosdocumentsOrderResponse|ResponseInterface
      *
      * @throws CargosdocumentsOrderBadRequestException
      * @throws CargosdocumentsOrderForbiddenException
@@ -1007,7 +1011,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ClientPackingKindItem[]|ResponseInterface
+     * @return ClientPackingKindItem[]|ResponseInterface
      *
      * @throws ClientpackingkindAllBadRequestException
      * @throws ClientpackingkindAllForbiddenException
@@ -1024,7 +1028,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ConfirmedAccessToCounterparty[]|ResponseInterface
+     * @return ConfirmedAccessToCounterparty[]|ResponseInterface
      *
      * @throws CounterpartsConfirmedaccesstocounterpartiesBadRequestException
      * @throws CounterpartsConfirmedaccesstocounterpartiesForbiddenException
@@ -1047,7 +1051,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ConnectedDiscountsServicesAgreementsResponse|ResponseInterface
+     * @return ConnectedDiscountsServicesAgreementsResponse|ResponseInterface
      *
      * @throws CounterpartsConnecteddiscountsservicesagreementsBadRequestException
      * @throws CounterpartsConnecteddiscountsservicesagreementsForbiddenException
@@ -1062,7 +1066,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|LegalFormType[]|ResponseInterface
+     * @return LegalFormType[]|ResponseInterface
      *
      * @throws CounterpartsLegalformtypesBadRequestException
      * @throws CounterpartsLegalformtypesForbiddenException
@@ -1077,7 +1081,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|CurrencyItem[]|ResponseInterface
+     * @return CurrencyItem[]|ResponseInterface
      *
      * @throws CurrencyAllBadRequestException
      * @throws CurrencyAllForbiddenException
@@ -1092,7 +1096,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|NetshopReceiver[]|ResponseInterface
+     * @return NetshopReceiver[]|ResponseInterface
      *
      * @throws NetshopListreceiveraddressesBadRequestException
      * @throws NetshopListreceiveraddressesForbiddenException
@@ -1111,7 +1115,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|NetshopSubmitResponse|ResponseInterface
+     * @return NetshopSubmitResponse|ResponseInterface
      *
      * @throws NetshopSubmitBadRequestException
      * @throws NetshopSubmitForbiddenException
@@ -1126,7 +1130,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|NotificationCargoSubscribeResponse|ResponseInterface
+     * @return NotificationCargoSubscribeResponse|ResponseInterface
      *
      * @throws NotificationCargosubscribeBadRequestException
      * @throws NotificationCargosubscribeForbiddenException
@@ -1146,7 +1150,7 @@ class Client extends Runtime\Client\Client
      * @param string[] $requestBody
      * @param string   $fetch       Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|OrderCancellationResult[]|ResponseInterface
+     * @return OrderCancellationResult[]|ResponseInterface
      *
      * @throws OrderCancellationBadRequestException
      * @throws OrderCancellationForbiddenException
@@ -1179,7 +1183,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|BarcodeType[]|ResponseInterface
+     * @return BarcodeType[]|ResponseInterface
      *
      * @throws PreregistrationAvailabletypebarcodeBadRequestException
      * @throws PreregistrationAvailabletypebarcodeForbiddenException
@@ -1222,7 +1226,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|PreregistrationSubmitResponse|ResponseInterface
+     * @return PreregistrationSubmitResponse|ResponseInterface
      *
      * @throws PreregistrationSubmitBadRequestException
      * @throws PreregistrationSubmitForbiddenException
@@ -1240,7 +1244,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ReceiversSuccessResponse|ResponseInterface
+     * @return ReceiversSuccessResponse|ResponseInterface
      *
      * @throws ReceiversAddBadRequestException
      * @throws ReceiversAddForbiddenException
@@ -1255,7 +1259,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ReceiversSuccessResponse|ResponseInterface
+     * @return ReceiversSuccessResponse|ResponseInterface
      *
      * @throws ReceiversDeleteBadRequestException
      * @throws ReceiversDeleteForbiddenException
@@ -1270,7 +1274,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ReceiversListResponse|ResponseInterface
+     * @return ReceiversListResponse|ResponseInterface
      *
      * @throws ReceiversListBadRequestException
      * @throws ReceiversListForbiddenException
@@ -1291,7 +1295,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ReceiversSuccessResponse|ResponseInterface
+     * @return ReceiversSuccessResponse|ResponseInterface
      *
      * @throws ReceiversUpdateBadRequestException
      * @throws ReceiversUpdateForbiddenException
@@ -1306,7 +1310,7 @@ class Client extends Runtime\Client\Client
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface|TypesOfDeliveryItem[]
+     * @return ResponseInterface|TypesOfDeliveryItem[]
      *
      * @throws TypesofdeliveryAllBadRequestException
      * @throws TypesofdeliveryAllForbiddenException

@@ -59,7 +59,7 @@ class CargosStatusbypositionbarcodes extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|StatusByBarcodeResponse
+     * @return StatusByBarcodeResponse
      *
      * @throws CargosStatusbypositionbarcodesBadRequestException
      * @throws CargosStatusbypositionbarcodesForbiddenException

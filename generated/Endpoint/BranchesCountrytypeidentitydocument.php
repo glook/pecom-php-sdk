@@ -55,7 +55,7 @@ class BranchesCountrytypeidentitydocument extends BaseEndpoint implements Endpoi
     }
 
     /**
-     * @return null|BranchesCountrytypeidentitydocumentPostResponse200
+     * @return BranchesCountrytypeidentitydocumentPostResponse200
      *
      * @throws BranchesCountrytypeidentitydocumentBadRequestException
      * @throws BranchesCountrytypeidentitydocumentForbiddenException

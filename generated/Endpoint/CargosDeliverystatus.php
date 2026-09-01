@@ -52,7 +52,7 @@ class CargosDeliverystatus extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|DeliveryStatusItem[]
+     * @return DeliveryStatusItem[]
      *
      * @throws CargosDeliverystatusBadRequestException
      * @throws CargosDeliverystatusForbiddenException

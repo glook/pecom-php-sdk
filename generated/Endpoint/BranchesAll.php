@@ -62,7 +62,7 @@ class BranchesAll extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|BranchesAllPostResponse200
+     * @return BranchesAllPostResponse200
      *
      * @throws BranchesAllBadRequestException
      * @throws BranchesAllForbiddenException

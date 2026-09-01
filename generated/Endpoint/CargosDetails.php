@@ -55,7 +55,7 @@ class CargosDetails extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CargoDetailsResponse
+     * @return CargoDetailsResponse
      *
      * @throws CargosDetailsBadRequestException
      * @throws CargosDetailsForbiddenException

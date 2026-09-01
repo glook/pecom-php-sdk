@@ -55,7 +55,7 @@ class CounterpartsConfirmedaccesstocounterparties extends BaseEndpoint implement
     }
 
     /**
-     * @return null|ConfirmedAccessToCounterparty[]
+     * @return ConfirmedAccessToCounterparty[]
      *
      * @throws CounterpartsConfirmedaccesstocounterpartiesBadRequestException
      * @throws CounterpartsConfirmedaccesstocounterpartiesForbiddenException

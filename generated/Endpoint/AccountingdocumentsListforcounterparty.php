@@ -56,7 +56,7 @@ class AccountingdocumentsListforcounterparty extends BaseEndpoint implements End
     }
 
     /**
-     * @return null|AccountingDocumentListResponse
+     * @return AccountingDocumentListResponse
      *
      * @throws AccountingdocumentsListforcounterpartyBadRequestException
      * @throws AccountingdocumentsListforcounterpartyForbiddenException

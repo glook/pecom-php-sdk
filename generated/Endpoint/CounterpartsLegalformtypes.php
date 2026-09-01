@@ -42,7 +42,7 @@ class CounterpartsLegalformtypes extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|LegalFormType[]
+     * @return LegalFormType[]
      *
      * @throws CounterpartsLegalformtypesBadRequestException
      * @throws CounterpartsLegalformtypesForbiddenException

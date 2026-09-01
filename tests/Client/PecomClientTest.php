@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace glook\PecomSdk\Tests\Client;
 
 use glook\PecomSdk\Client\PecomClient;
+use glook\PecomSdk\Client\PecomClientFactory;
 use glook\PecomSdk\Generated\Client as GeneratedClient;
 use glook\PecomSdk\Generated\Model\BranchesAddressRequest;
 use glook\PecomSdk\Generated\Model\BranchesAllPostBody;
@@ -19,7 +20,9 @@ use glook\PecomSdk\Generated\Model\OrderPrintRequest;
 use glook\PecomSdk\Generated\Model\PreregistrationSubmitRequest;
 use glook\PecomSdk\Generated\Model\PreregistrationSubmitResponse;
 use glook\PecomSdk\Generated\Model\TypesOfDeliveryItem;
+use Nyholm\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
+use Psr\Http\Client\ClientInterface;
 
 class PecomClientTest extends TestCase
 {
@@ -28,6 +31,18 @@ class PecomClientTest extends TestCase
         $generated = $this->createMock(GeneratedClient::class);
 
         self::assertSame($generated, (new PecomClient($generated))->raw());
+    }
+
+    public function testFactoryCreatesFacade(): void
+    {
+        $client = PecomClientFactory::create(
+            'login',
+            'password',
+            $this->createMock(ClientInterface::class),
+            new Uri('https://example.com/api')
+        );
+
+        self::assertInstanceOf(GeneratedClient::class, $client->raw());
     }
 
     /**

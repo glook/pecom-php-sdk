@@ -42,7 +42,7 @@ class NetshopListreceiveraddresses extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|NetshopReceiver[]
+     * @return NetshopReceiver[]
      *
      * @throws NetshopListreceiveraddressesBadRequestException
      * @throws NetshopListreceiveraddressesForbiddenException

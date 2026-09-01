@@ -42,7 +42,7 @@ class ClientpackingkindAll extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ClientPackingKindItem[]
+     * @return ClientPackingKindItem[]
      *
      * @throws ClientpackingkindAllBadRequestException
      * @throws ClientpackingkindAllForbiddenException

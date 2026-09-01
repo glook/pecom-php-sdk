@@ -1,0 +1,97 @@
+name: Release To Packagist
+
+run-name: Publishing Package Version ${{ inputs.version }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version in x.y.z format
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Publishing Package Version ${{ inputs.version }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate release input
+        env:
+          RELEASE_REF: ${{ github.ref }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          TAGS_TOKEN: ${{ secrets.TAGS_TOKEN }}
+        run: |
+          if [[ "$RELEASE_REF" != "refs/heads/master" ]]; then
+            echo "Releases are allowed only from master." >&2
+            exit 1
+          fi
+
+          if [[ ! "$RELEASE_VERSION" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo "Version must use x.y.z format without a v prefix." >&2
+            exit 1
+          fi
+
+          if [[ -z "$TAGS_TOKEN" ]]; then
+            echo "Repository secret TAGS_TOKEN is required." >&2
+            exit 1
+          fi
+
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Setup PHP 7.4
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: json, mbstring
+          coverage: none
+          tools: composer:v2
+
+      - name: Validate Composer package
+        run: composer validate --strict
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Run tests
+        run: vendor/bin/phpunit
+
+      - name: Check code style
+        run: vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ secrets.TAGS_TOKEN }}
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          if remote_sha=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_VERSION" --jq '.object.sha' 2>/dev/null); then
+            if [[ "$remote_sha" != "$GITHUB_SHA" ]]; then
+              echo "Tag $RELEASE_VERSION already points to another commit." >&2
+              exit 1
+            fi
+
+            if gh release view "$RELEASE_VERSION" >/dev/null 2>&1; then
+              echo "Release $RELEASE_VERSION already exists." >&2
+              exit 1
+            fi
+          else
+            gh api --method POST "repos/$GITHUB_REPOSITORY/git/refs" \
+              -f ref="refs/tags/$RELEASE_VERSION" \
+              -f sha="$GITHUB_SHA" >/dev/null
+          fi
+
+          gh release create "$RELEASE_VERSION" \
+            --verify-tag \
+            --target "$GITHUB_SHA" \
+            --title "Release Version $RELEASE_VERSION" \
+            --generate-notes \
+            --latest

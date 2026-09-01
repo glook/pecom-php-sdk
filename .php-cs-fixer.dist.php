@@ -10,6 +10,7 @@ return (new Config())
     ->setRules([
         '@auto' => true,
         '@PhpCsFixer' => true,
+        'phpdoc_summary' => false,
         'return_assignment' => ['skip_named_var_tags' => true]
     ])
     // 💡 by default, Fixer looks for `*.php` files excluding `./vendor/` - here, you can groom this config

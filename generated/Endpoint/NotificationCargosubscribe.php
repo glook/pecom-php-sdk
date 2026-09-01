@@ -52,7 +52,7 @@ class NotificationCargosubscribe extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|NotificationCargoSubscribeResponse
+     * @return NotificationCargoSubscribeResponse
      *
      * @throws NotificationCargosubscribeBadRequestException
      * @throws NotificationCargosubscribeForbiddenException

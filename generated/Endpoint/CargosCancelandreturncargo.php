@@ -57,7 +57,7 @@ class CargosCancelandreturncargo extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CancelAndReturnResponse
+     * @return CancelAndReturnResponse
      *
      * @throws CargosCancelandreturncargoBadRequestException
      * @throws CargosCancelandreturncargoForbiddenException

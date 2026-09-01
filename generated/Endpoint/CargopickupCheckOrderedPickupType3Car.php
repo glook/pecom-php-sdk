@@ -55,7 +55,7 @@ class CargopickupCheckOrderedPickupType3Car extends BaseEndpoint implements Endp
     }
 
     /**
-     * @return null|CargoPickupCheckOrderedPickupType3CarResponse
+     * @return CargoPickupCheckOrderedPickupType3CarResponse
      *
      * @throws CargopickupCheckOrderedPickupType3CarBadRequestException
      * @throws CargopickupCheckOrderedPickupType3CarForbiddenException

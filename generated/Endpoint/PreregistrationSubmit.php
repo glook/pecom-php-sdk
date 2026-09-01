@@ -81,7 +81,7 @@ class PreregistrationSubmit extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|PreregistrationSubmitResponse
+     * @return PreregistrationSubmitResponse
      *
      * @throws PreregistrationSubmitBadRequestException
      * @throws PreregistrationSubmitForbiddenException

@@ -55,7 +55,7 @@ class BranchesFindzonebyaddress extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|BranchesFindzonebyaddressPostResponse200
+     * @return BranchesFindzonebyaddressPostResponse200
      *
      * @throws BranchesFindzonebyaddressBadRequestException
      * @throws BranchesFindzonebyaddressForbiddenException

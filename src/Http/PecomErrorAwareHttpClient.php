@@ -42,7 +42,9 @@ class PecomErrorAwareHttpClient implements ClientInterface
 
         $errTitle = (isset($error['title']) && is_string($error['title'])) ? $error['title'] : null;
         $errMessage = (isset($error['message']) && is_string($error['message'])) ? $error['message'] : null;
-        $errStatus = (isset($error['status']) && is_int($error['status'])) ? $error['status'] : $status;
+        $errStatus = (isset($error['status']) && is_int($error['status']) && 0 !== $error['status'])
+            ? $error['status']
+            : $status;
         $fields = (isset($error['fields']) && is_array($error['fields'])) ? $error['fields'] : [];
 
         $hasInlineError = null !== $errTitle || null !== $errMessage || !empty($fields);

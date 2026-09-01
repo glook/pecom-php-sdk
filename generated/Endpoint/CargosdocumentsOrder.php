@@ -61,7 +61,7 @@ class CargosdocumentsOrder extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CargosdocumentsOrderResponse
+     * @return CargosdocumentsOrderResponse
      *
      * @throws CargosdocumentsOrderBadRequestException
      * @throws CargosdocumentsOrderForbiddenException

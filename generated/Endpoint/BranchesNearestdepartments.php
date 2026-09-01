@@ -55,7 +55,7 @@ class BranchesNearestdepartments extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|BranchesNearestdepartmentsPostResponse200
+     * @return BranchesNearestdepartmentsPostResponse200
      *
      * @throws BranchesNearestdepartmentsBadRequestException
      * @throws BranchesNearestdepartmentsForbiddenException
