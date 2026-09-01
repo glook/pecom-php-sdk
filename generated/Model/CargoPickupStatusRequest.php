@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupStatusRequest
 {
     /**
-     * Список кодов грузов.
+     * Список кодов грузов
      *
      * @var string[]
      */
     protected $cargoCodes;
 
     /**
-     * Список кодов грузов.
+     * Список кодов грузов
      *
      * @return string[]
      */
@@ -22,7 +22,7 @@ class CargoPickupStatusRequest
     }
 
     /**
-     * Список кодов грузов.
+     * Список кодов грузов
      *
      * @param string[] $cargoCodes
      */

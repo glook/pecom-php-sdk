@@ -65,21 +65,30 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
         } elseif (\array_key_exists('accompanyingDocumentsNumberTTN', $data) && null === $data['accompanyingDocumentsNumberTTN']) {
             $object->setAccompanyingDocumentsNumberTTN(null);
         }
-        if (\array_key_exists('cargoPlaceList', $data) && null !== $data['cargoPlaceList']) {
+        if (\array_key_exists('countryCargocode', $data) && null !== $data['countryCargocode']) {
             $values = [];
-            foreach ($data['cargoPlaceList'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'glook\PecomSdk\Generated\Model\PreregistrationCargoPlace', 'json', $context);
+            foreach ($data['countryCargocode'] as $value) {
+                $values[] = $value;
             }
-            $object->setCargoPlaceList($values);
+            $object->setCountryCargocode($values);
+        } elseif (\array_key_exists('countryCargocode', $data) && null === $data['countryCargocode']) {
+            $object->setCountryCargocode(null);
+        }
+        if (\array_key_exists('cargoPlaceList', $data) && null !== $data['cargoPlaceList']) {
+            $values_1 = [];
+            foreach ($data['cargoPlaceList'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'glook\PecomSdk\Generated\Model\PreregistrationCargoPlace', 'json', $context);
+            }
+            $object->setCargoPlaceList($values_1);
         } elseif (\array_key_exists('cargoPlaceList', $data) && null === $data['cargoPlaceList']) {
             $object->setCargoPlaceList(null);
         }
         if (\array_key_exists('clientPositionsBarcode', $data) && null !== $data['clientPositionsBarcode']) {
-            $values_1 = [];
-            foreach ($data['clientPositionsBarcode'] as $value_1) {
-                $values_1[] = $value_1;
+            $values_2 = [];
+            foreach ($data['clientPositionsBarcode'] as $value_2) {
+                $values_2[] = $value_2;
             }
-            $object->setClientPositionsBarcode($values_1);
+            $object->setClientPositionsBarcode($values_2);
         } elseif (\array_key_exists('clientPositionsBarcode', $data) && null === $data['clientPositionsBarcode']) {
             $object->setClientPositionsBarcode(null);
         }
@@ -95,6 +104,11 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
             $object->setHeight($data['height']);
         } elseif (\array_key_exists('height', $data) && null === $data['height']) {
             $object->setHeight(null);
+        }
+        if (\array_key_exists('isRegisteredGoogs', $data) && null !== $data['isRegisteredGoogs']) {
+            $object->setIsRegisteredGoogs($data['isRegisteredGoogs']);
+        } elseif (\array_key_exists('isRegisteredGoogs', $data) && null === $data['isRegisteredGoogs']) {
+            $object->setIsRegisteredGoogs(null);
         }
         if (\array_key_exists('length', $data) && null !== $data['length']) {
             $object->setLength($data['length']);
@@ -169,19 +183,26 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getAccompanyingDocumentsNumberTTN()) {
             $data['accompanyingDocumentsNumberTTN'] = $object->getAccompanyingDocumentsNumberTTN();
         }
-        if (null !== $object->getCargoPlaceList()) {
+        if (null !== $object->getCountryCargocode()) {
             $values = [];
-            foreach ($object->getCargoPlaceList() as $value) {
-                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            foreach ($object->getCountryCargocode() as $value) {
+                $values[] = $value;
             }
-            $data['cargoPlaceList'] = $values;
+            $data['countryCargocode'] = $values;
+        }
+        if (null !== $object->getCargoPlaceList()) {
+            $values_1 = [];
+            foreach ($object->getCargoPlaceList() as $value_1) {
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+            }
+            $data['cargoPlaceList'] = $values_1;
         }
         if (null !== $object->getClientPositionsBarcode()) {
-            $values_1 = [];
-            foreach ($object->getClientPositionsBarcode() as $value_1) {
-                $values_1[] = $value_1;
+            $values_2 = [];
+            foreach ($object->getClientPositionsBarcode() as $value_2) {
+                $values_2[] = $value_2;
             }
-            $data['clientPositionsBarcode'] = $values_1;
+            $data['clientPositionsBarcode'] = $values_2;
         }
         if (null !== $object->getCustomerCorrelation()) {
             $data['customerCorrelation'] = $object->getCustomerCorrelation();
@@ -189,6 +210,9 @@ class PreregistrationCargoCommonNormalizer implements DenormalizerInterface, Nor
         $data['description'] = $object->getDescription();
         if (null !== $object->getHeight()) {
             $data['height'] = $object->getHeight();
+        }
+        if (null !== $object->getIsRegisteredGoogs()) {
+            $data['isRegisteredGoogs'] = $object->getIsRegisteredGoogs();
         }
         if (null !== $object->getLength()) {
             $data['length'] = $object->getLength();

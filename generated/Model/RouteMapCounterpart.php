@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class RouteMapCounterpart
 {
     /**
-     * Тип контрагента (1 - юридическое лицо, 2 - ИП, 3 - физическое лицо).
+     * Тип контрагента (1 - юридическое лицо, 2 - ИП, 3 - физическое лицо)
      *
      * @var null|float
      */
@@ -19,21 +19,21 @@ class RouteMapCounterpart
     protected $legalPerson;
 
     /**
-     * Наименование юр.лица/ИП или имя физ.лица.
+     * Наименование юр.лица/ИП или имя физ.лица
      *
      * @var null|string
      */
     protected $name;
 
     /**
-     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится.
+     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится
      *
      * @var null|RouteMapCounterpartPrivatePerson
      */
     protected $privatePerson;
 
     /**
-     * Тип контрагента (1 - юридическое лицо, 2 - ИП, 3 - физическое лицо).
+     * Тип контрагента (1 - юридическое лицо, 2 - ИП, 3 - физическое лицо)
      */
     public function getForm(): ?float
     {
@@ -41,7 +41,7 @@ class RouteMapCounterpart
     }
 
     /**
-     * Тип контрагента (1 - юридическое лицо, 2 - ИП, 3 - физическое лицо).
+     * Тип контрагента (1 - юридическое лицо, 2 - ИП, 3 - физическое лицо)
      */
     public function setForm(?float $form): self
     {
@@ -69,7 +69,7 @@ class RouteMapCounterpart
     }
 
     /**
-     * Наименование юр.лица/ИП или имя физ.лица.
+     * Наименование юр.лица/ИП или имя физ.лица
      */
     public function getName(): ?string
     {
@@ -77,7 +77,7 @@ class RouteMapCounterpart
     }
 
     /**
-     * Наименование юр.лица/ИП или имя физ.лица.
+     * Наименование юр.лица/ИП или имя физ.лица
      */
     public function setName(?string $name): self
     {
@@ -87,7 +87,7 @@ class RouteMapCounterpart
     }
 
     /**
-     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится.
+     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится
      */
     public function getPrivatePerson(): ?RouteMapCounterpartPrivatePerson
     {
@@ -95,7 +95,7 @@ class RouteMapCounterpart
     }
 
     /**
-     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится.
+     * блок выводится, если контрагент - физичекое лицо. В противном случае блок не выводится
      */
     public function setPrivatePerson(?RouteMapCounterpartPrivatePerson $privatePerson): self
     {

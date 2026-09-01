@@ -5,49 +5,49 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingdocumentsListforcounterpartyPostBody
 {
     /**
-     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`.
+     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`
      *
      * @var string
      */
     protected $branchId;
 
     /**
-     * Дата и время начала запрашиваемого периода.
+     * Дата и время начала запрашиваемого периода
      *
      * @var string
      */
     protected $dateBegin;
 
     /**
-     * Дата и время конца запрашиваемого периода.
+     * Дата и время конца запрашиваемого периода
      *
      * @var string
      */
     protected $dateEnd;
 
     /**
-     * ИНН плательщика.
+     * ИНН плательщика
      *
      * @var string
      */
     protected $iNN;
 
     /**
-     * КПП плательщика.
+     * КПП плательщика
      *
      * @var null|string
      */
     protected $kPP;
 
     /**
-     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
+     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
      *
      * @var string
      */
     protected $token;
 
     /**
-     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`.
+     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`
      */
     public function getBranchId(): string
     {
@@ -55,7 +55,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`.
+     * Идентификатор филиала, по которому запрашиваются документы. Можно получить в ответе метода [`/branches/all/`](#tag/branches/POST/branches/all/) в поле `branches[].id`
      */
     public function setBranchId(string $branchId): self
     {
@@ -65,7 +65,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Дата и время начала запрашиваемого периода.
+     * Дата и время начала запрашиваемого периода
      */
     public function getDateBegin(): string
     {
@@ -73,7 +73,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Дата и время начала запрашиваемого периода.
+     * Дата и время начала запрашиваемого периода
      */
     public function setDateBegin(string $dateBegin): self
     {
@@ -83,7 +83,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Дата и время конца запрашиваемого периода.
+     * Дата и время конца запрашиваемого периода
      */
     public function getDateEnd(): string
     {
@@ -91,7 +91,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Дата и время конца запрашиваемого периода.
+     * Дата и время конца запрашиваемого периода
      */
     public function setDateEnd(string $dateEnd): self
     {
@@ -101,7 +101,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * ИНН плательщика.
+     * ИНН плательщика
      */
     public function getINN(): string
     {
@@ -109,7 +109,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * ИНН плательщика.
+     * ИНН плательщика
      */
     public function setINN(string $iNN): self
     {
@@ -119,7 +119,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * КПП плательщика.
+     * КПП плательщика
      */
     public function getKPP(): ?string
     {
@@ -127,7 +127,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * КПП плательщика.
+     * КПП плательщика
      */
     public function setKPP(?string $kPP): self
     {
@@ -137,7 +137,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
+     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
      */
     public function getToken(): string
     {
@@ -145,7 +145,7 @@ class AccountingdocumentsListforcounterpartyPostBody
     }
 
     /**
-     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
+     * Токен для авторизации. Получается методом [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
      */
     public function setToken(string $token): self
     {

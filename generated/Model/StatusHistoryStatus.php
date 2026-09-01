@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class StatusHistoryStatus
 {
     /**
-     * Дата и время статуса.
+     * Дата и время статуса
      *
      * @var null|string
      */
     protected $date;
 
     /**
-     * id статуса груза.
+     * id статуса груза
      *
      * @var null|int
      */
@@ -33,14 +33,14 @@ class StatusHistoryStatus
     protected $isFinal;
 
     /**
-     * Статус груза.
+     * Статус груза
      *
      * @var null|string
      */
     protected $name;
 
     /**
-     * Дата и время статуса.
+     * Дата и время статуса
      */
     public function getDate(): ?string
     {
@@ -48,7 +48,7 @@ class StatusHistoryStatus
     }
 
     /**
-     * Дата и время статуса.
+     * Дата и время статуса
      */
     public function setDate(?string $date): self
     {
@@ -58,7 +58,7 @@ class StatusHistoryStatus
     }
 
     /**
-     * id статуса груза.
+     * id статуса груза
      */
     public function getId(): ?int
     {
@@ -66,7 +66,7 @@ class StatusHistoryStatus
     }
 
     /**
-     * id статуса груза.
+     * id статуса груза
      */
     public function setId(?int $id): self
     {
@@ -112,7 +112,7 @@ class StatusHistoryStatus
     }
 
     /**
-     * Статус груза.
+     * Статус груза
      */
     public function getName(): ?string
     {
@@ -120,7 +120,7 @@ class StatusHistoryStatus
     }
 
     /**
-     * Статус груза.
+     * Статус груза
      */
     public function setName(?string $name): self
     {

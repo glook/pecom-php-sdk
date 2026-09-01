@@ -19,14 +19,14 @@ class CargopickupCargoPlace
     protected $length;
 
     /**
-     * Количество мест одинаковых габаритов.
+     * Количество мест одинаковых габаритов
      *
      * @var int
      */
     protected $quantity;
 
     /**
-     * Вес одного места, кг.
+     * Вес одного места, кг
      *
      * @var float
      */
@@ -76,7 +76,7 @@ class CargopickupCargoPlace
     }
 
     /**
-     * Количество мест одинаковых габаритов.
+     * Количество мест одинаковых габаритов
      */
     public function getQuantity(): int
     {
@@ -84,7 +84,7 @@ class CargopickupCargoPlace
     }
 
     /**
-     * Количество мест одинаковых габаритов.
+     * Количество мест одинаковых габаритов
      */
     public function setQuantity(int $quantity): self
     {
@@ -94,7 +94,7 @@ class CargopickupCargoPlace
     }
 
     /**
-     * Вес одного места, кг.
+     * Вес одного места, кг
      */
     public function getWeight(): float
     {
@@ -102,7 +102,7 @@ class CargopickupCargoPlace
     }
 
     /**
-     * Вес одного места, кг.
+     * Вес одного места, кг
      */
     public function setWeight(float $weight): self
     {

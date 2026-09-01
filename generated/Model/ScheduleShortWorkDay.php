@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class ScheduleShortWorkDay
 {
     /**
-     * Обеденный перерыв.
+     * Обеденный перерыв
      *
      * @var null|string
      */
     protected $breakTime;
 
     /**
-     * Дата сокращённого дня.
+     * Дата сокращённого дня
      *
      * @var string
      */
     protected $date;
 
     /**
-     * Время работы сокращённого дня.
+     * Время работы сокращённого дня
      *
      * @var WorkTime
      */
     protected $workTime;
 
     /**
-     * Обеденный перерыв.
+     * Обеденный перерыв
      */
     public function getBreakTime(): ?string
     {
@@ -34,7 +34,7 @@ class ScheduleShortWorkDay
     }
 
     /**
-     * Обеденный перерыв.
+     * Обеденный перерыв
      */
     public function setBreakTime(?string $breakTime): self
     {
@@ -44,7 +44,7 @@ class ScheduleShortWorkDay
     }
 
     /**
-     * Дата сокращённого дня.
+     * Дата сокращённого дня
      */
     public function getDate(): string
     {
@@ -52,7 +52,7 @@ class ScheduleShortWorkDay
     }
 
     /**
-     * Дата сокращённого дня.
+     * Дата сокращённого дня
      */
     public function setDate(string $date): self
     {
@@ -62,7 +62,7 @@ class ScheduleShortWorkDay
     }
 
     /**
-     * Время работы сокращённого дня.
+     * Время работы сокращённого дня
      */
     public function getWorkTime(): WorkTime
     {
@@ -70,7 +70,7 @@ class ScheduleShortWorkDay
     }
 
     /**
-     * Время работы сокращённого дня.
+     * Время работы сокращённого дня
      */
     public function setWorkTime(WorkTime $workTime): self
     {

@@ -15,14 +15,14 @@ class CargoPickupSubmitResponse
     protected $customerCorrelation;
 
     /**
-     * Номер заявки.
+     * Номер заявки
      *
      * @var int
      */
     protected $documentId;
 
     /**
-     * Важные оповещения, которые могут повлиять на сроки/стоимость.
+     * Важные оповещения, которые могут повлиять на сроки/стоимость
      *
      * @var null|string[]
      */
@@ -64,7 +64,7 @@ class CargoPickupSubmitResponse
     }
 
     /**
-     * Номер заявки.
+     * Номер заявки
      */
     public function getDocumentId(): int
     {
@@ -72,7 +72,7 @@ class CargoPickupSubmitResponse
     }
 
     /**
-     * Номер заявки.
+     * Номер заявки
      */
     public function setDocumentId(int $documentId): self
     {
@@ -82,7 +82,7 @@ class CargoPickupSubmitResponse
     }
 
     /**
-     * Важные оповещения, которые могут повлиять на сроки/стоимость.
+     * Важные оповещения, которые могут повлиять на сроки/стоимость
      *
      * @return null|string[]
      */
@@ -92,7 +92,7 @@ class CargoPickupSubmitResponse
     }
 
     /**
-     * Важные оповещения, которые могут повлиять на сроки/стоимость.
+     * Важные оповещения, которые могут повлиять на сроки/стоимость
      *
      * @param null|string[] $notifications
      */

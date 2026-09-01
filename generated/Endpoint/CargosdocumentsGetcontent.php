@@ -25,7 +25,7 @@ class CargosdocumentsGetcontent extends BaseEndpoint implements Endpoint
      * - Для получения "Счета на оплату" в формате `"xml"`, необходимо передать уточняющий параметр `docFormat` в запросе.
      * Данные счета вернутся в формате CommerseML редакции 2.
      * - Счета на оплату возвращаются в `"zip"` архиве (в архиве может быть несколько счетов по грузу)
-     * - [XSD схема Commerce ML 4.02](https://kabinet.pecom.ru/UserData/Api/CML402.zip).
+     * - [XSD схема Commerce ML 4.02](https://kabinet.pecom.ru/UserData/Api/CML402.zip)
      */
     public function __construct(CargosdocumentsGetcontentRequest $requestBody)
     {

@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationSubmitResponseSender
 {
     /**
-     * Адрес склада отправления.
+     * Адрес склада отправления
      *
      * @var null|string
      */
@@ -17,14 +17,14 @@ class PreregistrationSubmitResponseSender
     protected $coordinates;
 
     /**
-     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя.
+     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя
      *
      * @var null|string
      */
     protected $warehouseID;
 
     /**
-     * Адрес склада отправления.
+     * Адрес склада отправления
      */
     public function getAddressNormal(): ?string
     {
@@ -32,7 +32,7 @@ class PreregistrationSubmitResponseSender
     }
 
     /**
-     * Адрес склада отправления.
+     * Адрес склада отправления
      */
     public function setAddressNormal(?string $addressNormal): self
     {
@@ -54,7 +54,7 @@ class PreregistrationSubmitResponseSender
     }
 
     /**
-     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя.
+     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя
      */
     public function getWarehouseID(): ?string
     {
@@ -62,7 +62,7 @@ class PreregistrationSubmitResponseSender
     }
 
     /**
-     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя.
+     * Идентификатор склада отправления. Значение Null, если заказана услуга забора груза от отправителя
      */
     public function setWarehouseID(?string $warehouseID): self
     {

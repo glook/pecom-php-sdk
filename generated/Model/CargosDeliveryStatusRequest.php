@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosDeliveryStatusRequest
 {
     /**
-     * Индексы грузов.
+     * Индексы грузов
      *
      * @var string[]
      */
     protected $cargoCodes;
 
     /**
-     * Индексы грузов.
+     * Индексы грузов
      *
      * @return string[]
      */
@@ -22,7 +22,7 @@ class CargosDeliveryStatusRequest
     }
 
     /**
-     * Индексы грузов.
+     * Индексы грузов
      *
      * @param string[] $cargoCodes
      */

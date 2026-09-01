@@ -6,7 +6,7 @@ class BranchesCountrytypeidentitydocumentPostBody
 {
     /**
      * Код страны по общероссийскому классификатору.
-     * Можно получить методом [`/branches/country/`](#tag/branches/POST/branches/country/).
+     * Можно получить методом [`/branches/country/`](#tag/branches/POST/branches/country/)
      *
      * @var string
      */
@@ -14,7 +14,7 @@ class BranchesCountrytypeidentitydocumentPostBody
 
     /**
      * Код страны по общероссийскому классификатору.
-     * Можно получить методом [`/branches/country/`](#tag/branches/POST/branches/country/).
+     * Можно получить методом [`/branches/country/`](#tag/branches/POST/branches/country/)
      */
     public function getCodeByClassifier(): string
     {
@@ -23,7 +23,7 @@ class BranchesCountrytypeidentitydocumentPostBody
 
     /**
      * Код страны по общероссийскому классификатору.
-     * Можно получить методом [`/branches/country/`](#tag/branches/POST/branches/country/).
+     * Можно получить методом [`/branches/country/`](#tag/branches/POST/branches/country/)
      */
     public function setCodeByClassifier(string $codeByClassifier): self
     {

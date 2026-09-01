@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargopickupnetworkServicePayer
 {
     /**
-     * Плательщик.
+     * Плательщик
      *
      * @var null|CargopickupnetworkPayer
      */
     protected $payer;
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function getPayer(): ?CargopickupnetworkPayer
     {
@@ -20,7 +20,7 @@ class CargopickupnetworkServicePayer
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function setPayer(?CargopickupnetworkPayer $payer): self
     {

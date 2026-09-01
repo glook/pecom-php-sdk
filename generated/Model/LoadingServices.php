@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class LoadingServices
 {
     /**
-     * Перенести груз (в метрах).
+     * Перенести груз (в метрах)
      *
      * @var null|float
      */
     protected $carryingDistance;
 
     /**
-     * Поднять/спустить на этаж.
+     * Поднять/спустить на этаж
      *
      * @var null|int
      */
     protected $floor;
 
     /**
-     * Подъем на лифте.
+     * Подъем на лифте
      *
      * @var null|bool
      */
     protected $isElevator;
 
     /**
-     * Расчитывать ПРР.
+     * Расчитывать ПРР
      *
      * @var null|bool
      */
     protected $isLoading;
 
     /**
-     * Перенести груз (в метрах).
+     * Перенести груз (в метрах)
      */
     public function getCarryingDistance(): ?float
     {
@@ -41,7 +41,7 @@ class LoadingServices
     }
 
     /**
-     * Перенести груз (в метрах).
+     * Перенести груз (в метрах)
      */
     public function setCarryingDistance(?float $carryingDistance): self
     {
@@ -51,7 +51,7 @@ class LoadingServices
     }
 
     /**
-     * Поднять/спустить на этаж.
+     * Поднять/спустить на этаж
      */
     public function getFloor(): ?int
     {
@@ -59,7 +59,7 @@ class LoadingServices
     }
 
     /**
-     * Поднять/спустить на этаж.
+     * Поднять/спустить на этаж
      */
     public function setFloor(?int $floor): self
     {
@@ -69,7 +69,7 @@ class LoadingServices
     }
 
     /**
-     * Подъем на лифте.
+     * Подъем на лифте
      */
     public function getIsElevator(): ?bool
     {
@@ -77,7 +77,7 @@ class LoadingServices
     }
 
     /**
-     * Подъем на лифте.
+     * Подъем на лифте
      */
     public function setIsElevator(?bool $isElevator): self
     {
@@ -87,7 +87,7 @@ class LoadingServices
     }
 
     /**
-     * Расчитывать ПРР.
+     * Расчитывать ПРР
      */
     public function getIsLoading(): ?bool
     {
@@ -95,7 +95,7 @@ class LoadingServices
     }
 
     /**
-     * Расчитывать ПРР.
+     * Расчитывать ПРР
      */
     public function setIsLoading(?bool $isLoading): self
     {

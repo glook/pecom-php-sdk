@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderCounterpartLegalEntity
 {
     /**
-     * ИНН.
+     * ИНН
      *
      * @var null|string
      */
@@ -19,7 +19,7 @@ class ListAllOrderCounterpartLegalEntity
     protected $kPP;
 
     /**
-     * ИНН.
+     * ИНН
      */
     public function getINN(): ?string
     {
@@ -27,7 +27,7 @@ class ListAllOrderCounterpartLegalEntity
     }
 
     /**
-     * ИНН.
+     * ИНН
      */
     public function setINN(?string $iNN): self
     {

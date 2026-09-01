@@ -18,7 +18,7 @@ class CargosStatustables extends BaseEndpoint implements Endpoint
 
     /**
      * - Значения `statusId` используются в поле `cargoStatusId` (id статуса груза) в ответе метода [`/cargos/status/`](#cargos_status)
-     * - Значения `name` используются в поле `cargoStatus` (статуса груза) в ответе метода [`/cargos/status/`](#cargos_status).
+     * - Значения `name` используются в поле `cargoStatus` (статуса груза) в ответе метода [`/cargos/status/`](#cargos_status)
      */
     public function __construct(\stdClass $requestBody)
     {

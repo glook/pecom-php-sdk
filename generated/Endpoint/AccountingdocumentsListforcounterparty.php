@@ -19,7 +19,7 @@ class AccountingdocumentsListforcounterparty extends BaseEndpoint implements End
 
     /**
      * Метод позволяет получить список бухгалтерских документов за указанный период по контрагенту из своего ЛК ПЭК и по указанному филиалу оплаты
-     * - Максимальная длительность периода для запроса — **60** календарных дней.
+     * - Максимальная длительность периода для запроса — **60** календарных дней
      */
     public function __construct(AccountingdocumentsListforcounterpartyPostBody $requestBody)
     {

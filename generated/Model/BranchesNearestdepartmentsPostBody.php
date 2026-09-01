@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesNearestdepartmentsPostBody
 {
     /**
-     * Если переданы координаты в реквизите «coordinates», то указанный здесь адрес игнорируется.
+     * Если переданы координаты в реквизите «coordinates», то указанный здесь адрес игнорируется
      *
      * @var null|string
      */
@@ -31,14 +31,14 @@ class BranchesNearestdepartmentsPostBody
     protected $limit;
 
     /**
-     * Максимальный габарит груза, для которого нужно подобрать отделение. Необязательно.
+     * Максимальный габарит груза, для которого нужно подобрать отделение. Необязательно
      *
      * @var null|float
      */
     protected $maxDimension;
 
     /**
-     * Самое тяжелое место из всех грузомест груза. Необязательно.
+     * Самое тяжелое место из всех грузомест груза. Необязательно
      *
      * @var null|float
      */
@@ -53,28 +53,28 @@ class BranchesNearestdepartmentsPostBody
 
     /**
      * Идентификатор продукта/тарифа ПЭК, с которым должно работать отделение. Обязательно.
-     * Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Общий объем груза, для которого нужно подобрать отделение. Необязательно.
+     * Общий объем груза, для которого нужно подобрать отделение. Необязательно
      *
      * @var null|float
      */
     protected $volume;
 
     /**
-     * Вес груза, для которого необходимо подобрать подходящее отделение. Необязательно.
+     * Вес груза, для которого необходимо подобрать подходящее отделение. Необязательно
      *
      * @var null|float
      */
     protected $weight;
 
     /**
-     * Если переданы координаты в реквизите «coordinates», то указанный здесь адрес игнорируется.
+     * Если переданы координаты в реквизите «coordinates», то указанный здесь адрес игнорируется
      */
     public function getAddress(): ?string
     {
@@ -82,7 +82,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Если переданы координаты в реквизите «coordinates», то указанный здесь адрес игнорируется.
+     * Если переданы координаты в реквизите «coordinates», то указанный здесь адрес игнорируется
      */
     public function setAddress(?string $address): self
     {
@@ -140,7 +140,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Максимальный габарит груза, для которого нужно подобрать отделение. Необязательно.
+     * Максимальный габарит груза, для которого нужно подобрать отделение. Необязательно
      */
     public function getMaxDimension(): ?float
     {
@@ -148,7 +148,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Максимальный габарит груза, для которого нужно подобрать отделение. Необязательно.
+     * Максимальный габарит груза, для которого нужно подобрать отделение. Необязательно
      */
     public function setMaxDimension(?float $maxDimension): self
     {
@@ -158,7 +158,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Самое тяжелое место из всех грузомест груза. Необязательно.
+     * Самое тяжелое место из всех грузомест груза. Необязательно
      */
     public function getMaxWeightPerPlace(): ?float
     {
@@ -166,7 +166,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Самое тяжелое место из всех грузомест груза. Необязательно.
+     * Самое тяжелое место из всех грузомест груза. Необязательно
      */
     public function setMaxWeightPerPlace(?float $maxWeightPerPlace): self
     {
@@ -195,7 +195,7 @@ class BranchesNearestdepartmentsPostBody
 
     /**
      * Идентификатор продукта/тарифа ПЭК, с которым должно работать отделение. Обязательно.
-     * Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      */
     public function getType(): int
     {
@@ -204,7 +204,7 @@ class BranchesNearestdepartmentsPostBody
 
     /**
      * Идентификатор продукта/тарифа ПЭК, с которым должно работать отделение. Обязательно.
-     * Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      */
     public function setType(int $type): self
     {
@@ -214,7 +214,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Общий объем груза, для которого нужно подобрать отделение. Необязательно.
+     * Общий объем груза, для которого нужно подобрать отделение. Необязательно
      */
     public function getVolume(): ?float
     {
@@ -222,7 +222,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Общий объем груза, для которого нужно подобрать отделение. Необязательно.
+     * Общий объем груза, для которого нужно подобрать отделение. Необязательно
      */
     public function setVolume(?float $volume): self
     {
@@ -232,7 +232,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Вес груза, для которого необходимо подобрать подходящее отделение. Необязательно.
+     * Вес груза, для которого необходимо подобрать подходящее отделение. Необязательно
      */
     public function getWeight(): ?float
     {
@@ -240,7 +240,7 @@ class BranchesNearestdepartmentsPostBody
     }
 
     /**
-     * Вес груза, для которого необходимо подобрать подходящее отделение. Необязательно.
+     * Вес груза, для которого необходимо подобрать подходящее отделение. Необязательно
      */
     public function setWeight(?float $weight): self
     {

@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CancelAndReturnResponse
 {
     /**
-     * Описание результата.
+     * Описание результата
      *
      * @var null|string
      */
@@ -19,7 +19,7 @@ class CancelAndReturnResponse
     protected $success;
 
     /**
-     * Описание результата.
+     * Описание результата
      */
     public function getDescription(): ?string
     {
@@ -27,7 +27,7 @@ class CancelAndReturnResponse
     }
 
     /**
-     * Описание результата.
+     * Описание результата
      */
     public function setDescription(?string $description): self
     {

@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosCancelAndReturnRequest
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var string
      */
     protected $code;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCode(): string
     {
@@ -20,7 +20,7 @@ class CargosCancelAndReturnRequest
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCode(string $code): self
     {

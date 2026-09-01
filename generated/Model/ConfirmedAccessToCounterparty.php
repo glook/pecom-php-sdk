@@ -5,49 +5,49 @@ namespace glook\PecomSdk\Generated\Model;
 class ConfirmedAccessToCounterparty
 {
     /**
-     * Номер карты клиента.
+     * Номер карты клиента
      *
      * @var null|string
      */
     protected $counterpartClientCard;
 
     /**
-     * Данные документа, удостоверяющего личность физ.лица.
+     * Данные документа, удостоверяющего личность физ.лица
      *
      * @var null|CounterpartyDocument[]
      */
     protected $documents;
 
     /**
-     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Используется в ряде методов API.
+     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Используется в ряде методов API
      *
      * @var string
      */
     protected $guid;
 
     /**
-     * Идентификаторы юридических лиц и индивидуальных предпринимателей.
+     * Идентификаторы юридических лиц и индивидуальных предпринимателей
      *
      * @var null|ConfirmedAccessToCounterpartyLegal
      */
     protected $legal;
 
     /**
-     * Тип контрагента. Значения: `1` - Юридическое лицо, `2` - Индивидуальный предприниматель, `3` - Физическое лицо.
+     * Тип контрагента. Значения: `1` - Юридическое лицо, `2` - Индивидуальный предприниматель, `3` - Физическое лицо
      *
      * @var int
      */
     protected $legalForm;
 
     /**
-     * Наименование контрагента / ФИО.
+     * Наименование контрагента / ФИО
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Номер карты клиента.
+     * Номер карты клиента
      */
     public function getCounterpartClientCard(): ?string
     {
@@ -55,7 +55,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Номер карты клиента.
+     * Номер карты клиента
      */
     public function setCounterpartClientCard(?string $counterpartClientCard): self
     {
@@ -65,7 +65,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Данные документа, удостоверяющего личность физ.лица.
+     * Данные документа, удостоверяющего личность физ.лица
      *
      * @return null|CounterpartyDocument[]
      */
@@ -75,7 +75,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Данные документа, удостоверяющего личность физ.лица.
+     * Данные документа, удостоверяющего личность физ.лица
      *
      * @param null|CounterpartyDocument[] $documents
      */
@@ -87,7 +87,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Используется в ряде методов API.
+     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Используется в ряде методов API
      */
     public function getGuid(): string
     {
@@ -95,7 +95,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Используется в ряде методов API.
+     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Используется в ряде методов API
      */
     public function setGuid(string $guid): self
     {
@@ -105,7 +105,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Идентификаторы юридических лиц и индивидуальных предпринимателей.
+     * Идентификаторы юридических лиц и индивидуальных предпринимателей
      */
     public function getLegal(): ?ConfirmedAccessToCounterpartyLegal
     {
@@ -113,7 +113,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Идентификаторы юридических лиц и индивидуальных предпринимателей.
+     * Идентификаторы юридических лиц и индивидуальных предпринимателей
      */
     public function setLegal(?ConfirmedAccessToCounterpartyLegal $legal): self
     {
@@ -123,7 +123,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Тип контрагента. Значения: `1` - Юридическое лицо, `2` - Индивидуальный предприниматель, `3` - Физическое лицо.
+     * Тип контрагента. Значения: `1` - Юридическое лицо, `2` - Индивидуальный предприниматель, `3` - Физическое лицо
      */
     public function getLegalForm(): int
     {
@@ -131,7 +131,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Тип контрагента. Значения: `1` - Юридическое лицо, `2` - Индивидуальный предприниматель, `3` - Физическое лицо.
+     * Тип контрагента. Значения: `1` - Юридическое лицо, `2` - Индивидуальный предприниматель, `3` - Физическое лицо
      */
     public function setLegalForm(int $legalForm): self
     {
@@ -141,7 +141,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Наименование контрагента / ФИО.
+     * Наименование контрагента / ФИО
      */
     public function getTitle(): string
     {
@@ -149,7 +149,7 @@ class ConfirmedAccessToCounterparty
     }
 
     /**
-     * Наименование контрагента / ФИО.
+     * Наименование контрагента / ФИО
      */
     public function setTitle(string $title): self
     {

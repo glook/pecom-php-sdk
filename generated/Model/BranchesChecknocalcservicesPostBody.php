@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesChecknocalcservicesPostBody
 {
     /**
-     * ID филиала назначения груза, см. комментарии к методу.
+     * ID филиала назначения груза, см. комментарии к методу
      *
      * @var string
      */
     protected $branchReceiverId;
 
     /**
-     * ID филиала отправления груза, см. комментарии к методу.
+     * ID филиала отправления груза, см. комментарии к методу
      *
      * @var string
      */
     protected $branchSenderId;
 
     /**
-     * ID филиала назначения груза, см. комментарии к методу.
+     * ID филиала назначения груза, см. комментарии к методу
      */
     public function getBranchReceiverId(): string
     {
@@ -27,7 +27,7 @@ class BranchesChecknocalcservicesPostBody
     }
 
     /**
-     * ID филиала назначения груза, см. комментарии к методу.
+     * ID филиала назначения груза, см. комментарии к методу
      */
     public function setBranchReceiverId(string $branchReceiverId): self
     {
@@ -37,7 +37,7 @@ class BranchesChecknocalcservicesPostBody
     }
 
     /**
-     * ID филиала отправления груза, см. комментарии к методу.
+     * ID филиала отправления груза, см. комментарии к методу
      */
     public function getBranchSenderId(): string
     {
@@ -45,7 +45,7 @@ class BranchesChecknocalcservicesPostBody
     }
 
     /**
-     * ID филиала отправления груза, см. комментарии к методу.
+     * ID филиала отправления груза, см. комментарии к методу
      */
     public function setBranchSenderId(string $branchSenderId): self
     {

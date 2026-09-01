@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class NetshopSender
 {
     /**
-     * Город. Для этого типа заявки равно `Москва Восток`.
+     * Город. Для этого типа заявки равно `Москва Восток`
      *
      * @var string
      */
@@ -32,7 +32,7 @@ class NetshopSender
     protected $title;
 
     /**
-     * Город. Для этого типа заявки равно `Москва Восток`.
+     * Город. Для этого типа заявки равно `Москва Восток`
      */
     public function getCity(): string
     {
@@ -40,7 +40,7 @@ class NetshopSender
     }
 
     /**
-     * Город. Для этого типа заявки равно `Москва Восток`.
+     * Город. Для этого типа заявки равно `Москва Восток`
      */
     public function setCity(string $city): self
     {

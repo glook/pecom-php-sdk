@@ -6,7 +6,7 @@ class BranchesDepartmentslimitPostBody
 {
     /**
      * Идентификатор филиала получателя. Обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.branchId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.branchId`
      *
      * @var string
      */
@@ -14,7 +14,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор склада получателя. Не обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.warehouseId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.warehouseId`
      *
      * @var null|string
      */
@@ -22,7 +22,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор филиала отправителя. Обязателен.
-     * Можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.branchId`.
+     * Можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.branchId`
      *
      * @var string
      */
@@ -30,14 +30,14 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор склада отправителя. Не обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.warehouseId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.warehouseId`
      *
      * @var null|string
      */
     protected $senderWarehouseId;
 
     /**
-     * Идентификатор продукта/тарифа Express Автоперевозка. Обязателен.
+     * Идентификатор продукта/тарифа Express Автоперевозка. Обязателен
      *
      * @var int
      */
@@ -45,7 +45,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор филиала получателя. Обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.branchId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.branchId`
      */
     public function getRecipientBranchId(): string
     {
@@ -54,7 +54,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор филиала получателя. Обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.branchId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.branchId`
      */
     public function setRecipientBranchId(string $recipientBranchId): self
     {
@@ -65,7 +65,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор склада получателя. Не обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.warehouseId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.warehouseId`
      */
     public function getRecipientWarehouseId(): ?string
     {
@@ -74,7 +74,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор склада получателя. Не обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.warehouseId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу доставки `freeDepartments.warehouseId`
      */
     public function setRecipientWarehouseId(?string $recipientWarehouseId): self
     {
@@ -85,7 +85,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор филиала отправителя. Обязателен.
-     * Можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.branchId`.
+     * Можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.branchId`
      */
     public function getSenderBranchId(): string
     {
@@ -94,7 +94,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор филиала отправителя. Обязателен.
-     * Можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.branchId`.
+     * Можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.branchId`
      */
     public function setSenderBranchId(string $senderBranchId): self
     {
@@ -105,7 +105,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор склада отправителя. Не обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.warehouseId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.warehouseId`
      */
     public function getSenderWarehouseId(): ?string
     {
@@ -114,7 +114,7 @@ class BranchesDepartmentslimitPostBody
 
     /**
      * Идентификатор склада отправителя. Не обязателен.
-     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.warehouseId`.
+     * Можно получить методом  [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) по адресу забора `freeDepartments.warehouseId`
      */
     public function setSenderWarehouseId(?string $senderWarehouseId): self
     {
@@ -124,7 +124,7 @@ class BranchesDepartmentslimitPostBody
     }
 
     /**
-     * Идентификатор продукта/тарифа Express Автоперевозка. Обязателен.
+     * Идентификатор продукта/тарифа Express Автоперевозка. Обязателен
      */
     public function getType(): int
     {
@@ -132,7 +132,7 @@ class BranchesDepartmentslimitPostBody
     }
 
     /**
-     * Идентификатор продукта/тарифа Express Автоперевозка. Обязателен.
+     * Идентификатор продукта/тарифа Express Автоперевозка. Обязателен
      */
     public function setType(int $type): self
     {

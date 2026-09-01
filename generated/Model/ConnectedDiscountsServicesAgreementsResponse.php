@@ -12,14 +12,14 @@ class ConnectedDiscountsServicesAgreementsResponse
     protected $additionalAgreements;
 
     /**
-     * Массив доступных контрагенту идентификаторов продуктов/тарифов. Полный список доступных в API продуктов/тарифов можно получить методом [`/TYPESOFDELIVERY/ALL/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Массив доступных контрагенту идентификаторов продуктов/тарифов. Полный список доступных в API продуктов/тарифов можно получить методом [`/TYPESOFDELIVERY/ALL/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      *
      * @var float[]
      */
     protected $availableTypesOfDelivery;
 
     /**
-     * Перечень всех подключенных контрагенту сервисов и скидок с их основными параметрами.
+     * Перечень всех подключенных контрагенту сервисов и скидок с их основными параметрами
      *
      * @var SpecialConditionWithParams[]
      */
@@ -48,7 +48,7 @@ class ConnectedDiscountsServicesAgreementsResponse
     }
 
     /**
-     * Массив доступных контрагенту идентификаторов продуктов/тарифов. Полный список доступных в API продуктов/тарифов можно получить методом [`/TYPESOFDELIVERY/ALL/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Массив доступных контрагенту идентификаторов продуктов/тарифов. Полный список доступных в API продуктов/тарифов можно получить методом [`/TYPESOFDELIVERY/ALL/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      *
      * @return float[]
      */
@@ -58,7 +58,7 @@ class ConnectedDiscountsServicesAgreementsResponse
     }
 
     /**
-     * Массив доступных контрагенту идентификаторов продуктов/тарифов. Полный список доступных в API продуктов/тарифов можно получить методом [`/TYPESOFDELIVERY/ALL/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Массив доступных контрагенту идентификаторов продуктов/тарифов. Полный список доступных в API продуктов/тарифов можно получить методом [`/TYPESOFDELIVERY/ALL/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      *
      * @param float[] $availableTypesOfDelivery
      */
@@ -70,7 +70,7 @@ class ConnectedDiscountsServicesAgreementsResponse
     }
 
     /**
-     * Перечень всех подключенных контрагенту сервисов и скидок с их основными параметрами.
+     * Перечень всех подключенных контрагенту сервисов и скидок с их основными параметрами
      *
      * @return SpecialConditionWithParams[]
      */
@@ -80,7 +80,7 @@ class ConnectedDiscountsServicesAgreementsResponse
     }
 
     /**
-     * Перечень всех подключенных контрагенту сервисов и скидок с их основными параметрами.
+     * Перечень всех подключенных контрагенту сервисов и скидок с их основными параметрами
      *
      * @param SpecialConditionWithParams[] $specialConditionsWithParams
      */

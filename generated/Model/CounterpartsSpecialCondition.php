@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CounterpartsSpecialCondition
 {
     /**
-     * Наименование доп.соглашения/сервиса/скидки.
+     * Наименование доп.соглашения/сервиса/скидки
      *
      * @var string
      */
     protected $title;
 
     /**
-     * UID соглашения/сервиса/скидки.
+     * UID соглашения/сервиса/скидки
      *
      * @var string
      */
     protected $uID;
 
     /**
-     * Наименование доп.соглашения/сервиса/скидки.
+     * Наименование доп.соглашения/сервиса/скидки
      */
     public function getTitle(): string
     {
@@ -27,7 +27,7 @@ class CounterpartsSpecialCondition
     }
 
     /**
-     * Наименование доп.соглашения/сервиса/скидки.
+     * Наименование доп.соглашения/сервиса/скидки
      */
     public function setTitle(string $title): self
     {
@@ -37,7 +37,7 @@ class CounterpartsSpecialCondition
     }
 
     /**
-     * UID соглашения/сервиса/скидки.
+     * UID соглашения/сервиса/скидки
      */
     public function getUID(): string
     {
@@ -45,7 +45,7 @@ class CounterpartsSpecialCondition
     }
 
     /**
-     * UID соглашения/сервиса/скидки.
+     * UID соглашения/сервиса/скидки
      */
     public function setUID(string $uID): self
     {

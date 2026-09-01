@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectMetaData
 {
     /**
-     * Адресные данные.
+     * Адресные данные
      *
      * @var GeoDataAddress
      */
     protected $address;
 
     /**
-     * Детализированные адресные данные.
+     * Детализированные адресные данные
      *
      * @var GeoObjectMetaDataAddressDetails
      */
     protected $addressDetails;
 
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе.
+     * Название компоненты адреса, до которой определен адрес в ответе
      *
      * @var string
      */
     protected $kind;
 
     /**
-     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно.
+     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно
      *
      * @var string
      */
     protected $precision;
 
     /**
-     * Полный адрес, предлагаемый как вариант искомого по запросу.
+     * Полный адрес, предлагаемый как вариант искомого по запросу
      *
      * @var string
      */
     protected $text;
 
     /**
-     * Адресные данные.
+     * Адресные данные
      */
     public function getAddress(): GeoDataAddress
     {
@@ -48,7 +48,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Адресные данные.
+     * Адресные данные
      */
     public function setAddress(GeoDataAddress $address): self
     {
@@ -58,7 +58,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Детализированные адресные данные.
+     * Детализированные адресные данные
      */
     public function getAddressDetails(): GeoObjectMetaDataAddressDetails
     {
@@ -66,7 +66,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Детализированные адресные данные.
+     * Детализированные адресные данные
      */
     public function setAddressDetails(GeoObjectMetaDataAddressDetails $addressDetails): self
     {
@@ -76,7 +76,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе.
+     * Название компоненты адреса, до которой определен адрес в ответе
      */
     public function getKind(): string
     {
@@ -84,7 +84,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе.
+     * Название компоненты адреса, до которой определен адрес в ответе
      */
     public function setKind(string $kind): self
     {
@@ -94,7 +94,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно.
+     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно
      */
     public function getPrecision(): string
     {
@@ -102,7 +102,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно.
+     * Точность определения координат. exact — точно, bad — заявка по такому адресу не будет принята, near — приблизительно
      */
     public function setPrecision(string $precision): self
     {
@@ -112,7 +112,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Полный адрес, предлагаемый как вариант искомого по запросу.
+     * Полный адрес, предлагаемый как вариант искомого по запросу
      */
     public function getText(): string
     {
@@ -120,7 +120,7 @@ class GeoObjectMetaData
     }
 
     /**
-     * Полный адрес, предлагаемый как вариант искомого по запросу.
+     * Полный адрес, предлагаемый как вариант искомого по запросу
      */
     public function setText(string $text): self
     {

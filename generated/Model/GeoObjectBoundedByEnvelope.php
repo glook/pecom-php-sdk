@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectBoundedByEnvelope
 {
     /**
-     * Нижняя граница координат (долгота широта).
+     * Нижняя граница координат (долгота широта)
      *
      * @var string
      */
     protected $lowerCorner;
 
     /**
-     * Верхняя граница координат (долгота широта).
+     * Верхняя граница координат (долгота широта)
      *
      * @var string
      */
     protected $upperCorner;
 
     /**
-     * Нижняя граница координат (долгота широта).
+     * Нижняя граница координат (долгота широта)
      */
     public function getLowerCorner(): string
     {
@@ -27,7 +27,7 @@ class GeoObjectBoundedByEnvelope
     }
 
     /**
-     * Нижняя граница координат (долгота широта).
+     * Нижняя граница координат (долгота широта)
      */
     public function setLowerCorner(string $lowerCorner): self
     {
@@ -37,7 +37,7 @@ class GeoObjectBoundedByEnvelope
     }
 
     /**
-     * Верхняя граница координат (долгота широта).
+     * Верхняя граница координат (долгота широта)
      */
     public function getUpperCorner(): string
     {
@@ -45,7 +45,7 @@ class GeoObjectBoundedByEnvelope
     }
 
     /**
-     * Верхняя граница координат (долгота широта).
+     * Верхняя граница координат (долгота широта)
      */
     public function setUpperCorner(string $upperCorner): self
     {

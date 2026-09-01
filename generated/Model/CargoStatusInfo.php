@@ -26,21 +26,21 @@ class CargoStatusInfo
     protected $arrivalPlanDateTime;
 
     /**
-     * Статус груза. Возможные значения: `Аннулировано до приемки груза`, `Заявка на забор зарегистрирована`, `Ожидается передача груза от отправителя`, `Принят к перевозке`, `Принят на ПВЗ`, `Возвращен отправителю`, `Оформлен`, `В пути`, `В пути на терминал`, `Прибыл`, `Прибыл частично`, `Разгружается. Ожидайте оповещения`, `Выполняется адресная доставка`, `Выдан получателю`, `Доставлен получателю`, `Отправлен на возврат`, `Утилизирован`, `Изъят на таможне`, `Возвращен отправителю` , `Выдан ( мест { количество_мест } из { количество_мест } )`.
+     * Статус груза. Возможные значения: `Аннулировано до приемки груза`, `Заявка на забор зарегистрирована`, `Ожидается передача груза от отправителя`, `Принят к перевозке`, `Принят на ПВЗ`, `Возвращен отправителю`, `Оформлен`, `В пути`, `В пути на терминал`, `Прибыл`, `Прибыл частично`, `Разгружается. Ожидайте оповещения`, `Выполняется адресная доставка`, `Выдан получателю`, `Доставлен получателю`, `Отправлен на возврат`, `Утилизирован`, `Изъят на таможне`, `Возвращен отправителю` , `Выдан ( мест { количество_мест } из { количество_мест } )`
      *
      * @var null|string
      */
     protected $cargoStatus;
 
     /**
-     * `id` статуса груза. Справочник доступен через метод [`/cargos/statustables/`](#cargos_statustables).
+     * `id` статуса груза. Справочник доступен через метод [`/cargos/statustables/`](#cargos_statustables)
      *
      * @var null|int
      */
     protected $cargoStatusId;
 
     /**
-     * Дата и время плановой доставки до двери, т.е. дата и время, на которые назначена последняя миля.
+     * Дата и время плановой доставки до двери, т.е. дата и время, на которые назначена последняя миля
      *
      * @var null|string
      */
@@ -61,7 +61,7 @@ class CargoStatusInfo
     protected $intakePlanDateTime;
 
     /**
-     * Приблизительные координаты.
+     * Приблизительные координаты
      *
      * @var null|string
      */
@@ -75,14 +75,14 @@ class CargoStatusInfo
     protected $receivedByClientDateTime;
 
     /**
-     * Получение возможно после предъявление документа подтверждающего личность, указанного отправителем, иначе по коду СМС (`true` — если получение по документу возможно, `false` — в противном случае) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/)).
+     * Получение возможно после предъявление документа подтверждающего личность, указанного отправителем, иначе по коду СМС (`true` — если получение по документу возможно, `false` — в противном случае) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/))
      *
      * @var null|bool
      */
     protected $receivingByDocument;
 
     /**
-     * Возможно получение по СМС коду (`true` — если возможно, `false` — если невозможно) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/)).
+     * Возможно получение по СМС коду (`true` — если возможно, `false` — если невозможно) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/))
      *
      * @var null|bool
      */
@@ -96,14 +96,14 @@ class CargoStatusInfo
     protected $sendingDateTime;
 
     /**
-     * В актуальной версии протокола не используется. Для получения истории используйте метод [`/statusfullhistory/`](#cargos_statusfullhistory).
+     * В актуальной версии протокола не используется. Для получения истории используйте метод [`/statusfullhistory/`](#cargos_statusfullhistory)
      *
      * @var null|mixed[][]
      */
     protected $statuses;
 
     /**
-     * Дата начала платного хранения.
+     * Дата начала платного хранения
      *
      * @var null|string
      */
@@ -117,7 +117,7 @@ class CargoStatusInfo
     protected $takeOnStockDateTime;
 
     /**
-     * Состояние упаковки при сдаче груза.
+     * Состояние упаковки при сдаче груза
      *
      * @var null|string
      */
@@ -131,7 +131,7 @@ class CargoStatusInfo
     protected $takeOnStockPlanDateTime;
 
     /**
-     * Статус по оповещению.
+     * Статус по оповещению
      *
      * @var null|string
      */
@@ -199,7 +199,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Статус груза. Возможные значения: `Аннулировано до приемки груза`, `Заявка на забор зарегистрирована`, `Ожидается передача груза от отправителя`, `Принят к перевозке`, `Принят на ПВЗ`, `Возвращен отправителю`, `Оформлен`, `В пути`, `В пути на терминал`, `Прибыл`, `Прибыл частично`, `Разгружается. Ожидайте оповещения`, `Выполняется адресная доставка`, `Выдан получателю`, `Доставлен получателю`, `Отправлен на возврат`, `Утилизирован`, `Изъят на таможне`, `Возвращен отправителю` , `Выдан ( мест { количество_мест } из { количество_мест } )`.
+     * Статус груза. Возможные значения: `Аннулировано до приемки груза`, `Заявка на забор зарегистрирована`, `Ожидается передача груза от отправителя`, `Принят к перевозке`, `Принят на ПВЗ`, `Возвращен отправителю`, `Оформлен`, `В пути`, `В пути на терминал`, `Прибыл`, `Прибыл частично`, `Разгружается. Ожидайте оповещения`, `Выполняется адресная доставка`, `Выдан получателю`, `Доставлен получателю`, `Отправлен на возврат`, `Утилизирован`, `Изъят на таможне`, `Возвращен отправителю` , `Выдан ( мест { количество_мест } из { количество_мест } )`
      */
     public function getCargoStatus(): ?string
     {
@@ -207,7 +207,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Статус груза. Возможные значения: `Аннулировано до приемки груза`, `Заявка на забор зарегистрирована`, `Ожидается передача груза от отправителя`, `Принят к перевозке`, `Принят на ПВЗ`, `Возвращен отправителю`, `Оформлен`, `В пути`, `В пути на терминал`, `Прибыл`, `Прибыл частично`, `Разгружается. Ожидайте оповещения`, `Выполняется адресная доставка`, `Выдан получателю`, `Доставлен получателю`, `Отправлен на возврат`, `Утилизирован`, `Изъят на таможне`, `Возвращен отправителю` , `Выдан ( мест { количество_мест } из { количество_мест } )`.
+     * Статус груза. Возможные значения: `Аннулировано до приемки груза`, `Заявка на забор зарегистрирована`, `Ожидается передача груза от отправителя`, `Принят к перевозке`, `Принят на ПВЗ`, `Возвращен отправителю`, `Оформлен`, `В пути`, `В пути на терминал`, `Прибыл`, `Прибыл частично`, `Разгружается. Ожидайте оповещения`, `Выполняется адресная доставка`, `Выдан получателю`, `Доставлен получателю`, `Отправлен на возврат`, `Утилизирован`, `Изъят на таможне`, `Возвращен отправителю` , `Выдан ( мест { количество_мест } из { количество_мест } )`
      */
     public function setCargoStatus(?string $cargoStatus): self
     {
@@ -217,7 +217,7 @@ class CargoStatusInfo
     }
 
     /**
-     * `id` статуса груза. Справочник доступен через метод [`/cargos/statustables/`](#cargos_statustables).
+     * `id` статуса груза. Справочник доступен через метод [`/cargos/statustables/`](#cargos_statustables)
      */
     public function getCargoStatusId(): ?int
     {
@@ -225,7 +225,7 @@ class CargoStatusInfo
     }
 
     /**
-     * `id` статуса груза. Справочник доступен через метод [`/cargos/statustables/`](#cargos_statustables).
+     * `id` статуса груза. Справочник доступен через метод [`/cargos/statustables/`](#cargos_statustables)
      */
     public function setCargoStatusId(?int $cargoStatusId): self
     {
@@ -235,7 +235,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Дата и время плановой доставки до двери, т.е. дата и время, на которые назначена последняя миля.
+     * Дата и время плановой доставки до двери, т.е. дата и время, на которые назначена последняя миля
      */
     public function getDeliveryPlanDate(): ?string
     {
@@ -243,7 +243,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Дата и время плановой доставки до двери, т.е. дата и время, на которые назначена последняя миля.
+     * Дата и время плановой доставки до двери, т.е. дата и время, на которые назначена последняя миля
      */
     public function setDeliveryPlanDate(?string $deliveryPlanDate): self
     {
@@ -289,7 +289,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Приблизительные координаты.
+     * Приблизительные координаты
      */
     public function getPosition(): ?string
     {
@@ -297,7 +297,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Приблизительные координаты.
+     * Приблизительные координаты
      */
     public function setPosition(?string $position): self
     {
@@ -325,7 +325,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Получение возможно после предъявление документа подтверждающего личность, указанного отправителем, иначе по коду СМС (`true` — если получение по документу возможно, `false` — в противном случае) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/)).
+     * Получение возможно после предъявление документа подтверждающего личность, указанного отправителем, иначе по коду СМС (`true` — если получение по документу возможно, `false` — в противном случае) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/))
      */
     public function getReceivingByDocument(): ?bool
     {
@@ -333,7 +333,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Получение возможно после предъявление документа подтверждающего личность, указанного отправителем, иначе по коду СМС (`true` — если получение по документу возможно, `false` — в противном случае) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/)).
+     * Получение возможно после предъявление документа подтверждающего личность, указанного отправителем, иначе по коду СМС (`true` — если получение по документу возможно, `false` — в противном случае) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/))
      */
     public function setReceivingByDocument(?bool $receivingByDocument): self
     {
@@ -343,7 +343,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Возможно получение по СМС коду (`true` — если возможно, `false` — если невозможно) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/)).
+     * Возможно получение по СМС коду (`true` — если возможно, `false` — если невозможно) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/))
      */
     public function getReceivingBySMSCode(): ?bool
     {
@@ -351,7 +351,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Возможно получение по СМС коду (`true` — если возможно, `false` — если невозможно) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/)).
+     * Возможно получение по СМС коду (`true` — если возможно, `false` — если невозможно) (только в [`/statusbypositionbarcodes/`](#tag/cargos/POST/cargos/statusbypositionbarcodes/))
      */
     public function setReceivingBySMSCode(?bool $receivingBySMSCode): self
     {
@@ -379,7 +379,7 @@ class CargoStatusInfo
     }
 
     /**
-     * В актуальной версии протокола не используется. Для получения истории используйте метод [`/statusfullhistory/`](#cargos_statusfullhistory).
+     * В актуальной версии протокола не используется. Для получения истории используйте метод [`/statusfullhistory/`](#cargos_statusfullhistory)
      *
      * @return null|mixed[][]
      */
@@ -389,7 +389,7 @@ class CargoStatusInfo
     }
 
     /**
-     * В актуальной версии протокола не используется. Для получения истории используйте метод [`/statusfullhistory/`](#cargos_statusfullhistory).
+     * В актуальной версии протокола не используется. Для получения истории используйте метод [`/statusfullhistory/`](#cargos_statusfullhistory)
      *
      * @param null|mixed[][] $statuses
      */
@@ -401,7 +401,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Дата начала платного хранения.
+     * Дата начала платного хранения
      */
     public function getStorageStartPlanDate(): ?string
     {
@@ -409,7 +409,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Дата начала платного хранения.
+     * Дата начала платного хранения
      */
     public function setStorageStartPlanDate(?string $storageStartPlanDate): self
     {
@@ -437,7 +437,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Состояние упаковки при сдаче груза.
+     * Состояние упаковки при сдаче груза
      */
     public function getTakeOnStockPackageState(): ?string
     {
@@ -445,7 +445,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Состояние упаковки при сдаче груза.
+     * Состояние упаковки при сдаче груза
      */
     public function setTakeOnStockPackageState(?string $takeOnStockPackageState): self
     {
@@ -473,7 +473,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Статус по оповещению.
+     * Статус по оповещению
      */
     public function getCallStatus(): ?string
     {
@@ -481,7 +481,7 @@ class CargoStatusInfo
     }
 
     /**
-     * Статус по оповещению.
+     * Статус по оповещению
      */
     public function setCallStatus(?string $callStatus): self
     {

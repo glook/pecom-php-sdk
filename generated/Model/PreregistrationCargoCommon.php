@@ -5,39 +5,46 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationCargoCommon
 {
     /**
-     * Есть комплект сопроводительных документов.
+     * Есть комплект сопроводительных документов
      *
      * @var null|bool
      */
     protected $accompanyingDocuments;
 
     /**
-     * Дата документа.
+     * Дата документа
      *
      * @var null|\DateTime
      */
     protected $accompanyingDocumentsDate;
 
     /**
-     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12.
+     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12
      *
      * @var null|int
      */
     protected $accompanyingDocumentsName;
 
     /**
-     * Номер документа.
+     * Номер документа
      *
      * @var null|string
      */
     protected $accompanyingDocumentsNumber;
 
     /**
-     * Номер ТТН.
+     * Номер ТТН
      *
      * @var null|string
      */
     protected $accompanyingDocumentsNumberTTN;
+
+    /**
+     * Массив кодов стран происхождения груза. Обязателен при `docflowType = FFS_EDI`.
+     *
+     * @var null|string[]
+     */
+    protected $countryCargocode;
 
     /**
      * Массив с габаритами каждого грузоместа клиента. Необязательно. Имеет смысл при подключенной услуге "Доверительная приемка". Для продукта EasyWay (type 12) услуга подключена по умолчанию (передача данных так же не обязательна). Если передан массив с габаритами каждого грузоместа, то проводим проверку на сравнение общих Веса и Объёма груза, переданных в массиве "cargos", с суммарными Весом и Объёмом, рассчитанными в массиве грузомест "cargoPlaceList". Должны совпадать.
@@ -47,21 +54,21 @@ class PreregistrationCargoCommon
     protected $cargoPlaceList;
 
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12).
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12)
      *
      * @var null|string[]
      */
     protected $clientPositionsBarcode;
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      *
      * @var null|string
      */
     protected $customerCorrelation;
 
     /**
-     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      *
      * @var string
      */
@@ -75,6 +82,13 @@ class PreregistrationCargoCommon
     protected $height;
 
     /**
+     * Признак наличия в грузе товара, подлежащего учёту в ГИС, для `docflowType = FFS_EDI`. Необязательно, по умолчанию false. Если значение равно true, в поручении экспедитору будет указано, что подлежащий учёту товар в грузе есть, но его идентификационные сведения отсутствуют. Коды товаров можно добавить в кабинете ЭДО после загрузки подготовленного ПЭК черновика поручения экспедитору.
+     *
+     * @var null|bool
+     */
+    protected $isRegisteredGoogs = false;
+
+    /**
      * Примерная наибольшая длина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
      *
      * @var null|float
@@ -82,28 +96,28 @@ class PreregistrationCargoCommon
     protected $length;
 
     /**
-     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов.
+     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов
      *
      * @var null|string
      */
     protected $orderNumber;
 
     /**
-     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка».
+     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка»
      *
      * @var null|int
      */
     protected $palletCount;
 
     /**
-     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120.
+     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120
      *
      * @var null|int
      */
     protected $palletType;
 
     /**
-     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию.
+     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию
      *
      * @var null|int
      */
@@ -117,14 +131,14 @@ class PreregistrationCargoCommon
     protected $positionsCount;
 
     /**
-     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка».
+     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка»
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
+     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
      *
      * @var null|string
      */
@@ -152,7 +166,7 @@ class PreregistrationCargoCommon
     protected $width;
 
     /**
-     * Есть комплект сопроводительных документов.
+     * Есть комплект сопроводительных документов
      */
     public function getAccompanyingDocuments(): ?bool
     {
@@ -160,7 +174,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Есть комплект сопроводительных документов.
+     * Есть комплект сопроводительных документов
      */
     public function setAccompanyingDocuments(?bool $accompanyingDocuments): self
     {
@@ -170,7 +184,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Дата документа.
+     * Дата документа
      */
     public function getAccompanyingDocumentsDate(): ?\DateTime
     {
@@ -178,7 +192,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Дата документа.
+     * Дата документа
      */
     public function setAccompanyingDocumentsDate(?\DateTime $accompanyingDocumentsDate): self
     {
@@ -188,7 +202,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12.
+     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12
      */
     public function getAccompanyingDocumentsName(): ?int
     {
@@ -196,7 +210,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12.
+     * Тип документа, необязательно. Возможные значения: 1 - УПД,  2 - ТОРГ12
      */
     public function setAccompanyingDocumentsName(?int $accompanyingDocumentsName): self
     {
@@ -206,7 +220,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Номер документа.
+     * Номер документа
      */
     public function getAccompanyingDocumentsNumber(): ?string
     {
@@ -214,7 +228,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Номер документа.
+     * Номер документа
      */
     public function setAccompanyingDocumentsNumber(?string $accompanyingDocumentsNumber): self
     {
@@ -224,7 +238,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Номер ТТН.
+     * Номер ТТН
      */
     public function getAccompanyingDocumentsNumberTTN(): ?string
     {
@@ -232,11 +246,33 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Номер ТТН.
+     * Номер ТТН
      */
     public function setAccompanyingDocumentsNumberTTN(?string $accompanyingDocumentsNumberTTN): self
     {
         $this->accompanyingDocumentsNumberTTN = $accompanyingDocumentsNumberTTN;
+
+        return $this;
+    }
+
+    /**
+     * Массив кодов стран происхождения груза. Обязателен при `docflowType = FFS_EDI`.
+     *
+     * @return null|string[]
+     */
+    public function getCountryCargocode(): ?array
+    {
+        return $this->countryCargocode;
+    }
+
+    /**
+     * Массив кодов стран происхождения груза. Обязателен при `docflowType = FFS_EDI`.
+     *
+     * @param null|string[] $countryCargocode
+     */
+    public function setCountryCargocode(?array $countryCargocode): self
+    {
+        $this->countryCargocode = $countryCargocode;
 
         return $this;
     }
@@ -264,7 +300,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12).
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12)
      *
      * @return null|string[]
      */
@@ -274,7 +310,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12).
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге "Приемка по штрих-кодам клиента" и для продукта EasyWay (type 12)
      *
      * @param null|string[] $clientPositionsBarcode
      */
@@ -286,7 +322,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function getCustomerCorrelation(): ?string
     {
@@ -294,7 +330,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function setCustomerCorrelation(?string $customerCorrelation): self
     {
@@ -304,7 +340,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function getDescription(): string
     {
@@ -312,7 +348,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Общее название содержания груза/заказа. Обязательно. Список наименований груза можно получить, используя метод [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function setDescription(string $description): self
     {
@@ -340,6 +376,24 @@ class PreregistrationCargoCommon
     }
 
     /**
+     * Признак наличия в грузе товара, подлежащего учёту в ГИС, для `docflowType = FFS_EDI`. Необязательно, по умолчанию false. Если значение равно true, в поручении экспедитору будет указано, что подлежащий учёту товар в грузе есть, но его идентификационные сведения отсутствуют. Коды товаров можно добавить в кабинете ЭДО после загрузки подготовленного ПЭК черновика поручения экспедитору.
+     */
+    public function getIsRegisteredGoogs(): ?bool
+    {
+        return $this->isRegisteredGoogs;
+    }
+
+    /**
+     * Признак наличия в грузе товара, подлежащего учёту в ГИС, для `docflowType = FFS_EDI`. Необязательно, по умолчанию false. Если значение равно true, в поручении экспедитору будет указано, что подлежащий учёту товар в грузе есть, но его идентификационные сведения отсутствуют. Коды товаров можно добавить в кабинете ЭДО после загрузки подготовленного ПЭК черновика поручения экспедитору.
+     */
+    public function setIsRegisteredGoogs(?bool $isRegisteredGoogs): self
+    {
+        $this->isRegisteredGoogs = $isRegisteredGoogs;
+
+        return $this;
+    }
+
+    /**
      * Примерная наибольшая длина из всех мест, м. Обязательно для orderType 3, 4, 14. Игнорируется при type = 7 «ДТС Автоперевозка».
      */
     public function getLength(): ?float
@@ -358,7 +412,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов.
+     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов
      */
     public function getOrderNumber(): ?string
     {
@@ -366,7 +420,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов.
+     * Номер заказа клиента, поле необязательно, максимальная длина поля 50 символов
      */
     public function setOrderNumber(?string $orderNumber): self
     {
@@ -376,7 +430,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка».
+     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка»
      */
     public function getPalletCount(): ?int
     {
@@ -384,7 +438,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка».
+     * Количество паллет, поле обязательно для type = 7 «ДТС Автоперевозка»
      */
     public function setPalletCount(?int $palletCount): self
     {
@@ -394,7 +448,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120.
+     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120
      */
     public function getPalletType(): ?int
     {
@@ -402,7 +456,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120.
+     * Тип паллета, поле используется и обязательно только для type = 7 «ДТС Автоперевозка» для orderType 0 и 14. Возможные значения:  1-120х80, 2-100х100, 3-120х120, 4-100х120
      */
     public function setPalletType(?int $palletType): self
     {
@@ -412,7 +466,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию.
+     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию
      */
     public function getPaymentForm(): ?int
     {
@@ -420,7 +474,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию.
+     * Форма оплаты (1 - Банк, 2 - Касса), поле необязательно, если значение не указано, равно «Банк» по умолчанию
      */
     public function setPaymentForm(?int $paymentForm): self
     {
@@ -448,7 +502,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка».
+     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка»
      */
     public function getType(): int
     {
@@ -456,7 +510,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка».
+     * Идентификатор продукта/тарифа. Обязательно. Возможные значения: 3 - LTL (сборный груз),  1 - Express Авиаперевозка, 12 - EasyWay, 5 - Express Автоперевозка, 7 - ДТС Автоперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВАЖНО! Сетевая заявка на забор orderType: 14 поддерживает только три продукта type = 3 «LTL (Сборный груз)», type = 1 «Express Авиаперевозка» и type = 7 «ДТС Автоперевозка»
      */
     public function setType(int $type): self
     {
@@ -466,7 +520,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
+     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
      */
     public function getTypeClientBarcode(): ?string
     {
@@ -474,7 +528,7 @@ class PreregistrationCargoCommon
     }
 
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
+     * Тип штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
      */
     public function setTypeClientBarcode(?string $typeClientBarcode): self
     {

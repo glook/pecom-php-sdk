@@ -15,7 +15,7 @@ class NetshopStore
     protected $branch;
 
     /**
-     * Код адреса.
+     * Код адреса
      *
      * @var string
      */
@@ -51,7 +51,7 @@ class NetshopStore
     }
 
     /**
-     * Код адреса.
+     * Код адреса
      */
     public function getCode(): string
     {
@@ -59,7 +59,7 @@ class NetshopStore
     }
 
     /**
-     * Код адреса.
+     * Код адреса
      */
     public function setCode(string $code): self
     {

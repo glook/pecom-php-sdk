@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class ValidationErrorErrorFieldsItem
 {
     /**
-     * Имя поля, для которого возникла ошибка.
+     * Имя поля, для которого возникла ошибка
      *
      * @var null|string
      */
     protected $key;
 
     /**
-     * Сообщения об ошибке по полю.
+     * Сообщения об ошибке по полю
      *
      * @var null|string[]
      */
     protected $value;
 
     /**
-     * Имя поля, для которого возникла ошибка.
+     * Имя поля, для которого возникла ошибка
      */
     public function getKey(): ?string
     {
@@ -27,7 +27,7 @@ class ValidationErrorErrorFieldsItem
     }
 
     /**
-     * Имя поля, для которого возникла ошибка.
+     * Имя поля, для которого возникла ошибка
      */
     public function setKey(?string $key): self
     {
@@ -37,7 +37,7 @@ class ValidationErrorErrorFieldsItem
     }
 
     /**
-     * Сообщения об ошибке по полю.
+     * Сообщения об ошибке по полю
      *
      * @return null|string[]
      */
@@ -47,7 +47,7 @@ class ValidationErrorErrorFieldsItem
     }
 
     /**
-     * Сообщения об ошибке по полю.
+     * Сообщения об ошибке по полю
      *
      * @param null|string[] $value
      */

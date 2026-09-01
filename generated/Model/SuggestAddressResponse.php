@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class SuggestAddressResponse
 {
     /**
-     * Ответ геокодера.
+     * Ответ геокодера
      *
      * @var SuggestAddressResponseResponse
      */
     protected $response;
 
     /**
-     * Ответ геокодера.
+     * Ответ геокодера
      */
     public function getResponse(): SuggestAddressResponseResponse
     {
@@ -20,7 +20,7 @@ class SuggestAddressResponse
     }
 
     /**
-     * Ответ геокодера.
+     * Ответ геокодера
      */
     public function setResponse(SuggestAddressResponseResponse $response): self
     {

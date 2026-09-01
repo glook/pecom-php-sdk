@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class OrderCancellationResult
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var string
      */
     protected $code;
 
     /**
-     * Описание.
+     * Описание
      *
      * @var string
      */
@@ -26,7 +26,7 @@ class OrderCancellationResult
     protected $success;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCode(): string
     {
@@ -34,7 +34,7 @@ class OrderCancellationResult
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCode(string $code): self
     {
@@ -44,7 +44,7 @@ class OrderCancellationResult
     }
 
     /**
-     * Описание.
+     * Описание
      */
     public function getDescription(): string
     {
@@ -52,7 +52,7 @@ class OrderCancellationResult
     }
 
     /**
-     * Описание.
+     * Описание
      */
     public function setDescription(string $description): self
     {

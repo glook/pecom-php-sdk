@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BasicCargoInfo
 {
     /**
-     * Штрих-код груза.
+     * Штрих-код груза
      *
      * @var null|string
      */
     protected $cargoBarCode;
 
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
@@ -26,7 +26,7 @@ class BasicCargoInfo
     protected $positionBarCodes;
 
     /**
-     * Штрих-код груза.
+     * Штрих-код груза
      */
     public function getCargoBarCode(): ?string
     {
@@ -34,7 +34,7 @@ class BasicCargoInfo
     }
 
     /**
-     * Штрих-код груза.
+     * Штрих-код груза
      */
     public function setCargoBarCode(?string $cargoBarCode): self
     {
@@ -44,7 +44,7 @@ class BasicCargoInfo
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCode(): ?string
     {
@@ -52,7 +52,7 @@ class BasicCargoInfo
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCode(?string $code): self
     {

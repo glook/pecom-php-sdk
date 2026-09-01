@@ -20,14 +20,14 @@ class NetshopCargoCommon
     protected $accompanyingDocumentsSum;
 
     /**
-     * Дата авизации.
+     * Дата авизации
      *
      * @var null|string
      */
     protected $avisationDateTime;
 
     /**
-     * Описание груза.
+     * Описание груза
      *
      * @var string
      */
@@ -80,7 +80,7 @@ class NetshopCargoCommon
     }
 
     /**
-     * Дата авизации.
+     * Дата авизации
      */
     public function getAvisationDateTime(): ?string
     {
@@ -88,7 +88,7 @@ class NetshopCargoCommon
     }
 
     /**
-     * Дата авизации.
+     * Дата авизации
      */
     public function setAvisationDateTime(?string $avisationDateTime): self
     {
@@ -98,7 +98,7 @@ class NetshopCargoCommon
     }
 
     /**
-     * Описание груза.
+     * Описание груза
      */
     public function getDecription(): string
     {
@@ -106,7 +106,7 @@ class NetshopCargoCommon
     }
 
     /**
-     * Описание груза.
+     * Описание груза
      */
     public function setDecription(string $decription): self
     {

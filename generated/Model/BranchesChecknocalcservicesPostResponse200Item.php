@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesChecknocalcservicesPostResponse200Item
 {
     /**
-     * Условие предоставления услуги.
+     * Условие предоставления услуги
      *
      * @var BranchesSpecialCondition
      */
     protected $specialCondition;
 
     /**
-     * Условие предоставления услуги.
+     * Условие предоставления услуги
      */
     public function getSpecialCondition(): BranchesSpecialCondition
     {
@@ -20,7 +20,7 @@ class BranchesChecknocalcservicesPostResponse200Item
     }
 
     /**
-     * Условие предоставления услуги.
+     * Условие предоставления услуги
      */
     public function setSpecialCondition(BranchesSpecialCondition $specialCondition): self
     {

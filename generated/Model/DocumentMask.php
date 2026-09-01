@@ -12,7 +12,7 @@ class DocumentMask
     protected $number;
 
     /**
-     * Серия.
+     * Серия
      *
      * @var null|string
      */
@@ -37,7 +37,7 @@ class DocumentMask
     }
 
     /**
-     * Серия.
+     * Серия
      */
     public function getSeries(): ?string
     {
@@ -45,7 +45,7 @@ class DocumentMask
     }
 
     /**
-     * Серия.
+     * Серия
      */
     public function setSeries(?string $series): self
     {

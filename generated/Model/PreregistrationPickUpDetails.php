@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationPickUpDetails
 {
     /**
-     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно.
+     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно
      *
      * @var null|string
      */
     protected $addressForDocuments;
 
     /**
-     * Комментарий к забору документов по другому адресу.
+     * Комментарий к забору документов по другому адресу
      *
      * @var null|string
      */
@@ -26,7 +26,7 @@ class PreregistrationPickUpDetails
     protected $addressStockComment;
 
     /**
-     * Метры переноски груза.
+     * Метры переноски груза
      *
      * @var null|int
      */
@@ -38,14 +38,14 @@ class PreregistrationPickUpDetails
     protected $coordinates;
 
     /**
-     * Время начала  перерыва, поле необязательно.
+     * Время начала  перерыва, поле необязательно
      *
      * @var null|string
      */
     protected $dinnerFrom;
 
     /**
-     * Время окончания перерыва, поле необязательно.
+     * Время окончания перерыва, поле необязательно
      *
      * @var null|string
      */
@@ -59,7 +59,7 @@ class PreregistrationPickUpDetails
     protected $floor;
 
     /**
-     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента.
+     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента
      *
      * @var null|bool
      */
@@ -87,49 +87,49 @@ class PreregistrationPickUpDetails
     protected $isLoading;
 
     /**
-     * Необходима открытая машина, поле необязательно, если не указано считается равным false.
+     * Необходима открытая машина, поле необязательно, если не указано считается равным false
      *
      * @var null|bool
      */
     protected $isOpenCar;
 
     /**
-     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false.
+     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false
      *
      * @var null|bool
      */
     protected $isSideLoad;
 
     /**
-     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false.
+     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false
      *
      * @var null|bool
      */
     protected $isSpecialEquipment;
 
     /**
-     * Необходима растентовка, поле необязательно, если не указано считается равным false.
+     * Необходима растентовка, поле необязательно, если не указано считается равным false
      *
      * @var null|bool
      */
     protected $isUncovered;
 
     /**
-     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
+     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
      *
      * @var null|string
      */
     protected $periodTimeFrom;
 
     /**
-     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
+     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
      *
      * @var null|string
      */
     protected $periodTimeTo;
 
     /**
-     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно.
+     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно
      */
     public function getAddressForDocuments(): ?string
     {
@@ -137,7 +137,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно.
+     * Адрес, по которому находятся документы на получение груза. Имеет смысл заполнять только при указании в поле `addressStockComment` комментария по забору документов по другому адресу. Услуга оказывается за дополнительную плату, поле необязательно
      */
     public function setAddressForDocuments(?string $addressForDocuments): self
     {
@@ -147,7 +147,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Комментарий к забору документов по другому адресу.
+     * Комментарий к забору документов по другому адресу
      */
     public function getAddressForDocumentsComment(): ?string
     {
@@ -155,7 +155,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Комментарий к забору документов по другому адресу.
+     * Комментарий к забору документов по другому адресу
      */
     public function setAddressForDocumentsComment(?string $addressForDocumentsComment): self
     {
@@ -183,7 +183,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Метры переноски груза.
+     * Метры переноски груза
      */
     public function getCarryingDistance(): ?int
     {
@@ -191,7 +191,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Метры переноски груза.
+     * Метры переноски груза
      */
     public function setCarryingDistance(?int $carryingDistance): self
     {
@@ -213,7 +213,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время начала  перерыва, поле необязательно.
+     * Время начала  перерыва, поле необязательно
      */
     public function getDinnerFrom(): ?string
     {
@@ -221,7 +221,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время начала  перерыва, поле необязательно.
+     * Время начала  перерыва, поле необязательно
      */
     public function setDinnerFrom(?string $dinnerFrom): self
     {
@@ -231,7 +231,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время окончания перерыва, поле необязательно.
+     * Время окончания перерыва, поле необязательно
      */
     public function getDinnerTo(): ?string
     {
@@ -239,7 +239,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время окончания перерыва, поле необязательно.
+     * Время окончания перерыва, поле необязательно
      */
     public function setDinnerTo(?string $dinnerTo): self
     {
@@ -267,7 +267,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента.
+     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента
      */
     public function getIsAuthorityNeeded(): ?bool
     {
@@ -275,7 +275,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента.
+     * Для получения груза необходима доверенность «ПЭК». True - необходима доверенность ПЭК, false - необходима доверенность клиента
      */
     public function setIsAuthorityNeeded(?bool $isAuthorityNeeded): self
     {
@@ -339,7 +339,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима открытая машина, поле необязательно, если не указано считается равным false.
+     * Необходима открытая машина, поле необязательно, если не указано считается равным false
      */
     public function getIsOpenCar(): ?bool
     {
@@ -347,7 +347,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима открытая машина, поле необязательно, если не указано считается равным false.
+     * Необходима открытая машина, поле необязательно, если не указано считается равным false
      */
     public function setIsOpenCar(?bool $isOpenCar): self
     {
@@ -357,7 +357,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false.
+     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false
      */
     public function getIsSideLoad(): ?bool
     {
@@ -365,7 +365,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false.
+     * Необходима боковая погрузка, поле необязательно, если не указано считается равным false
      */
     public function setIsSideLoad(?bool $isSideLoad): self
     {
@@ -375,7 +375,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false.
+     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false
      */
     public function getIsSpecialEquipment(): ?bool
     {
@@ -383,7 +383,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false.
+     * Необходима машина со специальным оборудованием, поле необязательно, если не указано считается равным false
      */
     public function setIsSpecialEquipment(?bool $isSpecialEquipment): self
     {
@@ -393,7 +393,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима растентовка, поле необязательно, если не указано считается равным false.
+     * Необходима растентовка, поле необязательно, если не указано считается равным false
      */
     public function getIsUncovered(): ?bool
     {
@@ -401,7 +401,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Необходима растентовка, поле необязательно, если не указано считается равным false.
+     * Необходима растентовка, поле необязательно, если не указано считается равным false
      */
     public function setIsUncovered(?bool $isUncovered): self
     {
@@ -411,7 +411,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
+     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
      */
     public function getPeriodTimeFrom(): ?string
     {
@@ -419,7 +419,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
+     * Время начала интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
      */
     public function setPeriodTimeFrom(?string $periodTimeFrom): self
     {
@@ -429,7 +429,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
+     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
      */
     public function getPeriodTimeTo(): ?string
     {
@@ -437,7 +437,7 @@ class PreregistrationPickUpDetails
     }
 
     /**
-     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка».
+     * Время окончания интервала забора груза, поле необязательно. Обязательно для type = 7 «ДТС Автоперевозка»
      */
     public function setPeriodTimeTo(?string $periodTimeTo): self
     {

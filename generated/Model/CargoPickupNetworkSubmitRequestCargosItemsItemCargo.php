@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
 {
     /**
-     * Штрих-коды мест груза. Если для груза заданы штрих-коды для заявки, обязательно указать тип используемых штрих-кодов `cargos.common.typeClientBarcode`. Список допустимых типов штрих-кодов можно получить с помощью метода [/cargopickupnetwork/availabletypebarcode](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/).
+     * Штрих-коды мест груза. Если для груза заданы штрих-коды для заявки, обязательно указать тип используемых штрих-кодов `cargos.common.typeClientBarcode`. Список допустимых типов штрих-кодов можно получить с помощью метода [/cargopickupnetwork/availabletypebarcode](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/)
      *
      * @var null|string[]
      */
     protected $clientPositionsBarcode;
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      *
      * @var null|string
      */
     protected $customerCorrelation;
 
     /**
-     * Описание груза. Поле обязательно для всех грузов если не заполнено общее описание для заявки (`common.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Описание груза. Поле обязательно для всех грузов если не заполнено общее описание для заявки (`common.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      *
      * @var null|string
      */
@@ -40,7 +40,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     protected $length;
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      *
      * @var null|string
      */
@@ -54,21 +54,21 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     protected $positionsCount;
 
     /**
-     * Идентификатор продукта/тарифа ПЭК с которым должно работать отделение. ВАЖНО! Данный метод поддерживает только 2 продукта: `type = 3` «ПЭК:LTL Авто» и `type = 1` «ПЭК:Express Авиа».
+     * Идентификатор продукта/тарифа ПЭК с которым должно работать отделение. ВАЖНО! Данный метод поддерживает только 2 продукта: `type = 3` «ПЭК:LTL Авто» и `type = 1` «ПЭК:Express Авиа»
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Объём, м³.
+     * Объём, м³
      *
      * @var null|float
      */
     protected $volume;
 
     /**
-     * Вес, кг.
+     * Вес, кг
      *
      * @var null|float
      */
@@ -82,7 +82,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     protected $width;
 
     /**
-     * Штрих-коды мест груза. Если для груза заданы штрих-коды для заявки, обязательно указать тип используемых штрих-кодов `cargos.common.typeClientBarcode`. Список допустимых типов штрих-кодов можно получить с помощью метода [/cargopickupnetwork/availabletypebarcode](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/).
+     * Штрих-коды мест груза. Если для груза заданы штрих-коды для заявки, обязательно указать тип используемых штрих-кодов `cargos.common.typeClientBarcode`. Список допустимых типов штрих-кодов можно получить с помощью метода [/cargopickupnetwork/availabletypebarcode](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/)
      *
      * @return null|string[]
      */
@@ -92,7 +92,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Штрих-коды мест груза. Если для груза заданы штрих-коды для заявки, обязательно указать тип используемых штрих-кодов `cargos.common.typeClientBarcode`. Список допустимых типов штрих-кодов можно получить с помощью метода [/cargopickupnetwork/availabletypebarcode](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/).
+     * Штрих-коды мест груза. Если для груза заданы штрих-коды для заявки, обязательно указать тип используемых штрих-кодов `cargos.common.typeClientBarcode`. Список допустимых типов штрих-кодов можно получить с помощью метода [/cargopickupnetwork/availabletypebarcode](#tag/cargopickupnetwork/POST/cargopickupnetwork/availabletypebarcode/)
      *
      * @param null|string[] $clientPositionsBarcode
      */
@@ -104,7 +104,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function getCustomerCorrelation(): ?string
     {
@@ -112,7 +112,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function setCustomerCorrelation(?string $customerCorrelation): self
     {
@@ -122,7 +122,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Описание груза. Поле обязательно для всех грузов если не заполнено общее описание для заявки (`common.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Описание груза. Поле обязательно для всех грузов если не заполнено общее описание для заявки (`common.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function getDescription(): ?string
     {
@@ -130,7 +130,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Описание груза. Поле обязательно для всех грузов если не заполнено общее описание для заявки (`common.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Описание груза. Поле обязательно для всех грузов если не заполнено общее описание для заявки (`common.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function setDescription(?string $description): self
     {
@@ -176,7 +176,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      */
     public function getOrderNumber(): ?string
     {
@@ -184,7 +184,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      */
     public function setOrderNumber(?string $orderNumber): self
     {
@@ -212,7 +212,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Идентификатор продукта/тарифа ПЭК с которым должно работать отделение. ВАЖНО! Данный метод поддерживает только 2 продукта: `type = 3` «ПЭК:LTL Авто» и `type = 1` «ПЭК:Express Авиа».
+     * Идентификатор продукта/тарифа ПЭК с которым должно работать отделение. ВАЖНО! Данный метод поддерживает только 2 продукта: `type = 3` «ПЭК:LTL Авто» и `type = 1` «ПЭК:Express Авиа»
      */
     public function getType(): int
     {
@@ -220,7 +220,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Идентификатор продукта/тарифа ПЭК с которым должно работать отделение. ВАЖНО! Данный метод поддерживает только 2 продукта: `type = 3` «ПЭК:LTL Авто» и `type = 1` «ПЭК:Express Авиа».
+     * Идентификатор продукта/тарифа ПЭК с которым должно работать отделение. ВАЖНО! Данный метод поддерживает только 2 продукта: `type = 3` «ПЭК:LTL Авто» и `type = 1` «ПЭК:Express Авиа»
      */
     public function setType(int $type): self
     {
@@ -230,7 +230,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Объём, м³.
+     * Объём, м³
      */
     public function getVolume(): ?float
     {
@@ -238,7 +238,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Объём, м³.
+     * Объём, м³
      */
     public function setVolume(?float $volume): self
     {
@@ -248,7 +248,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Вес, кг.
+     * Вес, кг
      */
     public function getWeight(): ?float
     {
@@ -256,7 +256,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     }
 
     /**
-     * Вес, кг.
+     * Вес, кг
      */
     public function setWeight(?float $weight): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class AbbreviatedReceiverPrivatePerson
 {
     /**
-     * первые буквы Фамилии Имени и Отчества как они заданы у нас в системе.
+     * первые буквы Фамилии Имени и Отчества как они заданы у нас в системе
      *
      * @var null|string
      */
     protected $name;
 
     /**
-     * последние 2 цифры номера телефона получателя.
+     * последние 2 цифры номера телефона получателя
      *
      * @var null|string
      */
     protected $phone;
 
     /**
-     * первые буквы Фамилии Имени и Отчества как они заданы у нас в системе.
+     * первые буквы Фамилии Имени и Отчества как они заданы у нас в системе
      */
     public function getName(): ?string
     {
@@ -27,7 +27,7 @@ class AbbreviatedReceiverPrivatePerson
     }
 
     /**
-     * первые буквы Фамилии Имени и Отчества как они заданы у нас в системе.
+     * первые буквы Фамилии Имени и Отчества как они заданы у нас в системе
      */
     public function setName(?string $name): self
     {
@@ -37,7 +37,7 @@ class AbbreviatedReceiverPrivatePerson
     }
 
     /**
-     * последние 2 цифры номера телефона получателя.
+     * последние 2 цифры номера телефона получателя
      */
     public function getPhone(): ?string
     {
@@ -45,7 +45,7 @@ class AbbreviatedReceiverPrivatePerson
     }
 
     /**
-     * последние 2 цифры номера телефона получателя.
+     * последние 2 цифры номера телефона получателя
      */
     public function setPhone(?string $phone): self
     {

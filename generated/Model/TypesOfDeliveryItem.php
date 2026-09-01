@@ -6,28 +6,28 @@ class TypesOfDeliveryItem
 {
     /**
      * Для заказа перевозки по продукту/тарифу требуется договор.
-     * `false` — предусмотрена работа по договору оферты, размещенному на сайте www.pecom.ru.
+     * `false` — предусмотрена работа по договору оферты, размещенному на сайте www.pecom.ru
      *
      * @var bool
      */
     protected $contractIsRequired;
 
     /**
-     * Полное наименование продукта/тарифа.
+     * Полное наименование продукта/тарифа
      *
      * @var string
      */
     protected $fullName;
 
     /**
-     * Наименование продукта/тарифа.
+     * Наименование продукта/тарифа
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Идентификатор продукта/тарифа.
+     * Идентификатор продукта/тарифа
      *
      * @var int
      */
@@ -35,7 +35,7 @@ class TypesOfDeliveryItem
 
     /**
      * Для заказа перевозки по продукту/тарифу требуется договор.
-     * `false` — предусмотрена работа по договору оферты, размещенному на сайте www.pecom.ru.
+     * `false` — предусмотрена работа по договору оферты, размещенному на сайте www.pecom.ru
      */
     public function getContractIsRequired(): bool
     {
@@ -44,7 +44,7 @@ class TypesOfDeliveryItem
 
     /**
      * Для заказа перевозки по продукту/тарифу требуется договор.
-     * `false` — предусмотрена работа по договору оферты, размещенному на сайте www.pecom.ru.
+     * `false` — предусмотрена работа по договору оферты, размещенному на сайте www.pecom.ru
      */
     public function setContractIsRequired(bool $contractIsRequired): self
     {
@@ -54,7 +54,7 @@ class TypesOfDeliveryItem
     }
 
     /**
-     * Полное наименование продукта/тарифа.
+     * Полное наименование продукта/тарифа
      */
     public function getFullName(): string
     {
@@ -62,7 +62,7 @@ class TypesOfDeliveryItem
     }
 
     /**
-     * Полное наименование продукта/тарифа.
+     * Полное наименование продукта/тарифа
      */
     public function setFullName(string $fullName): self
     {
@@ -72,7 +72,7 @@ class TypesOfDeliveryItem
     }
 
     /**
-     * Наименование продукта/тарифа.
+     * Наименование продукта/тарифа
      */
     public function getName(): string
     {
@@ -80,7 +80,7 @@ class TypesOfDeliveryItem
     }
 
     /**
-     * Наименование продукта/тарифа.
+     * Наименование продукта/тарифа
      */
     public function setName(string $name): self
     {
@@ -90,7 +90,7 @@ class TypesOfDeliveryItem
     }
 
     /**
-     * Идентификатор продукта/тарифа.
+     * Идентификатор продукта/тарифа
      */
     public function getType(): int
     {
@@ -98,7 +98,7 @@ class TypesOfDeliveryItem
     }
 
     /**
-     * Идентификатор продукта/тарифа.
+     * Идентификатор продукта/тарифа
      */
     public function setType(int $type): self
     {

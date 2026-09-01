@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoItem
 {
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      *
      * @var string
      */
@@ -27,7 +27,7 @@ class CargoItem
     protected $receiver;
 
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      */
     public function getBarcode(): string
     {
@@ -35,7 +35,7 @@ class CargoItem
     }
 
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      */
     public function setBarcode(string $barcode): self
     {

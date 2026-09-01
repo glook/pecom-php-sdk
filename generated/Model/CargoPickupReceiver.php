@@ -22,7 +22,7 @@ class CargoPickupReceiver
     protected $coordinates;
 
     /**
-     * По умолчанию 643.
+     * По умолчанию 643
      *
      * @var null|string
      */
@@ -44,7 +44,7 @@ class CargoPickupReceiver
     protected $email;
 
     /**
-     * Этаж на который необходимо занести груз.
+     * Этаж на который необходимо занести груз
      *
      * @var null|int
      */
@@ -68,7 +68,7 @@ class CargoPickupReceiver
     protected $inn;
 
     /**
-     * Необходима доставка по городу получателя.
+     * Необходима доставка по городу получателя
      *
      * @var null|bool
      */
@@ -92,7 +92,7 @@ class CargoPickupReceiver
     protected $isElevator;
 
     /**
-     * Необходима разгрузка силами «ПЭК».
+     * Необходима разгрузка силами «ПЭК»
      *
      * @var null|bool
      */
@@ -104,7 +104,7 @@ class CargoPickupReceiver
     protected $kpp;
 
     /**
-     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо.
+     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо
      *
      * @var int
      */
@@ -173,7 +173,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * По умолчанию 643.
+     * По умолчанию 643
      */
     public function getCountryOfRegistrationCode(): ?string
     {
@@ -181,7 +181,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * По умолчанию 643.
+     * По умолчанию 643
      */
     public function setCountryOfRegistrationCode(?string $countryOfRegistrationCode): self
     {
@@ -227,7 +227,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Этаж на который необходимо занести груз.
+     * Этаж на который необходимо занести груз
      */
     public function getFloor(): ?int
     {
@@ -235,7 +235,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Этаж на который необходимо занести груз.
+     * Этаж на который необходимо занести груз
      */
     public function setFloor(?int $floor): self
     {
@@ -287,7 +287,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Необходима доставка по городу получателя.
+     * Необходима доставка по городу получателя
      */
     public function getIsCityDeliveryNeeded(): ?bool
     {
@@ -295,7 +295,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Необходима доставка по городу получателя.
+     * Необходима доставка по городу получателя
      */
     public function setIsCityDeliveryNeeded(?bool $isCityDeliveryNeeded): self
     {
@@ -347,7 +347,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Необходима разгрузка силами «ПЭК».
+     * Необходима разгрузка силами «ПЭК»
      */
     public function getIsLoading(): ?bool
     {
@@ -355,7 +355,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Необходима разгрузка силами «ПЭК».
+     * Необходима разгрузка силами «ПЭК»
      */
     public function setIsLoading(?bool $isLoading): self
     {
@@ -377,7 +377,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо.
+     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо
      */
     public function getLegalForm(): int
     {
@@ -385,7 +385,7 @@ class CargoPickupReceiver
     }
 
     /**
-     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо.
+     * Тип контрагента. 1 — Юридическое лицо, 2 — Индивидуальный предприниматель, 3 — Физическое лицо
      */
     public function setLegalForm(int $legalForm): self
     {

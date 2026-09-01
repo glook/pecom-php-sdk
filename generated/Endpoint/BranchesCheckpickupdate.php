@@ -19,7 +19,7 @@ class BranchesCheckpickupdate extends BaseEndpoint implements Endpoint
 
     /**
      * Метод позволяет определить только возможность забора груза в указанную дату и выводит массив доступных дат до и после указанной даты.
-     * - Если необходимо проверить, действует ли льготный тариф на забор по запрошенному адресу в указанную дату, рекомендуем использовать метод [`/calculator/checkdeliverydate/.`](#tag/calculator/POST/calculator/checkdeliverydate/).
+     * - Если необходимо проверить, действует ли льготный тариф на забор по запрошенному адресу в указанную дату, рекомендуем использовать метод [`/calculator/checkdeliverydate/.`](#tag/calculator/POST/calculator/checkdeliverydate/)
      */
     public function __construct(BranchesCheckpickupdatePostBody $requestBody)
     {

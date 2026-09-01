@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class OrderPrintRequest
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var string
      */
     protected $cargoIndex;
 
     /**
-     * Тип файла.
+     * Тип файла
      *
      * @var string
      */
     protected $type;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoIndex(): string
     {
@@ -27,7 +27,7 @@ class OrderPrintRequest
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoIndex(string $cargoIndex): self
     {
@@ -37,7 +37,7 @@ class OrderPrintRequest
     }
 
     /**
-     * Тип файла.
+     * Тип файла
      */
     public function getType(): string
     {
@@ -45,7 +45,7 @@ class OrderPrintRequest
     }
 
     /**
-     * Тип файла.
+     * Тип файла
      */
     public function setType(string $type): self
     {

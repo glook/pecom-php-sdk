@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CargopickupnetworkPayer
 {
     /**
-     * Данные о плательщике-третьем лице. Обязательно при type = 3.
+     * Данные о плательщике-третьем лице. Обязательно при type = 3
      *
      * @var null|CargopickupnetworkPayerOther
      */
     protected $other;
 
     /**
-     * 1 — отправитель, 2 — получатель, 3 — третье лицо.
+     * 1 — отправитель, 2 — получатель, 3 — третье лицо
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Данные о плательщике-третьем лице. Обязательно при type = 3.
+     * Данные о плательщике-третьем лице. Обязательно при type = 3
      */
     public function getOther(): ?CargopickupnetworkPayerOther
     {
@@ -27,7 +27,7 @@ class CargopickupnetworkPayer
     }
 
     /**
-     * Данные о плательщике-третьем лице. Обязательно при type = 3.
+     * Данные о плательщике-третьем лице. Обязательно при type = 3
      */
     public function setOther(?CargopickupnetworkPayerOther $other): self
     {
@@ -37,7 +37,7 @@ class CargopickupnetworkPayer
     }
 
     /**
-     * 1 — отправитель, 2 — получатель, 3 — третье лицо.
+     * 1 — отправитель, 2 — получатель, 3 — третье лицо
      */
     public function getType(): int
     {
@@ -45,7 +45,7 @@ class CargopickupnetworkPayer
     }
 
     /**
-     * 1 — отправитель, 2 — получатель, 3 — третье лицо.
+     * 1 — отправитель, 2 — получатель, 3 — третье лицо
      */
     public function setType(int $type): self
     {

@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatusError
 {
     /**
-     * Детали ошибки.
+     * Детали ошибки
      *
      * @var null|string
      */
     protected $error;
 
     /**
-     * Сообщение об ошибке.
+     * Сообщение об ошибке
      *
      * @var null|string
      */
     protected $message;
 
     /**
-     * HTTP статус код.
+     * HTTP статус код
      *
      * @var null|int
      */
     protected $status;
 
     /**
-     * Заголовок ошибки.
+     * Заголовок ошибки
      *
      * @var null|string
      */
     protected $title;
 
     /**
-     * Детали ошибки.
+     * Детали ошибки
      */
     public function getError(): ?string
     {
@@ -41,7 +41,7 @@ class CurrentStatusError
     }
 
     /**
-     * Детали ошибки.
+     * Детали ошибки
      */
     public function setError(?string $error): self
     {
@@ -51,7 +51,7 @@ class CurrentStatusError
     }
 
     /**
-     * Сообщение об ошибке.
+     * Сообщение об ошибке
      */
     public function getMessage(): ?string
     {
@@ -59,7 +59,7 @@ class CurrentStatusError
     }
 
     /**
-     * Сообщение об ошибке.
+     * Сообщение об ошибке
      */
     public function setMessage(?string $message): self
     {
@@ -69,7 +69,7 @@ class CurrentStatusError
     }
 
     /**
-     * HTTP статус код.
+     * HTTP статус код
      */
     public function getStatus(): ?int
     {
@@ -77,7 +77,7 @@ class CurrentStatusError
     }
 
     /**
-     * HTTP статус код.
+     * HTTP статус код
      */
     public function setStatus(?int $status): self
     {
@@ -87,7 +87,7 @@ class CurrentStatusError
     }
 
     /**
-     * Заголовок ошибки.
+     * Заголовок ошибки
      */
     public function getTitle(): ?string
     {
@@ -95,7 +95,7 @@ class CurrentStatusError
     }
 
     /**
-     * Заголовок ошибки.
+     * Заголовок ошибки
      */
     public function setTitle(?string $title): self
     {

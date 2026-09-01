@@ -12,14 +12,14 @@ class ServiceDelivery
     protected $avisationDateTime;
 
     /**
-     * Метры переноски груза, поле необязательно.
+     * Метры переноски груза, поле необязательно
      *
      * @var null|int
      */
     protected $carryingDistance;
 
     /**
-     * Плановая дата доставки, поле необязательно.
+     * Плановая дата доставки, поле необязательно
      *
      * @var null|\DateTime
      */
@@ -40,21 +40,21 @@ class ServiceDelivery
     protected $enabled;
 
     /**
-     * Этаж, поле необязательно.
+     * Этаж, поле необязательно
      *
      * @var null|int
      */
     protected $floor;
 
     /**
-     * Есть лифт, поле необязательно.
+     * Есть лифт, поле необязательно
      *
      * @var null|bool
      */
     protected $isElevator;
 
     /**
-     * Необходима разгрузка силами «ПЭК», поле необязательно.
+     * Необходима разгрузка силами «ПЭК», поле необязательно
      *
      * @var null|bool
      */
@@ -84,7 +84,7 @@ class ServiceDelivery
     }
 
     /**
-     * Метры переноски груза, поле необязательно.
+     * Метры переноски груза, поле необязательно
      */
     public function getCarryingDistance(): ?int
     {
@@ -92,7 +92,7 @@ class ServiceDelivery
     }
 
     /**
-     * Метры переноски груза, поле необязательно.
+     * Метры переноски груза, поле необязательно
      */
     public function setCarryingDistance(?int $carryingDistance): self
     {
@@ -102,7 +102,7 @@ class ServiceDelivery
     }
 
     /**
-     * Плановая дата доставки, поле необязательно.
+     * Плановая дата доставки, поле необязательно
      */
     public function getDateOfDelivery(): ?\DateTime
     {
@@ -110,7 +110,7 @@ class ServiceDelivery
     }
 
     /**
-     * Плановая дата доставки, поле необязательно.
+     * Плановая дата доставки, поле необязательно
      */
     public function setDateOfDelivery(?\DateTime $dateOfDelivery): self
     {
@@ -156,7 +156,7 @@ class ServiceDelivery
     }
 
     /**
-     * Этаж, поле необязательно.
+     * Этаж, поле необязательно
      */
     public function getFloor(): ?int
     {
@@ -164,7 +164,7 @@ class ServiceDelivery
     }
 
     /**
-     * Этаж, поле необязательно.
+     * Этаж, поле необязательно
      */
     public function setFloor(?int $floor): self
     {
@@ -174,7 +174,7 @@ class ServiceDelivery
     }
 
     /**
-     * Есть лифт, поле необязательно.
+     * Есть лифт, поле необязательно
      */
     public function getIsElevator(): ?bool
     {
@@ -182,7 +182,7 @@ class ServiceDelivery
     }
 
     /**
-     * Есть лифт, поле необязательно.
+     * Есть лифт, поле необязательно
      */
     public function setIsElevator(?bool $isElevator): self
     {
@@ -192,7 +192,7 @@ class ServiceDelivery
     }
 
     /**
-     * Необходима разгрузка силами «ПЭК», поле необязательно.
+     * Необходима разгрузка силами «ПЭК», поле необязательно
      */
     public function getIsLoading(): ?bool
     {
@@ -200,7 +200,7 @@ class ServiceDelivery
     }
 
     /**
-     * Необходима разгрузка силами «ПЭК», поле необязательно.
+     * Необходима разгрузка силами «ПЭК», поле необязательно
      */
     public function setIsLoading(?bool $isLoading): self
     {

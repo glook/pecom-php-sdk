@@ -5,63 +5,63 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosServiceItem
 {
     /**
-     * Филиал.
+     * Филиал
      *
      * @var null|string
      */
     protected $branch;
 
     /**
-     * Валюта.
+     * Валюта
      *
      * @var null|string
      */
     protected $currencyName;
 
     /**
-     * Описание.
+     * Описание
      *
      * @var null|string
      */
     protected $description;
 
     /**
-     * Оплаченная сумма, руб.
+     * Оплаченная сумма, руб
      *
      * @var null|int
      */
     protected $paid;
 
     /**
-     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо.
+     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо
      *
      * @var null|int
      */
     protected $payerForm;
 
     /**
-     * Описание.
+     * Описание
      *
      * @var null|string
      */
     protected $payerName;
 
     /**
-     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо).
+     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо)
      *
      * @var null|int
      */
     protected $payerType;
 
     /**
-     * Выбранный способ оплаты задолженности.
+     * Выбранный способ оплаты задолженности
      *
      * @var null|string
      */
     protected $paymentMethod;
 
     /**
-     * Необходима оплата задолженности для получения груза.
+     * Необходима оплата задолженности для получения груза
      *
      * @var null|bool
      */
@@ -75,7 +75,7 @@ class CargosServiceItem
     protected $price;
 
     /**
-     * Филиал.
+     * Филиал
      */
     public function getBranch(): ?string
     {
@@ -83,7 +83,7 @@ class CargosServiceItem
     }
 
     /**
-     * Филиал.
+     * Филиал
      */
     public function setBranch(?string $branch): self
     {
@@ -93,7 +93,7 @@ class CargosServiceItem
     }
 
     /**
-     * Валюта.
+     * Валюта
      */
     public function getCurrencyName(): ?string
     {
@@ -101,7 +101,7 @@ class CargosServiceItem
     }
 
     /**
-     * Валюта.
+     * Валюта
      */
     public function setCurrencyName(?string $currencyName): self
     {
@@ -111,7 +111,7 @@ class CargosServiceItem
     }
 
     /**
-     * Описание.
+     * Описание
      */
     public function getDescription(): ?string
     {
@@ -119,7 +119,7 @@ class CargosServiceItem
     }
 
     /**
-     * Описание.
+     * Описание
      */
     public function setDescription(?string $description): self
     {
@@ -129,7 +129,7 @@ class CargosServiceItem
     }
 
     /**
-     * Оплаченная сумма, руб.
+     * Оплаченная сумма, руб
      */
     public function getPaid(): ?int
     {
@@ -137,7 +137,7 @@ class CargosServiceItem
     }
 
     /**
-     * Оплаченная сумма, руб.
+     * Оплаченная сумма, руб
      */
     public function setPaid(?int $paid): self
     {
@@ -147,7 +147,7 @@ class CargosServiceItem
     }
 
     /**
-     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо.
+     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо
      */
     public function getPayerForm(): ?int
     {
@@ -155,7 +155,7 @@ class CargosServiceItem
     }
 
     /**
-     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо.
+     * Тип контрагента плательщика за услугу. 1 — юридическое лицо, 2 — ИП, 3 — физическое лицо
      */
     public function setPayerForm(?int $payerForm): self
     {
@@ -165,7 +165,7 @@ class CargosServiceItem
     }
 
     /**
-     * Описание.
+     * Описание
      */
     public function getPayerName(): ?string
     {
@@ -173,7 +173,7 @@ class CargosServiceItem
     }
 
     /**
-     * Описание.
+     * Описание
      */
     public function setPayerName(?string $payerName): self
     {
@@ -183,7 +183,7 @@ class CargosServiceItem
     }
 
     /**
-     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо).
+     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо)
      */
     public function getPayerType(): ?int
     {
@@ -191,7 +191,7 @@ class CargosServiceItem
     }
 
     /**
-     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо).
+     * Плательщик (1 - отправитель, 2 - получатель, 3 - третье лицо)
      */
     public function setPayerType(?int $payerType): self
     {
@@ -201,7 +201,7 @@ class CargosServiceItem
     }
 
     /**
-     * Выбранный способ оплаты задолженности.
+     * Выбранный способ оплаты задолженности
      */
     public function getPaymentMethod(): ?string
     {
@@ -209,7 +209,7 @@ class CargosServiceItem
     }
 
     /**
-     * Выбранный способ оплаты задолженности.
+     * Выбранный способ оплаты задолженности
      */
     public function setPaymentMethod(?string $paymentMethod): self
     {
@@ -219,7 +219,7 @@ class CargosServiceItem
     }
 
     /**
-     * Необходима оплата задолженности для получения груза.
+     * Необходима оплата задолженности для получения груза
      */
     public function getPayToReceive(): ?bool
     {
@@ -227,7 +227,7 @@ class CargosServiceItem
     }
 
     /**
-     * Необходима оплата задолженности для получения груза.
+     * Необходима оплата задолженности для получения груза
      */
     public function setPayToReceive(?bool $payToReceive): self
     {

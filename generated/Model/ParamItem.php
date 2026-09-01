@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class ParamItem
 {
     /**
-     * Идентификатор параметра.
+     * Идентификатор параметра
      *
      * @var string
      */
     protected $key;
 
     /**
-     * Название параметра.
+     * Название параметра
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean).
+     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean)
      *
      * @var string
      */
     protected $type;
 
     /**
-     * Значение параметра.
+     * Значение параметра
      *
      * @var mixed
      */
     protected $values;
 
     /**
-     * Идентификатор параметра.
+     * Идентификатор параметра
      */
     public function getKey(): string
     {
@@ -41,7 +41,7 @@ class ParamItem
     }
 
     /**
-     * Идентификатор параметра.
+     * Идентификатор параметра
      */
     public function setKey(string $key): self
     {
@@ -51,7 +51,7 @@ class ParamItem
     }
 
     /**
-     * Название параметра.
+     * Название параметра
      */
     public function getName(): string
     {
@@ -59,7 +59,7 @@ class ParamItem
     }
 
     /**
-     * Название параметра.
+     * Название параметра
      */
     public function setName(string $name): self
     {
@@ -69,7 +69,7 @@ class ParamItem
     }
 
     /**
-     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean).
+     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean)
      */
     public function getType(): string
     {
@@ -77,7 +77,7 @@ class ParamItem
     }
 
     /**
-     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean).
+     * Тип значения (Numeric, String, UNIQUEIDENTIFIER, Money, Boolean)
      */
     public function setType(string $type): self
     {
@@ -87,7 +87,7 @@ class ParamItem
     }
 
     /**
-     * Значение параметра.
+     * Значение параметра
      *
      * @return mixed
      */
@@ -97,7 +97,7 @@ class ParamItem
     }
 
     /**
-     * Значение параметра.
+     * Значение параметра
      *
      * @param mixed $values
      */

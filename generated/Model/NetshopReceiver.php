@@ -10,7 +10,7 @@ class NetshopReceiver
     protected $inn;
 
     /**
-     * Название получателя.
+     * Название получателя
      *
      * @var string
      */
@@ -34,7 +34,7 @@ class NetshopReceiver
     }
 
     /**
-     * Название получателя.
+     * Название получателя
      */
     public function getReceiver(): string
     {
@@ -42,7 +42,7 @@ class NetshopReceiver
     }
 
     /**
-     * Название получателя.
+     * Название получателя
      */
     public function setReceiver(string $receiver): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class ConnectedDiscountsServicesAgreementsRequest
 {
     /**
-     * Токен для авторизации. Обязательный. См. метод [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
+     * Токен для авторизации. Обязательный. См. метод [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
      *
      * @var string
      */
     protected $accessToken;
 
     /**
-     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Обязательный. См. метод [`/counterparts/confirmedaccesstocounterparties/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
+     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Обязательный. См. метод [`/counterparts/confirmedaccesstocounterparties/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      *
      * @var string
      */
     protected $counterpartGUID;
 
     /**
-     * Токен для авторизации. Обязательный. См. метод [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
+     * Токен для авторизации. Обязательный. См. метод [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
      */
     public function getAccessToken(): string
     {
@@ -27,7 +27,7 @@ class ConnectedDiscountsServicesAgreementsRequest
     }
 
     /**
-     * Токен для авторизации. Обязательный. См. метод [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/).
+     * Токен для авторизации. Обязательный. См. метод [`/auth/createtokentoaccessprivatedata/`](#tag/auth/POST/auth/createtokentoaccessprivatedata/)
      */
     public function setAccessToken(string $accessToken): self
     {
@@ -37,7 +37,7 @@ class ConnectedDiscountsServicesAgreementsRequest
     }
 
     /**
-     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Обязательный. См. метод [`/counterparts/confirmedaccesstocounterparties/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
+     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Обязательный. См. метод [`/counterparts/confirmedaccesstocounterparties/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      */
     public function getCounterpartGUID(): string
     {
@@ -45,7 +45,7 @@ class ConnectedDiscountsServicesAgreementsRequest
     }
 
     /**
-     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Обязательный. См. метод [`/counterparts/confirmedaccesstocounterparties/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
+     * Уникальный идентификатор (GUID) контрагента в системах ПЭК. Обязательный. См. метод [`/counterparts/confirmedaccesstocounterparties/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      */
     public function setCounterpartGUID(string $counterpartGUID): self
     {

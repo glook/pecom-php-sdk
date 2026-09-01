@@ -19,14 +19,14 @@ class CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     protected $positionsCount;
 
     /**
-     * Общий объём, м³.
+     * Общий объём, м³
      *
      * @var null|float
      */
     protected $volume;
 
     /**
-     * Общий вес, кг.
+     * Общий вес, кг
      *
      * @var null|float
      */
@@ -69,7 +69,7 @@ class CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     }
 
     /**
-     * Общий объём, м³.
+     * Общий объём, м³
      */
     public function getVolume(): ?float
     {
@@ -77,7 +77,7 @@ class CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     }
 
     /**
-     * Общий объём, м³.
+     * Общий объём, м³
      */
     public function setVolume(?float $volume): self
     {
@@ -87,7 +87,7 @@ class CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     }
 
     /**
-     * Общий вес, кг.
+     * Общий вес, кг
      */
     public function getWeight(): ?float
     {
@@ -95,7 +95,7 @@ class CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     }
 
     /**
-     * Общий вес, кг.
+     * Общий вес, кг
      */
     public function setWeight(?float $weight): self
     {

@@ -5,56 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class NearestDepartment
 {
     /**
-     * Адрес отделения.
+     * Адрес отделения
      *
      * @var string
      */
     protected $address;
 
     /**
-     * ID филиала, к которому относится отделение (организационная привязка).
+     * ID филиала, к которому относится отделение (организационная привязка)
      *
      * @var string
      */
     protected $branchId;
 
     /**
-     * Наименование филиала, к которому относится отделение (используется для передачи значения City в методах API).
+     * Наименование филиала, к которому относится отделение (используется для передачи значения City в методах API)
      *
      * @var string
      */
     protected $branchName;
 
     /**
-     * Координаты отделения.
+     * Координаты отделения
      *
      * @var BranchesCoordinates
      */
     protected $coordinates;
 
     /**
-     * Тип отделения. На текущий момент может быть 3 варианта: «Отделение компании», "Основное отделение филиала компании", «ПВЗ» (этот тип только в массиве `paidDepartments`).
+     * Тип отделения. На текущий момент может быть 3 варианта: «Отделение компании», "Основное отделение филиала компании", «ПВЗ» (этот тип только в массиве `paidDepartments`)
      *
      * @var string
      */
     protected $departmentType;
 
     /**
-     * ID типа отделения. 0 - Отделение компании, 1 - ПВЗ, 4 - Основное отделение компании в филиале.
+     * ID типа отделения. 0 - Отделение компании, 1 - ПВЗ, 4 - Основное отделение компании в филиале
      *
      * @var int
      */
     protected $departmentTypeId;
 
     /**
-     * Наименование отделения.
+     * Наименование отделения
      *
      * @var string
      */
     protected $divisionName;
 
     /**
-     * Электронный адрес отделения.
+     * Электронный адрес отделения
      *
      * @var string
      */
@@ -103,7 +103,7 @@ class NearestDepartment
     protected $maxWeightOnePlace;
 
     /**
-     * Телефон отделения.
+     * Телефон отделения
      *
      * @var string
      */
@@ -117,42 +117,42 @@ class NearestDepartment
     protected $priority;
 
     /**
-     * Праздничные и выходные дни отделения вне графика его работы.
+     * Праздничные и выходные дни отделения вне графика его работы
      *
      * @var string[]
      */
     protected $scheduleHolidayDays;
 
     /**
-     * Сокращенный режим работы.
+     * Сокращенный режим работы
      *
      * @var ScheduleShortWorkDay[]
      */
     protected $scheduleShortWorkDays;
 
     /**
-     * Временная зона, к которой относится отделение.
+     * Временная зона, к которой относится отделение
      *
      * @var string
      */
     protected $timeZone;
 
     /**
-     * Идентификатор города, к которому относится отделение. Используется в методе CalculatePrice.
+     * Идентификатор города, к которому относится отделение. Используется в методе CalculatePrice
      *
      * @var int
      */
     protected $townBitrixId;
 
     /**
-     * ID склада, используется в методах расчета стоимости и подачи заявок.
+     * ID склада, используется в методах расчета стоимости и подачи заявок
      *
      * @var null|string
      */
     protected $warehouseId;
 
     /**
-     * Адрес отделения.
+     * Адрес отделения
      */
     public function getAddress(): string
     {
@@ -160,7 +160,7 @@ class NearestDepartment
     }
 
     /**
-     * Адрес отделения.
+     * Адрес отделения
      */
     public function setAddress(string $address): self
     {
@@ -170,7 +170,7 @@ class NearestDepartment
     }
 
     /**
-     * ID филиала, к которому относится отделение (организационная привязка).
+     * ID филиала, к которому относится отделение (организационная привязка)
      */
     public function getBranchId(): string
     {
@@ -178,7 +178,7 @@ class NearestDepartment
     }
 
     /**
-     * ID филиала, к которому относится отделение (организационная привязка).
+     * ID филиала, к которому относится отделение (организационная привязка)
      */
     public function setBranchId(string $branchId): self
     {
@@ -188,7 +188,7 @@ class NearestDepartment
     }
 
     /**
-     * Наименование филиала, к которому относится отделение (используется для передачи значения City в методах API).
+     * Наименование филиала, к которому относится отделение (используется для передачи значения City в методах API)
      */
     public function getBranchName(): string
     {
@@ -196,7 +196,7 @@ class NearestDepartment
     }
 
     /**
-     * Наименование филиала, к которому относится отделение (используется для передачи значения City в методах API).
+     * Наименование филиала, к которому относится отделение (используется для передачи значения City в методах API)
      */
     public function setBranchName(string $branchName): self
     {
@@ -206,7 +206,7 @@ class NearestDepartment
     }
 
     /**
-     * Координаты отделения.
+     * Координаты отделения
      */
     public function getCoordinates(): BranchesCoordinates
     {
@@ -214,7 +214,7 @@ class NearestDepartment
     }
 
     /**
-     * Координаты отделения.
+     * Координаты отделения
      */
     public function setCoordinates(BranchesCoordinates $coordinates): self
     {
@@ -224,7 +224,7 @@ class NearestDepartment
     }
 
     /**
-     * Тип отделения. На текущий момент может быть 3 варианта: «Отделение компании», "Основное отделение филиала компании", «ПВЗ» (этот тип только в массиве `paidDepartments`).
+     * Тип отделения. На текущий момент может быть 3 варианта: «Отделение компании», "Основное отделение филиала компании", «ПВЗ» (этот тип только в массиве `paidDepartments`)
      */
     public function getDepartmentType(): string
     {
@@ -232,7 +232,7 @@ class NearestDepartment
     }
 
     /**
-     * Тип отделения. На текущий момент может быть 3 варианта: «Отделение компании», "Основное отделение филиала компании", «ПВЗ» (этот тип только в массиве `paidDepartments`).
+     * Тип отделения. На текущий момент может быть 3 варианта: «Отделение компании», "Основное отделение филиала компании", «ПВЗ» (этот тип только в массиве `paidDepartments`)
      */
     public function setDepartmentType(string $departmentType): self
     {
@@ -242,7 +242,7 @@ class NearestDepartment
     }
 
     /**
-     * ID типа отделения. 0 - Отделение компании, 1 - ПВЗ, 4 - Основное отделение компании в филиале.
+     * ID типа отделения. 0 - Отделение компании, 1 - ПВЗ, 4 - Основное отделение компании в филиале
      */
     public function getDepartmentTypeId(): int
     {
@@ -250,7 +250,7 @@ class NearestDepartment
     }
 
     /**
-     * ID типа отделения. 0 - Отделение компании, 1 - ПВЗ, 4 - Основное отделение компании в филиале.
+     * ID типа отделения. 0 - Отделение компании, 1 - ПВЗ, 4 - Основное отделение компании в филиале
      */
     public function setDepartmentTypeId(int $departmentTypeId): self
     {
@@ -260,7 +260,7 @@ class NearestDepartment
     }
 
     /**
-     * Наименование отделения.
+     * Наименование отделения
      */
     public function getDivisionName(): string
     {
@@ -268,7 +268,7 @@ class NearestDepartment
     }
 
     /**
-     * Наименование отделения.
+     * Наименование отделения
      */
     public function setDivisionName(string $divisionName): self
     {
@@ -278,7 +278,7 @@ class NearestDepartment
     }
 
     /**
-     * Электронный адрес отделения.
+     * Электронный адрес отделения
      */
     public function getEmail(): string
     {
@@ -286,7 +286,7 @@ class NearestDepartment
     }
 
     /**
-     * Электронный адрес отделения.
+     * Электронный адрес отделения
      */
     public function setEmail(string $email): self
     {
@@ -404,7 +404,7 @@ class NearestDepartment
     }
 
     /**
-     * Телефон отделения.
+     * Телефон отделения
      */
     public function getPhone(): string
     {
@@ -412,7 +412,7 @@ class NearestDepartment
     }
 
     /**
-     * Телефон отделения.
+     * Телефон отделения
      */
     public function setPhone(string $phone): self
     {
@@ -440,7 +440,7 @@ class NearestDepartment
     }
 
     /**
-     * Праздничные и выходные дни отделения вне графика его работы.
+     * Праздничные и выходные дни отделения вне графика его работы
      *
      * @return string[]
      */
@@ -450,7 +450,7 @@ class NearestDepartment
     }
 
     /**
-     * Праздничные и выходные дни отделения вне графика его работы.
+     * Праздничные и выходные дни отделения вне графика его работы
      *
      * @param string[] $scheduleHolidayDays
      */
@@ -462,7 +462,7 @@ class NearestDepartment
     }
 
     /**
-     * Сокращенный режим работы.
+     * Сокращенный режим работы
      *
      * @return ScheduleShortWorkDay[]
      */
@@ -472,7 +472,7 @@ class NearestDepartment
     }
 
     /**
-     * Сокращенный режим работы.
+     * Сокращенный режим работы
      *
      * @param ScheduleShortWorkDay[] $scheduleShortWorkDays
      */
@@ -484,7 +484,7 @@ class NearestDepartment
     }
 
     /**
-     * Временная зона, к которой относится отделение.
+     * Временная зона, к которой относится отделение
      */
     public function getTimeZone(): string
     {
@@ -492,7 +492,7 @@ class NearestDepartment
     }
 
     /**
-     * Временная зона, к которой относится отделение.
+     * Временная зона, к которой относится отделение
      */
     public function setTimeZone(string $timeZone): self
     {
@@ -502,7 +502,7 @@ class NearestDepartment
     }
 
     /**
-     * Идентификатор города, к которому относится отделение. Используется в методе CalculatePrice.
+     * Идентификатор города, к которому относится отделение. Используется в методе CalculatePrice
      */
     public function getTownBitrixId(): int
     {
@@ -510,7 +510,7 @@ class NearestDepartment
     }
 
     /**
-     * Идентификатор города, к которому относится отделение. Используется в методе CalculatePrice.
+     * Идентификатор города, к которому относится отделение. Используется в методе CalculatePrice
      */
     public function setTownBitrixId(int $townBitrixId): self
     {
@@ -520,7 +520,7 @@ class NearestDepartment
     }
 
     /**
-     * ID склада, используется в методах расчета стоимости и подачи заявок.
+     * ID склада, используется в методах расчета стоимости и подачи заявок
      */
     public function getWarehouseId(): ?string
     {
@@ -528,7 +528,7 @@ class NearestDepartment
     }
 
     /**
-     * ID склада, используется в методах расчета стоимости и подачи заявок.
+     * ID склада, используется в методах расчета стоимости и подачи заявок
      */
     public function setWarehouseId(?string $warehouseId): self
     {

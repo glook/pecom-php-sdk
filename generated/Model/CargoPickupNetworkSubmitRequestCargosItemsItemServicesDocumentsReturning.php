@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
 {
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      *
      * @var bool
      */
     protected $enabled;
 
     /**
-     * Плательщик.
+     * Плательщик
      *
      * @var null|CargopickupnetworkPayer
      */
     protected $payer;
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function getEnabled(): bool
     {
@@ -27,7 +27,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function setEnabled(bool $enabled): self
     {
@@ -37,7 +37,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function getPayer(): ?CargopickupnetworkPayer
     {
@@ -45,7 +45,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function setPayer(?CargopickupnetworkPayer $payer): self
     {

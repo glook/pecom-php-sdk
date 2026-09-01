@@ -12,21 +12,21 @@ class BranchInfo
     protected $address;
 
     /**
-     * Филиал.
+     * Филиал
      *
      * @var null|string
      */
     protected $city;
 
     /**
-     * Email.
+     * Email
      *
      * @var null|string
      */
     protected $email;
 
     /**
-     * Телефоны.
+     * Телефоны
      *
      * @var null|string
      */
@@ -51,7 +51,7 @@ class BranchInfo
     }
 
     /**
-     * Филиал.
+     * Филиал
      */
     public function getCity(): ?string
     {
@@ -59,7 +59,7 @@ class BranchInfo
     }
 
     /**
-     * Филиал.
+     * Филиал
      */
     public function setCity(?string $city): self
     {
@@ -69,7 +69,7 @@ class BranchInfo
     }
 
     /**
-     * Email.
+     * Email
      */
     public function getEmail(): ?string
     {
@@ -77,7 +77,7 @@ class BranchInfo
     }
 
     /**
-     * Email.
+     * Email
      */
     public function setEmail(?string $email): self
     {
@@ -87,7 +87,7 @@ class BranchInfo
     }
 
     /**
-     * Телефоны.
+     * Телефоны
      */
     public function getPhone(): ?string
     {
@@ -95,7 +95,7 @@ class BranchInfo
     }
 
     /**
-     * Телефоны.
+     * Телефоны
      */
     public function setPhone(?string $phone): self
     {

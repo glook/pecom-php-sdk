@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class ValidationErrorError
 {
     /**
-     * Дополнительная ошибка.
+     * Дополнительная ошибка
      *
      * @var null|string
      */
@@ -17,28 +17,28 @@ class ValidationErrorError
     protected $fields;
 
     /**
-     * Общее описание ошибки.
+     * Общее описание ошибки
      *
      * @var null|string
      */
     protected $message;
 
     /**
-     * HTTP-статус ошибки.
+     * HTTP-статус ошибки
      *
      * @var null|int
      */
     protected $status;
 
     /**
-     * Краткий заголовок ошибки.
+     * Краткий заголовок ошибки
      *
      * @var null|string
      */
     protected $title;
 
     /**
-     * Дополнительная ошибка.
+     * Дополнительная ошибка
      */
     public function getError(): ?string
     {
@@ -46,7 +46,7 @@ class ValidationErrorError
     }
 
     /**
-     * Дополнительная ошибка.
+     * Дополнительная ошибка
      */
     public function setError(?string $error): self
     {
@@ -74,7 +74,7 @@ class ValidationErrorError
     }
 
     /**
-     * Общее описание ошибки.
+     * Общее описание ошибки
      */
     public function getMessage(): ?string
     {
@@ -82,7 +82,7 @@ class ValidationErrorError
     }
 
     /**
-     * Общее описание ошибки.
+     * Общее описание ошибки
      */
     public function setMessage(?string $message): self
     {
@@ -92,7 +92,7 @@ class ValidationErrorError
     }
 
     /**
-     * HTTP-статус ошибки.
+     * HTTP-статус ошибки
      */
     public function getStatus(): ?int
     {
@@ -100,7 +100,7 @@ class ValidationErrorError
     }
 
     /**
-     * HTTP-статус ошибки.
+     * HTTP-статус ошибки
      */
     public function setStatus(?int $status): self
     {
@@ -110,7 +110,7 @@ class ValidationErrorError
     }
 
     /**
-     * Краткий заголовок ошибки.
+     * Краткий заголовок ошибки
      */
     public function getTitle(): ?string
     {
@@ -118,7 +118,7 @@ class ValidationErrorError
     }
 
     /**
-     * Краткий заголовок ошибки.
+     * Краткий заголовок ошибки
      */
     public function setTitle(?string $title): self
     {

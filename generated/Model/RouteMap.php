@@ -12,49 +12,49 @@ class RouteMap
     protected $branchName;
 
     /**
-     * Контрагенты в маршрутном листе.
+     * Контрагенты в маршрутном листе
      *
      * @var null|CounterpartInRouteMap[]
      */
     protected $counterpartsInRouteMap;
 
     /**
-     * ФИО водителя.
+     * ФИО водителя
      *
      * @var null|string
      */
     protected $driverFIO;
 
     /**
-     * паспортные данные водителя (используются для заказа пропусков).
+     * паспортные данные водителя (используются для заказа пропусков)
      *
      * @var null|string
      */
     protected $driverPassport;
 
     /**
-     * Телефон водителя.
+     * Телефон водителя
      *
      * @var null|string
      */
     protected $driverPhone;
 
     /**
-     * Внутренний идентификатор маршрутного листа.
+     * Внутренний идентификатор маршрутного листа
      *
      * @var null|string
      */
     protected $routeMapUID;
 
     /**
-     * наименование марки автомобиля водитлея.
+     * наименование марки автомобиля водитлея
      *
      * @var null|string
      */
     protected $vehicleBrand;
 
     /**
-     * государственный номер автомобиля.
+     * государственный номер автомобиля
      *
      * @var null|string
      */
@@ -79,7 +79,7 @@ class RouteMap
     }
 
     /**
-     * Контрагенты в маршрутном листе.
+     * Контрагенты в маршрутном листе
      *
      * @return null|CounterpartInRouteMap[]
      */
@@ -89,7 +89,7 @@ class RouteMap
     }
 
     /**
-     * Контрагенты в маршрутном листе.
+     * Контрагенты в маршрутном листе
      *
      * @param null|CounterpartInRouteMap[] $counterpartsInRouteMap
      */
@@ -101,7 +101,7 @@ class RouteMap
     }
 
     /**
-     * ФИО водителя.
+     * ФИО водителя
      */
     public function getDriverFIO(): ?string
     {
@@ -109,7 +109,7 @@ class RouteMap
     }
 
     /**
-     * ФИО водителя.
+     * ФИО водителя
      */
     public function setDriverFIO(?string $driverFIO): self
     {
@@ -119,7 +119,7 @@ class RouteMap
     }
 
     /**
-     * паспортные данные водителя (используются для заказа пропусков).
+     * паспортные данные водителя (используются для заказа пропусков)
      */
     public function getDriverPassport(): ?string
     {
@@ -127,7 +127,7 @@ class RouteMap
     }
 
     /**
-     * паспортные данные водителя (используются для заказа пропусков).
+     * паспортные данные водителя (используются для заказа пропусков)
      */
     public function setDriverPassport(?string $driverPassport): self
     {
@@ -137,7 +137,7 @@ class RouteMap
     }
 
     /**
-     * Телефон водителя.
+     * Телефон водителя
      */
     public function getDriverPhone(): ?string
     {
@@ -145,7 +145,7 @@ class RouteMap
     }
 
     /**
-     * Телефон водителя.
+     * Телефон водителя
      */
     public function setDriverPhone(?string $driverPhone): self
     {
@@ -155,7 +155,7 @@ class RouteMap
     }
 
     /**
-     * Внутренний идентификатор маршрутного листа.
+     * Внутренний идентификатор маршрутного листа
      */
     public function getRouteMapUID(): ?string
     {
@@ -163,7 +163,7 @@ class RouteMap
     }
 
     /**
-     * Внутренний идентификатор маршрутного листа.
+     * Внутренний идентификатор маршрутного листа
      */
     public function setRouteMapUID(?string $routeMapUID): self
     {
@@ -173,7 +173,7 @@ class RouteMap
     }
 
     /**
-     * наименование марки автомобиля водитлея.
+     * наименование марки автомобиля водитлея
      */
     public function getVehicleBrand(): ?string
     {
@@ -181,7 +181,7 @@ class RouteMap
     }
 
     /**
-     * наименование марки автомобиля водитлея.
+     * наименование марки автомобиля водитлея
      */
     public function setVehicleBrand(?string $vehicleBrand): self
     {
@@ -191,7 +191,7 @@ class RouteMap
     }
 
     /**
-     * государственный номер автомобиля.
+     * государственный номер автомобиля
      */
     public function getVehicleNumber(): ?string
     {
@@ -199,7 +199,7 @@ class RouteMap
     }
 
     /**
-     * государственный номер автомобиля.
+     * государственный номер автомобиля
      */
     public function setVehicleNumber(?string $vehicleNumber): self
     {

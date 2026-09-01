@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class ForcedStorageItem
 {
     /**
-     * Праздничные дни.
+     * Праздничные дни
      *
      * @var null|string[]
      */
     protected $holidays;
 
     /**
-     * Расчёт услуги вынужденное хранение.
+     * Расчёт услуги вынужденное хранение
      *
      * @var null|ForcedStoragePeriod[]
      */
     protected $items;
 
     /**
-     * Праздничные дни.
+     * Праздничные дни
      *
      * @return null|string[]
      */
@@ -29,7 +29,7 @@ class ForcedStorageItem
     }
 
     /**
-     * Праздничные дни.
+     * Праздничные дни
      *
      * @param null|string[] $holidays
      */
@@ -41,7 +41,7 @@ class ForcedStorageItem
     }
 
     /**
-     * Расчёт услуги вынужденное хранение.
+     * Расчёт услуги вынужденное хранение
      *
      * @return null|ForcedStoragePeriod[]
      */
@@ -51,7 +51,7 @@ class ForcedStorageItem
     }
 
     /**
-     * Расчёт услуги вынужденное хранение.
+     * Расчёт услуги вынужденное хранение
      *
      * @param null|ForcedStoragePeriod[] $items
      */

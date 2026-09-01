@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesAllPostResponse200
 {
     /**
-     * Список филиалов.
+     * Список филиалов
      *
      * @var Branch[]
      */
     protected $branches;
 
     /**
-     * Список филиалов.
+     * Список филиалов
      *
      * @return Branch[]
      */
@@ -22,7 +22,7 @@ class BranchesAllPostResponse200
     }
 
     /**
-     * Список филиалов.
+     * Список филиалов
      *
      * @param Branch[] $branches
      */

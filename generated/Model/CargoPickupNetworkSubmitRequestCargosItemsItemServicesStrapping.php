@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
 {
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      *
      * @var bool
      */
     protected $enabled;
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function getEnabled(): bool
     {
@@ -20,7 +20,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function setEnabled(bool $enabled): self
     {

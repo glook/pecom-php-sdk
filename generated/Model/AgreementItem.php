@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class AgreementItem
 {
     /**
-     * Актуальная дата начала действия соглашения.
+     * Актуальная дата начала действия соглашения
      *
      * @var string
      */
     protected $beginDate;
 
     /**
-     * Актуальная дата окончания действия соглашения.
+     * Актуальная дата окончания действия соглашения
      *
      * @var string
      */
@@ -24,7 +24,7 @@ class AgreementItem
     protected $specialCondition;
 
     /**
-     * Актуальная дата начала действия соглашения.
+     * Актуальная дата начала действия соглашения
      */
     public function getBeginDate(): string
     {
@@ -32,7 +32,7 @@ class AgreementItem
     }
 
     /**
-     * Актуальная дата начала действия соглашения.
+     * Актуальная дата начала действия соглашения
      */
     public function setBeginDate(string $beginDate): self
     {
@@ -42,7 +42,7 @@ class AgreementItem
     }
 
     /**
-     * Актуальная дата окончания действия соглашения.
+     * Актуальная дата окончания действия соглашения
      */
     public function getEndDate(): string
     {
@@ -50,7 +50,7 @@ class AgreementItem
     }
 
     /**
-     * Актуальная дата окончания действия соглашения.
+     * Актуальная дата окончания действия соглашения
      */
     public function setEndDate(string $endDate): self
     {

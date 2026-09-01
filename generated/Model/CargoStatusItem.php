@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoStatusItem
 {
     /**
-     * Параметры груза.
+     * Параметры груза
      *
      * @var null|CargoInfo
      */
     protected $cargo;
 
     /**
-     * Общая информация о грузе.
+     * Общая информация о грузе
      *
      * @var null|CargoStatusInfo
      */
     protected $info;
 
     /**
-     * Получатель.
+     * Получатель
      *
      * @var null|CargosCargoReceiver
      */
     protected $receiver;
 
     /**
-     * Отправитель.
+     * Отправитель
      *
      * @var null|CargoSender
      */
     protected $sender;
 
     /**
-     * Услуги.
+     * Услуги
      *
      * @var null|CargoServices
      */
     protected $services;
 
     /**
-     * Параметры груза.
+     * Параметры груза
      */
     public function getCargo(): ?CargoInfo
     {
@@ -48,7 +48,7 @@ class CargoStatusItem
     }
 
     /**
-     * Параметры груза.
+     * Параметры груза
      */
     public function setCargo(?CargoInfo $cargo): self
     {
@@ -58,7 +58,7 @@ class CargoStatusItem
     }
 
     /**
-     * Общая информация о грузе.
+     * Общая информация о грузе
      */
     public function getInfo(): ?CargoStatusInfo
     {
@@ -66,7 +66,7 @@ class CargoStatusItem
     }
 
     /**
-     * Общая информация о грузе.
+     * Общая информация о грузе
      */
     public function setInfo(?CargoStatusInfo $info): self
     {
@@ -76,7 +76,7 @@ class CargoStatusItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function getReceiver(): ?CargosCargoReceiver
     {
@@ -84,7 +84,7 @@ class CargoStatusItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function setReceiver(?CargosCargoReceiver $receiver): self
     {
@@ -94,7 +94,7 @@ class CargoStatusItem
     }
 
     /**
-     * Отправитель.
+     * Отправитель
      */
     public function getSender(): ?CargoSender
     {
@@ -102,7 +102,7 @@ class CargoStatusItem
     }
 
     /**
-     * Отправитель.
+     * Отправитель
      */
     public function setSender(?CargoSender $sender): self
     {
@@ -112,7 +112,7 @@ class CargoStatusItem
     }
 
     /**
-     * Услуги.
+     * Услуги
      */
     public function getServices(): ?CargoServices
     {
@@ -120,7 +120,7 @@ class CargoStatusItem
     }
 
     /**
-     * Услуги.
+     * Услуги
      */
     public function setServices(?CargoServices $services): self
     {

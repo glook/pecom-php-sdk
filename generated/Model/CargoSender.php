@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoSender
 {
     /**
-     * Филиал.
+     * Филиал
      *
      * @var null|string
      */
     protected $branch;
 
     /**
-     * Филиал отправителя.
+     * Филиал отправителя
      *
      * @var null|BranchInfo
      */
     protected $branchInfo;
 
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
      *
      * @var null|int
      */
@@ -33,28 +33,28 @@ class CargoSender
     protected $intakeAddress;
 
     /**
-     * Ответственное лицо.
+     * Ответственное лицо
      *
      * @var null|string
      */
     protected $person;
 
     /**
-     * Телефоны.
+     * Телефоны
      *
      * @var null|string
      */
     protected $phone;
 
     /**
-     * Наименование.
+     * Наименование
      *
      * @var null|string
      */
     protected $sender;
 
     /**
-     * Филиал.
+     * Филиал
      */
     public function getBranch(): ?string
     {
@@ -62,7 +62,7 @@ class CargoSender
     }
 
     /**
-     * Филиал.
+     * Филиал
      */
     public function setBranch(?string $branch): self
     {
@@ -72,7 +72,7 @@ class CargoSender
     }
 
     /**
-     * Филиал отправителя.
+     * Филиал отправителя
      */
     public function getBranchInfo(): ?BranchInfo
     {
@@ -80,7 +80,7 @@ class CargoSender
     }
 
     /**
-     * Филиал отправителя.
+     * Филиал отправителя
      */
     public function setBranchInfo(?BranchInfo $branchInfo): self
     {
@@ -90,7 +90,7 @@ class CargoSender
     }
 
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
      */
     public function getCounterpartPaymentType(): ?int
     {
@@ -98,7 +98,7 @@ class CargoSender
     }
 
     /**
-     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза).
+     * Тип договора с клиентом. 0 — Прочие договоры, 1 — Предоплата, 2 — Отсрочка платежа (тип 1), 3 — Отсрочка платежа (тип 2), 4 — Договор с интернет магазином, 5 — Оферта или стандартный договор (оплата до выдачи груза)
      */
     public function setCounterpartPaymentType(?int $counterpartPaymentType): self
     {
@@ -126,7 +126,7 @@ class CargoSender
     }
 
     /**
-     * Ответственное лицо.
+     * Ответственное лицо
      */
     public function getPerson(): ?string
     {
@@ -134,7 +134,7 @@ class CargoSender
     }
 
     /**
-     * Ответственное лицо.
+     * Ответственное лицо
      */
     public function setPerson(?string $person): self
     {
@@ -144,7 +144,7 @@ class CargoSender
     }
 
     /**
-     * Телефоны.
+     * Телефоны
      */
     public function getPhone(): ?string
     {
@@ -152,7 +152,7 @@ class CargoSender
     }
 
     /**
-     * Телефоны.
+     * Телефоны
      */
     public function setPhone(?string $phone): self
     {
@@ -162,7 +162,7 @@ class CargoSender
     }
 
     /**
-     * Наименование.
+     * Наименование
      */
     public function getSender(): ?string
     {
@@ -170,7 +170,7 @@ class CargoSender
     }
 
     /**
-     * Наименование.
+     * Наименование
      */
     public function setSender(?string $sender): self
     {

@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesAllPostBody
 {
     /**
-     * Идентификатор филиала (параметры ниже будет проигнорированы).
+     * Идентификатор филиала (параметры ниже будет проигнорированы)
      *
      * @var null|string
      */
     protected $branchId;
 
     /**
-     * Идентификатор отделения (параметр ниже будет проигнорирован).
+     * Идентификатор отделения (параметр ниже будет проигнорирован)
      *
      * @var null|string
      */
     protected $divisionId;
 
     /**
-     * Идентификатор склада.
+     * Идентификатор склада
      *
      * @var null|string
      */
     protected $warehouseId;
 
     /**
-     * Идентификатор филиала (параметры ниже будет проигнорированы).
+     * Идентификатор филиала (параметры ниже будет проигнорированы)
      */
     public function getBranchId(): ?string
     {
@@ -34,7 +34,7 @@ class BranchesAllPostBody
     }
 
     /**
-     * Идентификатор филиала (параметры ниже будет проигнорированы).
+     * Идентификатор филиала (параметры ниже будет проигнорированы)
      */
     public function setBranchId(?string $branchId): self
     {
@@ -44,7 +44,7 @@ class BranchesAllPostBody
     }
 
     /**
-     * Идентификатор отделения (параметр ниже будет проигнорирован).
+     * Идентификатор отделения (параметр ниже будет проигнорирован)
      */
     public function getDivisionId(): ?string
     {
@@ -52,7 +52,7 @@ class BranchesAllPostBody
     }
 
     /**
-     * Идентификатор отделения (параметр ниже будет проигнорирован).
+     * Идентификатор отделения (параметр ниже будет проигнорирован)
      */
     public function setDivisionId(?string $divisionId): self
     {
@@ -62,7 +62,7 @@ class BranchesAllPostBody
     }
 
     /**
-     * Идентификатор склада.
+     * Идентификатор склада
      */
     public function getWarehouseId(): ?string
     {
@@ -70,7 +70,7 @@ class BranchesAllPostBody
     }
 
     /**
-     * Идентификатор склада.
+     * Идентификатор склада
      */
     public function setWarehouseId(?string $warehouseId): self
     {

@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class NetshopSubmittedCargo
 {
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      *
      * @var string
      */
@@ -27,14 +27,14 @@ class NetshopSubmittedCargo
     protected $positions;
 
     /**
-     * Наименование склада приема груза.
+     * Наименование склада приема груза
      *
      * @var null|string
      */
     protected $stockTitle;
 
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      */
     public function getBarcode(): string
     {
@@ -42,7 +42,7 @@ class NetshopSubmittedCargo
     }
 
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      */
     public function setBarcode(string $barcode): self
     {
@@ -94,7 +94,7 @@ class NetshopSubmittedCargo
     }
 
     /**
-     * Наименование склада приема груза.
+     * Наименование склада приема груза
      */
     public function getStockTitle(): ?string
     {
@@ -102,7 +102,7 @@ class NetshopSubmittedCargo
     }
 
     /**
-     * Наименование склада приема груза.
+     * Наименование склада приема груза
      */
     public function setStockTitle(?string $stockTitle): self
     {

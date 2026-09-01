@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupSenderResponse
 {
     /**
-     * Нормализованный адрес как он был идентифицирован системами ПЭК.
+     * Нормализованный адрес как он был идентифицирован системами ПЭК
      *
      * @var string
      */
@@ -22,7 +22,7 @@ class CargoPickupSenderResponse
     protected $warehouseID;
 
     /**
-     * Нормализованный адрес как он был идентифицирован системами ПЭК.
+     * Нормализованный адрес как он был идентифицирован системами ПЭК
      */
     public function getAddressNormal(): string
     {
@@ -30,7 +30,7 @@ class CargoPickupSenderResponse
     }
 
     /**
-     * Нормализованный адрес как он был идентифицирован системами ПЭК.
+     * Нормализованный адрес как он был идентифицирован системами ПЭК
      */
     public function setAddressNormal(string $addressNormal): self
     {

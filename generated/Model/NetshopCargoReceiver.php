@@ -20,7 +20,7 @@ class NetshopCargoReceiver
     protected $phone;
 
     /**
-     * код адреса получателя.
+     * код адреса получателя
      *
      * @var string
      */
@@ -63,7 +63,7 @@ class NetshopCargoReceiver
     }
 
     /**
-     * код адреса получателя.
+     * код адреса получателя
      */
     public function getReceiverAddrCode(): string
     {
@@ -71,7 +71,7 @@ class NetshopCargoReceiver
     }
 
     /**
-     * код адреса получателя.
+     * код адреса получателя
      */
     public function setReceiverAddrCode(string $receiverAddrCode): self
     {

@@ -31,7 +31,7 @@ class PreregistrationReceiver
     protected $countryOfRegistrationCode;
 
     /**
-     * E-mail.
+     * E-mail
      *
      * @var null|string
      */
@@ -45,7 +45,7 @@ class PreregistrationReceiver
     protected $fs;
 
     /**
-     * Уникальный код идентификации Получателя и его местоположения, поле необязательно. Используется только для type = 7 «ДТС Автоперевозка». Переданный код GLN имеет приоритет над данными получателя и адресом получения.
+     * Уникальный код идентификации Получателя и его местоположения, поле необязательно. Используется только для type = 7 «ДТС Автоперевозка». Переданный код GLN имеет приоритет над данными получателя и адресом получения
      *
      * @var null|string
      */
@@ -57,6 +57,8 @@ class PreregistrationReceiver
     protected $identityCard;
 
     /**
+     * Обязательно для получателя — физического лица. При `docflowType = FFS_EDI` также обязательно для получателя-ИП. Для юридических лиц не передаётся.
+     *
      * @var null|Individual
      */
     protected $individual;
@@ -83,7 +85,7 @@ class PreregistrationReceiver
     protected $legalForm;
 
     /**
-     * Контактное лицо. Обязательно.
+     * Контактное лицо. Обязательно, в том числе при `docflowType = FFS_EDI`.
      *
      * @var string
      */
@@ -104,7 +106,7 @@ class PreregistrationReceiver
     protected $title;
 
     /**
-     * Идентификатор конкретного склада получения груза. Необязательно — см. комментарии.
+     * Идентификатор конкретного склада получения груза. Необязательно — см. комментарии
      *
      * @var null|string
      */
@@ -177,7 +179,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function getEmail(): ?string
     {
@@ -185,7 +187,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function setEmail(?string $email): self
     {
@@ -213,7 +215,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * Уникальный код идентификации Получателя и его местоположения, поле необязательно. Используется только для type = 7 «ДТС Автоперевозка». Переданный код GLN имеет приоритет над данными получателя и адресом получения.
+     * Уникальный код идентификации Получателя и его местоположения, поле необязательно. Используется только для type = 7 «ДТС Автоперевозка». Переданный код GLN имеет приоритет над данными получателя и адресом получения
      */
     public function getGLN(): ?string
     {
@@ -221,7 +223,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * Уникальный код идентификации Получателя и его местоположения, поле необязательно. Используется только для type = 7 «ДТС Автоперевозка». Переданный код GLN имеет приоритет над данными получателя и адресом получения.
+     * Уникальный код идентификации Получателя и его местоположения, поле необязательно. Используется только для type = 7 «ДТС Автоперевозка». Переданный код GLN имеет приоритет над данными получателя и адресом получения
      */
     public function setGLN(?string $gLN): self
     {
@@ -242,11 +244,17 @@ class PreregistrationReceiver
         return $this;
     }
 
+    /**
+     * Обязательно для получателя — физического лица. При `docflowType = FFS_EDI` также обязательно для получателя-ИП. Для юридических лиц не передаётся.
+     */
     public function getIndividual(): ?Individual
     {
         return $this->individual;
     }
 
+    /**
+     * Обязательно для получателя — физического лица. При `docflowType = FFS_EDI` также обязательно для получателя-ИП. Для юридических лиц не передаётся.
+     */
     public function setIndividual(?Individual $individual): self
     {
         $this->individual = $individual;
@@ -309,7 +317,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * Контактное лицо. Обязательно.
+     * Контактное лицо. Обязательно, в том числе при `docflowType = FFS_EDI`.
      */
     public function getPerson(): string
     {
@@ -317,7 +325,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * Контактное лицо. Обязательно.
+     * Контактное лицо. Обязательно, в том числе при `docflowType = FFS_EDI`.
      */
     public function setPerson(string $person): self
     {
@@ -367,7 +375,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * Идентификатор конкретного склада получения груза. Необязательно — см. комментарии.
+     * Идентификатор конкретного склада получения груза. Необязательно — см. комментарии
      */
     public function getWarehouseId(): ?string
     {
@@ -375,7 +383,7 @@ class PreregistrationReceiver
     }
 
     /**
-     * Идентификатор конкретного склада получения груза. Необязательно — см. комментарии.
+     * Идентификатор конкретного склада получения груза. Необязательно — см. комментарии
      */
     public function setWarehouseId(?string $warehouseId): self
     {

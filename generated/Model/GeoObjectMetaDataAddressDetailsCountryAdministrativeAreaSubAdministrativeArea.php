@@ -10,7 +10,7 @@ class GeoObjectMetaDataAddressDetailsCountryAdministrativeAreaSubAdministrativeA
     protected $locality;
 
     /**
-     * Название района.
+     * Название района
      *
      * @var string
      */
@@ -29,7 +29,7 @@ class GeoObjectMetaDataAddressDetailsCountryAdministrativeAreaSubAdministrativeA
     }
 
     /**
-     * Название района.
+     * Название района
      */
     public function getSubAdministrativeAreaName(): string
     {
@@ -37,7 +37,7 @@ class GeoObjectMetaDataAddressDetailsCountryAdministrativeAreaSubAdministrativeA
     }
 
     /**
-     * Название района.
+     * Название района
      */
     public function setSubAdministrativeAreaName(string $subAdministrativeAreaName): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class StatusHistoryItem
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
     protected $cargoCode;
 
     /**
-     * Все время в часовом поясе UTC + 3 часа.
+     * Все время в часовом поясе UTC + 3 часа
      *
      * @var null|StatusHistoryStatus[]
      */
     protected $statuses;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): ?string
     {
@@ -27,7 +27,7 @@ class StatusHistoryItem
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(?string $cargoCode): self
     {
@@ -37,7 +37,7 @@ class StatusHistoryItem
     }
 
     /**
-     * Все время в часовом поясе UTC + 3 часа.
+     * Все время в часовом поясе UTC + 3 часа
      *
      * @return null|StatusHistoryStatus[]
      */
@@ -47,7 +47,7 @@ class StatusHistoryItem
     }
 
     /**
-     * Все время в часовом поясе UTC + 3 часа.
+     * Все время в часовом поясе UTC + 3 часа
      *
      * @param null|StatusHistoryStatus[] $statuses
      */

@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoDetail
 {
     /**
-     * Фотографии.
+     * Фотографии
      *
      * @var null|CargoPhoto[]
      */
@@ -19,21 +19,21 @@ class CargoDetail
     protected $positionsCount;
 
     /**
-     * Объём, м3.
+     * Объём, м3
      *
      * @var null|float
      */
     protected $volume;
 
     /**
-     * Вес, кг.
+     * Вес, кг
      *
      * @var null|float
      */
     protected $weight;
 
     /**
-     * Фотографии.
+     * Фотографии
      *
      * @return null|CargoPhoto[]
      */
@@ -43,7 +43,7 @@ class CargoDetail
     }
 
     /**
-     * Фотографии.
+     * Фотографии
      *
      * @param null|CargoPhoto[] $photos
      */
@@ -73,7 +73,7 @@ class CargoDetail
     }
 
     /**
-     * Объём, м3.
+     * Объём, м3
      */
     public function getVolume(): ?float
     {
@@ -81,7 +81,7 @@ class CargoDetail
     }
 
     /**
-     * Объём, м3.
+     * Объём, м3
      */
     public function setVolume(?float $volume): self
     {
@@ -91,7 +91,7 @@ class CargoDetail
     }
 
     /**
-     * Вес, кг.
+     * Вес, кг
      */
     public function getWeight(): ?float
     {
@@ -99,7 +99,7 @@ class CargoDetail
     }
 
     /**
-     * Вес, кг.
+     * Вес, кг
      */
     public function setWeight(?float $weight): self
     {

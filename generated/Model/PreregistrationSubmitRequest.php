@@ -5,6 +5,11 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationSubmitRequest
 {
     /**
+     * @var null|PreregistrationEdiCounterpart
+     */
+    protected $eDICounterpart;
+
+    /**
      * @var PreregistrationCargo[]
      */
     protected $cargos;
@@ -23,6 +28,18 @@ class PreregistrationSubmitRequest
      * @var PreregistrationSender
      */
     protected $sender;
+
+    public function getEDICounterpart(): ?PreregistrationEdiCounterpart
+    {
+        return $this->eDICounterpart;
+    }
+
+    public function setEDICounterpart(?PreregistrationEdiCounterpart $eDICounterpart): self
+    {
+        $this->eDICounterpart = $eDICounterpart;
+
+        return $this;
+    }
 
     /**
      * @return PreregistrationCargo[]

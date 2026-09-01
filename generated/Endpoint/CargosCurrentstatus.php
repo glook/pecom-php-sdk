@@ -18,7 +18,7 @@ class CargosCurrentstatus extends BaseEndpoint implements Endpoint
     use EndpointTrait;
 
     /**
-     * - Максимальное количество кодов грузов в одном запросе: **15**.
+     * - Максимальное количество кодов грузов в одном запросе: **15**
      */
     public function __construct(CargosCurrentStatusRequest $requestBody)
     {

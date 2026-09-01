@@ -5,63 +5,63 @@ namespace glook\PecomSdk\Generated\Model;
 class ForcedStoragePeriod
 {
     /**
-     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`.
+     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`
      *
      * @var null|string
      */
     protected $cargoStatus;
 
     /**
-     * Стоимость хранения.
+     * Стоимость хранения
      *
      * @var null|float
      */
     protected $costStorage;
 
     /**
-     * Количество дней по окончанию действия тарифа.
+     * Количество дней по окончанию действия тарифа
      *
      * @var null|float
      */
     protected $endDataNumber;
 
     /**
-     * Дата окончания начисления.
+     * Дата окончания начисления
      *
      * @var null|string
      */
     protected $endDate;
 
     /**
-     * Минимальная стоимость хранения.
+     * Минимальная стоимость хранения
      *
      * @var null|float
      */
     protected $minStorageCost;
 
     /**
-     * Ставка.
+     * Ставка
      *
      * @var null|float
      */
     protected $rate;
 
     /**
-     * Количество дней с начала действия тарифа.
+     * Количество дней с начала действия тарифа
      *
      * @var null|float
      */
     protected $startDataNumber;
 
     /**
-     * Дата начисления.
+     * Дата начисления
      *
      * @var null|string
      */
     protected $startDate;
 
     /**
-     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`.
+     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`
      */
     public function getCargoStatus(): ?string
     {
@@ -69,7 +69,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`.
+     * Статус груза `Бесплатное хранение`, `Вынужденное хранение`, `Праздничные дни`, `В пути`, `Корректировка долга`
      */
     public function setCargoStatus(?string $cargoStatus): self
     {
@@ -79,7 +79,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Стоимость хранения.
+     * Стоимость хранения
      */
     public function getCostStorage(): ?float
     {
@@ -87,7 +87,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Стоимость хранения.
+     * Стоимость хранения
      */
     public function setCostStorage(?float $costStorage): self
     {
@@ -97,7 +97,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Количество дней по окончанию действия тарифа.
+     * Количество дней по окончанию действия тарифа
      */
     public function getEndDataNumber(): ?float
     {
@@ -105,7 +105,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Количество дней по окончанию действия тарифа.
+     * Количество дней по окончанию действия тарифа
      */
     public function setEndDataNumber(?float $endDataNumber): self
     {
@@ -115,7 +115,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Дата окончания начисления.
+     * Дата окончания начисления
      */
     public function getEndDate(): ?string
     {
@@ -123,7 +123,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Дата окончания начисления.
+     * Дата окончания начисления
      */
     public function setEndDate(?string $endDate): self
     {
@@ -133,7 +133,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Минимальная стоимость хранения.
+     * Минимальная стоимость хранения
      */
     public function getMinStorageCost(): ?float
     {
@@ -141,7 +141,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Минимальная стоимость хранения.
+     * Минимальная стоимость хранения
      */
     public function setMinStorageCost(?float $minStorageCost): self
     {
@@ -151,7 +151,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Ставка.
+     * Ставка
      */
     public function getRate(): ?float
     {
@@ -159,7 +159,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Ставка.
+     * Ставка
      */
     public function setRate(?float $rate): self
     {
@@ -169,7 +169,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Количество дней с начала действия тарифа.
+     * Количество дней с начала действия тарифа
      */
     public function getStartDataNumber(): ?float
     {
@@ -177,7 +177,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Количество дней с начала действия тарифа.
+     * Количество дней с начала действия тарифа
      */
     public function setStartDataNumber(?float $startDataNumber): self
     {
@@ -187,7 +187,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Дата начисления.
+     * Дата начисления
      */
     public function getStartDate(): ?string
     {
@@ -195,7 +195,7 @@ class ForcedStoragePeriod
     }
 
     /**
-     * Дата начисления.
+     * Дата начисления
      */
     public function setStartDate(?string $startDate): self
     {

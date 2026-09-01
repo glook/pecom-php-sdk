@@ -12,14 +12,14 @@ class PreregistrationSender
     protected $addressStock;
 
     /**
-     * Код страны регистрации по классификатору. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия. Для type = 7 «ДТС Автоперевозка» возможные значения: 643 - Россия и 112 - Беларусь.
+     * Код страны регистрации по классификатору. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия. Для type = 7 «ДТС Автоперевозка» возможные значения: 643 - Россия и 112 - Беларусь
      *
      * @var null|string
      */
     protected $countryOfRegistrationCode;
 
     /**
-     * E-mail.
+     * E-mail
      *
      * @var null|string
      */
@@ -38,6 +38,8 @@ class PreregistrationSender
     protected $identityCard;
 
     /**
+     * Обязательно для отправителя — физического лица. При `docflowType = FFS_EDI` также обязательно для отправителя-ИП. Для юридических лиц не передаётся.
+     *
      * @var null|Individual
      */
     protected $individual;
@@ -64,7 +66,7 @@ class PreregistrationSender
     protected $legalForm;
 
     /**
-     * Контактное лицо. Обязательно.
+     * Контактное лицо. Обязательно, в том числе при `docflowType = FFS_EDI`.
      *
      * @var string
      */
@@ -78,14 +80,14 @@ class PreregistrationSender
     protected $personPhones;
 
     /**
-     * Наименование юр.лица/ИП или ФИО физ.лица. Обязательно.
+     * Наименование юр.лица/ИП или ФИО физ.лица. Обязательно
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Идентификатор склада, куда будет привезен груз. Обязателен для orderType 0. Игнорируется для orderType 3, 4 и 14 — см. комментарии.
+     * Идентификатор склада, куда будет привезен груз. Обязателен для orderType 0. Игнорируется для orderType 3, 4 и 14 — см. комментарии
      *
      * @var null|string
      */
@@ -110,7 +112,7 @@ class PreregistrationSender
     }
 
     /**
-     * Код страны регистрации по классификатору. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия. Для type = 7 «ДТС Автоперевозка» возможные значения: 643 - Россия и 112 - Беларусь.
+     * Код страны регистрации по классификатору. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия. Для type = 7 «ДТС Автоперевозка» возможные значения: 643 - Россия и 112 - Беларусь
      */
     public function getCountryOfRegistrationCode(): ?string
     {
@@ -118,7 +120,7 @@ class PreregistrationSender
     }
 
     /**
-     * Код страны регистрации по классификатору. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия. Для type = 7 «ДТС Автоперевозка» возможные значения: 643 - Россия и 112 - Беларусь.
+     * Код страны регистрации по классификатору. Необязательно, рекомендуется к заполнению. По умолчанию: 643 - Россия. Для type = 7 «ДТС Автоперевозка» возможные значения: 643 - Россия и 112 - Беларусь
      */
     public function setCountryOfRegistrationCode(?string $countryOfRegistrationCode): self
     {
@@ -128,7 +130,7 @@ class PreregistrationSender
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function getEmail(): ?string
     {
@@ -136,7 +138,7 @@ class PreregistrationSender
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function setEmail(?string $email): self
     {
@@ -175,11 +177,17 @@ class PreregistrationSender
         return $this;
     }
 
+    /**
+     * Обязательно для отправителя — физического лица. При `docflowType = FFS_EDI` также обязательно для отправителя-ИП. Для юридических лиц не передаётся.
+     */
     public function getIndividual(): ?Individual
     {
         return $this->individual;
     }
 
+    /**
+     * Обязательно для отправителя — физического лица. При `docflowType = FFS_EDI` также обязательно для отправителя-ИП. Для юридических лиц не передаётся.
+     */
     public function setIndividual(?Individual $individual): self
     {
         $this->individual = $individual;
@@ -242,7 +250,7 @@ class PreregistrationSender
     }
 
     /**
-     * Контактное лицо. Обязательно.
+     * Контактное лицо. Обязательно, в том числе при `docflowType = FFS_EDI`.
      */
     public function getPerson(): string
     {
@@ -250,7 +258,7 @@ class PreregistrationSender
     }
 
     /**
-     * Контактное лицо. Обязательно.
+     * Контактное лицо. Обязательно, в том числе при `docflowType = FFS_EDI`.
      */
     public function setPerson(string $person): self
     {
@@ -282,7 +290,7 @@ class PreregistrationSender
     }
 
     /**
-     * Наименование юр.лица/ИП или ФИО физ.лица. Обязательно.
+     * Наименование юр.лица/ИП или ФИО физ.лица. Обязательно
      */
     public function getTitle(): string
     {
@@ -290,7 +298,7 @@ class PreregistrationSender
     }
 
     /**
-     * Наименование юр.лица/ИП или ФИО физ.лица. Обязательно.
+     * Наименование юр.лица/ИП или ФИО физ.лица. Обязательно
      */
     public function setTitle(string $title): self
     {
@@ -300,7 +308,7 @@ class PreregistrationSender
     }
 
     /**
-     * Идентификатор склада, куда будет привезен груз. Обязателен для orderType 0. Игнорируется для orderType 3, 4 и 14 — см. комментарии.
+     * Идентификатор склада, куда будет привезен груз. Обязателен для orderType 0. Игнорируется для orderType 3, 4 и 14 — см. комментарии
      */
     public function getWarehouseId(): ?string
     {
@@ -308,7 +316,7 @@ class PreregistrationSender
     }
 
     /**
-     * Идентификатор склада, куда будет привезен груз. Обязателен для orderType 0. Игнорируется для orderType 3, 4 и 14 — см. комментарии.
+     * Идентификатор склада, куда будет привезен груз. Обязателен для orderType 0. Игнорируется для orderType 3, 4 и 14 — см. комментарии
      */
     public function setWarehouseId(?string $warehouseId): self
     {

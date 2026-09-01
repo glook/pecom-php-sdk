@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class SpecialConditionWithParams
 {
     /**
-     * Параметры сервиса/скидки.
+     * Параметры сервиса/скидки
      *
      * @var ParamItem[]
      */
@@ -17,7 +17,7 @@ class SpecialConditionWithParams
     protected $specialCondition;
 
     /**
-     * Параметры сервиса/скидки.
+     * Параметры сервиса/скидки
      *
      * @return ParamItem[]
      */
@@ -27,7 +27,7 @@ class SpecialConditionWithParams
     }
 
     /**
-     * Параметры сервиса/скидки.
+     * Параметры сервиса/скидки
      *
      * @param ParamItem[] $params
      */

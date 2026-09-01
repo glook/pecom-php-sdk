@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationCoordinates
 {
     /**
-     * Географическая широта.
+     * Географическая широта
      *
      * @var null|string
      */
     protected $latitude;
 
     /**
-     * Географическая долгота.
+     * Географическая долгота
      *
      * @var null|string
      */
     protected $longitude;
 
     /**
-     * Географическая широта.
+     * Географическая широта
      */
     public function getLatitude(): ?string
     {
@@ -27,7 +27,7 @@ class PreregistrationCoordinates
     }
 
     /**
-     * Географическая широта.
+     * Географическая широта
      */
     public function setLatitude(?string $latitude): self
     {
@@ -37,7 +37,7 @@ class PreregistrationCoordinates
     }
 
     /**
-     * Географическая долгота.
+     * Географическая долгота
      */
     public function getLongitude(): ?string
     {
@@ -45,7 +45,7 @@ class PreregistrationCoordinates
     }
 
     /**
-     * Географическая долгота.
+     * Географическая долгота
      */
     public function setLongitude(?string $longitude): self
     {

@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesFindzonebyaddressPostResponse200
 {
     /**
-     * Код филиала. В актуальной версии протокола не используется.
+     * Код филиала. В актуальной версии протокола не используется
      *
      * @var string
      */
     protected $bitrixId;
 
     /**
-     * Код филиала.
+     * Код филиала
      *
      * @var string
      */
     protected $branchCode;
 
     /**
-     * Название филиала.
+     * Название филиала
      *
      * @var string
      */
     protected $branchTitle;
 
     /**
-     * Идентификатор филиала.
+     * Идентификатор филиала
      *
      * @var string
      */
     protected $branchUID;
 
     /**
-     * Геоданные адреса.
+     * Геоданные адреса
      *
      * @var BranchesGeoData
      */
     protected $geoData;
 
     /**
-     * ID склада основного отделения филиала.
+     * ID склада основного отделения филиала
      *
      * @var string
      */
@@ -54,21 +54,21 @@ class BranchesFindzonebyaddressPostResponse200
     protected $warehousePoint;
 
     /**
-     * Идентификатор зоны.
+     * Идентификатор зоны
      *
      * @var string
      */
     protected $zoneId;
 
     /**
-     * Наименование зоны.
+     * Наименование зоны
      *
      * @var string
      */
     protected $zoneName;
 
     /**
-     * Код филиала. В актуальной версии протокола не используется.
+     * Код филиала. В актуальной версии протокола не используется
      */
     public function getBitrixId(): string
     {
@@ -76,7 +76,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Код филиала. В актуальной версии протокола не используется.
+     * Код филиала. В актуальной версии протокола не используется
      */
     public function setBitrixId(string $bitrixId): self
     {
@@ -86,7 +86,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Код филиала.
+     * Код филиала
      */
     public function getBranchCode(): string
     {
@@ -94,7 +94,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Код филиала.
+     * Код филиала
      */
     public function setBranchCode(string $branchCode): self
     {
@@ -104,7 +104,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Название филиала.
+     * Название филиала
      */
     public function getBranchTitle(): string
     {
@@ -112,7 +112,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Название филиала.
+     * Название филиала
      */
     public function setBranchTitle(string $branchTitle): self
     {
@@ -122,7 +122,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Идентификатор филиала.
+     * Идентификатор филиала
      */
     public function getBranchUID(): string
     {
@@ -130,7 +130,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Идентификатор филиала.
+     * Идентификатор филиала
      */
     public function setBranchUID(string $branchUID): self
     {
@@ -140,7 +140,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Геоданные адреса.
+     * Геоданные адреса
      */
     public function getGeoData(): BranchesGeoData
     {
@@ -148,7 +148,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Геоданные адреса.
+     * Геоданные адреса
      */
     public function setGeoData(BranchesGeoData $geoData): self
     {
@@ -158,7 +158,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * ID склада основного отделения филиала.
+     * ID склада основного отделения филиала
      */
     public function getMainWarehouseId(): string
     {
@@ -166,7 +166,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * ID склада основного отделения филиала.
+     * ID склада основного отделения филиала
      */
     public function setMainWarehouseId(string $mainWarehouseId): self
     {
@@ -194,7 +194,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Идентификатор зоны.
+     * Идентификатор зоны
      */
     public function getZoneId(): string
     {
@@ -202,7 +202,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Идентификатор зоны.
+     * Идентификатор зоны
      */
     public function setZoneId(string $zoneId): self
     {
@@ -212,7 +212,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Наименование зоны.
+     * Наименование зоны
      */
     public function getZoneName(): string
     {
@@ -220,7 +220,7 @@ class BranchesFindzonebyaddressPostResponse200
     }
 
     /**
-     * Наименование зоны.
+     * Наименование зоны
      */
     public function setZoneName(string $zoneName): self
     {

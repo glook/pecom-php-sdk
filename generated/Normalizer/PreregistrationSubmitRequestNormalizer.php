@@ -40,6 +40,11 @@ class PreregistrationSubmitRequestNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('EDICounterpart', $data) && null !== $data['EDICounterpart']) {
+            $object->setEDICounterpart($this->denormalizer->denormalize($data['EDICounterpart'], 'glook\PecomSdk\Generated\Model\PreregistrationEdiCounterpart', 'json', $context));
+        } elseif (\array_key_exists('EDICounterpart', $data) && null === $data['EDICounterpart']) {
+            $object->setEDICounterpart(null);
+        }
         if (\array_key_exists('cargos', $data)) {
             $values = [];
             foreach ($data['cargos'] as $value) {
@@ -65,6 +70,9 @@ class PreregistrationSubmitRequestNormalizer implements DenormalizerInterface, N
     public function normalize($object, $format = null, array $context = [])
     {
         $data = [];
+        if (null !== $object->getEDICounterpart()) {
+            $data['EDICounterpart'] = $this->normalizer->normalize($object->getEDICounterpart(), 'json', $context);
+        }
         $values = [];
         foreach ($object->getCargos() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);

@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CommonErrorObject
 {
     /**
-     * Краткий заголовок ошибки.
+     * Краткий заголовок ошибки
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Подробное сообщение об ошибке.
+     * Подробное сообщение об ошибке
      *
      * @var string
      */
@@ -26,21 +26,21 @@ class CommonErrorObject
     protected $error;
 
     /**
-     * HTTP-статус или сервисный статус, если он присутствует в теле ответа.
+     * HTTP-статус или сервисный статус, если он присутствует в теле ответа
      *
      * @var null|int
      */
     protected $status;
 
     /**
-     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса).
+     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса)
      *
      * @var null|ValidationErrorField[]
      */
     protected $fields;
 
     /**
-     * Краткий заголовок ошибки.
+     * Краткий заголовок ошибки
      */
     public function getTitle(): string
     {
@@ -48,7 +48,7 @@ class CommonErrorObject
     }
 
     /**
-     * Краткий заголовок ошибки.
+     * Краткий заголовок ошибки
      */
     public function setTitle(string $title): self
     {
@@ -58,7 +58,7 @@ class CommonErrorObject
     }
 
     /**
-     * Подробное сообщение об ошибке.
+     * Подробное сообщение об ошибке
      */
     public function getMessage(): string
     {
@@ -66,7 +66,7 @@ class CommonErrorObject
     }
 
     /**
-     * Подробное сообщение об ошибке.
+     * Подробное сообщение об ошибке
      */
     public function setMessage(string $message): self
     {
@@ -98,7 +98,7 @@ class CommonErrorObject
     }
 
     /**
-     * HTTP-статус или сервисный статус, если он присутствует в теле ответа.
+     * HTTP-статус или сервисный статус, если он присутствует в теле ответа
      */
     public function getStatus(): ?int
     {
@@ -106,7 +106,7 @@ class CommonErrorObject
     }
 
     /**
-     * HTTP-статус или сервисный статус, если он присутствует в теле ответа.
+     * HTTP-статус или сервисный статус, если он присутствует в теле ответа
      */
     public function setStatus(?int $status): self
     {
@@ -116,7 +116,7 @@ class CommonErrorObject
     }
 
     /**
-     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса).
+     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса)
      *
      * @return null|ValidationErrorField[]
      */
@@ -126,7 +126,7 @@ class CommonErrorObject
     }
 
     /**
-     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса).
+     * Список полей с ошибками валидации (присутствует при ошибках валидации запроса)
      *
      * @param null|ValidationErrorField[] $fields
      */

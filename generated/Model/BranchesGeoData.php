@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesGeoData
 {
     /**
-     * Адресные данные.
+     * Адресные данные
      *
      * @var GeoDataAddress
      */
     protected $address;
 
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе.
+     * Название компоненты адреса, до которой определен адрес в ответе
      *
      * @var string
      */
@@ -26,7 +26,7 @@ class BranchesGeoData
     protected $precision;
 
     /**
-     * Адресные данные.
+     * Адресные данные
      */
     public function getAddress(): GeoDataAddress
     {
@@ -34,7 +34,7 @@ class BranchesGeoData
     }
 
     /**
-     * Адресные данные.
+     * Адресные данные
      */
     public function setAddress(GeoDataAddress $address): self
     {
@@ -44,7 +44,7 @@ class BranchesGeoData
     }
 
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе.
+     * Название компоненты адреса, до которой определен адрес в ответе
      */
     public function getKind(): string
     {
@@ -52,7 +52,7 @@ class BranchesGeoData
     }
 
     /**
-     * Название компоненты адреса, до которой определен адрес в ответе.
+     * Название компоненты адреса, до которой определен адрес в ответе
      */
     public function setKind(string $kind): self
     {

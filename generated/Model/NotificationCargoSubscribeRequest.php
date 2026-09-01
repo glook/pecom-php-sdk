@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class NotificationCargoSubscribeRequest
 {
     /**
-     * Коды грузов.
+     * Коды грузов
      *
      * @var string[]
      */
     protected $cargoCodes;
 
     /**
-     * email для уведомления, поле необязательно, если указано значение поля `phone`.
+     * email для уведомления, поле необязательно, если указано значение поля `phone`
      *
      * @var null|string
      */
     protected $email;
 
     /**
-     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`.
+     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`
      *
      * @var null|string
      */
     protected $phone;
 
     /**
-     * Коды грузов.
+     * Коды грузов
      *
      * @return string[]
      */
@@ -36,7 +36,7 @@ class NotificationCargoSubscribeRequest
     }
 
     /**
-     * Коды грузов.
+     * Коды грузов
      *
      * @param string[] $cargoCodes
      */
@@ -48,7 +48,7 @@ class NotificationCargoSubscribeRequest
     }
 
     /**
-     * email для уведомления, поле необязательно, если указано значение поля `phone`.
+     * email для уведомления, поле необязательно, если указано значение поля `phone`
      */
     public function getEmail(): ?string
     {
@@ -56,7 +56,7 @@ class NotificationCargoSubscribeRequest
     }
 
     /**
-     * email для уведомления, поле необязательно, если указано значение поля `phone`.
+     * email для уведомления, поле необязательно, если указано значение поля `phone`
      */
     public function setEmail(?string $email): self
     {
@@ -66,7 +66,7 @@ class NotificationCargoSubscribeRequest
     }
 
     /**
-     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`.
+     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`
      */
     public function getPhone(): ?string
     {
@@ -74,7 +74,7 @@ class NotificationCargoSubscribeRequest
     }
 
     /**
-     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`.
+     * номер телефона для SMS-уведомления, поле необязательно, если указано значение поля `email`
      */
     public function setPhone(?string $phone): self
     {

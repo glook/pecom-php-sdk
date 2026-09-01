@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BasicStatusResponse
 {
     /**
-     * Статусы грузов.
+     * Статусы грузов
      *
      * @var null|BasicStatusItem[]
      */
     protected $cargos;
 
     /**
-     * Статусы грузов.
+     * Статусы грузов
      *
      * @return null|BasicStatusItem[]
      */
@@ -22,7 +22,7 @@ class BasicStatusResponse
     }
 
     /**
-     * Статусы грузов.
+     * Статусы грузов
      *
      * @param null|BasicStatusItem[] $cargos
      */

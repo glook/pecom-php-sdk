@@ -12,7 +12,7 @@ class CargosGeoData
     protected $address;
 
     /**
-     * Тип адреса.
+     * Тип адреса
      *
      * @var null|string
      */
@@ -37,7 +37,7 @@ class CargosGeoData
     }
 
     /**
-     * Тип адреса.
+     * Тип адреса
      */
     public function getKind(): ?string
     {
@@ -45,7 +45,7 @@ class CargosGeoData
     }
 
     /**
-     * Тип адреса.
+     * Тип адреса
      */
     public function setKind(?string $kind): self
     {

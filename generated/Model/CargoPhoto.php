@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPhoto
 {
     /**
-     * Содержимое файла.
+     * Содержимое файла
      *
      * @var null|string
      */
     protected $data;
 
     /**
-     * Имя файла.
+     * Имя файла
      *
      * @var null|string
      */
@@ -26,7 +26,7 @@ class CargoPhoto
     protected $mimeType;
 
     /**
-     * Содержимое файла.
+     * Содержимое файла
      */
     public function getData(): ?string
     {
@@ -34,7 +34,7 @@ class CargoPhoto
     }
 
     /**
-     * Содержимое файла.
+     * Содержимое файла
      */
     public function setData(?string $data): self
     {
@@ -44,7 +44,7 @@ class CargoPhoto
     }
 
     /**
-     * Имя файла.
+     * Имя файла
      */
     public function getFilename(): ?string
     {
@@ -52,7 +52,7 @@ class CargoPhoto
     }
 
     /**
-     * Имя файла.
+     * Имя файла
      */
     public function setFilename(?string $filename): self
     {
