@@ -58,7 +58,7 @@ class BranchesDepartmentslimit extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|BranchesDepartmentslimitPostResponse200
+     * @return BranchesDepartmentslimitPostResponse200
      *
      * @throws BranchesDepartmentslimitBadRequestException
      * @throws BranchesDepartmentslimitForbiddenException

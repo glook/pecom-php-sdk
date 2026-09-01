@@ -1,8 +1,9 @@
-Subject: Generate declared scalar and oneOf response bodies
+Subject: Generate declared scalar and oneOf response contracts
 
 Jane 6.3.9 records scalar and oneOf response schemas as null and decodes
 oneOf bodies into untyped values. This patch derives the declared PHP types,
-validates oneOf branches, and deserializes successful responses into models.
+validates oneOf branches, deserializes successful responses into models, and
+keeps fallback nullability aligned with unexpected-status handling.
 
 --- a/Generator/Endpoint/GetTransformResponseBodyTrait.php
 +++ b/Generator/Endpoint/GetTransformResponseBodyTrait.php
@@ -10,7 +11,7 @@ validates oneOf branches, and deserializes successful responses into models.
 +            $hasExplicitNullResponse = count(array_keys($outputTypes, 'null', true)) > 1;
 @@ -85,0 +87,4 @@
 +
-+            if (!$hasExplicitNullResponse && array_filter($outputTypes, [$this, 'isInferredResponseType'])) {
++            if (!$hasExplicitNullResponse && count($outputTypes) > 1 && $context->getRegistry()->getThrowUnexpectedStatusCode()) {
 +                $outputTypes = array_values(array_diff($outputTypes, ['null']));
 +            }
 @@ -141 +146 @@
@@ -193,7 +194,7 @@ validates oneOf branches, and deserializes successful responses into models.
 +        $statements[] = new Stmt\Throw_($exception);
 +
 +        return $statements;
-@@ -301,0 +451,101 @@
+@@ -301,0 +451,96 @@
 +
 +    private function createSchemaMatchCondition($schema, Expr $input, string $reference, GuessClass $guessClass, Context $context): Expr
 +    {
@@ -289,9 +290,4 @@ validates oneOf branches, and deserializes successful responses into models.
 +        }
 +
 +        return null;
-+    }
-+
-+    private function isInferredResponseType(string $type): bool
-+    {
-+        return 'string' === $type || 'string[]' === $type || false !== strpos($type, '|');
 +    }

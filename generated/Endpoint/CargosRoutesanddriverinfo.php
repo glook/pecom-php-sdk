@@ -55,7 +55,7 @@ class CargosRoutesanddriverinfo extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|RouteMapAddress[]
+     * @return RouteMapAddress[]
      *
      * @throws CargosRoutesanddriverinfoBadRequestException
      * @throws CargosRoutesanddriverinfoForbiddenException

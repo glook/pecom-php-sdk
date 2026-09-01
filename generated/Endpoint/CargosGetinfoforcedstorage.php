@@ -52,7 +52,7 @@ class CargosGetinfoforcedstorage extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ForcedStorageItem[]
+     * @return ForcedStorageItem[]
      *
      * @throws CargosGetinfoforcedstorageBadRequestException
      * @throws CargosGetinfoforcedstorageForbiddenException

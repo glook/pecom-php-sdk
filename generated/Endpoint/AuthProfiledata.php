@@ -42,7 +42,7 @@ class AuthProfiledata extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|AuthProfileDataResponse
+     * @return AuthProfileDataResponse
      *
      * @throws AuthProfiledataBadRequestException
      * @throws AuthProfiledataForbiddenException

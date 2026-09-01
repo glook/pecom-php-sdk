@@ -42,7 +42,7 @@ class ReceiversList extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ReceiversListResponse
+     * @return ReceiversListResponse
      *
      * @throws ReceiversListBadRequestException
      * @throws ReceiversListForbiddenException

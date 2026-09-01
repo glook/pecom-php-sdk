@@ -58,7 +58,7 @@ class BranchesSuggestaddressofintakeordelivery extends BaseEndpoint implements E
     }
 
     /**
-     * @return null|SuggestAddressResponse
+     * @return SuggestAddressResponse
      *
      * @throws BranchesSuggestaddressofintakeordeliveryBadRequestException
      * @throws BranchesSuggestaddressofintakeordeliveryForbiddenException

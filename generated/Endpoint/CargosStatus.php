@@ -59,7 +59,7 @@ class CargosStatus extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CargosStatusResponse
+     * @return CargosStatusResponse
      *
      * @throws CargosStatusBadRequestException
      * @throws CargosStatusForbiddenException

@@ -56,7 +56,7 @@ class ReceiversAdd extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ReceiversSuccessResponse
+     * @return ReceiversSuccessResponse
      *
      * @throws ReceiversAddBadRequestException
      * @throws ReceiversAddForbiddenException

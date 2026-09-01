@@ -42,7 +42,7 @@ class CurrencyAll extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CurrencyItem[]
+     * @return CurrencyItem[]
      *
      * @throws CurrencyAllBadRequestException
      * @throws CurrencyAllForbiddenException

@@ -55,7 +55,7 @@ class CalculatorCheckdeliverydate extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|DeliveryDateResult[]
+     * @return DeliveryDateResult[]
      *
      * @throws CalculatorCheckdeliverydateBadRequestException
      * @throws CalculatorCheckdeliverydateForbiddenException

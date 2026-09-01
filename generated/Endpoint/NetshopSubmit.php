@@ -57,7 +57,7 @@ class NetshopSubmit extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|NetshopSubmitResponse
+     * @return NetshopSubmitResponse
      *
      * @throws NetshopSubmitBadRequestException
      * @throws NetshopSubmitForbiddenException

@@ -55,7 +55,7 @@ class CargosStatusfullhistory extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|StatusHistoryItem[]
+     * @return StatusHistoryItem[]
      *
      * @throws CargosStatusfullhistoryBadRequestException
      * @throws CargosStatusfullhistoryForbiddenException

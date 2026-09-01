@@ -42,7 +42,7 @@ class CargocontentAll extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CargoContentItem[]
+     * @return CargoContentItem[]
      *
      * @throws CargocontentAllBadRequestException
      * @throws CargocontentAllForbiddenException

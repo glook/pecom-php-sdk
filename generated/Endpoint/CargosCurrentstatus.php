@@ -55,7 +55,7 @@ class CargosCurrentstatus extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CurrentStatusResponse
+     * @return CurrentStatusResponse
      *
      * @throws CargosCurrentstatusBadRequestException
      * @throws CargosCurrentstatusForbiddenException

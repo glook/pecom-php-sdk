@@ -42,7 +42,7 @@ class PreregistrationAvailabletypebarcode extends BaseEndpoint implements Endpoi
     }
 
     /**
-     * @return null|BarcodeType[]
+     * @return BarcodeType[]
      *
      * @throws PreregistrationAvailabletypebarcodeBadRequestException
      * @throws PreregistrationAvailabletypebarcodeForbiddenException

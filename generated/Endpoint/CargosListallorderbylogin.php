@@ -52,7 +52,7 @@ class CargosListallorderbylogin extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|ListAllOrderResponse
+     * @return ListAllOrderResponse
      *
      * @throws CargosListallorderbyloginBadRequestException
      * @throws CargosListallorderbyloginForbiddenException

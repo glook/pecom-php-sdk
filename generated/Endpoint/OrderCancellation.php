@@ -58,7 +58,7 @@ class OrderCancellation extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|OrderCancellationResult[]
+     * @return OrderCancellationResult[]
      *
      * @throws OrderCancellationBadRequestException
      * @throws OrderCancellationForbiddenException

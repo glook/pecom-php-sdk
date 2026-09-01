@@ -79,7 +79,7 @@ class CargopickupSubmit extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CargoPickupSubmitResponse
+     * @return CargoPickupSubmitResponse
      *
      * @throws CargopickupSubmitBadRequestException
      * @throws CargopickupSubmitForbiddenException

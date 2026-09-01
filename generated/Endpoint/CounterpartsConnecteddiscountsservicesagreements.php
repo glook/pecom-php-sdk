@@ -61,7 +61,7 @@ class CounterpartsConnecteddiscountsservicesagreements extends BaseEndpoint impl
     }
 
     /**
-     * @return null|ConnectedDiscountsServicesAgreementsResponse
+     * @return ConnectedDiscountsServicesAgreementsResponse
      *
      * @throws CounterpartsConnecteddiscountsservicesagreementsBadRequestException
      * @throws CounterpartsConnecteddiscountsservicesagreementsForbiddenException

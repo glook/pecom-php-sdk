@@ -56,7 +56,7 @@ class BranchesCheckpickupdate extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|BranchesCheckpickupdatePostResponse200
+     * @return BranchesCheckpickupdatePostResponse200
      *
      * @throws BranchesCheckpickupdateBadRequestException
      * @throws BranchesCheckpickupdateForbiddenException

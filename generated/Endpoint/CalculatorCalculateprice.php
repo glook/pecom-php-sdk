@@ -78,7 +78,7 @@ class CalculatorCalculateprice extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|CalculatePriceResponse
+     * @return CalculatePriceResponse
      *
      * @throws CalculatorCalculatepriceBadRequestException
      * @throws CalculatorCalculatepriceForbiddenException

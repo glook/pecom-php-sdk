@@ -57,7 +57,7 @@ class BranchesChecknocalcservices extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|BranchesChecknocalcservicesPostResponse200Item[]
+     * @return BranchesChecknocalcservicesPostResponse200Item[]
      *
      * @throws BranchesChecknocalcservicesBadRequestException
      * @throws BranchesChecknocalcservicesForbiddenException

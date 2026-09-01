@@ -42,7 +42,7 @@ class BranchesCountry extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|Country[]
+     * @return Country[]
      *
      * @throws BranchesCountryBadRequestException
      * @throws BranchesCountryForbiddenException

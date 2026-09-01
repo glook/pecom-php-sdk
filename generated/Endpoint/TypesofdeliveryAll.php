@@ -42,7 +42,7 @@ class TypesofdeliveryAll extends BaseEndpoint implements Endpoint
     }
 
     /**
-     * @return null|TypesOfDeliveryItem[]
+     * @return TypesOfDeliveryItem[]
      *
      * @throws TypesofdeliveryAllBadRequestException
      * @throws TypesofdeliveryAllForbiddenException

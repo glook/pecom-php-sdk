@@ -42,7 +42,7 @@ class AuthCreatetokentoaccessprivatedata extends BaseEndpoint implements Endpoin
     }
 
     /**
-     * @return null|AuthTokenResponse
+     * @return AuthTokenResponse
      *
      * @throws AuthCreatetokentoaccessprivatedataBadRequestException
      * @throws AuthCreatetokentoaccessprivatedataForbiddenException
