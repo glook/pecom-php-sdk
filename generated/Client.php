@@ -946,7 +946,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface
+     * @return ResponseInterface|string[]
      *
      * @throws CargosdocumentsCargoinvoicebyperiodBadRequestException
      * @throws CargosdocumentsCargoinvoicebyperiodForbiddenException
@@ -1164,7 +1164,7 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|ResponseInterface
+     * @return ResponseInterface|string
      *
      * @throws OrderPrintBadRequestException
      * @throws OrderPrintForbiddenException

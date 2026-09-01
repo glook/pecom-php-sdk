@@ -20,7 +20,6 @@ use glook\PecomSdk\Generated\Model\PreregistrationSubmitRequest;
 use glook\PecomSdk\Generated\Model\PreregistrationSubmitResponse;
 use glook\PecomSdk\Generated\Model\TypesOfDeliveryItem;
 use PHPUnit\Framework\TestCase;
-use UnexpectedValueException;
 
 class PecomClientTest extends TestCase
 {
@@ -149,17 +148,5 @@ class PecomClientTest extends TestCase
         $generated->expects(self::once())->method('orderPrint')->with($body)->willReturn('JVBERi0xLjQK');
 
         self::assertSame('JVBERi0xLjQK', (new PecomClient($generated))->printOrder($body));
-    }
-
-    public function testPrintOrderRejectsNonStringResponse(): void
-    {
-        $body = new OrderPrintRequest();
-        $generated = $this->createMock(GeneratedClient::class);
-        $generated->expects(self::once())->method('orderPrint')->with($body)->willReturn(null);
-
-        $this->expectException(UnexpectedValueException::class);
-        $this->expectExceptionMessage('order/print вернул NULL вместо строки');
-
-        (new PecomClient($generated))->printOrder($body);
     }
 }

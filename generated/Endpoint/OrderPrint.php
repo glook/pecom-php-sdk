@@ -55,6 +55,8 @@ class OrderPrint extends BaseEndpoint implements Endpoint
     }
 
     /**
+     * @return string
+     *
      * @throws OrderPrintBadRequestException
      * @throws OrderPrintForbiddenException
      * @throws OrderPrintInternalServerErrorException
@@ -63,7 +65,7 @@ class OrderPrint extends BaseEndpoint implements Endpoint
     protected function transformResponseBody(string $body, int $status, SerializerInterface $serializer, ?string $contentType = null)
     {
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            return json_decode($body);
+            return $serializer->deserialize($body, 'string', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new OrderPrintBadRequestException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));

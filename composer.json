@@ -41,7 +41,8 @@
         "Skip wrapper class for single $ref allOf (deduplication)": "patches/jane-allof-deduplication.patch"
       },
       "jane-php/open-api-3": {
-        "Generate scalar array request bodies correctly": "patches/jane-openapi3-scalar-array-request-bodies.patch"
+        "Generate scalar array request bodies correctly": "patches/jane-openapi3-scalar-array-request-bodies.patch",
+        "Generate and validate scalar response bodies": "patches/jane-openapi3-scalar-response-bodies.patch"
       }
     }
   },

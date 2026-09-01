@@ -9,7 +9,8 @@ return (new Config())
     ->setRiskyAllowed(false)
     ->setRules([
         '@auto' => true,
-        '@PhpCsFixer' => true
+        '@PhpCsFixer' => true,
+        'return_assignment' => ['skip_named_var_tags' => true]
     ])
     // 💡 by default, Fixer looks for `*.php` files excluding `./vendor/` - here, you can groom this config
     ->setFinder(

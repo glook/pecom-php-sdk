@@ -95,16 +95,8 @@ class PecomClient
      */
     public function printOrder(OrderPrintRequest $requestBody): string
     {
+        /** @var string $pdf */
         $pdf = $this->client->orderPrint($requestBody);
-
-        // Jane не выводит тип скалярного ответа из схемы, поэтому обещает
-        // null|ResponseInterface. Реальный тип - строка, и проверка сужает его
-        // явно: иначе анализатор считает контракт нарушенным у каждого потребителя.
-        if (!is_string($pdf)) {
-            throw new \UnexpectedValueException(
-                sprintf('order/print вернул %s вместо строки', gettype($pdf))
-            );
-        }
 
         return $pdf;
     }

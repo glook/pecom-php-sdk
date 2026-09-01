@@ -56,6 +56,8 @@ class CargosdocumentsCargoinvoicebyperiod extends BaseEndpoint implements Endpoi
     }
 
     /**
+     * @return string[]
+     *
      * @throws CargosdocumentsCargoinvoicebyperiodBadRequestException
      * @throws CargosdocumentsCargoinvoicebyperiodForbiddenException
      * @throws CargosdocumentsCargoinvoicebyperiodInternalServerErrorException
@@ -64,7 +66,11 @@ class CargosdocumentsCargoinvoicebyperiod extends BaseEndpoint implements Endpoi
     protected function transformResponseBody(string $body, int $status, SerializerInterface $serializer, ?string $contentType = null)
     {
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            return json_decode($body);
+            if (!is_array(json_decode($body))) {
+                throw new \UnexpectedValueException('Ответ API не соответствует типу string[]');
+            }
+
+            return $serializer->deserialize($body, 'string[]', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new CargosdocumentsCargoinvoicebyperiodBadRequestException($serializer->deserialize($body, 'glook\PecomSdk\Generated\Model\CommonErrorEnvelope', 'json'));

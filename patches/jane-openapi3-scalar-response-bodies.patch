@@ -1,0 +1,75 @@
+Subject: Generate and validate scalar response bodies
+
+Jane 6.3.9 records non-nullable string response schemas as null and decodes
+them without checking the declared type. This patch derives string and
+string-array PHP types from the response schema, validates them through the
+existing serializer, and rejects non-array JSON before array deserialization.
+
+--- a/Generator/Endpoint/GetTransformResponseBodyTrait.php
++++ b/Generator/Endpoint/GetTransformResponseBodyTrait.php
+@@ -83,0 +84 @@
++            $hasExplicitNullResponse = count(array_keys($outputTypes, 'null', true)) > 1;
+@@ -85,0 +87,4 @@
++
++            if (!$hasExplicitNullResponse && array_filter($outputTypes, [$this, 'isScalarResponseType'])) {
++                $outputTypes = array_values(array_diff($outputTypes, ['null']));
++            }
+@@ -255,0 +261 @@
++        $scalarType = $this->getScalarResponseType($schema);
+@@ -270,0 +277,11 @@
++                    new Node\Arg(new Scalar\String_('json')),
++                ]
++            );
++        } elseif (null !== $scalarType) {
++            $returnType = $scalarType;
++            $serializeStmt = new Expr\MethodCall(
++                new Expr\Variable('serializer'),
++                'deserialize',
++                [
++                    new Node\Arg(new Expr\Variable('body')),
++                    new Node\Arg(new Scalar\String_($scalarType)),
+@@ -280,0 +298,19 @@
++
++        if (null !== $scalarType && '[]' === substr($scalarType, -2)) {
++            $contentStatement = new Stmt\If_(
++                new Expr\BooleanNot(
++                    new Expr\FuncCall(new Name('is_array'), [
++                        new Node\Arg(new Expr\FuncCall(new Name('json_decode'), [
++                            new Node\Arg(new Expr\Variable('body')),
++                        ])),
++                    ])
++                ),
++                [
++                    'stmts' => [new Stmt\Throw_(new Expr\New_(
++                        new Name\FullyQualified(\UnexpectedValueException::class),
++                        [new Node\Arg(new Scalar\String_(sprintf('Ответ API не соответствует типу %s', $scalarType)))]
++                    ))],
++                    'else' => new Stmt\Else_([new Stmt\Return_($serializeStmt)]),
++                ]
++            );
++        }
+@@ -301,0 +338,24 @@
++
++    private function getScalarResponseType($schema): ?string
++    {
++        if (!$schema instanceof Schema || true === $schema->getNullable()) {
++            return null;
++        }
++
++        if ('string' === $schema->getType()) {
++            return 'string';
++        }
++
++        $items = $schema->getItems();
++
++        if ('array' === $schema->getType() && $items instanceof Schema && true !== $items->getNullable() && 'string' === $items->getType()) {
++            return 'string[]';
++        }
++
++        return null;
++    }
++
++    private function isScalarResponseType(string $type): bool
++    {
++        return 'string' === $type || 'string[]' === $type;
++    }
