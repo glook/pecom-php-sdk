@@ -20,6 +20,11 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class PreregistrationEdiContractTest extends TestCase
 {
     public function testEdiFieldsAreSerializedAndTemplateUrlsAreDeserialized(): void
@@ -30,11 +35,13 @@ class PreregistrationEdiContractTest extends TestCase
             ->setLegalForm(1)
             ->setInn('7707083893')
             ->setKpp('773601001')
-            ->setTitle('ООО Тест');
+            ->setTitle('ООО Тест')
+        ;
         $ediCounterpart = (new PreregistrationEdiCounterpart())
             ->setEDItype(3)
             ->setEDImail('edi@example.com')
-            ->setOther($other);
+            ->setOther($other)
+        ;
 
         $response = $client->preregistrationSubmit(
             $this->createRequest('FFS_EDI', $ediCounterpart, true)
@@ -60,9 +67,32 @@ class PreregistrationEdiContractTest extends TestCase
         $client->preregistrationSubmit($this->createRequest('COURIER'));
 
         self::assertIsArray($capturedPayload);
+        self::assertSame('COURIER', $capturedPayload['common']['docflowType']);
         self::assertArrayNotHasKey('EDICounterpart', $capturedPayload);
         self::assertArrayNotHasKey('countryCargocode', $capturedPayload['cargos'][0]['common']);
         self::assertFalse($capturedPayload['cargos'][0]['common']['isRegisteredGoogs']);
+    }
+
+    public function testFfsDocflowTypeIsSerialized(): void
+    {
+        $capturedPayload = null;
+        $client = $this->createClientCapturing($capturedPayload);
+
+        $client->preregistrationSubmit($this->createRequest('FFS'));
+
+        self::assertIsArray($capturedPayload);
+        self::assertSame('FFS', $capturedPayload['common']['docflowType']);
+    }
+
+    public function testDocflowTypeCanBeOmittedForBackwardCompatibility(): void
+    {
+        $capturedPayload = null;
+        $client = $this->createClientCapturing($capturedPayload);
+
+        $client->preregistrationSubmit($this->createRequest());
+
+        self::assertIsArray($capturedPayload);
+        self::assertArrayNotHasKey('docflowType', $capturedPayload['common']);
     }
 
     public function testOtherCanBeOmittedWhenSenderSignsEdiDocuments(): void
@@ -79,7 +109,7 @@ class PreregistrationEdiContractTest extends TestCase
     }
 
     private function createRequest(
-        string $docflowType,
+        ?string $docflowType = null,
         ?PreregistrationEdiCounterpart $ediCounterpart = null,
         bool $withEdiCargoFields = false
     ): PreregistrationSubmitRequest {
@@ -89,35 +119,43 @@ class PreregistrationEdiContractTest extends TestCase
             ->setTitle('ООО Отправитель')
             ->setPerson('Иванов Иван')
             ->setPersonPhones([$phone])
-            ->setWarehouseId('521fc4dd-6650-11e3-a392-00155d505c08');
+            ->setWarehouseId('521fc4dd-6650-11e3-a392-00155d505c08')
+        ;
         $receiver = (new PreregistrationReceiver())
             ->setLegalForm(1)
             ->setTitle('ООО Получатель')
             ->setPerson('Петров Пётр')
             ->setPersonPhones([$phone])
-            ->setWarehouseId('c496b0d2-8e45-11df-bb3b-0019bbc941ce');
+            ->setWarehouseId('c496b0d2-8e45-11df-bb3b-0019bbc941ce')
+        ;
         $cargoCommon = (new PreregistrationCargoCommon())
             ->setType(3)
             ->setPositionsCount(1)
-            ->setDescription('Оборудование');
+            ->setDescription('Оборудование')
+        ;
 
         if ($withEdiCargoFields) {
             $cargoCommon
                 ->setCountryCargocode(['643'])
-                ->setIsRegisteredGoogs(true);
+                ->setIsRegisteredGoogs(true)
+            ;
         }
 
         $cargo = (new PreregistrationCargo())
             ->setCommon($cargoCommon)
-            ->setReceiver($receiver);
+            ->setReceiver($receiver)
+        ;
+        $common = (new PreregistrationCommon())->setOrderType(0);
+
+        if (null !== $docflowType) {
+            $common->setDocflowType($docflowType);
+        }
+
         $request = (new PreregistrationSubmitRequest())
-            ->setCommon(
-                (new PreregistrationCommon())
-                    ->setDocflowType($docflowType)
-                    ->setOrderType(0)
-            )
+            ->setCommon($common)
             ->setSender($sender)
-            ->setCargos([$cargo]);
+            ->setCargos([$cargo])
+        ;
 
         if (null !== $ediCounterpart) {
             $request->setEDICounterpart($ediCounterpart);

@@ -50,8 +50,10 @@ class PreregistrationCommonNormalizer implements DenormalizerInterface, Normaliz
         } elseif (\array_key_exists('counterpartClientCard', $data) && null === $data['counterpartClientCard']) {
             $object->setCounterpartClientCard(null);
         }
-        if (\array_key_exists('docflowType', $data)) {
+        if (\array_key_exists('docflowType', $data) && null !== $data['docflowType']) {
             $object->setDocflowType($data['docflowType']);
+        } elseif (\array_key_exists('docflowType', $data) && null === $data['docflowType']) {
+            $object->setDocflowType(null);
         }
         if (\array_key_exists('orderType', $data)) {
             $object->setOrderType($data['orderType']);
@@ -74,7 +76,9 @@ class PreregistrationCommonNormalizer implements DenormalizerInterface, Normaliz
         if (null !== $object->getCounterpartClientCard()) {
             $data['counterpartClientCard'] = $object->getCounterpartClientCard();
         }
-        $data['docflowType'] = $object->getDocflowType();
+        if (null !== $object->getDocflowType()) {
+            $data['docflowType'] = $object->getDocflowType();
+        }
         $data['orderType'] = $object->getOrderType();
         if (null !== $object->getPlannedDate()) {
             $data['plannedDate'] = $object->getPlannedDate()->format('Y-m-d');
