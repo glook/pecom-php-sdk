@@ -21,7 +21,7 @@ class BranchesDepartmentslimit extends BaseEndpoint implements Endpoint
      * Метод возвращает максимально-допустимые значения ВГХ груза для тарифа "Express Автоперевозка" между указанными филиалами или складами. Результат возвращается в виде структуры.
      * - Метод не проверяет наличие маршрута перевозки между филиалами.
      * - Если возвращается пустой ответ — значит для тарифа "Express Автоперевозка" нет возможности перевозить груз между указанными филиалами (складами).
-     * - Идентификаторы филиалов и складов отправителя/ получателя можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) (в ответе метода `freeDepartments.branchId` и `freeDepartments.warehouseId`).
+     * - Идентификаторы филиалов и складов отправителя/ получателя можно получить методом [`/branches/nearestdepartments/`](#tag/branches/POST/branches/nearestdepartments/) (в ответе метода `freeDepartments.branchId` и `freeDepartments.warehouseId`)
      */
     public function __construct(BranchesDepartmentslimitPostBody $requestBody)
     {

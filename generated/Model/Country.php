@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class Country
 {
     /**
-     * Код страны по общероссийскому классификатору.
+     * Код страны по общероссийскому классификатору
      *
      * @var string
      */
     protected $codeByClassifier;
 
     /**
-     * Наименование страны.
+     * Наименование страны
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Краткое наименование страны.
+     * Краткое наименование страны
      *
      * @var string
      */
     protected $shortName;
 
     /**
-     * Код страны по общероссийскому классификатору.
+     * Код страны по общероссийскому классификатору
      */
     public function getCodeByClassifier(): string
     {
@@ -34,7 +34,7 @@ class Country
     }
 
     /**
-     * Код страны по общероссийскому классификатору.
+     * Код страны по общероссийскому классификатору
      */
     public function setCodeByClassifier(string $codeByClassifier): self
     {
@@ -44,7 +44,7 @@ class Country
     }
 
     /**
-     * Наименование страны.
+     * Наименование страны
      */
     public function getName(): string
     {
@@ -52,7 +52,7 @@ class Country
     }
 
     /**
-     * Наименование страны.
+     * Наименование страны
      */
     public function setName(string $name): self
     {
@@ -62,7 +62,7 @@ class Country
     }
 
     /**
-     * Краткое наименование страны.
+     * Краткое наименование страны
      */
     public function getShortName(): string
     {
@@ -70,7 +70,7 @@ class Country
     }
 
     /**
-     * Краткое наименование страны.
+     * Краткое наименование страны
      */
     public function setShortName(string $shortName): self
     {

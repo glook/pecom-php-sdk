@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatusResponse
 {
     /**
-     * Статусы грузов.
+     * Статусы грузов
      *
      * @var null|CurrentStatusItem[]
      */
     protected $cargos;
 
     /**
-     * Ответ с ошибкой.
+     * Ответ с ошибкой
      *
      * @var null|CurrentStatusError
      */
     protected $error;
 
     /**
-     * Статусы грузов.
+     * Статусы грузов
      *
      * @return null|CurrentStatusItem[]
      */
@@ -29,7 +29,7 @@ class CurrentStatusResponse
     }
 
     /**
-     * Статусы грузов.
+     * Статусы грузов
      *
      * @param null|CurrentStatusItem[] $cargos
      */
@@ -41,7 +41,7 @@ class CurrentStatusResponse
     }
 
     /**
-     * Ответ с ошибкой.
+     * Ответ с ошибкой
      */
     public function getError(): ?CurrentStatusError
     {
@@ -49,7 +49,7 @@ class CurrentStatusResponse
     }
 
     /**
-     * Ответ с ошибкой.
+     * Ответ с ошибкой
      */
     public function setError(?CurrentStatusError $error): self
     {

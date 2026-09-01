@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class PreregistrationPayer
 {
     /**
-     * Данные о плательщике-третьем лице.
+     * Данные о плательщике-третьем лице
      *
      * @var null|PreregistrationPayerOther
      */
     protected $other;
 
     /**
-     * Наименование филиала оплаты за услугу. Необязательно. См. комментарий.
+     * Наименование филиала оплаты за услугу. Необязательно. См. комментарий
      *
      * @var null|string
      */
@@ -26,7 +26,7 @@ class PreregistrationPayer
     protected $type;
 
     /**
-     * Данные о плательщике-третьем лице.
+     * Данные о плательщике-третьем лице
      */
     public function getOther(): ?PreregistrationPayerOther
     {
@@ -34,7 +34,7 @@ class PreregistrationPayer
     }
 
     /**
-     * Данные о плательщике-третьем лице.
+     * Данные о плательщике-третьем лице
      */
     public function setOther(?PreregistrationPayerOther $other): self
     {
@@ -44,7 +44,7 @@ class PreregistrationPayer
     }
 
     /**
-     * Наименование филиала оплаты за услугу. Необязательно. См. комментарий.
+     * Наименование филиала оплаты за услугу. Необязательно. См. комментарий
      */
     public function getPaymentCity(): ?string
     {
@@ -52,7 +52,7 @@ class PreregistrationPayer
     }
 
     /**
-     * Наименование филиала оплаты за услугу. Необязательно. См. комментарий.
+     * Наименование филиала оплаты за услугу. Необязательно. См. комментарий
      */
     public function setPaymentCity(?string $paymentCity): self
     {

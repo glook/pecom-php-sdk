@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItem
 {
     /**
-     * Параметры груза.
+     * Параметры груза
      *
      * @var CargoPickupNetworkSubmitRequestCargosItemsItemCargo
      */
     protected $cargo;
 
     /**
-     * Условия перевозки.
+     * Условия перевозки
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemConditions
      */
     protected $conditions;
 
     /**
-     * Получатель.
+     * Получатель
      *
      * @var CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
      */
     protected $receiver;
 
     /**
-     * Услуги.
+     * Услуги
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServices
      */
     protected $services;
 
     /**
-     * Параметры груза.
+     * Параметры груза
      */
     public function getCargo(): CargoPickupNetworkSubmitRequestCargosItemsItemCargo
     {
@@ -41,7 +41,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Параметры груза.
+     * Параметры груза
      */
     public function setCargo(CargoPickupNetworkSubmitRequestCargosItemsItemCargo $cargo): self
     {
@@ -51,7 +51,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Условия перевозки.
+     * Условия перевозки
      */
     public function getConditions(): ?CargoPickupNetworkSubmitRequestCargosItemsItemConditions
     {
@@ -59,7 +59,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Условия перевозки.
+     * Условия перевозки
      */
     public function setConditions(?CargoPickupNetworkSubmitRequestCargosItemsItemConditions $conditions): self
     {
@@ -69,7 +69,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function getReceiver(): CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     {
@@ -77,7 +77,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function setReceiver(CargoPickupNetworkSubmitRequestCargosItemsItemReceiver $receiver): self
     {
@@ -87,7 +87,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Услуги.
+     * Услуги
      */
     public function getServices(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServices
     {
@@ -95,7 +95,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItem
     }
 
     /**
-     * Услуги.
+     * Услуги
      */
     public function setServices(?CargoPickupNetworkSubmitRequestCargosItemsItemServices $services): self
     {

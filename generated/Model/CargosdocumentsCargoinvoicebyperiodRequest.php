@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsCargoinvoicebyperiodRequest
 {
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      *
      * @var string
      */
     protected $counterpartGuid;
 
     /**
-     * Начальная дата периода запроса, дата берется по оформлению груза.
+     * Начальная дата периода запроса, дата берется по оформлению груза
      *
      * @var \DateTime
      */
     protected $dateFrom;
 
     /**
-     * Конечная дата периода запроса, дата берется по оформлению груза.
+     * Конечная дата периода запроса, дата берется по оформлению груза
      *
      * @var \DateTime
      */
     protected $dateTo;
 
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      */
     public function getCounterpartGuid(): string
     {
@@ -34,7 +34,7 @@ class CargosdocumentsCargoinvoicebyperiodRequest
     }
 
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК. Получается методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      */
     public function setCounterpartGuid(string $counterpartGuid): self
     {
@@ -44,7 +44,7 @@ class CargosdocumentsCargoinvoicebyperiodRequest
     }
 
     /**
-     * Начальная дата периода запроса, дата берется по оформлению груза.
+     * Начальная дата периода запроса, дата берется по оформлению груза
      */
     public function getDateFrom(): \DateTime
     {
@@ -52,7 +52,7 @@ class CargosdocumentsCargoinvoicebyperiodRequest
     }
 
     /**
-     * Начальная дата периода запроса, дата берется по оформлению груза.
+     * Начальная дата периода запроса, дата берется по оформлению груза
      */
     public function setDateFrom(\DateTime $dateFrom): self
     {
@@ -62,7 +62,7 @@ class CargosdocumentsCargoinvoicebyperiodRequest
     }
 
     /**
-     * Конечная дата периода запроса, дата берется по оформлению груза.
+     * Конечная дата периода запроса, дата берется по оформлению груза
      */
     public function getDateTo(): \DateTime
     {
@@ -70,7 +70,7 @@ class CargosdocumentsCargoinvoicebyperiodRequest
     }
 
     /**
-     * Конечная дата периода запроса, дата берется по оформлению груза.
+     * Конечная дата периода запроса, дата берется по оформлению груза
      */
     public function setDateTo(\DateTime $dateTo): self
     {

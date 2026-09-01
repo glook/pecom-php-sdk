@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsGetcontentErrorResponseError
 {
     /**
-     * Детали ошибки. Может быть null.
+     * Детали ошибки. Может быть null
      *
      * @var null|mixed
      */
     protected $error;
 
     /**
-     * Сообщение ошибки.
+     * Сообщение ошибки
      *
      * @var null|string
      */
@@ -26,14 +26,14 @@ class CargosdocumentsGetcontentErrorResponseError
     protected $status;
 
     /**
-     * Заголовок ошибки.
+     * Заголовок ошибки
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Детали ошибки. Может быть null.
+     * Детали ошибки. Может быть null
      *
      * @return mixed
      */
@@ -43,7 +43,7 @@ class CargosdocumentsGetcontentErrorResponseError
     }
 
     /**
-     * Детали ошибки. Может быть null.
+     * Детали ошибки. Может быть null
      *
      * @param mixed $error
      */
@@ -55,7 +55,7 @@ class CargosdocumentsGetcontentErrorResponseError
     }
 
     /**
-     * Сообщение ошибки.
+     * Сообщение ошибки
      */
     public function getMessage(): ?string
     {
@@ -63,7 +63,7 @@ class CargosdocumentsGetcontentErrorResponseError
     }
 
     /**
-     * Сообщение ошибки.
+     * Сообщение ошибки
      */
     public function setMessage(?string $message): self
     {
@@ -91,7 +91,7 @@ class CargosdocumentsGetcontentErrorResponseError
     }
 
     /**
-     * Заголовок ошибки.
+     * Заголовок ошибки
      */
     public function getTitle(): string
     {
@@ -99,7 +99,7 @@ class CargosdocumentsGetcontentErrorResponseError
     }
 
     /**
-     * Заголовок ошибки.
+     * Заголовок ошибки
      */
     public function setTitle(string $title): self
     {

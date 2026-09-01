@@ -50,12 +50,21 @@ class PreregistrationSubmitResponseNormalizer implements DenormalizerInterface, 
         if (\array_key_exists('documentId', $data)) {
             $object->setDocumentId($data['documentId']);
         }
-        if (\array_key_exists('notifications', $data) && null !== $data['notifications']) {
+        if (\array_key_exists('ediTemplateUrls', $data) && null !== $data['ediTemplateUrls']) {
             $values_1 = [];
-            foreach ($data['notifications'] as $value_1) {
+            foreach ($data['ediTemplateUrls'] as $value_1) {
                 $values_1[] = $value_1;
             }
-            $object->setNotifications($values_1);
+            $object->setEdiTemplateUrls($values_1);
+        } elseif (\array_key_exists('ediTemplateUrls', $data) && null === $data['ediTemplateUrls']) {
+            $object->setEdiTemplateUrls(null);
+        }
+        if (\array_key_exists('notifications', $data) && null !== $data['notifications']) {
+            $values_2 = [];
+            foreach ($data['notifications'] as $value_2) {
+                $values_2[] = $value_2;
+            }
+            $object->setNotifications($values_2);
         } elseif (\array_key_exists('notifications', $data) && null === $data['notifications']) {
             $object->setNotifications(null);
         }
@@ -75,12 +84,19 @@ class PreregistrationSubmitResponseNormalizer implements DenormalizerInterface, 
         }
         $data['cargos'] = $values;
         $data['documentId'] = $object->getDocumentId();
-        if (null !== $object->getNotifications()) {
+        if (null !== $object->getEdiTemplateUrls()) {
             $values_1 = [];
-            foreach ($object->getNotifications() as $value_1) {
+            foreach ($object->getEdiTemplateUrls() as $value_1) {
                 $values_1[] = $value_1;
             }
-            $data['notifications'] = $values_1;
+            $data['ediTemplateUrls'] = $values_1;
+        }
+        if (null !== $object->getNotifications()) {
+            $values_2 = [];
+            foreach ($object->getNotifications() as $value_2) {
+                $values_2[] = $value_2;
+            }
+            $data['notifications'] = $values_2;
         }
         $data['sender'] = $this->normalizer->normalize($object->getSender(), 'json', $context);
 

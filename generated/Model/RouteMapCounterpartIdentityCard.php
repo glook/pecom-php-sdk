@@ -12,14 +12,14 @@ class RouteMapCounterpartIdentityCard
     protected $number;
 
     /**
-     * Серия.
+     * Серия
      *
      * @var null|string
      */
     protected $series;
 
     /**
-     * Наименование вида документа, удостоверяющего личность.
+     * Наименование вида документа, удостоверяющего личность
      *
      * @var null|string
      */
@@ -44,7 +44,7 @@ class RouteMapCounterpartIdentityCard
     }
 
     /**
-     * Серия.
+     * Серия
      */
     public function getSeries(): ?string
     {
@@ -52,7 +52,7 @@ class RouteMapCounterpartIdentityCard
     }
 
     /**
-     * Серия.
+     * Серия
      */
     public function setSeries(?string $series): self
     {
@@ -62,7 +62,7 @@ class RouteMapCounterpartIdentityCard
     }
 
     /**
-     * Наименование вида документа, удостоверяющего личность.
+     * Наименование вида документа, удостоверяющего личность
      */
     public function getTypeName(): ?string
     {
@@ -70,7 +70,7 @@ class RouteMapCounterpartIdentityCard
     }
 
     /**
-     * Наименование вида документа, удостоверяющего личность.
+     * Наименование вида документа, удостоверяющего личность
      */
     public function setTypeName(?string $typeName): self
     {

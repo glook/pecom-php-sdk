@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsOrderRequest
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var string
      */
     protected $cargoCode;
 
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК, обязателен для `"docType"` = `"CargoInvoice"`.
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК, обязателен для `"docType"` = `"CargoInvoice"`
      *
      * @var null|string
      */
     protected $counterpartGuid;
 
     /**
-     * Формат документа. Если не передан, вернется документ в формате `"pdf"`. Формат `"xml"` можно указать только для счета на оплату `"CargoInvoice"`.
+     * Формат документа. Если не передан, вернется документ в формате `"pdf"`. Формат `"xml"` можно указать только для счета на оплату `"CargoInvoice"`
      *
      * @var null|string
      */
     protected $docFormat = 'pdf';
 
     /**
-     * Тип документа. `"CargoAssignment"` - Поручение экспедитора/ Экспедиторская расписка, `"CargoInvoice"` - Счет на оплату.
+     * Тип документа. `"CargoAssignment"` - Поручение экспедитора/ Экспедиторская расписка, `"CargoInvoice"` - Счет на оплату
      *
      * @var string
      */
     protected $docType;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): string
     {
@@ -41,7 +41,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(string $cargoCode): self
     {
@@ -51,7 +51,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК, обязателен для `"docType"` = `"CargoInvoice"`.
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК, обязателен для `"docType"` = `"CargoInvoice"`
      */
     public function getCounterpartGuid(): ?string
     {
@@ -59,7 +59,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК, обязателен для `"docType"` = `"CargoInvoice"`.
+     * Идентификатор контрагента-плательщика в системах ПЭК, связанный с ЛК, обязателен для `"docType"` = `"CargoInvoice"`
      */
     public function setCounterpartGuid(?string $counterpartGuid): self
     {
@@ -69,7 +69,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Формат документа. Если не передан, вернется документ в формате `"pdf"`. Формат `"xml"` можно указать только для счета на оплату `"CargoInvoice"`.
+     * Формат документа. Если не передан, вернется документ в формате `"pdf"`. Формат `"xml"` можно указать только для счета на оплату `"CargoInvoice"`
      */
     public function getDocFormat(): ?string
     {
@@ -77,7 +77,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Формат документа. Если не передан, вернется документ в формате `"pdf"`. Формат `"xml"` можно указать только для счета на оплату `"CargoInvoice"`.
+     * Формат документа. Если не передан, вернется документ в формате `"pdf"`. Формат `"xml"` можно указать только для счета на оплату `"CargoInvoice"`
      */
     public function setDocFormat(?string $docFormat): self
     {
@@ -87,7 +87,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Тип документа. `"CargoAssignment"` - Поручение экспедитора/ Экспедиторская расписка, `"CargoInvoice"` - Счет на оплату.
+     * Тип документа. `"CargoAssignment"` - Поручение экспедитора/ Экспедиторская расписка, `"CargoInvoice"` - Счет на оплату
      */
     public function getDocType(): string
     {
@@ -95,7 +95,7 @@ class CargosdocumentsOrderRequest
     }
 
     /**
-     * Тип документа. `"CargoAssignment"` - Поручение экспедитора/ Экспедиторская расписка, `"CargoInvoice"` - Счет на оплату.
+     * Тип документа. `"CargoAssignment"` - Поручение экспедитора/ Экспедиторская расписка, `"CargoInvoice"` - Счет на оплату
      */
     public function setDocType(string $docType): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesNearestdepartmentsPostResponse200
 {
     /**
-     * Массив с собственными отделениями ПЭК, подходящие в выборку.
+     * Массив с собственными отделениями ПЭК, подходящие в выборку
      *
      * @var NearestDepartment[]
      */
     protected $freeDepartments;
 
     /**
-     * Массив с ПВЗ (структура элемента массива такая же как для собственных отделений).
+     * Массив с ПВЗ (структура элемента массива такая же как для собственных отделений)
      *
      * @var NearestDepartment[]
      */
     protected $paidDepartments;
 
     /**
-     * Массив с собственными отделениями ПЭК, подходящие в выборку.
+     * Массив с собственными отделениями ПЭК, подходящие в выборку
      *
      * @return NearestDepartment[]
      */
@@ -29,7 +29,7 @@ class BranchesNearestdepartmentsPostResponse200
     }
 
     /**
-     * Массив с собственными отделениями ПЭК, подходящие в выборку.
+     * Массив с собственными отделениями ПЭК, подходящие в выборку
      *
      * @param NearestDepartment[] $freeDepartments
      */
@@ -41,7 +41,7 @@ class BranchesNearestdepartmentsPostResponse200
     }
 
     /**
-     * Массив с ПВЗ (структура элемента массива такая же как для собственных отделений).
+     * Массив с ПВЗ (структура элемента массива такая же как для собственных отделений)
      *
      * @return NearestDepartment[]
      */
@@ -51,7 +51,7 @@ class BranchesNearestdepartmentsPostResponse200
     }
 
     /**
-     * Массив с ПВЗ (структура элемента массива такая же как для собственных отделений).
+     * Массив с ПВЗ (структура элемента массива такая же как для собственных отделений)
      *
      * @param NearestDepartment[] $paidDepartments
      */

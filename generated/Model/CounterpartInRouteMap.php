@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CounterpartInRouteMap
 {
     /**
-     * Количество грузов, запланированных к доставке.
+     * Количество грузов, запланированных к доставке
      *
      * @var null|float
      */
     protected $countCargosForDelivery;
 
     /**
-     * Количество грузов, запланированных к забору.
+     * Количество грузов, запланированных к забору
      *
      * @var null|float
      */
     protected $countCargosForIntake;
 
     /**
-     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода).
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
      *
      * @var null|RouteMapCounterpart
      */
     protected $counterpart;
 
     /**
-     * Количество грузов, запланированных к доставке.
+     * Количество грузов, запланированных к доставке
      */
     public function getCountCargosForDelivery(): ?float
     {
@@ -34,7 +34,7 @@ class CounterpartInRouteMap
     }
 
     /**
-     * Количество грузов, запланированных к доставке.
+     * Количество грузов, запланированных к доставке
      */
     public function setCountCargosForDelivery(?float $countCargosForDelivery): self
     {
@@ -44,7 +44,7 @@ class CounterpartInRouteMap
     }
 
     /**
-     * Количество грузов, запланированных к забору.
+     * Количество грузов, запланированных к забору
      */
     public function getCountCargosForIntake(): ?float
     {
@@ -52,7 +52,7 @@ class CounterpartInRouteMap
     }
 
     /**
-     * Количество грузов, запланированных к забору.
+     * Количество грузов, запланированных к забору
      */
     public function setCountCargosForIntake(?float $countCargosForIntake): self
     {
@@ -62,7 +62,7 @@ class CounterpartInRouteMap
     }
 
     /**
-     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода).
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
      */
     public function getCounterpart(): ?RouteMapCounterpart
     {
@@ -70,7 +70,7 @@ class CounterpartInRouteMap
     }
 
     /**
-     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода).
+     * Контрагент, к информации которого у логина есть доступ (прочие контрагенты маршрутного листа не выводятся в ответе метода)
      */
     public function setCounterpart(?RouteMapCounterpart $counterpart): self
     {

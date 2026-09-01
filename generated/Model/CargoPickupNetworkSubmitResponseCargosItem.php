@@ -5,56 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitResponseCargosItem
 {
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      *
      * @var string
      */
     protected $barcode;
 
     /**
-     * Код груза.
+     * Код груза
      *
      * @var string
      */
     protected $cargoCode;
 
     /**
-     * Штрих-коды клиента.
+     * Штрих-коды клиента
      *
      * @var null|string[]
      */
     protected $clientPositionsBarcode;
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      *
      * @var null|string
      */
     protected $customerCorrelation;
 
     /**
-     * Номер заказа.
+     * Номер заказа
      *
      * @var null|string
      */
     protected $orderNumber;
 
     /**
-     * Информация о местах.
+     * Информация о местах
      *
      * @var null|CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]
      */
     protected $positions;
 
     /**
-     * Тип штрих-кода.
+     * Тип штрих-кода
      *
      * @var null|string
      */
     protected $typeClientBarcode;
 
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      */
     public function getBarcode(): string
     {
@@ -62,7 +62,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Значение для штрих-кода в формате EAN-13.
+     * Значение для штрих-кода в формате EAN-13
      */
     public function setBarcode(string $barcode): self
     {
@@ -72,7 +72,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): string
     {
@@ -80,7 +80,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(string $cargoCode): self
     {
@@ -90,7 +90,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Штрих-коды клиента.
+     * Штрих-коды клиента
      *
      * @return null|string[]
      */
@@ -100,7 +100,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Штрих-коды клиента.
+     * Штрих-коды клиента
      *
      * @param null|string[] $clientPositionsBarcode
      */
@@ -112,7 +112,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function getCustomerCorrelation(): ?string
     {
@@ -120,7 +120,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function setCustomerCorrelation(?string $customerCorrelation): self
     {
@@ -130,7 +130,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Номер заказа.
+     * Номер заказа
      */
     public function getOrderNumber(): ?string
     {
@@ -138,7 +138,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Номер заказа.
+     * Номер заказа
      */
     public function setOrderNumber(?string $orderNumber): self
     {
@@ -148,7 +148,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Информация о местах.
+     * Информация о местах
      *
      * @return null|CargoPickupNetworkSubmitResponseCargosItemPositionsItem[]
      */
@@ -158,7 +158,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Информация о местах.
+     * Информация о местах
      *
      * @param null|CargoPickupNetworkSubmitResponseCargosItemPositionsItem[] $positions
      */
@@ -170,7 +170,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Тип штрих-кода.
+     * Тип штрих-кода
      */
     public function getTypeClientBarcode(): ?string
     {
@@ -178,7 +178,7 @@ class CargoPickupNetworkSubmitResponseCargosItem
     }
 
     /**
-     * Тип штрих-кода.
+     * Тип штрих-кода
      */
     public function setTypeClientBarcode(?string $typeClientBarcode): self
     {

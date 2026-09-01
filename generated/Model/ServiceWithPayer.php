@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class ServiceWithPayer
 {
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      *
      * @var null|bool
      */
@@ -17,7 +17,7 @@ class ServiceWithPayer
     protected $payer;
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function getEnabled(): ?bool
     {
@@ -25,7 +25,7 @@ class ServiceWithPayer
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function setEnabled(?bool $enabled): self
     {

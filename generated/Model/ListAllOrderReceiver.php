@@ -12,28 +12,28 @@ class ListAllOrderReceiver
     protected $counterpart;
 
     /**
-     * Адрес доставки груза, если заказана услуга доставки до адреса.
+     * Адрес доставки груза, если заказана услуга доставки до адреса
      *
      * @var null|string
      */
     protected $delivieryAddress;
 
     /**
-     * Заказана услуга доставки до адреса получателя.
+     * Заказана услуга доставки до адреса получателя
      *
      * @var null|bool
      */
     protected $isDelivery;
 
     /**
-     * Адрес склада в городе получения.
+     * Адрес склада в городе получения
      *
      * @var null|string
      */
     protected $warehouseAddress;
 
     /**
-     * Идентификатор склада получения.
+     * Идентификатор склада получения
      *
      * @var null|string
      */
@@ -58,7 +58,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Адрес доставки груза, если заказана услуга доставки до адреса.
+     * Адрес доставки груза, если заказана услуга доставки до адреса
      */
     public function getDelivieryAddress(): ?string
     {
@@ -66,7 +66,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Адрес доставки груза, если заказана услуга доставки до адреса.
+     * Адрес доставки груза, если заказана услуга доставки до адреса
      */
     public function setDelivieryAddress(?string $delivieryAddress): self
     {
@@ -76,7 +76,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Заказана услуга доставки до адреса получателя.
+     * Заказана услуга доставки до адреса получателя
      */
     public function getIsDelivery(): ?bool
     {
@@ -84,7 +84,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Заказана услуга доставки до адреса получателя.
+     * Заказана услуга доставки до адреса получателя
      */
     public function setIsDelivery(?bool $isDelivery): self
     {
@@ -94,7 +94,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Адрес склада в городе получения.
+     * Адрес склада в городе получения
      */
     public function getWarehouseAddress(): ?string
     {
@@ -102,7 +102,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Адрес склада в городе получения.
+     * Адрес склада в городе получения
      */
     public function setWarehouseAddress(?string $warehouseAddress): self
     {
@@ -112,7 +112,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Идентификатор склада получения.
+     * Идентификатор склада получения
      */
     public function getWarehouseId(): ?string
     {
@@ -120,7 +120,7 @@ class ListAllOrderReceiver
     }
 
     /**
-     * Идентификатор склада получения.
+     * Идентификатор склада получения
      */
     public function setWarehouseId(?string $warehouseId): self
     {

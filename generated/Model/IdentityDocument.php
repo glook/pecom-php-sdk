@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class IdentityDocument
 {
     /**
-     * Уникальный идентификатор типа документа.
+     * Уникальный идентификатор типа документа
      *
      * @var string
      */
     protected $guid;
 
     /**
-     * Маска документа.
+     * Маска документа
      *
      * @var DocumentMask
      */
     protected $mask;
 
     /**
-     * Наименование документа.
+     * Наименование документа
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Уникальный идентификатор типа документа.
+     * Уникальный идентификатор типа документа
      */
     public function getGuid(): string
     {
@@ -34,7 +34,7 @@ class IdentityDocument
     }
 
     /**
-     * Уникальный идентификатор типа документа.
+     * Уникальный идентификатор типа документа
      */
     public function setGuid(string $guid): self
     {
@@ -44,7 +44,7 @@ class IdentityDocument
     }
 
     /**
-     * Маска документа.
+     * Маска документа
      */
     public function getMask(): DocumentMask
     {
@@ -52,7 +52,7 @@ class IdentityDocument
     }
 
     /**
-     * Маска документа.
+     * Маска документа
      */
     public function setMask(DocumentMask $mask): self
     {
@@ -62,7 +62,7 @@ class IdentityDocument
     }
 
     /**
-     * Наименование документа.
+     * Наименование документа
      */
     public function getName(): string
     {
@@ -70,7 +70,7 @@ class IdentityDocument
     }
 
     /**
-     * Наименование документа.
+     * Наименование документа
      */
     public function setName(string $name): self
     {

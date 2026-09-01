@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosStatusByPositionBarcodesRequest
 {
     /**
-     * Штрих-коды.
+     * Штрих-коды
      *
      * @var string[]
      */
     protected $positionBarCodes;
 
     /**
-     * Штрих-коды.
+     * Штрих-коды
      *
      * @return string[]
      */
@@ -22,7 +22,7 @@ class CargosStatusByPositionBarcodesRequest
     }
 
     /**
-     * Штрих-коды.
+     * Штрих-коды
      *
      * @param string[] $positionBarCodes
      */

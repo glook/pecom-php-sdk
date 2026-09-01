@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoDetailsResponse
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
     protected $cargoCode;
 
     /**
-     * Информация о составе груза.
+     * Информация о составе груза
      *
      * @var null|CargoDetail[]
      */
     protected $details;
 
     /**
-     * ИНН отправителя.
+     * ИНН отправителя
      *
      * @var null|string
      */
     protected $senderInn;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): ?string
     {
@@ -34,7 +34,7 @@ class CargoDetailsResponse
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(?string $cargoCode): self
     {
@@ -44,7 +44,7 @@ class CargoDetailsResponse
     }
 
     /**
-     * Информация о составе груза.
+     * Информация о составе груза
      *
      * @return null|CargoDetail[]
      */
@@ -54,7 +54,7 @@ class CargoDetailsResponse
     }
 
     /**
-     * Информация о составе груза.
+     * Информация о составе груза
      *
      * @param null|CargoDetail[] $details
      */
@@ -66,7 +66,7 @@ class CargoDetailsResponse
     }
 
     /**
-     * ИНН отправителя.
+     * ИНН отправителя
      */
     public function getSenderInn(): ?string
     {
@@ -74,7 +74,7 @@ class CargoDetailsResponse
     }
 
     /**
-     * ИНН отправителя.
+     * ИНН отправителя
      */
     public function setSenderInn(?string $senderInn): self
     {

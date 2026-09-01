@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
 {
     /**
-     * Дата выдачи документа, удостоверяющего личность.
+     * Дата выдачи документа, удостоверяющего личность
      *
      * @var \DateTime
      */
     protected $date;
 
     /**
-     * Служебное поле.
+     * Служебное поле
      *
      * @var null|string
      */
@@ -26,21 +26,21 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     protected $number;
 
     /**
-     * Серия.
+     * Серия
      *
      * @var string
      */
     protected $series;
 
     /**
-     * Тип документа (0 — без предоставления документа, 1–12).
+     * Тип документа (0 — без предоставления документа, 1–12)
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Дата выдачи документа, удостоверяющего личность.
+     * Дата выдачи документа, удостоверяющего личность
      */
     public function getDate(): \DateTime
     {
@@ -48,7 +48,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Дата выдачи документа, удостоверяющего личность.
+     * Дата выдачи документа, удостоверяющего личность
      */
     public function setDate(\DateTime $date): self
     {
@@ -58,7 +58,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Служебное поле.
+     * Служебное поле
      */
     public function getNote(): ?string
     {
@@ -66,7 +66,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Служебное поле.
+     * Служебное поле
      */
     public function setNote(?string $note): self
     {
@@ -94,7 +94,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Серия.
+     * Серия
      */
     public function getSeries(): string
     {
@@ -102,7 +102,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Серия.
+     * Серия
      */
     public function setSeries(string $series): self
     {
@@ -112,7 +112,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Тип документа (0 — без предоставления документа, 1–12).
+     * Тип документа (0 — без предоставления документа, 1–12)
      */
     public function getType(): int
     {
@@ -120,7 +120,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     }
 
     /**
-     * Тип документа (0 — без предоставления документа, 1–12).
+     * Тип документа (0 — без предоставления документа, 1–12)
      */
     public function setType(int $type): self
     {

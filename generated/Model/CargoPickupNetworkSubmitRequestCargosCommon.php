@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosCommon
 {
     /**
-     * Общие размеры, объём и весь груза.
+     * Общие размеры, объём и весь груза
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
      */
     protected $cargoTotals;
 
     /**
-     * Определение плательщиков для всех грузов.
+     * Определение плательщиков для всех грузов
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosCommonServices
      */
     protected $services;
 
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки.
+     * Тип штрих-кодов, указанных для мест грузов заявки
      *
      * @var null|string
      */
     protected $typeClientBarcode;
 
     /**
-     * Общие размеры, объём и весь груза.
+     * Общие размеры, объём и весь груза
      */
     public function getCargoTotals(): ?CargoPickupNetworkSubmitRequestCargosCommonCargoTotals
     {
@@ -34,7 +34,7 @@ class CargoPickupNetworkSubmitRequestCargosCommon
     }
 
     /**
-     * Общие размеры, объём и весь груза.
+     * Общие размеры, объём и весь груза
      */
     public function setCargoTotals(?CargoPickupNetworkSubmitRequestCargosCommonCargoTotals $cargoTotals): self
     {
@@ -44,7 +44,7 @@ class CargoPickupNetworkSubmitRequestCargosCommon
     }
 
     /**
-     * Определение плательщиков для всех грузов.
+     * Определение плательщиков для всех грузов
      */
     public function getServices(): ?CargoPickupNetworkSubmitRequestCargosCommonServices
     {
@@ -52,7 +52,7 @@ class CargoPickupNetworkSubmitRequestCargosCommon
     }
 
     /**
-     * Определение плательщиков для всех грузов.
+     * Определение плательщиков для всех грузов
      */
     public function setServices(?CargoPickupNetworkSubmitRequestCargosCommonServices $services): self
     {
@@ -62,7 +62,7 @@ class CargoPickupNetworkSubmitRequestCargosCommon
     }
 
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки.
+     * Тип штрих-кодов, указанных для мест грузов заявки
      */
     public function getTypeClientBarcode(): ?string
     {
@@ -70,7 +70,7 @@ class CargoPickupNetworkSubmitRequestCargosCommon
     }
 
     /**
-     * Тип штрих-кодов, указанных для мест грузов заявки.
+     * Тип штрих-кодов, указанных для мест грузов заявки
      */
     public function setTypeClientBarcode(?string $typeClientBarcode): self
     {

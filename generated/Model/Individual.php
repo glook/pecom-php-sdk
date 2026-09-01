@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class Individual
 {
     /**
-     * Имя или первая буква имени (инициал).
+     * Имя или первая буква имени (инициал)
      *
      * @var null|string
      */
     protected $firstName;
 
     /**
-     * Фамилия.
+     * Фамилия
      *
      * @var null|string
      */
     protected $lastName;
 
     /**
-     * Отчество или первая буква отчества (инициал), если имеется.
+     * Отчество или первая буква отчества (инициал), если имеется
      *
      * @var null|string
      */
     protected $patronymic;
 
     /**
-     * Имя или первая буква имени (инициал).
+     * Имя или первая буква имени (инициал)
      */
     public function getFirstName(): ?string
     {
@@ -34,7 +34,7 @@ class Individual
     }
 
     /**
-     * Имя или первая буква имени (инициал).
+     * Имя или первая буква имени (инициал)
      */
     public function setFirstName(?string $firstName): self
     {
@@ -44,7 +44,7 @@ class Individual
     }
 
     /**
-     * Фамилия.
+     * Фамилия
      */
     public function getLastName(): ?string
     {
@@ -52,7 +52,7 @@ class Individual
     }
 
     /**
-     * Фамилия.
+     * Фамилия
      */
     public function setLastName(?string $lastName): self
     {
@@ -62,7 +62,7 @@ class Individual
     }
 
     /**
-     * Отчество или первая буква отчества (инициал), если имеется.
+     * Отчество или первая буква отчества (инициал), если имеется
      */
     public function getPatronymic(): ?string
     {
@@ -70,7 +70,7 @@ class Individual
     }
 
     /**
-     * Отчество или первая буква отчества (инициал), если имеется.
+     * Отчество или первая буква отчества (инициал), если имеется
      */
     public function setPatronymic(?string $patronymic): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosRoutesAndDriverInfoRequest
 {
     /**
-     * Полный адрес, включая название населенного пункта.
+     * Полный адрес, включая название населенного пункта
      *
      * @var string
      */
     protected $cityFullAddress;
 
     /**
-     * Дата выполнения операции забора/доставки груза.
+     * Дата выполнения операции забора/доставки груза
      *
      * @var \DateTime
      */
     protected $dateRoute;
 
     /**
-     * Полный адрес, включая название населенного пункта.
+     * Полный адрес, включая название населенного пункта
      */
     public function getCityFullAddress(): string
     {
@@ -27,7 +27,7 @@ class CargosRoutesAndDriverInfoRequest
     }
 
     /**
-     * Полный адрес, включая название населенного пункта.
+     * Полный адрес, включая название населенного пункта
      */
     public function setCityFullAddress(string $cityFullAddress): self
     {
@@ -37,7 +37,7 @@ class CargosRoutesAndDriverInfoRequest
     }
 
     /**
-     * Дата выполнения операции забора/доставки груза.
+     * Дата выполнения операции забора/доставки груза
      */
     public function getDateRoute(): \DateTime
     {
@@ -45,7 +45,7 @@ class CargosRoutesAndDriverInfoRequest
     }
 
     /**
-     * Дата выполнения операции забора/доставки груза.
+     * Дата выполнения операции забора/доставки груза
      */
     public function setDateRoute(\DateTime $dateRoute): self
     {

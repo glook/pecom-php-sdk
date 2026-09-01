@@ -12,21 +12,21 @@ class ListAllOrderReceiverCounterpart
     protected $legalEntity;
 
     /**
-     * Наименование/ФИО.
+     * Наименование/ФИО
      *
      * @var null|string
      */
     protected $name;
 
     /**
-     * Блок для физ.лица.
+     * Блок для физ.лица
      *
      * @var null|ListAllOrderReceiverCounterpartPhysicalPerson
      */
     protected $physicalPerson;
 
     /**
-     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо.
+     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо
      *
      * @var null|int
      */
@@ -51,7 +51,7 @@ class ListAllOrderReceiverCounterpart
     }
 
     /**
-     * Наименование/ФИО.
+     * Наименование/ФИО
      */
     public function getName(): ?string
     {
@@ -59,7 +59,7 @@ class ListAllOrderReceiverCounterpart
     }
 
     /**
-     * Наименование/ФИО.
+     * Наименование/ФИО
      */
     public function setName(?string $name): self
     {
@@ -69,7 +69,7 @@ class ListAllOrderReceiverCounterpart
     }
 
     /**
-     * Блок для физ.лица.
+     * Блок для физ.лица
      */
     public function getPhysicalPerson(): ?ListAllOrderReceiverCounterpartPhysicalPerson
     {
@@ -77,7 +77,7 @@ class ListAllOrderReceiverCounterpart
     }
 
     /**
-     * Блок для физ.лица.
+     * Блок для физ.лица
      */
     public function setPhysicalPerson(?ListAllOrderReceiverCounterpartPhysicalPerson $physicalPerson): self
     {
@@ -87,7 +87,7 @@ class ListAllOrderReceiverCounterpart
     }
 
     /**
-     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо.
+     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо
      */
     public function getType(): ?int
     {
@@ -95,7 +95,7 @@ class ListAllOrderReceiverCounterpart
     }
 
     /**
-     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо.
+     * Тип контрагента: 0 - юр.лицо/ИП, 1 - физическое лицо
      */
     public function setType(?int $type): self
     {

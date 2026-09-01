@@ -12,14 +12,14 @@ class CurrencyItem
     protected $code;
 
     /**
-     * Полное наименование валюты.
+     * Полное наименование валюты
      *
      * @var string
      */
     protected $fullName;
 
     /**
-     * Краткое наименование валюты.
+     * Краткое наименование валюты
      *
      * @var string
      */
@@ -44,7 +44,7 @@ class CurrencyItem
     }
 
     /**
-     * Полное наименование валюты.
+     * Полное наименование валюты
      */
     public function getFullName(): string
     {
@@ -52,7 +52,7 @@ class CurrencyItem
     }
 
     /**
-     * Полное наименование валюты.
+     * Полное наименование валюты
      */
     public function setFullName(string $fullName): self
     {
@@ -62,7 +62,7 @@ class CurrencyItem
     }
 
     /**
-     * Краткое наименование валюты.
+     * Краткое наименование валюты
      */
     public function getName(): string
     {
@@ -70,7 +70,7 @@ class CurrencyItem
     }
 
     /**
-     * Краткое наименование валюты.
+     * Краткое наименование валюты
      */
     public function setName(string $name): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class WorkTime
 {
     /**
-     * Начало рабочего дня.
+     * Начало рабочего дня
      *
      * @var string
      */
     protected $periodTimeFrom;
 
     /**
-     * Конец рабочего дня.
+     * Конец рабочего дня
      *
      * @var string
      */
     protected $periodTimeTo;
 
     /**
-     * Начало рабочего дня.
+     * Начало рабочего дня
      */
     public function getPeriodTimeFrom(): string
     {
@@ -27,7 +27,7 @@ class WorkTime
     }
 
     /**
-     * Начало рабочего дня.
+     * Начало рабочего дня
      */
     public function setPeriodTimeFrom(string $periodTimeFrom): self
     {
@@ -37,7 +37,7 @@ class WorkTime
     }
 
     /**
-     * Конец рабочего дня.
+     * Конец рабочего дня
      */
     public function getPeriodTimeTo(): string
     {
@@ -45,7 +45,7 @@ class WorkTime
     }
 
     /**
-     * Конец рабочего дня.
+     * Конец рабочего дня
      */
     public function setPeriodTimeTo(string $periodTimeTo): self
     {

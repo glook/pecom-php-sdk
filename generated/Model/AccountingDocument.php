@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingDocument
 {
     /**
-     * Дата документа.
+     * Дата документа
      *
      * @var null|string
      */
     protected $date;
 
     /**
-     * Номер документа.
+     * Номер документа
      *
      * @var null|string
      */
@@ -26,7 +26,7 @@ class AccountingDocument
     protected $rateVAT;
 
     /**
-     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null.
+     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null
      *
      * @var null|AccountingDocumentService[]
      */
@@ -47,14 +47,14 @@ class AccountingDocument
     protected $sumVAT;
 
     /**
-     * Вид документа.
+     * Вид документа
      *
      * @var null|string
      */
     protected $type;
 
     /**
-     * Дата документа.
+     * Дата документа
      */
     public function getDate(): ?string
     {
@@ -62,7 +62,7 @@ class AccountingDocument
     }
 
     /**
-     * Дата документа.
+     * Дата документа
      */
     public function setDate(?string $date): self
     {
@@ -72,7 +72,7 @@ class AccountingDocument
     }
 
     /**
-     * Номер документа.
+     * Номер документа
      */
     public function getNumber(): ?string
     {
@@ -80,7 +80,7 @@ class AccountingDocument
     }
 
     /**
-     * Номер документа.
+     * Номер документа
      */
     public function setNumber(?string $number): self
     {
@@ -108,7 +108,7 @@ class AccountingDocument
     }
 
     /**
-     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null.
+     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null
      *
      * @return null|AccountingDocumentService[]
      */
@@ -118,7 +118,7 @@ class AccountingDocument
     }
 
     /**
-     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null.
+     * Список услуг, оказанных в рамках документа. если услуг по документу нет, равно null
      *
      * @param null|AccountingDocumentService[] $services
      */
@@ -166,7 +166,7 @@ class AccountingDocument
     }
 
     /**
-     * Вид документа.
+     * Вид документа
      */
     public function getType(): ?string
     {
@@ -174,7 +174,7 @@ class AccountingDocument
     }
 
     /**
-     * Вид документа.
+     * Вид документа
      */
     public function setType(?string $type): self
     {

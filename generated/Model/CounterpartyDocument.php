@@ -10,21 +10,21 @@ class CounterpartyDocument
     protected $documentType;
 
     /**
-     * Дата окончания действия документа удостоверяющего личность.
+     * Дата окончания действия документа удостоверяющего личность
      *
      * @var null|\DateTime
      */
     protected $expiredDate;
 
     /**
-     * Номер документа удостоверяющего личность.
+     * Номер документа удостоверяющего личность
      *
      * @var null|string
      */
     protected $number;
 
     /**
-     * Серия документа удостоверяющего личность.
+     * Серия документа удостоверяющего личность
      *
      * @var null|string
      */
@@ -43,7 +43,7 @@ class CounterpartyDocument
     }
 
     /**
-     * Дата окончания действия документа удостоверяющего личность.
+     * Дата окончания действия документа удостоверяющего личность
      */
     public function getExpiredDate(): ?\DateTime
     {
@@ -51,7 +51,7 @@ class CounterpartyDocument
     }
 
     /**
-     * Дата окончания действия документа удостоверяющего личность.
+     * Дата окончания действия документа удостоверяющего личность
      */
     public function setExpiredDate(?\DateTime $expiredDate): self
     {
@@ -61,7 +61,7 @@ class CounterpartyDocument
     }
 
     /**
-     * Номер документа удостоверяющего личность.
+     * Номер документа удостоверяющего личность
      */
     public function getNumber(): ?string
     {
@@ -69,7 +69,7 @@ class CounterpartyDocument
     }
 
     /**
-     * Номер документа удостоверяющего личность.
+     * Номер документа удостоверяющего личность
      */
     public function setNumber(?string $number): self
     {
@@ -79,7 +79,7 @@ class CounterpartyDocument
     }
 
     /**
-     * Серия документа удостоверяющего личность.
+     * Серия документа удостоверяющего личность
      */
     public function getSeries(): ?string
     {
@@ -87,7 +87,7 @@ class CounterpartyDocument
     }
 
     /**
-     * Серия документа удостоверяющего личность.
+     * Серия документа удостоверяющего личность
      */
     public function setSeries(?string $series): self
     {

@@ -19,7 +19,7 @@ class CargosdocumentsCargoinvoicebyperiod extends BaseEndpoint implements Endpoi
     /**
      * Для получения неоплаченных идентификаторов грузов необходимо передать идентификатор плательщика `counterpartGuid`. `counterpartGuid` можно получить методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/)
      * - Запрошенный период не может превышать 31 день.
-     * - По полученным идентификаторам грузов можно запросить Счет на оплату методом [`/CARGOSDOCUMENTS/ORDER/`](#tag/cargosdocuments/POST/cargosdocuments/order/).
+     * - По полученным идентификаторам грузов можно запросить Счет на оплату методом [`/CARGOSDOCUMENTS/ORDER/`](#tag/cargosdocuments/POST/cargosdocuments/order/)
      */
     public function __construct(CargosdocumentsCargoinvoicebyperiodRequest $requestBody)
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargos
 {
     /**
-     * Общие данные для всех позиций.
+     * Общие данные для всех позиций
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosCommon
      */
     protected $common;
 
     /**
-     * Данные о грузах.
+     * Данные о грузах
      *
      * @var CargoPickupNetworkSubmitRequestCargosItemsItem[]
      */
     protected $items;
 
     /**
-     * Общие данные для всех позиций.
+     * Общие данные для всех позиций
      */
     public function getCommon(): ?CargoPickupNetworkSubmitRequestCargosCommon
     {
@@ -27,7 +27,7 @@ class CargoPickupNetworkSubmitRequestCargos
     }
 
     /**
-     * Общие данные для всех позиций.
+     * Общие данные для всех позиций
      */
     public function setCommon(?CargoPickupNetworkSubmitRequestCargosCommon $common): self
     {
@@ -37,7 +37,7 @@ class CargoPickupNetworkSubmitRequestCargos
     }
 
     /**
-     * Данные о грузах.
+     * Данные о грузах
      *
      * @return CargoPickupNetworkSubmitRequestCargosItemsItem[]
      */
@@ -47,7 +47,7 @@ class CargoPickupNetworkSubmitRequestCargos
     }
 
     /**
-     * Данные о грузах.
+     * Данные о грузах
      *
      * @param CargoPickupNetworkSubmitRequestCargosItemsItem[] $items
      */

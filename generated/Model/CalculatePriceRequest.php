@@ -5,56 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class CalculatePriceRequest
 {
     /**
-     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88.
+     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88
      *
      * @var null|Cargo[]
      */
     protected $cargos;
 
     /**
-     * Данные контрагента для расчета с учетом спецусловий.
+     * Данные контрагента для расчета с учетом спецусловий
      *
      * @var null|Counterpart
      */
     protected $counterpart;
 
     /**
-     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/).
+     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/)
      *
      * @var null|string
      */
     protected $currencyCode = '643';
 
     /**
-     * Параметры адреса доставки груза.
+     * Параметры адреса доставки груза
      *
      * @var null|AddressBlock
      */
     protected $delivery;
 
     /**
-     * Погрузочно-разгрузочные работы при доставке.
+     * Погрузочно-разгрузочные работы при доставке
      *
      * @var null|LoadingServices
      */
     protected $deliveryServices;
 
     /**
-     * Нужна доставка.
+     * Нужна доставка
      *
      * @var null|bool
      */
     protected $isDelivery;
 
     /**
-     * Признак гипермаркета.
+     * Признак гипермаркета
      *
      * @var null|bool
      */
     protected $isHyperMarket;
 
     /**
-     * Страхование.
+     * Страхование
      *
      * @var null|bool
      */
@@ -68,14 +68,14 @@ class CalculatePriceRequest
     protected $isInsurancePrice;
 
     /**
-     * Растентовка получателя.
+     * Растентовка получателя
      *
      * @var null|bool
      */
     protected $isOpenCarReceiver;
 
     /**
-     * Растентовка отправителя.
+     * Растентовка отправителя
      *
      * @var null|bool
      */
@@ -89,28 +89,28 @@ class CalculatePriceRequest
     protected $isPickUp;
 
     /**
-     * Организация перевозки сопроводительных документов (см. комментарии).
+     * Организация перевозки сопроводительных документов (см. комментарии)
      *
      * @var null|bool
      */
     protected $needArrangeTransportationDocuments;
 
     /**
-     * Возврат документов (см. комментарии).
+     * Возврат документов (см. комментарии)
      *
      * @var null|bool
      */
     protected $needReturnDocuments;
 
     /**
-     * Параметры адреса забора груза.
+     * Параметры адреса забора груза
      *
      * @var null|AddressBlock
      */
     protected $pickup;
 
     /**
-     * Погрузочно-разгрузочные работы при заборе.
+     * Погрузочно-разгрузочные работы при заборе
      *
      * @var null|LoadingServices
      */
@@ -131,7 +131,7 @@ class CalculatePriceRequest
     protected $receiverDistanceType;
 
     /**
-     * Идентификатор склада получателя (см. комментарии).
+     * Идентификатор склада получателя (см. комментарии)
      *
      * @var null|string
      */
@@ -145,21 +145,21 @@ class CalculatePriceRequest
     protected $senderDistanceType;
 
     /**
-     * Идентификатор склада отправителя (см. комментарии).
+     * Идентификатор склада отправителя (см. комментарии)
      *
      * @var null|string
      */
     protected $senderWarehouseId;
 
     /**
-     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто.
+     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто
      *
      * @var float[]
      */
     protected $types;
 
     /**
-     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88.
+     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88
      *
      * @return null|Cargo[]
      */
@@ -169,7 +169,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88.
+     * Данные о грузе/грузоместах груза (см. комментарии). Для корректного расчёта передавайте не более двух знаков после запятой, на нашей стороне округление выполняется до сотых в большую сторону. Например, 0.00041 будет 0.01; 1.871001 будет 1.88
      *
      * @param null|Cargo[] $cargos
      */
@@ -181,7 +181,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Данные контрагента для расчета с учетом спецусловий.
+     * Данные контрагента для расчета с учетом спецусловий
      */
     public function getCounterpart(): ?Counterpart
     {
@@ -189,7 +189,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Данные контрагента для расчета с учетом спецусловий.
+     * Данные контрагента для расчета с учетом спецусловий
      */
     public function setCounterpart(?Counterpart $counterpart): self
     {
@@ -199,7 +199,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/).
+     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/)
      */
     public function getCurrencyCode(): ?string
     {
@@ -207,7 +207,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/).
+     * Код валюты. Необязательно. По умолчанию 643 — российский рубль. Допустимые валюты см. в ответе метода [`/currency/all/`](#tag/currency/POST/currency/all/)
      */
     public function setCurrencyCode(?string $currencyCode): self
     {
@@ -217,7 +217,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Параметры адреса доставки груза.
+     * Параметры адреса доставки груза
      */
     public function getDelivery(): ?AddressBlock
     {
@@ -225,7 +225,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Параметры адреса доставки груза.
+     * Параметры адреса доставки груза
      */
     public function setDelivery(?AddressBlock $delivery): self
     {
@@ -235,7 +235,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Погрузочно-разгрузочные работы при доставке.
+     * Погрузочно-разгрузочные работы при доставке
      */
     public function getDeliveryServices(): ?LoadingServices
     {
@@ -243,7 +243,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Погрузочно-разгрузочные работы при доставке.
+     * Погрузочно-разгрузочные работы при доставке
      */
     public function setDeliveryServices(?LoadingServices $deliveryServices): self
     {
@@ -253,7 +253,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Нужна доставка.
+     * Нужна доставка
      */
     public function getIsDelivery(): ?bool
     {
@@ -261,7 +261,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Нужна доставка.
+     * Нужна доставка
      */
     public function setIsDelivery(?bool $isDelivery): self
     {
@@ -271,7 +271,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Признак гипермаркета.
+     * Признак гипермаркета
      */
     public function getIsHyperMarket(): ?bool
     {
@@ -279,7 +279,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Признак гипермаркета.
+     * Признак гипермаркета
      */
     public function setIsHyperMarket(?bool $isHyperMarket): self
     {
@@ -289,7 +289,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Страхование.
+     * Страхование
      */
     public function getIsInsurance(): ?bool
     {
@@ -297,7 +297,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Страхование.
+     * Страхование
      */
     public function setIsInsurance(?bool $isInsurance): self
     {
@@ -325,7 +325,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Растентовка получателя.
+     * Растентовка получателя
      */
     public function getIsOpenCarReceiver(): ?bool
     {
@@ -333,7 +333,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Растентовка получателя.
+     * Растентовка получателя
      */
     public function setIsOpenCarReceiver(?bool $isOpenCarReceiver): self
     {
@@ -343,7 +343,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Растентовка отправителя.
+     * Растентовка отправителя
      */
     public function getIsOpenCarSender(): ?bool
     {
@@ -351,7 +351,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Растентовка отправителя.
+     * Растентовка отправителя
      */
     public function setIsOpenCarSender(?bool $isOpenCarSender): self
     {
@@ -379,7 +379,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Организация перевозки сопроводительных документов (см. комментарии).
+     * Организация перевозки сопроводительных документов (см. комментарии)
      */
     public function getNeedArrangeTransportationDocuments(): ?bool
     {
@@ -387,7 +387,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Организация перевозки сопроводительных документов (см. комментарии).
+     * Организация перевозки сопроводительных документов (см. комментарии)
      */
     public function setNeedArrangeTransportationDocuments(?bool $needArrangeTransportationDocuments): self
     {
@@ -397,7 +397,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Возврат документов (см. комментарии).
+     * Возврат документов (см. комментарии)
      */
     public function getNeedReturnDocuments(): ?bool
     {
@@ -405,7 +405,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Возврат документов (см. комментарии).
+     * Возврат документов (см. комментарии)
      */
     public function setNeedReturnDocuments(?bool $needReturnDocuments): self
     {
@@ -415,7 +415,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Параметры адреса забора груза.
+     * Параметры адреса забора груза
      */
     public function getPickup(): ?AddressBlock
     {
@@ -423,7 +423,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Параметры адреса забора груза.
+     * Параметры адреса забора груза
      */
     public function setPickup(?AddressBlock $pickup): self
     {
@@ -433,7 +433,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Погрузочно-разгрузочные работы при заборе.
+     * Погрузочно-разгрузочные работы при заборе
      */
     public function getPickupServices(): ?LoadingServices
     {
@@ -441,7 +441,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Погрузочно-разгрузочные работы при заборе.
+     * Погрузочно-разгрузочные работы при заборе
      */
     public function setPickupServices(?LoadingServices $pickupServices): self
     {
@@ -487,7 +487,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Идентификатор склада получателя (см. комментарии).
+     * Идентификатор склада получателя (см. комментарии)
      */
     public function getReceiverWarehouseId(): ?string
     {
@@ -495,7 +495,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Идентификатор склада получателя (см. комментарии).
+     * Идентификатор склада получателя (см. комментарии)
      */
     public function setReceiverWarehouseId(?string $receiverWarehouseId): self
     {
@@ -523,7 +523,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Идентификатор склада отправителя (см. комментарии).
+     * Идентификатор склада отправителя (см. комментарии)
      */
     public function getSenderWarehouseId(): ?string
     {
@@ -531,7 +531,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Идентификатор склада отправителя (см. комментарии).
+     * Идентификатор склада отправителя (см. комментарии)
      */
     public function setSenderWarehouseId(?string $senderWarehouseId): self
     {
@@ -541,7 +541,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто.
+     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто
      *
      * @return float[]
      */
@@ -551,7 +551,7 @@ class CalculatePriceRequest
     }
 
     /**
-     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто.
+     * Массив идентификаторов продуктов/тарифов ПЭК для расчета. Обязательно. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/). ВНИМАНИЕ! В настоящее время метод не позволяет рассчитывать стоимость по продукту/тарифу 5 — ПЭК:Express Авто
      *
      * @param float[] $types
      */

@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupFile
 {
     /**
-     * Base64-содержимое файла.
+     * Base64-содержимое файла
      *
      * @var null|string
      */
@@ -27,7 +27,7 @@ class CargoPickupFile
     protected $mimeType;
 
     /**
-     * Base64-содержимое файла.
+     * Base64-содержимое файла
      */
     public function getData(): ?string
     {
@@ -35,7 +35,7 @@ class CargoPickupFile
     }
 
     /**
-     * Base64-содержимое файла.
+     * Base64-содержимое файла
      */
     public function setData(?string $data): self
     {

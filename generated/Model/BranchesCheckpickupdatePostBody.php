@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesCheckpickupdatePostBody
 {
     /**
-     * Адрес забора.
+     * Адрес забора
      *
      * @var string
      */
     protected $address;
 
     /**
-     * Плановая дата забора.
+     * Плановая дата забора
      *
      * @var \DateTime
      */
     protected $planPickupDate;
 
     /**
-     * Адрес забора.
+     * Адрес забора
      */
     public function getAddress(): string
     {
@@ -27,7 +27,7 @@ class BranchesCheckpickupdatePostBody
     }
 
     /**
-     * Адрес забора.
+     * Адрес забора
      */
     public function setAddress(string $address): self
     {
@@ -37,7 +37,7 @@ class BranchesCheckpickupdatePostBody
     }
 
     /**
-     * Плановая дата забора.
+     * Плановая дата забора
      */
     public function getPlanPickupDate(): \DateTime
     {
@@ -45,7 +45,7 @@ class BranchesCheckpickupdatePostBody
     }
 
     /**
-     * Плановая дата забора.
+     * Плановая дата забора
      */
     public function setPlanPickupDate(\DateTime $planPickupDate): self
     {

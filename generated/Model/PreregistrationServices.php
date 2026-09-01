@@ -20,7 +20,7 @@ class PreregistrationServices
     protected $documentsReturning;
 
     /**
-     * Email для бухгалтерских уведомлений.
+     * Email для бухгалтерских уведомлений
      *
      * @var null|string
      */
@@ -98,7 +98,7 @@ class PreregistrationServices
     }
 
     /**
-     * Email для бухгалтерских уведомлений.
+     * Email для бухгалтерских уведомлений
      */
     public function getEmail(): ?string
     {
@@ -106,7 +106,7 @@ class PreregistrationServices
     }
 
     /**
-     * Email для бухгалтерских уведомлений.
+     * Email для бухгалтерских уведомлений
      */
     public function setEmail(?string $email): self
     {

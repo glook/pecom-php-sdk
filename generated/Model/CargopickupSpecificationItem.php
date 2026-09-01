@@ -19,35 +19,35 @@ class CargopickupSpecificationItem
     protected $actualCostTotal;
 
     /**
-     * Количество. Для маркированных товаров всегда 1.
+     * Количество. Для маркированных товаров всегда 1
      *
      * @var int
      */
     protected $amount;
 
     /**
-     * Предмет расчета. 1 — Товар, 33 — Товар маркированный.
+     * Предмет расчета. 1 — Товар, 33 — Товар маркированный
      *
      * @var int
      */
     protected $calculationSubject;
 
     /**
-     * Группа маркированного товара. 1 — Легпром, 2 — Обувь, 4 — Парфюм, 5 — Шины, 6 — Фото, 9 — Велосипеды, 10 — Медицинские изделия, 13 — Упак.вода, 14 — Товары из натур.меха, 17 — БАДЫ, 19 — Антисептики, 35 — Косметика, быт.химия и товары личной гигиены.
+     * Группа маркированного товара. 1 — Легпром, 2 — Обувь, 4 — Парфюм, 5 — Шины, 6 — Фото, 9 — Велосипеды, 10 — Медицинские изделия, 13 — Упак.вода, 14 — Товары из натур.меха, 17 — БАДЫ, 19 — Антисептики, 35 — Косметика, быт.химия и товары личной гигиены
      *
      * @var null|int
      */
     protected $groupMarkedGood;
 
     /**
-     * Код маркировки. Обязателен при calculationSubject = 33.
+     * Код маркировки. Обязателен при calculationSubject = 33
      *
      * @var null|string
      */
     protected $markingCode;
 
     /**
-     * Единица измерения. 0 — шт, 10 — г, 11 — кг, 12 — т, 20 — см, 21 — дм, 22 — м, 30 — кв.см, 31 — кв.дм, 32 — кв.м, 40 — мл, 41 — л, 42 — куб.м, 255 — иные единицы.
+     * Единица измерения. 0 — шт, 10 — г, 11 — кг, 12 — т, 20 — см, 21 — дм, 22 — м, 30 — кв.см, 31 — кв.дм, 32 — кв.м, 40 — мл, 41 — л, 42 — куб.м, 255 — иные единицы
      *
      * @var null|int
      */
@@ -75,35 +75,35 @@ class CargopickupSpecificationItem
     protected $sumTotal;
 
     /**
-     * Наименование товара.
+     * Наименование товара
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Артикул товара.
+     * Артикул товара
      *
      * @var string
      */
     protected $vendorCode;
 
     /**
-     * ИНН владельца товара.
+     * ИНН владельца товара
      *
      * @var string
      */
     protected $vendorINN;
 
     /**
-     * Наименование владельца товара.
+     * Наименование владельца товара
      *
      * @var string
      */
     protected $vendorName;
 
     /**
-     * Телефон владельца товара.
+     * Телефон владельца товара
      *
      * @var string
      */
@@ -146,7 +146,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Количество. Для маркированных товаров всегда 1.
+     * Количество. Для маркированных товаров всегда 1
      */
     public function getAmount(): int
     {
@@ -154,7 +154,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Количество. Для маркированных товаров всегда 1.
+     * Количество. Для маркированных товаров всегда 1
      */
     public function setAmount(int $amount): self
     {
@@ -164,7 +164,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Предмет расчета. 1 — Товар, 33 — Товар маркированный.
+     * Предмет расчета. 1 — Товар, 33 — Товар маркированный
      */
     public function getCalculationSubject(): int
     {
@@ -172,7 +172,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Предмет расчета. 1 — Товар, 33 — Товар маркированный.
+     * Предмет расчета. 1 — Товар, 33 — Товар маркированный
      */
     public function setCalculationSubject(int $calculationSubject): self
     {
@@ -182,7 +182,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Группа маркированного товара. 1 — Легпром, 2 — Обувь, 4 — Парфюм, 5 — Шины, 6 — Фото, 9 — Велосипеды, 10 — Медицинские изделия, 13 — Упак.вода, 14 — Товары из натур.меха, 17 — БАДЫ, 19 — Антисептики, 35 — Косметика, быт.химия и товары личной гигиены.
+     * Группа маркированного товара. 1 — Легпром, 2 — Обувь, 4 — Парфюм, 5 — Шины, 6 — Фото, 9 — Велосипеды, 10 — Медицинские изделия, 13 — Упак.вода, 14 — Товары из натур.меха, 17 — БАДЫ, 19 — Антисептики, 35 — Косметика, быт.химия и товары личной гигиены
      */
     public function getGroupMarkedGood(): ?int
     {
@@ -190,7 +190,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Группа маркированного товара. 1 — Легпром, 2 — Обувь, 4 — Парфюм, 5 — Шины, 6 — Фото, 9 — Велосипеды, 10 — Медицинские изделия, 13 — Упак.вода, 14 — Товары из натур.меха, 17 — БАДЫ, 19 — Антисептики, 35 — Косметика, быт.химия и товары личной гигиены.
+     * Группа маркированного товара. 1 — Легпром, 2 — Обувь, 4 — Парфюм, 5 — Шины, 6 — Фото, 9 — Велосипеды, 10 — Медицинские изделия, 13 — Упак.вода, 14 — Товары из натур.меха, 17 — БАДЫ, 19 — Антисептики, 35 — Косметика, быт.химия и товары личной гигиены
      */
     public function setGroupMarkedGood(?int $groupMarkedGood): self
     {
@@ -200,7 +200,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Код маркировки. Обязателен при calculationSubject = 33.
+     * Код маркировки. Обязателен при calculationSubject = 33
      */
     public function getMarkingCode(): ?string
     {
@@ -208,7 +208,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Код маркировки. Обязателен при calculationSubject = 33.
+     * Код маркировки. Обязателен при calculationSubject = 33
      */
     public function setMarkingCode(?string $markingCode): self
     {
@@ -218,7 +218,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Единица измерения. 0 — шт, 10 — г, 11 — кг, 12 — т, 20 — см, 21 — дм, 22 — м, 30 — кв.см, 31 — кв.дм, 32 — кв.м, 40 — мл, 41 — л, 42 — куб.м, 255 — иные единицы.
+     * Единица измерения. 0 — шт, 10 — г, 11 — кг, 12 — т, 20 — см, 21 — дм, 22 — м, 30 — кв.см, 31 — кв.дм, 32 — кв.м, 40 — мл, 41 — л, 42 — куб.м, 255 — иные единицы
      */
     public function getMeasureOfQuantity(): ?int
     {
@@ -226,7 +226,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Единица измерения. 0 — шт, 10 — г, 11 — кг, 12 — т, 20 — см, 21 — дм, 22 — м, 30 — кв.см, 31 — кв.дм, 32 — кв.м, 40 — мл, 41 — л, 42 — куб.м, 255 — иные единицы.
+     * Единица измерения. 0 — шт, 10 — г, 11 — кг, 12 — т, 20 — см, 21 — дм, 22 — м, 30 — кв.см, 31 — кв.дм, 32 — кв.м, 40 — мл, 41 — л, 42 — куб.м, 255 — иные единицы
      */
     public function setMeasureOfQuantity(?int $measureOfQuantity): self
     {
@@ -290,7 +290,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Наименование товара.
+     * Наименование товара
      */
     public function getTitle(): string
     {
@@ -298,7 +298,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Наименование товара.
+     * Наименование товара
      */
     public function setTitle(string $title): self
     {
@@ -308,7 +308,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Артикул товара.
+     * Артикул товара
      */
     public function getVendorCode(): string
     {
@@ -316,7 +316,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Артикул товара.
+     * Артикул товара
      */
     public function setVendorCode(string $vendorCode): self
     {
@@ -326,7 +326,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * ИНН владельца товара.
+     * ИНН владельца товара
      */
     public function getVendorINN(): string
     {
@@ -334,7 +334,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * ИНН владельца товара.
+     * ИНН владельца товара
      */
     public function setVendorINN(string $vendorINN): self
     {
@@ -344,7 +344,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Наименование владельца товара.
+     * Наименование владельца товара
      */
     public function getVendorName(): string
     {
@@ -352,7 +352,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Наименование владельца товара.
+     * Наименование владельца товара
      */
     public function setVendorName(string $vendorName): self
     {
@@ -362,7 +362,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Телефон владельца товара.
+     * Телефон владельца товара
      */
     public function getVendorPhone(): string
     {
@@ -370,7 +370,7 @@ class CargopickupSpecificationItem
     }
 
     /**
-     * Телефон владельца товара.
+     * Телефон владельца товара
      */
     public function setVendorPhone(string $vendorPhone): self
     {

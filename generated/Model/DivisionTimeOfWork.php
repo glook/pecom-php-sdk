@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class DivisionTimeOfWork
 {
     /**
-     * День недели (1 - понедельник, 6 - суббота).
+     * День недели (1 - понедельник, 6 - суббота)
      *
      * @var string
      */
     protected $dayOfWeek;
 
     /**
-     * Начало обеденного перерыва.
+     * Начало обеденного перерыва
      *
      * @var null|string
      */
     protected $dinnerFrom;
 
     /**
-     * Конец обеденного перерыва.
+     * Конец обеденного перерыва
      *
      * @var null|string
      */
     protected $dinnerTo;
 
     /**
-     * Начало рабочего дня. Пустая строка означает время 00:00.
+     * Начало рабочего дня. Пустая строка означает время 00:00
      *
      * @var string
      */
     protected $workFrom;
 
     /**
-     * Конец рабочего дня.
+     * Конец рабочего дня
      *
      * @var string
      */
     protected $workTo;
 
     /**
-     * День недели (1 - понедельник, 6 - суббота).
+     * День недели (1 - понедельник, 6 - суббота)
      */
     public function getDayOfWeek(): string
     {
@@ -48,7 +48,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * День недели (1 - понедельник, 6 - суббота).
+     * День недели (1 - понедельник, 6 - суббота)
      */
     public function setDayOfWeek(string $dayOfWeek): self
     {
@@ -58,7 +58,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Начало обеденного перерыва.
+     * Начало обеденного перерыва
      */
     public function getDinnerFrom(): ?string
     {
@@ -66,7 +66,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Начало обеденного перерыва.
+     * Начало обеденного перерыва
      */
     public function setDinnerFrom(?string $dinnerFrom): self
     {
@@ -76,7 +76,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Конец обеденного перерыва.
+     * Конец обеденного перерыва
      */
     public function getDinnerTo(): ?string
     {
@@ -84,7 +84,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Конец обеденного перерыва.
+     * Конец обеденного перерыва
      */
     public function setDinnerTo(?string $dinnerTo): self
     {
@@ -94,7 +94,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Начало рабочего дня. Пустая строка означает время 00:00.
+     * Начало рабочего дня. Пустая строка означает время 00:00
      */
     public function getWorkFrom(): string
     {
@@ -102,7 +102,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Начало рабочего дня. Пустая строка означает время 00:00.
+     * Начало рабочего дня. Пустая строка означает время 00:00
      */
     public function setWorkFrom(string $workFrom): self
     {
@@ -112,7 +112,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Конец рабочего дня.
+     * Конец рабочего дня
      */
     public function getWorkTo(): string
     {
@@ -120,7 +120,7 @@ class DivisionTimeOfWork
     }
 
     /**
-     * Конец рабочего дня.
+     * Конец рабочего дня
      */
     public function setWorkTo(string $workTo): self
     {

@@ -5,98 +5,98 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestSender
 {
     /**
-     * Адрес офиса, по которому находятся документы на получения грузов.
+     * Адрес офиса, по которому находятся документы на получения грузов
      *
      * @var null|string
      */
     protected $addressOffice;
 
     /**
-     * Адрес, по которому необходимо забрать груз.
+     * Адрес, по которому необходимо забрать груз
      *
      * @var null|string
      */
     protected $addressStock;
 
     /**
-     * Наименование филиала отправителя.
+     * Наименование филиала отправителя
      *
      * @var string
      */
     protected $city;
 
     /**
-     * E-mail.
+     * E-mail
      *
      * @var null|string
      */
     protected $email;
 
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц.
+     * Документ, удостоверяющий личность. Обязательно для физических лиц
      *
      * @var null|CargopickupnetworkIdentityCard
      */
     protected $identityCard;
 
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      *
      * @var null|string
      */
     protected $inn;
 
     /**
-     * Время начала обеденного перерыва.
+     * Время начала обеденного перерыва
      *
      * @var null|string
      */
     protected $lunchBreakFrom;
 
     /**
-     * Время окончания обеденного перерыва.
+     * Время окончания обеденного перерыва
      *
      * @var null|string
      */
     protected $lunchBreakTo;
 
     /**
-     * Контактное лицо.
+     * Контактное лицо
      *
      * @var null|string
      */
     protected $person;
 
     /**
-     * Телефон.
+     * Телефон
      *
      * @var string
      */
     protected $phone;
 
     /**
-     * Наименование отправителя.
+     * Наименование отправителя
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Время начала рабочего дня.
+     * Время начала рабочего дня
      *
      * @var null|string
      */
     protected $workTimeFrom;
 
     /**
-     * Время окончания рабочего дня.
+     * Время окончания рабочего дня
      *
      * @var null|string
      */
     protected $workTimeTo;
 
     /**
-     * Адрес офиса, по которому находятся документы на получения грузов.
+     * Адрес офиса, по которому находятся документы на получения грузов
      */
     public function getAddressOffice(): ?string
     {
@@ -104,7 +104,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Адрес офиса, по которому находятся документы на получения грузов.
+     * Адрес офиса, по которому находятся документы на получения грузов
      */
     public function setAddressOffice(?string $addressOffice): self
     {
@@ -114,7 +114,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Адрес, по которому необходимо забрать груз.
+     * Адрес, по которому необходимо забрать груз
      */
     public function getAddressStock(): ?string
     {
@@ -122,7 +122,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Адрес, по которому необходимо забрать груз.
+     * Адрес, по которому необходимо забрать груз
      */
     public function setAddressStock(?string $addressStock): self
     {
@@ -132,7 +132,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Наименование филиала отправителя.
+     * Наименование филиала отправителя
      */
     public function getCity(): string
     {
@@ -140,7 +140,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Наименование филиала отправителя.
+     * Наименование филиала отправителя
      */
     public function setCity(string $city): self
     {
@@ -150,7 +150,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function getEmail(): ?string
     {
@@ -158,7 +158,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function setEmail(?string $email): self
     {
@@ -168,7 +168,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц.
+     * Документ, удостоверяющий личность. Обязательно для физических лиц
      */
     public function getIdentityCard(): ?CargopickupnetworkIdentityCard
     {
@@ -176,7 +176,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц.
+     * Документ, удостоверяющий личность. Обязательно для физических лиц
      */
     public function setIdentityCard(?CargopickupnetworkIdentityCard $identityCard): self
     {
@@ -186,7 +186,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      */
     public function getInn(): ?string
     {
@@ -194,7 +194,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      */
     public function setInn(?string $inn): self
     {
@@ -204,7 +204,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время начала обеденного перерыва.
+     * Время начала обеденного перерыва
      */
     public function getLunchBreakFrom(): ?string
     {
@@ -212,7 +212,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время начала обеденного перерыва.
+     * Время начала обеденного перерыва
      */
     public function setLunchBreakFrom(?string $lunchBreakFrom): self
     {
@@ -222,7 +222,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время окончания обеденного перерыва.
+     * Время окончания обеденного перерыва
      */
     public function getLunchBreakTo(): ?string
     {
@@ -230,7 +230,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время окончания обеденного перерыва.
+     * Время окончания обеденного перерыва
      */
     public function setLunchBreakTo(?string $lunchBreakTo): self
     {
@@ -240,7 +240,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Контактное лицо.
+     * Контактное лицо
      */
     public function getPerson(): ?string
     {
@@ -248,7 +248,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Контактное лицо.
+     * Контактное лицо
      */
     public function setPerson(?string $person): self
     {
@@ -258,7 +258,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function getPhone(): string
     {
@@ -266,7 +266,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function setPhone(string $phone): self
     {
@@ -276,7 +276,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Наименование отправителя.
+     * Наименование отправителя
      */
     public function getTitle(): string
     {
@@ -284,7 +284,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Наименование отправителя.
+     * Наименование отправителя
      */
     public function setTitle(string $title): self
     {
@@ -294,7 +294,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время начала рабочего дня.
+     * Время начала рабочего дня
      */
     public function getWorkTimeFrom(): ?string
     {
@@ -302,7 +302,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время начала рабочего дня.
+     * Время начала рабочего дня
      */
     public function setWorkTimeFrom(?string $workTimeFrom): self
     {
@@ -312,7 +312,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время окончания рабочего дня.
+     * Время окончания рабочего дня
      */
     public function getWorkTimeTo(): ?string
     {
@@ -320,7 +320,7 @@ class CargoPickupNetworkSubmitRequestSender
     }
 
     /**
-     * Время окончания рабочего дня.
+     * Время окончания рабочего дня
      */
     public function setWorkTimeTo(?string $workTimeTo): self
     {

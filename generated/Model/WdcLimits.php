@@ -5,56 +5,56 @@ namespace glook\PecomSdk\Generated\Model;
 class WdcLimits
 {
     /**
-     * Максимальная высота грузоместа.
+     * Максимальная высота грузоместа
      *
      * @var null|float
      */
     protected $height;
 
     /**
-     * Максимальная длина грузоместа.
+     * Максимальная длина грузоместа
      *
      * @var null|float
      */
     protected $length;
 
     /**
-     * Максимальный габарит грузоместа.
+     * Максимальный габарит грузоместа
      *
      * @var null|float
      */
     protected $maxLength;
 
     /**
-     * Максимальный общий вес груза.
+     * Максимальный общий вес груза
      *
      * @var null|float
      */
     protected $totalWeight;
 
     /**
-     * Максимальный объем грузоместа.
+     * Максимальный объем грузоместа
      *
      * @var null|float
      */
     protected $volume;
 
     /**
-     * Максимальный вес грузоместа.
+     * Максимальный вес грузоместа
      *
      * @var null|float
      */
     protected $weight;
 
     /**
-     * Максимальная ширина грузоместа.
+     * Максимальная ширина грузоместа
      *
      * @var null|float
      */
     protected $width;
 
     /**
-     * Максимальная высота грузоместа.
+     * Максимальная высота грузоместа
      */
     public function getHeight(): ?float
     {
@@ -62,7 +62,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальная высота грузоместа.
+     * Максимальная высота грузоместа
      */
     public function setHeight(?float $height): self
     {
@@ -72,7 +72,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальная длина грузоместа.
+     * Максимальная длина грузоместа
      */
     public function getLength(): ?float
     {
@@ -80,7 +80,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальная длина грузоместа.
+     * Максимальная длина грузоместа
      */
     public function setLength(?float $length): self
     {
@@ -90,7 +90,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный габарит грузоместа.
+     * Максимальный габарит грузоместа
      */
     public function getMaxLength(): ?float
     {
@@ -98,7 +98,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный габарит грузоместа.
+     * Максимальный габарит грузоместа
      */
     public function setMaxLength(?float $maxLength): self
     {
@@ -108,7 +108,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный общий вес груза.
+     * Максимальный общий вес груза
      */
     public function getTotalWeight(): ?float
     {
@@ -116,7 +116,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный общий вес груза.
+     * Максимальный общий вес груза
      */
     public function setTotalWeight(?float $totalWeight): self
     {
@@ -126,7 +126,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный объем грузоместа.
+     * Максимальный объем грузоместа
      */
     public function getVolume(): ?float
     {
@@ -134,7 +134,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный объем грузоместа.
+     * Максимальный объем грузоместа
      */
     public function setVolume(?float $volume): self
     {
@@ -144,7 +144,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный вес грузоместа.
+     * Максимальный вес грузоместа
      */
     public function getWeight(): ?float
     {
@@ -152,7 +152,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальный вес грузоместа.
+     * Максимальный вес грузоместа
      */
     public function setWeight(?float $weight): self
     {
@@ -162,7 +162,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальная ширина грузоместа.
+     * Максимальная ширина грузоместа
      */
     public function getWidth(): ?float
     {
@@ -170,7 +170,7 @@ class WdcLimits
     }
 
     /**
-     * Максимальная ширина грузоместа.
+     * Максимальная ширина грузоместа
      */
     public function setWidth(?float $width): self
     {

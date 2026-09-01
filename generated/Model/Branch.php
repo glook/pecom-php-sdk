@@ -5,98 +5,98 @@ namespace glook\PecomSdk\Generated\Model;
 class Branch
 {
     /**
-     * Адрес основного отделения филиала.
+     * Адрес основного отделения филиала
      *
      * @var string
      */
     protected $address;
 
     /**
-     * Код филиала. В актуальной версии протокола не используется.
+     * Код филиала. В актуальной версии протокола не используется
      *
      * @var string
      */
     protected $bitrixId;
 
     /**
-     * Буквенный уникальный код филиала.
+     * Буквенный уникальный код филиала
      *
      * @var string
      */
     protected $branchCode;
 
     /**
-     * Список городов филиала.
+     * Список городов филиала
      *
      * @var BranchCity[]
      */
     protected $cities;
 
     /**
-     * Координаты GPS основного отделения филиала (устаревший формат строки).
+     * Координаты GPS основного отделения филиала (устаревший формат строки)
      *
      * @var null|string
      */
     protected $coordinates;
 
     /**
-     * Координаты GPS основного отделения филиала.
+     * Координаты GPS основного отделения филиала
      *
      * @var null|BranchesCoordinates
      */
     protected $coordinatesobj;
 
     /**
-     * Страна.
+     * Страна
      *
      * @var string
      */
     protected $country;
 
     /**
-     * Код страны регистрации по классификатору.
+     * Код страны регистрации по классификатору
      *
      * @var string
      */
     protected $countryOfRegistrationCode;
 
     /**
-     * Список отделений.
+     * Список отделений
      *
      * @var BranchDivision[]
      */
     protected $divisions;
 
     /**
-     * Идентификатор филиала. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок.
+     * Идентификатор филиала. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок
      *
      * @var string
      */
     protected $id;
 
     /**
-     * Почтовый индекс основного отделения филиала.
+     * Почтовый индекс основного отделения филиала
      *
      * @var string
      */
     protected $postalCode;
 
     /**
-     * Часовой пояс основного отделения филиала.
+     * Часовой пояс основного отделения филиала
      *
      * @var string
      */
     protected $timezone;
 
     /**
-     * Наименование филиала.
+     * Наименование филиала
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Адрес основного отделения филиала.
+     * Адрес основного отделения филиала
      */
     public function getAddress(): string
     {
@@ -104,7 +104,7 @@ class Branch
     }
 
     /**
-     * Адрес основного отделения филиала.
+     * Адрес основного отделения филиала
      */
     public function setAddress(string $address): self
     {
@@ -114,7 +114,7 @@ class Branch
     }
 
     /**
-     * Код филиала. В актуальной версии протокола не используется.
+     * Код филиала. В актуальной версии протокола не используется
      */
     public function getBitrixId(): string
     {
@@ -122,7 +122,7 @@ class Branch
     }
 
     /**
-     * Код филиала. В актуальной версии протокола не используется.
+     * Код филиала. В актуальной версии протокола не используется
      */
     public function setBitrixId(string $bitrixId): self
     {
@@ -132,7 +132,7 @@ class Branch
     }
 
     /**
-     * Буквенный уникальный код филиала.
+     * Буквенный уникальный код филиала
      */
     public function getBranchCode(): string
     {
@@ -140,7 +140,7 @@ class Branch
     }
 
     /**
-     * Буквенный уникальный код филиала.
+     * Буквенный уникальный код филиала
      */
     public function setBranchCode(string $branchCode): self
     {
@@ -150,7 +150,7 @@ class Branch
     }
 
     /**
-     * Список городов филиала.
+     * Список городов филиала
      *
      * @return BranchCity[]
      */
@@ -160,7 +160,7 @@ class Branch
     }
 
     /**
-     * Список городов филиала.
+     * Список городов филиала
      *
      * @param BranchCity[] $cities
      */
@@ -172,7 +172,7 @@ class Branch
     }
 
     /**
-     * Координаты GPS основного отделения филиала (устаревший формат строки).
+     * Координаты GPS основного отделения филиала (устаревший формат строки)
      */
     public function getCoordinates(): ?string
     {
@@ -180,7 +180,7 @@ class Branch
     }
 
     /**
-     * Координаты GPS основного отделения филиала (устаревший формат строки).
+     * Координаты GPS основного отделения филиала (устаревший формат строки)
      */
     public function setCoordinates(?string $coordinates): self
     {
@@ -190,7 +190,7 @@ class Branch
     }
 
     /**
-     * Координаты GPS основного отделения филиала.
+     * Координаты GPS основного отделения филиала
      */
     public function getCoordinatesobj(): ?BranchesCoordinates
     {
@@ -198,7 +198,7 @@ class Branch
     }
 
     /**
-     * Координаты GPS основного отделения филиала.
+     * Координаты GPS основного отделения филиала
      */
     public function setCoordinatesobj(?BranchesCoordinates $coordinatesobj): self
     {
@@ -208,7 +208,7 @@ class Branch
     }
 
     /**
-     * Страна.
+     * Страна
      */
     public function getCountry(): string
     {
@@ -216,7 +216,7 @@ class Branch
     }
 
     /**
-     * Страна.
+     * Страна
      */
     public function setCountry(string $country): self
     {
@@ -226,7 +226,7 @@ class Branch
     }
 
     /**
-     * Код страны регистрации по классификатору.
+     * Код страны регистрации по классификатору
      */
     public function getCountryOfRegistrationCode(): string
     {
@@ -234,7 +234,7 @@ class Branch
     }
 
     /**
-     * Код страны регистрации по классификатору.
+     * Код страны регистрации по классификатору
      */
     public function setCountryOfRegistrationCode(string $countryOfRegistrationCode): self
     {
@@ -244,7 +244,7 @@ class Branch
     }
 
     /**
-     * Список отделений.
+     * Список отделений
      *
      * @return BranchDivision[]
      */
@@ -254,7 +254,7 @@ class Branch
     }
 
     /**
-     * Список отделений.
+     * Список отделений
      *
      * @param BranchDivision[] $divisions
      */
@@ -266,7 +266,7 @@ class Branch
     }
 
     /**
-     * Идентификатор филиала. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок.
+     * Идентификатор филиала. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок
      */
     public function getId(): string
     {
@@ -274,7 +274,7 @@ class Branch
     }
 
     /**
-     * Идентификатор филиала. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок.
+     * Идентификатор филиала. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок
      */
     public function setId(string $id): self
     {
@@ -284,7 +284,7 @@ class Branch
     }
 
     /**
-     * Почтовый индекс основного отделения филиала.
+     * Почтовый индекс основного отделения филиала
      */
     public function getPostalCode(): string
     {
@@ -292,7 +292,7 @@ class Branch
     }
 
     /**
-     * Почтовый индекс основного отделения филиала.
+     * Почтовый индекс основного отделения филиала
      */
     public function setPostalCode(string $postalCode): self
     {
@@ -302,7 +302,7 @@ class Branch
     }
 
     /**
-     * Часовой пояс основного отделения филиала.
+     * Часовой пояс основного отделения филиала
      */
     public function getTimezone(): string
     {
@@ -310,7 +310,7 @@ class Branch
     }
 
     /**
-     * Часовой пояс основного отделения филиала.
+     * Часовой пояс основного отделения филиала
      */
     public function setTimezone(string $timezone): self
     {
@@ -320,7 +320,7 @@ class Branch
     }
 
     /**
-     * Наименование филиала.
+     * Наименование филиала
      */
     public function getTitle(): string
     {
@@ -328,7 +328,7 @@ class Branch
     }
 
     /**
-     * Наименование филиала.
+     * Наименование филиала
      */
     public function setTitle(string $title): self
     {

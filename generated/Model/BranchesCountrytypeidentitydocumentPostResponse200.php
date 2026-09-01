@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesCountrytypeidentitydocumentPostResponse200
 {
     /**
-     * Список допустимых документов, удостоверяющих личность.
+     * Список допустимых документов, удостоверяющих личность
      *
      * @var IdentityDocument[]
      */
     protected $result;
 
     /**
-     * Список допустимых документов, удостоверяющих личность.
+     * Список допустимых документов, удостоверяющих личность
      *
      * @return IdentityDocument[]
      */
@@ -22,7 +22,7 @@ class BranchesCountrytypeidentitydocumentPostResponse200
     }
 
     /**
-     * Список допустимых документов, удостоверяющих личность.
+     * Список допустимых документов, удостоверяющих личность
      *
      * @param IdentityDocument[] $result
      */

@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectMetaDataAddressDetailsCountry
 {
     /**
-     * Адрес одной строкой.
+     * Адрес одной строкой
      *
      * @var string
      */
@@ -17,21 +17,21 @@ class GeoObjectMetaDataAddressDetailsCountry
     protected $administrativeArea;
 
     /**
-     * Название страны.
+     * Название страны
      *
      * @var string
      */
     protected $countryName;
 
     /**
-     * Код страны.
+     * Код страны
      *
      * @var string
      */
     protected $countryNameCode;
 
     /**
-     * Адрес одной строкой.
+     * Адрес одной строкой
      */
     public function getAddressLine(): string
     {
@@ -39,7 +39,7 @@ class GeoObjectMetaDataAddressDetailsCountry
     }
 
     /**
-     * Адрес одной строкой.
+     * Адрес одной строкой
      */
     public function setAddressLine(string $addressLine): self
     {
@@ -61,7 +61,7 @@ class GeoObjectMetaDataAddressDetailsCountry
     }
 
     /**
-     * Название страны.
+     * Название страны
      */
     public function getCountryName(): string
     {
@@ -69,7 +69,7 @@ class GeoObjectMetaDataAddressDetailsCountry
     }
 
     /**
-     * Название страны.
+     * Название страны
      */
     public function setCountryName(string $countryName): self
     {
@@ -79,7 +79,7 @@ class GeoObjectMetaDataAddressDetailsCountry
     }
 
     /**
-     * Код страны.
+     * Код страны
      */
     public function getCountryNameCode(): string
     {
@@ -87,7 +87,7 @@ class GeoObjectMetaDataAddressDetailsCountry
     }
 
     /**
-     * Код страны.
+     * Код страны
      */
     public function setCountryNameCode(string $countryNameCode): self
     {

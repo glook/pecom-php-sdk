@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObjectMetaDataAddressDetailsCountryAdministrativeAreaSubAdministrativeAreaLocality
 {
     /**
-     * Название населенного пункта.
+     * Название населенного пункта
      *
      * @var string
      */
     protected $localityName;
 
     /**
-     * Название населенного пункта.
+     * Название населенного пункта
      */
     public function getLocalityName(): string
     {
@@ -20,7 +20,7 @@ class GeoObjectMetaDataAddressDetailsCountryAdministrativeAreaSubAdministrativeA
     }
 
     /**
-     * Название населенного пункта.
+     * Название населенного пункта
      */
     public function setLocalityName(string $localityName): self
     {

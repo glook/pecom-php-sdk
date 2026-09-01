@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class ServiceInsurance
 {
     /**
-     * Стоимость груза (сумма, на которую будет застрахован груз), руб, поле обязательно, если "enabled":true.
+     * Стоимость груза (сумма, на которую будет застрахован груз), руб, поле обязательно, если "enabled":true
      *
      * @var null|float
      */
     protected $cost;
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      *
      * @var null|bool
      */
@@ -24,7 +24,7 @@ class ServiceInsurance
     protected $payer;
 
     /**
-     * Стоимость груза (сумма, на которую будет застрахован груз), руб, поле обязательно, если "enabled":true.
+     * Стоимость груза (сумма, на которую будет застрахован груз), руб, поле обязательно, если "enabled":true
      */
     public function getCost(): ?float
     {
@@ -32,7 +32,7 @@ class ServiceInsurance
     }
 
     /**
-     * Стоимость груза (сумма, на которую будет застрахован груз), руб, поле обязательно, если "enabled":true.
+     * Стоимость груза (сумма, на которую будет застрахован груз), руб, поле обязательно, если "enabled":true
      */
     public function setCost(?float $cost): self
     {
@@ -42,7 +42,7 @@ class ServiceInsurance
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function getEnabled(): ?bool
     {
@@ -50,7 +50,7 @@ class ServiceInsurance
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function setEnabled(?bool $enabled): self
     {

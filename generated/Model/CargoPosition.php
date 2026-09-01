@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPosition
 {
     /**
-     * Штрих-код места в формате CODE-128 / EAN-128.
+     * Штрих-код места в формате CODE-128 / EAN-128
      *
      * @var string
      */
     protected $barcode;
 
     /**
-     * Штрих-код места в формате CODE-128 / EAN-128.
+     * Штрих-код места в формате CODE-128 / EAN-128
      */
     public function getBarcode(): string
     {
@@ -20,7 +20,7 @@ class CargoPosition
     }
 
     /**
-     * Штрих-код места в формате CODE-128 / EAN-128.
+     * Штрих-код места в формате CODE-128 / EAN-128
      */
     public function setBarcode(string $barcode): self
     {

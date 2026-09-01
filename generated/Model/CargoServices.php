@@ -12,42 +12,42 @@ class CargoServices
     protected $debt;
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @var null|mixed[][]
      */
     protected $debtList;
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @var null|bool
      */
     protected $freeService;
 
     /**
-     * Защитная транспортировочная упаковка.
+     * Защитная транспортировочная упаковка
      *
      * @var null|bool
      */
     protected $hardPack;
 
     /**
-     * Страхование.
+     * Страхование
      *
      * @var null|bool
      */
     protected $insurance;
 
     /**
-     * Массив услуг.
+     * Массив услуг
      *
      * @var null|CargosServiceItem[]
      */
     protected $items;
 
     /**
-     * Груз является возвратными документами.
+     * Груз является возвратными документами
      *
      * @var null|bool
      */
@@ -79,7 +79,7 @@ class CargoServices
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @return null|mixed[][]
      */
@@ -89,7 +89,7 @@ class CargoServices
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @param null|mixed[][] $debtList
      */
@@ -101,7 +101,7 @@ class CargoServices
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      */
     public function getFreeService(): ?bool
     {
@@ -109,7 +109,7 @@ class CargoServices
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      */
     public function setFreeService(?bool $freeService): self
     {
@@ -119,7 +119,7 @@ class CargoServices
     }
 
     /**
-     * Защитная транспортировочная упаковка.
+     * Защитная транспортировочная упаковка
      */
     public function getHardPack(): ?bool
     {
@@ -127,7 +127,7 @@ class CargoServices
     }
 
     /**
-     * Защитная транспортировочная упаковка.
+     * Защитная транспортировочная упаковка
      */
     public function setHardPack(?bool $hardPack): self
     {
@@ -137,7 +137,7 @@ class CargoServices
     }
 
     /**
-     * Страхование.
+     * Страхование
      */
     public function getInsurance(): ?bool
     {
@@ -145,7 +145,7 @@ class CargoServices
     }
 
     /**
-     * Страхование.
+     * Страхование
      */
     public function setInsurance(?bool $insurance): self
     {
@@ -155,7 +155,7 @@ class CargoServices
     }
 
     /**
-     * Массив услуг.
+     * Массив услуг
      *
      * @return null|CargosServiceItem[]
      */
@@ -165,7 +165,7 @@ class CargoServices
     }
 
     /**
-     * Массив услуг.
+     * Массив услуг
      *
      * @param null|CargosServiceItem[] $items
      */
@@ -177,7 +177,7 @@ class CargoServices
     }
 
     /**
-     * Груз является возвратными документами.
+     * Груз является возвратными документами
      */
     public function getResendDocs(): ?bool
     {
@@ -185,7 +185,7 @@ class CargoServices
     }
 
     /**
-     * Груз является возвратными документами.
+     * Груз является возвратными документами
      */
     public function setResendDocs(?bool $resendDocs): self
     {

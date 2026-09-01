@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
 {
     /**
-     * Адрес доставки. Поле обязательно, если `"enabled":true`.
+     * Адрес доставки. Поле обязательно, если `"enabled":true`
      *
      * @var null|string
      */
     protected $address;
 
     /**
-     * Дата авизации.
+     * Дата авизации
      *
      * @var null|\DateTime
      */
     protected $avisationDateTime;
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      *
      * @var bool
      */
     protected $enabled;
 
     /**
-     * Плательщик.
+     * Плательщик
      *
      * @var null|CargopickupnetworkPayer
      */
     protected $payer;
 
     /**
-     * Адрес доставки. Поле обязательно, если `"enabled":true`.
+     * Адрес доставки. Поле обязательно, если `"enabled":true`
      */
     public function getAddress(): ?string
     {
@@ -41,7 +41,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Адрес доставки. Поле обязательно, если `"enabled":true`.
+     * Адрес доставки. Поле обязательно, если `"enabled":true`
      */
     public function setAddress(?string $address): self
     {
@@ -51,7 +51,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Дата авизации.
+     * Дата авизации
      */
     public function getAvisationDateTime(): ?\DateTime
     {
@@ -59,7 +59,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Дата авизации.
+     * Дата авизации
      */
     public function setAvisationDateTime(?\DateTime $avisationDateTime): self
     {
@@ -69,7 +69,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function getEnabled(): bool
     {
@@ -77,7 +77,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function setEnabled(bool $enabled): self
     {
@@ -87,7 +87,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function getPayer(): ?CargopickupnetworkPayer
     {
@@ -95,7 +95,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function setPayer(?CargopickupnetworkPayer $payer): self
     {

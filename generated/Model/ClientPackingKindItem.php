@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class ClientPackingKindItem
 {
     /**
-     * Идентификатор упаковки.
+     * Идентификатор упаковки
      *
      * @var string
      */
     protected $code;
 
     /**
-     * Наименование упаковки.
+     * Наименование упаковки
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Идентификатор упаковки.
+     * Идентификатор упаковки
      */
     public function getCode(): string
     {
@@ -27,7 +27,7 @@ class ClientPackingKindItem
     }
 
     /**
-     * Идентификатор упаковки.
+     * Идентификатор упаковки
      */
     public function setCode(string $code): self
     {
@@ -37,7 +37,7 @@ class ClientPackingKindItem
     }
 
     /**
-     * Наименование упаковки.
+     * Наименование упаковки
      */
     public function getName(): string
     {
@@ -45,7 +45,7 @@ class ClientPackingKindItem
     }
 
     /**
-     * Наименование упаковки.
+     * Наименование упаковки
      */
     public function setName(string $name): self
     {

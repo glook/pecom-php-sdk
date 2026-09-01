@@ -19,21 +19,21 @@ class PreregistrationCargoPlace
     protected $length;
 
     /**
-     * Количество мест одинаковых габаритов.
+     * Количество мест одинаковых габаритов
      *
      * @var int
      */
     protected $quantity;
 
     /**
-     * Объем одного места, м3.
+     * Объем одного места, м3
      *
      * @var float
      */
     protected $volume;
 
     /**
-     * Вес одного места, кг.
+     * Вес одного места, кг
      *
      * @var float
      */
@@ -83,7 +83,7 @@ class PreregistrationCargoPlace
     }
 
     /**
-     * Количество мест одинаковых габаритов.
+     * Количество мест одинаковых габаритов
      */
     public function getQuantity(): int
     {
@@ -91,7 +91,7 @@ class PreregistrationCargoPlace
     }
 
     /**
-     * Количество мест одинаковых габаритов.
+     * Количество мест одинаковых габаритов
      */
     public function setQuantity(int $quantity): self
     {
@@ -101,7 +101,7 @@ class PreregistrationCargoPlace
     }
 
     /**
-     * Объем одного места, м3.
+     * Объем одного места, м3
      */
     public function getVolume(): float
     {
@@ -109,7 +109,7 @@ class PreregistrationCargoPlace
     }
 
     /**
-     * Объем одного места, м3.
+     * Объем одного места, м3
      */
     public function setVolume(float $volume): self
     {
@@ -119,7 +119,7 @@ class PreregistrationCargoPlace
     }
 
     /**
-     * Вес одного места, кг.
+     * Вес одного места, кг
      */
     public function getWeight(): float
     {
@@ -127,7 +127,7 @@ class PreregistrationCargoPlace
     }
 
     /**
-     * Вес одного места, кг.
+     * Вес одного места, кг
      */
     public function setWeight(float $weight): self
     {

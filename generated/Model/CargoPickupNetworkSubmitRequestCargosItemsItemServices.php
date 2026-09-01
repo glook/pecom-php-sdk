@@ -5,63 +5,63 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServices
 {
     /**
-     * Доставка.
+     * Доставка
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
      */
     protected $delivery;
 
     /**
-     * Возврат документов.
+     * Возврат документов
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
      */
     protected $documentsReturning;
 
     /**
-     * Защитная транспортировочная упаковка.
+     * Защитная транспортировочная упаковка
      *
      * @var null|CargopickupnetworkServiceWithPayerAndPositions
      */
     protected $hardPacking;
 
     /**
-     * Страховка.
+     * Страховка
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
      */
     protected $insurance;
 
     /**
-     * Услуга забора груза.
+     * Услуга забора груза
      *
      * @var null|CargopickupnetworkServicePayer
      */
     protected $pickUp;
 
     /**
-     * Пломбировка.
+     * Пломбировка
      *
      * @var null|CargopickupnetworkServiceWithPayerAndPositions
      */
     protected $sealing;
 
     /**
-     * Упаковка стреппинг-лентой.
+     * Упаковка стреппинг-лентой
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
      */
     protected $strapping;
 
     /**
-     * Перевозка.
+     * Перевозка
      *
      * @var null|CargopickupnetworkServicePayer
      */
     protected $transporting;
 
     /**
-     * Доставка.
+     * Доставка
      */
     public function getDelivery(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery
     {
@@ -69,7 +69,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Доставка.
+     * Доставка
      */
     public function setDelivery(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDelivery $delivery): self
     {
@@ -79,7 +79,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Возврат документов.
+     * Возврат документов
      */
     public function getDocumentsReturning(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning
     {
@@ -87,7 +87,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Возврат документов.
+     * Возврат документов
      */
     public function setDocumentsReturning(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesDocumentsReturning $documentsReturning): self
     {
@@ -97,7 +97,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Защитная транспортировочная упаковка.
+     * Защитная транспортировочная упаковка
      */
     public function getHardPacking(): ?CargopickupnetworkServiceWithPayerAndPositions
     {
@@ -105,7 +105,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Защитная транспортировочная упаковка.
+     * Защитная транспортировочная упаковка
      */
     public function setHardPacking(?CargopickupnetworkServiceWithPayerAndPositions $hardPacking): self
     {
@@ -115,7 +115,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Страховка.
+     * Страховка
      */
     public function getInsurance(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     {
@@ -123,7 +123,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Страховка.
+     * Страховка
      */
     public function setInsurance(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance $insurance): self
     {
@@ -133,7 +133,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Услуга забора груза.
+     * Услуга забора груза
      */
     public function getPickUp(): ?CargopickupnetworkServicePayer
     {
@@ -141,7 +141,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Услуга забора груза.
+     * Услуга забора груза
      */
     public function setPickUp(?CargopickupnetworkServicePayer $pickUp): self
     {
@@ -151,7 +151,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Пломбировка.
+     * Пломбировка
      */
     public function getSealing(): ?CargopickupnetworkServiceWithPayerAndPositions
     {
@@ -159,7 +159,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Пломбировка.
+     * Пломбировка
      */
     public function setSealing(?CargopickupnetworkServiceWithPayerAndPositions $sealing): self
     {
@@ -169,7 +169,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Упаковка стреппинг-лентой.
+     * Упаковка стреппинг-лентой
      */
     public function getStrapping(): ?CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping
     {
@@ -177,7 +177,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Упаковка стреппинг-лентой.
+     * Упаковка стреппинг-лентой
      */
     public function setStrapping(?CargoPickupNetworkSubmitRequestCargosItemsItemServicesStrapping $strapping): self
     {
@@ -187,7 +187,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Перевозка.
+     * Перевозка
      */
     public function getTransporting(): ?CargopickupnetworkServicePayer
     {
@@ -195,7 +195,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServices
     }
 
     /**
-     * Перевозка.
+     * Перевозка
      */
     public function setTransporting(?CargopickupnetworkServicePayer $transporting): self
     {

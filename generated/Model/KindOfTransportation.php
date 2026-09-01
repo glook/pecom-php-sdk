@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class KindOfTransportation
 {
     /**
-     * Наименование тарифа/продукта.
+     * Наименование тарифа/продукта
      *
      * @var string
      */
     protected $description;
 
     /**
-     * Доступные операции в отделении для данного тарифа/продукта.
+     * Доступные операции в отделении для данного тарифа/продукта
      *
      * @var string[]
      */
     protected $operations;
 
     /**
-     * Идентификатор продукта/тарифа. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Идентификатор продукта/тарифа. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Наименование тарифа/продукта.
+     * Наименование тарифа/продукта
      */
     public function getDescription(): string
     {
@@ -34,7 +34,7 @@ class KindOfTransportation
     }
 
     /**
-     * Наименование тарифа/продукта.
+     * Наименование тарифа/продукта
      */
     public function setDescription(string $description): self
     {
@@ -44,7 +44,7 @@ class KindOfTransportation
     }
 
     /**
-     * Доступные операции в отделении для данного тарифа/продукта.
+     * Доступные операции в отделении для данного тарифа/продукта
      *
      * @return string[]
      */
@@ -54,7 +54,7 @@ class KindOfTransportation
     }
 
     /**
-     * Доступные операции в отделении для данного тарифа/продукта.
+     * Доступные операции в отделении для данного тарифа/продукта
      *
      * @param string[] $operations
      */
@@ -66,7 +66,7 @@ class KindOfTransportation
     }
 
     /**
-     * Идентификатор продукта/тарифа. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Идентификатор продукта/тарифа. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      */
     public function getType(): int
     {
@@ -74,7 +74,7 @@ class KindOfTransportation
     }
 
     /**
-     * Идентификатор продукта/тарифа. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Идентификатор продукта/тарифа. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      */
     public function setType(int $type): self
     {

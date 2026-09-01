@@ -12,28 +12,28 @@ class PreregistrationSubmitResponseCargo
     protected $barcode;
 
     /**
-     * Код груза.
+     * Код груза
      *
      * @var string
      */
     protected $cargoCode;
 
     /**
-     * Штрих-коды мест груза.
+     * Штрих-коды мест груза
      *
      * @var null|string[]
      */
     protected $clientPositionsBarcode;
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      *
      * @var null|string
      */
     protected $customerCorrelation;
 
     /**
-     * Номер заказа.
+     * Номер заказа
      *
      * @var null|string
      */
@@ -50,7 +50,7 @@ class PreregistrationSubmitResponseCargo
     protected $receiver;
 
     /**
-     * Наименование склада приема груза, поле необязательно.
+     * Наименование склада приема груза, поле необязательно
      *
      * @var null|string
      */
@@ -75,7 +75,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): string
     {
@@ -83,7 +83,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(string $cargoCode): self
     {
@@ -93,7 +93,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Штрих-коды мест груза.
+     * Штрих-коды мест груза
      *
      * @return null|string[]
      */
@@ -103,7 +103,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Штрих-коды мест груза.
+     * Штрих-коды мест груза
      *
      * @param null|string[] $clientPositionsBarcode
      */
@@ -115,7 +115,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function getCustomerCorrelation(): ?string
     {
@@ -123,7 +123,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function setCustomerCorrelation(?string $customerCorrelation): self
     {
@@ -133,7 +133,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Номер заказа.
+     * Номер заказа
      */
     public function getOrderNumber(): ?string
     {
@@ -141,7 +141,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Номер заказа.
+     * Номер заказа
      */
     public function setOrderNumber(?string $orderNumber): self
     {
@@ -181,7 +181,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Наименование склада приема груза, поле необязательно.
+     * Наименование склада приема груза, поле необязательно
      */
     public function getStockTitle(): ?string
     {
@@ -189,7 +189,7 @@ class PreregistrationSubmitResponseCargo
     }
 
     /**
-     * Наименование склада приема груза, поле необязательно.
+     * Наименование склада приема груза, поле необязательно
      */
     public function setStockTitle(?string $stockTitle): self
     {

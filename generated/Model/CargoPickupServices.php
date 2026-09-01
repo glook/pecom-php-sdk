@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupServices
 {
     /**
-     * Есть комплект сопроводительных документов.
+     * Есть комплект сопроводительных документов
      *
      * @var null|bool
      */
@@ -24,21 +24,21 @@ class CargoPickupServices
     protected $cashOnDelivery;
 
     /**
-     * Email для бухгалтерских уведомлений.
+     * Email для бухгалтерских уведомлений
      *
      * @var null|string
      */
     protected $email;
 
     /**
-     * Этаж с которого необходимо забрать груз.
+     * Этаж с которого необходимо забрать груз
      *
      * @var null|int
      */
     protected $floor;
 
     /**
-     * Возврат документов.
+     * Возврат документов
      *
      * @var null|bool
      */
@@ -52,56 +52,56 @@ class CargoPickupServices
     protected $isElevator;
 
     /**
-     * Изготовление защитной транспортировочной упаковки.
+     * Изготовление защитной транспортировочной упаковки
      *
      * @var null|bool
      */
     protected $isHP;
 
     /**
-     * Дополнительное страхование груза.
+     * Дополнительное страхование груза
      *
      * @var null|bool
      */
     protected $isInsurance;
 
     /**
-     * Стоимость груза для страхования, руб. Обязательно при isInsurance = true.
+     * Стоимость груза для страхования, руб. Обязательно при isInsurance = true
      *
      * @var null|float
      */
     protected $isInsurancePrice;
 
     /**
-     * Необходима погрузка силами «ПЭК».
+     * Необходима погрузка силами «ПЭК»
      *
      * @var bool
      */
     protected $isLoading;
 
     /**
-     * Пломбировка груза (обязательна только до 3 кг).
+     * Пломбировка груза (обязательна только до 3 кг)
      *
      * @var null|bool
      */
     protected $isSealing;
 
     /**
-     * Количество мест для пломбировки. Обязательно при isSealing = true.
+     * Количество мест для пломбировки. Обязательно при isSealing = true
      *
      * @var null|int
      */
     protected $isSealingPositionsCount;
 
     /**
-     * Упаковка груза стреппинг-лентой.
+     * Упаковка груза стреппинг-лентой
      *
      * @var null|bool
      */
     protected $isStrapping;
 
     /**
-     * Есть комплект сопроводительных документов.
+     * Есть комплект сопроводительных документов
      */
     public function getAccompanyingDocuments(): ?bool
     {
@@ -109,7 +109,7 @@ class CargoPickupServices
     }
 
     /**
-     * Есть комплект сопроводительных документов.
+     * Есть комплект сопроводительных документов
      */
     public function setAccompanyingDocuments(?bool $accompanyingDocuments): self
     {
@@ -149,7 +149,7 @@ class CargoPickupServices
     }
 
     /**
-     * Email для бухгалтерских уведомлений.
+     * Email для бухгалтерских уведомлений
      */
     public function getEmail(): ?string
     {
@@ -157,7 +157,7 @@ class CargoPickupServices
     }
 
     /**
-     * Email для бухгалтерских уведомлений.
+     * Email для бухгалтерских уведомлений
      */
     public function setEmail(?string $email): self
     {
@@ -167,7 +167,7 @@ class CargoPickupServices
     }
 
     /**
-     * Этаж с которого необходимо забрать груз.
+     * Этаж с которого необходимо забрать груз
      */
     public function getFloor(): ?int
     {
@@ -175,7 +175,7 @@ class CargoPickupServices
     }
 
     /**
-     * Этаж с которого необходимо забрать груз.
+     * Этаж с которого необходимо забрать груз
      */
     public function setFloor(?int $floor): self
     {
@@ -185,7 +185,7 @@ class CargoPickupServices
     }
 
     /**
-     * Возврат документов.
+     * Возврат документов
      */
     public function getIsDocumentsReturn(): ?bool
     {
@@ -193,7 +193,7 @@ class CargoPickupServices
     }
 
     /**
-     * Возврат документов.
+     * Возврат документов
      */
     public function setIsDocumentsReturn(?bool $isDocumentsReturn): self
     {
@@ -221,7 +221,7 @@ class CargoPickupServices
     }
 
     /**
-     * Изготовление защитной транспортировочной упаковки.
+     * Изготовление защитной транспортировочной упаковки
      */
     public function getIsHP(): ?bool
     {
@@ -229,7 +229,7 @@ class CargoPickupServices
     }
 
     /**
-     * Изготовление защитной транспортировочной упаковки.
+     * Изготовление защитной транспортировочной упаковки
      */
     public function setIsHP(?bool $isHP): self
     {
@@ -239,7 +239,7 @@ class CargoPickupServices
     }
 
     /**
-     * Дополнительное страхование груза.
+     * Дополнительное страхование груза
      */
     public function getIsInsurance(): ?bool
     {
@@ -247,7 +247,7 @@ class CargoPickupServices
     }
 
     /**
-     * Дополнительное страхование груза.
+     * Дополнительное страхование груза
      */
     public function setIsInsurance(?bool $isInsurance): self
     {
@@ -257,7 +257,7 @@ class CargoPickupServices
     }
 
     /**
-     * Стоимость груза для страхования, руб. Обязательно при isInsurance = true.
+     * Стоимость груза для страхования, руб. Обязательно при isInsurance = true
      */
     public function getIsInsurancePrice(): ?float
     {
@@ -265,7 +265,7 @@ class CargoPickupServices
     }
 
     /**
-     * Стоимость груза для страхования, руб. Обязательно при isInsurance = true.
+     * Стоимость груза для страхования, руб. Обязательно при isInsurance = true
      */
     public function setIsInsurancePrice(?float $isInsurancePrice): self
     {
@@ -275,7 +275,7 @@ class CargoPickupServices
     }
 
     /**
-     * Необходима погрузка силами «ПЭК».
+     * Необходима погрузка силами «ПЭК»
      */
     public function getIsLoading(): bool
     {
@@ -283,7 +283,7 @@ class CargoPickupServices
     }
 
     /**
-     * Необходима погрузка силами «ПЭК».
+     * Необходима погрузка силами «ПЭК»
      */
     public function setIsLoading(bool $isLoading): self
     {
@@ -293,7 +293,7 @@ class CargoPickupServices
     }
 
     /**
-     * Пломбировка груза (обязательна только до 3 кг).
+     * Пломбировка груза (обязательна только до 3 кг)
      */
     public function getIsSealing(): ?bool
     {
@@ -301,7 +301,7 @@ class CargoPickupServices
     }
 
     /**
-     * Пломбировка груза (обязательна только до 3 кг).
+     * Пломбировка груза (обязательна только до 3 кг)
      */
     public function setIsSealing(?bool $isSealing): self
     {
@@ -311,7 +311,7 @@ class CargoPickupServices
     }
 
     /**
-     * Количество мест для пломбировки. Обязательно при isSealing = true.
+     * Количество мест для пломбировки. Обязательно при isSealing = true
      */
     public function getIsSealingPositionsCount(): ?int
     {
@@ -319,7 +319,7 @@ class CargoPickupServices
     }
 
     /**
-     * Количество мест для пломбировки. Обязательно при isSealing = true.
+     * Количество мест для пломбировки. Обязательно при isSealing = true
      */
     public function setIsSealingPositionsCount(?int $isSealingPositionsCount): self
     {
@@ -329,7 +329,7 @@ class CargoPickupServices
     }
 
     /**
-     * Упаковка груза стреппинг-лентой.
+     * Упаковка груза стреппинг-лентой
      */
     public function getIsStrapping(): ?bool
     {
@@ -337,7 +337,7 @@ class CargoPickupServices
     }
 
     /**
-     * Упаковка груза стреппинг-лентой.
+     * Упаковка груза стреппинг-лентой
      */
     public function setIsStrapping(?bool $isStrapping): self
     {

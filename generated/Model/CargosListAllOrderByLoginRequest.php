@@ -12,14 +12,14 @@ class CargosListAllOrderByLoginRequest
     protected $dateBegin;
 
     /**
-     * Дата, до.
+     * Дата, до
      *
      * @var \DateTime
      */
     protected $dateEnd;
 
     /**
-     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза.
+     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза
      *
      * @var int
      */
@@ -44,7 +44,7 @@ class CargosListAllOrderByLoginRequest
     }
 
     /**
-     * Дата, до.
+     * Дата, до
      */
     public function getDateEnd(): \DateTime
     {
@@ -52,7 +52,7 @@ class CargosListAllOrderByLoginRequest
     }
 
     /**
-     * Дата, до.
+     * Дата, до
      */
     public function setDateEnd(\DateTime $dateEnd): self
     {
@@ -62,7 +62,7 @@ class CargosListAllOrderByLoginRequest
     }
 
     /**
-     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза.
+     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза
      */
     public function getSelectBy(): int
     {
@@ -70,7 +70,7 @@ class CargosListAllOrderByLoginRequest
     }
 
     /**
-     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза.
+     * По какой дате делать выборку грузов. 0 — по дате приемки груза на склад ПЭК, 1 — по дате подачи заявки, 2 — по дате забора груза
      */
     public function setSelectBy(int $selectBy): self
     {

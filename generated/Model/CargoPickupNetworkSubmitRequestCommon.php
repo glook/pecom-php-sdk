@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCommon
 {
     /**
-     * Планируемая дата забора груза.
+     * Планируемая дата забора груза
      *
      * @var \DateTime
      */
     protected $applicationDate;
 
     /**
-     * Описание груза. Поле обязательно для заполнения, если не во всех грузах заявки проставлено описание груза (`cargos.items[].cargo.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Описание груза. Поле обязательно для заполнения, если не во всех грузах заявки проставлено описание груза (`cargos.items[].cargo.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      *
      * @var null|string
      */
     protected $description;
 
     /**
-     * ФИО ответственного за оформление заявки.
+     * ФИО ответственного за оформление заявки
      *
      * @var null|string
      */
     protected $responsiblePerson;
 
     /**
-     * Планируемая дата забора груза.
+     * Планируемая дата забора груза
      */
     public function getApplicationDate(): \DateTime
     {
@@ -34,7 +34,7 @@ class CargoPickupNetworkSubmitRequestCommon
     }
 
     /**
-     * Планируемая дата забора груза.
+     * Планируемая дата забора груза
      */
     public function setApplicationDate(\DateTime $applicationDate): self
     {
@@ -44,7 +44,7 @@ class CargoPickupNetworkSubmitRequestCommon
     }
 
     /**
-     * Описание груза. Поле обязательно для заполнения, если не во всех грузах заявки проставлено описание груза (`cargos.items[].cargo.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Описание груза. Поле обязательно для заполнения, если не во всех грузах заявки проставлено описание груза (`cargos.items[].cargo.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function getDescription(): ?string
     {
@@ -52,7 +52,7 @@ class CargoPickupNetworkSubmitRequestCommon
     }
 
     /**
-     * Описание груза. Поле обязательно для заполнения, если не во всех грузах заявки проставлено описание груза (`cargos.items[].cargo.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Описание груза. Поле обязательно для заполнения, если не во всех грузах заявки проставлено описание груза (`cargos.items[].cargo.description`). Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function setDescription(?string $description): self
     {
@@ -62,7 +62,7 @@ class CargoPickupNetworkSubmitRequestCommon
     }
 
     /**
-     * ФИО ответственного за оформление заявки.
+     * ФИО ответственного за оформление заявки
      */
     public function getResponsiblePerson(): ?string
     {
@@ -70,7 +70,7 @@ class CargoPickupNetworkSubmitRequestCommon
     }
 
     /**
-     * ФИО ответственного за оформление заявки.
+     * ФИО ответственного за оформление заявки
      */
     public function setResponsiblePerson(?string $responsiblePerson): self
     {

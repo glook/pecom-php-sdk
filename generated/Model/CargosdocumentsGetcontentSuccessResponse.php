@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosdocumentsGetcontentSuccessResponse
 {
     /**
-     * Тело документа в стандарте - base64.
+     * Тело документа в стандарте - base64
      *
      * @var string
      */
     protected $docBody;
 
     /**
-     * Если был указан входящий параметр `docFormat`.
+     * Если был указан входящий параметр `docFormat`
      *
      * @var null|string
      */
     protected $docFormat;
 
     /**
-     * Наименование документа.
+     * Наименование документа
      *
      * @var string
      */
     protected $docName;
 
     /**
-     * Тело документа в стандарте - base64.
+     * Тело документа в стандарте - base64
      */
     public function getDocBody(): string
     {
@@ -34,7 +34,7 @@ class CargosdocumentsGetcontentSuccessResponse
     }
 
     /**
-     * Тело документа в стандарте - base64.
+     * Тело документа в стандарте - base64
      */
     public function setDocBody(string $docBody): self
     {
@@ -44,7 +44,7 @@ class CargosdocumentsGetcontentSuccessResponse
     }
 
     /**
-     * Если был указан входящий параметр `docFormat`.
+     * Если был указан входящий параметр `docFormat`
      */
     public function getDocFormat(): ?string
     {
@@ -52,7 +52,7 @@ class CargosdocumentsGetcontentSuccessResponse
     }
 
     /**
-     * Если был указан входящий параметр `docFormat`.
+     * Если был указан входящий параметр `docFormat`
      */
     public function setDocFormat(?string $docFormat): self
     {
@@ -62,7 +62,7 @@ class CargosdocumentsGetcontentSuccessResponse
     }
 
     /**
-     * Наименование документа.
+     * Наименование документа
      */
     public function getDocName(): string
     {
@@ -70,7 +70,7 @@ class CargosdocumentsGetcontentSuccessResponse
     }
 
     /**
-     * Наименование документа.
+     * Наименование документа
      */
     public function setDocName(string $docName): self
     {

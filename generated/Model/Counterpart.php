@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class Counterpart
 {
     /**
-     * Номер карты клиента.
+     * Номер карты клиента
      *
      * @var null|string
      */
     protected $counterpartClientCard;
 
     /**
-     * ИНН контрагента.
+     * ИНН контрагента
      *
      * @var null|string
      */
     protected $inn;
 
     /**
-     * КПП контрагента.
+     * КПП контрагента
      *
      * @var null|string
      */
     protected $kpp;
 
     /**
-     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки.
+     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки
      *
      * @var null|float[]
      */
     protected $whoMakesCalculation;
 
     /**
-     * Номер карты клиента.
+     * Номер карты клиента
      */
     public function getCounterpartClientCard(): ?string
     {
@@ -41,7 +41,7 @@ class Counterpart
     }
 
     /**
-     * Номер карты клиента.
+     * Номер карты клиента
      */
     public function setCounterpartClientCard(?string $counterpartClientCard): self
     {
@@ -51,7 +51,7 @@ class Counterpart
     }
 
     /**
-     * ИНН контрагента.
+     * ИНН контрагента
      */
     public function getInn(): ?string
     {
@@ -59,7 +59,7 @@ class Counterpart
     }
 
     /**
-     * ИНН контрагента.
+     * ИНН контрагента
      */
     public function setInn(?string $inn): self
     {
@@ -69,7 +69,7 @@ class Counterpart
     }
 
     /**
-     * КПП контрагента.
+     * КПП контрагента
      */
     public function getKpp(): ?string
     {
@@ -77,7 +77,7 @@ class Counterpart
     }
 
     /**
-     * КПП контрагента.
+     * КПП контрагента
      */
     public function setKpp(?string $kpp): self
     {
@@ -87,7 +87,7 @@ class Counterpart
     }
 
     /**
-     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки.
+     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки
      *
      * @return null|float[]
      */
@@ -97,7 +97,7 @@ class Counterpart
     }
 
     /**
-     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки.
+     * Роль заказчика перевозки. Кто производит расчет: 1 — отправитель, 2 — получатель, 3 — плательщик, 4 — не участник перевозки
      *
      * @param null|float[] $whoMakesCalculation
      */

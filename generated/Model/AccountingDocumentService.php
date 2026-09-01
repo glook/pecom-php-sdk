@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingDocumentService
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
@@ -33,14 +33,14 @@ class AccountingDocumentService
     protected $sumVAT;
 
     /**
-     * Вид услуги.
+     * Вид услуги
      *
      * @var null|string
      */
     protected $type;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): ?string
     {
@@ -48,7 +48,7 @@ class AccountingDocumentService
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(?string $cargoCode): self
     {
@@ -112,7 +112,7 @@ class AccountingDocumentService
     }
 
     /**
-     * Вид услуги.
+     * Вид услуги
      */
     public function getType(): ?string
     {
@@ -120,7 +120,7 @@ class AccountingDocumentService
     }
 
     /**
-     * Вид услуги.
+     * Вид услуги
      */
     public function setType(?string $type): self
     {

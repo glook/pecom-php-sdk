@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupCommon
 {
     /**
-     * Позволять перестановку габаритов с целью преодоления ограничений длины/ширины/высоты.
+     * Позволять перестановку габаритов с целью преодоления ограничений длины/ширины/высоты
      *
      * @var null|bool
      */
     protected $adjustDimensions;
 
     /**
-     * Планируемая дата забора груза.
+     * Планируемая дата забора груза
      *
      * @var \DateTime
      */
@@ -26,28 +26,28 @@ class CargoPickupCommon
     protected $callToScheduleCar;
 
     /**
-     * Массив с габаритами каждого грузоместа клиента. Имеет смысл при подключенной услуге «Доверительная приемка». Для продукта EasyWay (`type` 12) услуга подключена по умолчанию. Если габариты не будут заполнены, услуга «Доверительная приемка» не будет оказана.
+     * Массив с габаритами каждого грузоместа клиента. Имеет смысл при подключенной услуге «Доверительная приемка». Для продукта EasyWay (`type` 12) услуга подключена по умолчанию. Если габариты не будут заполнены, услуга «Доверительная приемка» не будет оказана
      *
      * @var null|CargopickupCargoPlace[]
      */
     protected $cargoPlaceList;
 
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге «Приемка по штрих-кодам клиента» и для продукта EasyWay (`type` 12).
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге «Приемка по штрих-кодам клиента» и для продукта EasyWay (`type` 12)
      *
      * @var null|string[]
      */
     protected $clientPositionsBarcode;
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      *
      * @var null|string
      */
     protected $customerCorrelation;
 
     /**
-     * Общее название перевозимых грузов. Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Общее название перевозимых грузов. Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      *
      * @var string
      */
@@ -61,49 +61,49 @@ class CargoPickupCommon
     protected $height;
 
     /**
-     * Хрупкий груз.
+     * Хрупкий груз
      *
      * @var null|bool
      */
     protected $isFragile;
 
     /**
-     * Стекло.
+     * Стекло
      *
      * @var null|bool
      */
     protected $isGlass;
 
     /**
-     * Жидкость.
+     * Жидкость
      *
      * @var null|bool
      */
     protected $isLiquid;
 
     /**
-     * Необходима открытая машина.
+     * Необходима открытая машина
      *
      * @var bool
      */
     protected $isOpenCar;
 
     /**
-     * Необходима боковая погрузка.
+     * Необходима боковая погрузка
      *
      * @var bool
      */
     protected $isSideLoad;
 
     /**
-     * Необходима машина со специальным оборудованием. Если не указано, считается равным false.
+     * Необходима машина со специальным оборудованием. Если не указано, считается равным false
      *
      * @var null|bool
      */
     protected $isSpecialEquipment;
 
     /**
-     * Необходима растентовка. Если не указано, считается равным false.
+     * Необходима растентовка. Если не указано, считается равным false
      *
      * @var null|bool
      */
@@ -117,7 +117,7 @@ class CargoPickupCommon
     protected $length;
 
     /**
-     * Тип заявки на забор. 1 — Заказ «На машину и перевозку (разовый забор)» (по умолчанию), 3 — Признак подачи заказа машины, 4 — Заказ «На перевозку (с отдельным Заказом на машину)».
+     * Тип заявки на забор. 1 — Заказ «На машину и перевозку (разовый забор)» (по умолчанию), 3 — Признак подачи заказа машины, 4 — Заказ «На перевозку (с отдельным Заказом на машину)»
      *
      * @var null|int
      */
@@ -131,42 +131,42 @@ class CargoPickupCommon
     protected $positionsCount;
 
     /**
-     * ФИО ответственного за оформление заявки.
+     * ФИО ответственного за оформление заявки
      *
      * @var string
      */
     protected $responsiblePerson;
 
     /**
-     * Идентификатор продукта/тарифа. Возможные значения: 3 — LTL (сборный груз), 12 — EasyWay, 5 — Express Автоперевозка, 1 — Express Авиаперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Идентификатор продукта/тарифа. Возможные значения: 3 — LTL (сборный груз), 12 — EasyWay, 5 — Express Автоперевозка, 1 — Express Авиаперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Тип Ваших штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/preregistration/POST/preregistration/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
+     * Тип Ваших штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/preregistration/POST/preregistration/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
      *
      * @var null|string
      */
     protected $typeClientBarcode;
 
     /**
-     * Объём груза, м3.
+     * Объём груза, м3
      *
      * @var float
      */
     protected $volume;
 
     /**
-     * Вес груза, кг.
+     * Вес груза, кг
      *
      * @var float
      */
     protected $weight;
 
     /**
-     * Представитель какой стороны оформляет заявки (1 — отправитель, 2 — получатель, 3 — третье лицо).
+     * Представитель какой стороны оформляет заявки (1 — отправитель, 2 — получатель, 3 — третье лицо)
      *
      * @var int
      */
@@ -180,7 +180,7 @@ class CargoPickupCommon
     protected $width;
 
     /**
-     * Позволять перестановку габаритов с целью преодоления ограничений длины/ширины/высоты.
+     * Позволять перестановку габаритов с целью преодоления ограничений длины/ширины/высоты
      */
     public function getAdjustDimensions(): ?bool
     {
@@ -188,7 +188,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Позволять перестановку габаритов с целью преодоления ограничений длины/ширины/высоты.
+     * Позволять перестановку габаритов с целью преодоления ограничений длины/ширины/высоты
      */
     public function setAdjustDimensions(?bool $adjustDimensions): self
     {
@@ -198,7 +198,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Планируемая дата забора груза.
+     * Планируемая дата забора груза
      */
     public function getApplicationDate(): \DateTime
     {
@@ -206,7 +206,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Планируемая дата забора груза.
+     * Планируемая дата забора груза
      */
     public function setApplicationDate(\DateTime $applicationDate): self
     {
@@ -234,7 +234,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Массив с габаритами каждого грузоместа клиента. Имеет смысл при подключенной услуге «Доверительная приемка». Для продукта EasyWay (`type` 12) услуга подключена по умолчанию. Если габариты не будут заполнены, услуга «Доверительная приемка» не будет оказана.
+     * Массив с габаритами каждого грузоместа клиента. Имеет смысл при подключенной услуге «Доверительная приемка». Для продукта EasyWay (`type` 12) услуга подключена по умолчанию. Если габариты не будут заполнены, услуга «Доверительная приемка» не будет оказана
      *
      * @return null|CargopickupCargoPlace[]
      */
@@ -244,7 +244,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Массив с габаритами каждого грузоместа клиента. Имеет смысл при подключенной услуге «Доверительная приемка». Для продукта EasyWay (`type` 12) услуга подключена по умолчанию. Если габариты не будут заполнены, услуга «Доверительная приемка» не будет оказана.
+     * Массив с габаритами каждого грузоместа клиента. Имеет смысл при подключенной услуге «Доверительная приемка». Для продукта EasyWay (`type` 12) услуга подключена по умолчанию. Если габариты не будут заполнены, услуга «Доверительная приемка» не будет оказана
      *
      * @param null|CargopickupCargoPlace[] $cargoPlaceList
      */
@@ -256,7 +256,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге «Приемка по штрих-кодам клиента» и для продукта EasyWay (`type` 12).
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге «Приемка по штрих-кодам клиента» и для продукта EasyWay (`type` 12)
      *
      * @return null|string[]
      */
@@ -266,7 +266,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Ваши штрих-коды мест груза. Применимо при подключенной услуге «Приемка по штрих-кодам клиента» и для продукта EasyWay (`type` 12).
+     * Ваши штрих-коды мест груза. Применимо при подключенной услуге «Приемка по штрих-кодам клиента» и для продукта EasyWay (`type` 12)
      *
      * @param null|string[] $clientPositionsBarcode
      */
@@ -278,7 +278,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function getCustomerCorrelation(): ?string
     {
@@ -286,7 +286,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Произвольное значение для синхронизации на стороне клиента.
+     * Произвольное значение для синхронизации на стороне клиента
      */
     public function setCustomerCorrelation(?string $customerCorrelation): self
     {
@@ -296,7 +296,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Общее название перевозимых грузов. Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Общее название перевозимых грузов. Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function getDescription(): string
     {
@@ -304,7 +304,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Общее название перевозимых грузов. Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/).
+     * Общее название перевозимых грузов. Значение необходимо выбрать из ответа метода [`/cargocontent/all/`](#tag/cargocontent/POST/cargocontent/all/)
      */
     public function setDescription(string $description): self
     {
@@ -332,7 +332,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Хрупкий груз.
+     * Хрупкий груз
      */
     public function getIsFragile(): ?bool
     {
@@ -340,7 +340,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Хрупкий груз.
+     * Хрупкий груз
      */
     public function setIsFragile(?bool $isFragile): self
     {
@@ -350,7 +350,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Стекло.
+     * Стекло
      */
     public function getIsGlass(): ?bool
     {
@@ -358,7 +358,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Стекло.
+     * Стекло
      */
     public function setIsGlass(?bool $isGlass): self
     {
@@ -368,7 +368,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Жидкость.
+     * Жидкость
      */
     public function getIsLiquid(): ?bool
     {
@@ -376,7 +376,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Жидкость.
+     * Жидкость
      */
     public function setIsLiquid(?bool $isLiquid): self
     {
@@ -386,7 +386,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима открытая машина.
+     * Необходима открытая машина
      */
     public function getIsOpenCar(): bool
     {
@@ -394,7 +394,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима открытая машина.
+     * Необходима открытая машина
      */
     public function setIsOpenCar(bool $isOpenCar): self
     {
@@ -404,7 +404,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима боковая погрузка.
+     * Необходима боковая погрузка
      */
     public function getIsSideLoad(): bool
     {
@@ -412,7 +412,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима боковая погрузка.
+     * Необходима боковая погрузка
      */
     public function setIsSideLoad(bool $isSideLoad): self
     {
@@ -422,7 +422,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима машина со специальным оборудованием. Если не указано, считается равным false.
+     * Необходима машина со специальным оборудованием. Если не указано, считается равным false
      */
     public function getIsSpecialEquipment(): ?bool
     {
@@ -430,7 +430,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима машина со специальным оборудованием. Если не указано, считается равным false.
+     * Необходима машина со специальным оборудованием. Если не указано, считается равным false
      */
     public function setIsSpecialEquipment(?bool $isSpecialEquipment): self
     {
@@ -440,7 +440,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима растентовка. Если не указано, считается равным false.
+     * Необходима растентовка. Если не указано, считается равным false
      */
     public function getIsUncovered(): ?bool
     {
@@ -448,7 +448,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Необходима растентовка. Если не указано, считается равным false.
+     * Необходима растентовка. Если не указано, считается равным false
      */
     public function setIsUncovered(?bool $isUncovered): self
     {
@@ -476,7 +476,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Тип заявки на забор. 1 — Заказ «На машину и перевозку (разовый забор)» (по умолчанию), 3 — Признак подачи заказа машины, 4 — Заказ «На перевозку (с отдельным Заказом на машину)».
+     * Тип заявки на забор. 1 — Заказ «На машину и перевозку (разовый забор)» (по умолчанию), 3 — Признак подачи заказа машины, 4 — Заказ «На перевозку (с отдельным Заказом на машину)»
      */
     public function getPickupType(): ?int
     {
@@ -484,7 +484,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Тип заявки на забор. 1 — Заказ «На машину и перевозку (разовый забор)» (по умолчанию), 3 — Признак подачи заказа машины, 4 — Заказ «На перевозку (с отдельным Заказом на машину)».
+     * Тип заявки на забор. 1 — Заказ «На машину и перевозку (разовый забор)» (по умолчанию), 3 — Признак подачи заказа машины, 4 — Заказ «На перевозку (с отдельным Заказом на машину)»
      */
     public function setPickupType(?int $pickupType): self
     {
@@ -512,7 +512,7 @@ class CargoPickupCommon
     }
 
     /**
-     * ФИО ответственного за оформление заявки.
+     * ФИО ответственного за оформление заявки
      */
     public function getResponsiblePerson(): string
     {
@@ -520,7 +520,7 @@ class CargoPickupCommon
     }
 
     /**
-     * ФИО ответственного за оформление заявки.
+     * ФИО ответственного за оформление заявки
      */
     public function setResponsiblePerson(string $responsiblePerson): self
     {
@@ -530,7 +530,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Идентификатор продукта/тарифа. Возможные значения: 3 — LTL (сборный груз), 12 — EasyWay, 5 — Express Автоперевозка, 1 — Express Авиаперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Идентификатор продукта/тарифа. Возможные значения: 3 — LTL (сборный груз), 12 — EasyWay, 5 — Express Автоперевозка, 1 — Express Авиаперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      */
     public function getType(): int
     {
@@ -538,7 +538,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Идентификатор продукта/тарифа. Возможные значения: 3 — LTL (сборный груз), 12 — EasyWay, 5 — Express Автоперевозка, 1 — Express Авиаперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/).
+     * Идентификатор продукта/тарифа. Возможные значения: 3 — LTL (сборный груз), 12 — EasyWay, 5 — Express Автоперевозка, 1 — Express Авиаперевозка. Полный список доступных в API продуктов/тарифов можно получить методом [`/typesOfDelivery/all/`](#tag/typesofdelivery/GET/typesOfDelivery/all/)
      */
     public function setType(int $type): self
     {
@@ -548,7 +548,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Тип Ваших штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/preregistration/POST/preregistration/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
+     * Тип Ваших штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/preregistration/POST/preregistration/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
      */
     public function getTypeClientBarcode(): ?string
     {
@@ -556,7 +556,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Тип Ваших штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/preregistration/POST/preregistration/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра.
+     * Тип Ваших штрих-кодов, указанных для мест грузов заявки. Список допустимых типов штрих-кодов можно получить с помощью метода [`availabletypebarcode`](#tag/preregistration/POST/preregistration/availabletypebarcode/). Тип штрих-кода можно набирать символами любого регистра
      */
     public function setTypeClientBarcode(?string $typeClientBarcode): self
     {
@@ -566,7 +566,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Объём груза, м3.
+     * Объём груза, м3
      */
     public function getVolume(): float
     {
@@ -574,7 +574,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Объём груза, м3.
+     * Объём груза, м3
      */
     public function setVolume(float $volume): self
     {
@@ -584,7 +584,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Вес груза, кг.
+     * Вес груза, кг
      */
     public function getWeight(): float
     {
@@ -592,7 +592,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Вес груза, кг.
+     * Вес груза, кг
      */
     public function setWeight(float $weight): self
     {
@@ -602,7 +602,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Представитель какой стороны оформляет заявки (1 — отправитель, 2 — получатель, 3 — третье лицо).
+     * Представитель какой стороны оформляет заявки (1 — отправитель, 2 — получатель, 3 — третье лицо)
      */
     public function getWhoRegisterApplication(): int
     {
@@ -610,7 +610,7 @@ class CargoPickupCommon
     }
 
     /**
-     * Представитель какой стороны оформляет заявки (1 — отправитель, 2 — получатель, 3 — третье лицо).
+     * Представитель какой стороны оформляет заявки (1 — отправитель, 2 — получатель, 3 — третье лицо)
      */
     public function setWhoRegisterApplication(int $whoRegisterApplication): self
     {

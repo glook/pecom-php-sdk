@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class CargopickupnetworkPayerOther
 {
     /**
-     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3.
+     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3
      *
      * @var null|CargopickupnetworkIdentityCard
      */
     protected $identityCard;
 
     /**
-     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      *
      * @var null|string
      */
     protected $inn;
 
     /**
-     * Наименование филиала оплаты за услугу.
+     * Наименование филиала оплаты за услугу
      *
      * @var null|string
      */
     protected $paymentCity;
 
     /**
-     * Телефон.
+     * Телефон
      *
      * @var string
      */
     protected $phone;
 
     /**
-     * Наименование третьего лица.
+     * Наименование третьего лица
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3.
+     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3
      */
     public function getIdentityCard(): ?CargopickupnetworkIdentityCard
     {
@@ -48,7 +48,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3.
+     * Документ, удостоверяющий личность третьего лица. Обязательно для физлица при type = 3
      */
     public function setIdentityCard(?CargopickupnetworkIdentityCard $identityCard): self
     {
@@ -58,7 +58,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      */
     public function getInn(): ?string
     {
@@ -66,7 +66,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН третьего лица. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      */
     public function setInn(?string $inn): self
     {
@@ -76,7 +76,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Наименование филиала оплаты за услугу.
+     * Наименование филиала оплаты за услугу
      */
     public function getPaymentCity(): ?string
     {
@@ -84,7 +84,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Наименование филиала оплаты за услугу.
+     * Наименование филиала оплаты за услугу
      */
     public function setPaymentCity(?string $paymentCity): self
     {
@@ -94,7 +94,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function getPhone(): string
     {
@@ -102,7 +102,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function setPhone(string $phone): self
     {
@@ -112,7 +112,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Наименование третьего лица.
+     * Наименование третьего лица
      */
     public function getTitle(): string
     {
@@ -120,7 +120,7 @@ class CargopickupnetworkPayerOther
     }
 
     /**
-     * Наименование третьего лица.
+     * Наименование третьего лица
      */
     public function setTitle(string $title): self
     {

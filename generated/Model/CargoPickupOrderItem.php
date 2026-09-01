@@ -32,7 +32,7 @@ class CargoPickupOrderItem
     protected $senderTitle;
 
     /**
-     * Статус операции забора.
+     * Статус операции забора
      *
      * @var string
      */
@@ -115,7 +115,7 @@ class CargoPickupOrderItem
     }
 
     /**
-     * Статус операции забора.
+     * Статус операции забора
      */
     public function getStatus(): string
     {
@@ -123,7 +123,7 @@ class CargoPickupOrderItem
     }
 
     /**
-     * Статус операции забора.
+     * Статус операции забора
      */
     public function setStatus(string $status): self
     {

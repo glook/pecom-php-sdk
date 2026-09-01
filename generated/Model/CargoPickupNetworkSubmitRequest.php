@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequest
 {
     /**
-     * Данные о позициях.
+     * Данные о позициях
      *
      * @var CargoPickupNetworkSubmitRequestCargos
      */
     protected $cargos;
 
     /**
-     * Общие данные по заявке.
+     * Общие данные по заявке
      *
      * @var CargoPickupNetworkSubmitRequestCommon
      */
     protected $common;
 
     /**
-     * Данные об отправителе.
+     * Данные об отправителе
      *
      * @var CargoPickupNetworkSubmitRequestSender
      */
     protected $sender;
 
     /**
-     * Данные о позициях.
+     * Данные о позициях
      */
     public function getCargos(): CargoPickupNetworkSubmitRequestCargos
     {
@@ -34,7 +34,7 @@ class CargoPickupNetworkSubmitRequest
     }
 
     /**
-     * Данные о позициях.
+     * Данные о позициях
      */
     public function setCargos(CargoPickupNetworkSubmitRequestCargos $cargos): self
     {
@@ -44,7 +44,7 @@ class CargoPickupNetworkSubmitRequest
     }
 
     /**
-     * Общие данные по заявке.
+     * Общие данные по заявке
      */
     public function getCommon(): CargoPickupNetworkSubmitRequestCommon
     {
@@ -52,7 +52,7 @@ class CargoPickupNetworkSubmitRequest
     }
 
     /**
-     * Общие данные по заявке.
+     * Общие данные по заявке
      */
     public function setCommon(CargoPickupNetworkSubmitRequestCommon $common): self
     {
@@ -62,7 +62,7 @@ class CargoPickupNetworkSubmitRequest
     }
 
     /**
-     * Данные об отправителе.
+     * Данные об отправителе
      */
     public function getSender(): CargoPickupNetworkSubmitRequestSender
     {
@@ -70,7 +70,7 @@ class CargoPickupNetworkSubmitRequest
     }
 
     /**
-     * Данные об отправителе.
+     * Данные об отправителе
      */
     public function setSender(CargoPickupNetworkSubmitRequestSender $sender): self
     {

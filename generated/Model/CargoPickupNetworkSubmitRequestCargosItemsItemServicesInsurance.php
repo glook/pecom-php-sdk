@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
 {
     /**
-     * Оценочная стоимость, руб. Поле обязательно, если `"enabled":true`.
+     * Оценочная стоимость, руб. Поле обязательно, если `"enabled":true`
      *
      * @var null|float
      */
     protected $cost;
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      *
      * @var bool
      */
     protected $enabled;
 
     /**
-     * Плательщик.
+     * Плательщик
      *
      * @var null|CargopickupnetworkPayer
      */
     protected $payer;
 
     /**
-     * Оценочная стоимость, руб. Поле обязательно, если `"enabled":true`.
+     * Оценочная стоимость, руб. Поле обязательно, если `"enabled":true`
      */
     public function getCost(): ?float
     {
@@ -34,7 +34,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     }
 
     /**
-     * Оценочная стоимость, руб. Поле обязательно, если `"enabled":true`.
+     * Оценочная стоимость, руб. Поле обязательно, если `"enabled":true`
      */
     public function setCost(?float $cost): self
     {
@@ -44,7 +44,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function getEnabled(): bool
     {
@@ -52,7 +52,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     }
 
     /**
-     * Заказана ли услуга.
+     * Заказана ли услуга
      */
     public function setEnabled(bool $enabled): self
     {
@@ -62,7 +62,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function getPayer(): ?CargopickupnetworkPayer
     {
@@ -70,7 +70,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemServicesInsurance
     }
 
     /**
-     * Плательщик.
+     * Плательщик
      */
     public function setPayer(?CargopickupnetworkPayer $payer): self
     {

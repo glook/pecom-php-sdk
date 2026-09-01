@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class ConfirmedAccessToCounterpartyLegal
 {
     /**
-     * ИНН.
+     * ИНН
      *
      * @var null|string
      */
@@ -19,7 +19,7 @@ class ConfirmedAccessToCounterpartyLegal
     protected $kpp;
 
     /**
-     * ИНН.
+     * ИНН
      */
     public function getInn(): ?string
     {
@@ -27,7 +27,7 @@ class ConfirmedAccessToCounterpartyLegal
     }
 
     /**
-     * ИНН.
+     * ИНН
      */
     public function setInn(?string $inn): self
     {

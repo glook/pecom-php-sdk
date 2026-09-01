@@ -25,14 +25,14 @@ class NetshopPickup
     protected $enabled;
 
     /**
-     * Время начала обеденного перерыва.
+     * Время начала обеденного перерыва
      *
      * @var null|string
      */
     protected $lunchBreakFrom;
 
     /**
-     * Время окончания обеденного перерыва.
+     * Время окончания обеденного перерыва
      *
      * @var null|string
      */
@@ -64,14 +64,14 @@ class NetshopPickup
     protected $weight;
 
     /**
-     * Время начала рабочего дня.
+     * Время начала рабочего дня
      *
      * @var null|string
      */
     protected $workTimeFrom;
 
     /**
-     * Время окончания рабочего дня.
+     * Время окончания рабочего дня
      *
      * @var null|string
      */
@@ -126,7 +126,7 @@ class NetshopPickup
     }
 
     /**
-     * Время начала обеденного перерыва.
+     * Время начала обеденного перерыва
      */
     public function getLunchBreakFrom(): ?string
     {
@@ -134,7 +134,7 @@ class NetshopPickup
     }
 
     /**
-     * Время начала обеденного перерыва.
+     * Время начала обеденного перерыва
      */
     public function setLunchBreakFrom(?string $lunchBreakFrom): self
     {
@@ -144,7 +144,7 @@ class NetshopPickup
     }
 
     /**
-     * Время окончания обеденного перерыва.
+     * Время окончания обеденного перерыва
      */
     public function getLunchBreakTo(): ?string
     {
@@ -152,7 +152,7 @@ class NetshopPickup
     }
 
     /**
-     * Время окончания обеденного перерыва.
+     * Время окончания обеденного перерыва
      */
     public function setLunchBreakTo(?string $lunchBreakTo): self
     {
@@ -222,7 +222,7 @@ class NetshopPickup
     }
 
     /**
-     * Время начала рабочего дня.
+     * Время начала рабочего дня
      */
     public function getWorkTimeFrom(): ?string
     {
@@ -230,7 +230,7 @@ class NetshopPickup
     }
 
     /**
-     * Время начала рабочего дня.
+     * Время начала рабочего дня
      */
     public function setWorkTimeFrom(?string $workTimeFrom): self
     {
@@ -240,7 +240,7 @@ class NetshopPickup
     }
 
     /**
-     * Время окончания рабочего дня.
+     * Время окончания рабочего дня
      */
     public function getWorkTimeTo(): ?string
     {
@@ -248,7 +248,7 @@ class NetshopPickup
     }
 
     /**
-     * Время окончания рабочего дня.
+     * Время окончания рабочего дня
      */
     public function setWorkTimeTo(?string $workTimeTo): self
     {

@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesSpecialCondition
 {
     /**
-     * Наименование услуги.
+     * Наименование услуги
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления.
+     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления
      *
      * @var string
      */
     protected $uID;
 
     /**
-     * Наименование услуги.
+     * Наименование услуги
      */
     public function getTitle(): string
     {
@@ -27,7 +27,7 @@ class BranchesSpecialCondition
     }
 
     /**
-     * Наименование услуги.
+     * Наименование услуги
      */
     public function setTitle(string $title): self
     {
@@ -37,7 +37,7 @@ class BranchesSpecialCondition
     }
 
     /**
-     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления.
+     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления
      */
     public function getUID(): string
     {
@@ -45,7 +45,7 @@ class BranchesSpecialCondition
     }
 
     /**
-     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления.
+     * Соглашение UID. Если есть в ответе, значит услуга может оказываться для указанного направления
      */
     public function setUID(string $uID): self
     {

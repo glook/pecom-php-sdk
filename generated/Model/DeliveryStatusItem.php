@@ -5,70 +5,70 @@ namespace glook\PecomSdk\Generated\Model;
 class DeliveryStatusItem
 {
     /**
-     * Наименование автомобиля.
+     * Наименование автомобиля
      *
      * @var null|string
      */
     protected $carBrand;
 
     /**
-     * Водитель.
+     * Водитель
      *
      * @var null|string
      */
     protected $carDriver;
 
     /**
-     * Телефон водителя.
+     * Телефон водителя
      *
      * @var null|string
      */
     protected $carDriverPhone;
 
     /**
-     * Индекс груза.
+     * Индекс груза
      *
      * @var null|string
      */
     protected $cargoCode;
 
     /**
-     * Номер автомобиля.
+     * Номер автомобиля
      *
      * @var null|string
      */
     protected $carNumber;
 
     /**
-     * Адрес доставки. Для получения требуются права доступа.
+     * Адрес доставки. Для получения требуются права доступа
      *
      * @var null|string
      */
     protected $deliveryAddress;
 
     /**
-     * Согласованная дата доставки.
+     * Согласованная дата доставки
      *
      * @var null|string
      */
     protected $deliveryAgreedDate;
 
     /**
-     * Дата и время плановой доставки до двери.
+     * Дата и время плановой доставки до двери
      *
      * @var null|string
      */
     protected $deliveryPlanDate;
 
     /**
-     * Статус доставки. Возможные значения: Другое, Новая, Отложено, Перенесено, Запланировано, Выполняется, Выполнено, Аннулировано.
+     * Статус доставки. Возможные значения: Другое, Новая, Отложено, Перенесено, Запланировано, Выполняется, Выполнено, Аннулировано
      *
      * @var null|string
      */
     protected $deliveryStatus;
 
     /**
-     * Код статуса доставки. Возможные значения: 3000 — Другое; 3010 — Новая; 3030 — Отложено; 3050 — Перенесено; 3070 — Запланировано; 3090 — Выполняется; 3200 — Выполнено; 3500 — Аннулировано.
+     * Код статуса доставки. Возможные значения: 3000 — Другое; 3010 — Новая; 3030 — Отложено; 3050 — Перенесено; 3070 — Запланировано; 3090 — Выполняется; 3200 — Выполнено; 3500 — Аннулировано
      *
      * @var null|int
      */
@@ -96,28 +96,28 @@ class DeliveryStatusItem
     protected $intervallunchBreakFrom;
 
     /**
-     * Перерыв, до.
+     * Перерыв, до
      *
      * @var null|string
      */
     protected $intervallunchBreakTo;
 
     /**
-     * Время, до.
+     * Время, до
      *
      * @var null|string
      */
     protected $intervalTo;
 
     /**
-     * Заказана разгрузка «до двери» силами «ПЭК».
+     * Заказана разгрузка «до двери» силами «ПЭК»
      *
      * @var null|bool
      */
     protected $isLoading;
 
     /**
-     * Наименование автомобиля.
+     * Наименование автомобиля
      */
     public function getCarBrand(): ?string
     {
@@ -125,7 +125,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Наименование автомобиля.
+     * Наименование автомобиля
      */
     public function setCarBrand(?string $carBrand): self
     {
@@ -135,7 +135,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Водитель.
+     * Водитель
      */
     public function getCarDriver(): ?string
     {
@@ -143,7 +143,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Водитель.
+     * Водитель
      */
     public function setCarDriver(?string $carDriver): self
     {
@@ -153,7 +153,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Телефон водителя.
+     * Телефон водителя
      */
     public function getCarDriverPhone(): ?string
     {
@@ -161,7 +161,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Телефон водителя.
+     * Телефон водителя
      */
     public function setCarDriverPhone(?string $carDriverPhone): self
     {
@@ -171,7 +171,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Индекс груза.
+     * Индекс груза
      */
     public function getCargoCode(): ?string
     {
@@ -179,7 +179,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Индекс груза.
+     * Индекс груза
      */
     public function setCargoCode(?string $cargoCode): self
     {
@@ -189,7 +189,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Номер автомобиля.
+     * Номер автомобиля
      */
     public function getCarNumber(): ?string
     {
@@ -197,7 +197,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Номер автомобиля.
+     * Номер автомобиля
      */
     public function setCarNumber(?string $carNumber): self
     {
@@ -207,7 +207,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Адрес доставки. Для получения требуются права доступа.
+     * Адрес доставки. Для получения требуются права доступа
      */
     public function getDeliveryAddress(): ?string
     {
@@ -215,7 +215,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Адрес доставки. Для получения требуются права доступа.
+     * Адрес доставки. Для получения требуются права доступа
      */
     public function setDeliveryAddress(?string $deliveryAddress): self
     {
@@ -225,7 +225,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Согласованная дата доставки.
+     * Согласованная дата доставки
      */
     public function getDeliveryAgreedDate(): ?string
     {
@@ -233,7 +233,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Согласованная дата доставки.
+     * Согласованная дата доставки
      */
     public function setDeliveryAgreedDate(?string $deliveryAgreedDate): self
     {
@@ -243,7 +243,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Дата и время плановой доставки до двери.
+     * Дата и время плановой доставки до двери
      */
     public function getDeliveryPlanDate(): ?string
     {
@@ -251,7 +251,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Дата и время плановой доставки до двери.
+     * Дата и время плановой доставки до двери
      */
     public function setDeliveryPlanDate(?string $deliveryPlanDate): self
     {
@@ -261,7 +261,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Статус доставки. Возможные значения: Другое, Новая, Отложено, Перенесено, Запланировано, Выполняется, Выполнено, Аннулировано.
+     * Статус доставки. Возможные значения: Другое, Новая, Отложено, Перенесено, Запланировано, Выполняется, Выполнено, Аннулировано
      */
     public function getDeliveryStatus(): ?string
     {
@@ -269,7 +269,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Статус доставки. Возможные значения: Другое, Новая, Отложено, Перенесено, Запланировано, Выполняется, Выполнено, Аннулировано.
+     * Статус доставки. Возможные значения: Другое, Новая, Отложено, Перенесено, Запланировано, Выполняется, Выполнено, Аннулировано
      */
     public function setDeliveryStatus(?string $deliveryStatus): self
     {
@@ -279,7 +279,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Код статуса доставки. Возможные значения: 3000 — Другое; 3010 — Новая; 3030 — Отложено; 3050 — Перенесено; 3070 — Запланировано; 3090 — Выполняется; 3200 — Выполнено; 3500 — Аннулировано.
+     * Код статуса доставки. Возможные значения: 3000 — Другое; 3010 — Новая; 3030 — Отложено; 3050 — Перенесено; 3070 — Запланировано; 3090 — Выполняется; 3200 — Выполнено; 3500 — Аннулировано
      */
     public function getDeliveryStatusCode(): ?int
     {
@@ -287,7 +287,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Код статуса доставки. Возможные значения: 3000 — Другое; 3010 — Новая; 3030 — Отложено; 3050 — Перенесено; 3070 — Запланировано; 3090 — Выполняется; 3200 — Выполнено; 3500 — Аннулировано.
+     * Код статуса доставки. Возможные значения: 3000 — Другое; 3010 — Новая; 3030 — Отложено; 3050 — Перенесено; 3070 — Запланировано; 3090 — Выполняется; 3200 — Выполнено; 3500 — Аннулировано
      */
     public function setDeliveryStatusCode(?int $deliveryStatusCode): self
     {
@@ -351,7 +351,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Перерыв, до.
+     * Перерыв, до
      */
     public function getIntervallunchBreakTo(): ?string
     {
@@ -359,7 +359,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Перерыв, до.
+     * Перерыв, до
      */
     public function setIntervallunchBreakTo(?string $intervallunchBreakTo): self
     {
@@ -369,7 +369,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Время, до.
+     * Время, до
      */
     public function getIntervalTo(): ?string
     {
@@ -377,7 +377,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Время, до.
+     * Время, до
      */
     public function setIntervalTo(?string $intervalTo): self
     {
@@ -387,7 +387,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Заказана разгрузка «до двери» силами «ПЭК».
+     * Заказана разгрузка «до двери» силами «ПЭК»
      */
     public function getIsLoading(): ?bool
     {
@@ -395,7 +395,7 @@ class DeliveryStatusItem
     }
 
     /**
-     * Заказана разгрузка «до двери» силами «ПЭК».
+     * Заказана разгрузка «до двери» силами «ПЭК»
      */
     public function setIsLoading(?bool $isLoading): self
     {

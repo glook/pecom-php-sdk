@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class Warehouse
 {
     /**
-     * Адрес склада. Максимально короткий адрес для использования в оповещениях.
+     * Адрес склада. Максимально короткий адрес для использования в оповещениях
      *
      * @var string
      */
     protected $address;
 
     /**
-     * Полный адрес склада.
+     * Полный адрес склада
      *
      * @var string
      */
     protected $addressDivision;
 
     /**
-     * Координаты GPS склада (устаревший формат строки).
+     * Координаты GPS склада (устаревший формат строки)
      *
      * @var string
      */
     protected $coordinates;
 
     /**
-     * Координаты GPS склада.
+     * Координаты GPS склада
      *
      * @var BranchesCoordinates
      */
     protected $coordinatesobj;
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @var null|string
      */
@@ -47,14 +47,14 @@ class Warehouse
     protected $departmentClosingDate;
 
     /**
-     * Идентификатор отделения. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок.
+     * Идентификатор отделения. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок
      *
      * @var string
      */
     protected $divisionId;
 
     /**
-     * Наименование отделения.
+     * Наименование отделения
      *
      * @var string
      */
@@ -68,7 +68,7 @@ class Warehouse
     protected $divisionTimeOfWork;
 
     /**
-     * E-mail.
+     * E-mail
      *
      * @var string
      */
@@ -103,7 +103,7 @@ class Warehouse
     protected $isAcceptanceOnly;
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @var bool
      */
@@ -152,56 +152,56 @@ class Warehouse
     protected $maxWeightPerPlace;
 
     /**
-     * Наименование склада.
+     * Наименование склада
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Подробное описание, как добраться до отделения.
+     * Подробное описание, как добраться до отделения
      *
      * @var string
      */
     protected $pointerDescription;
 
     /**
-     * Выходные и праздничные дни.
+     * Выходные и праздничные дни
      *
      * @var string[]
      */
     protected $scheduleHolidayDays;
 
     /**
-     * Сокращенный режим работы.
+     * Сокращенный режим работы
      *
      * @var ScheduleShortWorkDay[]
      */
     protected $scheduleShortWorkDays;
 
     /**
-     * Телефон.
+     * Телефон
      *
      * @var string
      */
     protected $telephone;
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @var mixed[]
      */
     protected $timeOfWork;
 
     /**
-     * Буквенный уникальный код склада.
+     * Буквенный уникальный код склада
      *
      * @var string
      */
     protected $warehouseCode;
 
     /**
-     * Адрес склада. Максимально короткий адрес для использования в оповещениях.
+     * Адрес склада. Максимально короткий адрес для использования в оповещениях
      */
     public function getAddress(): string
     {
@@ -209,7 +209,7 @@ class Warehouse
     }
 
     /**
-     * Адрес склада. Максимально короткий адрес для использования в оповещениях.
+     * Адрес склада. Максимально короткий адрес для использования в оповещениях
      */
     public function setAddress(string $address): self
     {
@@ -219,7 +219,7 @@ class Warehouse
     }
 
     /**
-     * Полный адрес склада.
+     * Полный адрес склада
      */
     public function getAddressDivision(): string
     {
@@ -227,7 +227,7 @@ class Warehouse
     }
 
     /**
-     * Полный адрес склада.
+     * Полный адрес склада
      */
     public function setAddressDivision(string $addressDivision): self
     {
@@ -237,7 +237,7 @@ class Warehouse
     }
 
     /**
-     * Координаты GPS склада (устаревший формат строки).
+     * Координаты GPS склада (устаревший формат строки)
      */
     public function getCoordinates(): string
     {
@@ -245,7 +245,7 @@ class Warehouse
     }
 
     /**
-     * Координаты GPS склада (устаревший формат строки).
+     * Координаты GPS склада (устаревший формат строки)
      */
     public function setCoordinates(string $coordinates): self
     {
@@ -255,7 +255,7 @@ class Warehouse
     }
 
     /**
-     * Координаты GPS склада.
+     * Координаты GPS склада
      */
     public function getCoordinatesobj(): BranchesCoordinates
     {
@@ -263,7 +263,7 @@ class Warehouse
     }
 
     /**
-     * Координаты GPS склада.
+     * Координаты GPS склада
      */
     public function setCoordinatesobj(BranchesCoordinates $coordinatesobj): self
     {
@@ -273,7 +273,7 @@ class Warehouse
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      */
     public function getIsRestrictions(): ?string
     {
@@ -281,7 +281,7 @@ class Warehouse
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      */
     public function setIsRestrictions(?string $isRestrictions): self
     {
@@ -309,7 +309,7 @@ class Warehouse
     }
 
     /**
-     * Идентификатор отделения. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок.
+     * Идентификатор отделения. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок
      */
     public function getDivisionId(): string
     {
@@ -317,7 +317,7 @@ class Warehouse
     }
 
     /**
-     * Идентификатор отделения. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок.
+     * Идентификатор отделения. НЕ ИСПОЛЬЗОВАТЬ в методах расчёта стоимости и подачи заявок
      */
     public function setDivisionId(string $divisionId): self
     {
@@ -327,7 +327,7 @@ class Warehouse
     }
 
     /**
-     * Наименование отделения.
+     * Наименование отделения
      */
     public function getDivisionName(): string
     {
@@ -335,7 +335,7 @@ class Warehouse
     }
 
     /**
-     * Наименование отделения.
+     * Наименование отделения
      */
     public function setDivisionName(string $divisionName): self
     {
@@ -367,7 +367,7 @@ class Warehouse
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function getEmail(): string
     {
@@ -375,7 +375,7 @@ class Warehouse
     }
 
     /**
-     * E-mail.
+     * E-mail
      */
     public function setEmail(string $email): self
     {
@@ -457,7 +457,7 @@ class Warehouse
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      */
     public function getIsFreightSurcharge(): bool
     {
@@ -465,7 +465,7 @@ class Warehouse
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      */
     public function setIsFreightSurcharge(bool $isFreightSurcharge): self
     {
@@ -583,7 +583,7 @@ class Warehouse
     }
 
     /**
-     * Наименование склада.
+     * Наименование склада
      */
     public function getName(): string
     {
@@ -591,7 +591,7 @@ class Warehouse
     }
 
     /**
-     * Наименование склада.
+     * Наименование склада
      */
     public function setName(string $name): self
     {
@@ -601,7 +601,7 @@ class Warehouse
     }
 
     /**
-     * Подробное описание, как добраться до отделения.
+     * Подробное описание, как добраться до отделения
      */
     public function getPointerDescription(): string
     {
@@ -609,7 +609,7 @@ class Warehouse
     }
 
     /**
-     * Подробное описание, как добраться до отделения.
+     * Подробное описание, как добраться до отделения
      */
     public function setPointerDescription(string $pointerDescription): self
     {
@@ -619,7 +619,7 @@ class Warehouse
     }
 
     /**
-     * Выходные и праздничные дни.
+     * Выходные и праздничные дни
      *
      * @return string[]
      */
@@ -629,7 +629,7 @@ class Warehouse
     }
 
     /**
-     * Выходные и праздничные дни.
+     * Выходные и праздничные дни
      *
      * @param string[] $scheduleHolidayDays
      */
@@ -641,7 +641,7 @@ class Warehouse
     }
 
     /**
-     * Сокращенный режим работы.
+     * Сокращенный режим работы
      *
      * @return ScheduleShortWorkDay[]
      */
@@ -651,7 +651,7 @@ class Warehouse
     }
 
     /**
-     * Сокращенный режим работы.
+     * Сокращенный режим работы
      *
      * @param ScheduleShortWorkDay[] $scheduleShortWorkDays
      */
@@ -663,7 +663,7 @@ class Warehouse
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function getTelephone(): string
     {
@@ -671,7 +671,7 @@ class Warehouse
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function setTelephone(string $telephone): self
     {
@@ -681,7 +681,7 @@ class Warehouse
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @return mixed[]
      */
@@ -691,7 +691,7 @@ class Warehouse
     }
 
     /**
-     * В актуальной версии протокола не используется.
+     * В актуальной версии протокола не используется
      *
      * @param mixed[] $timeOfWork
      */
@@ -703,7 +703,7 @@ class Warehouse
     }
 
     /**
-     * Буквенный уникальный код склада.
+     * Буквенный уникальный код склада
      */
     public function getWarehouseCode(): string
     {
@@ -711,7 +711,7 @@ class Warehouse
     }
 
     /**
-     * Буквенный уникальный код склада.
+     * Буквенный уникальный код склада
      */
     public function setWarehouseCode(string $warehouseCode): self
     {

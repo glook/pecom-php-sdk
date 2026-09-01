@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class AccountingDocumentListResponse
 {
     /**
-     * Список документов.
+     * Список документов
      *
      * @var null|AccountingDocument[]
      */
     protected $documents;
 
     /**
-     * Список документов.
+     * Список документов
      *
      * @return null|AccountingDocument[]
      */
@@ -22,7 +22,7 @@ class AccountingDocumentListResponse
     }
 
     /**
-     * Список документов.
+     * Список документов
      *
      * @param null|AccountingDocument[] $documents
      */

@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class CargosForcedStorageRequest
 {
     /**
-     * Коды грузов.
+     * Коды грузов
      *
      * @var string[]
      */
     protected $cargoCodes;
 
     /**
-     * Коды грузов.
+     * Коды грузов
      *
      * @return string[]
      */
@@ -22,7 +22,7 @@ class CargosForcedStorageRequest
     }
 
     /**
-     * Коды грузов.
+     * Коды грузов
      *
      * @param string[] $cargoCodes
      */

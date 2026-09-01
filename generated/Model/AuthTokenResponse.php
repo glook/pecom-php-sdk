@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class AuthTokenResponse
 {
     /**
-     * Токен для авторизации.
+     * Токен для авторизации
      *
      * @var string
      */
@@ -19,21 +19,21 @@ class AuthTokenResponse
     protected $expiresIn;
 
     /**
-     * Дата и время в формате Unix-time, по которую действует сгенерированный токен. Подробнее о формате: https://i-leon.ru/tools/time).
+     * Дата и время в формате Unix-time, по которую действует сгенерированный токен. Подробнее о формате: https://i-leon.ru/tools/time)
      *
      * @var string
      */
     protected $expiresInUnix;
 
     /**
-     * Тип токена. В настоящее время используется `Bearer`.
+     * Тип токена. В настоящее время используется `Bearer`
      *
      * @var string
      */
     protected $tokenType;
 
     /**
-     * Токен для авторизации.
+     * Токен для авторизации
      */
     public function getAccessToken(): string
     {
@@ -41,7 +41,7 @@ class AuthTokenResponse
     }
 
     /**
-     * Токен для авторизации.
+     * Токен для авторизации
      */
     public function setAccessToken(string $accessToken): self
     {
@@ -69,7 +69,7 @@ class AuthTokenResponse
     }
 
     /**
-     * Дата и время в формате Unix-time, по которую действует сгенерированный токен. Подробнее о формате: https://i-leon.ru/tools/time).
+     * Дата и время в формате Unix-time, по которую действует сгенерированный токен. Подробнее о формате: https://i-leon.ru/tools/time)
      */
     public function getExpiresInUnix(): string
     {
@@ -77,7 +77,7 @@ class AuthTokenResponse
     }
 
     /**
-     * Дата и время в формате Unix-time, по которую действует сгенерированный токен. Подробнее о формате: https://i-leon.ru/tools/time).
+     * Дата и время в формате Unix-time, по которую действует сгенерированный токен. Подробнее о формате: https://i-leon.ru/tools/time)
      */
     public function setExpiresInUnix(string $expiresInUnix): self
     {
@@ -87,7 +87,7 @@ class AuthTokenResponse
     }
 
     /**
-     * Тип токена. В настоящее время используется `Bearer`.
+     * Тип токена. В настоящее время используется `Bearer`
      */
     public function getTokenType(): string
     {
@@ -95,7 +95,7 @@ class AuthTokenResponse
     }
 
     /**
-     * Тип токена. В настоящее время используется `Bearer`.
+     * Тип токена. В настоящее время используется `Bearer`
      */
     public function setTokenType(string $tokenType): self
     {

@@ -10,11 +10,18 @@ class PreregistrationSubmitResponse
     protected $cargos;
 
     /**
-     * Номер заявки.
+     * Номер заявки
      *
      * @var int
      */
     protected $documentId;
+
+    /**
+     * Ссылки на подготовленные шаблоны документов ЭДО.
+     *
+     * @var null|string[]
+     */
+    protected $ediTemplateUrls;
 
     /**
      * Важные оповещения, которые могут повлиять на сроки/стоимость перевозки.
@@ -47,7 +54,7 @@ class PreregistrationSubmitResponse
     }
 
     /**
-     * Номер заявки.
+     * Номер заявки
      */
     public function getDocumentId(): int
     {
@@ -55,11 +62,33 @@ class PreregistrationSubmitResponse
     }
 
     /**
-     * Номер заявки.
+     * Номер заявки
      */
     public function setDocumentId(int $documentId): self
     {
         $this->documentId = $documentId;
+
+        return $this;
+    }
+
+    /**
+     * Ссылки на подготовленные шаблоны документов ЭДО.
+     *
+     * @return null|string[]
+     */
+    public function getEdiTemplateUrls(): ?array
+    {
+        return $this->ediTemplateUrls;
+    }
+
+    /**
+     * Ссылки на подготовленные шаблоны документов ЭДО.
+     *
+     * @param null|string[] $ediTemplateUrls
+     */
+    public function setEdiTemplateUrls(?array $ediTemplateUrls): self
+    {
+        $this->ediTemplateUrls = $ediTemplateUrls;
 
         return $this;
     }

@@ -5,49 +5,49 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoStatusByBarcodeItem
 {
     /**
-     * Параметры груза.
+     * Параметры груза
      *
      * @var null|CargoInfo
      */
     protected $cargo;
 
     /**
-     * Общая информация о грузе.
+     * Общая информация о грузе
      *
      * @var null|CargoStatusInfo
      */
     protected $info;
 
     /**
-     * Штрих-коды.
+     * Штрих-коды
      *
      * @var null|string[]
      */
     protected $positionBarCodes;
 
     /**
-     * Получатель.
+     * Получатель
      *
      * @var null|CargosCargoReceiver
      */
     protected $receiver;
 
     /**
-     * Отправитель.
+     * Отправитель
      *
      * @var null|CargoSender
      */
     protected $sender;
 
     /**
-     * Услуги.
+     * Услуги
      *
      * @var null|CargoServices
      */
     protected $services;
 
     /**
-     * Параметры груза.
+     * Параметры груза
      */
     public function getCargo(): ?CargoInfo
     {
@@ -55,7 +55,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Параметры груза.
+     * Параметры груза
      */
     public function setCargo(?CargoInfo $cargo): self
     {
@@ -65,7 +65,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Общая информация о грузе.
+     * Общая информация о грузе
      */
     public function getInfo(): ?CargoStatusInfo
     {
@@ -73,7 +73,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Общая информация о грузе.
+     * Общая информация о грузе
      */
     public function setInfo(?CargoStatusInfo $info): self
     {
@@ -83,7 +83,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Штрих-коды.
+     * Штрих-коды
      *
      * @return null|string[]
      */
@@ -93,7 +93,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Штрих-коды.
+     * Штрих-коды
      *
      * @param null|string[] $positionBarCodes
      */
@@ -105,7 +105,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function getReceiver(): ?CargosCargoReceiver
     {
@@ -113,7 +113,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function setReceiver(?CargosCargoReceiver $receiver): self
     {
@@ -123,7 +123,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Отправитель.
+     * Отправитель
      */
     public function getSender(): ?CargoSender
     {
@@ -131,7 +131,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Отправитель.
+     * Отправитель
      */
     public function setSender(?CargoSender $sender): self
     {
@@ -141,7 +141,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Услуги.
+     * Услуги
      */
     public function getServices(): ?CargoServices
     {
@@ -149,7 +149,7 @@ class CargoStatusByBarcodeItem
     }
 
     /**
-     * Услуги.
+     * Услуги
      */
     public function setServices(?CargoServices $services): self
     {

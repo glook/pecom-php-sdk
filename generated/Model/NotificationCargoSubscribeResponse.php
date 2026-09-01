@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class NotificationCargoSubscribeResponse
 {
     /**
-     * Успешность подписки.
+     * Успешность подписки
      *
      * @var bool
      */
     protected $success;
 
     /**
-     * Успешность подписки.
+     * Успешность подписки
      */
     public function getSuccess(): bool
     {
@@ -20,7 +20,7 @@ class NotificationCargoSubscribeResponse
     }
 
     /**
-     * Успешность подписки.
+     * Успешность подписки
      */
     public function setSuccess(bool $success): self
     {

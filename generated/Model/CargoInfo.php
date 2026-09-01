@@ -19,21 +19,21 @@ class CargoInfo
     protected $amountProcessed;
 
     /**
-     * Штрих-код груза.
+     * Штрих-код груза
      *
      * @var null|string
      */
     protected $cargoBarCode;
 
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
     protected $code;
 
     /**
-     * Наименование груза.
+     * Наименование груза
      *
      * @var null|string
      */
@@ -47,14 +47,14 @@ class CargoInfo
     protected $maxSize;
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      *
      * @var null|string
      */
     protected $orderNumber;
 
     /**
-     * Возврат документов по грузу.
+     * Возврат документов по грузу
      *
      * @var null|string
      */
@@ -68,21 +68,21 @@ class CargoInfo
     protected $positionBarCodes;
 
     /**
-     * Тип тарифа / продукта (только в /statusbypositionbarcodes/).
+     * Тип тарифа / продукта (только в /statusbypositionbarcodes/)
      *
      * @var null|int
      */
     protected $type;
 
     /**
-     * Объем, м3.
+     * Объем, м3
      *
      * @var null|float
      */
     protected $volume;
 
     /**
-     * Вес, кг.
+     * Вес, кг
      *
      * @var null|float
      */
@@ -125,7 +125,7 @@ class CargoInfo
     }
 
     /**
-     * Штрих-код груза.
+     * Штрих-код груза
      */
     public function getCargoBarCode(): ?string
     {
@@ -133,7 +133,7 @@ class CargoInfo
     }
 
     /**
-     * Штрих-код груза.
+     * Штрих-код груза
      */
     public function setCargoBarCode(?string $cargoBarCode): self
     {
@@ -143,7 +143,7 @@ class CargoInfo
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCode(): ?string
     {
@@ -151,7 +151,7 @@ class CargoInfo
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCode(?string $code): self
     {
@@ -161,7 +161,7 @@ class CargoInfo
     }
 
     /**
-     * Наименование груза.
+     * Наименование груза
      */
     public function getDescription(): ?string
     {
@@ -169,7 +169,7 @@ class CargoInfo
     }
 
     /**
-     * Наименование груза.
+     * Наименование груза
      */
     public function setDescription(?string $description): self
     {
@@ -197,7 +197,7 @@ class CargoInfo
     }
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      */
     public function getOrderNumber(): ?string
     {
@@ -205,7 +205,7 @@ class CargoInfo
     }
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      */
     public function setOrderNumber(?string $orderNumber): self
     {
@@ -215,7 +215,7 @@ class CargoInfo
     }
 
     /**
-     * Возврат документов по грузу.
+     * Возврат документов по грузу
      */
     public function getParentCargoCode(): ?string
     {
@@ -223,7 +223,7 @@ class CargoInfo
     }
 
     /**
-     * Возврат документов по грузу.
+     * Возврат документов по грузу
      */
     public function setParentCargoCode(?string $parentCargoCode): self
     {
@@ -255,7 +255,7 @@ class CargoInfo
     }
 
     /**
-     * Тип тарифа / продукта (только в /statusbypositionbarcodes/).
+     * Тип тарифа / продукта (только в /statusbypositionbarcodes/)
      */
     public function getType(): ?int
     {
@@ -263,7 +263,7 @@ class CargoInfo
     }
 
     /**
-     * Тип тарифа / продукта (только в /statusbypositionbarcodes/).
+     * Тип тарифа / продукта (только в /statusbypositionbarcodes/)
      */
     public function setType(?int $type): self
     {
@@ -273,7 +273,7 @@ class CargoInfo
     }
 
     /**
-     * Объем, м3.
+     * Объем, м3
      */
     public function getVolume(): ?float
     {
@@ -281,7 +281,7 @@ class CargoInfo
     }
 
     /**
-     * Объем, м3.
+     * Объем, м3
      */
     public function setVolume(?float $volume): self
     {
@@ -291,7 +291,7 @@ class CargoInfo
     }
 
     /**
-     * Вес, кг.
+     * Вес, кг
      */
     public function getWeight(): ?float
     {
@@ -299,7 +299,7 @@ class CargoInfo
     }
 
     /**
-     * Вес, кг.
+     * Вес, кг
      */
     public function setWeight(?float $weight): self
     {

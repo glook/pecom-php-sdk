@@ -5,7 +5,7 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatusItem
 {
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
@@ -19,7 +19,7 @@ class CurrentStatusItem
     protected $currentStatus;
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCargoCode(): ?string
     {
@@ -27,7 +27,7 @@ class CurrentStatusItem
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCargoCode(?string $cargoCode): self
     {

@@ -5,35 +5,35 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesCheckpickupdatePostResponse200
 {
     /**
-     * Забор с адреса возможен.
+     * Забор с адреса возможен
      *
      * @var bool
      */
     protected $addressAvailable;
 
     /**
-     * Массив доступных дат после указанной.
+     * Массив доступных дат после указанной
      *
      * @var \DateTime[]
      */
     protected $availablePickupDatesAfter;
 
     /**
-     * Массив доступных дат до указанной.
+     * Массив доступных дат до указанной
      *
      * @var \DateTime[]
      */
     protected $availablePickupDatesBefore;
 
     /**
-     * Забор на указанную дату возможен.
+     * Забор на указанную дату возможен
      *
      * @var bool
      */
     protected $pickupDateAvailable;
 
     /**
-     * Забор с адреса возможен.
+     * Забор с адреса возможен
      */
     public function getAddressAvailable(): bool
     {
@@ -41,7 +41,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Забор с адреса возможен.
+     * Забор с адреса возможен
      */
     public function setAddressAvailable(bool $addressAvailable): self
     {
@@ -51,7 +51,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Массив доступных дат после указанной.
+     * Массив доступных дат после указанной
      *
      * @return \DateTime[]
      */
@@ -61,7 +61,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Массив доступных дат после указанной.
+     * Массив доступных дат после указанной
      *
      * @param \DateTime[] $availablePickupDatesAfter
      */
@@ -73,7 +73,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Массив доступных дат до указанной.
+     * Массив доступных дат до указанной
      *
      * @return \DateTime[]
      */
@@ -83,7 +83,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Массив доступных дат до указанной.
+     * Массив доступных дат до указанной
      *
      * @param \DateTime[] $availablePickupDatesBefore
      */
@@ -95,7 +95,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Забор на указанную дату возможен.
+     * Забор на указанную дату возможен
      */
     public function getPickupDateAvailable(): bool
     {
@@ -103,7 +103,7 @@ class BranchesCheckpickupdatePostResponse200
     }
 
     /**
-     * Забор на указанную дату возможен.
+     * Забор на указанную дату возможен
      */
     public function setPickupDateAvailable(bool $pickupDateAvailable): self
     {

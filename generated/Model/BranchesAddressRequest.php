@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesAddressRequest
 {
     /**
-     * Адрес или часть адреса.
+     * Адрес или часть адреса
      *
      * @var string
      */
     protected $address;
 
     /**
-     * Адрес или часть адреса.
+     * Адрес или часть адреса
      */
     public function getAddress(): string
     {
@@ -20,7 +20,7 @@ class BranchesAddressRequest
     }
 
     /**
-     * Адрес или часть адреса.
+     * Адрес или часть адреса
      */
     public function setAddress(string $address): self
     {

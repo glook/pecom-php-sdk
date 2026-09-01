@@ -5,49 +5,49 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesDepartmentslimitPostResponse200
 {
     /**
-     * Идентификатор филиала получателя.
+     * Идентификатор филиала получателя
      *
      * @var string
      */
     protected $recipientBranchId;
 
     /**
-     * Идентификатор склада получателя. Выводится, если был передан в запросе.
+     * Идентификатор склада получателя. Выводится, если был передан в запросе
      *
      * @var null|string
      */
     protected $recipientWarehouseId;
 
     /**
-     * Идентификатор филиала отправителя.
+     * Идентификатор филиала отправителя
      *
      * @var string
      */
     protected $senderBranchId;
 
     /**
-     * Идентификатор склада отправителя. Выводится, если был передан в запросе.
+     * Идентификатор склада отправителя. Выводится, если был передан в запросе
      *
      * @var null|string
      */
     protected $senderWarehouseId;
 
     /**
-     * Идентификатор продукта/тарифа Express Автоперевозка.
+     * Идентификатор продукта/тарифа Express Автоперевозка
      *
      * @var int
      */
     protected $type;
 
     /**
-     * Лимиты ВГХ.
+     * Лимиты ВГХ
      *
      * @var WdcLimits
      */
     protected $wdcLimits;
 
     /**
-     * Идентификатор филиала получателя.
+     * Идентификатор филиала получателя
      */
     public function getRecipientBranchId(): string
     {
@@ -55,7 +55,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор филиала получателя.
+     * Идентификатор филиала получателя
      */
     public function setRecipientBranchId(string $recipientBranchId): self
     {
@@ -65,7 +65,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор склада получателя. Выводится, если был передан в запросе.
+     * Идентификатор склада получателя. Выводится, если был передан в запросе
      */
     public function getRecipientWarehouseId(): ?string
     {
@@ -73,7 +73,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор склада получателя. Выводится, если был передан в запросе.
+     * Идентификатор склада получателя. Выводится, если был передан в запросе
      */
     public function setRecipientWarehouseId(?string $recipientWarehouseId): self
     {
@@ -83,7 +83,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор филиала отправителя.
+     * Идентификатор филиала отправителя
      */
     public function getSenderBranchId(): string
     {
@@ -91,7 +91,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор филиала отправителя.
+     * Идентификатор филиала отправителя
      */
     public function setSenderBranchId(string $senderBranchId): self
     {
@@ -101,7 +101,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор склада отправителя. Выводится, если был передан в запросе.
+     * Идентификатор склада отправителя. Выводится, если был передан в запросе
      */
     public function getSenderWarehouseId(): ?string
     {
@@ -109,7 +109,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор склада отправителя. Выводится, если был передан в запросе.
+     * Идентификатор склада отправителя. Выводится, если был передан в запросе
      */
     public function setSenderWarehouseId(?string $senderWarehouseId): self
     {
@@ -119,7 +119,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор продукта/тарифа Express Автоперевозка.
+     * Идентификатор продукта/тарифа Express Автоперевозка
      */
     public function getType(): int
     {
@@ -127,7 +127,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Идентификатор продукта/тарифа Express Автоперевозка.
+     * Идентификатор продукта/тарифа Express Автоперевозка
      */
     public function setType(int $type): self
     {
@@ -137,7 +137,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Лимиты ВГХ.
+     * Лимиты ВГХ
      */
     public function getWdcLimits(): WdcLimits
     {
@@ -145,7 +145,7 @@ class BranchesDepartmentslimitPostResponse200
     }
 
     /**
-     * Лимиты ВГХ.
+     * Лимиты ВГХ
      */
     public function setWdcLimits(WdcLimits $wdcLimits): self
     {

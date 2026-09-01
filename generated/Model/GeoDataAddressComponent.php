@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoDataAddressComponent
 {
     /**
-     * Тип компоненты адреса.
+     * Тип компоненты адреса
      *
      * @var string
      */
     protected $kind;
 
     /**
-     * Название компоненты адреса.
+     * Название компоненты адреса
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Тип компоненты адреса.
+     * Тип компоненты адреса
      */
     public function getKind(): string
     {
@@ -27,7 +27,7 @@ class GeoDataAddressComponent
     }
 
     /**
-     * Тип компоненты адреса.
+     * Тип компоненты адреса
      */
     public function setKind(string $kind): self
     {
@@ -37,7 +37,7 @@ class GeoDataAddressComponent
     }
 
     /**
-     * Название компоненты адреса.
+     * Название компоненты адреса
      */
     public function getName(): string
     {
@@ -45,7 +45,7 @@ class GeoDataAddressComponent
     }
 
     /**
-     * Название компоненты адреса.
+     * Название компоненты адреса
      */
     public function setName(string $name): self
     {

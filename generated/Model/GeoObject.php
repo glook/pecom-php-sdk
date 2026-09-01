@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoObject
 {
     /**
-     * Границы объекта.
+     * Границы объекта
      *
      * @var GeoObjectBoundedBy
      */
     protected $boundedBy;
 
     /**
-     * Описание объекта.
+     * Описание объекта
      *
      * @var string
      */
     protected $description;
 
     /**
-     * Метаданные объекта.
+     * Метаданные объекта
      *
      * @var GeoObjectMetaDataProperty
      */
     protected $metaDataProperty;
 
     /**
-     * Название объекта.
+     * Название объекта
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Центральная точка объекта.
+     * Центральная точка объекта
      *
      * @var GeoObjectPoint
      */
     protected $point;
 
     /**
-     * Границы объекта.
+     * Границы объекта
      */
     public function getBoundedBy(): GeoObjectBoundedBy
     {
@@ -48,7 +48,7 @@ class GeoObject
     }
 
     /**
-     * Границы объекта.
+     * Границы объекта
      */
     public function setBoundedBy(GeoObjectBoundedBy $boundedBy): self
     {
@@ -58,7 +58,7 @@ class GeoObject
     }
 
     /**
-     * Описание объекта.
+     * Описание объекта
      */
     public function getDescription(): string
     {
@@ -66,7 +66,7 @@ class GeoObject
     }
 
     /**
-     * Описание объекта.
+     * Описание объекта
      */
     public function setDescription(string $description): self
     {
@@ -76,7 +76,7 @@ class GeoObject
     }
 
     /**
-     * Метаданные объекта.
+     * Метаданные объекта
      */
     public function getMetaDataProperty(): GeoObjectMetaDataProperty
     {
@@ -84,7 +84,7 @@ class GeoObject
     }
 
     /**
-     * Метаданные объекта.
+     * Метаданные объекта
      */
     public function setMetaDataProperty(GeoObjectMetaDataProperty $metaDataProperty): self
     {
@@ -94,7 +94,7 @@ class GeoObject
     }
 
     /**
-     * Название объекта.
+     * Название объекта
      */
     public function getName(): string
     {
@@ -102,7 +102,7 @@ class GeoObject
     }
 
     /**
-     * Название объекта.
+     * Название объекта
      */
     public function setName(string $name): self
     {
@@ -112,7 +112,7 @@ class GeoObject
     }
 
     /**
-     * Центральная точка объекта.
+     * Центральная точка объекта
      */
     public function getPoint(): GeoObjectPoint
     {
@@ -120,7 +120,7 @@ class GeoObject
     }
 
     /**
-     * Центральная точка объекта.
+     * Центральная точка объекта
      */
     public function setPoint(GeoObjectPoint $point): self
     {

@@ -5,42 +5,42 @@ namespace glook\PecomSdk\Generated\Model;
 class CurrentStatus
 {
     /**
-     * Основной статус груза/заказа.
+     * Основной статус груза/заказа
      *
      * @var null|string
      */
     protected $clientStatus;
 
     /**
-     * Детализация основного статуса.
+     * Детализация основного статуса
      *
      * @var null|string
      */
     protected $clientStatusLevel2;
 
     /**
-     * id статуса груза.
+     * id статуса груза
      *
      * @var null|int
      */
     protected $id;
 
     /**
-     * Признак активности основного статуса.
+     * Признак активности основного статуса
      *
      * @var null|bool
      */
     protected $isActive;
 
     /**
-     * Уточняющая информация к статусу груза/заказа.
+     * Уточняющая информация к статусу груза/заказа
      *
      * @var null|string
      */
     protected $tooltip;
 
     /**
-     * Основной статус груза/заказа.
+     * Основной статус груза/заказа
      */
     public function getClientStatus(): ?string
     {
@@ -48,7 +48,7 @@ class CurrentStatus
     }
 
     /**
-     * Основной статус груза/заказа.
+     * Основной статус груза/заказа
      */
     public function setClientStatus(?string $clientStatus): self
     {
@@ -58,7 +58,7 @@ class CurrentStatus
     }
 
     /**
-     * Детализация основного статуса.
+     * Детализация основного статуса
      */
     public function getClientStatusLevel2(): ?string
     {
@@ -66,7 +66,7 @@ class CurrentStatus
     }
 
     /**
-     * Детализация основного статуса.
+     * Детализация основного статуса
      */
     public function setClientStatusLevel2(?string $clientStatusLevel2): self
     {
@@ -76,7 +76,7 @@ class CurrentStatus
     }
 
     /**
-     * id статуса груза.
+     * id статуса груза
      */
     public function getId(): ?int
     {
@@ -84,7 +84,7 @@ class CurrentStatus
     }
 
     /**
-     * id статуса груза.
+     * id статуса груза
      */
     public function setId(?int $id): self
     {
@@ -94,7 +94,7 @@ class CurrentStatus
     }
 
     /**
-     * Признак активности основного статуса.
+     * Признак активности основного статуса
      */
     public function getIsActive(): ?bool
     {
@@ -102,7 +102,7 @@ class CurrentStatus
     }
 
     /**
-     * Признак активности основного статуса.
+     * Признак активности основного статуса
      */
     public function setIsActive(?bool $isActive): self
     {
@@ -112,7 +112,7 @@ class CurrentStatus
     }
 
     /**
-     * Уточняющая информация к статусу груза/заказа.
+     * Уточняющая информация к статусу груза/заказа
      */
     public function getTooltip(): ?string
     {
@@ -120,7 +120,7 @@ class CurrentStatus
     }
 
     /**
-     * Уточняющая информация к статусу груза/заказа.
+     * Уточняющая информация к статусу груза/заказа
      */
     public function setTooltip(?string $tooltip): self
     {

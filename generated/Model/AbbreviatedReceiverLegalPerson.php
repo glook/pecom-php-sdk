@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class AbbreviatedReceiverLegalPerson
 {
     /**
-     * Последние 2 цифры ИНН получателя.
+     * Последние 2 цифры ИНН получателя
      *
      * @var null|string
      */
     protected $inn;
 
     /**
-     * Послдение 2 цифры КПП получателя (для ИП пустое).
+     * Послдение 2 цифры КПП получателя (для ИП пустое)
      *
      * @var null|string
      */
     protected $kpp;
 
     /**
-     * Последние 2 цифры ИНН получателя.
+     * Последние 2 цифры ИНН получателя
      */
     public function getInn(): ?string
     {
@@ -27,7 +27,7 @@ class AbbreviatedReceiverLegalPerson
     }
 
     /**
-     * Последние 2 цифры ИНН получателя.
+     * Последние 2 цифры ИНН получателя
      */
     public function setInn(?string $inn): self
     {
@@ -37,7 +37,7 @@ class AbbreviatedReceiverLegalPerson
     }
 
     /**
-     * Послдение 2 цифры КПП получателя (для ИП пустое).
+     * Послдение 2 цифры КПП получателя (для ИП пустое)
      */
     public function getKpp(): ?string
     {
@@ -45,7 +45,7 @@ class AbbreviatedReceiverLegalPerson
     }
 
     /**
-     * Послдение 2 цифры КПП получателя (для ИП пустое).
+     * Послдение 2 цифры КПП получателя (для ИП пустое)
      */
     public function setKpp(?string $kpp): self
     {

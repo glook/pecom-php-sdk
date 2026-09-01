@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class LegalFormType
 {
     /**
-     * Наименование формы собственности.
+     * Наименование формы собственности
      *
      * @var string
      */
     protected $name;
 
     /**
-     * Краткое наименование формы собственности.
+     * Краткое наименование формы собственности
      *
      * @var string
      */
     protected $shortName;
 
     /**
-     * Наименование формы собственности.
+     * Наименование формы собственности
      */
     public function getName(): string
     {
@@ -27,7 +27,7 @@ class LegalFormType
     }
 
     /**
-     * Наименование формы собственности.
+     * Наименование формы собственности
      */
     public function setName(string $name): self
     {
@@ -37,7 +37,7 @@ class LegalFormType
     }
 
     /**
-     * Краткое наименование формы собственности.
+     * Краткое наименование формы собственности
      */
     public function getShortName(): string
     {
@@ -45,7 +45,7 @@ class LegalFormType
     }
 
     /**
-     * Краткое наименование формы собственности.
+     * Краткое наименование формы собственности
      */
     public function setShortName(string $shortName): self
     {

@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderResponse
 {
     /**
-     * Грузы.
+     * Грузы
      *
      * @var null|ListAllOrderItem[]
      */
     protected $cargos;
 
     /**
-     * Грузы.
+     * Грузы
      *
      * @return null|ListAllOrderItem[]
      */
@@ -22,7 +22,7 @@ class ListAllOrderResponse
     }
 
     /**
-     * Грузы.
+     * Грузы
      *
      * @param null|ListAllOrderItem[] $cargos
      */

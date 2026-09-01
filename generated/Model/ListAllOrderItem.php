@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class ListAllOrderItem
 {
     /**
-     * Статус груза.
+     * Статус груза
      *
      * @var null|int
      */
     protected $cargoStatus;
 
     /**
-     * Наименование груза.
+     * Наименование груза
      *
      * @var null|string
      */
@@ -26,42 +26,42 @@ class ListAllOrderItem
     protected $intakePlanDateTime;
 
     /**
-     * Вид перевозки.
+     * Вид перевозки
      *
      * @var null|string
      */
     protected $kindOfTransportationType;
 
     /**
-     * Дата и время создания заявки.
+     * Дата и время создания заявки
      *
      * @var null|string
      */
     protected $orderDate;
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      *
      * @var null|string
      */
     protected $orderNumber;
 
     /**
-     * Получатель.
+     * Получатель
      *
      * @var null|ListAllOrderReceiver
      */
     protected $receiver;
 
     /**
-     * Отправитель.
+     * Отправитель
      *
      * @var null|ListAllOrderSender
      */
     protected $sender;
 
     /**
-     * Тип перевозки.
+     * Тип перевозки
      *
      * @var null|string
      */
@@ -75,14 +75,14 @@ class ListAllOrderItem
     protected $takeOnStockDateTime;
 
     /**
-     * Код груза.
+     * Код груза
      *
      * @var null|string
      */
     protected $code;
 
     /**
-     * Статус груза.
+     * Статус груза
      */
     public function getCargoStatus(): ?int
     {
@@ -90,7 +90,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Статус груза.
+     * Статус груза
      */
     public function setCargoStatus(?int $cargoStatus): self
     {
@@ -100,7 +100,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Наименование груза.
+     * Наименование груза
      */
     public function getDescription(): ?string
     {
@@ -108,7 +108,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Наименование груза.
+     * Наименование груза
      */
     public function setDescription(?string $description): self
     {
@@ -136,7 +136,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Вид перевозки.
+     * Вид перевозки
      */
     public function getKindOfTransportationType(): ?string
     {
@@ -144,7 +144,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Вид перевозки.
+     * Вид перевозки
      */
     public function setKindOfTransportationType(?string $kindOfTransportationType): self
     {
@@ -154,7 +154,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Дата и время создания заявки.
+     * Дата и время создания заявки
      */
     public function getOrderDate(): ?string
     {
@@ -162,7 +162,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Дата и время создания заявки.
+     * Дата и время создания заявки
      */
     public function setOrderDate(?string $orderDate): self
     {
@@ -172,7 +172,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      */
     public function getOrderNumber(): ?string
     {
@@ -180,7 +180,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Номер заказа клиента.
+     * Номер заказа клиента
      */
     public function setOrderNumber(?string $orderNumber): self
     {
@@ -190,7 +190,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function getReceiver(): ?ListAllOrderReceiver
     {
@@ -198,7 +198,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Получатель.
+     * Получатель
      */
     public function setReceiver(?ListAllOrderReceiver $receiver): self
     {
@@ -208,7 +208,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Отправитель.
+     * Отправитель
      */
     public function getSender(): ?ListAllOrderSender
     {
@@ -216,7 +216,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Отправитель.
+     * Отправитель
      */
     public function setSender(?ListAllOrderSender $sender): self
     {
@@ -226,7 +226,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Тип перевозки.
+     * Тип перевозки
      */
     public function getShippingType(): ?string
     {
@@ -234,7 +234,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Тип перевозки.
+     * Тип перевозки
      */
     public function setShippingType(?string $shippingType): self
     {
@@ -262,7 +262,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function getCode(): ?string
     {
@@ -270,7 +270,7 @@ class ListAllOrderItem
     }
 
     /**
-     * Код груза.
+     * Код груза
      */
     public function setCode(?string $code): self
     {

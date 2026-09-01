@@ -24,7 +24,7 @@ class CargosdocumentsOrder extends BaseEndpoint implements Endpoint
      * - Для получения "Счета на оплату" необходимо передать идентификатор контрагента-плательщика `"counterpartGuid"` в системах ПЭК, связанный с ЛК.
      * По грузу должна быть задолженность для этого контрагента-плательщика. `"counterpartGuid"` можно получить методом [`/COUNTERPARTS/CONFIRMEDACCESSTOCOUNTERPARTIES/`](#tag/counterparts/POST/counterparts/confirmedaccesstocounterparties/).
      * - Для получения "Счета на оплату" в формате `"xml"`, необходимо передать уточняющий параметр `"docFormat"` в запросе. Данные счета вернутся в формате **CommerseML** редакции 2.
-     * - Есть ограничение на число запросов в сутки для одного логина.
+     * - Есть ограничение на число запросов в сутки для одного логина
      */
     public function __construct(CargosdocumentsOrderRequest $requestBody)
     {

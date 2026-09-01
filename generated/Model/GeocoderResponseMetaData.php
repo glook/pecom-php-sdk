@@ -5,28 +5,28 @@ namespace glook\PecomSdk\Generated\Model;
 class GeocoderResponseMetaData
 {
     /**
-     * Количество найденных вариантов адресов по строке запроса.
+     * Количество найденных вариантов адресов по строке запроса
      *
      * @var string
      */
     protected $found;
 
     /**
-     * Часть адреса, по которому подбирались варианты.
+     * Часть адреса, по которому подбирались варианты
      *
      * @var string
      */
     protected $request;
 
     /**
-     * Максимальное количество результатов.
+     * Максимальное количество результатов
      *
      * @var string
      */
     protected $results;
 
     /**
-     * Количество найденных вариантов адресов по строке запроса.
+     * Количество найденных вариантов адресов по строке запроса
      */
     public function getFound(): string
     {
@@ -34,7 +34,7 @@ class GeocoderResponseMetaData
     }
 
     /**
-     * Количество найденных вариантов адресов по строке запроса.
+     * Количество найденных вариантов адресов по строке запроса
      */
     public function setFound(string $found): self
     {
@@ -44,7 +44,7 @@ class GeocoderResponseMetaData
     }
 
     /**
-     * Часть адреса, по которому подбирались варианты.
+     * Часть адреса, по которому подбирались варианты
      */
     public function getRequest(): string
     {
@@ -52,7 +52,7 @@ class GeocoderResponseMetaData
     }
 
     /**
-     * Часть адреса, по которому подбирались варианты.
+     * Часть адреса, по которому подбирались варианты
      */
     public function setRequest(string $request): self
     {
@@ -62,7 +62,7 @@ class GeocoderResponseMetaData
     }
 
     /**
-     * Максимальное количество результатов.
+     * Максимальное количество результатов
      */
     public function getResults(): string
     {
@@ -70,7 +70,7 @@ class GeocoderResponseMetaData
     }
 
     /**
-     * Максимальное количество результатов.
+     * Максимальное количество результатов
      */
     public function setResults(string $results): self
     {

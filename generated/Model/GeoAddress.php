@@ -5,14 +5,14 @@ namespace glook\PecomSdk\Generated\Model;
 class GeoAddress
 {
     /**
-     * Компоненты адреса.
+     * Компоненты адреса
      *
      * @var null|GeoAddressComponent[]
      */
     protected $components;
 
     /**
-     * Код страны.
+     * Код страны
      *
      * @var null|string
      */
@@ -26,7 +26,7 @@ class GeoAddress
     protected $formatted;
 
     /**
-     * Компоненты адреса.
+     * Компоненты адреса
      *
      * @return null|GeoAddressComponent[]
      */
@@ -36,7 +36,7 @@ class GeoAddress
     }
 
     /**
-     * Компоненты адреса.
+     * Компоненты адреса
      *
      * @param null|GeoAddressComponent[] $components
      */
@@ -48,7 +48,7 @@ class GeoAddress
     }
 
     /**
-     * Код страны.
+     * Код страны
      */
     public function getCountryCode(): ?string
     {
@@ -56,7 +56,7 @@ class GeoAddress
     }
 
     /**
-     * Код страны.
+     * Код страны
      */
     public function setCountryCode(?string $countryCode): self
     {

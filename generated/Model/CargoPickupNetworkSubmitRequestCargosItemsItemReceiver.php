@@ -5,49 +5,49 @@ namespace glook\PecomSdk\Generated\Model;
 class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
 {
     /**
-     * Наименование филиала получателя.
+     * Наименование филиала получателя
      *
      * @var string
      */
     protected $city;
 
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц.
+     * Документ, удостоверяющий личность. Обязательно для физических лиц
      *
      * @var null|CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
      */
     protected $identityCard;
 
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      *
      * @var null|string
      */
     protected $inn;
 
     /**
-     * Контактное лицо.
+     * Контактное лицо
      *
      * @var null|string
      */
     protected $person;
 
     /**
-     * Телефон.
+     * Телефон
      *
      * @var string
      */
     protected $phone;
 
     /**
-     * Наименование получателя.
+     * Наименование получателя
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Наименование филиала получателя.
+     * Наименование филиала получателя
      */
     public function getCity(): string
     {
@@ -55,7 +55,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Наименование филиала получателя.
+     * Наименование филиала получателя
      */
     public function setCity(string $city): self
     {
@@ -65,7 +65,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц.
+     * Документ, удостоверяющий личность. Обязательно для физических лиц
      */
     public function getIdentityCard(): ?CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard
     {
@@ -73,7 +73,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Документ, удостоверяющий личность. Обязательно для физических лиц.
+     * Документ, удостоверяющий личность. Обязательно для физических лиц
      */
     public function setIdentityCard(?CargoPickupNetworkSubmitRequestCargosItemsItemReceiverIdentityCard $identityCard): self
     {
@@ -83,7 +83,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      */
     public function getInn(): ?string
     {
@@ -91,7 +91,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать).
+     * ИНН. Обязательно для Юридических лиц и ИП (для физических лиц не передавать)
      */
     public function setInn(?string $inn): self
     {
@@ -101,7 +101,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Контактное лицо.
+     * Контактное лицо
      */
     public function getPerson(): ?string
     {
@@ -109,7 +109,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Контактное лицо.
+     * Контактное лицо
      */
     public function setPerson(?string $person): self
     {
@@ -119,7 +119,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function getPhone(): string
     {
@@ -127,7 +127,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Телефон.
+     * Телефон
      */
     public function setPhone(string $phone): self
     {
@@ -137,7 +137,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Наименование получателя.
+     * Наименование получателя
      */
     public function getTitle(): string
     {
@@ -145,7 +145,7 @@ class CargoPickupNetworkSubmitRequestCargosItemsItemReceiver
     }
 
     /**
-     * Наименование получателя.
+     * Наименование получателя
      */
     public function setTitle(string $title): self
     {

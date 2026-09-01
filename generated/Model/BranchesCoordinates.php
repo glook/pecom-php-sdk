@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesCoordinates
 {
     /**
-     * Координата широты.
+     * Координата широты
      *
      * @var float
      */
     protected $latitude;
 
     /**
-     * Координата долготы.
+     * Координата долготы
      *
      * @var float
      */
     protected $longitude;
 
     /**
-     * Координата широты.
+     * Координата широты
      */
     public function getLatitude(): float
     {
@@ -27,7 +27,7 @@ class BranchesCoordinates
     }
 
     /**
-     * Координата широты.
+     * Координата широты
      */
     public function setLatitude(float $latitude): self
     {
@@ -37,7 +37,7 @@ class BranchesCoordinates
     }
 
     /**
-     * Координата долготы.
+     * Координата долготы
      */
     public function getLongitude(): float
     {
@@ -45,7 +45,7 @@ class BranchesCoordinates
     }
 
     /**
-     * Координата долготы.
+     * Координата долготы
      */
     public function setLongitude(float $longitude): self
     {

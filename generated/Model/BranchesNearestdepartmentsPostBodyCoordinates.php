@@ -5,21 +5,21 @@ namespace glook\PecomSdk\Generated\Model;
 class BranchesNearestdepartmentsPostBodyCoordinates
 {
     /**
-     * Координата широты.
+     * Координата широты
      *
      * @var string
      */
     protected $latitude;
 
     /**
-     * Координата долготы.
+     * Координата долготы
      *
      * @var string
      */
     protected $longitude;
 
     /**
-     * Координата широты.
+     * Координата широты
      */
     public function getLatitude(): string
     {
@@ -27,7 +27,7 @@ class BranchesNearestdepartmentsPostBodyCoordinates
     }
 
     /**
-     * Координата широты.
+     * Координата широты
      */
     public function setLatitude(string $latitude): self
     {
@@ -37,7 +37,7 @@ class BranchesNearestdepartmentsPostBodyCoordinates
     }
 
     /**
-     * Координата долготы.
+     * Координата долготы
      */
     public function getLongitude(): string
     {
@@ -45,7 +45,7 @@ class BranchesNearestdepartmentsPostBodyCoordinates
     }
 
     /**
-     * Координата долготы.
+     * Координата долготы
      */
     public function setLongitude(string $longitude): self
     {

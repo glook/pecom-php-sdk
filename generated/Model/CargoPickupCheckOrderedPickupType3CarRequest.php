@@ -12,7 +12,7 @@ class CargoPickupCheckOrderedPickupType3CarRequest
     protected $intakePlanDateTime;
 
     /**
-     * ИНН отправителя.
+     * ИНН отправителя
      *
      * @var null|string
      */
@@ -37,7 +37,7 @@ class CargoPickupCheckOrderedPickupType3CarRequest
     }
 
     /**
-     * ИНН отправителя.
+     * ИНН отправителя
      */
     public function getSenderInn(): ?string
     {
@@ -45,7 +45,7 @@ class CargoPickupCheckOrderedPickupType3CarRequest
     }
 
     /**
-     * ИНН отправителя.
+     * ИНН отправителя
      */
     public function setSenderInn(?string $senderInn): self
     {
