@@ -13,8 +13,8 @@
   "require": {
     "php": "^7.2 || ^8.0",
     "ext-json": "*",
-    "jane-php/open-api-runtime": "^6.3",
-    "symfony/serializer": "^4.4 || ^5.0",
+    "jane-php/open-api-runtime": "^6.3 || ^7.0",
+    "symfony/serializer": "^4.4 || ^5.0 || ^6.0",
     "nyholm/psr7": "^1.8",
     "psr/http-client": "^1.0",
     "psr/http-message": "^1.0",
@@ -50,7 +50,8 @@
     "psr-4": {
       "glook\\PecomSdk\\": "src/",
       "glook\\PecomSdk\\Generated\\": "generated/"
-    }
+    },
+    "files": ["src/jane_runtime_compat.php"]
   },
   "autoload-dev": {
     "psr-4": {

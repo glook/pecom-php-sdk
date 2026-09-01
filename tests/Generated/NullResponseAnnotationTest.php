@@ -49,6 +49,10 @@ class NullResponseAnnotationTest extends TestCase
 
     public function testGeneratorKeepsReachableNullWithoutUnexpectedStatusException(): void
     {
+        if (!is_file(dirname(__DIR__, 2).'/vendor/bin/jane-openapi')) {
+            self::markTestSkipped('Генератор Jane не установлен в runtime-only окружении');
+        }
+
         $temporaryDirectory = $this->createTemporaryDirectory();
 
         try {
@@ -72,8 +76,38 @@ class NullResponseAnnotationTest extends TestCase
         $packageDirectory = dirname(__DIR__, 2);
         $configFile = $temporaryDirectory.'/jane-config.php';
         $generatedDirectory = $temporaryDirectory.'/generated';
+        $openApiFile = $temporaryDirectory.'/openapi.json';
+        $openApi = [
+            'openapi' => '3.0.3',
+            'info' => [
+                'title' => 'Test API',
+                'version' => '1.0.0',
+            ],
+            'paths' => [
+                '/value' => [
+                    'get' => [
+                        'operationId' => 'getValue',
+                        'responses' => [
+                            '200' => [
+                                'description' => 'Успешный ответ',
+                                'content' => [
+                                    'application/json' => [
+                                        'schema' => [
+                                            'type' => 'object',
+                                            'properties' => [
+                                                'value' => ['type' => 'string'],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ];
         $config = [
-            'openapi-file' => dirname($packageDirectory, 2).'/dist/pecom.json',
+            'openapi-file' => $openApiFile,
             'namespace' => 'glook\PecomSdk\GeneratedWithoutUnexpectedStatusException',
             'directory' => $generatedDirectory,
             'strict' => true,
@@ -83,6 +117,10 @@ class NullResponseAnnotationTest extends TestCase
             'clean-generated' => true,
             'use-fixer' => false,
         ];
+
+        if (false === file_put_contents($openApiFile, json_encode($openApi, JSON_THROW_ON_ERROR))) {
+            throw new \RuntimeException('Не удалось создать временную OpenAPI-схему');
+        }
 
         if (false === file_put_contents($configFile, "<?php\n\nreturn ".var_export($config, true).";\n")) {
             throw new \RuntimeException('Не удалось создать временную конфигурацию Jane');
